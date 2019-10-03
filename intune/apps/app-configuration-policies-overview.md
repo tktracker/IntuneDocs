@@ -92,6 +92,77 @@ You can validate the app configuration policy using the following three methods:
 
       ![Screenshot of app configuration](./media/app-configuration-policies-overview/app-configuration.png)
 
+## Diagnostic Logs
+
+### iOS configuration on unmanaged devices
+
+You can validate iOS configuration with the **Intune Diagnostic Log** on unmanaged devices for managed app configuration.
+
+1. If not already installed on the device, download and install the **Intune Managed Browser** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
+2. Launch the **Intune Managed Browser** and select **about** > **intunehelp** from the navigation bar.
+3. Click **Get Started**.
+4. Click **Share Logs**.
+5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC. 
+6. Review **IntuneMAMDiagnostics.txt** in your text file viewer.
+7. Search for `ApplicationConfiguration`. The results will look like the following:
+
+    ``` JSON
+        {
+            (
+                {
+                    Name = "com.microsoft.intune.mam.managedbrowser.BlockListURLs";
+                    Value = "https://www.aol.com";
+                },
+                {
+                    Name = "com.microsoft.intune.mam.managedbrowser.bookmarks";
+                    Value = "Outlook Web|https://outlook.office.com||Bing|https://www.bing.com";
+                }
+            );
+        },
+        {
+            ApplicationConfiguration =             
+            (
+                {
+                Name = IntuneMAMUPN;
+                Value = "CMARScrubbedM:13c45c42712a47a1739577e5c92b5bc86c3b44fd9a27aeec3f32857f69ddef79cbb988a92f8241af6df8b3ced7d5ce06e2d23c33639ddc2ca8ad8d9947385f8a";
+                },
+                {
+                Name = "com.microsoft.outlook.Mail.NotificationsEnabled";
+                Value = false;
+                }
+            );
+        }
+    ```
+
+Your application configuration details should match the application configuration policies configured for your tenant. 
+
+![Targeted app config](./media/app-configuration-policies-overview/targeted-app-configuration-3.png)
+
+### iOS configuration on managed devices
+
+You can validate iOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
+
+1. If not already installed on the device, download and install the **Intune Managed Browser** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
+2. Launch the **Intune Managed Browser** and select **about** > **intunehelp** from the navigation bar.
+3. Click **Get Started**.
+4. Click **Share Logs**.
+5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC. 
+6. Review **IntuneMAMDiagnostics.txt** in your text file viewer.
+7. Search for `AppConfig`. Your results should match the application configuration policies configured for your tenant.
+
+### Android configuration on managed devices
+
+You can validate iOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
+
+To collect logs from an Android device, you or the end user must download the logs from the device via a USB connection (or the **File Explorer** equivalent on the device). Here are the steps:
+
+1. Connect the Android device to your computer with the USB cable.
+2. On the computer, look for a directory that has the name of your device. In that directory, find `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`.
+3. In the `com.microsoft.windowsintune.companyportal` folder, open the Files folder and open `OMADMLog_0`.
+3. Search for `AppConfigHelper` to find app configuration related messages. The results will look similar to the following block of data:
+
+    `2019-06-17T20:09:29.1970000       INFO   AppConfigHelper     10888  02256  Returning app config JSON [{"ApplicationConfiguration":[{"Name":"com.microsoft.intune.mam.managedbrowser.BlockListURLs","Value":"https:\/\/www.aol.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.bookmarks","Value":"Outlook Web|https:\/\/outlook.office.com||Bing|https:\/\/www.bing.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.homepage","Value":"https:\/\/www.arstechnica.com"}]},{"ApplicationConfiguration":[{"Name":"IntuneMAMUPN","Value":"AdeleV@M365x935807.OnMicrosoft.com"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled","Value":"false"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed","Value":"false"}]}] for user User-875363642`
+    
 ## Graph API support for app configuration
 
 You can use Graph API to accomplish app configuration tasks. For details, see [Graph API Reference MAM Targeted Config](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).

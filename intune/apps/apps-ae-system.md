@@ -46,9 +46,15 @@ You can add an Android Enterprise system app to Intune from the Azure portal by 
 5. Select **OK**.
 6. Select **Add**.
 
+> [!NOTE]
+> You will need to work with the OEM of your device to find the package name of the app you would like to enable/disable.
+
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
 
 Android Enterprise system apps will enable or disable apps that are already part of the platform. To enable an app, assign the system app as **Required**. To disable an app, assign the system app as **Uninstall**. System apps cannot be assigned as available for a user.
+
+> [!TIP]
+> Call out if you can enable a system app after having disabled it without factory reset.
 
 ## Next steps
 

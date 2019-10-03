@@ -31,9 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Enroll iOS devices in Intune
 
-Intune enables mobile device management (MDM) of iPads and iPhones to give users access to company email and apps.
+Intune enables mobile device management (MDM) of iPads and iPhones to give users secure access to company email, data, and apps.
 
-As an Intune admin, you can enable enrollment for iOS devices. You can let users enroll personally owned devices, known as "bring your own device" (BYOD) enrollment. You can also enable enrollment of company-owned devices.
+As an Intune admin, you can set up enrollment for iOS and iPadOS devices to access company resources. You can let users enroll personally-owned devices, known as "bring your own device" (BYOD) enrollment. You can also set up enrollment of company-owned devices.
 
 ## Prerequisites for iOS enrollment
 
@@ -43,9 +43,14 @@ Before you can enable iOS devices, complete the following steps:
 - [Set up Intune](../fundamentals/setup-steps.md) - These steps set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](../fundamentals/mdm-authority-set.md).
 - [Get an Apple MDM Push certificate](apple-mdm-push-certificate-get.md) - Apple requires a certificate to enable management of iOS and macOS devices.
 
-## User-owned iOS devices (BYOD)
+## User-owned iOS and iPadOS devices (BYOD)
 
-You can let users enroll their personal devices for Intune management, know as "bring your own device" or BYOD. Once you've completed the prerequisites and assigned users licenses, they can download the Intune Company Portal app from the App Store, and follow enrollment instructions in the app. You can customize the Company Portal privacy statement on iOS devices as explained in [privacy statement customization](../apps/company-portal-app.md#privacy-statement-customization).
+You can let users enroll their personal devices for Intune management, know as "bring your own device" or BYOD. There are three options for enrolling users:
+- App Protection Policies give you the lightest BYOD experience, providing management at an app level only. However, if you want to also secure the device with a 6-digit complex PIN, you can use these policies along with User Enrollment.
+- Device Enrollment is what you may think of as typical BYOD enrollment. It provides admins with a wide range of management options.
+- User Enrollment is a more streamlined enrollment process that provides admins with a subset of device management options. This feature is currently in preview. 
+
+After you've completed the prerequisites and assigned user licenses, users can download the Intune Company Portal app from the App Store, and follow enrollment instructions in the app. You can customize the Company Portal privacy statement on iOS devices as explained in [privacy statement customization](../apps/company-portal-app.md#privacy-statement-customization).
 
 ## Company-owned iOS devices
 
@@ -60,7 +65,10 @@ You can also enroll company-owned iOS devices with a [device enrollment manager]
 
 ## Device Enrollment Program
 
-Organizations can purchase iOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile “over the air” to bring devices into management. Learn more about [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
+Organizations can purchase iOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile “over the air” to bring devices into management. For more information, see [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
+
+## User enrollment
+User Enrollment gives admins a subset of management options compared to other enrollment methods. For more information, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md) and [Set up iOS and iPadOS User Enrollment](ios-user-enrollment.md).
 
 ## Apple School Manager
 
