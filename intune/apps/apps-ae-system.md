@@ -53,8 +53,6 @@ The app you've created is displayed in the apps list, where you can assign it to
 
 Android Enterprise system apps will enable or disable apps that are already part of the platform. To enable an app, assign the system app as **Required**. To disable an app, assign the system app as **Uninstall**. System apps cannot be assigned as available for a user.
 
-> [!TIP]
-> Call out if you can enable a system app after having disabled it without factory reset.
 
 ## Next steps
 
