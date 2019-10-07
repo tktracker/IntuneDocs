@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 10/07/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -78,10 +78,10 @@ With a client authenticated to Azure AD, the OData URL connects to the RESTful e
 
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Click **Set up Intune Data Warehouse** under the **Other tasks** section on the right side of the Overview blade. The **Intune Data Warehouse** blade will be displayed.
-3. Retrieve the custom feed URL from the reporting blade, for example:
+3. Retrieve the custom feed URL from the reporting blade, for example:<br>
     `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. Open **Power BI Desktop**.
-5. Choose **Home** > **Get Data**. Select **OData feed**.
+5. Choose **File** > **Get Data**. Select **OData feed**.
 6. Choose **Basic**.
 7. Type or paste the **OData URL** into the URL box.
 8. Select **OK**.
