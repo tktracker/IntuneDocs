@@ -219,6 +219,8 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select **Domain Join (Preview)**.
 1. Select **Settings**, and then provide a **Computer name prefix**, **Domain name**, and (optional) **Organizational unit** in [DN format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
+   > [!NOTE]
+   > Don't use quotation marks around the value in **Organizational unit**.
 1. Select **OK** > **Create**.  
     The profile is created and displayed in the list.
 1. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)

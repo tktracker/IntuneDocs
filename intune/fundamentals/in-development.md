@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.technology:
@@ -134,7 +134,7 @@ Applies to:
 - Android Enterprise
 
 ### Create a global HTTP proxy on Android Enterprise device owner devices <!-- 4816339  -->
-On Android Enterprise devices, you can create a VPN profile with different VPN clients (**Device configuration** > **Profiles** > **Create profile** > **Android Enterprise** for platform > **Device owner > Device restrictions** for profile type > **Connectivity**). You'll be able to configure a global HTTP proxy to meet your organization's web browsing standards. All apps that go to HTTP web sites use this proxy.
+On Android Enterprise devices, you can configure a global HTTP Proxy to meet your organization’s web browsing standards (**Device configuration** > **Profiles** > **Create profile** > **Android Enterprise** for platform > **Device owner > Device restrictions** for profile type > **Connectivity**). Once configured, all HTTP traffic will use this this proxy.
 
 Applies to:
 - Android Enterprise Device Owner
@@ -142,10 +142,10 @@ Applies to:
 ### New device firmware configuration interface profile for Windows 10 and later devices <!-- 2266073  -->
 On Windows 10 and later, you can create a device configuration profile to control settings and features (**Device configuration** > **Profiles** > **Create profile** > **Windows 10 and later** for platform). There will be a new device firmware configuration interface profile type that allows Intune to manage UEFI (BIOS) settings.
 
-To see an overview of all the settings you can configure, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
+To see an overview of all the current settings you can configure, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
 
 Applies to:
-- Windows 10 RS5 (1809) and newer on some OEMs
+- Windows 10 RS5 (1809) and newer on select devices
 
 ### PKCS certificates for macOS  <!-- 1333650                -->
 We'll be adding full support for PKCS certificates on devices that run macOS. Users will be able to deploy user and device certificates with customization subject and subject alternative name fields. We also will have a new setting Allow All Apps Access, which by enabling gives all associated apps access to the private key. For more details on this setting, visit the following Apple documentation: https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf.
