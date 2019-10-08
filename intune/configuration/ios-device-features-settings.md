@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -46,6 +46,9 @@ This article lists these settings, and describes what each setting does. For mor
 ## AirPrint
 
 ### Settings apply to: All enrollment types
+
+> [!NOTE]
+> Be sure to add all printers to the same profile. Apple prevents multiple AirPrint profiles from targeting the same device.
 
 - **IP address**: Enter the IPv4 or IPv6 address of the printer. If you use hostnames to identify printers, you can get the IP address by pinging the printer in the terminal. Get the IP address and path (in this article) provides more details.
 - **Path**: The path is typically `ipp/print` for printers on your network. Get the IP address and path (in this article) provides more details.

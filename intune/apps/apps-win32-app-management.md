@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -26,6 +26,9 @@ ms.collection: M365-identity-device-management
 
 > [!NOTE]
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
+
+> [!IMPORTANT]
+> When deploying Win32 apps, consider using [Intune Management Extension](../apps/intune-management-extension.md) exclusively, particularly when you have a multi-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail.  
 
 ## Prerequisites
 
@@ -85,7 +88,7 @@ Much like a line-of-business (LOB) app, you can add a Win32 app to Microsoft Int
 
 ### Process flow to add a Win32 app to Intune
 
-   ![Process flow to add a Win32 app to Intune](./media/apps-win32-app-management/add-win32-app.svg)
+<img alt="Process flow to add a Win32 app to Intune" src="./media/apps-win32-app-management/add-win32-app.svg" width="500">
 
 ### Add a Win32 app to Intune
 

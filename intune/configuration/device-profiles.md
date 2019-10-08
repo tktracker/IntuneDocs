@@ -45,7 +45,7 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Administrative templates (Preview)
+## Administrative templates
 
 [Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, OneDrive, remote desktop, Word, Excel, and other Office programs.
 
