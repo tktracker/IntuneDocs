@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -782,26 +782,27 @@ These settings apply specifically to removable data drives.
  
 ## Windows Defender Exploit Guard  
 
-Use [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) to manage and reduce the attack surface of apps used by your employees.  
+Use [exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) to manage and reduce the attack surface of apps used by your employees.  
 
 ### Attack Surface Reduction  
 
-For information about the *Attack Surface Reduction* rules, see [Reduce attack surfaces with Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) in the Windows Defender Exploit Guard documentation.  
+Attack surface reduction rules help prevent behaviors malware often uses to infect computers with malicious code.  
 
 #### Attack Surface Reduction rules  
 
 - **Flag credential stealing from the Windows local security authority subsystem**  
   **Default**: Not configured  
-  Exploit Guard: [Attack surface reduction rules](https://go.microsoft.com/fwlink/?linkid=874499)
+  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe)
 
   Help prevent actions and apps that are typically used by exploit-seeking malware to infect machines.  
+
   - **Not configured**  
   - **Enable** - Flag credential stealing from the Windows local security authority subsystem (lsass.exe).  
   - **Audit only**  
 
 - **Process creation from Adobe Reader (beta)**  
   **Default**: Not configured  
-  Exploit Guard: [Attack surface reduction rules](https://go.microsoft.com/fwlink/?linkid=853979)  
+  Rule: [Block Adobe Reader from creating child processes](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
   - **Not configured**  
   - **Enable** - Block child processes that are created from Adobe Reader.  
@@ -813,7 +814,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps injecting into other processes (no exceptions)**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=872974)  
+  Rule: [Block Office applications from injecting code into other processes](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Not configured**  
   - **Block** - Block Office apps from injecting into other processes.  
@@ -821,7 +822,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps/macros creating executable content**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=872975)  
+  Rule: [Block Office applications from creating executable content](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Not configured**  
   - **Block** - Block Office apps and macros from creating executable content.  
@@ -829,7 +830,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps launching child processes**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=872976)  
+  Rule: [Block all Office applications from creating child processes](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Not configured**  
   - **Block** - Block Office apps from launching child processes.  
@@ -837,7 +838,7 @@ Block Office apps from taking the following actions:
   
 - **Win32 imports from Office macro code**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=872977)  
+  Rule: [Block Win32 API calls from Office macros](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Not configured**  
   - **Block** - Block Win32 imports from macro code in Office.  
@@ -845,7 +846,7 @@ Block Office apps from taking the following actions:
   
 - **Process creation from Office communication products**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=874499)  
+  Rule: [Block Office communication application from creating child processes](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - **Not configured**  
   - **Enable** - Block child process creation from Office communications apps.  
@@ -857,7 +858,7 @@ Block the following to help prevent against script threats:
 
 - **Obfuscated js/vbs/ps/macro code**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=872978)    
+  Rule: [Block execution of potentially obfuscated scripts](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **Not configured**  
   - **Block** - Block any obfuscated js/vbs/ps/macro code.  
@@ -865,7 +866,7 @@ Block the following to help prevent against script threats:
 
 - **js/vbs executing payload downloaded from Internet (no exceptions)**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=872979)  
+  Rule: [Block JavaScript or VBScript from launching downloaded executable content](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Not configured**  
   - **Block** - Block js/vbs from executing payload downloaded from Internet.  
@@ -873,7 +874,7 @@ Block the following to help prevent against script threats:
 
 - **Process creation from PSExec and WMI commands**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=874500)  
+  Rule: [Block process creations originating from PSExec and WMI commands](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - **Not configured**  
   - **Block** - Block process creations originating from PSExec and WMI commands.  
@@ -882,7 +883,7 @@ Block the following to help prevent against script threats:
 
 - **Untrusted and unsigned processes that run from USB**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=874502)    
+  Rule: [Block untrusted and unsigned processes that run from USB](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
   - **Not configured**  
   - **Block** - Block untrusted and unsigned processes that run from USB.  
@@ -890,7 +891,7 @@ Block the following to help prevent against script threats:
   
 - **Executables that don’t meet a prevalence, age, or trusted list criteria**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=874503)    
+  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - **Not configured**  
   - **Block** - Block executable files from running unless they meet a prevalence, age, or trusted list criteria.  
@@ -902,7 +903,7 @@ Block the following to help prevent email threats:
 
 - **Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)**  
   **Default**: Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=872980)  
+  Rule: [Block executable content from email client and webmail](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Not configured**  
   - **Block** - Block execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail-client).  
@@ -912,7 +913,7 @@ Block the following to help prevent email threats:
 
 - **Advanced ransomware protection**  
   Default:  Not configured  
-  [Exploit Guard documentation](https://go.microsoft.com/fwlink/?linkid=874504)  
+  Rule: [Use advanced protection against ransomware](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - **Not configured**  
   - **Enable** - Use aggressive ransomware protection.  
@@ -938,7 +939,7 @@ Block the following to help prevent email threats:
 
 ### Controlled folder access  
 
-Help [protect valuable data](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) from malicious apps and threats, such as ransomware.  
+Help [protect valuable data](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) from malicious apps and threats, such as ransomware.  
 
 - **Folder protection**  
   **Default**: Not configured  
@@ -985,7 +986,7 @@ Block outbound connections from any app to IP addresses or domains with low repu
 - **Upload XML**  
   **Default**: *Not configured*  
 
-  To use exploit protection to [protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:  
+  To use exploit protection to [protect devices from exploits](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:  
 
   - *PowerShell* - Use one or more of the *Get-ProcessMitigation*, *Set-ProcessMitigation*, and *ConvertTo-ProcessMitigationPolicy* PowerShell cmdlets. The cmdlets configure mitigation settings, and export an XML representation of them.  
 

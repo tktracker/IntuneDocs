@@ -1629,7 +1629,7 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
 
 - **Email content execution type**  
   This rule blocks the following file types from being run or launched from an email seen in either Microsoft Outlook or webmail (such as Gmail.com or Outlook.com): Executable files (such as .exe, .dll, or .scr) Script files (such as a PowerShell .ps, VisualBasic .vbs, or JavaScript .js file) Script archive files.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067063)  
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail) 
   
   **Default**: Block
 

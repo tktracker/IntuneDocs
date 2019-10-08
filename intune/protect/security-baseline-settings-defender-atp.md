@@ -91,7 +91,7 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
 ## Attack Surface Reduction  
 
 - **Office apps launch child process type**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – When set to *Block*, Office apps won’t be allowed to create child processes. Office apps include Word, Excel, PowerPoint, OneNote, and Access. Creation of a child process is a typical malware behavior, especially for macro-based attacks that attempt to use Office apps to launch or download malicious executables.  
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, Office apps won’t be allowed to create child processes. Office apps include Word, Excel, PowerPoint, OneNote, and Access. Creation of a child process is a typical malware behavior, especially for macro-based attacks that attempt to use Office apps to launch or download malicious executables.  
 
   **Default**: Block
 
@@ -106,7 +106,7 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
   **Default**: Enable
 
 - **Email content execution type**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – When set to *Block*, This rule blocks the following file types from being run or launched from an email seen in either Microsoft Outlook or webmail (such as Gmail.com or Outlook.com):  
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, This rule blocks the following file types from being run or launched from an email seen in either Microsoft Outlook or webmail (such as Gmail.com or Outlook.com):  
 
   - Executable files (such as .exe, .dll, or .scr)  
   - Script files (such as a PowerShell .ps, VisualBasic .vbs, or JavaScript .js file)  
@@ -115,17 +115,17 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
   **Default**: Block
 
 - **Adobe Reader launch in a child process**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – *Enable* this rule to block Adobe Reader from creating a child process. Through social engineering or exploits, malware can download and launch additional payloads and break out of Adobe Reader.  
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *Enable* this rule to block Adobe Reader from creating a child process. Through social engineering or exploits, malware can download and launch additional payloads and break out of Adobe Reader.  
 
   **Default**: Enable
 
 - **Script obfuscated macro code type**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Malware and other threats can attempt to obfuscate or hide their malicious code in some script files. This rule prevents scripts that appear to be obfuscated from running.  
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Malware and other threats can attempt to obfuscate or hide their malicious code in some script files. This rule prevents scripts that appear to be obfuscated from running.  
     
   **Default**: Block
 
 - **Untrusted USB process type**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – When set to *Block*, unsigned, or untrusted executable files from USB removable drives and SD cards can't run.
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, unsigned, or untrusted executable files from USB removable drives and SD cards can't run.
 
   Executable files include:
   - Executable files (such as .exe, .dll, or .scr)
@@ -134,22 +134,22 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
   **Default**: Block
 
 - **Office apps other process injection type**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) - When set to *Block*, Office apps, including Word, Excel, PowerPoint, and OneNote, can’t inject code into other processes. Code injection is typically used by malware to run malicious code in an attempt to hide the activity from antivirus scanning engines.  
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - When set to *Block*, Office apps, including Word, Excel, PowerPoint, and OneNote, can’t inject code into other processes. Code injection is typically used by malware to run malicious code in an attempt to hide the activity from antivirus scanning engines.  
 
   **Default**: Block
 
 - **Office macro code allow Win32 imports type**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) - When set to *Block*, this rule attempts to block Office files that contain macro code that can import Win32 DLLs. Office files include Word, Excel, PowerPoint, and OneNote. Malware can use macro code in Office files to import and load Win32 DLLs, which are then used to make API calls to allow further infection throughout the system.  
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - When set to *Block*, this rule attempts to block Office files that contain macro code that can import Win32 DLLs. Office files include Word, Excel, PowerPoint, and OneNote. Malware can use macro code in Office files to import and load Win32 DLLs, which are then used to make API calls to allow further infection throughout the system.  
 
   **Default**: Block
 
 - **Office communication apps launch in a child process**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – When set to *Enable*, this rule prevents Outlook from creating child processes. By blocking the creation of a child process, this rule protects against social engineering attacks and prevents exploit code from abusing a vulnerability in Outlook.  
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Enable*, this rule prevents Outlook from creating child processes. By blocking the creation of a child process, this rule protects against social engineering attacks and prevents exploit code from abusing a vulnerability in Outlook.  
 
   **Default**: Enable
 
 - **Office apps executable content creation or launch type**  
-  [Attack surface reduction rule](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – When set to *Block*, Office apps can’t create executable content. Office apps include Word, Excel, PowerPoint, OneNote, and Access.  
+  [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, Office apps can’t create executable content. Office apps include Word, Excel, PowerPoint, OneNote, and Access.  
 
   This rule targets typical behaviors used by suspicious and malicious add-ons and scripts (extensions) that create or launch executable files. This is a typical malware technique. Extensions are blocked from being used by Office apps. Typically, these extensions use the Windows Scripting Host (.wsh files) to run scripts that automate certain tasks or provide user-created add-on features.
 
@@ -278,8 +278,7 @@ For more information, see [WindowsAdvancedThreatProtection CSP](https://docs.mic
 ## Exploit Protection  
 
 - **Exploit protection XML**  
-  For more information, see [Import, export, and deploy exploit protection configurations
-](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml) in the Windows documentation.  
+  For more information, see [Import, export, and deploy exploit protection configurations](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) in the Windows documentation.  
 
   Enables the IT admin to push out a configuration representing the desired system and application mitigation options to all the devices in the organization. The configuration is represented by an XML. 
 
