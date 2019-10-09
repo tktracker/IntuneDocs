@@ -151,7 +151,7 @@ The compliance policy determines the level of risk that you consider as acceptab
    - **High**: This level is the least secure and allows all threat levels. So devices that with high, medium, or low threat levels are considered compliant.
 
 6. Select **OK**, and **Create** to save your changes (and create the policy).  
-7. [Assign the device compliance policy](create-compliance-policy.md#assign-user-groups) to applicable groups.
+7. [Assign the device compliance policy](create-compliance-policy.md#assign-the-policy) to applicable groups.
 
 
 
