@@ -73,9 +73,9 @@ Default restrictions are automatically provided for both device type and device 
      Supported version formats include:
     - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
     - iOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
-    - Windows supports major.minor.rev.build for Windows 10 only.
+    - Windows supports major.minor.build.rev for Windows 10 only.
     > [!Note]
-    > Windows 10 does not provide the build number during enrollment so for instance if you enter in 10.0.17134.100 and the device is 10.0.17134.174 it will be blocked during enrollment.
+    > Windows 10 does not provide the rev number during enrollment so for instance if you enter in 10.0.17134.100 and the device is 10.0.17134.174 it will be blocked during enrollment.
 
 8. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
 9. Choose **Next** to go to the **Assignments** page.
