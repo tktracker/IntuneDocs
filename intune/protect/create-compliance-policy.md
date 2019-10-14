@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Device compliance policies in Microsoft Intune - Azure | Microsoft Docs
-description: Get started with use device compliance policies, overview of status and severity levels, using the InGracePeriod status, working with Conditional Access, handling devices without an assigned policy, and the differences in compliance in the Azure portal and classic portal in Microsoft Intune
+title: Create device compliance policies in Microsoft Intune - Azure | Microsoft Docs
+description: Create device compliance policies, overview of status and severity levels, using the InGracePeriod status, working with Conditional Access, handling devices without an assigned policy, and the differences in compliance in the Azure portal and classic portal in Microsoft Intune
 keywords:
 author: MandiOhlinger
 ms.author: mandia

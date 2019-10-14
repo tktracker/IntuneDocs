@@ -2,6 +2,7 @@
 # required metadata
 
 title: Data security and sharing in Intune
+titleSuffix: Microsoft Intune
 description: Learn how personal data is secured and shared in Intune.
 keywords:
 author: ErikjeMS

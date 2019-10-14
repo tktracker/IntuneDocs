@@ -2,6 +2,7 @@
 # required metadata
 
 title: Data collection in Intune
+titleSuffix: Microsoft Intune
 description: Learn how personal data is collected in Intune.
 keywords:
 author: ErikjeMS

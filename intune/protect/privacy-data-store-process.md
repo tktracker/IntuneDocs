@@ -2,6 +2,7 @@
 # required metadata
 
 title: Data storage and processing in Intune
+titleSuffix: Microsoft Intune
 description: Learn how personal data is stored and processed in Intune.
 keywords:
 author: ErikjeMS

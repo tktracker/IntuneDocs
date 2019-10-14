@@ -2,6 +2,7 @@
 # required metadata
 
 title: View and correct personal data
+titleSuffix: Microsoft Intune
 description: Learn how to view and correct personal data.
 keywords:
 author: ErikjeMS

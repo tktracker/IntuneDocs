@@ -117,7 +117,7 @@ Now we’ll create two Conditional Access policies to cover all device platforms
    3. Clear the other check boxes.  
    4. Select **Done** > **Done** to return to the New policy pane.  
 
-   ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
+   ![Select Mobile apps and clients](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
 
 7. Under **Access controls**, select **Grant**. 
      
@@ -127,11 +127,11 @@ Now we’ll create two Conditional Access policies to cover all device platforms
    4. Under **For multiple controls**, select **Require all the selected controls**. This setting ensures that both requirements you selected are enforced when a device tries to access email.
    5. Choose **Select**.
      
-   ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
+   ![Select controls](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
 
 7. Under **Enable policy**, select **On**, and then select **Create**.  
      
-    ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
+    ![Create policy](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
 
 The Conditional Access policy for Modern Authentication clients is created. Now you can create a policy for Exchange Active Sync clients.
 
@@ -157,14 +157,14 @@ The Conditional Access policy for Modern Authentication clients is created. Now 
    4. Clear all other check boxes.  
    5. Select **Done**, and then select **Done** again.  
     
-   ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
+   ![Apply to supported platforms](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
 
 7. Under **Access controls**, select **Grant**.  
    1. On the **Grant** pane, select **Grant access**.  
    2. Select **Require approved client app**. Clear all other check boxes.  
    3. Choose **Select**.  
      
-   ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)  
+   ![Require approved client app](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)  
 
 8. Under **Enable policy**, select **On**.  
 

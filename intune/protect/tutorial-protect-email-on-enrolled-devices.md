@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tutorial - Protect Exchange Online email on Intune-managed devices
+title: Tutorial - Protect Exchange Online email on managed devices
 titleSuffix: Microsoft Intune
 description: Learn to secure Exchange Online with iOS Intune compliance policies and Azure AD Conditional Access to require managed devices and the Outlook app.
 keywords:
@@ -99,7 +99,7 @@ Now we’ll create a Conditional Access policy that requires all device platform
     2. On the **Include** tab, select **Any device**, and then select **Done**. 
     3. Select **Done** again.
    
-    ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
+    ![Include any device](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
 
 6. Under **Assignments**, select **Conditions** > **Client apps**.
      
@@ -107,7 +107,7 @@ Now we’ll create a Conditional Access policy that requires all device platform
     2. For this tutorial, select **Mobile apps and desktop clients** and **Modern authentication clients** (which refers to apps like Outlook for iOS and Outlook for Android). Clear all other check boxes.
     3. Select **Done**, and then select **Done** again.
     
-    ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
+    ![Select apps and clients](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
 
 7. Under **Access controls**, select **Grant**. 
      
@@ -117,11 +117,11 @@ Now we’ll create a Conditional Access policy that requires all device platform
     4. Under **For multiple controls**, select **Require all the selected controls**. This setting ensures that both requirements you selected are enforced when a device tries to access email.
     5. Choose **Select**.
      
-    ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
+    ![Select conrols](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
 8. Under **Enable policy**, select **On**.
      
-    ![Select the Office 365 Exchange Online app](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
+    ![Enable policy](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
 
 9. Select **Create**.
 

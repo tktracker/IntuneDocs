@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up Sophos Mobile integration with Intune
+title: Use Sophos Mobile with Intune
 titleSuffix: Intune on Azure
-description: How to set up the Sophos Mobile solution with Microsoft Intune to control mobile device access to your corporate resources.
+description: How to use the Sophos Mobile solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
