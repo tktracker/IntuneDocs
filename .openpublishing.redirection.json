@@ -6976,6 +6976,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "intune/fundamentals/get-started-evaluation.md",
+            "redirect_url": "/intune/fundamentals/what-is-intune",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "intune/get-support.md",
             "redirect_url": "/intune/fundamentals/get-support",
             "redirect_document_id": true
