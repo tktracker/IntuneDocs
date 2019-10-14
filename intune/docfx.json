@@ -37,6 +37,7 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/Intunedocs",
       "feedback_product_url": "https://microsoftintune.uservoice.com/",  
+      "brand": "Intune",
       "searchScope": ["Intune"]
     },
     "fileMetadata": {

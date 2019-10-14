@@ -33,7 +33,7 @@ There are two parts to using this feature: open-source API, and the Intune admin
 **Part 1 - Use an open-source API**  
 Microsoft created an API to integrate with Intune. Though the API you can validate certificates, send success or failure notifications, and use SSL, specifically SSL socket factory, to communicate with Intune.
 
-The API is available on the [Intune SCEP API public GitHub repository](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) for you to download, and use in your solutions. Use this API with third-party SCEP servers to run custom challenge validation against Intune before SCEP provisions a certificate to a device.
+The API is available on the [Intune SCEP API public GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) for you to download, and use in your solutions. Use this API with third-party SCEP servers to run custom challenge validation against Intune before SCEP provisions a certificate to a device.
 
 [Integrate with Intune SCEP management solution](scep-libraries-apis.md) provides more details on using the API, its methods, and testing the solution you build.
 
@@ -131,11 +131,11 @@ The following third-party certification authorities support Intune:
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
 
-- [Intune SCEP API GitHub repository](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Intune SCEP API GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Intune SCEP API guidance for third party CAs](scep-libraries-apis.md)
 
 ## See also
 
 - [Configure certificate profiles](certificates-scep-configure.md)
-- [Intune SCEP API GitHub repository](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Intune SCEP API GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Intune SCEP API guidance for third party CAs](scep-libraries-apis.md)

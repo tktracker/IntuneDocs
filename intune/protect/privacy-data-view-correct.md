@@ -48,7 +48,7 @@ Microsoft uses strict controls to govern access to customer data, granting the l
 
 You can secure and control access to end user personal data by using role-based administration control (RBAC). For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-You can learn more about Microsoft data practices by reading the Online Services Terms and [Microsoft Online Services Privacy Statement](http://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
+You can learn more about Microsoft data practices by reading the Online Services Terms and [Microsoft Online Services Privacy Statement](https://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
 
 ## Correct end user personal data
 

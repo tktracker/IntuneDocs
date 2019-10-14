@@ -193,7 +193,7 @@ conceptualContent:
         - url: ./apps/troubleshoot-app-install.md
           itemType: concept
           text: Troubleshoot app installation issues
-        - url: ./protect/troubleshoot-policies-in-microsoft-intune.md
+        - url: ./configuration/troubleshoot-policies-in-microsoft-intune.md
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
     - title: Developer

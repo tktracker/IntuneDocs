@@ -40,7 +40,7 @@ Before you proceed, ensure you've [created and deployed a *trusted certificate* 
 
 ### Servers and server roles  
 The following on-premises infrastructure must run on servers that are domain-joined to your Active Directory, with the exception of the Web Application Proxy Server.  
-- **Certification Authority** – Use a Microsoft Active Directory Certificate Services Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 with service pack 1, or later. The version of Windows Server you use must remain in support by Microsoft. A Standalone CA is not supported. For more information, see [Install the Certification Authority](http://technet.microsoft.com/library/jj125375.aspx). If your CA runs Windows Server 2008 R2 SP1, you must [install the hotfix from KB2483564](http://support.microsoft.com/kb/2483564/).  
+- **Certification Authority** – Use a Microsoft Active Directory Certificate Services Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 with service pack 1, or later. The version of Windows Server you use must remain in support by Microsoft. A Standalone CA is not supported. For more information, see [Install the Certification Authority](https://technet.microsoft.com/library/jj125375.aspx). If your CA runs Windows Server 2008 R2 SP1, you must [install the hotfix from KB2483564](https://support.microsoft.com/kb/2483564/).  
 
 - **NDES server role** – You must configure a Network Device Enrollment Service (NDES) server role on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).  
 
@@ -48,7 +48,7 @@ The following on-premises infrastructure must run on servers that are domain-joi
   - You can't use NDES that’s installed on the server that hosts the Enterprise CA.  
   - You’ll install the Microsoft Intune Certificate connector on the same server that hosts NDES.  
 
-  To learn more about NDES, see [Network Device Enrollment Service Guidance](http://technet.microsoft.com/library/hh831498.aspx) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](https://technet.microsoft.com/library/dn473016.aspx).  
+  To learn more about NDES, see [Network Device Enrollment Service Guidance](https://technet.microsoft.com/library/hh831498.aspx) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](https://technet.microsoft.com/library/dn473016.aspx).  
 
 - **Microsoft Intune Certificate Connector** – The Microsoft Intune Certificate Connector is required to use SCEP certificate profiles with Intune. This article will guide you through [installing this connector](#install-the-intune-certificate-connector).  
 
@@ -64,7 +64,7 @@ The following on-premises infrastructure is optional:
 
 - **Web Application Proxy Server** (optional) - Use a server that runs Windows Server 2012 R2 or later as a Web Application Proxy (WAP) server to publish your NDES URL to the internet.  This allows both intranet and internet facing devices to get certificates.
 
-  The server that hosts WAP [must install an update](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) that enables support for the long URLs that are used by the Network Device Enrollment Service. This update is included with the [December 2014 update rollup](http://support.microsoft.com/kb/3013769), or individually from [KB3011135](http://support.microsoft.com/kb/3011135).  
+  The server that hosts WAP [must install an update](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) that enables support for the long URLs that are used by the Network Device Enrollment Service. This update is included with the [December 2014 update rollup](https://support.microsoft.com/kb/3013769), or individually from [KB3011135](https://support.microsoft.com/kb/3011135).  
 
   The WAP server must have an SSL certificate that matches the name that’s published to external clients and trust the SSL certificate that’s used on the computer that hosts the NDES service. These certificates enable the WAP server to terminate the SSL connection from clients and create a new SSL connection to the NDES service.  
 
