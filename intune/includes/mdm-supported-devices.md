@@ -1,7 +1,7 @@
 
 
 ### Apple
-- Apple iOS 10.0 and later
+- Apple iOS and iPadOS 10.0 and later
 - Mac OS X 10.12 and later
 
 ### Google

@@ -28,8 +28,6 @@ ms.collection: M365-identity-device-management
 
 # Manage software updates in Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 Use Intune to define update rings that specify how and when Windows as a Service updates your Windows 10 devices. Update rings are policies you that you assign to groups of devices. By using update rings, you can create an update strategy that mirrors your business needs. For more information, see [Manage updates using Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
 With Windows 10, new Feature Updates and Quality Updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows 10 devices are up-to-date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
@@ -79,7 +77,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 8. Use the **Include** and **Exclude** tabs to define which groups this Ring is assigned to, and then select **Save** to complete the assignment.
 
 ## Manage your Windows 10 Update rings
-In the portal, you can select a Windows 10 Update Ring to open its **Overview** pane. From this pane you can view the rings assignment status and take additional actions to manage the ring. 
+In the portal, you can select a Windows 10 Update Ring to open its **Overview** pane. From this pane, you can view the rings assignment status and take additional actions to manage the ring. 
 ### To view an updates rings Overview pane: 
 1. Sign in to the Azure portal.
 2. Navigate to **Intune** > **Software updates** > **Windows 10 Update Rings**.
@@ -97,7 +95,7 @@ In addition to viewing assignment status, you can select the following actions f
 ### Delete  
 Select **Delete** to stop enforcing the settings of the selected Windows 10 update ring. Deleting a ring removes its configuration from Intune so that Intune no longer applies and enforces those settings.  
 
-Deleting a ring from Intune doesn't modify the settings on devices that were assigned the update ring.  Instead, the device keeps its current settings. This is because devices don't maintain a historical record of what settings were previously in place, and because the device might receive settings from additional update rings that remain active.  
+Deleting a ring from Intune doesn't modify the settings on devices that were assigned the update ring.  Instead, the device keeps its current settings. Devices don't maintain a historical record of what settings they held previously. Devices can also receive settings from additional update rings that remain active.  
 
 #### To delete a ring  
 1. While viewing the overview page for an Update Ring, select **Delete**.  
@@ -135,6 +133,12 @@ While an update ring is paused, you can select **Extend** to reset the pause per
 
 ### Uninstall  
 An Intune administrator can use **Uninstall** to uninstall (roll back) the latest *feature* update or the latest *quality* update for an active or paused update ring. After uninstalling one type, you can then uninstall the other type. Intune doesn't support or manage the ability of users to uninstall updates.  
+
+> [!IMPORTANT] 
+> When you use the *Uninstall* option, Intune passes the uninstall request to devices immediately. 
+> - Windows devices start removal of updates as soon as they receive the change in Intune policy. Update removal isn't limited to maintenance schedules, even when they're configured as part of the update ring. 
+> - If the update removal requires a device restart, the device  restarts without offering device users an option to delay.
+
 
 For Uninstall to be successful:  
 - A device must run the Windows 10 April 2018 update (version 1803) or later.  
