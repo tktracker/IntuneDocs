@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 10/15/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -75,7 +75,7 @@ If the device recently enrolled, the compliance and configuration check-in runs 
 | Windows Phone | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 
-At any time, users can open the Company Portal app, and sync the device to immediately check for policy or profile updates.
+At any time, users can open the Company Portal app, **Settings** > **Sync** to immediately check for policy or profile updates.
 
 For devices without user affinity, the sync frequency immediately following enrollment can vary from hours to a day, or more. Intune sends requests at various intervals for a device to check in with Intune. However, it's still up to the device to check in. After initial enrollment, the time it takes a device to complete the check-in is unpredictable. It also depends on the type of device enrollment, and the policies and profiles assigned to a device. After the device enrolls, and all initial policies and profiles are applied, the device checks for new policies and profiles about every 6-8 hours, based on the time the device enrolls in Intune.
 

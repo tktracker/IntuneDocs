@@ -141,7 +141,8 @@ The compliance policy determines the level of risk that you consider as acceptab
 2. Select **Device compliance** > **Policies** > **Create policy**.
 3. Enter a **Name** and **Description**.
 4. In **Platform**, select **Windows 10 and later**.
-5. In the **Microsoft Defender ATP** settings, set **Require the device to be at or under the machine risk score** to your preferred level. 
+5. Under **Settings**, select **Microsoft Defender ATP**.
+6. Set **Require the device to be at or under the machine risk score** to your preferred level. 
    
    Threat level classifications are [determined by Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 

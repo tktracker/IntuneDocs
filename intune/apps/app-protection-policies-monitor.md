@@ -52,7 +52,7 @@ The retention period for app protection data is 90 days. Any app instances that 
 ![Summary tile on the Intune mobile application management pane](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
 - **Assigned users**: The total number of assigned users in your company who are using an app that is associated with a policy in a work context and are protected and licensed, as well as the assigned users that are unprotected and unlicensed.
-- **Flagged users**: The number of users who are experiencing issues. Jailbroken (iOS) and rooted (Android) devices are reported under **Flagged users**. Users with devices that are flagged by the Google SafetyNet device attestation check (if turned on by the IT admin) are reported here. 
+- **Flagged users**: The number of users who are experiencing issues with their devices. Jailbroken (iOS) and rooted (Android) devices are reported under **Flagged users**. Also, users with devices that are flagged by the Google SafetyNet device attestation check (if turned on by the IT admin) are reported here. 
 - **Users with potentially harmful apps**: The number of users who may have a harmful app on their Android device detected by Google Play Protect. 
 - **User status for iOS** and **User status for Android**: The number of users who have used an app who have a policy assigned to them in a work context for the related platform. This information shows the number of users managed by the policy, as well as the number of users who are using an app that is not targeted by any policy in a work context. You might consider adding these users to the policy.
 - **Top Protected iOS Apps**: Based on the most used iOS apps, this information shows the number of protected and unprotected iOS apps.
@@ -107,7 +107,7 @@ To see the reporting for a user, follow these steps:
 > If the users you searched for do not have the MAM policy deployed to them, you see a message informing you that the user is not targeted by any MAM policies.
 
 ### Flagged users
-The detailed view shows the error message, the app that was accessed when the error happened, the device OS platform affected, and a time stamp. Users with devices that are flagged by the 'SafetyNet device attestation' conditional launch check are reported here with the reason as reported by Google.
+The detailed view shows the error message, the app that was accessed when the error happened, the device OS platform affected, and a time stamp. The error is typically for jailbroken (iOS) or rooted (Android) devices. Also, users with devices that are flagged by the 'SafetyNet device attestation' conditional launch check are reported here with the reason as reported by Google. For a user to be removed from the report, the status of the device itself needs to have changed, which happens after the next root detection check (or jailbreak check/SafetyNet check happens) that needs to report a positive result. If the device is truly remediated, the refresh on the Flagged Users report will happen when the blade reloads.
 
 ### Users with potentially harmful apps
 The detailed view shows the user, the app package ID, if the app is MAM enabled, threat category, email, device name, and a time stamp. Users with devices that are flagged by 'Require threat scan on apps' conditional launch check are reported here with the threat category as reported by Google. If there are apps listed in this report that are being deployed through Intune, contact the app developer for the app, and/or remove the app from being assigned to your end users. 
@@ -122,7 +122,6 @@ You can find the same reports at the top of the **App protection status** blade.
 Additional reports are available to help you with the MAM policy compliance status. To view these reports, select **Client apps** > **App protection status** > **Reports**. 
 
 The **Reports** blade provides several reports based on user and app, including the following:
-
 
 - **User report**: This report outlines the same information you can find at the **User status** report under the [Detailed view](app-protection-policies-monitor.md#detailed-view) section above.
 

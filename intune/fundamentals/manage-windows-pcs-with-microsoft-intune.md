@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2018
+ms.date: 10/15/2019
 ms.topic: archived
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -30,6 +30,11 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
 
+> [!WARNING]
+> Microsoft announced that [Windows 7 support ends on January 14th 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). On this date, Intune also retires support for devices running Windows 7. Microsoft strongly recommends that you move to Windows 10 to prevent any service or support disruptions.
+> 
+> For more information, see [Intune plan for change: nearing end of support for Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7-).
+
 > [!NOTE]
 > You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client as described below. However, Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. For more information, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md) 
 
@@ -38,7 +43,6 @@ Intune provides a comprehensive solution for organizations to manage mobile devi
 The Intune software client is best suited for Windows PCs running legacy operating systems such as Windows 7 which cannot be managed as mobile devices. The Intune software client uses management capabilities like Group Policy to manage PCs from the cloud.
 
 Intune supports management of Windows PCs as computers using the software client for up to 7,000 PCs. For larger deployments, manage Windows 10 PCs as mobile devices. Each release of Intune and update of Windows 10 includes management features based on the mobile device management architecture. We strongly recommend that you move your organization to Windows 10 managed as mobile devices.
-
 
 > [!NOTE]
 > You can manage Windows 8.1 and later devices either as PCs by using the Intune client software or as mobile devices. You cannot use both methods on the same device. Carefully consider before deciding to manage PCs with the Intune client software. This topic applies only to managing devices as PCs by running the Intune client software.
@@ -63,9 +67,6 @@ The following are software requirements for installing the client software:
 |Administrative permissions|The account that installs the client software must have local administrator permissions on that device.|
 |Windows Installer 3.1|The PC must have, at a minimum, Windows Installer 3.1.<br /><br />To view the version of Windows Installer on a PC:<br /><br />  On the PC, right-click **%windir%\System32\msiexec.exe**, and then click **Properties**.<br /><br />You can download the latest version of Windows Installer from [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) on the Microsoft Developer Network website.|
 |Remove incompatible client software|Before you install the Intune client software, uninstall any Configuration Manager, Operations Manager, and Service Manager client software from that PC.|
-
-> [!WARNING]
-> Microsoft announced that [Windows 7 support ends on January 14th 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). On this date, Intune also retires support for devices running Windows 7. Microsoft strongly recommends that you move to Windows 10 to prevent any service or support disruptions. 
 
 ## Deploying the Intune software client
 As an Intune admin, you can make the Intune software client available to users in a variety of ways. For guidance, see [Install the Intune software client on Windows PCs](../install-the-windows-pc-client-with-microsoft-intune.md).
