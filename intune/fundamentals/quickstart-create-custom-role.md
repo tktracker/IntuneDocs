@@ -6,11 +6,12 @@ description: Quickstart - Create and assign a custom role for a remote device ma
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 03/26/2019
 ms.author: erikje
-
+ms.assetid: 0b3ac749-4a61-4717-bf08-e0e6a15c3b0a
 # optional metadata
 
 #ROBOTS:

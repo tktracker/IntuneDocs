@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 03/07/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518

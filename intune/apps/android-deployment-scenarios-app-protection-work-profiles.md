@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 02/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology:
 ms.reviewer: chrisbal

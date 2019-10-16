@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 04/30/2019
 ms.topic: tutorial
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 

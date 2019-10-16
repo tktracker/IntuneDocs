@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 07/24/2019
 ms.topic: tutorial
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: e892d8a3-7f74-498c-98d5-e968a8fbb049

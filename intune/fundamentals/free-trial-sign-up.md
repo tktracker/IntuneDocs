@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c

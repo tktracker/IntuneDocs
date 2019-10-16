@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 12/06/2018
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology:
 

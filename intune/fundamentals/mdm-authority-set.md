@@ -11,8 +11,8 @@ manager: dougeby
 ms.date: 08/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 
 # optional metadata

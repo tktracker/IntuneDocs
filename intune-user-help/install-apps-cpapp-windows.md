@@ -11,6 +11,7 @@ ms.date: 06/27/2019
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology:
 ms.assetid:
 
@@ -30,13 +31,14 @@ ms.collection: M365-identity-device-management
 ---
 
 # Install and share apps on your device
+
 Install apps on your device from the Company Portal app for Windows.
 
 ## Install apps
 
 1. Open the Company Portal app and sign in with your work or school account.  
 
-    ![The Company Portal app for Windows 10 home page.](./media/RS1_AppDetailsPage_Installed_03.png)    
+    ![The Company Portal app for Windows 10 home page.](./media/RS1_AppDetailsPage_Installed_03.png)
 2. Find and install apps from any of the following sections of the Company Portal app:  
 
     * **Home**: Select from a list of your organization's featured apps.  

@@ -9,9 +9,9 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 07/29/2019
-
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268

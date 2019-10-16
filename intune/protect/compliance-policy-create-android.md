@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345

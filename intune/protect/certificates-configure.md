@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 09/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1

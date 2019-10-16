@@ -12,6 +12,7 @@ ms.date: 11/09/2018
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology:
 ms.assetid: 
 searchScope:

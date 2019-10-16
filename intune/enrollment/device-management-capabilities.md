@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 04/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 

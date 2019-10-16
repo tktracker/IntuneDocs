@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D

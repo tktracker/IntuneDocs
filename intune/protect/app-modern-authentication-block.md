@@ -10,6 +10,7 @@ ms.author: erikre
 manager: dougeby
 ms.date: 08/15/2019
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.technology:

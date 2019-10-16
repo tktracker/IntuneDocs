@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 08/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 

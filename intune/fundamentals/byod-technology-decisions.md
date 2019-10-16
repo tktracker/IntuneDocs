@@ -9,16 +9,16 @@ manager: dougeby
 ms.date: 12/8/2017
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid:
+ms.assetid: 297926f6-c029-4003-bda4-9ee031d47dda
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: pfetty
+ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

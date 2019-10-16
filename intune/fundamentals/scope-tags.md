@@ -8,10 +8,11 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/06/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.technology:
-ms.assetid: 
+ms.assetid: a21d3039-f2ed-4f43-b6fa-d00c071edbc4
 
 # optional metadata
 

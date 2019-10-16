@@ -10,9 +10,9 @@ ms.author: erikje
 ms.date: 07/13/2017
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
-ms.assetid: 
+ms.assetid: 99dcf916-d80f-42c5-863b-a4595e1ec67a
 
 # optional metadata
 

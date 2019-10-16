@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
 

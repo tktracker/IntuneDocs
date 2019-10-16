@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 11/09/2018
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62

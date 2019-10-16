@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 06/10/2019
 ms.topic: tutorial
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 

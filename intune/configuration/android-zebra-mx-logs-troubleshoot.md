@@ -8,8 +8,9 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/26/2019
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority:
 ms.technology:
 ms.assetid: 

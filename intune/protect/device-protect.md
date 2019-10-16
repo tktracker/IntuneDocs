@@ -10,6 +10,7 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 07/19/2018
 ms.topic: conceptual
+ms.subservice: protect
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology:

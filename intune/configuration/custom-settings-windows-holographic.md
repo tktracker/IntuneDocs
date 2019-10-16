@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 12/06/2018
 ms.article: article
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.topic: reference
 ms.technology:

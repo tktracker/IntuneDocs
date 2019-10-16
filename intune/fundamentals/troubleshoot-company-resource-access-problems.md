@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 03/20/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c

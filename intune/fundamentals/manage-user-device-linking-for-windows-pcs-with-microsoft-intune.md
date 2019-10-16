@@ -11,8 +11,8 @@ manager: dougeby
 ms.date: 01/01/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 53c99d63-c312-442a-8a71-de1b10fcd39b
 
 # optional metadata

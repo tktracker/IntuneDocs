@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 3/6/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: medium
 ms.technology:
 

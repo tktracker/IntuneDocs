@@ -4,6 +4,7 @@ titleSuffix: Microsoft Intune
 description: Learn how to search the Intune docs, provide doc feedback, and contribute to the docs.
 ms.date: 09/15/2019
 ms.service: microsoft-intune 
+ms.subservice: fundamentals
 ms.topic: conceptual
 ms.assetid: e6e44225-cc9e-47c2-913b-1e629ba9a71e
 author: dougeby

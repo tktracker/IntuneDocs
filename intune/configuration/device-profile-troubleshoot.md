@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 10/15/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 

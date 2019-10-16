@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca

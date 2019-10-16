@@ -7,7 +7,7 @@ metadata:
   description: Intune lets you run actions remotely.
   services: service
   ms.service: microsoft-intune
-  ms.subservice: subservice
+  ms.subservice: remote-actions
   ms.topic: landing-page 
   ms.collection: collection
   author: ErikjeMS

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/29/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 

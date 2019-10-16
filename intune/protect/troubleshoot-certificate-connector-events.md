@@ -7,9 +7,9 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/01/2019
-ms.topic: article
-ms.prod:
+ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
 

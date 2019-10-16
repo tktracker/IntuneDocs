@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436

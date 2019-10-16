@@ -11,6 +11,7 @@ manager:
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d

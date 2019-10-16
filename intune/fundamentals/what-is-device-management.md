@@ -10,6 +10,7 @@ ms.date: 10/14/2019
 ms.topic: conceptual 
 audience: microsoft-business
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.technology: 
 ms.custom: microsoft-intune 
 ms.assetid: 0649d310-43a7-4b01-85d2-da255d03e1da

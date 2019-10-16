@@ -11,6 +11,7 @@ ms.date: 10/17/2017
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology:
 ms.assetid: 5b9ee20b-3c4e-4461-86d3-6fd26e7f71a6
 

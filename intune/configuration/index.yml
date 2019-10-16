@@ -7,6 +7,7 @@ metadata:
   description: Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles" and then you can use Intune to apply or "assign" the profile to the devices.
   services: service
   ms.service: microsoft-intune
+  ms.subservice: configuration
   ms.topic: landing-page 
   ms.collection: collection
   author: dougeby

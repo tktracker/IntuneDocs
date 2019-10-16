@@ -10,6 +10,7 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 10/31/2017
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.topic: archived
 ms.technology:

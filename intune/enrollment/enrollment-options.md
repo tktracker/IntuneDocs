@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 10/31/2017
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: cf4ad6d4-423f-4826-ab8d-6eb7a7cfb559
