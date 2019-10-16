@@ -38,6 +38,8 @@ We recommend that you use [Mobile Device Management (MDM) to manage your Windows
 
 ## Legacy PC Client features are only available in the Silverlight console
 
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
+
 The Intune PC Client management workflows use the [Silverlight-based Intune Admin Console](https://manage.microsoft.com/), which has the following consequences:
 
 - For all non-grouping management tasks using the Intune PC Client, you must use the Silverlight console.

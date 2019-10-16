@@ -178,7 +178,7 @@ Some platforms and configurations do not allow self-service device actions. This
 |     Platform    |    Retire    |    Wipe     |    Rename<sup>(4)</sup>    |    Sync    |    Remote Lock    |    Reset Passcode    |    Key Recovery    |
 |------------------------|--------------------|--------------------|-----------------|-----------------|--------------------------|--------------------------|--------------------|
 |    Windows 10<sup>(3)</sup>    |    Available<sup>(1)</sup>    |    Available    |    Available    |    Available    |    Windows Phone only    |    Windows Phone only    |    NA    |
-|    iOS<sup>(3)</sup>    |    Available    |    Available    |    Available    |    Available    |    Available    |    Available    |    NA    |
+|    iOS<sup>(3)</sup>    |    Available    |    Available<sup>(8)</sup>    |    Available    |    Available    |    Available<sup>(8)</sup>    |    Available    |    NA    |
 |    MacOS<sup>(3)</sup><sup>(5)</sup>    |    Available    |    NA    |    Available    |    Available    |    Available    |    NA    |    Available<sup>(2)</sup>    |
 |    Android<sup>(3)</sup>    |    Available<sup>(7)</sup>    |    Available<sup>(7)</sup>    |    Available    |    Available    |    Available    |    Available<sup>(6)</sup>    |    NA    |
 
@@ -190,6 +190,7 @@ Some platforms and configurations do not allow self-service device actions. This
 <sup>(5)</sup> Remote Wipe is not available on MacOS devices.<br>
 <sup>(6)</sup> Passcode reset is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> Retire and Wipe is not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br> 
+<sup>(8)</sup> Wipe and Reset Passcode are not available on iOS devices enrolled with User Enrollment.<br> 
 
 ## Next steps
 

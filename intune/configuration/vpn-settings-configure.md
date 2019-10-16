@@ -56,7 +56,7 @@ You can create VPN profiles using the following connection types:
 |Citrix SSO|- Android<br/>- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
 |Custom VPN|- iOS<br/>- macOS|
 |F5 Access|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|IKEv2|Windows 10|
+|IKEv2| - iOS<br/>- Windows 10|
 |L2TP|Windows 10|
 |Palo Alto Networks GlobalProtect|- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
 |PPTP|Windows 10|

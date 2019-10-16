@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Manage user-device linking for Windows PCs
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 The information in this topic applies only to Windows desktops that you are managing as PCs by using the Intune software client. 
 

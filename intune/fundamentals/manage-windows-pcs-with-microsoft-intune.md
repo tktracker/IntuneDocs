@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Manage Windows PCs as computers via Intune software client
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!WARNING]
 > Microsoft announced that [Windows 7 support ends on January 14th 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). On this date, Intune also retires support for devices running Windows 7. Microsoft strongly recommends that you move to Windows 10 to prevent any service or support disruptions.

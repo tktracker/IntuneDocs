@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Keep Windows PCs up-to-date with software updates in Microsoft Intune
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
 > The information in this topic applies only to Windows desktops that you are managing as PCs by using the Intune software client. If you want to manage updates for Windows PCs enrolled as mobile devices, see [Manage software updates in Intune](../protect/windows-update-for-business-configure.md).

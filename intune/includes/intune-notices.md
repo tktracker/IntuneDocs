@@ -9,8 +9,13 @@ ms.author: erikje
 ms.custom: include file
 ---
 
-These notices provide important information that can help you prepare for future Intune changes and features. 
+These notices provide important information that can help you prepare for future Intune changes and features.
 
+### End of support for legacy PC management
+
+Legacy PC management is going out of support on October 15, 2020. Upgrade devices to Windows 10 and reenroll them as MDM devices to keep them managed by Intune.
+
+[Learn more](https://go.microsoft.com/fwlink/?linkid=2107122)
 
 ### Decreasing support for Android device administrator 
 Android device administrator (sometimes referred to “legacy” Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is now available with [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (released with Android 5.0). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.

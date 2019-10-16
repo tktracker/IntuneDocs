@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Retire a Windows PC
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Use the following steps to retire desktops that you are managing as PCs by running the Intune software client on them. When you retire a PC, it removes it from Intune management. You cannot wipe a PC from Intune to set it back to its original factory settings.
 

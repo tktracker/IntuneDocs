@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 ---
 # What's new in the Intune classic portal - previous months
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 This page lists new features and notices previously announced on the [What's new page](whats-new.md) for the Intune classic portal.
 

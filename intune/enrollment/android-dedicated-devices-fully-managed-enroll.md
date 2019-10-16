@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Enroll your Android Enterprise dedicated devices or fully managed devices
 
-After you've set up your [Android Enterprise dedicated devices](android-kiosk-enroll.md) or [fully managed devices](android-fully-managed-enroll.md) in Intune, you can enroll the devices. How you enroll your Android Enterprise devices depends on the operating system.
+After you've set up your [Android Enterprise dedicated devices](android-kiosk-enroll.md) or [fully managed devices](android-fully-managed-enroll.md) in Intune, you can enroll the devices. Intune enrollment for both dedicated devices and fully managed devices start with a factory reset. How you enroll your Android Enterprise devices depends on the operating system.
 
 | Enrollment method | Minimum Android OS version for dedicated and fully managed devices |
 | ----- | ----- |
