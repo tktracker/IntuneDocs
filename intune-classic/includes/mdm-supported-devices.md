@@ -1,5 +1,5 @@
 ### Apple
-- Apple iOS and iPadOS 9.0 and later
+- Apple iOS and iPadOS 10.0 and later
 - Mac OS X 10.9 and later
 
 ### Windows

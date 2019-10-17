@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,6 +38,10 @@ This article shows you how to assign a profile, and includes some information on
 
 > [!NOTE]  
 > When a policy is removed or no longer assigned to a device, the setting might keep the existing value. The setting doesn't revert to a default value. To change the setting to a different value, create a new policy and assign it.
+
+## Before you begin
+
+Be sure you have the appropriate role to assign policies. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Assign a device profile
 
