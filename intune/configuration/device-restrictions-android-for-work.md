@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -72,7 +72,7 @@ This article lists and describes the different settings you can control on Andro
 - **System update**: Choose an option to define how the device handles over-the-air updates:
   - **Device Default**: Use the device's default setting.
   - **Automatic**: Updates are automatically installed without user interaction. Setting this policy immediately installs any pending updates.
-  - **Postponed**: Updates are postponed for 30 days. At the end of the 30 days, Android prompts the user to install the update. It's possible for device manufacturers or carriers to prevent (exempt) important security updates from being postponed. An exempted update shows a system notification to the user on the device. 
+  - **Postponed**: Updates are postponed for 30 days. At the end of the 30 days, Android prompts the user to install the update. It's possible for device manufacturers or carriers to prevent (exempt) important security updates from being postponed. An exempted update shows a system notification to the user on the device.
   - **Maintenance window**: Installs updates automatically during a daily maintenance window that you set in Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts the user to install. This window is also used to install updates for Play apps. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
 
 - **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors are not shown on the device. When set to **Not configured**, the operating system default is used, which may be to show notifications.
@@ -103,8 +103,8 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   > For multi-app dedicated devices, the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
   >   - [Added as a client app](../apps/apps-add-android-for-work.md) in Intune
   >   - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
-  > 
-  > The **Managed Home Screen** app isn't required to be in the configuration profile, but it is required to be added as a client app. When the **Managed Home Screen** app is added as a client app, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app. 
+  >
+  > The **Managed Home Screen** app isn't required to be in the configuration profile, but it is required to be added as a client app. When the **Managed Home Screen** app is added as a client app, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
   >
   > When using multi-app kiosk mode, dialer/phone apps may not function properly. 
 
@@ -246,7 +246,22 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
   Choose **Not configured** to allow traffic to flow through the VPN tunnel or through the mobile network.
 
-## Work profile only 
+- **Recommended global proxy**: Choose **Enable** to add a global proxy to the devices. When enabled, HTTP and HTTPS traffic, including some apps on the device, use the proxy you enter. This proxy is only a recommendation. It's possible some apps won't use the proxy. **Not configured** (default) doesn't add a recommended global proxy.
+
+  For more information on this feature, see [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (opens an Android site).
+
+  When enabled, also enter the **Type** of proxy. Your options:
+
+  - **Direct**: Choose this option to manually enter the proxy server details, including:
+    - **Host**: Enter the hostname or IP address of your proxy server. For example, enter `proxy.contoso.com` or `127.0.0.1`.
+    - **Port number**: Enter the TCP port number used by the proxy server. For example, enter `8080`.
+    - **Excluded hosts**: Enter a list of host names or IP addresses that won't use the proxy. This list can include an asterisk (`*`) wildcard and multiple hosts separated by semicolons (`;`) with no spaces. For example, enter `127.0.0.1;web.contoso.com;*.microsoft.com`.
+
+  - **Proxy Auto-Config**: Enter the **PAC URL** to a proxy auto-configuration script. For example, enter `https://proxy.contoso.com/proxy.pac`.
+
+    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+
+## Work profile only
 
 ### Work profile settings
 
@@ -254,9 +269,10 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
 - **Copy and paste between work and personal profiles**: Choose **Block** to prevent copy-and-paste between work and personal apps. **Not configured** allows users to share data using copy-and-paste with apps in the personal profile 
 - **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your sharing options:
-  - **Default sharing restrictions**: The default sharing behavior of the device, which varies depending on the Android version. By default, sharing from the personal profile to the work profile is allowed. Also by default, sharing from the work profile to the personal profile is blocked. This setting prevents sharing of data from the work to the personal profile. On devices running versions 6.0 and later, Google doesn't block sharing from the personal profile to the work profile.
+  - **Device default**: The default sharing behavior of the device, which varies depending on the Android version. By default, sharing from the personal profile to the work profile is allowed. Also by default, sharing from the work profile to the personal profile is blocked. This setting prevents sharing of data from the work to the personal profile. On devices running versions 6.0 and later, Google doesn't block sharing from the personal profile to the work profile.
   - **Apps in work profile can handle sharing request from personal profile**: Enables the built-in Android feature that allows sharing from the personal to work profile. When enabled, a sharing request from an app in the personal profile can share with apps in the work profile. This setting is the default behavior for Android devices running versions earlier than 6.0.
-  - **Allow sharing across boundaries**: Enables sharing across the work profile boundary in both directions. When you select this setting, apps in the work profile can share data with unbadged apps in the personal profile. This setting allows managed apps in the work profile to share with apps on the unmanaged side of the device. So, use this setting carefully.
+  - **Prevent any sharing across boundaries**: Prevents sharing between work and personal profiles.
+  - **No restrictions on sharing**: Enables sharing across the work profile boundary in both directions. When you select this setting, apps in the work profile can share data with unbadged apps in the personal profile. This setting allows managed apps in the work profile to share with apps on the unmanaged side of the device. So, use this setting carefully.
 
 - **Work profile notifications while device locked**: Controls whether apps in the work profile can show data in notifications when the device is locked. **Block** doesn't show the data. **Not configured** shows the data.
 - **Default app permissions**: Sets the default permission policy for all apps in the work profile. Starting with Android 6, the user is prompted to grant certain permissions required by apps when the app is launched. This policy setting lets you decide if users are prompted to grant permissions for all apps in the work profile. For example, you assign an app to the work profile that requires location access. Normally that app prompts the user to approve or deny location access to the app. Use this policy to automatically grant permissions without a prompt, automatically deny permissions without a prompt, or let the end user decide. Choose from:
@@ -330,6 +346,13 @@ These password settings apply to personal profiles on devices that use a work pr
 
    > [!Note]
    > This setting only works for devices that are Android O and above.
+
+- **Prevent app installations from unknown sources in the personal profile**: By design, Android Enterprise work profile devices can't install apps from sources other than the Play Store. By nature, work profile devices are intended to be dual-profile:
+
+  - A work profile managed using MDM.
+  - A personal profile that's isolated from MDM management.
+
+  This setting allows administrators more control of app installations from unknown sources. **Not configured** (default) allows app installations from unknown sources in the personal profile. **Block** prevents app installations from sources other than the Play Store in the personal profile.
 
 ### Connectivity
 

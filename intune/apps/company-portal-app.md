@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -133,6 +133,14 @@ Under **Company Portal customization** > **Device management and privacy message
 - Accept the **Default** to use the list as shown, or
 - Choose **Custom** to customize the the list of items that your organization can’t see or do on managed iOS devices. You can use [markdown](https://daringfireball.net/projects/markdown/) to add bullets, bolding, italics, and links.
 
+## Company Portal derived credentials for iOS devices
+Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
+
+> [!NOTE]
+> The user will see instructions about derived credentials based on the link that you have specified via Intune.
+
+For more information about derived credentials for iOS devices, see [Use derived credentials in Microsoft Intune](~/protect/derived-credentials.md).
+
 ## Windows Company Portal keyboard shortcuts
 
 End users can trigger navigation, app, and device actions in the Windows Company Portal using keyboard shortcuts (accelerators).
@@ -176,22 +184,25 @@ Users can perform actions on their local or remote devices via the Company Porta
 
 Some platforms and configurations do not allow self-service device actions. This table below provides further details about self service actions:
 
-|     Platform    |    Retire    |    Wipe     |    Rename<sup>(4)</sup>    |    Sync    |    Remote Lock    |    Reset Passcode    |    Key Recovery    |
-|------------------------|--------------------|--------------------|-----------------|-----------------|--------------------------|--------------------------|--------------------|
-|    Windows 10<sup>(3)</sup>    |    Available<sup>(1)</sup>    |    Available    |    Available    |    Available    |    Windows Phone only    |    Windows Phone only    |    NA    |
-|    iOS<sup>(3)</sup>    |    Available    |    Available<sup>(8)</sup>    |    Available    |    Available    |    Available<sup>(8)</sup>    |    Available    |    NA    |
-|    MacOS<sup>(3)</sup><sup>(5)</sup>    |    Available    |    NA    |    Available    |    Available    |    Available    |    NA    |    Available<sup>(2)</sup>    |
-|    Android<sup>(3)</sup>    |    Available<sup>(7)</sup>    |    Available<sup>(7)</sup>    |    Available    |    Available    |    Available    |    Available<sup>(6)</sup>    |    NA    |
+|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup><sup>(5)</sup> | Android<sup>(3)</sup> |
+|----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
+| Retire | Available<sup>(1)</sup> | Available<sup>(8)</sup> | Available | Available<sup>(7)</sup> |
+| Wipe | Available | Available | NA | Available<sup>(7)</sup> |
+| Rename<sup>(4)</sup> | Available | Available<sup>(8)</sup> | Available | Available |
+| Sync | Available | Available | Available | Available |
+| Remote Lock | Windows Phone only | Available | Available | Available |
+| Reset Passcode | Windows Phone only | Available | NA | Available<sup>(6)</sup> |
+| Key Recovery | NA | NA | Available<sup>(2)</sup> | NA |
+| Dark Mode | NA | Available | NA | NA |
 
-
-<sup>(1)</sup> Retire is always blocked on Azure AD Joined Windows devices.<br>
-<sup>(2)</sup> Personal key recovery for macOS is only available via the Company Portal website.<br> 
+<sup>(1)</sup> **Retire** is always blocked on Azure AD Joined Windows devices.<br>
+<sup>(2)</sup> **Key Recovery** for MacOS is only available via the Web Portal.<br>
 <sup>(3)</sup> All remote actions are disabled if using a Device Enrollment Manager enrollment.<br>
-<sup>(4)</sup> Rename only changes the device name in the Company Portal App or website, not on the device.<br>
-<sup>(5)</sup> Remote Wipe is not available on MacOS devices.<br>
-<sup>(6)</sup> Passcode reset is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> Retire and Wipe is not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> Wipe and Reset Passcode are not available on iOS devices enrolled with User Enrollment.<br> 
+<sup>(4)</sup> **Rename** only changes the device name in the Company Portal App or website, not on the device.<br>
+<sup>(5)</sup> **Remote Wipe** is not available on MacOS devices.<br>
+<sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
+<sup>(7)</sup> **Retire** and **Wipe** are not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br> 
+<sup>(8)</sup> **Retire** (remove device) and **Rename** are available for all types of enrollment. Other actions are not supported for User Enrollment.<br> 
 
 ## Next steps
 

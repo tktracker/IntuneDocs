@@ -41,6 +41,16 @@
     href: device-lifecycle.md
   - name: App lifecycle
     href: ../apps/app-lifecycle.md
+  - name: Guided scenarios
+    items: 
+    - name: Guided scenarios overview
+      href: guided-scenarios-overview.md 
+    - name: Deploy Microsoft Edge for Mobile 
+      href: guided-scenarios-edge.md 
+    - name: Cloud-managed Modern Desktop
+      href: guided-scenarios-cloud-managed-pc.md   
+    - name: Secure Microsoft Office mobile apps
+      href: guided-scenarios-office-mobile.md              
   - name: Common scenarios
     href: common-scenarios.md
   - name: Technology decisions for BYOD with EMS
@@ -176,6 +186,8 @@
     href: ../protect/index.yml   
   - name: Manage and protect apps
     href: ../apps/index.yml  
+  - name: Use policy sets
+    href: ~/fundamentals/policy-sets.md      
   - name: Developer guidance
     href: ../developer/index.yml     
 

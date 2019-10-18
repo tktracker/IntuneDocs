@@ -87,7 +87,7 @@ To access Help and support, use the following options:
   4. Select the link Intune Help and Support page.
 
 > [!NOTE]  
-> If your instance of Intune is hosted on the Government Compute Cloud (GCC), also known as a sovereign cloud like Azure Government, see Intune support for Government Compute Cloud, later in this article. The Intune *Help and support* experience won’t be available on the GCC until later this year. 
+> If your instance of Intune is hosted on the private cloud for government entities, also known as a sovereign cloud like Azure Government, see [Intune support for private cloud for government](#intune-support-for-private-cloud-for-government), later in this article. The Intune *Help and support* experience won’t be available on the private cloud for government until later this year. 
 
 
 When you open *Help and support*, the portal displays a view that depends on whether or not you have active support incidents, and when you have Premier Support, some additional elements and options:
@@ -167,20 +167,20 @@ Select the history button to view the support incidents that you've created.
 
 When you use the left navigation pane **Help + support**, or use the **?** option in the upper-right corner of the Azure portal, you open the Azure Help + support experience, which is distinct from the Intune Help and support experience.  
 
-Beginning in April of 2019, you can't access the Azure *Help + support* experience to get assistance with Intune, unless your subscription is on the Government Compute Cloud (GCC).  
+Beginning in April of 2019, you can't access the Azure *Help + support* experience to get assistance with Intune, unless your subscription is on a private cloud for government entities.  
 
-If your instance of Intune doesn't run on GCC, navigating through Azure *Help + support* redirects you to the Intune *Help and support* experience to create and manage support incidents.  
+If your instance of Intune doesn't run on a private cloud for government, navigating through Azure *Help + support* redirects you to the Intune *Help and support* experience to create and manage support incidents.  
 
 
-## Intune support for Government Compute Cloud  
+## Intune support for private cloud for government  
 
-When your Intune subscription hosted on the Government Compute Cloud (GCC), which is also known as a sovereign cloud like Azure Government, you don’t yet have access to the newer Intune Help and support experience.  Instead, use the following information go get support for Intune. 
+When your Intune subscription hosted on the private cloud for government entities, which is also known as a sovereign cloud like Azure Government, you don’t yet have access to the newer Intune Help and support experience.  Instead, use the following information go get support for Intune. 
 
 
 ### Create an online support ticket 
 
 >[!IMPORTANT]    
-> As *Help and support* transitions to a new system which is not yet available for the GCC, when you create a support incident, the portal identifies a support case that uses a 15 digit identification number. When the 15-digit case is created, a mirror of that case is created for use by Microsoft Support. This mirror case is created in a new support system, uses an 8-digit case ID, and is used by support services to track all work and communications for your support incident. Shortly after your 15-digit case is created, you’ll receive an email that identifies the 8-digit number of the mirrored support case that is used by support services.  
+> As *Help and support* transitions to a new system which is not yet available for the private cloud for government, when you create a support incident, the portal identifies a support case that uses a 15 digit identification number. When the 15-digit case is created, a mirror of that case is created for use by Microsoft Support. This mirror case is created in a new support system, uses an 8-digit case ID, and is used by support services to track all work and communications for your support incident. Shortly after your 15-digit case is created, you’ll receive an email that identifies the 8-digit number of the mirrored support case that is used by support services.  
 > 
 > Support personal work and communicate from the 8-digit support case, and only use the 8-digit support case to log communications and track incident progress. Therefore, you’ll receive email updates from that 8-digit support case that serve as your case-work track record. No details are logged into the 15-digit support incident. When support concludes and the 8-digit support case closes, that status is reflected in by the 15-digit support case that you can view from within the azure portal.  No other updates or status changes should be expected for the 15-digit support case.  
 > 
@@ -228,7 +228,7 @@ You can view your support requests from within the Azure portal. However, limite
 2. On the **Help + support** page you can view the list of **Recent support requests**.
 
    > [!IMPORTANT]  
-   > Government Compute Cloud customers can only view the 15-digit support case number, and the incident status. All case communications and tracking of work or alerts are sent by email and reference the 8-digit support case number that is created as a mirror of the support case opened from within the Intune console.   
+   > Private cloud for government customers can only view the 15-digit support case number, and the incident status. All case communications and tracking of work or alerts are sent by email and reference the 8-digit support case number that is created as a mirror of the support case opened from within the Intune console.   
 
 ## Additional resources  
 

@@ -1,8 +1,10 @@
 ### Apple
+
 - Apple iOS and iPadOS 10.0 and later
 - Mac OS X 10.9 and later
 
 ### Windows
+
 - PCs running Windows 10 (Home, Pro, Education, and Enterprise versions)
 - Windows 10 Mobile
 - Devices running Windows 10 IoT Enterprise (x86, x64)
@@ -15,6 +17,7 @@
   Windows 7 and later PCs, except Windows 10 Home edition, can also be managed with the [Intune software client](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune).
 
 ### Google
+
 - Google Android 4.0 and later (including Samsung KNOX Standard 4.0 and higher)*
 - Google Android for Work ([requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window"))
 

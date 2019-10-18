@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,7 +53,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    2. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
    
-   3. Revocation of certificates provisioned by SCEP certificate profiles for Device Owner isn’t supported through Intune, but can be managed through an external process or directly with the certification authority.
+   3. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority. 
 
 6. Select **Settings**, and then complete the following configurations:
 
@@ -116,15 +116,13 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
         - **{{DeviceName}}**
         - **{{FullyQualifiedDomainName}}** *(Only applicable for Windows and domain-joined devices)*
         - **{{MEID}}**
-        
+
         You can specify these variables, followed by the text for the variable, in the textbox. For example, the common name for a device named *Device1* can be added as **CN={{DeviceName}}Device1**.
 
         > [!IMPORTANT]  
         > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.  
         > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
         > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn’t have an IMEI number, the profile fails to install.  
- 
-
 
    - **Subject alternative name**:  
      Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. Options for the SAN depend on the Certificate type you selected; either **User** or **Device**.  
@@ -201,15 +199,15 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
      Add values for the certificate's intended purpose. In most cases, the certificate requires *client authentication* so that the user or device can authenticate to a server. You can add additional key usages as required.
 
    - **Renewal threshold (%)**:  
-     Enter the percentage of the certificate lifetime that remains before the device requests renewal of the certificate. For example, if you enter 20, the renewal of the certificate will be attempted when the certificate is 80% expired and continues to be attempted until renewal is successful. Renewal generates a new certificate, which results in a new public/private key pair.
+     Enter the percentage of the certificate lifetime that remains before the device requests renewal of the certificate. For example, if you enter 20, the renewal of the certificate will be attempted when the certificate is 80% expired. Renewal attempts continue until renewal is successful. Renewal generates a new certificate, which results in a new public/private key pair.
 
    - **SCEP Server URLs**:  
-     Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like *https://ndes.contoso.com/certsrv/mscep/mscep.dll*. You can add additional SCEP URLs for load balancing as needed as URLs are randomly pushed to the device with the profile. If one of the SCEP servers isn't available, the SCEP request will fail and it's possible that on subsequent device check-ins, the cert request could be made against the same server that is down.
+     Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like *https://ndes.contoso.com/certsrv/mscep/mscep.dll*. You can add additional SCEP URLs for load balancing as needed as URLs are randomly pushed to the device with the profile. If one of the SCEP servers isn't available, the SCEP request will fail and it's possible that on later device check-ins, the cert request could be made against the same server that is down.
 
 7. Select **OK**, and then select **Create**. The profile is created and appears on the *Device configuration - Profiles* list.
 
 ### Avoid certificate signing requests with escaped special characters
-There's a known issue for SCEP certificate requests that include a Subject Name (CN) with one or more of the following special characters as an escaped character. Subject names that include one of the special characters as an escaped character result in a CSR with an incorrect subject name which in turn results in the Intune SCEP challenge validation failing and no certificate issued.  
+There's a known issue for SCEP and PKCS certificate requests that include a Subject Name (CN) with one or more of the following special characters as an escaped character. Subject names that include one of the special characters as an escaped character result in a CSR with an incorrect subject name. An incorrect subject name results in the Intune SCEP challenge validation failing and no certificate issued.
 
 The special characters are:
 - \+

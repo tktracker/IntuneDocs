@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 10/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: coryfe
+ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -69,17 +69,30 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 ## Create and assign update rings
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Select **Software updates** > **Windows 10 Update Rings** > **Create**.
-4. Enter a name, a description (optional), and then choose **Configure**.
-5. In **Settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](../windows-update-settings.md).  
-6. When done, select **OK**. In **Create Update Ring**, select **Create**. The new update ring is displayed in the list of update rings.
-7. To assign the ring, in the list of update rings, select a ring, and then on the \<ring name> tab, choose **Assignments**.
-8. Use the **Include** and **Exclude** tabs to define which groups this Ring is assigned to, and then select **Save** to complete the assignment.
+1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and then select **Software updates** > **Windows 10 Update Rings** > **Create**.  
+
+2. On the Basics tab, specify a name, a description (optional), and then select **Next**.  
+
+   ![Create Windows 10 update ring workflow](./media/windows-update-for-business-configure/basics-tab.png)
+
+3. On the **Update ring settings** tab, configure settings for your business needs. For information about the available settings, see [Windows update settings](windows-update-settings.md). After configuring *Update* and *User experience* settings, select **Next**.  
+
+4. On the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring.  
+
+   - On the **Select tags** pane, choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tags* pane.  
+
+   When ready, select **Next** to continue to *Assignments*. 
+
+5. On the **Assignments** tab, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.  
+
+6. On the **Review + create** tab, review the settings and select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
 
 ## Manage your Windows 10 Update rings
-In the portal, you can select a Windows 10 Update Ring to open its **Overview** pane. From this pane, you can view the rings assignment status and take additional actions to manage the ring. 
+
+In the portal, you can select a Windows 10 Update Ring to open its **Overview** pane. From this pane, you can view the rings assignment status and take additional actions to manage the ring.
+
 ### To view an updates rings Overview pane: 
+
 1. Sign in to the Azure portal.
 2. Navigate to **Intune** > **Software updates** > **Windows 10 Update Rings**.
 3. Select the update ring you want to view or manage.  
@@ -94,19 +107,23 @@ In addition to viewing assignment status, you can select the following actions f
 ![Available actions](./media/windows-update-for-business-configure/overview-actions.png)
 
 ### Delete  
+
 Select **Delete** to stop enforcing the settings of the selected Windows 10 update ring. Deleting a ring removes its configuration from Intune so that Intune no longer applies and enforces those settings.  
 
 Deleting a ring from Intune doesn't modify the settings on devices that were assigned the update ring.  Instead, the device keeps its current settings. Devices don't maintain a historical record of what settings they held previously. Devices can also receive settings from additional update rings that remain active.  
 
 #### To delete a ring  
+
 1. While viewing the overview page for an Update Ring, select **Delete**.  
 2. Select **OK**.  
 
 ### Pause  
+
 Select **Pause** to prevent assigned devices from receiving Feature Updates or Quality Updates for up to 35 days from the time you pause the ring. After the maximum days have passed, pause functionality automatically expires and the device scans Windows Updates for applicable updates. Following this scan, you can pause the updates again. 
 If you resume a paused update ring, and then pause that ring again, the pause period resets to 35 days.  
 
 #### To pause a ring  
+
 1. While viewing the overview page for an Update Ring, select **Pause**.  
 2. Select either **Feature** or **Quality** to pause that type of update, and then select **OK**.  
 3. After pausing one update type, you can select Pause again to pause the other update type.  
@@ -117,22 +134,27 @@ When an update type is paused, the Overview pane for that ring displays how many
 > After you issue a pause command, devices receive this command the next time they check into the service. It's possible that before they check in, they might install a scheduled update. Additionally, if a targeted device is turned off when you issue the pause command, when you turn it on, it might download and install scheduled updates before it checks in with Intune.
 
 ### Resume  
+
 While an update ring is paused, you can select **Resume** to restore Feature and Quality updates for that ring to active operation. After you resume an update ring, you can pause that ring again.  
 
 #### To resume a ring  
+
 1. While viewing the overview page for a paused Update Ring, select **Resume**.  
 2. Select from the available options to resume either **Feature** or **Quality** updates, and then select **OK**.  
 3. After resuming one update type, you can select Resume again to resume the other update type.  
 
 ### Extend  
+
 While an update ring is paused, you can select **Extend** to reset the pause period for both Feature and Quality updates for that update ring to 35 days.  
 
 #### To Extend the pause period for a ring  
+
 1. While viewing the overview page for a paused Update Ring, select **Extend**. 
 2. Select from the available options to resume either **Feature** or **Quality** updates, and then select **OK**.  
 3. After extending the pause for one update type, you can select Extend again to extend the other update type.  
 
 ### Uninstall  
+
 An Intune administrator can use **Uninstall** to uninstall (roll back) the latest *feature* update or the latest *quality* update for an active or paused update ring. After uninstalling one type, you can then uninstall the other type. Intune doesn't support or manage the ability of users to uninstall updates.  
 
 > [!IMPORTANT] 
@@ -155,26 +177,29 @@ Consider the following when you use Uninstall:
 
 - For Feature updates specifically, the time you can uninstall the feature update is limited from 2-60 days, as configured by the update rings Update setting **Set feature update uninstall period (2 – 60 days)**. You can't roll back a feature update that's been installed on a device after the feature update has been installed for longer than the configured uninstall period.  
 
-  For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they have removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command prior to exceeding the 20-day uninstall period.  
+  For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they have removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.  
 
 For more information about Windows Update policies, see [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) in the Windows client management documentation.  
 
 #### To uninstall the latest Windows 10 update  
+
 1. While viewing the overview page for a paused Update Ring, select **Uninstall**.  
 2. Select from the available options to uninstall either **Feature** or **Quality** updates, and then select **OK**.  
 3. After triggering the uninstall for one update type, you can select Uninstall again to uninstall the remaining update type.  
 
 ## Migrate update settings to the Azure portal  
+
 The Azure classic portal also has a limited number of other Windows 10 updates settings in the device configuration profile. If you have any of these settings configured when you migrate to the Azure portal, we strongly recommend that you do the following actions:  
 
-1. Create Windows 10 update rings in the Azure portal with the settings that you need. The **Allow pre-release features** setting isn't supported in the Azure portal because it's no longer applicable to the latest Windows 10 builds. You can configure the other three settings, as well as other Windows 10 updates settings, when you create update rings.  
+1. Create Windows 10 update rings in the Azure portal with the settings that you need. The **Allow pre-release features** setting isn't supported in the Azure portal because it's no longer applicable to the latest Windows 10 builds. You can configure the other three settings and the other Windows 10 updates settings when you create update rings.  
 
    > [!NOTE]  
    > Windows 10 updates settings created in the classic portal are not displayed in the Azure portal after migration. However, these settings are applied. If you migrate any of these settings, and edit the migrated policy from the Azure portal, these settings are removed from the policy.  
 
-2. Delete the update settings in the classic portal. After you migrate to the Azure portal, and add the same settings to an update ring, you must delete the settings in the classic portal to avoid any potential policy conflicts. For example, when the same setting is configured with different values, there is a conflict. There isn't an easy way to know because the setting configured in the classic portal doesn't display in the Azure portal.  
+2. Delete the update settings in the classic portal. After you migrate to the Azure portal, and add the same settings to an update ring, you must delete the settings in the classic portal to avoid any potential policy conflicts. For example, when the same setting is configured with different values, there's a conflict. There isn't an easy way to know because the setting configured in the classic portal doesn't display in the Azure portal.  
 
 ## Next steps
+
 [Windows update settings supported by Intune](../windows-update-settings.md)  
 
 [Intune compliance reports for updates](../windows-update-compliance-reports.md)

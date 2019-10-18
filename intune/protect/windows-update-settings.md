@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -223,46 +223,9 @@ User experience settings control the end-user experience for device restart and 
   - **Turn off all notifications, excluding restart warnings**
   - **Turn off all notifications, including restart warnings**  
 
-- **Allow user to restart (engaged restart)**  
-  **Default**: Not configured  
-  > [!IMPORTANT]  
-  > *Engaged restart* settings are no longer recommended to use. Instead, use the new *deadline* settings which supersede the *engaged restart* settings. Intune will [deprecate support for *engaged restart*](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) settings in a future update.
-
-  Engaged restart is supported for Windows 10 version 1803 and later. 
-
-  > [!NOTE]  
-  > Windows 10 version 1809 introduces additional engaged restart settings that enable separate settings to be applied to feature and quality updates. However, settings managed by Intune do not separately apply to the different update types. Instead, Intune applies the same values to both feature and quality updates.  
-  
-  - **Not configured**  
-  - **Required** - Set to *Required* to enable use of the engaged restart options for Windows 10 updates. These options engage the user of a device to help manage when to restart a device after installing an update that requires a restart.  
-
-  For more information about this option, see [Engaged restart](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) in the Windows 10 documentation for deploying updates.  
-
-  The following settings are used to control when engaged restart actions occur.  
-
-  - **Transition users to engaged restart after an auto-restart (days)**  
-    **Default**: Not configured
-    Windows Update CSP: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
-    
-    Specify a value from **2** to **30** days for how long after the update installs until the device enters the engaged restart behavior. After the configured number of days, users receive a prompt to restart the device.  
-
-  - **Snooze engaged restart reminder (days)**  
-    **Default**: Not configured    
-    Windows Update CSP: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
-    
-    Specify a value from **1** to **3** for how long a restart prompt can be snoozed.  After the snooze period, the restart prompt is offered again. The user can continue to snooze the reminder until the installation deadline is reached.  
-
-  - **Set deadline for pending restarts (days)**  
-    **Default**: Not configured  
-    Windows Update CSP: [Update/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
-  
-    Specify a value of **2** to **30** as the maximum number of days to wait after the engaged restart behavior begins before a device enforces a required restart. This restart will prompt users to save their work.
-
 - **Use deadline settings**  
   **Default**: Not configured  
-  > [!IMPORTANT]  
-  > Beginning with the August update for Intune, we recommend use of the following deadline settings that supersede the engaged restart settings. Intune will [deprecate support for *engaged restart*](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) settings in a future update to Intune.  
-
+ 
   Allows user to use deadline settings.  
 
   - **Not configured**
@@ -271,22 +234,22 @@ User experience settings control the end-user experience for device restart and 
   When set to *Allow*, you can configure the following settings for deadlines:
 
   - **Deadline for feature updates**  
-    **Default**: 7  
+    **Default**: *Not configured*  
     Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Specifies the number of days a user has before feature updates are installed on their devices automatically (2-30).
 
   - **Deadline for quality updates**  
-    **Default**: 7  
+    **Default**: *Not configured*  
     Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Specifies the number of days a user has before quality updates are installed on their devices automatically (2-30).
 
   - **Grace period**  
-    **Default**: 2
+    **Default**: *Not configured*
     Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Specifies a minimum number of days after deadline until restarts occur automatically (0-7).
+    Specifies a minimum number of days after deadline until restarts occur automatically (2-7).
 
   - **Auto reboot before deadline**  
     **Default**:  Yes
@@ -295,9 +258,6 @@ User experience settings control the end-user experience for device restart and 
     Specifies whether the device should auto reboot before deadline.
     - **Yes**
     - **No**
-
-
-
 
 ### Delivery optimization download mode  
 

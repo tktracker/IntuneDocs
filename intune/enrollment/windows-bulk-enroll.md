@@ -94,6 +94,8 @@ Provisioning is intended to be used on new Windows devices. Provisioning failure
 - A provisioning package that attempts to join an Active Directory domain or Azure Active Directory tenant that does not create a local account could make the device unreachable if the domain-join process fails due to lack of network connectivity.
 - Scripts run by the provisioning package are run in system context. The scripts are able to make arbitrary changes to the device file system and configurations. A malicious or bad script could put the device in a state that can only be recovered by reimaging or wiping the device.
 
+You can check for success/failure of the settings in your package in the **Provisioning-Diagnostics-Provider** Admin log in Event Viewer.
+
 ### Bulk enrollment with Wi-Fi 
 
 Bulk enrolled devices are unable to use to user-targeted certificates and Wi-Fi deployment. You must use [device-level certificates](../protect/certificates-configure.md) to manage these connections. 

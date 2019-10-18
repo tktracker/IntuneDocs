@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -271,6 +271,11 @@ These settings are added to a device configuration profile in Intune, and then a
 
   Starting with iOS 13.0, this setting requires supervised devices.
 
+- **Access to network drive in Files app**: Using the Server Message Block (SMB) protocol, devices can access files or other resources on a network server. **Disable** prevents accessing files on a network SMB drive. **Not configured** (default) allows access.
+
+  This feature applies to:  
+  - iOS and iPadOS 13.0 and newer
+
 ## Built-in Apps
 
 ### Settings apply to: All enrollment types
@@ -381,7 +386,7 @@ Applies to devices running iOS 9.3 or newer.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Type of apps list**: Create a list of apps to show or hide. Your options:
+- **Type of apps list**: Create a list of apps to show or hide. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094). Your options:
 
   - **Hidden apps**: Enter a list of apps that are hidden from users. Users can't view, or open these apps.
   - **Visible apps**: Enter a list of apps that users can view and launch. No other apps can be viewed or launched.
@@ -436,7 +441,12 @@ To add apps, you can:
   - iOS 12.2 and newer
 
 - **Join Wi-Fi networks only using configuration profiles**: **Require** forces the device to use only Wi-Fi networks set up through Intune configuration profiles. **Not configured** (default) allows the device to use other Wi-Fi networks.
-- **Modification of Wi-Fi state**: **Not configured** (default) allows users to turn on, or turn off Wi-Fi on the device. **Block** prevents turning Wi-Fi on or off.
+- **Wi-Fi always turned on**: When set to **Require**, Wi-Fi stays on in the Settings app. It can't be turned off in Settings or in the Control Center, even when the device is in airplane mode. **Not configured** (default) allows the user to control turning on or turning off Wi-Fi.
+
+  Configuring this setting doesn't prevent users from selecting a Wi-Fi network.
+
+  This feature applies to:  
+  - iOS and iPadOS 13.0 and newer
 
 ## Connected Devices
 
@@ -462,6 +472,11 @@ To add apps, you can:
 
   This feature applies to:  
   - iOS 11.0 and newer
+
+- **Access to files on USB drive**: Devices can connect and open files on a USB drive. **Disable** prevents device access to the USB drive in the Files app when a USB is connected to the device. Disabling this feature also blocks end users from transferring files onto a USB drive connected to an iPad. **Not configured** (default) allows access to a USB drive in the Files app.
+
+  This feature applies to:  
+  - iOS and iPadOS 13.0 and newer
 
 ## Keyboard and Dictionary
 

@@ -57,7 +57,8 @@ Audit logs and operational logs can also be routed to Azure Monitor. In **Audit 
 
 ![Export log data to Azure monitor by selecting Export data settings in Intune](./media/monitor-audit-logs/audit-logs-export-data-settings.png)
 
-For more information on this feature, see [send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
+> [!NOTE]
+> For more information about this feature and to review the prerequisites to use it, see [send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
 
 ## Review audit events
 
@@ -79,7 +80,7 @@ To see more specific information about an event, select an item in the list:
 
 > [!NOTE]
 > **Initiated by (actor)** includes information on who ran the task, and where it was run. For example, if you run the activity in Intune in the Azure portal, then **Application** always lists **Microsoft Intune portal extension** and the **Application ID** always uses the same GUID.
-> 
+>
 > The **Target(s)** section lists multiple targets and the properties that were changed.  
 
 ## Filter audit events

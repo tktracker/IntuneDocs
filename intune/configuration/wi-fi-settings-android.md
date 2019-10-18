@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/06/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,6 +20,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -43,14 +44,12 @@ This article describes these settings.
 
 - **Wi-Fi type**: Choose **Basic**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
-- **Connect automatically**: Choose **Enable** to automatically connect to this network when the device is in range. Choose **Disable** to prevent devices from automatically connecting.
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 
 ## Enterprise
 
 - **Wi-Fi type**: Choose **Enterprise**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
-- **Connect automatically**: Choose **Enable** to automatically connect to this network when the device is in range. Choose **Disable** to prevent devices from automatically connecting.
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 - **EAP type**: Choose the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options: 
 

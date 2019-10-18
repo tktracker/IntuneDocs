@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -53,9 +53,9 @@ To make it easier for you to configure and use Android Enterprise management, up
 ## Managed Google Play app types
 There are three types of apps that are available with Managed Google Play:
 
-* **Managed Google Play store app** - Public apps that are generally available in the Play Store. Manage these apps in Intune by browsing for the apps you want to manage, approving them, and then synchronizing them into Intune.
-* **Managed Google Play private app** - These are LOB apps published to Managed Google Play by Intune admins.  These apps are private and are available only to your Intune tenant. This is how LOB apps are managed and deployed with Managed Google Play and Android Enterprise.
-* **Managed Google Play web link** - Web links with IT admin-defined icons that are deployable to Android Enterprise devices. These appear on devices in the device's app list just like regular apps.
+- **Managed Google Play store app** - Public apps that are generally available in the Play Store. Manage these apps in Intune by browsing for the apps you want to manage, approving them, and then synchronizing them into Intune.
+- **Managed Google Play private app** - These are LOB apps published to Managed Google Play by Intune admins.  These apps are private and are available only to your Intune tenant. This is how LOB apps are managed and deployed with Managed Google Play and Android Enterprise.
+- **Managed Google Play web link** - Web links with IT admin-defined icons that are deployable to Android Enterprise devices. These appear on devices in the device's app list just like regular apps.
 
 ## Managed Google Play store apps
 There are two ways to browse and approve Managed Google Play store apps with Intune:
@@ -214,8 +214,7 @@ Alternatively, you can configure Google Play to automatically reapprove app perm
 
 ## Additional Managed Google Play app reporting for Android Enterprise work profile devices
 
-For Managed Google Play apps deployed to Android Enterprise work profile devices, you can view the specific version number of the app installed on a device. This applies to required apps only. 
-
+For Managed Google Play apps deployed to Android Enterprise work profile devices, you can view the status and version number of the app installed on a device using Intune. 
 
 ## Delete Managed Google Play apps
 When necessary, you can delete managed Google Play apps from Microsoft Intune. To delete a managed Google Play app, open Microsoft Intune in the Azure portal and select **Client apps** > **Apps**. From the app list, select the ellipses (...) to the right of the managed Google Play app, then select **Delete** from the displayed list. When you delete a managed Google Play app from the app list, the managed Google Play app is automatically unapproved.

@@ -57,9 +57,7 @@ As you disable Conditional Access in the old MDM provider, users can still be pr
 
 ## Task list for app protection policies
 
-1. [Create an app protection policy](../apps/app-protection-policies.md#create-an-app-protection-policy)
-2. [Deploy a policy](../apps/app-protection-policies.md#deploy-a-policy-to-users)
-
+- [How to create and assign app protection policies](~/apps/app-protection-policies.md)
 
 ## Next steps
 

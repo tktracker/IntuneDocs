@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 10/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -74,14 +74,16 @@ You can choose the following options if you choose variable as the value type:
 
 | Option | Example |
 |----|----|
-| Mail | john@contoso.com |
-| User Principal Name | john@contoso.com |
-| Partial UPN | john |
-| Domain | contoso.com |
-| User name | John Doe |
+| AAD Device ID | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Account ID | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| Intune Device ID | b9841cd9-9843-405f-be28-b2265c59ef97 |
+| Domain | contoso.com |
+| Mail | john@contoso.com |
+| Partial UPN | john |
 | User ID | 3ec2c00f-b125-4519-acf0-302ac3761822 |
-| Device ID | b9841cd9-9843-405f-be28-b2265c59ef97 |
+| User name | John Doe |
+| User Principal Name | john@contoso.com |
+
 
 ### Allow only configured organization accounts in multi-identity apps 
 
