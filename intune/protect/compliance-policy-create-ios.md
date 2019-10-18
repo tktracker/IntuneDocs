@@ -78,7 +78,7 @@ For details about email profiles, see [configure access to organization email us
 ### Password
 
 > [!NOTE]
-> After a compliance or configuration policy is applied to an iOS device, users are prompted to set a passcode every 15 minutes. Users are continually prompted until a passcode is set.
+> After a compliance or configuration policy is applied to an iOS device, users are prompted to set a passcode every 15 minutes. Users are continually prompted until a passcode is set. When a passcode is set for the iOS device, the encryption process automatically starts. The device remains encrypted until the passcode is disabled.
 
 - **Require a password to unlock mobile devices**: **Require** users to enter a password before they can access their device. iOS devices that use a password are encrypted.
 - **Simple passwords**: Set to **Block** so users can't create simple passwords, such as **1234** or **1111**. Set to **Not configured** to let users create passwords like **1234** or **1111**.

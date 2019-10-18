@@ -66,22 +66,6 @@ You do not need to take any action but can consider updating your IT-pro guidanc
 #### Additional information 
 https://aka.ms/intune_fullscreen
 
-### Plan for change: New Windows updates settings in Intune <!-- 4464404 -->
-Starting with the August release to the Intune service or 1908, we're adding in new "Deadline settings," which you can configure instead of the "Allow user to restart (engaged restart)" settings. We plan to disable the engaged-restart settings in the UI in 1909 or the September update and then completely remove them from the console toward the end of October.
-
-#### How does this affect me?
-If you manage Windows 10 devices in your environment:
-
-- With the August Intune update or 1908, you will see new deadline settings in the console in addition to the old engaged-restart settings.
-- When both these old and new settings are configured, the deadline settings values will override the engaged-restart setting values.
-- Deadline settings will replace the "Allow user to restart (engaged restart)" option in the console in the 1910 update.
-
-#### What can I do to prepare for this change?
-Start using the deadline settings in 1908 by configuring them with your desired values. Once you have that in place, you can set the engaged-restart setting to "Not configured" to prepare for these settings being removed from the console in October.
-
-Update your documentation and any automation scripts if needed.
-
-We'll keep you updated and post a reminder to the message center before we remove the engaged-restart settings.
 
 ### Plan for change: Intune App SDK and app protection policies for Android moving to support Android 5.0 and higher in October <!--4911065 -->
 Intune will be moving to support Android 5.x (Lollipop) and higher in October. Update any wrapped apps with the latest Intune App SDK and update your devices.
