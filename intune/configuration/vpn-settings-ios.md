@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -76,6 +76,8 @@ The settings shown in the following list are determined by the VPN connection ty
 
     > [!NOTE]
     > If username and password are used as the authentication method for Cisco IPsec VPN, they must deliver the SharedSecret through a custom Apple Configurator profile.
+
+  - **Derived credential**: If no derived credential issuer has been configured, Intune prompts you to do so.
 
 - **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud. 
 

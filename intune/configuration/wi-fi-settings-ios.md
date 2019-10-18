@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -85,7 +85,13 @@ This article describes these settings.
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
     - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server’s certificate.
 
-    - **Client Authentication** - **Client certificate for client authentication (Identity certificate)**: Choose the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+    - **Client Authentication** Choose an **Authentication method**. Your options:
+      
+      - **Derived credential**: If no derived credential issuer has been configured, Intune prompts you to do so.
+      
+      - **Certificates**: Choose the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+
+    - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
   - **EAP-TTLS**: Also enter:
 
@@ -94,6 +100,8 @@ This article describes these settings.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
+      - **Derived credential**: If no derived credential issuer has been configured, Intune prompts you to do so.  
+      
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
         - **Non-EAP method (inner identity)**: Choose how you authenticate the connection. Be sure you choose the same protocol that's configured on your Wi-Fi network.
 
@@ -112,6 +120,8 @@ This article describes these settings.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
+      - **Derived credential**: If no derived credential issuer has been configured, Intune prompts you to do so.  
+      
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. 
 
       - **Certificates**: Choose the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.

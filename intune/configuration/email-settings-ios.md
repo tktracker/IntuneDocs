@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -60,7 +60,7 @@ This article lists and describes all the email settings available for devices ru
       - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`
 
 - **Email address attribute from AAD**: Choose how the email address for the user is generated. Select **User principal name** (`user1@contoso.com` or `user1`) to use the full principal name as the email address. Select **Primary SMTP address** (`user1@contoso.com`) to use the primary SMTP address to sign in to Exchange.
-- **Authentication method**: Select either **Username and Password** or **Certificates** as the authentication method used by the email profile. Azure multi-factor authentication isn't supported.
+- **Authentication method**: Select either **Username and Password**, **Certificates**, or **Derived credential** as the authentication method used by the email profile. Azure multi-factor authentication isn't supported.
   - If you selected **Certificate**, select a client SCEP or PKCS certificate profile that you previously created that is used to authenticate the Exchange connection.
 - **SSL**: **Enable** uses Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server.
 - **OAuth**: **Enable** uses Open Authorization (OAuth) communication when sending emails, receiving emails, and communicating with Exchange. If your OAuth server uses certificate authentication, choose **Certificate** as the **Authentication method**, and include the certificate with the profile. Otherwise, choose **Username and password** as the **Authentication method**. When using OAuth, be sure to:
