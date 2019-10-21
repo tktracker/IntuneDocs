@@ -4,10 +4,10 @@
 title: Create device compliance policies in Microsoft Intune - Azure | Microsoft Docs
 description: Create device compliance policies, overview of status and severity levels, using the InGracePeriod status, working with Conditional Access, handling devices without an assigned policy, and the differences in compliance in the Azure portal and classic portal in Microsoft Intune
 keywords:
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,8 +28,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Create a compliance policy in Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Device compliance policies are a key feature when using Intune to protect your organization's resources. In Intune, you can create rules and settings that devices must meet to be considered compliant, such as a minimum OS version. If the device isn't compliant, you can then block access to data and resources using [Conditional Access](conditional-access.md).
 
@@ -77,26 +75,36 @@ To use device compliance policies, be sure you:
 
 3. Select **Policies** > **Create Policy**. Enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Mark iOS jailbroken devices as not compliant**.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
-    - **Platform**: Choose the platform of your devices. Your options:  
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Mark iOS jailbroken devices as not compliant**.  
 
-       - **Android**
-       - **Android enterprise**
-       - **iOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 and later**
-       - **Windows 10 and later**
+   - **Description**: Enter a description for the policy. This setting is optional, but recommended.  
 
-    - **Settings**: The following articles list and describe the settings for each platform:
+   - **Platform**: Choose the platform of your devices. Your options:
+     - **Android**
+     - **Android enterprise**
+     - **iOS**
+     - **macOS**
+     - **Windows Phone 8.1**
+     - **Windows 8.1 and later**
+     - **Windows 10 and later**
 
-        - [Android](compliance-policy-create-android.md)
-        - [Android Enterprise](compliance-policy-create-android-for-work.md)
-        - [iOS](compliance-policy-create-ios.md)
-        - [macOS](compliance-policy-create-mac-os.md)
-        - [Windows Phone 8.1, Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
-        - [Windows 10 and later](compliance-policy-create-windows.md)
+   - **Settings**: The following articles list and describe the settings for each platform:
+     - [Android](compliance-policy-create-android.md)
+     - [Android Enterprise](compliance-policy-create-android-for-work.md)
+     - [iOS](compliance-policy-create-ios.md)
+     - [macOS](compliance-policy-create-mac-os.md)
+     - [Windows Phone 8.1, Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
+     - [Windows 10 and later](compliance-policy-create-windows.md)  
+
+   - **Locations**: In your policy, you can force compliance by the location of the device. Choose from existing locations. Don't have a location yet? [Use Locations (network fence)](use-network-locations.md) in Intune provides some guidance.  
+
+   - **Actions for noncompliance**: For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
+    
+     [Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
+
+     For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
+
+   - **Scope (Tags)**: Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
 
 4. When finished, select **OK** > **Create** to save your changes. The policy is created, and shown in the list. Next, assign the policy to your groups.
 
@@ -119,7 +127,7 @@ When you assign the policy, you can also **Evaluate** how many users are affecte
 
 If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
 
-## Actions for noncompliance
+<!-- ## Actions for noncompliance
 
 For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
 
@@ -130,6 +138,7 @@ For example, you're using the Locations feature, and add a location in a complia
 ## Scope tags
 
 Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+-->
 
 ## Refresh cycle times
 

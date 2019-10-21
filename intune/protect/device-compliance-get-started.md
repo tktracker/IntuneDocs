@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,8 +28,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Set rules on devices to allow access to resources in your organization using Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Many mobile device management (MDM) solutions help protect organizational data by requiring users and devices to meet some requirements. In Intune, this feature is called "compliance policies". Compliance policies define the rules and settings that users and devices must meet to be compliant. When combined with Conditional Access, administrators can block users and devices that don't meet the rules.
 
@@ -94,7 +92,7 @@ Intune also includes a set of built-in compliance policy settings. The following
 
 - **Mark devices with no compliance policy assigned as**: This property has two values:
 
-  - **Compliant**(default): security feature off
+  - **Compliant** (*default*): security feature off
   - **Not compliant**: security feature on
 
   If a device doesn't have a compliance policy assigned, then this device is considered compliant by default. If you use Conditional Access with compliance policies, we recommended you change the default setting to **Not compliant**. If an end user isn't compliant because a policy isn't assigned, then the [Company Portal app](../apps/company-portal-app.md) shows `No compliance policies have been assigned`.
@@ -161,8 +159,9 @@ To use the device compliance-related features in the Azure portal, you must crea
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows 10 and later](compliance-policy-create-windows.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows 8.1 and Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 and later](compliance-policy-create-windows.md)
 
 - [Reference for policy entities](../reports-ref-policy.md) has information about the Intune Data Warehouse policy entities.

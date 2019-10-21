@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,18 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 
 <!-- ########################## -->
+
+## Week of October 21, 2019
+
+### New device firmware configuration interface profile for Windows 10 and later devices <!-- 2266073 idready wnready -->
+
+On Windows 10 and later, you can create a device configuration profile to control settings and features (**Device configuration** > **Profiles** > **Create profile** > **Windows 10 and later** for platform). In this update, there's a new device firmware configuration interface profile type that allows Intune to manage UEFI (BIOS) settings.
+
+For more information on this feature, see [Use DFCI profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
+
+Applies to:
+
+- Windows 10 RS5 (1809) and newer on supported firmware
 
 ## Week of October 14, 2019
 
@@ -160,18 +172,12 @@ Applies to:
 Using Intune device type restrictions, you can use the device's OS version to specify which user devices will use Android Enterprise work profile enrollment or Android device administrator enrollment.  For more information, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
 
 #### Windows Autopilot deployment reports <!-- 3856172 -->
-A new report details each device deployed through Windows Autopilot. For more information, see [Autopilot deployment report](../enrollment/enrollment-autopilot.md#autopilot-deployments-report).
+A new report details each device deployed through Windows Autopilot. For more information, see [Autopilot deployment report](../enrollment/enrollment-autopilot.md#autopilot-deployments-report). We're in the process of rolling out this feature to all customers and expect to be completed by the end of next week.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Edit device name value for Autopilot devices<!-- 4816775  -->
-You can edit the Device Name value for Azure AD Joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](../enrollment/enrollment-autopilot.md#edit-autopilot-device-attributes).
-
-#### Edit Group Tag value for Autopilot devices<!-- 4816775  -->
-You can edit the Group Tag value for Autopilot devices. For more information, see [Edit Autopilot device attributes](../enrollment/enrollment-autopilot.md#edit-autopilot-device-attributes).
-
-#### New restrictions for renaming Windows devices <!-- 2640074  -->
+#### New restrictions for renaming Windows devices <!-- 3478938  -->
 When renaming a Windows device, you must follow new rules:
 - 15 characters or less (must be less than or equal to 63 bytes, not including trailing NULL)
 - Not null or an empty string

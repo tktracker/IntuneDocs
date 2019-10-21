@@ -73,9 +73,8 @@ To create a location-based compliance policy:
 
 ## Create the location compliance policy
 
-When you create the compliance policy, select **Android** for the **Platform**. In **Locations**, you can choose one or more of the network locations you added. These locations are part of the network fence you're creating for your devices.
+When you [create the compliance policy](create-compliance-policy.md), select **Android** for the **Platform**. In **Locations**, you can choose one or more of the network locations you added. These locations are part of the network fence you're creating for your devices. 
 
-[Create the network location based compliance policy](compliance-policy-create-android.md#locations) provides some guidance.
 
 ## Configure the actions for noncompliance
 

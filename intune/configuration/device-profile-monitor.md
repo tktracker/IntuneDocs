@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: heenamac
+ms.reviewer: karthib
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -84,6 +84,33 @@ In **Devices** > **All devices**, you can see any settings that are causing a co
 3. Select the policy. It shows you all the settings in that policy that apply to the device. If a device has a **Conflict** state, select that row. In the new window, you see all the profiles, and the profile names that have the setting causing the conflict.
 
 Now that you know the conflicting setting, and the policies that include that setting, it should be easier to resolve the conflict. 
+
+## Device Firmware Configuration Interface profile reporting
+
+> [!WARNING]
+> Monitoring DFCI profiles is currently being created. While DFCI is in public preview, monitoring data may be missing or incomplete.
+
+DFCI profiles are reported on a per-setting basis, just like other device configuration profiles. Depending on the manufacturer’s support of DFCI, some settings may not apply.
+
+With your DFCI profile settings, you may see the following states:
+
+- **Compliant**: This state shows when a setting value in the profile matches the setting on the device. This state can happen in the following scenarios:
+
+  - The DFCI profile successful configured the setting in the profile.
+  - The device doesn't have the hardware feature controlled by the setting, and the profile setting is **Disabled**.
+  - UEFI doesn't allow DFCI to disable the feature, and the profile setting is **Enabled**.
+  - The device lacks the hardware to disable the feature, and the profile setting is **Enabled**.
+
+- **Not Applicable**: This state shows when a setting value in the profile is **Enabled**, and the matching setting on the device isn't found. This state can happen if the device hardware doesn't have the feature.
+
+- **Noncompliant**: This state shows when a setting value in the profile doesn't match the setting on the device. This state can happen in the following scenarios:
+
+  - UEFI doesn't allow DFCI to disable a setting, and the profile setting is **Disabled**.
+  - The device lacks the hardware to disable the feature, and the profile setting is **Disabled**.
+  - The device doesn't have the latest DFCI firmware version.
+  - DFCI was disabled before being enrolled in Intune using a local “opt-out” control in the UEFI menu.
+  - The device was enrolled to Intune outside of Autopilot enrollment.
+  - The device wasn't registered to Autopilot by a Microsoft CSP, or registered directly by the OEM.
 
 ## Next steps
 
