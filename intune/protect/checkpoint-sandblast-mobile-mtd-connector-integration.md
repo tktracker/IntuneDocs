@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,10 +31,14 @@ ms.collection: M365-identity-device-management
 
 # Integrate Check Point SandBlast Mobile with Intune
 
+Complete the following steps to integrate the Check Point SandBlast Mobile Threat Defense solution with Intune.
+
+> [!NOTE]
+> This Mobile Threat Defense vendor is not supported for unenrolled devices.
+
 ## Before you begin
 
-> [!NOTE] 
-> The steps below need to be taken in the [Check Point SandBlast Mobile MTD console](https://intune-4.eu1.locsec.net/).
+The instructions in this article are done in the [Check Point SandBlast Mobile console](https://intune-4.eu1.locsec.net/). 
 
 Before starting the process of integrating Check Point SandBlast Mobile with Intune, make sure you have the following:
 

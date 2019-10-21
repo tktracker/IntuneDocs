@@ -92,7 +92,7 @@ The user and device will be added to new security groups. They'll also be config
 
 ## Additional information
 
-### Register device with Windows Auto pilot (Optional)
+### Register device with Windows Autopilot (Optional)
 
 You can optionally choose to use a registered Autopilot device. For Autopilot, this guided scenario will assign an Autopilot deployment profile and enrollment status page profile. The Autopilot deployment profile will be configured as follows:
 - User-driven mode – i.e. require the end user to enter username and password during Windows setup.

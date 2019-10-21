@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,6 +32,9 @@ ms.collection: M365-identity-device-management
 # Integrate Wandera Mobile Threat Protection with Intune  
 
 Complete the following steps to integrate the Wandera Mobile Threat Defense solution with Intune.  
+
+> [!NOTE]
+> This Mobile Threat Defense vendor is not supported for unenrolled devices.
 
 ## Before you begin  
 

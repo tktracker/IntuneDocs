@@ -66,7 +66,7 @@ A Conditional Access policy specifies the app or services you want to protect, t
 
     - **Select apps**: Select this option, choose **Select**, and then use the applications list to search for and select the apps or services you want to protect.
     
-      ![Create a new Conditional Access policy](./media/create-conditional-access-intune/create-ca-select-apps.png)
+      ![Configure assignments for Conditional Access policy](./media/create-conditional-access-intune/create-ca-select-apps.png)
 
 7. Select **Done**.
 8. Under **Assignments**, select **Conditions**.
@@ -76,7 +76,7 @@ A Conditional Access policy specifies the app or services you want to protect, t
     - **Client apps**: Choose **Yes** to specify if the policy should apply to browser apps, mobile apps, and desktop clients. You can also select **Modern authentication clients** (such as Outlook for iOS or Outlook for Android) and **Exchange ActiveSync clients**.
     - **Device state**: The Conditional Access policy will apply to all device states unless you choose Yes and specifically exclude the states Device Hybrid Azure AD joined or Device marked as compliant (or both).
     
-      ![Create a new Conditional Access policy](./media/create-conditional-access-intune/create-ca-device-platforms.png)
+      ![Set conditions for Conditional Access policy](./media/create-conditional-access-intune/create-ca-device-platforms.png)
 
       > [!TIP]  
       > If you want to protect both **Modern authentication** clients and **Exchange ActiveSync clients**, create two separate Conditional Access policies, one for each client type. Although Exchange ActiveSync supports modern authentication, the only condition that is supported by Exchange ActiveSync is platform. Other conditions, including multi-factor authentication, are not supported. To effectively protect access to Exchange Online from Exchange ActiveSync, create a Conditional Access policy that specifies the cloud app Office 365 Exchange Online and the client app Exchange ActiveSync with Apply policy only to supported platforms selected.

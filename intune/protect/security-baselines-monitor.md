@@ -64,7 +64,7 @@ For example, if a device has a setting classified as *misconfigured* and one or 
 You can click on the chart to drill through and view a list of devices with various statuses. You can then select individual devices from that list to view details about individual devices. For example:
 - Select **Device configuration** > Select the profile with an Error state:
 
-  ![Check the status of the devices](./media/security-baselines-monitor/device-configuration-profile-list.png)
+  ![View the status of a profile](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
 - Select the Error profile. A list of all settings in the profile, and their state is shown. Now, you can scroll to find the setting causing the error:
 

@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,6 +32,9 @@ ms.collection: M365-identity-device-management
 # Integrate Pradeo Mobile Threat Defense with Intune
 
 Complete the following steps to integrate the Pradeo Mobile Threat Defense solution with Intune.
+
+> [!NOTE]  
+> This Mobile Threat Defense vendor is not supported for unenrolled devices.
 
 ## Before you begin
 
@@ -94,4 +97,4 @@ The Pradeo app authorization process follows:
 
 ## Next steps
 
-- [Set up Pradeo apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Pradeo apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)

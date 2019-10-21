@@ -81,6 +81,7 @@ This article:
        - [Identity protection](../protect/identity-protection-configure.md)  
        - [Kiosk](kiosk-settings.md)
        - [PKCS certificate](../protect/certficates-pfx-configure.md)
+       - [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
        - [SCEP certificate](../protect/certificates-scep-configure.md)
        - [Trusted certificate](../protect/certificates-configure.md)
        - [Update policies](../software-updates-ios.md)
