@@ -51,10 +51,10 @@ To use device compliance policies, be sure you:
 
 - Use a supported platform:
 
-  - Android
+  - Android device administrator
   - Android Enterprise
   - iOS
-  - macOS (preview)
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -80,23 +80,27 @@ To use device compliance policies, be sure you:
    - **Description**: Enter a description for the policy. This setting is optional, but recommended.  
 
    - **Platform**: Choose the platform of your devices. Your options:
-     - **Android**
-     - **Android enterprise**
-     - **iOS**
+     - **Android device administrator**
+     - **Android Enterprise**
+     - **iOS/iPadOS**
      - **macOS**
      - **Windows Phone 8.1**
      - **Windows 8.1 and later**
      - **Windows 10 and later**
 
+     For *Android Enterprise*, you must then select a **Profile type**:
+     - **Device owner**
+     - **Work Profile**
+
    - **Settings**: The following articles list and describe the settings for each platform:
-     - [Android](compliance-policy-create-android.md)
+     - [Android device administrator](compliance-policy-create-android.md)
      - [Android Enterprise](compliance-policy-create-android-for-work.md)
-     - [iOS](compliance-policy-create-ios.md)
+     - [iOS/iPadOS](compliance-policy-create-ios.md)
      - [macOS](compliance-policy-create-mac-os.md)
      - [Windows Phone 8.1, Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
      - [Windows 10 and later](compliance-policy-create-windows.md)  
 
-   - **Locations**: In your policy, you can force compliance by the location of the device. Choose from existing locations. Don't have a location yet? [Use Locations (network fence)](use-network-locations.md) in Intune provides some guidance.  
+   - **Locations** *(Android device administrator)*: In your policy, you can force compliance by the location of the device. Choose from existing locations. Don't have a location yet? [Use Locations (network fence)](use-network-locations.md) in Intune provides some guidance.  
 
    - **Actions for noncompliance**: For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
     

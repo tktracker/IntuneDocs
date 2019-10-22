@@ -225,7 +225,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 When you create a macOS PKCS certificate profile, options for the subject name format depend on the Certificate type you select, either **User** or **Device**.  
 
 > [!NOTE]  
-> There is a known issue for using PCKS to get certificates [which is the same issue as seen for SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
+> There is a known issue for using PKCS to get certificates [which is the same issue as seen for SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
 > - \+
 > - ;
 > - ,

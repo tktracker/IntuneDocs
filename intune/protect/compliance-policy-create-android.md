@@ -20,7 +20,7 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: muhosabe
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -34,13 +34,13 @@ This article lists and describes the different compliance settings you can confi
 
 This feature applies to:
 
-- Android
+- Android device administrator
 
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
 ## Before you begin
 
-[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android**.
+[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android device administrator**.
 
 ## Device Health
 

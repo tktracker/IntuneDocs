@@ -64,6 +64,7 @@ For iOS, you will be able to configure actions for the following settings using 
 - Min app version
 - Min SDK version
 - Device model(s)
+- Max allowed device threat level
 
 To use the **Device model(s)** setting, input a semi-colon separated list of iOS model identifiers. You can find an iOS model identifier under the Device Type column in [HockeyApp's support documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
 Example input: *iPhone5,2;iPhone5,3*
@@ -88,6 +89,7 @@ For Android, you will be able to configure actions for the following settings us
 - Device manufacturer(s)
 - SafetyNet device attestation
 - Threat scan on apps
+- Max allowed device threat level
 
 To use the **Device manufacturer(s)** setting, input a semi-colon separated list of Android manufacturers. You can find the Android manufacturer of a device under the device settings.<br>
 Example input: *Manufacturer A;Manufacturer B* 

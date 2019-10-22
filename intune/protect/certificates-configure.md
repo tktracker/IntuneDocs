@@ -48,9 +48,9 @@ Each individual certificate profile you create supports a single platform. For e
 - If you use SCEP certificate profiles using Microsoft Active Directory Certificate Services, you’ll configure a Network Device Enrollment Service (NDES) server.
 - If you use SCEP with one of our certification authority partners, you'll need to [integrate it with Intune](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
 - Both SCEP and PKCS certificate profiles require you to download, install, and configure the Microsoft Intune Certificate Connector. 
-- PCKS imported certificates require you to download, install, and configure the PFX Certificate Connector for Microsoft Intune.
+- PKCS imported certificates require you to download, install, and configure the PFX Certificate Connector for Microsoft Intune.
 - PKCS imported certificates require that you export certificates from your certification authority and import them to Microsoft Intune. See [the PFXImport PowerShell project](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)
-- For a device to use SCEP, PCKS, or PKCS imported certificate profiles, that device must trust your root Certification Authority. You use a *trusted certificate profile* to deploy your Trusted Root CA certificate to devices.  
+- For a device to use SCEP, PKCS, or PKCS imported certificate profiles, that device must trust your root Certification Authority. You use a *trusted certificate profile* to deploy your Trusted Root CA certificate to devices.  
 
 ## Supported platforms and certificate profiles  
 | Platform              | Trusted certificate profile | PKCS certificate profile | SCEP certificate profile | PKCS imported certificate profile  |
@@ -75,7 +75,7 @@ You’ll use this .cer file when you [create trusted certificate profiles](#crea
 ## Create trusted certificate profiles  
 Create a trusted certificate profile before you can create a SCEP, PKCS, or PKCS imported certificate profile. Deploying a trusted certificate profile ensures each device recognizes the legitimacy of your CA. SCEP certificate profiles directly reference a trusted certificate profile. PKCS certificate profiles don’t directly reference the trusted certificate profile but do directly reference the server that hosts your CA. PKCS imported certificate profiles don't directly reference the trusted certificate profile but can use it on the device. Deploying a trusted certificate profile to devices ensures this trust is established. When a device doesn’t trust the root CA, the SCEP or PKCS certificate profile policy will fail.  
 
-Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PCKS, and PKCS imported certificate profiles.  
+Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PKCS, and PKCS imported certificate profiles.  
 
 
 ### To create a trusted certificate profile  
@@ -91,7 +91,7 @@ Create a separate trusted certificate profile for each device platform you want 
    - **Computer certificate store - Intermediate**
    - **User certificate store - Intermediate**
 8. When you're done, choose **OK**, go back to the **Create profile** pane, and select **Create**.
-The profile appears in the list of profiles on the *Device configuration – Profiles* view pane, with a profile type of **Trusted certificate**.  Be sure to assign this profile to devices that will use SCEP or PCKS certificates. To assign the profile to groups, see [assign device profiles](../configuration/device-profile-assign.md).
+The profile appears in the list of profiles on the *Device configuration – Profiles* view pane, with a profile type of **Trusted certificate**.  Be sure to assign this profile to devices that will use SCEP or PKCS certificates. To assign the profile to groups, see [assign device profiles](../configuration/device-profile-assign.md).
 
 > [!NOTE]  
 > Android devices might display a message that a third party has installed a trusted certificate.  
