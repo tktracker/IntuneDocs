@@ -62,7 +62,7 @@ If you want to add more users or devices to this configuration, simply add the u
 Make sure your device is running Windows 10, version 1903 or later.  The primary user will need to set up the device when they receive it. There are two setup options available to the user. 
 
 ### Option A – Windows Autopilot
-Windows Autopilot automates the configuration of new devices so that users can set up them up out of box, without IT assistance. If your device is already registered with Windows Autopilot, select it by its serial number. For more information about using Windows Autopilot, see [Register device with Windows Auto pilot (Optional)](~/fundamentals/guided-scenarios-cloud-managed-pc.md#register-device-with-windows-auto-pilot-optional).
+Windows Autopilot automates the configuration of new devices so that users can set up them up out of box, without IT assistance. If your device is already registered with Windows Autopilot, select it by its serial number. For more information about using Windows Autopilot, see [Register device with Windows Auto pilot (Optional)](~/fundamentals/guided-scenarios-cloud-managed-pc.md#register-device-with-windows-autopilot-optional).
 
 ### Option B – Manual device enrollment
 Users will manually set up and enroll their new devices in mobile device management. After you complete this scenario, reset the device and give the primary user the enrollment instructions for Windows devices. For more information, see [Join a Windows 10 device to Azure AD during the first-run experience](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
