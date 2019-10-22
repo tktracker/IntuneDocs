@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -303,6 +303,9 @@ These settings are added to a device configuration profile in Intune, and then a
 
   This feature applies to:  
   - iOS 12.2 and newer
+
+  > [!NOTE]
+  > The **Server-side logging for Siri commands** setting is deprecated by Apple. In an upcoming release, this setting is removed from all policies.
 
 ### Settings apply to: Automated device enrollment (supervised)
 

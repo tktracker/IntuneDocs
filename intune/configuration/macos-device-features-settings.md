@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,7 +46,7 @@ This article lists these settings, and describes what each setting does. It also
 
 ## AirPrint
 
-### Settings apply to: Device enrollment
+### Settings apply to: Device enrollment and Automated device enrollment 
 
 - **IP address**: Enter the IPv4 or IPv6 address of the printer. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) provides more details.
 - **Path**: Enter the path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) provides more details.
@@ -89,7 +89,7 @@ To add AirPrinter servers, you need the IP address of the printer, the resource 
 
 ## Login window
 
-### Settings apply to: Device enrollment
+### Settings apply to: Device enrollment and Automated device enrollment 
 
 #### Window Layout
 
