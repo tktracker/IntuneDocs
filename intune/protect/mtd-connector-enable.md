@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,7 +48,7 @@ Classic conditional access policies for MTD apps:
 To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
 
 
-## To enable the MTD connector
+## To enable the Mobile Threat Defense connector
 
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
@@ -62,20 +62,23 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 7. Enable the toggle options according to your organization's requirements. Toggle options visible will vary depending on the MTD partner.
 
-## MTD toggle options
+## Mobile Threat Defense toggle options
 
-You can decide which MTD toggle options you need to enable according to your organization's requirements. Here are more details:
+You can decide which Mobile Threat Defense toggle options you need to enable according to your organization's requirements. Here are more details:
 
-- **Connect Android 4.1+ devices to [MTD partner name] for Work MTD**: When you enable this option, you can have Android 4.1+ devices reporting security risk back to Intune.
-  - **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from the MTD partner, consider the device noncompliant.
-<br></br>
-- **Connect iOS 8.0+ devices to [MTD partner name] for Work MTD**: When you enable this option, you can have iOS 8.0+ devices reporting security risk back to Intune.
-  - **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from the MTD partner, consider the device noncompliant.
-<br></br>
+**MDM Compliance Policy Settings**
+- **Connect Android 4.1+ devices to *\<MTD partner name>***: When you enable this option, you can have Android 4.1+ devices reporting security risk back to Intune.
+- **Connect iOS 8.0+ devices to *\<MTD partner name>***: When you enable this option, you can have iOS 8.0+ devices reporting security risk back to Intune.
 - **Enable App Sync for iOS Devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes.
-
 - **Block unsupported OS versions**: Block if the device is running an operating system less than the minimum supported version.
 
+**App Protection Policy Settings**
+- **Connect Android devices of version 4.1 and above to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector.
+- **Connect iOS devices version 8.0 and above to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector.
+
+To learn more about using Mobile Threat Defense connectors for Intune App Protection Policy evaluation, see [Set up Mobile Threat Defense for unenrolled devices](~/protect/mtd-enable-unenrolled-devices.md).
+
+**Common Shared Settings**
 - **Number of days until partner is unresponsive**: Number of days of inactivity before Intune considers the partner to be unresponsive because the connection is lost. Intune ignores compliance state for unresponsive MTD partners.
 
 > [!IMPORTANT] 

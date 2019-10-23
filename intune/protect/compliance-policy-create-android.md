@@ -86,11 +86,13 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Operating System Version 
 
-- **Minimum OS version**: When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
+- **Minimum OS version**:  
+  When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
 
    *By default, no version is configured*.
 
-- **Maximum OS version**: When a device is using an OS version later than the version specified in the rule, access to company resources is blocked. The user is asked to contact their IT admin. Until a rule is changed to allow the OS version, this device can't access company resources.
+- **Maximum OS version**:  
+  When a device is using an OS version later than the version specified in the rule, access to company resources is blocked. The user is asked to contact their IT admin. Until a rule is changed to allow the OS version, this device can't access company resources.
 
   *By default, no version is configured*.
 
@@ -154,7 +156,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Block** - Prevent devices from using the USB debugging feature.  
 
-- **Minimum security patch level** *(Android 6.0 or later)*: 
+- **Minimum security patch level** *(Android 6.0 or later)*:  
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
 
   *By default, no date is configured*.

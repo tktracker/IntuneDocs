@@ -73,6 +73,9 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
    After you gather this information, contact Lookout support (email: enterprisesupport@lookout.com). Lookout Support will work with your primary contact to onboard your subscription and create your Lookout Enterprise account, using the information that you provide.  
 
 ## Configure your Lookout subscription  
+
+The following steps are to be completed in the Lookout Enterprise admin console and will enable a connection to Lookout's service for Intune enrolled devices (via device compliance) **and** unenrolled devices (via app protection policies).
+
 After Lookout support creates your Lookout Enterprise account, Lookout support sends an email to the primary contact for your company with a link to the sign-in url: https://aad.lookout.com/les?action=consent. 
 
 ### Initial sign-in  
@@ -114,20 +117,7 @@ The following procedure assumes you've previously created a user group in Azure 
 6. Select **Create connector** to complete configuration of the connector. Later, when you're satisfied with your results, you can extend enrollment to additional user groups.
 
 ## Configure Intune to use Lookout as a Mobile Threat Defense provider
-After you configure Lookout MES, you must set up a connection to Lookout in Intune.  
-
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-
-2. Go to **Device compliance** > **Mobile Threat Defense** and select **Add**.
-
-3. On the *Add Connector* pane, use the drop-down and select **Lookout for Work**.  
-
-4. Select **Create**. After the connector establishes contact with Lookout MES, the *Connector Settings* become available.
-
-5. Set **Enable App Sync for iOS Devices** to **On**. 
-
-6. Select **Save** to complete the configuration.  Intune and Lookout MES are now integrated and ready for use.
-
+After you configure Lookout MES, you must set up a connection to [Lookout in Intune](https://docs.microsoft.com/en-us/intune/protect/mtd-connector-enable).  
 
 ## Additional settings in the Lookout MES Console
 The following are additional settings you can configure in the Lookout MES Console.  
@@ -150,8 +140,6 @@ To receive email alerts for threats, sign in to the [Lookout MES Console](https:
 
   ![screenshot of the preferences page with the user account displayed](./media/lookout-mtd-connector-integration/lookout-mtp-email-notifications.png)
 
-
-
 ## Configure threat classifications  
 Lookout Mobile Endpoint Security  classifies mobile threats of various types. The Lookout threat classifications have default risk levels associated with them. The risk levels can be changed at any time to suit your company requirements.
 
@@ -171,4 +159,5 @@ For details on how to get the *Lookout for Work* app deployed to a device, see [
 
 ## Next steps
 
-[Set up Lookout apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Lookout apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Lookout apps for unenrolled devices](~/protect/mtd-add-apps-unenrolled-devices.md)

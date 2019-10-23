@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
  
-# Use Device Firmware Configuration Interface profiles on Windows devices in Microsoft Intune
+# Use Device Firmware Configuration Interface profiles on Windows devices in Microsoft Intune (public preview)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

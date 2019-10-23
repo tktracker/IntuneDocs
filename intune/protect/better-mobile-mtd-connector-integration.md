@@ -35,8 +35,7 @@ Complete the following steps to integrate the Better Mobile Threat Defense solut
 
 ## Before you begin
 
-> [!NOTE]
-> The following steps are to be completed in the [Better Mobile admin console](https://aad.bmobi.net).
+The following steps are to be completed in the [Better Mobile admin console](https://aad.bmobi.net) and will enable a connection to Better Mobile's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating Better Mobile with Intune, make sure you have the following:
 
@@ -83,4 +82,5 @@ The Better Mobile app authorization process follows:
 
 ## Next steps
 
-- [Set up Better Client apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Better Mobile apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Better Mobile apps for unenrolled devices](~/protect/mtd-add-apps-unenrolled-devices.md)

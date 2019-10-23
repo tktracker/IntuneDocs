@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,8 +35,7 @@ Complete the following steps to integrate the Zimperium Mobile Threat Defense so
 
 ## Before you begin
 
-> [!NOTE]
-> The following steps are to be completed in the [Zimperium MTD console](https://www.zimperium.com/platform).
+The following steps are done in the [Zimperium MTD console](https://www.zimperium.com/platform) and will enable a connection to Lookout's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating Zimperium with Intune, make sure you have the following subscription and credentials:
 
@@ -94,4 +93,5 @@ For more information about consent and Azure Active Directory applications, see 
 
 ## Next steps
 
-- [Set up Zimperium apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Zimperium apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Zimperium apps for unenrolled devices](~/protect/mtd-add-apps-unenrolled-devices.md)

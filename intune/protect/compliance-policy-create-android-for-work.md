@@ -123,8 +123,7 @@ As an Intune administrator, use these compliance settings to help protect your o
     
     - **Number of symbol characters required**: Enter the number of symbol characters (`&`, `#`, `%`, and so on) the password must have, between 0 and 16 characters.
  
-- **Maximum minutes of inactivity before password is required**: Enter the idle time before the user must reenter their password. Options include *Not configured*, and from *1 Minute* to *8 hours*.
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+- **Maximum minutes of inactivity before password is required**: Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
 
 - **Number of days until password expires**: Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
 
@@ -206,7 +205,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **At least alphanumeric with symbols**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
 
   Depending on the *password type* you select, the following settings are available:  
-  - **Maximum minutes of inactivity before password is required**: Enter the idle time before the user must reenter their password. Options include *Not configured*, and from *1 Minute* to *8 hours*.
+  - **Maximum minutes of inactivity before password is required**: Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
 
   - **Number of days until password expires**: Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
 
