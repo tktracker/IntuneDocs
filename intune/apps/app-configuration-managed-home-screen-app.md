@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -64,25 +64,15 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Configuration   Key | Value Type | Default Value | Description |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Set Grid Size | string | Auto | Allows you to set the grid size for apps to be positioned on   the managed home screen. You can set the number of app rows and columns to define grid size in the following format `columns;rows`. If you define the   grid size, the maximum number of apps that will be shown in a row on the home   screen would be the number of rows you set and the maximum number of apps   that will be shown in a column in the home screen would be the number of   columns you set. |
-| Enable Screen Header | bool | TRUE | Enables the top header for different views that the managed home screen offers such as the feed or feed cards. If you enable this   setting, the device users will see the header. |
-| Enable device status bar | bool | TRUE | Enables the status bar in the home screen (top bar that   displays current connections such as wifi and etc.). If you enable this configuration key, the   end user will be able to see the icons displayed on the status bars that   represent connections and active apps. |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that shows the number of new notifications on the app. If you enable this setting, end users   will see notification badges on apps that have unread notifications. If you keep this configuration key disabled, the end user will not see any notification badged to apps   that might have unread notifications. |
 | Lock Home Screen | bool | TRUE | Removes the ability of the end user to move around app icons   on the home screen. If you enable this configuration key, the app icons on the home screen will   be locked and the end user would not be able to drag and drop to different   grid positions of the home screen. If turned to `false`, end users will be able to move around application and weblink icons on the Managed Home Screen.  |
 | Set device wall paper | string | Default | Allows you to set a wallpaper of your choice by entering the   URL of the image that you want to set as a wallpaper. |
 | Set app icon size | integer | 2 | Allows you to set the icon size for apps displayed on the home   screen. You can choose the following values in this configuration for   different sizes - 0 (Smallest), 1 (Small), 2 (Regular), 3 (Large) and 4   (Largest). |
 | Set app folder icon | integer | 0 | Allows you to define the appearance of app folders on the home   screen. You can choose the appearance from following values: Dark Square(0);   Dark Circle(1); Light Square(2); Light Circle(3). |
-| Enable gestures | bool | FALSE | Enable the end user's ability to assign actions to different   gestures such as swipe up and swipe down. If you disable this configuration key, end users will   only be able to swipe right if there is a second page and back to the home   page. |
-| Enable vertical scrolling | bool | FALSE | Enables vertical scrolling on the managed home screen. If you   enable this configuration key, the end user will only be able to navigate to different pages   vertically rather than by swiping horizontally. |
-| Set home screen theme | string | Theme.Light.Blue | Allows you to choose the theme for the home screen from a   predefined set of themes with different colors. You can choose the following   themes by entering the string value in the following format.   Theme.Light.Green. Where light can be replaced with Dark for a dark theme and   Green can be replaced by Blue, Yellow, Pink, Red, Orange, and Purple. |
-| Enable dock | bool | FALSE | Enables the app dock section in at bottom of the home screen   with persistent apps displayed and entry point for all installed apps. If you   enable this configuration key, the end user will be able to access apps in the dock and also   access the all app section to go to the list of all installed apps on the   devices whether or not they have been allow-listed. |
 | Set screen orientation | integer | 1 | Allows you to set the orientation of the home screen to   portrait mode, landscape mode or allow auto rotate. You can set the   orientation by entering values 1 (for portrait mode), 2 (for Landscape mode),   3 (for Autorotate). |
-| Enable home screen feed | bool | FALSE | Enables the feed of the home screen, which can be seen by   swiping left of the home screen. This feed displays different type of content   such as news, calendar, frequently user apps, and Cortana voice assistant card   etc. If you enable this, the end user will be able to navigate to the feed by   swiping left on the home screen. |
-| Enable overview mode | bool | FALSE | Enables the end users to add or remove different pages on the   home screen that can be accessed by swiping right from the default screen. If   you enable this, the end user will be able to add paged to the right of the   default page of the home screen, will also be able to change the default page,   and will also be able to access the settings on the Managed Home Screen. |
 | Enable device telemetry | bool | FALSE | Enables all the telemetry that is being captured for the   managed home screen. If you enable this, Microsoft will be able to capture device usage telemetry, such as the number of times a particular app is launched on this device. |
 | Set allow-listed applications | bundleArray | FALSE | Allows you to define the set of apps visible on the home screen from amongst the apps installed on the device. You can define the apps   by entering the app package name of the apps that you would like to make   visible, for example com.microsoft.emmx would make settings accessible on the home   screen. The apps that you allow-list in this section should already be installed on the device in order to be visible on the home screen. |
 | Set pinned web links | bundleArray | FALSE | Allows you to pin websites as quick launch icons on the home   screen. With this configuration, you can define the URL and add it to the home   screen for the end user to launch in the browser with a single tap. |
-| Enable search bar | bool | FALSE | Enables the search bar on home screen. If you enable this,   users of the device will see the search bar on the home screen where they   would be able to enter whatever they want to search on the web. |
-| Disable settings app | bool | FALSE | Disables the settings page for the Managed Home Screen. If you   disable this, the end user of the device will not be able to get to the   settings of the Managed Home Screen. |
 | Enable screen saver | bool | FALSE | To enable screen saver mode or not. If set to true, you can   configure **screen_saver_image**, **screen_saver_show_time**,   **inactive_time_to_show_screen_saver**, and   **media_detect_screen_saver**. |
 | Screen saver image | string |   | Set the URL of the screen saver image. If no URL is set,   devices will show the default screen saver image when screen saver is activated. The default image shows the Managed Home Screen app icon.  |
 | Screen saver show time | integer | 0 | Gives option to set the amount of time in seconds the device   will display the screen saver during screen saver mode. If set to 0, the   screen saver will show on screen saver mode indefinitely until the device   becomes active.  |
@@ -120,18 +110,6 @@ The following is an example JSON script with all the available configuration key
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
         {
-            "key": "keep_page_header",
-            "valueBool": true
-        },
-        {
-            "key": "keep_status_bar",
-            "valueBool": true
-        },
-        {
-            "key": "show_notification_badge",
-            "valueBool": false
-        },
-        {
             "key": "lock_home_screen",
             "valueBool": true
         },
@@ -148,32 +126,8 @@ The following is an example JSON script with all the available configuration key
             "valueInteger": 0
         },
         {
-            "key": "gesture_on",
-            "valueBool": false
-        },
-        {
-            "key": "vertical_scrolling",
-            "valueBool": false
-        },
-        {
-            "key": "theme",
-            "valueString": "Theme.Light.Blue"
-        },
-        {
-            "key": "dock_enable",
-            "valueBool": false
-        },
-        {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "feed_enable",
-            "valueBool": false
-        },
-        {
-            "key": "allow_overview_mode",
-            "valueBool": false
         },
         {
             "key": "enable_telemetry",
@@ -208,14 +162,6 @@ The following is an example JSON script with all the available configuration key
                     ]
                 }
             ]
-        },
-        {
-            "key": "search_bar",
-            "valueBool": false
-        },
-        {
-            "key": "hide_settings",
-            "valueBool": false
         },
         {
             "key": "show_virtual_home",
