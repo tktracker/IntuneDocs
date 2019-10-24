@@ -393,3 +393,4 @@ This issue is usually caused by incorrectly delegating permissions to the organi
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Get support for Microsoft Intune](../fundamentals/get-support.md)
+- [Find co-management enrollment errors](https://docs.microsoft.com/sccm/comanage/how-to-monitor#enrollment-errors)

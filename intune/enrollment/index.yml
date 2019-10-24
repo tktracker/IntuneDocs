@@ -51,6 +51,8 @@ landingContent:
             url: tutorial-use-autopilot-enroll-devices.md                 
       - linkListType: how-to-guide
         links:
+          - text: Intune enrollment methods for Windows devices          
+            url: windows-enrollment-methods.md
           - text: Set up Windows enrollment
             url: windows-enroll.md
           - text: Set up bulk enrollment for Windows devices

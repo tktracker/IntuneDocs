@@ -73,6 +73,9 @@ conceptualContent:
         - url: ./enrollment/device-management-capabilities.md
           itemType: concept  
           text: Enrolled device management capabilities
+        - url: ./enrollment/windows-enrollment-methods.md
+          itemType: how-to-guide
+          text: Intune enrollment methods for Windows devices
         - url: ./enrollment/windows-enroll.md
           itemType: how-to-guide
           text: Set up enrollment for Windows
