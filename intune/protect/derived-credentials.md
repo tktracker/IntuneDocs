@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -68,7 +68,7 @@ Intune supports a single derived credential issuer per tenant. You can configure
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
-For important details about using the different issuers, review guidance for that issuer, including the issuers end-user workflow. For more information, see [Plan for derived credentials](#plan-for-derived-credentials) in this article.
+For important details about using the different issuers, review guidance for that issuer<!-- , including the issuers end-user workflow-->. For more information, see [Plan for derived credentials](#plan-for-derived-credentials) in this article.
 
 > [!IMPORTANT]  
 > If you delete a derived credential issuer from your tenant, the derived credentials that were set up through that issuer will no longer function.  
@@ -105,11 +105,14 @@ General information:
 
 ### 2) Review the end-user workflow for your chosen issuer
 
-Following are key considerations for each supported partner, and links to that issuers end-user workflow.  Become familiar with this information so you can ensure your Intune policies and configurations don’t block users and devices from successfully completing enrollment for a derived credential from that issuer.
+Following are key considerations for each supported partner<!--  , and links to that issuers end-user workflow -->.  Become familiar with this information so you can ensure your Intune policies and configurations don’t block users and devices from successfully completing enrollment for a derived credential from that issuer.
 
 #### DISA Purebred
 
+Understand the end-user workflow and key requirements:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
 Review the [user workflow for DISA Purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Key requirements for this workflow include:  
+-->
 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer. 
 
@@ -124,8 +127,11 @@ Review the [user workflow for DISA Purebred](https://docs.microsoft.com/intune-u
 For information getting and configuring the DISA Purebred app, see [Deploy the DISA Purebred app](#deploy-the-disa-purebred-app) later in this article.  
 
 #### Entrust Datacard  
-Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Key requirements for this workflow include: 
 
+Understand the end-user workflow and key requirements:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Key requirements for this workflow include: 
+--> 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer. 
 
 - Devices that will enroll for a derived credential must install the Intune Company Portal app.
@@ -133,8 +139,11 @@ Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intun
 - Use of a device camera to scan a QR code that links the authentication request to the derived credential request from the mobile device.
 
 #### Intercede
-Review the [user workflow for Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Key requirements for this workflow include: 
 
+Understand the end-user workflow and key requirements:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Key requirements for this workflow include: 
+-->
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer. 
 
 - Devices that will enroll for a derived credential must install the Intune Company Portal app.

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -29,6 +29,9 @@ ms.collection: M365-identity-device-management
 # Use Device Firmware Configuration Interface profiles on Windows devices in Microsoft Intune (public preview)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
+> [!Note]
+> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take several days to rollout. Some features may roll out over several weeks, and might not be available to all customers immediately.
 
 When you use Intune to manage Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled, using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, see [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -171,15 +174,9 @@ You're now ready to wipe the device. Once the device is wiped, delete the Autopi
 
 ### Recover
 
-If you wipe a device, and delete the Autopilot record before unlocking the UEFI (BIOS) menus, then the menus remain locked. Intune can't send profile updates to unlock it. To unlock the device, you can:
+If you wipe a device, and delete the Autopilot record before unlocking the UEFI (BIOS) menus, then the menus remain locked. Intune can't send profile updates to unlock it.
 
-- **Option 1**: Ask your CSP or OEM-direct device vendor to re-register the device with Autopilot. Re-enroll it in Intune to reapply the Autopilot and DFCI profiles.
-
-  Then, unlock the UEFI menus using the steps in [retire the device](#retire) (in this article).
-
-- **Option 2**: Open the UEFI (BIOS) menu, and select a recovery option. Confirm the device isn't registered for DFCI management, and unlock the menu. Recovery options leave all UEFI (BIOS) settings to the values in the last Intune DFCI profile.
-
-  Then, unlock the UEFI menus using the steps in [retire the device](#retire) (in this article).
+To unlock the device, open the UEFI (BIOS) menu, and refresh management from network. Recovery unlocks the menus, but leaves all UEFI (BIOS) settings set to the values in the previous Intune DFCI profile.
 
 ## End user impact
 
