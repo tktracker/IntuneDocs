@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 10/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -21,7 +21,7 @@ ms.assetid:
 
 #audience:
 #ms.devlang:
-ms.reviewer: karthib
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,12 +36,6 @@ View the Microsoft Defender Advanced Threat Protection (formerly Windows Defende
 The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites). 
 
 This baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
-
-
-> [!NOTE]  
-> The ATP baseline settings are in **Preview**. While in Preview, the list of available settings, and order in which this content presents those settings, might not match what is available in the portal.  
->
-> When the baseline settings are out of Preview, this content will update to reflect a current list of security baseline settings that Intune supports.
 
 ## Application Guard  
 For more information, see [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
@@ -60,13 +54,13 @@ While using Microsoft Edge, Microsoft Defender Application Guard protects your e
 
   - **Clipboard behavior** - *Settings/ClipboardSettings*  
     Choose what copy and paste actions are allowed between the local PC and the Application Guard virtual browser.  Options include:
-    - *Not Configured*  
-    - *Block both* - Data can't transfer between the PC and the virtual browser.  
-    - *Block host to container* - Data can't transfer from the PC into the virtual browser.
-    - *Block container to host* - Data can't transfer from the virtual browser to the host PC.
-    - *Block none* - No block for content exists.  
+    - Not Configured  
+    - Block copy and paste between PC and browser - Block both. Data can't transfer between the PC and the virtual browser.  
+    - Allow copy and paste from browser to PC only - Data can't transfer from the PC into the virtual browser.
+    - Allow copy and paste from PC to browser only - Data can't transfer from the virtual browser to the host PC.
+    - Allow copy and paste between PC and browser - No block for content exists.  
 
-    **Default**: Block both  
+    **Default**: Block copy and paste between PC and browser  
 
 - **Windows network isolation policy – Enterprise network domain names**  
   For more information, see [Policy CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) in the Windows documentation.
@@ -106,7 +100,7 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
 
   **Default**: Enable
 
-- **Email content execution type**  
+- **Email content execution**  
   [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, This rule blocks the following file types from being run or launched from an email seen in either Microsoft Outlook or webmail (such as Gmail.com or Outlook.com):  
 
   - Executable files (such as .exe, .dll, or .scr)  
@@ -120,12 +114,12 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
 
   **Default**: Enable
 
-- **Script obfuscated macro code type**  
+- **Script obfuscated macro code**  
   [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Malware and other threats can attempt to obfuscate or hide their malicious code in some script files. This rule prevents scripts that appear to be obfuscated from running.  
     
   **Default**: Block
 
-- **Untrusted USB process type**  
+- **Untrusted USB process**  
   [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, unsigned, or untrusted executable files from USB removable drives and SD cards can't run.
 
   Executable files include:
@@ -134,12 +128,12 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
 
   **Default**: Block
 
-- **Office apps other process injection type**  
+- **Office apps other process injection**  
   [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - When set to *Block*, Office apps, including Word, Excel, PowerPoint, and OneNote, can’t inject code into other processes. Code injection is typically used by malware to run malicious code in an attempt to hide the activity from antivirus scanning engines.  
 
   **Default**: Block
 
-- **Office macro code allow Win32 imports type**  
+- **Office macro code allow Win32 imports**  
   [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - When set to *Block*, this rule attempts to block Office files that contain macro code that can import Win32 DLLs. Office files include Word, Excel, PowerPoint, and OneNote. Malware can use macro code in Office files to import and load Win32 DLLs, which are then used to make API calls to allow further infection throughout the system.  
 
   **Default**: Block
@@ -149,7 +143,7 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
 
   **Default**: Enable
 
-- **Office apps executable content creation or launch type**  
+- **Office apps executable content creation or launch**  
   [Attack surface reduction rule](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – When set to *Block*, Office apps can’t create executable content. Office apps include Word, Excel, PowerPoint, OneNote, and Access.  
 
   This rule targets typical behaviors used by suspicious and malicious add-ons and scripts (extensions) that create or launch executable files. This is a typical malware technique. Extensions are blocked from being used by Office apps. Typically, these extensions use the Windows Scripting Host (.wsh files) to run scripts that automate certain tasks or provide user-created add-on features.
@@ -175,6 +169,11 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
 
   - **Encryption method**  
     **Default**: AES 128bit CBC
+
+- **Encrypt storage card (mobile only)**
+  Selecting *Yes* will encrypt the storage card of the mobile device.  
+
+   **Default**: Yes
 
 - **Bit locker fixed drive policy**  
   The values for this policy determine the strength of the cipher that BitLocker uses for encryption of fixed drives. Enterprises can control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.
@@ -229,12 +228,12 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
   - **Remove matching hardware devices**  
     This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.  
 
-    **Default**: *No default configuration*
+    **Default**: Yes
 
   - **Hardware device identifiers that are blocked**  
     This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*. To configure this setting, expand the option, select **+ Add**, and then specify the hardware device identifier you want to block.  
 
-    **Default**: *No devices are blocked*  
+    **Default**: PCI\CC_0C0A
 
 - **Block direct memory access**  
   [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) - Use this policy setting to block direct memory access (DMA) for all hot pluggable PCI downstream ports on a device, until a user logs into Windows. Once a user logs in, Windows will enumerate the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA is blocked on hot plug PCI ports with no children devices until the user logs in again. Devices that were already enumerated when the machine was unlocked will continue to function until unplugged. 
@@ -254,23 +253,23 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
   - **Remove matching hardware devices**  
     This setting is available only when *Hardware device installation by setup classes* is set to *Block hardware device installation*.  
  
-    **Default**: *No default configuration*  
+    **Default**: Yes  
 
   - **Hardware device identifiers that are blocked**  
     This setting is available only when Hardware device installation by setup classes is set to Block hardware device installation. To configure this setting, expand the option, select **+ Add**, and then specify the hardware device identifier you want to block.  
  
-    **Default**: *No devices are blocked*
+    **Default**: {d48179be-ec20-11d1-b6b8-00c04fa372a7}
 
 ## Endpoint Detection and Response  
 For more information, see [WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) in the Windows documentation.  
 
-- **Expedite telemetry reporting frequency** - *Configuration/TelemetryReportingFrequency*  
+- **Expedite telemetry reporting frequency** - *Configuration/TelemetryReportingFrequency*
 
   Expedite Microsoft Defender Advanced Threat Protection telemetry reporting frequency.  
 
   **Default**: Yes
 
-- **Sample sharing for all files** - *Configuration/SampleSharing*  
+- **Sample sharing for all files** - *Configuration/SampleSharing* 
 
   Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
 
@@ -291,43 +290,7 @@ For more information, see [WindowsAdvancedThreatProtection CSP](https://docs.mic
   [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – Set to *Yes* to prevent users from making changes to the exploit protection settings area in the Windows Defender Security Center. If you disable or don't configure this setting, local users can make changes in the exploit protection settings area.  
   **Default**: Yes  
 
-- **Controlled folder access**  
-  See [Defender/ControlledFolderAccessAllowedApplications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications) and [Defender/ControlledFolderAccessProtectedFolders](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders) 
-  
-   Protect files and folders from unauthorized changes by unfriendly apps.
-
-  **Default**: Audit mode
-
-## Web & Network Protection  
-
-- **Network protection type**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  - This policy allows you to turn network protection on or off in Windows Defender Exploit Guard. Network protection is a feature of Windows Defender Exploit Guard that protects employees using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. This includes preventing third-party browsers from connecting to dangerous sites.  
-
-  When set to either *Enable* or *Audit mode*, users can’t turn off network protection, and you can use the Windows Defender Security Center to view information about connection attempts.  
- 
-  - *Enable* will block users and apps from connecting to dangerous domains.  
-  - *Audit mode* doesn’t block users and apps from connecting to dangerous domains.  
-
-  When set to *User defined*, users and apps aren’t blocked from connecting to dangerous domains, and information about connections isn’t available in Windows Defender Security Center.  
-
-  **Default**: Audit mode
-
-- **Require SmartScreen for Microsoft Edge**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) - Microsoft Edge uses Windows Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. By default, this policy is enabled (set to *Yes*), and when enabled prevents users from turning off Windows Defender SmartScreen.  When the effective policy for a device is equal to Not configured, users can turn off Windows Defender SmartScreen, which leaves the device unprotected.  
-
-  **Default**: Yes
-  
-- **Block malicious site access**  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) - By default, Microsoft Edge allows users to bypass (ignore) the Windows Defender SmartScreen warnings about potentially malicious sites, allowing users to continue to the site. With this policy enabled (set to *Yes*), Microsoft Edge prevents users from bypassing the warnings and blocks them from continuing to the site.  
-
-  **Default**: Yes
-
-- **Block unverified file download**  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) - By default, Microsoft Edge allows users to bypass (ignore) the Windows Defender SmartScreen warnings about potentially malicious files, allowing them to continue downloading unverified files. With this policy enabled (set to *Yes*), users are prevented from bypassing the warnings and can't download unverified files.  
-
-  **Default**: Yes
-
-## Windows Defender Anti-Virus    [Settings review pending for this section]
+## Microsoft Defender Antivirus  
 
 For more information, see [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
 
@@ -341,7 +304,7 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
 
   **Default**: Yes
 
-- **Defender sample submission consent type**  
+- **Defender sample submission consent**  
   [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) - Checks for the user consent level in Windows Defender to send data. If the required consent has already been granted, Windows Defender submits them. If not (and if the user has specified never to ask), the UI is launched to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.  
 
   **Default**: Send safe samples automatically
@@ -599,6 +562,35 @@ For more information, see [Firewall CSP](https://docs.microsoft.com/windows/clie
 
 - **Certificate revocation list verification**  
   **Default**: Device default
+
+## Web & Network Protection  
+
+- **Network protection type**  
+  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  - This policy allows you to turn network protection on or off in Windows Defender Exploit Guard. Network protection is a feature of Windows Defender Exploit Guard that protects employees using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. This includes preventing third-party browsers from connecting to dangerous sites.  
+
+  When set to either *Enable* or *Audit mode*, users can’t turn off network protection, and you can use the Windows Defender Security Center to view information about connection attempts.  
+ 
+  - *Enable* will block users and apps from connecting to dangerous domains.  
+  - *Audit mode* doesn’t block users and apps from connecting to dangerous domains.  
+
+  When set to *User defined*, users and apps aren’t blocked from connecting to dangerous domains, and information about connections isn’t available in Windows Defender Security Center.  
+
+  **Default**: Audit mode
+
+- **Require SmartScreen for Microsoft Edge**  
+  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) - Microsoft Edge uses Windows Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. By default, this policy is enabled (set to *Yes*), and when enabled prevents users from turning off Windows Defender SmartScreen.  When the effective policy for a device is equal to Not configured, users can turn off Windows Defender SmartScreen, which leaves the device unprotected.  
+
+  **Default**: Yes
+  
+- **Block malicious site access**  
+  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) - By default, Microsoft Edge allows users to bypass (ignore) the Windows Defender SmartScreen warnings about potentially malicious sites, allowing users to continue to the site. With this policy enabled (set to *Yes*), Microsoft Edge prevents users from bypassing the warnings and blocks them from continuing to the site.  
+
+  **Default**: Yes
+
+- **Block unverified file download**  
+  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) - By default, Microsoft Edge allows users to bypass (ignore) the Windows Defender SmartScreen warnings about potentially malicious files, allowing them to continue downloading unverified files. With this policy enabled (set to *Yes*), users are prevented from bypassing the warnings and can't download unverified files.  
+
+  **Default**: Yes
 
 ## Windows Hello for Business  
 
