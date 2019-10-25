@@ -184,25 +184,24 @@ Users can perform actions on their local or remote devices via the Company Porta
 
 Some platforms and configurations do not allow self-service device actions. This table below provides further details about self service actions:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup><sup>(5)</sup> | Android<sup>(3)</sup> |
+|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Retire | Available<sup>(1)</sup> | Available<sup>(8)</sup> | Available | Available<sup>(7)</sup> |
-| Wipe | Available | Available | NA | Available<sup>(7)</sup> |
-| Rename<sup>(4)</sup> | Available | Available<sup>(8)</sup> | Available | Available |
+| Retire | Available<sup>(1)</sup> | Available | Available | Available<sup>(7)</sup> |
+| Wipe | Available | Available<sup>(5)</sup> | NA | Available<sup>(7)</sup> |
+| Rename<sup>(4)</sup> | Available | Available | Available | Available |
 | Sync | Available | Available | Available | Available |
 | Remote Lock | Windows Phone only | Available | Available | Available |
-| Reset Passcode | Windows Phone only | Available | NA | Available<sup>(6)</sup> |
+| Reset Passcode | Windows Phone only | Available<sup>(8)</sup> | NA | Available<sup>(6)</sup> |
 | Key Recovery | NA | NA | Available<sup>(2)</sup> | NA |
-| Dark Mode | NA | Available | NA | NA |
 
 <sup>(1)</sup> **Retire** is always blocked on Azure AD Joined Windows devices.<br>
 <sup>(2)</sup> **Key Recovery** for MacOS is only available via the Web Portal.<br>
 <sup>(3)</sup> All remote actions are disabled if using a Device Enrollment Manager enrollment.<br>
-<sup>(4)</sup> **Rename** only changes the device name in the Company Portal App or website, not on the device.<br>
-<sup>(5)</sup> **Remote Wipe** is not available on MacOS devices.<br>
+<sup>(4)</sup> **Rename** only changes the device name in the Company Portal app or Web Portal, not on the device.<br>
+<sup>(5)</sup> **Wipe** is not available on User Enrolled iOS devices.<br>
 <sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Retire** and **Wipe** are not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> **Retire** (remove device) and **Rename** are available for all types of enrollment. Other actions are not supported for User Enrollment.<br> 
+<sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS devices.
 
 ## Next steps
 
