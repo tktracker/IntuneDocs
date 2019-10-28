@@ -56,17 +56,23 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Role-based access control
 -->  
 
+
 ## Week of October 28, 2019
 
 ### App management 
 
 #### Dark Mode for iOS Company Portal <!-- 4911422 -->
-Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode. For more information about the iOS Company Portal, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
+Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode. For more information, see [Introducing dark mode on Microsoft Intune Company Portal for iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). For more information about the iOS Company Portal, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
 
 #### Android Company Portal enforced minimum app version <!-- 2378776 -->
 By using the **Min Company Portal version** setting of an app protection policy, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to **Block access**, **Wipe data**, or **Warn** as possible actions when the value is not met. The possible formats for this value follows the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*. 
 
 The **Min Company Portal version** setting, if configured, will affect any end user who gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting will have no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app auto-updates on their device will likely not see any dialogs from this feature, given that they will likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices. For more information, see [Android app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-android.md#conditional-launch).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management 
+#### Intune supports iOS 11 and later <!-- 4665324 idready wnready -->
+Intune enrollment and Company Portal now support iOS versions 11 and later. Older versions aren't supported.
 
 ### Monitor and troubleshoot
 
@@ -74,8 +80,10 @@ The **Min Company Portal version** setting, if configured, will affect any end u
 
 The in-console experience for [getting help and support for Intune](get-support.md) is updated and streamlined.  We've improved  the in-console search and feedback for common issues, and the workflow you use to contact support. When opening a support issue, you'll see real-time estimates for when you can expect a callback or email reply, and Premier and Unified support customers can easily specify a severity for their issue, to help get support faster.
 
+<!-- ########################## -->
 ## Week of October 21, 2019
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Microsoft 365 Device Management
 
 #### Improved administration experience in Microsoft 365 Device Management
@@ -88,6 +96,7 @@ A refreshed and streamlined administration experience is now generally available
 
 For more information about these improvements, see the [Enterprise Mobility + Security blog post](https://go.microsoft.com/fwlink/?linkid=2109094) on the Microsoft Tech Community web site.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
 #### Add Mobile Threat Defense apps to unenrolled devices <!-- 3005337 -->
@@ -111,6 +120,8 @@ You can now choose to only show the Enrollment Status Page on devices provisione
 
 To see the new toggle, choose **Intune** > **Device enrollment** > **Windows enrollment** > **Enrollment Status Page** > **Create Profile** > **Settings** > **Only show page to devices provisioned by out-of-box experience (OOBE)**.
 
+
+<!-- ########################## -->
 ## Week of October 14, 2019
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
