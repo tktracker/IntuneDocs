@@ -6,7 +6,9 @@
 
 ## [Device password requirements](password-does-not-meet-it-administrator-requirements.md)
 
-## [Sign in to the Company Portal](sign-in-to-the-company-portal.md)
+## [Sign in to the Company Portal](sign-in-to-the-company-portal.md)  
+
+## [Install Mobile Threat Defense app](set-up-mobile-threat-defense.md)  
 
 ## Using your Android device
 ### [Why enroll your Android device](why-enroll-android-device.md)
