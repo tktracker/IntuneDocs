@@ -159,8 +159,6 @@ We'll add a new report to the **Devices overview** page. The report displays how
 
 To see the report, choose **Intune** > **Devices** > **Overview**.
 
-### Updated support experience   <!--  5012398    -->
-As part of continuing improvements, we'll update the in-console support experience for Intune.  We'll improve the in-console search and feedback for common issues, and we'll streamline the workflow to contact support.     
 
 <!-- ***********************************************-->
 <!--## Security-->

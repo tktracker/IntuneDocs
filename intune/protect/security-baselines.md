@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,18 +29,18 @@ ms.collection: M365-identity-device-management
 
 # Use security baselines to configure Windows 10 devices in Intune
 
-Use Intune's security baselines to help you secure and protect your users and devices. Security baselines are pre-configured groups of Windows settings that help you apply a known group of settings and default values that are recommended by the relevant security teams. When you create a security baseline profile in Intune, you're creating a *device configuration* profile.
+Use Intune's security baselines to help you secure and protect your users and devices. Security baselines are pre-configured groups of Windows settings that help you apply a known group of settings and default values that are recommended by the relevant security teams. When you create a security baseline profile in Intune, you're creating a template that consists of multiple *device configuration* profiles.
 
 This feature applies to:
 
 - Windows 10 version 1809 and later
 
-You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or later. For example, the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn’t work for your environment, customize the baseline to apply the settings you need.  
+You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or later. For example, the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn’t work for your environment, customize the baseline to apply the settings you need.
 
-Separate baseline types can include the same settings but use different default values for those settings. It's important to understand the defaults in the baselines you choose to use, and to then modify each baseline to fit your organizational needs.  
+Separate baseline types can include the same settings but use different default values for those settings. It's important to understand the defaults in the baselines you choose to use, and to then modify each baseline to fit your organizational needs.
 
 > [!NOTE]
-> Microsoft doesn't recommend using preview versions of security baselines in a production environment. The settings in a preview baseline might change over the course of the preview. 
+> Microsoft doesn't recommend using preview versions of security baselines in a production environment. The settings in a preview baseline might change over the course of the preview.
 
 Security baselines can help you to have an end-to-end secure workflow when working with Microsoft 365. Some of the benefits include:
 
@@ -48,153 +48,150 @@ Security baselines can help you to have an end-to-end secure workflow when worki
 - If you're new to Intune, and not sure where to start, then security baselines gives you an advantage. You can quickly create and deploy a secure profile, knowing that you're helping protect your organization's resources and data.
 - If you currently use group policy, migrating to Intune for management is much easier with these baselines. These baselines are natively built in to Intune, and include a modern management experience.
 
-
-
 [Windows security baselines](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) is a great resource to learn more about this feature. [Mobile device management](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) is a great resource about MDM, and what you can do on Windows devices.
 
 ## About baseline versions and instances
 
-Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows 10 settings become available with new versions of Windows 10, the MDM Security Baseline might receive a new version instance that includes the newest settings.  
+Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows 10 settings become available with new versions of Windows 10, the MDM Security Baseline might receive a new version instance that includes the newest settings.
 
-In the Intune console, the tile for each baseline displays the baseline template name and basic information about that baseline. The information includes how many profiles you have that use that baseline type, how many separate instances (versions) of the baseline type are available, and a *Last Published* date that identifies when that baseline template was added to your tenant. The following example shows the tile for a well-used MDM Security Baseline:  
+In the Intune console, the tile for each baseline displays the baseline template name and basic information about that baseline. The information includes how many profiles you have that use that baseline type, how many separate instances (versions) of the baseline type are available, and a *Last Published* date that identifies when that baseline template was added to your tenant. The following example shows the tile for a well-used MDM Security Baseline:
 
 ![Baseline tile](./media/security-baselines/baseline-tile.png)
 
-To view more information about the baseline versions you use, select a baseline tile to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. On the Versions pane, you can select a single version to view deeper details about the profiles that use that version. You can also select two different versions and then choose **Compare baselines** to download a CSV file that details those differences.  
+To view more information about the baseline versions you use, select a baseline tile to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. On the Versions pane, you can select a single version to view deeper details about the profiles that use that version. You can also select two different versions and then choose **Compare baselines** to download a CSV file that details those differences.
 
 ![Compare baselines](./media/security-baselines/compare-baselines.png)
 
-When you create a security baseline *profile*, the profile automatically uses the most recently released security baseline instance.  You can continue to use and edit profiles that you previously created that use an earlier baseline version instance, including baselines created using a Preview version. 
+When you create a security baseline *profile*, the profile automatically uses the most recently released security baseline instance.  You can continue to use and edit profiles that you previously created that use an earlier baseline version instance, including baselines created using a Preview version.
 
-You can choose to [change of the version](#change-the-baseline-version-for-a-profile) of a baseline that’s in use with a given profile. This means when a new version comes out, you don’t have to create a new baseline profile to take advantage of it. Instead, when you’re ready, you can select a baseline profile and then use the built-in option to change the instance version for that profile to a new one.  
+You can choose to [change of the version](#change-the-baseline-version-for-a-profile) of a baseline that’s in use with a given profile. This means when a new version comes out, you don’t have to create a new baseline profile to take advantage of it. Instead, when you’re ready, you can select a baseline profile and then use the built-in option to change the instance version for that profile to a new one.
 
-## Available security baselines 
+## Available security baselines
 
- You can use one or more of the available baselines in your Intune environment at the same time. You can also use multiple instances of the same security baselines that have different customizations. 
+ You can use one or more of the available baselines in your Intune environment at the same time. You can also use multiple instances of the same security baselines that have different customizations.
 
-When you use multiple security baselines, review the settings in each one to identify when different baselines introduce conflicting values for the same setting. Because you can deploy security baselines that are designed for different intents, and deploy multiple instances of the same baseline that includes customized settings, you might create configuration [conflicts for devices that must be investigated and resolved](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Also be aware of your [device configuration profiles](../configuration/device-profiles.md), which can configure many of the same settings as security baselines. 
+When you use multiple security baselines, review the settings in each one to identify when different baselines introduce conflicting values for the same setting. Because you can deploy security baselines that are designed for different intents, and deploy multiple instances of the same baseline that includes customized settings, you might create configuration [conflicts for devices that must be investigated and resolved](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Also be aware of your [device configuration profiles](../configuration/device-profiles.md), which can configure many of the same settings as security baselines.
 
-
-
-The following security baseline instances are available for use with Intune. Use the links to view the settings for the most recent instance of each baseline. 
+The following security baseline instances are available for use with Intune. Use the links to view the settings for the most recent instance of each baseline.
 
 - **MDM Security Baseline**
   - [MDM Security Baseline for May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Preview: MDM Security Baseline for October 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
-- **Microsoft Defender ATP baseline**  
+- **Microsoft Defender ATP baseline**
   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))*.
-  - [Microsoft Defender ATP baseline](security-baseline-settings-defender-atp.md)  
+  - [Microsoft Defender ATP baseline](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > The Microsoft Defender ATP security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
-You can continue to use and edit profiles that you previously created based on a preview template, even when that preview template is no longer available for creating new profiles. 
+You can continue to use and edit profiles that you previously created based on a preview template, even when that preview template is no longer available for creating new profiles.
 
-## Manage baselines  
+## Manage baselines
 
 Common tasks when you work with security baselines include:
-- [Create a profile](#create-the-profile) – to configure the settings you want to use, and then assign the baseline to groups.
+
+- [Create a profile](#create-the-profile) – Configure the settings you want to use and assign the baseline to groups.
 - [Change the version](#change-the-baseline-version-for-a-profile) – Change the baseline version in use by a profile.
 - [Remove a baseline assignment](#remove-a-security-baseline-assignment) - Learn what happens when you stop managing settings with a security baseline.
 
 
 ### Prerequisites
+
 - To manage baselines in Intune, your account must have the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles) built-in role.
 
-- Use of some baselines might require you to have an active subscription to additional services, like Microsoft Defender ATP.  
-
+- Use of some baselines might require you to have an active subscription to additional services, like Microsoft Defender ATP.
 
 ### Create the profile
 
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and then select **Device security** > **Security baselines** to view the list of available baselines.
 
+   ![Select a security baseline to configure](./media/security-baselines/available-baselines.png)
 
-    ![Select a security baseline to configure](./media/security-baselines/available-baselines.png)
-
-2. Select the baseline you'd like to use, and then select **Create profile**.  
+2. Select the baseline you'd like to use, and then select **Create profile**.
 
 3. On the **Basics** tab, specify the following properties:
 
-    - **Name**: Enter a name for your security baselines profile. For example, enter *Standard profile for Defender ATP*.
+   - **Name**: Enter a name for your security baselines profile. For example, enter *Standard profile for Defender ATP*.
 
-    - **Description**: Enter some text that describes what this baseline does. The description is for you to enter any text you want. It's optional, but recommended.  
+   - **Description**: Enter some text that describes what this baseline does. The description is for you to enter any text you want. It's optional, but recommended.
 
-   Select **Next** to go to the next tab. After you advanced to a new tab, you can select the tab name to return to a previously viewed tab.  
+   Select **Next** to go to the next tab. After you advanced to a new tab, you can select the tab name to return to a previously viewed tab.
 
 4. On the Configuration settings tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
-   - Select a group to expand and review the available settings.  
-   - Use the *Search* bar and specify keywords that filter the view to display only those groups that contain your search criteria.  
- 
-   Each setting in a baseline has a default configuration for that baseline version. Reconfigure the default settings to meet your business needs. Different baselines might contain the same setting, and use different default values for the setting, depending on the intent of the baseline. 
+   - Select a group to expand and review the available settings.
+   - Use the *Search* bar and specify keywords that filter the view to display only those groups that contain your search criteria.
 
-    ![Expand a group to view the settings for that group](./media/security-baselines/sample-list-of-settings.png)
+   Each setting in a baseline has a default configuration for that baseline version. Reconfigure the default settings to meet your business needs. Different baselines might contain the same setting, and use different default values for the setting, depending on the intent of the baseline.
 
-5. On the **Scope tags** tab, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile. 
+   ![Expand a group to view the settings for that group](./media/security-baselines/sample-list-of-settings.png)
 
-6. On the **Assignments** tab, select **Select groups to include** and then  assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.  
+5. On the **Scope tags** tab, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+
+6. On the **Assignments** tab, select **Select groups to include** and then  assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.
 
    ![Assign a profile](./media/security-baselines/assignments.png)
-  
-7. When you're ready to deploy the baseline, advance to the **Review + create** tab and review the details for the baseline. Select **Create** to save and deploy the profile.  
+
+7. When you're ready to deploy the baseline, advance to the **Review + create** tab and review the details for the baseline. Select **Create** to save and deploy the profile.
 
    As soon as you create the profile, it's pushed to the assigned group and might apply immediately.
 
-   > [!TIP]  
-   > If you save a profile without first assigning it to groups, you can later edit the profile to do so.  
+   > [!TIP]
+   > If you save a profile without first assigning it to groups, you can later edit the profile to do so.
 
-   ![Review the baseline](./media/security-baselines/review.png) 
+   ![Review the baseline](./media/security-baselines/review.png)
 
-  
-8. After you create a profile, edit it by going to **Device security** > **Security baselines**, select the baseline type that you configured, and then select **Profiles**. Select the profile from the list of available profiles, and then select **Properties**. You can edit settings from all the available configuration tabs, and select **Review + save** to commit your changes.  
+8. After you create a profile, edit it by going to **Device security** > **Security baselines**, select the baseline type that you configured, and then select **Profiles**. Select the profile from the list of available profiles, and then select **Properties**. You can edit settings from all the available configuration tabs, and select **Review + save** to commit your changes.
 
-### Change the baseline version for a profile  
+### Change the baseline version for a profile
 
-You can change the version of the baseline instance that in use with a profile.  When you change the version, you select an available instance of the same baseline. You can’t change between two different baseline types, such as changing a profile from using a baseline for Defender ATP to using the MDM security baseline. 
+You can change the version of the baseline instance that in use with a profile.  When you change the version, you select an available instance of the same baseline. You can’t change between two different baseline types, such as changing a profile from using a baseline for Defender ATP to using the MDM security baseline.
 
-While configuring a change of the baseline version, you can download a CSV file that lists the changes between the two baseline versions involved. You also have the choice to keep all your customizations from the original baseline version, or implement the new version using all of its default values. You don't have the option to make changes to individual settings when you change the version of a baseline for a profile. 
+While configuring a change of the baseline version, you can download a CSV file that lists the changes between the two baseline versions involved. You also have the choice to keep all your customizations from the original baseline version, or implement the new version using all of its default values. You don't have the option to make changes to individual settings when you change the version of a baseline for a profile.
 
-Upon saving, after the conversion is complete, the baseline is immediately redeployed to assigned groups.  
+Upon saving, after the conversion is complete, the baseline is immediately redeployed to assigned groups.
 
 **During conversion**:
-- New settings that weren't in the original version you were using are added and set to use the default values.  
 
-- Settings that aren't in the new baseline version you select are removed and no longer enforced by this security baseline profile.  
+- New settings that weren't in the original version you were using are added and set to use the default values.
 
-  When a setting is no longer managed by a baseline profile, that setting isn’t reset on the device. Instead, the setting on the device remains set to its last configuration until some other process manages the setting to change it. Examples of processes that can change a setting after you stop managing it include a different baseline profile, a group policy setting, or manual configuration that’s made on the device. 
+- Settings that aren't in the new baseline version you select are removed and no longer enforced by this security baseline profile.
 
-#### To change the baseline version for a profile  
+  When a setting is no longer managed by a baseline profile, that setting isn’t reset on the device. Instead, the setting on the device remains set to its last configuration until some other process manages the setting to change it. Examples of processes that can change a setting after you stop managing it include a different baseline profile, a group policy setting, or manual configuration that’s made on the device.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and then select **Device security** > **Security baselines**, and then select the tile for the baseline type that has the profile you want to change.  
+#### To change the baseline version for a profile
 
-2. Next, select **Profiles**, and then select the check box for the profile you want to edit, and then select **Change Version**.  
+1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and then select **Device security** > **Security baselines**, and then select the tile for the baseline type that has the profile you want to change.
 
-   ![select a baseline](./media/security-baselines/select-baseline.png)  
+2. Next, select **Profiles**, and then select the check box for the profile you want to edit, and then select **Change Version**.
 
-3. On the **Change Version** pane, use the **Select a security baseline to update to** dropdown, and select the version instance you want to use.  
+   ![select a baseline](./media/security-baselines/select-baseline.png)
 
-   ![select a version](./media/security-baselines/select-instance.png)  
-   
-4. Select **Review update** to download a CSV file that displays the difference between the profiles current instance version and the new version you’ve selected. Review this file so that you understand which settings are new or removed, and what the default values for these settings are in the updated profile.  
+3. On the **Change Version** pane, use the **Select a security baseline to update to** dropdown, and select the version instance you want to use.
 
-   When ready, continue to the next step.  
+   ![select a version](./media/security-baselines/select-instance.png)
 
-5. Choose one of the two options for **Select a method to update the profile**: 
+4. Select **Review update** to download a CSV file that displays the difference between the profiles current instance version and the new version you’ve selected. Review this file so that you understand which settings are new or removed, and what the default values for these settings are in the updated profile.
+
+   When ready, continue to the next step.
+
+5. Choose one of the two options for **Select a method to update the profile**:
    - **Accept baseline changes but keep my existing setting customizations** - This option keeps the customizations you made to the baseline profile and applies them to the new version you've selected to use.
-   - **Accept baseline changes and discard existing setting customizations** - This option overwrites your original profile completely. The updated profile will use the default values for all settings.  
+   - **Accept baseline changes and discard existing setting customizations** - This option overwrites your original profile completely. The updated profile will use the default values for all settings.
 
 6. Select **Submit**. The profile updates to the selected baseline version and after the conversion is complete, the baseline immediately redeploys to assigned groups.
 
 ### Remove a security baseline assignment
-When a security baseline setting no longer applies to a device, or settings in a baseline are set to *Not configured*, those settings on a device don’t revert to a pre-managed configuration. Instead, the previously managed settings on the device keep their last configurations as received from the baseline until some other process updates those settings on the device.  
 
-Other processes that might later change settings on the device include a different or new security baseline, device configuration profile, Group Policy configurations, or manual edit of the setting on the device.  
+When a security baseline setting no longer applies to a device, or settings in a baseline are set to *Not configured*, those settings on a device don’t revert to a pre-managed configuration. Instead, the previously managed settings on the device keep their last configurations as received from the baseline until some other process updates those settings on the device.
+
+Other processes that might later change settings on the device include a different or new security baseline, device configuration profile, Group Policy configurations, or manual edit of the setting on the device.
 
 ## Co-managed devices
 
 Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use System Center Configuration Manager and Microsoft Intune to manage the Windows 10 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](https://docs.microsoft.com/sccm/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.
 
-When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration) provides more information.  
+When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration) provides more information.
 
 ## Q & A
 
@@ -219,9 +216,9 @@ Strictly speaking, no. The Microsoft security team consults organizations, such 
 - Migrating from on-premises Active Directory group policies to a pure cloud solution using Azure Active Directory (AD) with Microsoft Intune is a journey. To help, there are group policy templates included in the [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) that can help manage hybrid AD and Azure AD-joined devices. These devices can get MDM settings from the cloud (Intune) and group policy settings from on-premises domain controllers as needed.
 
 ## Next steps
-- View the settings in the latest versions of the available baselines:  
-  - [MDM security baseline](security-baseline-settings-mdm-all.md)  
-  - [Microsoft Defender ATP baseline](security-baseline-settings-defender-atp.md)  
+
+- View the settings in the latest versions of the available baselines:
+  - [MDM security baseline](security-baseline-settings-mdm-all.md)
+  - [Microsoft Defender ATP baseline](security-baseline-settings-defender-atp.md)
 
 - Check the status and monitor the [baseline and profile](security-baselines-monitor.md)
-

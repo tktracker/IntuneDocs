@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -140,6 +140,10 @@ Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC
 > The user will see instructions about derived credentials based on the link that you have specified via Intune.
 
 For more information about derived credentials for iOS devices, see [Use derived credentials in Microsoft Intune](~/protect/derived-credentials.md).
+
+## Dark Mode for iOS Company Portal
+
+Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode. 
 
 ## Windows Company Portal keyboard shortcuts
 
