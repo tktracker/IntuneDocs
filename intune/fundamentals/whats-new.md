@@ -70,8 +70,27 @@ By using the **Min Company Portal version** setting of an app protection policy,
 The **Min Company Portal version** setting, if configured, will affect any end user who gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting will have no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app auto-updates on their device will likely not see any dialogs from this feature, given that they will likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices. For more information, see [Android app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device management 
-#### Intune supports iOS 11 and later <!-- 4665324 idready wnready -->
+
+### Microsoft 365 Device Management
+
+#### Introducing Endpoint Security node in Microsoft 365 Device Management    <!-- 5630102 -->
+
+**Endpoint Security** node is now generally available in Microsoft 365 Device Management specialist workspace at https://devicemanagement.microsoft.com, which groups together the capabilities to secure endpoints such as:
+
+- Security Baselines:  Pre-configured group of settings that help you apply known group of settings and default values that are recommended by Microsoft.
+
+- Security Tasks: Take advantage of Microsoft Defender ATPs Threat and Vulnerability Management (TVM) and use Intune to remediate endpoint weaknesses.
+
+- Microsoft Defender ATP: Integrated Microsoft Defender Advanced Threat Protection (ATP) to help prevent security breaches.
+
+These settings will continue to be accessible from other applicable nodes such as devices, and current configured state will be the same no matter where you access and enable these capabilities.
+
+For more information about these improvements, see the [Intune Customer Success blog post](https://aka.ms/Endpoint_security_node) on the Microsoft Tech Community web site.
+
+### Device management
+
+#### Intune supports iOS 11 and later <!-- 4665324  -->
+
 Intune enrollment and Company Portal now support iOS versions 11 and later. Older versions aren't supported.
 
 ### Monitor and troubleshoot

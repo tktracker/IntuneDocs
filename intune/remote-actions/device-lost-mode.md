@@ -48,8 +48,10 @@ This feature is not supported for the following:
 
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Select **Devices**, and then select **All devices**.
-4. From the list of devices you manage, choose an iOS device, and choose **...More**. Then choose the **Lost mode** remote action.
-5. In **Lost mode**, enable this feature. Then, enter the message to show, and a contact phone number.
+4. From the list of devices you manage, choose an iOS device, and then choose the **Lost mode (supervised only)**.
+5. Under **Lost mode**, select **Enable**.
+6. In the **Message to display on lock screen**, type a message to display on the device's lock screen.
+7. Optionally, enter a phone number in the **Phone number to display** box.
 6. Select **OK** to save your changes.
 
 When you enable lost mode, all use of the device is blocked. The end user cannot access the device until you disable lost mode. While lost mode is enabled, use the [Locate device](device-locate.md) action to find the device.
