@@ -80,8 +80,8 @@ You do not need to take any action but can consider updating your IT-pro guidanc
 #### Additional information 
 https://aka.ms/intune_fullscreen
 
-### Plan for change: Intune App SDK and app protection policies for Android moving to support Android 5.0 and higher in October <!--4911065 -->
-Intune will be moving to support Android 5.x (Lollipop) and higher in October. Update any wrapped apps with the latest Intune App SDK and update your devices.
+### Plan for change: Intune App SDK and app protection policies for Android moving to support Android 5.0 and higher in an upcoming release <!--4911065 -->
+Intune will be moving to support Android 5.x (Lollipop) and higher in an upcoming release. Update any wrapped apps with the latest Intune App SDK and update your devices.
 
 #### How does this affect me?
 If you're not using or plan to use either the SDK or APP for Android, this change won't affect you. If you are using the Intune App SDK, be sure to update to the latest version and also update your devices to Android 5.x and higher. If you don't update, apps will not receive updates, and the quality of their experience will diminish over time.
