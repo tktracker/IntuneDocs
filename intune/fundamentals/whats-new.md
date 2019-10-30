@@ -61,6 +61,15 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 ### App management 
 
+#### Win32 apps on Windows 10 S mode devices <!-- 3747604 --> 
+You can install and run Win32 apps on Windows 10 S mode managed devices. To do this, you can create one or more supplemental policies for S mode using the Windows Defender Application Control (WDAC) PowerShell tools. Sign the supplemental policies with the Device Guard Signing Portal and then upload and distribute the policies via Intune. In Intune, you will find this capability by selecting **Client apps** > **Windows 10 S supplemental policies**. For more information, see [Enable Win32 apps on S mode devices](~/apps/apps-win32-s-mode.md).
+
+#### Set Win32 app availability based on a date and time <!-- 3510685 -->
+As an admin, you can configure the start time and deadline time for a required Win32 app. At the start time, Intune management extension will start the app content download and cache it. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in Company Portal. For more information, see [Intune Win32 app management](~/apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
+
+#### Require device restart based on grace period after Win32 app install <!-- 3136567 -->
+You can require that a device must restart after a Win32 app successfully installs. For more information, see [Win32 app management - Configure app installation details](~/apps/apps-win32-app-management.md#step-4-configure-app-installation-details).
+
 #### Dark Mode for iOS Company Portal <!-- 4911422 -->
 Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode. For more information, see [Introducing dark mode on Microsoft Intune Company Portal for iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). For more information about the iOS Company Portal, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
 
