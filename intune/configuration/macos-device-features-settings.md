@@ -133,7 +133,7 @@ This feature applies to:
 
 ### Settings apply to: All enrollment types 
 
-- **SSO app extension type**: Choose the type of credential SSO app extension. When you save the SSO app extension profile, you can't change the SSO app extension type. Your options:
+- **SSO app extension type**: Choose the type of credential SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an SSO app extension, switch the SSO app extension type from **Kerberos** or **Credential** to **Not configured**.
   - **Credential**: Use a generic, customizable credential app extension to use SSO. Be sure you know the extension ID and team ID for your organization’s SSO app extension.  
@@ -147,7 +147,7 @@ This feature applies to:
 
   [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple’s website) has more information.
 
-- **Realm**: Enter the name of your Kerberos realm. The realm name should be capitalized, such as `CONTOSO.COM`. Typically, your realm name is the same as your DNS domain name, but in all uppercase.
+- **Realm**: Enter the name of your authentication realm. The realm name should be capitalized, such as `CONTOSO.COM`. Typically, your realm name is the same as your DNS domain name, but in all uppercase.
 - **Domains**: Enter the domain or host names of the sites that can authenticate through SSO. For example, if your website is `mysite.contoso.com`, then `mysite` is the host name, and `contoso.com` is the domain name. When users connect to any of these sites, the app extension handles the authentication challenge. This authentication allows users to use Face ID, Touch ID, or Apple pincode/passcode to sign in.
 
   - All the domains in your single sign-on app extension Intune profiles must be unique. You can't repeat a domain in any sign-on app extension profile, even if you're using different types of SSO app extensions.
@@ -167,7 +167,7 @@ This feature applies to:
 
 - **Keychain usage** (Kerberos only): Choose **Block** to prevent passwords from being saved and stored in the keychain. **Not configured** (default) allows passwords to be saved and stored in the keychain.  
 - **Face ID, Touch ID, or passcode** (Kerberos only): **Require** forces users to enter their Face ID, Touch ID, or Apple passcode to sign in to the domains you added. **Not configured** (default) doesn't require users to use biometrics or passcode to sign in.
-- **Default Realm** (Kerberos only): Choose **Enable** to set the **Realm** value you entered as the default realm. **Not configured** (default) doesn't set a default realm.
+- **Default realm** (Kerberos only): Choose **Enable** to set the **Realm** value you entered as the default realm. **Not configured** (default) doesn't set a default realm.
 
   > [!TIP]
   > - **Enable** this setting if you're configuring multiple Kerberos SSO app extensions in your organization.

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -135,7 +135,7 @@ The following steps provide guidance to help you add a Windows app to Intune.
 
 ### Step 4: Configure app installation details
 1. In the **Add app** pane, select **Program** to configure the app installation and removal commands for the app.
-2. Add the complete installation command line to install the app. 
+2. To configure the **Install command**, add the complete installation command line to install the app. 
 
     For example, if your app filename is **MyApp123**, add the following:<br>
     `msiexec /p “MyApp123.msp”`<p>
@@ -144,10 +144,12 @@ The following steps provide guidance to help you add a Windows app to Intune.
     In the above command, the `ApplicationName.exe` package supports the `/quiet` command argument.<p> 
     For the specific arguments supported by the application package, contact your application vendor.
 
-3. Add the complete uninstall command line to uninstall the app based on the app’s GUID. 
+3. To configure the **Uninstall command**, add the complete uninstall command line to uninstall the app based on the app’s GUID. 
 
     For example:
     `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+
+4. Set the **Install behavior** to either **System** or **User**.
 
     > [!NOTE]
     > You can configure a Win32 app to be installed in **User** or **System** context. **User** context refers to only a given user. **System** context refers to all users of a Windows 10 device.
@@ -156,7 +158,13 @@ The following steps provide guidance to help you add a Windows app to Intune.
     > 
     > The Win32 app install and uninstall will be executed under admin privilege (by default) when the app is set to install in user context and the end user on the device has admin privileges.
 
-4. When you're finished, select **OK**.
+5. To configure the **Device restart behavior**, select one of the following options:
+    - **Determine behavior based on return codes**: Choose this option to restart the device based on the [return codes](~/apps/apps-win32-app-management.md#step-7-configure-app-return-codes) configuration settings.
+    - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
+    - **App install may force a device restart**: Choose this option to allow the app installation to complete without suppressing restarts.
+    - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successfull app installation.
+
+6. When you're finished, select **OK**.
 
 ### Step 5: Configure app requirements
 
@@ -276,10 +284,11 @@ The following steps provide guidance to help you add a Windows app to Intune.
     - **Required**: The app is installed on devices in the selected groups.
     - **Uninstall**: The app is uninstalled from devices in the selected groups.
 4. Select **Included Groups** and assign the groups that will use this app.
-5. In the **Assign** pane, select **OK** to complete the included groups selection.
-6. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
-7. In the **Add group** pane, select **OK**.
-8. In the app **Assignments** pane, select **Save**.
+5. In the **Assign** pane, select to assign based on users or devices. When you choose your assignments, you can also choose the **End user experience**. The **End user experience** allows you to set **End user notifications**, **Restart grace period**, **Availability**, and **Installation deadline**. For more information, see **Set Win32 app availability and notifications**.
+6. select **OK** to complete the included groups selection.
+7. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
+8. In the **Add group** pane, select **OK**.
+9. In the app **Assignments** pane, select **Save**.
 
 At this point, you have completed steps to add a Win32 app to Intune. For information about app assignment and monitoring, see [Assign apps to groups with Microsoft Intune](apps-deploy.md) and [Monitor app information and assignments with Microsoft Intune](apps-monitor.md).
 
@@ -325,6 +334,36 @@ The end user will see Windows Toast Notifications for the required and available
 The following image notifies the end user that app changes are being made to the device.
 
 ![Screenshot notifying the user that app changes are being made](./media/apps-win32-app-management/apps-win32-app-09.png)    
+
+## Set Win32 app availability and notifications
+You can configure the start time and deadline time for a Win32 app. At the start time, Intune management extension will start the app content download and cache it for required intent. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in the Company Portal and content will be downloaded when the end user requests the app from the Company Portal. Additionally, you can enable a restart grace period. 
+
+Set the app availability based on a date and time for a required app using the following steps:
+
+1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. In the **Intune** blade, select **Client apps** > **Apps**.
+3. Select an existing **Windows app (Win32)** from the list. 
+4. From the app blade, select **Assignments** > **Add group**. 
+5. Set the **Assignment type** to **Required**. Note that app availability can be set based on the assignment type. The **Assignment type** can be **Required**, **Available for enrolled devices**, or **Uninstall**.
+6. Select **Included Groups** to determine which group of users will be assigned the app. The **Assign** blade will be displayed.
+7. Set **Make this app required for all users** to **Yes**.
+
+    > [!NOTE]
+    > **Assignment type** options included the following:<br>
+    > - **Required**: You can choose to **make this app required for all users** and/or **make this app required on all devices**.<br>
+    > - **Available for enrolled devices**: You can choose to **make Make this app available to all users with enrolled devices**.<br>
+    > - **Uninstall**: You can choose to ***uninstall this app for all users** and/or **uninstall this app for all devices**.
+
+8. To modify the **End user experience** options select **Edit**.
+9. In the **Edit assignment** blade, set the **Ender user notifications** to **Show all toast notifications**. Note that you can set **End user notifications** to **Show all toast notifications**, **Show toast notifications for computer restarts**, or **Hide all toast notifications**.
+10. set the **App availability** to **A specific date and time** and select your date and time. This date and time specifies when the app is downloaded to the end users device. 
+11. Set the **App installation deadline** to **A specific date and time** and select your date and time. This date and time specifies when the app is installed on the end users device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the earliest time possible.
+12. Click **Enabled** next to the **Restart grace period**. The restart grace period starts as soon as the app install has been completed on the device.​ When disabled, the device can restart without warning. <br>You can customize the following options:
+    - **Device restart grace period (minutes)**: The deault value is 1440 minutes (24 hours). This value can be a maximum of 2 weeks.
+    - **Select when to display the restart countdown dialog box before the restart occurs (minutes)**: The default value is 15 minutes.
+    - **Allow user to snooze the restart notification**: You can choose **Yes** or **No**.
+        - **Select the snooze duration (minutes)**: The default value is 240 minutes (4 hours). The snooze value cannot be more than reboot grace period.
+13. Click **OK** > **OK** > **OK** > **Save** to add the assignment.
 
 ## Toast notifications for Win32 apps 
 If needed, you can suppress showing end user toast notifications per app assignment. From Intune, select **Client apps** > **Apps** > select the app > **Assignments** > **Include Groups**. 

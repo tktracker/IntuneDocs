@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/30/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,7 +46,7 @@ This article lists and describes the different settings you can control on Andro
   - **Auto grant**: Permissions are automatically granted.
   - **Auto deny**: Permissions are automatically denied.
 - **Date and Time changes**: Choose **Block** to prevent users from manually setting the date and time. **Not configured** allows users to the set date and time on the device.
-- **Volume changes**: Choose **Block** to prevent users from changing the device's volume. **Not configured** allows using the volume settings on the device.
+- **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the master volume. **Not configured** allows using the volume settings on the device.
 - **Factory reset**: Choose **Block** to prevent users from using the factory reset option in the device's settings. **Not configured** allows users to use this setting on the device.
 - **Safe boot**: Choose **Block** to prevent users from rebooting the device into safe mode. **Not configured** allows users to reboot the device in safe mode.
 - **Status bar**: Choose **Block** to prevent access to the status bar, including notifications and quick settings. **Not configured** allows users access to the status bar.
