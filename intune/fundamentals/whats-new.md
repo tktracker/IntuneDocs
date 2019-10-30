@@ -161,9 +161,6 @@ For available app installs on Android Enterprise work profile, dedicated, and fu
 #### Microsoft Edge version 77 and later for Windows 10 and macOS (public preview) <!-- 3872025, 4678761  -->
 Microsoft Edge version 77 and later will be available to deploy to PCs running Windows 10 and macOS. 
 
->[!NOTE]
->The rollout for this feature has been delayed until later this month.
-
 The public preview offers **Dev** and **Beta** channels for Windows 10 and a **Beta** channel for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). In addition, automatic updates of the browser is **On** by default, and Microsoft Edge cannot be uninstalled. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](~/apps/apps-windows-edge.md) and [Microsoft Edge documentation](https://go.microsoft.com/fwlink/?linkid=2103823).
 
 #### Update to app protection UI and iOS app provisioning UI <!-- 4102027, 4102029   -->

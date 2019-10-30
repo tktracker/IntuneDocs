@@ -70,9 +70,6 @@ Intune will support custom settings, allowing you to add specific keys and value
 ### Assignment type value in Windows Company Portal <!-- 5459950  -->
 The **Installed Apps** page of the Windows Company Portal app will be updated. The **Assignment type** column of the **Installed Apps** page has been updated to be called "Required by your organization". Possible values are **Yes** or **No** to designate required vs. available apps. This change is being made in response to some end user confusion. For more information about the Windows Company portal, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
 
-### Apply dark mode in iOS Company Portal <!-- 4911422  -->
-Dark mode is planned for iOS Company Portal. You'll be able to download company apps, manage your devices, and get IT support in the color scheme of your choice. For more information about iOS Company Portal, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).
-
 ### Run Win32 apps on Windows 10 S-mode devices <!-- 3747604  --> 
 You'll be able to install and run Win32 apps on devices that are managed in Windows 10 S mode. Create one or more supplemental policies for S mode by using the Windows Defender Application Control (WDAC) PowerShell tools. Use the Device Guard signing portal to sign the supplemental policies. Then upload and distribute the policies through Intune. 
 

@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 
 Intune includes a rich set of features, including managing apps and configuring device settings. These built-in features and settings manage Android devices manufactured by Zebra Technologies, also known as "Zebra devices".
 
-On Android devices, use **Mobility Extensions (MX)** profiles to customize or add more Zebra-specific settings.
+On Android devices, use Zebra's **Mobility Extensions (MX)** profiles to customize or add more Zebra-specific settings.
 
 This article shows you how to use Zebra Mobility Extensions (MX) on Zebra devices in Microsoft Intune.
 
@@ -56,6 +56,7 @@ Using Intune, you can enroll Zebra devices to deploy your line-of-business apps 
 - Be sure you have the latest version of the StageNow desktop app from Zebra Technologies.
 - Be sure to check [Zebra's full MX feature matrix](http://techdocs.zebra.com/mx/compatibility) (opens Zebra's web site) to confirm the profiles you create are compatible with the device's MX version, OS version, and model.
 - Certain devices, such as TC20/25 devices, don't support all of the available MX features in StageNow. Be sure to check [Zebra's feature matrix](http://techdocs.zebra.com/mx/tc2x/) (opens Zebra's web site) for updated support info.
+
 
 ## Step 1: Install the latest Company Portal app
 

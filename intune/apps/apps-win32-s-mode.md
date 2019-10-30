@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/29/2019
+ms.date: 10/30/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -46,7 +46,7 @@ The steps to allow Win32 apps to run on a Windows 10 device in S mode are the fo
 >
 > **S mode supplemental policy** for apps must be delivered via Intune Management Extension.
 >
-> S mode policies are enforced at the device level. Multiple targeted policies will be merged on the device. The merged policy is what will be applied.
+> S mode policies are enforced at the device level. Multiple targeted policies will be merged on the device. The merged policy will be enforced on the device.
 
 To create a Windows 10 S mode supplemental policy, use the following steps:
 
