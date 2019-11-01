@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -29,9 +29,6 @@ ms.collection: M365-identity-device-management
 # Use Device Firmware Configuration Interface profiles on Windows devices in Microsoft Intune (public preview)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-> [!Note]
-> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take several days to rollout. Some features may roll out over several weeks, and might not be available to all customers immediately.
 
 When you use Intune to manage Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled, using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, see [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 

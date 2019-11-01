@@ -60,7 +60,7 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 ### App management
 
-### Improved checklist design in Company Portal app for Android<!-- 5550857 -->  
+#### Improved checklist design in Company Portal app for Android<!-- 5550857 -->  
 The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS. We're in the process of rolling out the app updates to all customers and expect to be completed by the end of next week. For a side-by-side comparison of the changes, see [What's new in the app UI](whats-new-app-ui.md). For a look at the updated enrollment steps, see [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal).  
 
 #### Win32 apps on Windows 10 S mode devices<!-- 3747604 --> 
@@ -110,15 +110,6 @@ Intune enrollment and Company Portal now support iOS versions 11 and later. Olde
 
 We've added a security baseline Preview for [Microsoft Edge settings](../protect/security-baseline-settings-edge.md). 
 
-<<<<<<< HEAD
-### Monitor and troubleshoot
-
-#### Updated support experience<!-- 5012398 -->
-
-The in-console experience for [getting help and support for Intune](get-support.md) is updated and streamlined.  We've improved  the in-console search and feedback for common issues, and the workflow you use to contact support. When opening a support issue, you'll see real-time estimates for when you can expect a callback or email reply, and Premier and Unified support customers can easily specify a severity for their issue, to help get support faster.
-
-=======
->>>>>>> 483fcfb42a68bcd6ae0167b6dc6219b42d21a81d
 <!-- ########################## -->
 ## Week of October 21, 2019
 
