@@ -30,8 +30,6 @@ ms.collection: M365-identity-device-management
 ---
 # Sign line-of-business apps so they can be deployed to Windows devices with Intune
 
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
-
 As an Intune administrator, you can deploy line-of-business (LOB) Universal apps to Windows 8.1 Desktop or Windows 10 Desktop & Mobile devices, including the Company Portal app. To deploy .appx apps to Windows 8.1 Desktop or Windows 10 Desktop & Mobile devices you can use code-signing certificate from a public certification authority already trusted by your Windows devices, or you can use your own certificate authority.
 
  > [!NOTE]
@@ -58,6 +56,7 @@ If you deploy the app as required to users or devices then you do not need the I
 ### Upload the code-signing certificate
 
 If your Windows 10 device does not already trust the certificate authority, then after you have signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to the Intune portal:
+
 1. Click Client Apps
 2. Click Windows Enterprise Certificates
 3. Select 'Select a file' under code-signing certificate
@@ -82,6 +81,7 @@ Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 If the cert period has expired then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and re-upload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune portal
 
 ## Manually deploy Windows 10 Company Portal app
+
 If you do not want to provide access to the Microsoft Store, you can manually deploy the Windows 10 Company Portal app directly from Intune even if you haven’t integrated Intune with the Microsoft Store for Business (MSFB). Alternatively, if you have integrated, then you could deploy the Company Portal app using [deploy apps using MSFB](store-apps-windows.md).
 
  > [!NOTE]
@@ -105,9 +105,11 @@ If you do not want to provide access to the Microsoft Store, you can manually de
 See [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) for more information about how Intune handles dependencies for Universal apps.  
 
 ### How do I update the Company Portal on my users’ devices if they have already installed the older apps from the store?
-If your users have already installed the Windows 8.1 or Windows Phone 8.1 Company Portal apps from the Store, then they should be automatically updated to the new version with no action required from you or your user. If the update does not happen, ask your users to check that they have enabled autoupdates for Store apps on their devices.   
+
+If your users have already installed the Windows 8.1 or Windows Phone 8.1 Company Portal apps from the Store, then they should be automatically updated to the new version with no action required from you or your user. If the update does not happen, ask your users to check that they have enabled autoupdates for Store apps on their devices.
 
 ### How do I upgrade my sideloaded Windows 8.1 Company Portal app to the Windows 10 Company Portal app?
+
 Our recommended migration path is to delete the deployment for the Windows 8.1 Company Portal app by setting the deployment action to “Uninstall”. Once this is done, the Windows 10 Company Portal app can be deployed using any of the above options.  
 
 If you need to sideload the app and deployed the Windows 8.1 Company Portal without signing it with the Symantec Certificate, follow the steps in the Deploy directly via Intune section above to complete the upgrade.
@@ -115,6 +117,7 @@ If you need to sideload the app and deployed the Windows 8.1 Company Portal with
 If you need to sideload the app and you signed and deployed the Windows 8.1 Company Portal with the Symantec code-signing certificate, follow the steps in the section below.  
 
 ### How do I upgrade my signed and sideloaded Windows Phone 8.1 Company Portal app or Windows 8.1 Company Portal app to the Windows 10 Company Portal app?
+
 Our recommended migration path is to delete the existing deployment for the Windows Phone 8.1 Company Portal app or the Windows 8.1 Company Portal app by setting the deployment action to “Uninstall”. Once this is done, the Windows 10 Company Portal app can be deployed normally.  
 
 Otherwise, the Windows 10 Company Portal app needs to be appropriately updated and signed to ensure that the upgrade path is respected.  

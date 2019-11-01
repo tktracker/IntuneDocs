@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,9 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 ### App management 
 
+### Improved checklist design in Company Portal app for Android <!-- 5550857 -->  
+The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS. We're in the process of rolling out the app updates to all customers and expect to be completed by the end of next week. For a side-by-side comparison of the changes, see [What's new in the app UI](whats-new-app-ui.md). For a look at the updated enrollment steps, see [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal).  
+
 #### Win32 apps on Windows 10 S mode devices <!-- 3747604 --> 
 You can install and run Win32 apps on Windows 10 S mode managed devices. To do this, you can create one or more supplemental policies for S mode using the Windows Defender Application Control (WDAC) PowerShell tools. Sign the supplemental policies with the Device Guard Signing Portal and then upload and distribute the policies via Intune. In Intune, you will find this capability by selecting **Client apps** > **Windows 10 S supplemental policies**. For more information, see [Enable Win32 apps on S mode devices](~/apps/apps-win32-s-mode.md).
 
@@ -102,11 +105,11 @@ For more information about these improvements, see the [Intune Customer Success 
 
 Intune enrollment and Company Portal now support iOS versions 11 and later. Older versions aren't supported.
 
-### Monitor and troubleshoot
+### Device security
 
-#### Updated support experience   <!-- 5012398 -->
+#### Microsoft Edge baseline (Preview)    <!--  3787164  -->
 
-The in-console experience for [getting help and support for Intune](get-support.md) is updated and streamlined.  We've improved  the in-console search and feedback for common issues, and the workflow you use to contact support. When opening a support issue, you'll see real-time estimates for when you can expect a callback or email reply, and Premier and Unified support customers can easily specify a severity for their issue, to help get support faster.
+We've added a security baseline Preview for [Microsoft Edge settings](../protect/security-baseline-settings-edge.md). 
 
 <!-- ########################## -->
 ## Week of October 21, 2019
@@ -134,7 +137,7 @@ You can create an Intune app protection policy that may block, or selectively wi
 
 #### New device firmware configuration interface profile for Windows 10 and later devices <!-- 2266073  -->
 
-On Windows 10 and later, you can create a device configuration profile to control settings and features (**Device configuration** > **Profiles** > **Create profile** > **Windows 10 and later** for platform). In this update, there's a new device firmware configuration interface profile type that allows Intune to manage UEFI (BIOS) settings. We're in the process of rolling out this feature to all customers and expect to be completed by the end of next week.
+On Windows 10 and later, you can create a device configuration profile to control settings and features (**Device configuration** > **Profiles** > **Create profile** > **Windows 10 and later** for platform). In this update, there's a new device firmware configuration interface profile type that allows Intune to manage UEFI (BIOS) settings.
 
 For more information on this feature, see [Use DFCI profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
 

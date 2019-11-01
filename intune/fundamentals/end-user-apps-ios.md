@@ -31,8 +31,6 @@ ms.collection: M365-identity-device-management
 
 # How your iOS users get their apps
 
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
-
 Use this information to understand how and where your end users get the apps that you distribute through Microsoft Intune.
 
 **Required apps**--Apps that are required by the admin and that are installed on the device with minimal user involvement, depending on the platform.
@@ -53,12 +51,12 @@ Enrolled users get their apps by tapping on the following tiles on the Apps scre
 
 - **Categories** points to the CATEGORIES tab of the Company Portal website.
 
-
 ![iOS Company Portal apps screen](./media/end-user-apps-ios/ios-cp-app-main-apps-screen.png)
 
 For information on how to add apps, see [How to add an app to Microsoft Intune](../apps/apps-add.md).
 
 ## See also
+
 [How your Android users get their apps](end-user-apps-android.md)
 
 [How your Windows users get their apps](end-user-apps-windows.md)

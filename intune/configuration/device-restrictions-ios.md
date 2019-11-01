@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -170,7 +170,33 @@ These settings are added to a device configuration profile in Intune, and then a
   iOS has built-in security that can impact this setting. For example, iOS may delay triggering the policy depending on the number of sign in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes.
   
 - **Maximum minutes after screen lock before password is required**<sup>1</sup>: Enter how long the device stays idle before the user must reenter their password. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter. Supported on iOS 8.0 and newer devices.
-- **Maximum minutes of inactivity until screen locks**<sup>1</sup>: Enter the maximum number of minutes of inactivity allowed on the device until the screen locks. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter. When set to **immediately**, the screen locks based on the device's minimum time. On iPhone, it's 30 seconds. On iPad, it's two minutes.
+
+- **Maximum minutes of inactivity until screen locks**<sup>1</sup>: Enter the maximum number of minutes of inactivity allowed on the device until the screen locks.
+
+  **iOS options**:  
+
+  - **Not configured** (Default): Intune doesn't touch this setting.
+  - **Immediately**: Screen locks after 30 seconds of inactivity.
+  - **1**: Screen locks after 1 minute of inactivity.
+  - **2**: Screen locks after 2 minutes of inactivity.
+  - **3**: Screen locks after 3 minutes of inactivity.
+  - **4**: Screen locks after 4 minutes of inactivity.
+  - **5**: Screen locks after 5 minutes of inactivity.
+    
+  **iPadOS options**:  
+
+  - **Not configured** (Default): Intune doesn't touch this setting.
+  - **Immediately**: Screen locks after 2 minutes of inactivity.
+  - **2**: Screen locks after 2 minutes of inactivity.
+  - **5**: Screen locks after 5 minutes of inactivity.
+  - **10**: Screen locks after 10 minutes of inactivity.
+  - **15**: Screen locks after 15 minutes of inactivity.
+
+  If a value doesn't apply to iOS or iPadOS, then Apple uses the closest *lowest* value. For example, if you enter `4` minutes, then iPadOS devices use `2` minutes. If you enter `10` minutes, then iOS devices use `5` minutes. This is an Apple limitation.
+  
+  > [!NOTE]
+  > The Intune UI for this setting doesn't separate the iOS and iPadOS supported values. The UI might be updated in a future release.
+
 - **Password expiration (days)**: Enter the number of days before the device password must be changed.
 - **Prevent reuse of previous passwords**: Enter the number of new passwords that must be used until an old one can be reused.
 - **Touch ID and Face ID unlock**: Choose **Block** to prevent using a fingerprint or face to unlock the device. **Not configured** allows the user to unlock the device using these methods.

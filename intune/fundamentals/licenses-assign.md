@@ -29,15 +29,13 @@ ms.collection: M365-identity-device-management
 
 # Assign licenses to users so they can enroll devices in Intune
 
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
-
 Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user an Intune license before users can enroll their devices in Intune. For a list of licenses, see [Licenses that include Intune](../licenses.md).
 
 ## Assign an Intune license in the Microsoft 365 admin center
 
-You can use the [Microsoft 365 admin center](http://go.microsoft.com/fwlink/p/?LinkId=698854) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Azure AD.
+You can use the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Azure AD.
 
-1. Sign in to the [Microsoft 365 admin center](http://go.microsoft.com/fwlink/p/?LinkId=698854) using your tenant administrator credentials, and then choose **Users** > **Active Users**.
+1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) using your tenant administrator credentials, and then choose **Users** > **Active Users**.
 
 2. Select the user account that you want to assign an Intune user license to, and then choose **Product licenses** > **Edit**.
 
@@ -55,6 +53,7 @@ You can use the [Microsoft 365 admin center](http://go.microsoft.com/fwlink/p/?L
 You can also assign Intune licenses to users by using Azure Active Directory. For more information, see the [License users in Azure Active Directory article](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-group-assignment-azure-portal). 
 
 ## Use School Data Sync to assign licenses to users in Intune for Education
+
 If you are an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.  
 
 ![Screenshot of SDS profile setting](./media/licenses-assign/i4e-sds-profile-setup-setting.png)
@@ -66,6 +65,7 @@ When you assign an Intune for Education license, make sure that Intune A Direct 
 See this [overview of School Data Sync](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91) to learn more about SDS.
 
 ## How user and device licenses affect access to services
+
 * Each **user** that you assign a user software license to may access and use the online services and related software (including System Center software) to manage applications and up to 15 MDM devices. The Intune PC agent allows 5 physical and 1 virtual machine per user license.
 * You can purchase licenses for any devices separately from user licenses. Device licenses do not need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license.
 * If a device is used by more than one user, each requires a device software license or all users require a user software license.
@@ -77,9 +77,6 @@ How you purchased Intune determines your subscription information:
 - If you purchased Intune through an Enterprise Agreement, you can find your subscription information in the Volume License portal under **Subscriptions**.
 - If you purchased Intune through a Cloud Solution Provider, check with your reseller.
 - If you purchased Intune with a CC# or Invoice, then your licenses will be user-based.
-
-
-
 
 ## Use PowerShell to selectively manage EMS user licenses
 Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Azure Active Directory PowerShell cmdlets](https://msdn.microsoft.com/library/jj151815.aspx).
@@ -101,7 +98,6 @@ Create a new user on the command line and assign an EMS license without enabling
 
     $CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
     Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS
-
 
 Verify with:
 

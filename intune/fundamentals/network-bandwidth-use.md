@@ -31,11 +31,10 @@ ms.collection: M365-identity-device-management
 
 # Intune network configuration requirements and bandwidth
 
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
-
 You can use this information to understand bandwidth requirements for your Intune deployments.
 
 ## Average network traffic
+
 This table lists the approximate size and frequency of common content that travels across the network for each client.
 
 > [!NOTE]
@@ -57,9 +56,11 @@ This table lists the approximate size and frequency of common content that trave
 |Software distribution|Varies<br /><br />The size depends on the software you deploy.|**Varies**<br /><br />Depends on when you deploy software.|
 
 ## Ways to reduce network bandwidth use
+
 You can use one or more of the following methods to reduce network bandwidth use for Intune clients.
 
 ### Use a proxy server to cache content requests
+
 A proxy server can cache content to reduce duplicate downloads and reduce network bandwidth from content from the Internet.
 
 A caching proxy server that receives content requests from clients can retrieve that content and cache both web responses and downloads. The server uses cached data to answer subsequent requests from clients.
@@ -78,6 +79,7 @@ The following are typical settings to use for a proxy server that caches content
 For information about using a proxy server to cache content, see the documentation for your proxy server solution.
 
 ### Use Background Intelligent Transfer Service (BITS) on computers
+
 During hours that you configure, you can use BITS on a Windows computer to reduce the network bandwidth. You can configure BITS policy on the **Network bandwidth** page of the Intune Agent policy.
 
 > [!NOTE]
@@ -86,14 +88,15 @@ During hours that you configure, you can use BITS on a Windows computer to reduc
 To learn more about BITS and Windows computers, see [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in the TechNet Library.
 
 ### Delivery Optimization
+
 Delivery Optimization lets you use Intune to reduce bandwidth consumption when your Windows 10 devices download applications and updates. By using a self-organizing distributed cache, downloads can be pulled from traditional servers and alternate sources (like network peers).
 
 To see the full list of Windows 10 versions and content types supported by Delivery Optimization, see the [Delivery Optimization for Windows 10 updates article](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
 
 You can [set up Delivery Optimization](../configuration/delivery-optimization-settings.md) as part of your device configuration profiles.
 
-
 ### Use BranchCache on computers
+
 Intune clients can use BranchCache to reduce wide area network (WAN) traffic. The following operating systems support BranchCache:
 
 - Windows 7

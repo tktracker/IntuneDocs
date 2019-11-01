@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 10/31/2019 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,6 +39,23 @@ If you're an employee or student, be sure to check out the screenshots and links
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## Week of October 28, 2019  
+
+### Improved checklist design in Company Portal app for Android <!-- 5550857 -->  
+The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS. We're in the process of rolling out the app updates to all customers and expect to be completed by the end of next week. For a look at the updated enrollment steps, see [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) and [Enroll your Android device](/intune-user-help/enroll-device-android-company-portal).  
+
+The following screens show the updated checklist for Android work profile enrollment:
+
+|Updated|Previous|  
+|---|---|  
+|![Example image of work profile setup in Company Portal, showing simplified checklist and new icons.](./media/whats-new-app-ui/work-profile-checklist-1911.png)|![Example image of the previous work profile setup in Company Portal, showing a busier checklist.](./media/whats-new-app-ui/work-profile-checklist-1904.png)|   
+
+The following screens show the updated checklist for Android device administrator enrollment:  
+
+|Updated|Previous|  
+|---|---|  
+|![Example image of Android device admin setup in Company Portal, showing simplified checklist and new icons.](./media/whats-new-app-ui/android-checklist-1911.png)|![Example image of the previous Android device admin setup in Company Portal, showing a busier checklist.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 
 ## Week of September 9, 2019
 

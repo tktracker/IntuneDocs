@@ -49,7 +49,7 @@ This feature applies to:
 
 ## Before you begin
 
-- The device manufacturer must have DFCI added to their UEFI firmware in the manufacturing process, or as a firmware update you install. Work with your device vendors to determine the manufacturers that support DFCI, or the firmware version needed to use DFCI.
+- The device manufacturer must have DFCI added to their UEFI firmware in the manufacturing process, or as a firmware update you install. Work with your device vendors to determine [the manufacturers that support DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/#oems-that-support-dfci), or the firmware version needed to use DFCI.
 
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/cloud-solution-provider), or registered directly by the OEM. 
 

@@ -31,14 +31,14 @@ ms.collection: M365-identity-device-management
 
 # Add users and grant administrative permission to Intune
 
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
-
 As an administrator, you can add users directly or synchronize users from your on-premises Active Directory. Once added, users can enroll devices and access company resources. You can also give users additional permissions including *global administrator* and *service administrator* permissions.
 
 ## Add users to Intune
+
 You can manually add users to your Intune subscription via the [Microsoft 365 admin center](https://admin.microsoft.com) or the [Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). An administrator can edit user accounts to assign Intune licenses. You can assign licenses in either the Microsoft 365 admin center or the Intune Azure portal. For more information on using the Microsoft 365 admin center, see [Add users individually or in bulk to the Microsoft 365 admin center](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
 ### Add Intune users in the Microsoft 365 admin center
+
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) with a global administrator or user management administrator account.
 2. In the Office 365 menu, select **Admin**.
 3. In the Admin center, select **Add a user**.
@@ -60,6 +60,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 6. Choose **Add** to create the new user.
 
 ### Add Intune users in the Azure portal
+
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Select **Users** > **All users**.
 3. In the Admin center, select **New user**.
@@ -84,6 +85,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 After you've added users to your Intune subscription, we recommend that you grant a few users administrative permission.  To grant admin permissions, follow these steps:
 
 ### Give admin permissions in Office 365
+
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with a global administrator account.
 2. In the Office 365 menu, select **Admin**.
 3. In the Admin center, choose **Active users** and then choose the user to give admin permissions.
@@ -97,6 +99,7 @@ After you've added users to your Intune subscription, we recommend that you gran
 6. Choose **Save**.
 
 ### Give admin permissions in the Azure portal
+
 1. Sign in to the [Azure portal](https://portal.azure.com) with a global administrator account.
 2. In the Azure portal, choose **User**, and then choose the user you want to give admin permissions.
 3. Select **Directory role**, and then select the permission.
@@ -119,9 +122,11 @@ The account you use to create your Microsoft Intune subscription is a global adm
 To access the Microsoft 365 admin center, your account must have a **Sign-in allowed** set. In the Azure portal under **Profile**, set **Block sign in** to **No** to allow access. This status is different from having a license to the subscription. By default, all user accounts are **Allowed**. Users without administrator permissions can use the Microsoft 365 admin center to reset Intune passwords.
 
 ## Sync Active Directory and add users to Intune
+
 You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Azure Active Directory (Azure AD) which includes Intune users. Having your on-premises Active Directory service connected with all of your Azure Active Directory-based services makes managing user identity much simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. By linking the same [Azure AD tenant](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
 
 ### How to sync on-premises users with Azure AD
+
 The only tool that you need to synchronize your user accounts with Azure AD is the [Azure AD Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Azure AD Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the Azure AD PowerShell module.
 
 > [!TIP]

@@ -30,15 +30,13 @@ ms.collection: M365-identity-device-management
 
 # Overview of the app lifecycle in Microsoft Intune
 
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
-
 The Microsoft Intune app lifecycle begins when an app is added and progresses through additional phases until you remove the app. By understanding these phases, you'll have the details you need to get started with app management in Intune.
 
 ![The app lifecycle - Add, deploy, configure, protect and retire.](./media/app-lifecycle/app-lifecycle.png "the Intune app lifecycle")
 
 ## Add
 
-The first step in app deployment is to add the apps, which you want to manage and assign, to Intune. While you can work with many different app types, the basic procedures are the same. With  Intune you can add different app types, including apps written in-house (line-of-business), apps from the store, apps that are built in, and apps on the web. For more information about each of these app types, see [How to add an app to Microsoft Intune](apps-add.md). 
+The first step in app deployment is to add the apps, which you want to manage and assign, to Intune. While you can work with many different app types, the basic procedures are the same. With  Intune you can add different app types, including apps written in-house (line-of-business), apps from the store, apps that are built in, and apps on the web. For more information about each of these app types, see [How to add an app to Microsoft Intune](apps-add.md).
 
 ## Deploy
 
@@ -47,12 +45,14 @@ After you've added the app to Intune, you can then [assign it to users and devic
 ## Configure
 
 As part of the app lifecycle, new versions of apps are regularly released. Intune provides tools to easily [update apps](apps-add.md) that you have deployed to a newer version. Additionally, you can configure extra functionality for some apps, for example:
+
 - [iOS app configuration policies](app-configuration-policies-use-ios.md) supply settings for compatible iOS apps that are used when the app is run. For example, an app might require specific branding settings or the name of a server to which it must connect.
 - [Managed browser policies](app-configuration-managed-browser.md) help you to configure settings for the Intune managed browser, which replaces the default device browser and lets you restrict the websites that your users can visit.
 
 ## Protect
 
 Intune gives you many ways to help protect the data in your apps. The main methods are:
+
 - [Conditional Access](../protect/conditional-access.md), which controls access to email and other services based on conditions that you specify. Conditions include device types or compliance with a [device compliance policy](../protect/device-compliance-get-started.md) that you deployed.
 - [App protection policies](app-protection-policy.md) works with individual apps to help protect the company data that they use. For example, you can restrict copying data between unmanaged apps and apps that you manage, or you can prevent apps from running on devices that have been jailbroken or rooted.
 

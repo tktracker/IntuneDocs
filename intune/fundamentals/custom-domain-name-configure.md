@@ -31,8 +31,6 @@ ms.collection: M365-identity-device-management
 
 # Configure a custom domain name
 
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
-
 This topic tells administrators how you can create a DNS CNAME to simplify and customize your logon experience using Microsoft Intune.
 
 When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**. In this example, **your-domain** is the domain name that you chose when you signed up. **onmicrosoft.com** is the suffix assigned to the accounts you add to your subscription. You can configure your organization's custom domain to access Intune instead of the domain name provided with your subscription.

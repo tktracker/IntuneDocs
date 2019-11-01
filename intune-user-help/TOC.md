@@ -64,8 +64,14 @@
 ## [Using your iOS device](using-your-iOS-device-with-intune.md)
 ### [Effects of iOS device reset](effects-of-device-reset-company-portal-ios.md)
 ### [Install and sign in to the Company Portal](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
-### [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
-### [Enroll your organization-provided iOS device](enroll-your-device-dep-ios.md)
+### Enroll your device
+#### [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
+#### [Enroll organization-provided iOS device](enroll-your-device-dep-ios.md)
+#### Enroll with derived credentials
+##### [Enroll with Entrust Datacard](enroll-ios-device-entrust-datacard.md)
+##### [Enroll with Intercede](enroll-ios-device-intercede.md)
+##### [Enroll with DISA Purebred](enroll-ios-device-disa-purebred.md)
+
 
 ### [Use managed apps on your device](use-managed-apps-on-your-device-ios.md)
 ### [Set or change your passcode](set-or-change-your-passcode-ios.md)

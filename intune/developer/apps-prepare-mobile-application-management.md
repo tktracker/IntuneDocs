@@ -30,11 +30,10 @@ ms.collection: M365-identity-device-management
 
 # Prepare line-of-business apps for app protection policies
 
-[!INCLUDE[both-portals](../../intune-classic/includes/note-for-both-portals.md)]
-
 You can enable your apps to use app protection policies by using either the Intune App Wrapping Tool or the Intune App SDK. Use this information to learn about these two methods and when to use them.
 
 ## Intune App Wrapping Tool
+
 The App Wrapping Tool is used primarily for **internal** line-of-business (LOB) apps. The tool is a command-line application that creates a wrapper around the app, which then allows the app to be managed by an Intune app protection policy. When protecting an app provided by an independent software vendor (ISV) it's important to clarify if the ISV will still support the wrapped app.
 
 You don't need the source code to use the tool, but you do need signing credentials. For more about signing credentials, see the [Intune blog](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). For the App Wrapping Tool documentation, see [Android App Wrapping Tool](app-wrapper-prepare-android.md) and [iOS App Wrapping Tool](app-wrapper-prepare-ios.md).
@@ -44,6 +43,7 @@ The App Wrapping Tool does **not** support apps in the Apple App Store or Google
 For more information about the App Wrapping Tool for app protection policies on devices that are not enrolled in Intune, see [Protect line-of-business apps and data on devices not enrolled in Microsoft Intune](../apps/apps-add.md).
 
 ### Reasons to use the App Wrapping Tool
+
 * Your app does not have built-in data protection features
 * Your app is simple
 * Your app is deployed internally
@@ -59,11 +59,13 @@ For more information about the App Wrapping Tool for app protection policies on 
 |**Android**|No - use the [Intune App SDK Xamarin Bindings](app-sdk-xamarin.md).|Yes|
 
 ## Intune App SDK
+
 The App SDK is designed mainly for customers who have apps in the Apple App Store or Google Play Store, and want to be able to manage the apps with Intune. However, any app can take advantage of integrating the SDK, even line-of-business apps.
 
 To learn more about the SDK, see the [Overview](app-sdk.md). To get started with the SDK, see [Getting Started With the Microsoft Intune App SDK](app-sdk-get-started.md).
 
 ### Reasons to use the SDK
+
 * Your app does not have built-in data protection features
 * Your app is complex and contains many experiences
 * Your app is deployed on a public app store such as Google Play or Apple's App Store
@@ -78,10 +80,12 @@ To learn more about the SDK, see the [Overview](app-sdk.md). To get started with
 |**iOS**|Yes – use the [Intune App SDK Xamarin Bindings](app-sdk-xamarin.md).|No|
 |**Android**| Yes - use the [Intune App SDK Xamarin Bindings](app-sdk-xamarin.md).|No|
 
-### Not using an app development platform listed above? 
+### Not using an app development platform listed above?
+
 The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms, and Cordova platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms. 
 
 ## Feature comparison
+
 This table lists the settings that you can use for the App SDK and App Wrapping Tool.
 
 > [!NOTE]
