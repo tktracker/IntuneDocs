@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 > [!WARNING]
 > Microsoft announced that [Windows 7 support ends on January 14th 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). On this date, Intune also retires support for devices running Windows 7. Microsoft strongly recommends that you move to Windows 10 to prevent any service or support disruptions.
 > 
-> For more information, see [Intune plan for change: nearing end of support for Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7-).
+> For more information, see [Intune plan for change: nearing end of support for Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7).
 
 > [!NOTE]
 > You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client as described below. However, Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. For more information, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md) 
@@ -65,7 +65,7 @@ The following are software requirements for installing the client software:
 |---------------|--------------------|
 |Operating system | Windows device running Windows 7 SP1 and Windows 8.1 or later. </br></br>**Home edition versions are not supported.**|
 |Administrative permissions|The account that installs the client software must have local administrator permissions on that device.|
-|Windows Installer 3.1|The PC must have, at a minimum, Windows Installer 3.1.<br /><br />To view the version of Windows Installer on a PC:<br /><br />  On the PC, right-click **%windir%\System32\msiexec.exe**, and then click **Properties**.<br /><br />You can download the latest version of Windows Installer from [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) on the Microsoft Developer Network website.|
+|Windows Installer 3.1|The PC must have, at a minimum, Windows Installer 3.1.<br /><br />To view the version of Windows Installer on a PC:<br /><br />  On the PC, right-click **%windir%\System32\msiexec.exe**, and then click **Properties**.<br /><br />You can download the latest version of Windows Installer from [Windows Installer Redistributables](https://go.microsoft.com/fwlink/?LinkID=234258) on the Microsoft Developer Network website.|
 |Remove incompatible client software|Before you install the Intune client software, uninstall any Configuration Manager, Operations Manager, and Service Manager client software from that PC.|
 
 ## Deploying the Intune software client

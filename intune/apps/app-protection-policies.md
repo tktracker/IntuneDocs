@@ -229,7 +229,7 @@ For iOS, additional app configuration settings are required to target app protec
 - If only the **IntuneMAMDeviceID** is configured, the Intune APP will consider the device as unmanaged.
 
 > [!NOTE]
-> For specific iOS support information about app protection policies based on device management state, see [MAM protection policies targeted based on management state](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state-).
+> For specific iOS support information about app protection policies based on device management state, see [MAM protection policies targeted based on management state](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state).
 
 ## Policy settings
 To see a full list of the policy settings for iOS and Android, select one of the following links:
