@@ -126,7 +126,7 @@ For information getting and configuring the DISA Purebred app, see [Deploy the D
 
 #### Entrust Datacard
 
-Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Key requirements for this workflow include:
+Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard). Key requirements for this workflow include:
 
 - Users need access to a computer or KIOSK where they can use their smart card to authenticate to the issuer.
 

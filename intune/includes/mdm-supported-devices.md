@@ -5,12 +5,8 @@
 - Mac OS X 10.12 and later
 
 ### Google
-- Android 4.4 and later (including Samsung Knox Standard 4.4 and higher)
-
-  A full list of verified Samsung Knox Standard devices is available in the [Android and Samsung Knox Standard policy settings](/intune/supported-devices-browsers#supported-samsung-knox-standard-devices).
-
-
-- Android enterprise [requirements](https://support.google.com/work/android/answer/6174145?hl=en).
+- Android 5.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
+- Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
 
 ### Microsoft
 
@@ -18,7 +14,7 @@
 - Windows 10 (Home, S, Pro, Education, and Enterprise versions)
 - Windows 10 Enterprise 2019 LTSC
 
-  For more information about managing devices running Windows 10 2019 LTSC, see [What's new in Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/en-us/windows/whats-new/ltsc/whats-new-windows-10-2019)
+  For more information about managing devices running Windows 10 2019 LTSC, see [What's new in Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
 - Windows 10 Mobile
 - Windows 10 IoT Enterprise (x86, x64)
@@ -29,7 +25,7 @@
 
 - Windows 10 Teams (Surface Hub)
 
-   For more information about managing devices running Windows 10 Teams, see [Manage Surface Hub with MDM](https://docs.microsoft.com/en-us/surface-hub/manage-settings-with-mdm-for-surface-hub)
+   For more information about managing devices running Windows 10 Teams, see [Manage Surface Hub with MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub)
 - Windows Phone 8.1, Windows 8.1 RT, PCs running Windows 8.1 (Sustaining mode)
 
 > [!NOTE]

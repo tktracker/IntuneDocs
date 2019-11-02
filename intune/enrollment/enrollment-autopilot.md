@@ -93,7 +93,7 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 5. Choose **Create**.  
 
 ## Create an Autopilot deployment profile
-Autopilot deployment profiles are used to configure the Autopilot devices.
+Autopilot deployment profiles are used to configure the Autopilot devices. You can create up to 350 profiles per tenant.
 1. In [Intune in the Azure portal](https://aka.ms/intuneportal), choose **Device enrollment** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
