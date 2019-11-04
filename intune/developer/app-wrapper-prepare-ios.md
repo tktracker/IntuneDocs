@@ -293,26 +293,27 @@ If the app wrapping tool fails to finish successfully, one of the following erro
 |The input app you specified has already been wrapped and is on the latest policy template version.|The App Wrapping Tool will not rewrap an existing wrapped app with the latest policy template version.|
 |WARNING: You did not specify a SHA1 certificate hash. Make sure that your wrapped application is signed before deploying.|Ensure that you specify a valid SHA1 hash following the –c command line flag. |
 
-### Log files for the App Wrapping Tool
+### Collecting logs for your wrapped applications from the device
+Use the following steps to get logs for your wrapped applications during troubleshooting.
 
-Apps that have been wrapped by using the App Wrapping Tool generate logs that are written to the iOS client device console. This information is useful when you are having problems with the application and need to determine if the issue is related to the App Wrapping Tool. To retrieve this information, use the following steps:
+1. Go to the iOS Settings app on your device and select your LOB app.
+2. Toggle the **Diagnostics Console** to **On**.
+3. Launch your LOB application.
+4. Click on the "Get Started" link.
+5. You can now share logs through email or copying them to a OneDrive location.
+
+> [!NOTE]
+> The logging functionality is enabled for apps that have wrapped with the Intune App Wrapping Tool version 7.1.13 or above.
+
+### Collecting crash logs from the system
+
+Your app may be logging useful information to the iOS client device console. This information is useful when you are having problems with the application and need to determine if the issue is related to the App Wrapping Tool or the app itself. To retrieve this information, use the following steps:
 
 1. Reproduce the issue by running the app.
 
 2. Collect the console output by following Apple's instructions for [Debugging Deployed iOS Apps](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
 
-3. Filter the saved logs for App Restrictions output by entering the following script into the console:
-
-    ```bash
-    grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
-    ```
-
-    You can submit the filtered logs to Microsoft.
-
-    > [!NOTE]
-    > In the log file, the item ‘build version’ represents the build version of Xcode.
-
-    Wrapped apps will also present users the option to send logs directly from the device via email after the app crashes. Users can send the logs to you to examine and forward to Microsoft if necessary.
+Wrapped apps will also present users the option to send logs directly from the device via email after the app crashes. Users can send the logs to you to examine and forward to Microsoft if necessary.
 
 ### Certificate, provisioning profile, and authentication requirements
 
@@ -446,19 +447,6 @@ Simply run your general app wrapping command and with the `-citrix` flag appende
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
-
-## Getting logs for your wrapped applications
-
-Use the following steps to get logs for your wrapped applications during troubleshooting.
-
-1. Go to the iOS Settings app on your device and select your LOB app.
-2. Toggle the **Diagnostics Console** to **On**.
-3. Launch your LOB application.
-4. Click on the "Get Started" link.
-5. You can now share logs through email or copying them to a OneDrive location.
-
-> [!NOTE]
-> The logging functionality is enabled for apps that have wrapped with the Intune App Wrapping Tool version 7.1.13 or above.
 
 ## See also
 

@@ -183,7 +183,7 @@ Using the above procedure to create a Microsoft Edge app configuration. Supply t
 > [!NOTE]
 > In the app protection policy that manages Microsoft Edge and associated apps specified in the app configuration, ensure the following data protection policy settings are set:
 > - Send Org data to other apps: **Policy managed apps**
-> - Share web content with policy managed browsers: **Require**
+> - Restrict web content transfer with other apps: **Policy managed browsers**
 
 ## How to configure Application Proxy settings for protected browsers
 

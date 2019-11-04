@@ -67,7 +67,7 @@ We will use the email addresses listed in your questionnaire response to reach o
 If your app's deep link changes in the future, you will need to re-register your app.
 
 > [!NOTE]
-> Please inform us if you update your app with a new version of the Intune App SDK.
+> You must inform us if you update your app with a new version of the Intune App SDK.
 
 ## Download the SDK files
 
@@ -76,7 +76,7 @@ The Intune App SDKs for native iOS and Android are hosted on a Microsoft GitHub 
 * [Intune App SDK for iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
 * [Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
-If your app is a Xamarin app, please use this SDK variant:
+If your app is a Xamarin app, use this SDK variant:
 
 * [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 
@@ -185,6 +185,9 @@ Once you have registered your app within an Azure tenant, and it is showing up u
 5. In the search box, enter **Microsoft Mobile Application Management**.
 6. Under **Delegated Permissions**, select the **DeviceManagementManagedApps.ReadWrite: Read and Write the User’s App Management Data*** checkbox.
 7. Click **Add permissions**.
+
+> [!NOTE]
+> If your app restricts you from signing in due to an error accessing this resource: https://intunemam.microsoftonline.com, you must send a note to msintuneappsdk@microsoft.com with your app's Client ID. This is a manual approval process today.
 
 ### Badge your app (optional)
 
