@@ -170,8 +170,8 @@ Intune supports the following data types in a property list:
 ### Tokens used in the property list
 
 Additionally, Intune supports the following token types in the property list:
-- \{\{userprincipalname\}\}—for example, **John@contoso.com**
-- \{\{mail\}\}—for example, **John@contoso.com**
+- \{\{userprincipalname\}\}—for example, **John\@contoso.com**
+- \{\{mail\}\}—for example, **John\@contoso.com**
 - \{\{partialupn\}\}—for example, **John**
 - \{\{accountid\}\}—for example, **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
 - \{\{deviceid\}\}—for example, **b9841cd9-9843-405f-be28-b2265c59ef97**
