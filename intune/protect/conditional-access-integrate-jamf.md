@@ -98,7 +98,7 @@ To connect Intune with Jamf Pro:
 
    Select **Add permission** to save this configuration.  
 
-8. On the **API permissions** page, select **Grant admin consent for *\<your tenant>***, and then select **Yes**.  After the app is registered successfully, the API permissions should appear as follows:
+8. On the **API permissions** page, select **Grant admin consent for _\<your tenant>_**, and then select **Yes**.  After the app is registered successfully, the API permissions should appear as follows:
    ![Successful permissions](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
    The app registration process in Azure AD is complete.
