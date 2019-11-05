@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Assign Office 365 apps to Windows 10 devices using Microsoft Intune
+title: Add Office 365 apps to Windows 10 devices using Microsoft Intune
 titleSuffix: 
 description: Learn how you can use Microsoft Intune to install Office 365 apps on Windows 10 devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,7 +29,7 @@ ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ---
 
-# Assign Office 365 apps to Windows 10 devices with Microsoft Intune
+# Add Office 365 apps to Windows 10 devices with Microsoft Intune
 
 Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Office 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Office 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Office 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
@@ -47,7 +47,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 - This installation method is not supported on Windows Home, Windows Team, Windows Holographic, or Windows Holographic for Business devices.
 - Intune does not support installing Office 365 desktop apps from the Microsoft Store (known as Office Centennial apps) on a device to which you have already deployed Office 365 apps with Intune. If you install this configuration, it might cause data loss or corruption.
 - Multiple required or available app assignments are not additive. A later app assignment will overwrite pre-existing installed app assignments. For example, if the first set of Office apps contains Word, and the later one does not, Word will be uninstalled. This condition does not apply to any Visio or Project applications.
-- Mutiple Office 365 deployments are not currently supported. Only one deployment will be delivered to the device
+- Multiple Office 365 deployments are not currently supported. Only one deployment will be delivered to the device
 - **Office version** - Choose whether you want to assign the 32-bit or 64-bit version of Office. You can install the 32-bit version on both 32-bit and 64-bit devices, but you can install the 64-bit version on 64-bit devices only.
 - **Remove MSI from end-user devices** - Choose whether you want to remove pre-existing Office .MSI apps from end-user devices. The installation won’t succeed if there are pre-existing .MSI apps on end-user devices. The apps to be uninstalled are not limited to the apps selected for installation in **Configure App Suite**, as it will remove all Office (MSI) apps from the end user device. For more information, see [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). When Intune reinstalls Office on your end user's machines, end users will automatically get the same language packs that they had with previous .MSI Office installations.
 
@@ -146,12 +146,60 @@ If you selected the **Enter XML data** option under the **Setting format** dropd
 
 ## Finish up
 
-When you're done, in the **Add App** pane, select **Add**. The app you've created is displayed in the apps list.
+When you're done, in the **Add App** pane, select **Add**. The app you've created is displayed in the apps list. The next step is to assign the apps to the groups you choose. For more information, see [Assign apps to groups](~/apps/apps-deploy.md).
+
+## Deployment details
+
+Once the deployment policy from Intune is assigned to the target machines through [Office configuration service provider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/office-csp), the end device will automatically download the installation package from the *officecdn.microsoft.com* location. You will see two directories appearing in the *Program Files* directory:
+
+![Office installation packages in Program Files directory](./media/apps-add-office365/office-folder.png)
+
+Under the *Microsoft Office* directory, a new folder is created where the installation files are stored:
+
+![New created folder under Microsoft Office directory](./media/apps-add-office365/created-folder.png)
+
+Under the *Microsoft Office 15* directory, the Office Click-to-Run installation launcher files are stored. The installation will start automatically if the assignment type is required:
+
+![Click to Run installation launcher files](./media/apps-add-office365/clicktorun-files.png)
+
+The installation will be in silent mode if the assignment of the O365 Suite is configured as required. The downloaded installation files will be deleted once the installation succeeded. If the assignment is configured as **Available**, the Office applications will appear in the Company Portal application so that end-users can trigger the installation manually.
 
 ## Troubleshooting
 Intune uses the [Office Deployment Tool](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) to download and deploy Office 365 ProPlus to your client computers using the [Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Reference the best practices outlined in [Managing Office 365 endpoints](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) to ensure that your network configuration permits clients to access the CDN directly rather than routing CDN traffic through central proxies to avoid introducing unnecessary latency.
 
 Run the [Microsoft Support and Recovery Assistant for Office 365](https://diagnostics.office.com) on a targeted device if you encounter installation or run-time issues.
+
+### Additional troubleshooting details
+
+When you are unable to install the O365 apps to a device, you must identify whether the issue is Intune-related or OS/Office-related. If you can see the two folders *Microsoft Office* and *Microsoft Office 15* appearing in the *Program Files* directory of the device, you can confirm that Intune has initiated the deployment successfully. If you cannot see the two folders appearing under *Program Files*, you should confirm the below cases:
+
+- The device is properly enrolled into Microsoft Intune. 
+- There is an active network connection on the device. If the device is in airplane mode, is turned off, or is in a location with no service, the policy will not apply until network connectivity is established.
+- Both Intune and Office 365 network requirements are met and the related IP ranges are accessible based on the following articles:
+
+  - [Intune network configuration requirements and bandwidth](https://docs.microsoft.com/intune/network-bandwidth-use)
+  - [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
+
+- The correct groups have been assigned the O365 app suite. 
+
+In addition, monitor the size of the directory *C:\Program Files\Microsoft Office\Updates\Download*. The installation package downloaded from the Intune cloud will be stored in this location. If the size does not increase or only increases very slowly, it is recommended to double-check the network connectivity and bandwidth.
+
+Once you can conclude that both Intune and the network infrastructure work as expected, you should further analyze the issue from an OS perspective. Consider the following conditions:
+
+- The target device must run on Windows 10 Creators Update or later.
+- No existing Office apps are opened while Intune deploys the applications.
+- Existing MSI versions of Office have been properly removed from the device. Intune utilizes Office Click-to-Run which is not compatible with Office MSI. This behavior is further mentioned in this document:<br>
+  [Office installed with Click-to-Run and Windows Installer on same computer isn't supported](https://support.office.com/article/office-installed-with-click-to-run-and-windows-installer-on-same-computer-isn-t-supported-30775ef4-fa77-4f47-98fb-c5826a6926cd)
+- The sign-in user should have permission to install applications on the device.
+- Confirm there are no issues based on the Windows Event Viewer log **Windows Logs** -> **Applications**.
+- Capture Office installation verbose logs during the installation. To do this, follow these steps:<br>
+    1. Activate verbose logging for Office installation on the target machines. To do this, run the following command to modify the registry:<br>
+        `reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3`<br>
+    2. Deploy the Office 365 Suite to the target devices again.<br>
+    3. Wait approximately 15 to 20 minutes and go to the **%temp%** folder and the **%windir%\temp** folder, sort by **Date Modified**, pick the *{Machine Name}-{TimeStamp}.log* files that are modified according to your repro time.<br>
+    4. Run the following command to disable verbose log:<br>
+        `reg delete HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /f`<br>
+        The verbose logs can provide further detailed information on the installation process.
 
 ## Errors during installation of the app suite
 

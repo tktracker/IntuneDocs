@@ -114,7 +114,7 @@ This table lists the settings that you can use for the App SDK and App Wrapping 
 |Full Wipe of app data|X|X|
 |Selective Wipe of work and school data in multi-identity scenarios <br><br>**Note:** For iOS, when the management profile is removed, the app is also removed.|X||
 |Prevent “Save as”|X||
-|Targeted Application Configuration (or app config through the "MAM channel")|X|X|
+|Targeted Application Configuration (or app config through the "MAM channel")|X||
 |Support for Multi-Identity|X||
 |Customizable Style |X|||
 |On-demand application VPN connections with Citrix mVPN|X|X| 
