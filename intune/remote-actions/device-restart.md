@@ -49,7 +49,7 @@ The **Restart** device action causes the device you choose to be restarted. The 
 
 ## Restart a device
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices**.
 4. In the list of devices that you manage, select a device, select **More**, and then select the **Restart** device remote action.
 

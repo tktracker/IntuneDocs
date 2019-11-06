@@ -71,11 +71,10 @@ Set the value for this CSP to **True**.
 
 ## Reset the passcode
 
-1. Sign in to the [Azure portal](https://portal.azure.com). 
-2. Select **All services**, filter on **Intune**, and select **Microsoft Intune**.
-3. Select **Devices**, and then select **All devices**.
-4. Select the device you want to reset the passcode. In the device properties, select **New passcode**.
-5. Select **Yes** to confirm. The passcode is generated, and is displayed in the portal for the next seven days.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+2. Select **Devices**, and then select **All devices**.
+3. Select the device you want to reset the passcode. In the device properties, select **New passcode**.
+4. Select **Yes** to confirm. The passcode is generated, and is displayed in the portal for the next seven days.
 
 ## Next step
 

@@ -67,9 +67,9 @@ These issues may occur on all device platforms.
 
 Check to see that the user isn't assigned more than the maximum number of devices by following these steps:
 
-1. In Intune, choose **Device enrollment** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
 
-2. In Intune, choose **Users** > **All users** > select the user > **Devices**. Note the number of devices.
+2. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices.
 
 3. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll any more until:
     - [Existing devices are removed](../remote-actions/devices-wipe.md), or

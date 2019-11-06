@@ -36,7 +36,7 @@ An Intune device can have zero or one primary user assigned to it. When there's 
 
 ## How to find a device's primary user
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > choose a device.
 3. On the **Overview** page, choose **See more** and you'll see the primary user listed.
 

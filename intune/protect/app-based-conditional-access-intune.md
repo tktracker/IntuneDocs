@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/11/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -21,7 +21,7 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: chrisgre
+ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,8 +30,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # App-based Conditional Access with Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 [Intune app protection policies](../apps/app-protection-policy.md) help protect your company data on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that are not enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that company data and resources are protected.
 
@@ -43,6 +41,7 @@ App-based Conditional Access and client app management add a security layer by m
 You can block the built-in mail apps on iOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don’t have Intune app protection policies applied from accessing SharePoint Online.
 
 ## Prerequisites
+
 Before you create an app-based Conditional Access policy, you must have:
 
 - **Enterprise Mobility + Security (EMS)** or an **Azure Active Directory (AD) Premium subscription**
@@ -61,7 +60,7 @@ App-based Conditional Access [also supports line-of-business (LOB) apps](app-mod
 In this example, the admin has applied app protection policies to the Outlook app followed by a Conditional Access rule that adds the Outlook app to an approved list of apps that can be used when accessing corporate e-mail.
 
 > [!NOTE]
-> The flowchart structure below can be used for other managed apps.
+> The following flowchart  can be used for other managed apps.
 
 ![App-based Conditional Access process illustrated in a flow-chart](./media/app-based-conditional-access-intune/ca-intune-common-ways-3.png)
 

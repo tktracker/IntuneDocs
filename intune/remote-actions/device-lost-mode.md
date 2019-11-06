@@ -46,7 +46,7 @@ This feature is not supported for the following:
 
 ## Enable lost mode
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**, and then select **All devices**.
 4. From the list of devices you manage, choose an iOS device, and then choose the **Lost mode (supervised only)**.
 5. Under **Lost mode**, select **Enable**.

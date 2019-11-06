@@ -72,7 +72,7 @@ Custom notification messages include a short title and a message body of 500 cha
 
 ## Send a custom notification to groups  
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) with an account that has permissions to create and send notifications, and go to **Devices** > **Send custom notifications**.  
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and go to **Devices** > **Send custom notifications**.  
 
 2. On the Basics tab, specify the following, and then select **Next** to continue.  
    - **Title** – Specify a title for this notification. Titles are limited to 50 characters.  
@@ -92,7 +92,7 @@ Intune doesn’t track the custom notifications you send, and devices don’t lo
 
 ## Send a custom notification to a single device  
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.  
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.  
 
 2. Select the device to which you want to send a notification.  
 

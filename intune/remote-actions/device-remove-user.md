@@ -46,12 +46,11 @@ The **Remove user** action deletes a user that you select from the local cache o
 
 ## Remove a user
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. In the **Intune** pane, select **Devices**.
-4. In the **Devices** pane, select **All devices**.
-5. In the list of devices that you manage, select an iOS device.
-6. In the pane for the device, select **Users**.
-7. In the list, right-click the user that you want to remove, and then select **Remove user**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **All devices**.
+3. In the list of devices that you manage, select an iOS device.
+4. In the pane for the device, select **Users**.
+5. In the list, right-click the user that you want to remove, and then select **Remove user**.
 
 ## Next steps
 
