@@ -55,7 +55,7 @@ For more information, see the understanding powershell cmdlet.
 
 You can add Windows Autopilot devices by importing a CSV file with their information.
 
-1. In [Intune in the Azure portal](https://aka.ms/intuneportal), choose **Device enrollment** > **Windows enrollment** > **Devices** > **Import**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Windows enrollment** > **Devices** > **Import**.
 
     ![Screenshot of Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -77,7 +77,7 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 
 ## Create an Autopilot device group
 
-1. In [Intune in the Azure portal](https://aka.ms/intuneportal), choose **Groups** > **New group**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Groups** > **New group**.
 2. In the **Group** blade:
     1. For **Group type**, choose **Security**.
     2. Type a **Group name** and **Group description**.
@@ -94,7 +94,7 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 
 ## Create an Autopilot deployment profile
 Autopilot deployment profiles are used to configure the Autopilot devices. You can create up to 350 profiles per tenant.
-1. In [Intune in the Azure portal](https://aka.ms/intuneportal), choose **Device enrollment** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
     ![Screenshot of Basics page](./media/enrollment-autopilot/create-profile-basics.png)
@@ -140,7 +140,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 ## Edit an Autopilot deployment profile
 After you've created an Autopilot deployment profile, you can edit certain parts of the deployment profile.   
 
-1. In [Intune in the Azure portal](https://aka.ms/intuneportal), choose **Device enrollment**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment**.
 2. Under **Windows enrollment**, in the **Windows Autopilot** section, choose **Deployment Profiles**.
 3. Select the profile you would like to edit.
 4. Click **Properties** on the left to change the name or description of the deployment profile. Click **Save** after you make changes.
@@ -161,7 +161,7 @@ You can assign a user to a specific Autopilot device. This assignment pre-fills 
 
 Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
 
-1. In the [Intune in the Azure portal](https://aka.ms/intuneportal), choose **Device enrollment** > **Windows enrollment** > **Devices** > choose the device > **Assign user**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Windows enrollment** > **Devices** > choose the device > **Assign user**.
 
     ![Screenshot of Assign user](./media/enrollment-autopilot/assign-user.png)
 

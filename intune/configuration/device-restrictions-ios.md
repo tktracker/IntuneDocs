@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -420,6 +420,9 @@ Applies to devices running iOS 9.3 or newer.
 - **Type of apps list**: Create a list of apps to show or hide. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094). Your options:
 
   - **Hidden apps**: Enter a list of apps that are hidden from users. Users can't view, or open these apps.
+  
+    Apple prevents hiding some native apps. For example, you can't hide the **Settings** or **Wallet** apps on the device. [Delete built-in Apple apps](https://support.apple.com/HT208094) lists the apps that can be hidden.
+  
   - **Visible apps**: Enter a list of apps that users can view and launch. No other apps can be viewed or launched.
 
 - **App URL**: Enter the store app URL of the app you want to show or hide. For example:
