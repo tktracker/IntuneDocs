@@ -112,6 +112,7 @@ To create app configuration for Microsoft Edge:
 
     > [!NOTE]
     > Microsoft Edge uses the same key and value pairs as the Managed Browser. 
+    > On Android, Microsoft Edge must be targeted with app protection policies for app configuration policies to take effect.
 
 8. When you are done, select **OK**.
 9. On the **Add configuration policy** blade, choose **Add**.<br>

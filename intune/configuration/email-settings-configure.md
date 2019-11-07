@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,8 +43,8 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 ## Create a device profile
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Email settings for all Windows devices**.
@@ -75,7 +75,7 @@ After you enter your settings, and create the profile, your profile is shown in 
 
 Email profiles are assigned to device groups, not user groups. There are different ways to remove an email profile from a device, even when there's only one email profile on the device:
 
-- **Option 1**: Open the email profile (**Device configuration** > **Profiles**), and choose **Assignments**. The **Include** tab shows the groups that are assigned the profile. Right-click the group > **Remove**. Be sure to **Save** your changes.
+- **Option 1**: Open the email profile (**Devices** > **Configuration profiles** > select your profile), and choose **Assignments**. The **Include** tab shows the groups that are assigned the profile. Right-click the group > **Remove**. Be sure to **Save** your changes.
 
 - **Option 2**: [Wipe or retire the device](../remote-actions/devices-wipe.md). You can use these actions to selectively or fully remove data and settings.
 
@@ -107,4 +107,4 @@ If you make changes to an email profile you previously assigned, end users may s
 
 ## Next steps
 
-Once the profile is created, it isn't doing anything yet. Next, [assign the profile to some devices](../device-profile-assign.md).
+Once the profile is created, it isn't doing anything yet. Next, [assign the profile](../device-profile-assign.md).

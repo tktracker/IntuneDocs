@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -100,16 +100,13 @@ The following table lists the supported upgrade paths for the Windows 10 edition
 
 ## Create the profile
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles** > **Create Profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the new profile. For example, enter something like `Windows 10 edition upgrade profile` or `Windows 10 switch off S mode`.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select the platform:  
-
-        - **Windows 10 and later**
-
+    - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Edition upgrade**.
     - **Settings**: Enter the settings you want to configure. For a list of all settings, and what they do, see:
 

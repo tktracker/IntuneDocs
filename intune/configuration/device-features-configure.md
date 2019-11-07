@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -204,8 +204,8 @@ Applies to:
 
 ## Create a device profile
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Configures login screen**.

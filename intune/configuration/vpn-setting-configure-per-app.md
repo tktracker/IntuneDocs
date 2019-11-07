@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/04/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,11 +70,11 @@ Create or choose an existing group in Azure Active Directory (Azure AD) for the 
 
 Import the VPN server's root certificate issued by the CA into a profile created in Intune. The trusted certificate profile instructs the iOS device to automatically trust the CA that the VPN server presents.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
-    - **Name**
-    - **Description**
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **iOS trusted certificate VPN profile for entire company**.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **Platform**: Select **iOS**.
     - **Profile type**: Select **Trusted certificate**.
 4. Select the folder icon, and browse to your VPN certificate (.cer file) that you exported from your VPN administration console. 
@@ -99,15 +99,15 @@ Be sure to configure the certificate for client authentication. You can set this
 
 The VPN profile contains the SCEP or PKCS certificate with the client credentials, the connection information to the VPN, and the per-app VPN flag to enable the per-app VPN feature uses by the iOS application.
 
-1. In **Intune**, select **Device configuration** > **Profiles** > **Create profile**. 
-2. Enter the following properties: 
-    - **Name**
-    - **Description**
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
+2. Enter the following properties:
+    - **Name**: Enter a descriptive name for the custom profile. Name your profiles so you can easily identify them later. For example, a good profile name is **iOS per-app VPN profile for entire company**.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **Platform**: Select **iOS**.
     - **Profile type**: Select **VPN**.
 3. In **Connection type**, select your VPN client app.
-4. Select **Base VPN**. [iOS VPN settings](vpn-settings-ios.md) lists and describes all the settings. When using per-app VPN, be sure you set the following properties as listed: 
-    
+4. Select **Base VPN**. [iOS VPN settings](vpn-settings-ios.md) lists and describes all the settings. When using per-app VPN, be sure you set the following properties as listed:
+
     - **Authentication method**: Select **Certificates**. 
     - **Authentication certificate**: Select an existing SCEP or PKCS certificate > **OK**.      
     - **Split tunneling**: Select **Disable** to force all traffic to use the VPN tunnel when the VPN connection is active. 
@@ -126,7 +126,7 @@ The VPN profile contains the SCEP or PKCS certificate with the client credential
 
 After adding your VPN profile, associate the app and Azure AD group to the profile.
 
-1. In **Intune**, select **Client apps** > **Apps**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps**.
 2. Select an app from the list > **Assignments** > **Add group**.
 3. In **Assignment type**, select **Required** or **Available for enrolled devices**.
 4. Select **Included groups** > **Select groups to include** > Select the group [you created](#create-a-group-for-your-vpn-users) (in this article) > **Select**.
@@ -165,18 +165,6 @@ Verify the zero-touch experience by connecting without having to select the VPN 
 - The device doesn't ask you to trust the VPN server. That is, the user doesn't see the **Dynamic Trust** dialog box.
 - The user doesn't have to type credentials.
 - The user's device is connected to the VPN when the user opens one of the associated apps.
-
-<!-- ## Troubleshooting the per-app VPN
-
-The user experiences the feature by silently connecting to the VPN. This experience, however, can provide little information for troubleshooting. You can review the event logs crated by the iOS device.
-
-`Note -- use the Apple Configurator as the supported tool. Only runs on a mac.'
-
-To review event logs:
-
-1. Connect your iOS device to a PC
-2. Open the **iPhone Configuration Utility** (IPCU). If you do not have a copy, you can install it from [CompatCenter](http://www.microsoft.com/en-us/windows/compatibility/CompatCenter/ProductDetailsViewer?Name=iPhone%20Configuration%20Utility&vendor=Apple&Locale=1033%2C2057%2C3081%2C4105%2C16393&ModelOrVersion=3&BreadCrumbPath=iphone%20configuration%20utility&LastSearchTerm=iphone%2Bconfiguration%2Butility&Type=Software&tempOsid=Windows%208.1)
-3. Review the logs. -->
 
 ## Next steps
 

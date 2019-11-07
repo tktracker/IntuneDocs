@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,16 +43,16 @@ This article:
 
 ## Create the profile
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Device configuration**. You have the following options:
+2. Select **Devices** > **Configuration profiles**. You have the following options:
 
     - **Overview**: Lists the status of your profiles, and provides additional details on the profiles you assigned to users and devices.
     - **Manage**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run within the profile, and add data plans to devices using [eSIM](esim-device-configuration.md).
     - **Monitor**: Check the status of a profile for success or failure, and also view logs on your profiles.
     - **Setup**: Add a SCEP or PFX certificate authority, or enable [Telecom Expense Management](telecom-expenses-monitor.md) in the profile.
 
-3. Select **Profiles** > **Create Profile**. Enter the following properties:
+3. Select **Create profile**. Enter the following properties:
 
    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **WP email profile for entire company**.
    - **Description**: Enter a description for the profile. This setting is optional, but recommended.

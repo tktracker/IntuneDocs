@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,8 +47,8 @@ This article lists the steps to create a template for Windows 10 devices, and sh
 
 ## Create a template
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Name**: Enter a name for the profile.
@@ -63,7 +63,7 @@ This article lists the steps to create a template for Windows 10 devices, and sh
     > [!TIP]
     > The Windows settings in Intune correlate to the on-premises group policy path you see in Local Group Policy Editor (`gpedit`).
 
-5. By default, the drop-down list shows **All products**. From the list, you can also filter the settings to only show **Windows** settings, only show **Office** settings, or only show **Edge version 77 or later** settings:
+5. In the drop-down list, select **All products**. From the list, you can also filter the settings to only show **Windows** settings, only show **Office** settings, or only show **Edge version 77 or later** settings:
 
     ![Filter the list to show all Windows or all Office settings in administrative templates in Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 

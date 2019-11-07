@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/31/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -73,11 +74,10 @@ The following devices have been announced as eSIM-capable, or are in-market toda
 
 Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-2. Select **All services**, filter on **Intune**, and select **Microsoft Intune**.
-3. Select **Device configuration** > **eSIM cellular profiles** > **Add**.
-4. Select the CSV file that has your activation codes.
-5. Select **OK** to save your changes.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **eSIM cellular profiles** > **Add**.
+3. Select the CSV file that has your activation codes.
+4. Select **OK** to save your changes.
 
 ### CSV file requirements
 
@@ -115,8 +115,8 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 
 Assign the profile to the Azure AD group that includes your eSIM devices.
 
-1. In the [Azure portal](https://portal.azure.com/), select **All Services**, filter on **Intune**, and select **Microsoft Intune**.
-2. Select **Device configuration** > **eSIM cellular** > **Profiles**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **eSIM cellular profiles**.
 3. In the list of profiles, select the eSIM cellular subscription pool you want to assign, and then select **Assignments**.
 4. Choose to **Include** groups or **Exclude**  groups, and then select the groups.
 
@@ -133,15 +133,15 @@ eSIM activation codes are used once. After Intune installs an activation code on
 
 After you assign the profile, you can monitor the deployment status of a subscription pool.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-2. Select **All services**, filter on **Intune**, and select **Microsoft Intune**.
-3. Select **Device configuration** > **eSIM cellular profiles**. All of your existing eSIM cellular subscription pools are listed.
-4. Select a subscription, and review the **Deployment Status**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **eSIM cellular profiles**. All of your existing eSIM cellular subscription pools are listed.
+3. Select a subscription, and review the **Deployment Status**.
 
 ### Check the profile status
+
 After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
 
-1. Select **Device configuration** > **eSIM cellular profiles** > Select an existing subscription.
+1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
 2. In the **Overview** tab, the top graphical chart shows the number of devices assigned to the specific eSIM cellular subscription pool deployment.
 
     It also shows the number of devices for other platforms that are assigned the same device profile.
@@ -157,7 +157,7 @@ After you create your device profile, Intune provides graphical charts. These ch
 
 You can monitor and view a detailed list of devices you can view in Device Status.**
 
-1. Select **Device configuration** > **eSIM cellular profiles** > Select an existing subscription.
+1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
 2. Select **Device Status**. Intune shows additional details about the device:
 
     - **Device Name**: Name of the device that is targeted

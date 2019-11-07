@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/05/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -71,8 +71,8 @@ This article shows you how to create a device configuration profile using kernel
 
 ## Create the profile
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the new profile.

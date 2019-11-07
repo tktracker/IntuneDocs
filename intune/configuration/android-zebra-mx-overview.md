@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer:
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -56,7 +56,6 @@ Using Intune, you can enroll Zebra devices to deploy your line-of-business apps 
 - Be sure you have the latest version of the StageNow desktop app from Zebra Technologies.
 - Be sure to check [Zebra's full MX feature matrix](http://techdocs.zebra.com/mx/compatibility) (opens Zebra's web site) to confirm the profiles you create are compatible with the device's MX version, OS version, and model.
 - Certain devices, such as TC20/25 devices, don't support all of the available MX features in StageNow. Be sure to check [Zebra's feature matrix](http://techdocs.zebra.com/mx/tc2x/) (opens Zebra's web site) for updated support info.
-
 
 ## Step 1: Install the latest Company Portal app
 
@@ -138,8 +137,8 @@ After you test the file, the next step is to deploy the profile to devices using
 
 In Intune, create a device configuration profile:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device Configuration** > **Profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the new profile.

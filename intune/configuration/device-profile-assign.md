@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,8 +45,8 @@ Be sure you have the appropriate role to assign policies. For more information, 
 
 ## Assign a device profile
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles**. All the profiles are listed.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles**. All the profiles are listed.
 3. Select the profile you want to assign > **Assignments**.
 4. Choose to **Include** groups or **Exclude** groups, and then select your groups. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
 
@@ -58,7 +58,7 @@ Be sure you have the appropriate role to assign policies. For more information, 
 
 When you assign the profile, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
 
-1. In Intune, select **Device configuration** > **Profiles**.
+1. In the admin center, select **Devices** > **Configuration profiles**.
 2. Select a profile > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this profile.
 
 If the **Evaluate** button is grayed out, make sure the profile is assigned to one or more groups.

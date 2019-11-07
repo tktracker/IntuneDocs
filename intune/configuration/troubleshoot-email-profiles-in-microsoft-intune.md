@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2019
+ms.date: 11/05/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,6 @@ Review some common email profile issues, and how to troubleshoot and resolve the
 ## What you need to know
 
 - Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (AD) properties in the email profile of the user during enrollment. [Add email settings to devices](email-settings-configure.md) may be a good resource.
-- After migrating from Configuration Manager hybrid to Intune standalone, the email profile from Configuration Manager hybrid stays on the device for 7 days. This is expected behavior. If you need the email profile removed sooner, contact [Intune support](../fundamentals/get-support.md).
 - For Android Enterprise, deploy Gmail or Nine for Work using the managed Google Play Store. [Add Managed Google Play apps](../apps/apps-add-android-for-work.md) lists the steps.
 - Microsoft Outlook for iOS and Android doesn't support email profiles. Instead, deploy an app configuration policy. For more information, see [Outlook Configuration setting](../apps/app-configuration-policies-outlook.md).
 - Email profiles targeted to device groups (not user groups) may not be delivered to the device. When the device has a primary user, then device targeting should work. If the email profile includes user certificates, be sure to target user groups.
@@ -65,22 +64,10 @@ Review the configuration of your EAS profile for Samsung KNOX and source policy.
 
 Users who have email accounts automatically configured can't send pictures or images from their devices. This scenario can happen if **Allow e-mail to be sent from third-party applications** isn't enabled.
 
-### Intune solution
-
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device Configuration** > **Profiles**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles**.
 3. Select your email profile > **Properties** > **Settings**.
 4. Set the **Allow e-mail to be sent from third-party applications** setting to **Enable**.
-
-### Configuration Manager hybrid
-
-1. Open the Configuration Manager console > **Assets and Compliance**.
-
-2. Expand **Overview** > **Compliance Settings** > **Company Resource Access**, and select **Email Profiles**.
-
-3. Right-click the e-mail profile, and open **Properties**.
-
-4. On the **Synchronization Settings** tab, select **Allow e-mail to be sent from third-party applications**.
 
 ## Next steps
 

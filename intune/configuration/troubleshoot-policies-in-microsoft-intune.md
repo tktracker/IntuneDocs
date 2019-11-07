@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 11/05/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,11 +35,12 @@ Microsoft Intune includes some built-in troubleshooting features. Use these feat
 This article lists some common troubleshooting techniques, and describes some issues you may experience.
 
 ## Check tenant status
+
 Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subscription is Active. You can also view details for active incidents and advisories that may impact your policy or profile deployment.
 
 ## Use built-in troubleshooting
 
-1. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Troubleshoot**:
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support**:
 
     ![In Intune, go to Help and Support, and select Troubleshoot](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
@@ -105,7 +106,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
 ## You're unsure if a profile is correctly applied
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select the device > **Device configuration**. 
 
     Every device lists its profiles. Each profile has a **Status**. The status applies when all of the assigned profiles, including hardware and OS restrictions and requirements, are considered together. Possible statuses include:

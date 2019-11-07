@@ -81,8 +81,8 @@ This profile makes sure that devices are verified and enabled for DFCI during th
 
 This profile includes the DFCI settings you configure.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles** > **Create profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows: Configure DFCI settings on Windows devices**.
@@ -162,7 +162,7 @@ After wiping the device, move the device to the group assigned the new DFCI and 
 
 When you're ready to retire the device and release it from management, update the DFCI profile to the UEFI (BIOS) settings you want at the exit state. Typically, you want all settings enabled. For example:
 
-1. Open your DFCI profile (**Device configuration** > **Profiles**).
+1. Open your DFCI profile (**Devices** > **Configuration profiles**).
 2. Change the **Allow local user to change UEFI (BIOS) settings** to **Only not configured settings**.
 3. Set all other settings to **Not configured**.
 4. Save your settings.

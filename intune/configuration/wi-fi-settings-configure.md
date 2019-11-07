@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -53,8 +54,9 @@ Wi-Fi profiles support the following device platforms:
 
 ## Create a device profile
 
-1. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Device configuration** > **Profiles** > **Create profile**.
-2. Enter the following properties:
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
+3. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **WiFi profile for entire company**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
@@ -74,7 +76,7 @@ Wi-Fi profiles support the following device platforms:
       > - For **Android Enterprise** devices running as a dedicated device (kiosk), choose **Device owner only** > **Wi-Fi**.
       > - For **Windows 8.1 and later**, you can choose **Wi-Fi import**. This option lets you import Wi-Fi settings as an XML file that you previously exported from a different device.
 
-3. Some of the Wi-Fi settings are different for each platform. To see the settings for a specific platform, choose your platform:
+4. Some of the Wi-Fi settings are different for each platform. To see the settings for a specific platform, choose your platform:
 
     - [Android](wi-fi-settings-android.md)
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), including dedicated devices
@@ -83,7 +85,7 @@ Wi-Fi profiles support the following device platforms:
     - [Windows 10 and later](wi-fi-settings-windows.md)
     - [Windows 8.1 and later](wi-fi-settings-import-windows-8-1.md), including Windows Holographic for Business
 
-4. When you're done, select **Create Profile** > **Create**.
+5. When you're done, select **Create Profile** > **Create**.
 
 The profile is created, and shown in the profiles list (**Device configuration** > **Profiles**).
 

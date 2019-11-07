@@ -58,6 +58,7 @@ When you configure features on iOS devices, you can also add the built-in apps o
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
 | com.apple.Maps              | Maps         | Apple     |
+| com.apple.measure           | Measure      | Apple     |
 | com.apple.MobileSMS         | Messages     | Apple     |
 | com.apple.Music             | Music        | Apple     |
 | com.apple.news              | News         | Apple     |

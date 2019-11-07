@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,8 +43,8 @@ This article shows you how to create a device configuration profile. For a list 
 
 ## Create the profile
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **Profiles** > **Create Profile**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
    - **Name**: Enter a descriptive name for the new profile.
@@ -64,7 +64,7 @@ This article shows you how to create a device configuration profile. For a list 
       - [Windows 10 kiosk settings](kiosk-settings-windows.md)
       - [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md)
 
-5. When you're done, select **OK** > **Create** to save your changes. 
+5. When you're done, select **OK** > **Create** to save your changes.
 
 The profile is created, and shown in the profiles list. Next, [assign](device-profile-assign.md) the profile.
 
