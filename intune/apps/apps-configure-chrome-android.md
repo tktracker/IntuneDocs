@@ -67,7 +67,7 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
 
     Below is the example of the common settings:
     - **Block access to a list of URLs**: `["*"]`
-    - **Allow access to a list of URLs**: `["baidu.com", "yahoo.com", "chrome://*"]`
+    - **Allow access to a list of URLs**: `["baidu.com", "youtube.com", "chromium.org", "chrome://*"]`
     - **Managed Bookmarks**: `[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
     - **Incognito mode availability**: `Incognito mode disabled`
 
@@ -75,7 +75,7 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
 
     ![Common settings](~/apps/media/apps-configure-chrome-android/common-settings.png)
 
-    The above settings create bookmarks and allow access to all websites except `baidu.com`, `yahoo.com` and `chrome://`.
+    The above settings create bookmarks and block access to all URLs except `baidu.com`, `yahoo.com`, `chromium.org`, and `chrome://`.
 
 5. Click **OK** and **Add** to add your configuration policy to Intune.
 6. Assign this configuration policy to a user group. For more information, see [Assign apps to groups with Microsoft Intune](~/apps/apps-deploy.md). 
