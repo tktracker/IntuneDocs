@@ -52,8 +52,8 @@ When the dashboard opens, you get an overview with all the compliance reports. I
 - Overall device compliance
 - Per-policy device compliance
 - Per-setting device compliance
-- Device protection status
 - Threat agent status
+- Device protection status
 
 ![Dashboard image shows the device compliance dashboard and the different reports](./media/compliance-policy-monitor/idc-1.png)
 
@@ -61,7 +61,7 @@ As you dig in to this reporting, you can also see any specific compliance polici
 
 ### Device compliance status report
 
-The chart shows the compliance states for all Intune enrolled devices. The device compliance states are kept in two different databases: Intune and Azure Active Directory. 
+The **Device compliance status** chart shows the compliance states for all Intune enrolled devices. The device compliance states are kept in two different databases: Intune and Azure Active Directory.
 
 > [!IMPORTANT]
 > Intune follows the device check-in schedule for all compliance evaluations on the device. [Learn more about the device check-in schedule](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
@@ -100,7 +100,7 @@ In the **Device compliance status** chart, select a status. For example, select 
 
 ![Choose the not compliant status](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-It shows you more details on the devices in that state, including operating system platform, last check-in date, and more. 
+That action opens the **Device compliance** window, and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more. 
 
 ![Dashboard image shows more details on the device in that specific state](./media/compliance-policy-monitor/drill-down-details.png)
 
@@ -110,20 +110,20 @@ If you want to see all the devices owned by a specific user, you can also filter
 
 ![Select Filter and Column to change the results in the chart](./media/compliance-policy-monitor/filter-columns.png)
 
-When you select the **Filter** button, the filter fly-out opens with more options, including the compliance state, jailbroken devices, and more. **Apply** the filter to update the results.
+When you select the **Filter** button, the filter fly-out opens with more options, including the **Compliance** state, **Jailbroken** devices, and more. **Apply** the filter to update the results.
 
 Use the **Columns** property to add or remove columns from the chart output. For example, **User principal name** may show the email address registered on the device. **Apply** the columns to update the results.
 
 #### Device details
 
-In the chart, select a specific device, and then select **Device compliance**:
+In the **Device details** chart, select a specific device, and then select **Device compliance**:
 
 ![Choose a specific device, and then Device Compliance to see the compliance policies applied](./media/compliance-policy-monitor/see-policies-applied-specific-device.png)
 
-It provides more details on the device compliance policy settings applied on that device. When you select the specific policy, it shows all the settings in the policy.
+Intune displays more details on the device compliance policy settings applied on that device. When you select the specific policy, it shows all the settings in the policy.
 
 ### Devices without compliance policy
-In **Device compliance** > **Overview**, the report also identifies devices that don't have any compliance policies assigned:
+On the *Compliance status* page, next to the *Policy compliance* chart, you can select the **Devices without compliance policy** tile to view information about devices that don't have any compliance policies assigned:
 
 ![See devices without any compliance policies](./media/compliance-policy-monitor/devices-without-policies.png)
 
@@ -133,7 +133,7 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
 - With the **Mark devices with no compliance policy assigned as** security setting, it's important to identify devices without a compliance policy. Then you can assign at least one compliance policy to them.
 
-  The security setting is configurable in the Intune portal. Select **Device compliance** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**. 
+  The security setting is configurable in the Intune portal. To to **Devices** > **Compliance policies** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**. 
 
   Read more about this [security enhancement in the Intune service](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -141,19 +141,15 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
 ### Per-policy device compliance report
 
-The **Device compliance** > **Policy compliance** report shows you the policies, and how many devices are compliant and noncompliant. 
+The **Policy compliance** chart shows you the policies, and how many devices are compliant and noncompliant. 
 
 ![See a list of the policy, and how many compliant vs noncompliant devices for that policy](./media/compliance-policy-monitor/idc-8.png)
 
-When you select a specific policy, you can see the **compliance status**, **user’s email alias**, **device model**, and **location** for each device targeted by that compliance policy.
-
 ## Setting compliance report
 
-The **Device compliance** > **Setting compliance** report shows you, per compliance setting, the total number of devices in each compliance state. It shows all device compliance policy settings from all compliance policies, the platforms the policy settings are applied, and the number of noncompliant devices.
+The **Setting compliance** chart shows you all device compliance policy settings from all compliance policies, the platforms the policy settings are applied, and the number of noncompliant devices.
 
 ![See a list of all the settings in the different policies](./media/compliance-policy-monitor/idc-10.png)
-
-When you select a specific setting, you can see the **compliance status**, **user’s email alias**, **device model**, and **location** for each device targeted by that setting.
 
 > [!NOTE]
 > A policy can be assigned to a device, and a user on that same device. In some scenarios, a device may sync before the user signs in, such as when the device reboots. Compliance may evaluate this user, and show the device as non compliant. This behavior may also show the System Account as a non-compliant user.
@@ -166,14 +162,14 @@ You can check the different states of your policies, by platform. For example, y
 
 This feature is included in the device status reporting:
 
-1. Select **Device compliance** > **Policies**. A list of policies is shown, including the platform, if the policy is assigned, and more details.
+1. Select **Devices** > **Compliance policies** > **Policies**. A list of policies is shown, including the platform, if the policy is assigned, and more details.
 2. Select a policy > **Overview**. In this view, the policy assignment includes the following statuses:
 
-    - Succeeded: Policy is applied
-    - Error: The policy failed to apply. The message typically displays with an error code that links to an explanation. 
-    - Conflict: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
-    - Pending: The device hasn’t checked in with Intune to receive the policy yet. 
-    - Not applicable: The device can't receive the policy. For example, the policy updates a setting specific to iOS 11.1, but the device is using iOS 10. 
+    - **Succeeded**: Policy is applied
+    - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation. 
+    - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
+    - **Pending**: The device hasn’t checked in with Intune to receive the policy yet. 
+    - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to iOS 11.1, but the device is using iOS 10. 
 
 3. To see details on the devices using this policy, select one of the statuses. For example, select **Succeeded**. In the next window, specific device details, including the device name and deployment status are listed.
 
