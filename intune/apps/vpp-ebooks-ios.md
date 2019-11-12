@@ -46,7 +46,6 @@ You buy multiple licenses for iOS books through the [Apple Volume Purchase Progr
 ## Before you start
 Before you start, get a VPP token from Apple and upload it to your Intune account. Additionally:
 
-* You can associate up to 256 VPP tokens with your Intune account.
 * If you previously used a VPP token with a different product, you must generate a new one to use with Intune.
 * Each token is valid for one year.
 * By default, Intune syncs with the Apple VPP service twice a day. You can start a manual sync at any time.

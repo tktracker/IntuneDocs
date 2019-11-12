@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -448,8 +448,6 @@ Microsoft Edge must be installed on the device.
 ## Windows Encryption  
  
 ### Windows Settings  
-
-These encryption settings apply to all versions of Windows 10.  
 
 - **Encrypt devices**  
   **Default**: Not configured  
@@ -987,7 +985,7 @@ Block outbound connections from any app to IP addresses or domains with low repu
 - **Upload XML**  
   **Default**: *Not configured*  
 
-  To use exploit protection to [protect devices from exploits](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:  
+  To use exploit protection to [protect devices from exploits](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:  
 
   - *PowerShell* - Use one or more of the *Get-ProcessMitigation*, *Set-ProcessMitigation*, and *ConvertTo-ProcessMitigationPolicy* PowerShell cmdlets. The cmdlets configure mitigation settings, and export an XML representation of them.  
 
