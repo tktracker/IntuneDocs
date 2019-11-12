@@ -35,7 +35,8 @@ This feature applies to:
 
 - iOS 10.3 and later (supervised)
 
-The device checks in with Intune about every 8 hours. If an update is available, the device downloads and  installs it, except during restricted times. There isn't any user interaction needed to update the device. The policy doesn't prevent a user from updating the OS manually.
+The device checks in with Intune about every 8 hours. If an update is available, the device downloads and  installs it, except during restricted times. Although the update process does not typically involve any user interaction, if the device has a passcode the user will be required to enter it in order to start a software update. This applies to iOS 10.3 and later versions. 
+The policy doesn't prevent a user from updating the OS manually.
 
 ## Configure the policy
 
