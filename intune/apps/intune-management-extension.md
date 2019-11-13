@@ -4,8 +4,8 @@
 title: Add PowerShell scripts to Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
 description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, use reports to monitor the scripts, and see the steps to delete scripts you add on Windows 10 devices in Microsoft Intune. Also see some common issues and resolutions. 
 keywords:
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 09/16/2019
 ms.topic: conceptual

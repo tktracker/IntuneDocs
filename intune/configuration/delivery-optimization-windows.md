@@ -41,7 +41,7 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -64,7 +64,7 @@ The profile is created and is shown in the list. Next, [assign the profile](devi
 
 1. Create a delivery optimization configuration profile:
 
-    1. In the Microsoft Endpoint Manager admin center, select **Devices** > **Configuration profiles** > **Create profile**.
+    1. In the Microsoft Endpoint Manager Admin Center, select **Devices** > **Configuration profiles** > **Create profile**.
     2. Enter the following properties:
 
         - **Name**: Enter a descriptive name for the new profile.
@@ -84,7 +84,7 @@ The profile is created and is shown in the list. Next, [assign the profile](devi
 2. Assign this new profile to the same devices and users as the existing software update ring. [Assign the profile](device-profile-assign.md) lists the steps.
 
 3. Unconfigure the existing software ring:
-    1. In the Microsoft Endpoint Manager admin center, go to **Software updates** > Windows 10 Update Rings.
+    1. In the Microsoft Endpoint Manager Admin Center, go to **Software updates** > Windows 10 Update Rings.
     2. In the list, select your update ring.
     3. In the settings, set **Delivery optimization download mode** to **Not configured**.
     4. **OK** > **Save** your changes.

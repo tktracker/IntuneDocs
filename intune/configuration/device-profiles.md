@@ -2,13 +2,13 @@
 # required metadata
 
 title: Device features and settings in Microsoft Intune - Azure | Microsoft Docs
-description: Overview of the different Microsoft Intune device profiles. Get info on features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Windows defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Azure portal. Use these profiles to manage and protect data and devices in your company.
+description: Overview of the different Microsoft Intune device profiles. Get info on features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Azure portal. Use these profiles to manage and protect data and devices in your company.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -150,7 +150,7 @@ This feature supports:
 
 ## Endpoint protection
 
-[Endpoint protection settings for Windows 10](../protect/endpoint-protection-windows-10.md) configures BitLocker and Windows Defender settings for Windows 10 devices.
+[Endpoint protection settings for Windows 10](../protect/endpoint-protection-windows-10.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices.
 
 To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 

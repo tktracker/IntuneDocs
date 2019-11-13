@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,6 +44,8 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 
   1. Create this kiosk profile to run the device in kiosk mode.
   2. Create the [device restrictions profile](device-restrictions-windows-10.md#microsoft-edge-browser), and configure specific features and settings allowed in Microsoft Edge.
+
+- Be sure that any files, scripts, and shortcuts are on the local system. For more information, including other Windows requirements, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -198,3 +200,5 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 You can also create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings), and [Windows Holographic for Business](kiosk-settings-holographic.md) devices.
+
+Also see [set up a single-app kiosk](https://docs.microsoft.com/windows/configuration/kiosk-single-app) or [set up a multi-app kiosk](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) in the Windows guidance.

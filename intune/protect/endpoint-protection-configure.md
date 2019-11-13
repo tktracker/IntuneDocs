@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ With Intune, you can use device configuration profiles to manage common endpoint
 - Firewall   
 - BitLocker  
 - Allowing and blocking apps  
-- Windows Defender and encryption  
+- Microsoft Defender and encryption  
 
 For example, you can create an endpoint protection profile that only allows macOS users to install apps from the Mac App Store. Or, enable Windows SmartScreen when running apps on Windows 10 devices.  
 
@@ -59,7 +59,7 @@ Before you create a profile, review the following articles that detail the endpo
 
 ## Add custom Firewall rules for Windows 10 devices  
 
-When you configure the Windows Defender Firewall as part of a profile that includes endpoint protection rules for Windows 10, you can configure custom rules for Firewalls. Custom rules let you expand on the pre-defined set of Firewall rules supported for Windows 10.  
+When you configure the Microsoft Defender Firewall as part of a profile that includes endpoint protection rules for Windows 10, you can configure custom rules for Firewalls. Custom rules let you expand on the pre-defined set of Firewall rules supported for Windows 10.  
 
 When you plan for profiles with custom Firewall rules, consider the following information, which could affect how you choose to group firewall rules in your profiles:  
 - Each profile supports up to 150 firewall rules. When you use more than 150 rules, create additional profiles, each limited to 150 rules.  
@@ -74,11 +74,11 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 2. For *Platform*, select **Windows 10 and later**, and then for *Profile type* select **Endpoint protection**.  
 
-3. Select **Windows Defender Firewall** to open the configuration page, and then for *Firewall rules* select **Add** to open the **Create Rule** page.  
+3. Select **Microsoft Defender Firewall** to open the configuration page, and then for *Firewall rules* select **Add** to open the **Create Rule** page.  
 
 4. Specify settings for the Firewall rule, and then select **OK** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).  
 
-5. After you save the rule, it appears on the *Windows Defender Firewall* page in the list of rules.  
+5. After you save the rule, it appears on the *Microsoft Defender Firewall* page in the list of rules.  
 
 6. To modify a rule, select the rule from the list, to open the **Edit Rule** page.  
 

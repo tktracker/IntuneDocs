@@ -2,12 +2,12 @@
 # required metadata
 
 title: Device restriction settings for Windows 10 in Microsoft Intune - Azure | Microsoft Docs
-description: See a list of all the settings and their descriptions for creating device restrictions on Windows 10 and later devices. Use these settings in a configuration profile to control screenshots, password requirements, kiosk settings, apps in the store, Microsoft Edge browser, Windows defender, access to the cloud, start menu, and more in Microsoft Intune.
+description: See a list of all the settings and their descriptions for creating device restrictions on Windows 10 and later devices. Use these settings in a configuration profile to control screenshots, password requirements, kiosk settings, apps in the store, Microsoft Edge browser, Microsoft Defender, access to the cloud, start menu, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -527,7 +527,7 @@ These settings use the [WirelessDisplay policy CSP](https://docs.microsoft.com/w
 
 - **Share usage data**: Choose the level of diagnostic data that's submitted. Your options:
   - **Not configured**: No data is shared.
-  - **Security**: Information that's required to help keep Windows more secure, including data about the Connected User Experience and Telemetry component settings, the Malicious Software Removal Tool, and Windows Defender.
+  - **Security**: Information that's required to help keep Windows more secure, including data about the Connected User Experience and Telemetry component settings, the Malicious Software Removal Tool, and Microsoft Defender.
   - **Basic**: Basic device info, including quality-related data, app compatibility, app usage data, and data from the Security level.
   - **Enhanced**: Additional insights, including: how Windows, Windows Server, System Center, and apps are used, how they perform, advanced reliability data, and data from both the Basic and the Security levels.
   - **Full**: All data necessary to identify and help to fix problems, plus data from the Security, Basic, and Enhanced levels.
@@ -636,19 +636,19 @@ These settings use the [start policy CSP](https://docs.microsoft.com/windows/cli
   - **Hide**: The shortcut is hidden, and disables the setting in the Settings app.
   - **Show**: The shortcut is shown, and disables the setting in the Settings app.
 
-## Windows Defender Smart Screen
+## Microsoft Defender Smart Screen
 
-- **SmartScreen for Microsoft Edge**: **Require** turns off Windows Defender SmartScreen and prevent users from turning it on. **Not configured** (default) turns on SmartScreen. Helps protect users from potential threats and prevent users from turning it off.
+- **SmartScreen for Microsoft Edge**: **Require** turns off Microsoft Defender SmartScreen and prevent users from turning it on. **Not configured** (default) turns on SmartScreen. Helps protect users from potential threats and prevent users from turning it off.
 
-  Microsoft Edge uses Windows Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software.
+  Microsoft Edge uses Microsoft Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software.
 
   [Browser/AllowSmartScreen CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
-- **Malicious site access**: **Block** prevents users from ignoring the Windows Defender SmartScreen Filter warnings, and blocks them from going to the site. **Not configured** (default) allows users to ignore the warnings, and continue to the site.
+- **Malicious site access**: **Block** prevents users from ignoring the Microsoft Defender SmartScreen Filter warnings, and blocks them from going to the site. **Not configured** (default) allows users to ignore the warnings, and continue to the site.
 
   [Browser/PreventSmartScreenPromptOverride CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
-- **Unverified file download**: **Block** prevents users from ignoring the Windows Defender SmartScreen Filter warnings, and block them from downloading unverified files. **Not configured** (default) allows users to ignore the warnings, and continue to download the unverified files.
+- **Unverified file download**: **Block** prevents users from ignoring the Microsoft Defender SmartScreen Filter warnings, and block them from downloading unverified files. **Not configured** (default) allows users to ignore the warnings, and continue to download the unverified files.
 
   [Browser/PreventSmartScreenPromptOverrideForFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
@@ -837,9 +837,9 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
   [Defender/ScheduleScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
 
 - **Detect potentially unwanted applications**: Choose the level of protection when Windows detects potentially unwanted applications. Your options:
-  - **Not configured** (default): Windows Defender potentially unwanted applications protection is disabled.
-  - **Block**: Windows Defender detects potentially unwanted applications, and detected items are blocked. These items show in history along with other threats.
-  - **Audit**: Windows Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Windows Defender would take action against. For example, search for events created by Windows Defender in the Event Viewer.
+  - **Not configured** (default): Microsoft Defender potentially unwanted applications protection is disabled.
+  - **Block**: Microsoft Defender detects potentially unwanted applications, and detected items are blocked. These items show in history along with other threats.
+  - **Audit**: Microsoft Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Microsoft Defender would take action against. For example, search for events created by Microsoft Defender in the Event Viewer.
 
   For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
@@ -854,11 +854,11 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
   - **User defined**
   - **Block**
 
-  If your action isn't possible, then Windows Defender chooses the best option to ensure the threat is remediated. 
+  If your action isn't possible, then Microsoft Defender chooses the best option to ensure the threat is remediated. 
 
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
-### Windows Defender Antivirus Exclusions
+### Microsoft Defender Antivirus Exclusions
 
 - **Files and folders to exclude from scans and real-time protection**: Adds one or more files and folders like **C:\Path** or **%ProgramFiles%\Path\filename.exe** to the exclusions list. These files and folders aren't included in any real-time or scheduled scans.
 - **File extensions to exclude from scans and real-time protection**: Add one or more file extensions like **jpg** or **txt** to the exclusions list. Any files with these extensions aren't included in any real-time or scheduled scans.
