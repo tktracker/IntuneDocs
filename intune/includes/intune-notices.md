@@ -11,6 +11,28 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+
+### Take Action: Use Microsoft Edge for your Protected Intune Browser Experience<!--5728447-->
+As we have been sharing over the past year, Microsoft Edge mobile supports the same set of management features as the Managed Browser, while providing a much-improved end user experience. To make way for the robust experiences provided in Microsoft Edge, we will be retiring the Intune Managed Browser. Starting on January, 27, 2020, Intune will no longer support the Intune Managed Browser.  
+
+#### How does this affect me? 
+Starting on February 1, 2020, the Intune Managed Browser will no longer be available in the Google Play Store or the iOS App Store. At this point, you will still be able to target new app protection policies to the Intune Managed Browser, though new users will not be able to download the Intune Managed Browser app. In addition, on iOS, new web clips that are pushed down to MDM-enrolled device will open in Microsoft Edge instead of the Intune Managed Browser.  
+
+On March, 31 2020, the Intune Managed Browser will be removed from the Azure console. This means you will no longer be able to create new policies for the Intune Managed Browser. If you have existing Intune Managed Browser policies in place, they will not be affected. The Intune Managed Browser will show up in the console as an LOB app with no icon, and existing policies will show as targeted to the app still. At this point, we will also remove the option to redirect web content to the Intune Managed Browser within the Data Protection section of App protection policies.  
+
+#### What do I need to do to prepare for this change? 
+To ensure a smooth transition from the Intune Managed Browser to Microsoft Edge, we recommend you take the following steps proactively: 
+
+1. Target Microsoft Edge for iOS and Android with app protection policy (also referred to as MAM)  and app config settings. You can reuse your Intune Managed Browser policies for Microsoft Edge by simply targeting those existing policies to Microsoft Edge as well.  
+2. Ensure all MAM-protected apps in your environment have the app protection policy setting "Restrict web content transfer with other apps" set to "Policy managed browsers". 
+3. Target all the MAM-protected with the managed app configuration setting "com.microsoft.intune.useEdge" set to true. Starting next month with the release of 1911, you will be able to accomplish steps 2 and 3 simply by configuring the setting "Restrict web content transfer with other apps" to have "Microsoft Edge" selected in the Data Protection section of your app protection policies. 
+
+Support for web clips on iOS and Android is coming. When this support is released, you will need to retarget pre-existing web clips to ensure they open in in Microsoft Edge instead of the Managed Browser. 
+
+#### Additional information
+Please visit our docs on [using Microsoft Edge with app protection policies](../apps/manage-microsoft-edge.md) for more info, or view our [support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
+
+
 ### Plan for Change: Updated experience when enrolling Android Enterprise dedicated devices in Intune<!--5198878-->
 With the November or 1911 release to Intune, we’re adding support for SCEP device certificate deployment to Android Enterprise dedicated devices to enable certificate-based access to Wi-Fi profiles. This change also involves some minor changes the flow when enrolling Android Enterprise dedicated devices.
 
@@ -28,7 +50,7 @@ You should plan to update your end user guidance and let your helpdesk know of t
 
 ### Plan for Change: The 'Server-side Logging for Siri commands' setting will be removed from the Intune console <!-- 5468501-->
 
-We plan to remove the setting “Server-side logging for Siri commands” from the Intune console with the November update to the Intune service. This change aligns with Apple already having removed the setting on their side.
+We plan to remove the setting "Server-side logging for Siri commands" from the Intune console with the November update to the Intune service. This change aligns with Apple already having removed the setting on their side.
 
 #### How does this affect me?
 When the November update or 1911 rolls out around mid-November, you’ll see that this setting has been removed from the Device restrictions menu (Built-in Apps) for iOS configuration profiles, in the Intune console. It may appear in your policies and the targeted device’s management profile but the setting has no effect on your device. We do not anticipate much impact to functionality since it currently doesn’t work on devices even though you see it in the management profile.

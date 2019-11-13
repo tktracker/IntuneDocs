@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -118,12 +118,11 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
         Format options for the Subject name format include the following variables:
 
-        - **{{AAD_Device_ID}}**
+        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId​}}** - Either variable can be used to identify a device by its Azure AD ID.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
         - **{{SerialNumber}}**
         - **{{IMEINumber}}**
-        - **{{AzureADDeviceId​}}**
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
         - **{{DeviceName}}**
@@ -161,12 +160,11 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
         With the *Device* certificate type, you can use the following device certificate variables for the value:
 
-        - **{{AAD_Device_ID}}**
+        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId​}}** - Either variable can be used to identify a device by its Azure AD ID.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
         - **{{SerialNumber}}**
         - **{{IMEINumber}}**
-        - **{{AzureADDeviceId​}}**
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
         - **{{DeviceName}}**
