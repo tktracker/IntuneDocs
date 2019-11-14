@@ -122,6 +122,16 @@ For end-user enrollment instructions, see [Enroll your Windows device in Intune]
 
 For more information about end-user tasks, see [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md).
 
+## Registration and Enrollment CNAMEs
+Azure Active Directory has a different CNAME that it uses for device registration for iOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined". If you plan to use conditional access, you should also configure the EnterpriseRegistration CNAME for each company name you have.
+
+| Type | Host name | Points to | TTL |
+| --- | --- | --- | --- |
+| NAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour|
+
+For more information about device registration, see
+[Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+
 ## Next steps
 
 - [Considerations when managing Windows devices using Intune on Azure](../fundamentals/intune-legacy-pc-client.md).

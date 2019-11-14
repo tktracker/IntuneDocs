@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/08/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,12 +56,22 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Role-based access control
 -->  
 
-## Week of November 11, 2019
 
-### App management
+## Week of November 11, 2019  
+
+### App management  
+
+#### Improved macOS enrollment experience in Company Portal <!-- 5074349 WNready -->  
+The Company Portal for macOS enrollment experience has a simpler enrollment process that aligns more closely with the Company Portal for iOS enrollment experience. Device users now see:  
+
+* A sleeker user interface.  
+* An improved enrollment checklist.  
+* Clearer instructions about how to enroll their devices.  
+* Improved troubleshooting options.  
 
 #### Web apps launched from the Windows Company Portal app<!-- 5030972 -->
 End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](~/apps/web-app.md).
+
 
 ## Week of November 4, 2019
 
