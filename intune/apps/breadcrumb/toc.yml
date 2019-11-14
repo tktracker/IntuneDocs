@@ -10,12 +10,9 @@
       tocHref: /intune/
       topicHref: /intune/
       items:
-        - name: Apps
-          tocHref: /intune/apps/
-          topicHref: /intune/apps/
-        - name: Apps
-          tocHref: /intune/fundamentals/
-          topicHref: /intune/apps/
-        - name: Apps
-          tocHref: /intune/protect/
-          topicHref: /intune/apps/
+      - name: Apps
+        tocHref: /intune/fundamentals/
+        topicHref: /intune/apps/
+      - name: Apps
+        tocHref: /intune/protect/
+        topicHref: /intune/apps/
