@@ -149,7 +149,7 @@ You can create an Intune app protection policy that may block, or selectively wi
 
 ### Device configuration
 
-#### New device firmware configuration interface profile for Windows 10 and later devices<!-- 2266073  -->
+#### New device firmware configuration interface profile for Windows 10 and later devices (public preview)<!-- 2266073  -->
 
 On Windows 10 and later, you can create a device configuration profile to control settings and features (**Device configuration** > **Profiles** > **Create profile** > **Windows 10 and later** for platform). In this update, there's a new device firmware configuration interface profile type that allows Intune to manage UEFI (BIOS) settings.
 
