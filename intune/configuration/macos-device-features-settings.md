@@ -189,6 +189,7 @@ This feature applies to:
 - **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message is shown if you don’t require Active Directory’s password complexity requirements, or don’t enter a minimum password length.  
 - **App bundle IDs** (Kerberos only): **Add** the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket, the authentication ticket, and authenticate users to services they’re authorized to access.
 - **Domain realm mapping** (Kerberos only): **Add** the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don’t match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
+- **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used to renew the Kerberos credential without user interaction. The certificate should be a PKCS or SCEP certificate that you previously added to Intune.
 
 ## Associated domains
 

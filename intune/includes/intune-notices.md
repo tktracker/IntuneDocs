@@ -11,6 +11,18 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Intune Plan for Change: Windows 10, version 1703 Company Portal moving out of Support<!--5026679-->
+Windows 10, version 1703 (also known as Windows 10, RS2) has moved out of service on October 8, 2019 for enterprise and EDU editions. Intune will end support for the corresponding Company Portal app for RS2/RS1 starting on December 26, 2019.
+
+#### How does this affect me?
+Moving forward, you will not see new features in the specific version of the Company Portal app, although we will continue to support this version of the Company Portal app through December 26, 2019, including providing any security updates to the Company Portal app as needed. However, since Windows 10, version 1703 will not receive any security updates once it moves out of servicing, we highly recommend you update your Windows devices to a more recent Windows version and make sure you’re on the latest Company Portal app so you continue to get new features and additional functionality.
+
+#### What do I need to do to prepare for this change?
+The steps you take depends on how your environment is configured. In general though, you should identify the devices that have the older version of the OS and/or the Company Portal on their device, and update. To set your Windows 10 update rings, log into Intune -> Software updates – Windows 10 update rings. The latest version of the Company Portal is version 10.3.5601.0. Please direct your users to acquire it from the Microsoft Store to stay up to date with future releases. You can also use Intune to install the latest on your Windows devices through the [Microsoft Store for Business](https://docs.microsoft.com/intune/windows-store-for-business).
+
+#### Additional information
+[Manually add the Windows 10 Company Portal app by using Microsoft Intune](https://docs.microsoft.com/intune/store-apps-company-portal-app)
+
 
 ### Take Action: Use Microsoft Edge for your Protected Intune Browser Experience<!--5728447-->
 As we have been sharing over the past year, Microsoft Edge mobile supports the same set of management features as the Managed Browser, while providing a much-improved end user experience. To make way for the robust experiences provided in Microsoft Edge, we will be retiring the Intune Managed Browser. Starting on January, 27, 2020, Intune will no longer support the Intune Managed Browser.  

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use Microsoft Defender ATP in Microsoft Intune - Azure | Microsoft Docs
-description: Use Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) with Intune, including setup and configuration, onboarding of your Intune devices with ATP, and then use a devices ATP risk assessment with your Intune device compliance and conditional access policies to protect network resources.   
+description: Use Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) with Intune, including setup and configuration, onboarding of your Intune devices with ATP, and then use a devices ATP risk assessment with your Intune device compliance and conditional access policies to protect network resources.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ To be successful, you use the following configurations in concert:
 
 - **Establish a service-to-service connection between Intune and Microsoft Defender ATP**. This connection lets Microsoft Defender ATP collect data about machine risk from Windows 10 devices you manage with Intune.
 - **Use a device configuration profile to onboard devices with Microsoft Defender ATP**. You onboard devices to configure them to communicate with Microsoft Defender ATP and to provide data that helps assess their risk level.
-- **Use a device compliance policy to set the level of risk you want to allow**. Risk levels are reported by Microsoft Defender ATP.  Devices that exceed the allowed risk level are identified as non-compliant.
+- **Use a device compliance policy to set the level of risk you want to allow**. Risk levels are reported by Microsoft Defender ATP. Devices that exceed the allowed risk level are identified as non-compliant.
 - **Use a conditional access policy** to block users from accessing corporate resources from devices that are non-compliant.
 
 When you integrate Intune with Microsoft Defender ATP, you can take advantage of ATPs Threat & Vulnerability Management (TVM) and [use Intune to remediate endpoint weakness identified by TVM](atp-manage-vulnerabilities.md).
@@ -54,7 +54,7 @@ Consider an event where someone sends a Word attachment with embedded malicious 
 Microsoft Defender ATP can help resolve security events like this scenario.
 
 - In our example, Microsoft Defender ATP detects that the device executed abnormal code, experienced a process privilege escalation, injected malicious code, and issued a suspicious remote shell.
-- Based on these actions from the device, Microsoft Defender ATP [classifies the device as high-risk](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) and includes a detailed report of suspicious activity in the Microsoft  Defender Security Center portal.
+- Based on these actions from the device, Microsoft Defender ATP [classifies the device as high-risk](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) and includes a detailed report of suspicious activity in the Microsoft Defender Security Center portal.
 
 Because you have an Intune device compliance policy to classify devices with a *Medium* or *High* level of risk as non-compliant, the compromised device is classified as non-compliant. This classification allows your conditional access policy to kick in and block access from that device to your corporate resources.
 
@@ -67,7 +67,7 @@ To use Microsoft Defender ATP with Intune, be sure you have the following config
 - [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and access to the Microsoft Defender Security Center (ATP portal)
 
 > [!NOTE]
-> Microsoft Defender ATP is not supported with Intune app protection policies.
+> Microsoft Defender ATP is not supported with iOS and Android Intune app protection policies.
 
 ## Enable Microsoft Defender ATP in Intune
 
@@ -75,7 +75,7 @@ The first step you take is to set up the service-to-service connection between I
 
 ### To enable Defender ATP
 
-You only need to enable Defender ATP a single time per tenant. 
+You only need to enable Defender ATP a single time per tenant.
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -135,7 +135,7 @@ After you onboard a device using configuration package, you don't need to do it 
      [Onboard Windows 10 machines using System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on these Microsoft Defender ATP settings.
 
 7. Select **OK**, and **Create** to save your changes, which creates the profile.
-8. [Assign the device configuration profile](../configuration/device-profile-assign.md) to devices you want to assess with Microsoft Defender ATP.  
+8. [Assign the device configuration profile](../configuration/device-profile-assign.md) to devices you want to assess with Microsoft Defender ATP.
 
 ## Create and assign the compliance policy
 
