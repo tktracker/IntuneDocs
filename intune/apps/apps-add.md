@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -147,7 +147,7 @@ Requirements for cloud storage space are as follows:
 - The maximum file size for any file that you upload is 8 GB.
 
   > [!NOTE]
-  > Windows Line-of-business (LOB) apps have a maximum size limit of 8 GB per app. iOS LOB apps have a maximum size limit of 4 GB per app.
+  > Windows Line-of-business (LOB) apps, including Win32, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSI X, and Windows Universal MSI X bundle, have a maximum size limit of 8 GB per app. All other LOB apps, including iOS LOB apps, have a maximum size limit of 2 GB per app.
 
 ## Create and edit categories for apps
 

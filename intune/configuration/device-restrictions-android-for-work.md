@@ -346,7 +346,7 @@ These password settings apply to personal profiles on devices that use a work pr
 - **Threat scan on apps**: **Require** enforces that the **Verify Apps** setting is enabled for work and personal profiles.
 
    > [!Note]
-   > This setting only works for devices that are Android O and above.
+   > This setting only works for devices that are Android 8 (Oreo) and above.
 
 - **Prevent app installations from unknown sources in the personal profile**: By design, Android Enterprise work profile devices can't install apps from sources other than the Play Store. By nature, work profile devices are intended to be dual-profile:
 
