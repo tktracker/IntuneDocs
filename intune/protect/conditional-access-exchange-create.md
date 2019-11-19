@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,8 +31,6 @@ ms.collection: M365-identity-device-management
 
 # Create a Conditional Access policy for Exchange on-premises and legacy Exchange Online Dedicated
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 This article shows you how to configure Conditional Access for Exchange on-premises based on device compliance.
 
 If you have an Exchange Online Dedicated environment and need to find out whether it is in the new or the legacy configuration, contact your account manager. To control email access to Exchange on-premises or to your legacy Exchange Online Dedicated environment, configure Conditional Access to Exchange on-premises in Intune.
@@ -50,7 +48,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 - The connector for an on-premises Exchange organization can install on any machine as long as that machine can communicate with the Exchange server.
 
-- The connector supports **Exchange CAS environment**. Intune supports installing the connector on the Exchange CAS server directly, but we recommend you install it on a separate computer because of the additional load the connector puts on the server. When configuring the connector, you must set it up to communicate to one of the Exchange CAS servers.
+- The connector supports **Exchange CAS environment**. Intune supports installing the connector on the Exchange CAS server directly. We recommend you install it on a separate computer because of the additional load the connector puts on the server. When configuring the connector, you must set it up to communicate to one of the Exchange CAS servers.
 
 - **Exchange ActiveSync** must be configured with certificate-based authentication, or user credential entry.
 
@@ -64,7 +62,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 - If the device doesn't meet Conditional Access settings, the user is presented with one of the following messages when they sign in:
   - If the device isn't enrolled with Intune, or isn't registered in Azure Active Directory, a message displays with instructions about how to install the Company Portal app, enroll the device, and activate email. This process also associates the device's Exchange ActiveSync ID with the device record in Azure Active Directory.
-  - If the device isn't compliant, a message displays that directs the user to the Intune Company Portal website, or the Company Portal app where they can find information about the problem and how to remediate it.
+  - If the device isn't compliant, a message displays that directs the user to the Intune Company Portal website, or the Company Portal app. From the company portal, they can find information about the problem and how to remediate it.
 
 ### Support for mobile devices
 
@@ -74,7 +72,7 @@ Before you can configure Conditional Access, verify the following configurations
 - EAS mail clients **Android work profile devices:** Only **Gmail** and **Nine Work for Android Enterprise** in the **work profile** are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the Gmail or Nine Work for Android Enterprise app, and also deploy those apps as a required installation.
 
 > [!NOTE]
-> Microsoft Outlook for Android and iOS is not supported via the Exchange on-premises connector. If you want to leverage Azure Active Directory Conditional Access policies and Intune App Protection Policies with Outlook for iOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS and Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth). 
+> Microsoft Outlook for Android and iOS is not supported via the Exchange on-premises connector. If you want to leverage Azure Active Directory Conditional Access policies and Intune App Protection Policies with Outlook for iOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS and Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### Support for PCs
 
@@ -84,19 +82,19 @@ The native **Mail** application on Windows 8.1 and later (when enrolled into MDM
 
 Before you can use the following procedure to set up Exchange on-premises access control, you must install and configure at least one [Intune on-premises Exchange connector](exchange-connector-install.md) for Exchange on-premises.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Exchange access**, and then select **Exchange On-premises access**. 
+2. Go to **Tenant administration** > **Exchange access**, and then select **Exchange On-premises access**.
 
 3. On the **Exchange on-premises access** pane, choose **Yes** to *Enable Exchange on-premises access control*.
 
-4. Under **Assignment**, choose **Select groups to include**, and then select one or more groups to configure access. 
+4. Under **Assignment**, choose **Select groups to include**, and then select one or more groups to configure access.
 
    Members of the groups you select have the Conditional Access policy for Exchange on-premises access applied to them. Users who receive this policy must enroll their devices in Intune and be compliant with the compliance profiles before they can access Exchange on-premises.
 
-5. To exclude groups, choose **Select groups to exclude**, and then select one or more groups that are exempt from requirements to enroll devices and be compliant with the compliance profiles before accessing Exchange on-premises. 
+5. To exclude groups, choose **Select groups to exclude**, and then select one or more groups that are exempt from requirements to enroll devices and to be compliant with the compliance profiles before accessing Exchange on-premises. 
 
-6. Next, configure settings for the Intune on-premises Exchange connector.  Under **Setup** on the **Exchange access pane**, select **Exchange ActiveSync on-premises connector** and then select the connector for the Exchange organization that you want to configure.
+6. Next, configure settings for the Intune on-premises Exchange connector.  Under **Setup** on the *Exchange on-premises access* window, select **Exchange ActiveSync on-premises connector** and then select the connector for the Exchange organization that you want to configure.
 
 7. Under **Settings**, choose **User notifications** to modify the default email message that’s sent to users if their device isn't compliant and they want to access Exchange on-premises. The message template uses Markup language.  You can also see the preview of how the message looks as you type.
    > [!TIP]
@@ -124,6 +122,6 @@ Before you can use the following procedure to set up Exchange on-premises access
 
 Next, create a compliance policy and assign it to the users for Intune to evaluate their mobile devices, See [Get started with device compliance](device-compliance-get-started.md).
 
-## See also
+## Next steps
 
-[Troubleshooting Intune On-Premises Exchange Connector in Microsoft Intune](https://support.microsoft.com/help/4471887)
+[Troubleshooting Intune on-premises Exchange connector in Microsoft Intune](https://support.microsoft.com/help/4471887)
