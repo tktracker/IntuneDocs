@@ -52,14 +52,9 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    SCEP certificate profiles for the *Device Owner Only* profile have the following limitations:
 
-   1. The following variables are not supported:
+   1. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
 
-      - CN={{OnPrem_Distinguished_Name}}
-      - CN={{onPremisesSamAccountName}}
-
-   2. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
-
-   3. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority. 
+   2. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority. 
 
 7. Select **Settings**, and then complete the following configurations:
 

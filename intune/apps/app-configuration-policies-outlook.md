@@ -16,7 +16,6 @@ ms.technology:
 ms.reviewer: smithre4
 
 # optional metadata
-
 #ROBOTS:
 #audience:
 #ms.devlang:

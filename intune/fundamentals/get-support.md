@@ -47,7 +47,10 @@ The Help and support experience for Intune is available from the [Microsoft 365 
 
 The *Help and support* experience is similar to the experience seen in the [Microsoft 365 admin center](https://admin.microsoft.com/), and replaces the previous *Help + support*, which remains in place for other services in Azure.
 
-### Options to access Help and support 
+> [!TIP]
+> Starting November 18, 2019, an updated and streamlined in-console experience for getting help and support is rolling out to tenants. If this new experience isn't available for you yet, it will be soon.
+
+### Options to access Help and support
 
 - **In the Azure portal:**
 

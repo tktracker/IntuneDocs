@@ -76,17 +76,12 @@ Intune will support delivering S/MIME signing and encryption certificates that c
 ### Custom settings support for macOS applications<!-- 4736278  -->
 Intune will support custom settings, allowing you to add specific keys and values to an existing preferences property list (.plist) file to configure macOS apps and the device. Not all apps support managed preferences, and in some cases only specific settings can be managed. The settings are deployed via the device channel only. You should only upload property list files or .xml files that target device channel settings.
 
-### Assignment type value in Windows Company Portal<!-- 5459950  -->
-The **Installed Apps** page of the Windows Company Portal app will be updated. The **Assignment type** column of the **Installed Apps** page has been updated to be called "Required by your organization". Possible values are **Yes** or **No** to designate required vs. available apps. This change is being made in response to some end user confusion. For more information about the Windows Company portal, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
-
 ### Display notifications for the Company Portal app on Windows<!-- 1808082  -->
 We'll update the Company Portal app on Windows devices to display toast notifications to users, even when the application is closed. The update will show notifications for available apps only when the installation status is completed or failed. The Company Portal app won't show notifications for required applications.
 
 ### Display installation status messages for the Company Portal app<!-- 2514416  -->
 The Company Portal app will show additional app installation status messages to end users. The following conditions will apply to new Win32 dependency features:
 - App failed to install. Dependencies defined by the admin were not met.
-- App installed successfully but requires a restart.
-- App is in the process of installing but requires a restart to continue.
 
 ### Configure app notification content for organization accounts<!-- 2576686 -->
 Intune APP on Android and iOS devices will allow you to control app notification content for organization accounts. This feature will require support from applications and might not be available for all APP-enabled applications. For more information about APP, see [What are app protection policies?](../apps/app-protection-policy.md)
@@ -191,8 +186,7 @@ Applies to:
 <!-- ***********************************************-->
 ## Device management
 
-### Change Primary User for Windows devices<!-- 3794742 idready -->
-You'll be able to change the Primary User for Windows hybrid and Azure AD Joined devices. To do so, go to **Intune** > **Devices** > **All devices** > choose a device > **Properties** > **Primary User**. 
+
 
 ### Edit device name value for Autopilot devices<!-- 2640074  -->
 You'll be able to edit the Device Name value for Azure AD Joined Autopilot devices. To do so, go to **Intune** > **Device enrollment** > **Windows enrollment** > **Windows Autopilot** > **Devices** > choose the device > change the **Device Name** value in the right pane > **Save**.
@@ -221,9 +215,6 @@ The Company Portal for macOS enrollment experience will have a simpler enrollmen
 
 <!-- ***********************************************-->
 ## Monitoring and troubleshooting
-
-### Updated support experience<!--  5012398    -->
-As part of continuing improvements, we'll update the in-console support experience for Intune.  We'll improve the in-console search and feedback for common issues, and we'll streamline the workflow to contact support.
 
 ### Centralized audit logs<!--5603185, 5697164-->
 A new centralized audit log experience will collect audit logs for all categories into one page. You'l be able to filter the logs to get the data you're looking for. To see the audit logs, go to **Tenant administration** > **Audit logs**. For more information, see [Upcoming change to Audit logs in Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Upcoming-change-to-Audit-logs-in-Intune/ba-p/1015858).

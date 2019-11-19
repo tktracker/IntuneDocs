@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -48,23 +48,12 @@ Windows Information Protection (WIP) policies can be deployed without requiring 
 
 ## Create a wipe request
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-2. Choose **All services**, type **Intune** in the filter textbox, and select **Intune**. The Intune pane opens, choose the **Client apps** pane.
-
-    ![Screenshot of the Microsoft Intune pane](./media/apps-selective-wipe/apps-selective-wipe01.png)
-
-3. On the **Client apps pane**, choose **App selective wipe**.
-
-4. Choose  **New wipe request**. The **New wipe request** pane opens.
-
-    ![Screenshot of the New wipe request pane](./media/apps-selective-wipe/AzurePortal_MAM_NewWipeRequest.png)
-
-5. Choose a user and then choose **Select** to select the user whose app data you want to wipe.
-
-6. Next, choose **Device** from the **New wipe request** pane. This opens the **Select Device** pane that lists all the devices associated with the selected user, and also provides two columns, the device name, which is a friendly name defined by the user, and the device type, its device platform. Select the device you want to wipe.
-
-7. You are now back on the **New wipe request** pane. Choose **OK** to make a wipe request.
+1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. In the Intune pane, select **Client apps** > **App selective wipe** > **Create wipe request**.<br>
+   The **Create wipe request** pane is displayed.
+3. Click **Select the user**, choose the user whose app data you want to wipe, and click **Select** at the bottom of the **User** pane.
+4. Click **Select the device**, choose the device, and click **Select** at the bottom of the **Select Device** pane.
+5. Click **Create** to make a wipe request.
 
 The service creates and tracks a separate wipe request for each protected app on the device, and the user associated with the wipe request.
 

@@ -78,10 +78,6 @@ If the device recently enrolled, the compliance and configuration check-in runs 
 
 At any time, users can open the Company Portal app, **Settings** > **Sync** to immediately check for policy or profile updates.
 
-For devices without user affinity, the sync frequency immediately following enrollment can vary from hours to a day, or more. Intune sends requests at various intervals for a device to check in with Intune. However, it's still up to the device to check in. After initial enrollment, the time it takes a device to complete the check-in is unpredictable. It also depends on the type of device enrollment, and the policies and profiles assigned to a device. After the device enrolls, and all initial policies and profiles are applied, the device checks for new policies and profiles about every 6-8 hours, based on the time the device enrolls in Intune.
-
-As a best practice, make sure your devices are online for at least eight consecutive hours to get the best results.
-
 ## What actions cause Intune to immediately send a notification to a device?
 
 There are different actions that trigger a notification, such as when a policy, profile, or app is assigned (or unassigned), updated, deleted, and so on. These action times vary between platforms.

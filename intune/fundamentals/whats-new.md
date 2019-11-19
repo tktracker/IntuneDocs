@@ -58,11 +58,23 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 ## Week of November 18, 2019
 
+### Device configuration
+
+#### Windows 10 feature updates (public preview)<!-- 2384877 -->
+
+You can now deploy [Windows 10 feature updates](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) to Windows 10 devices. Windows 10 feature updates are a new software update policy that sets the version of Windows 10 that you want devices to install and remain at. You can use this new policy type along with your existing Windows 10 update rings.
+
+Devices that receive Windows 10 feature updates policy will install the specified version of Windows, and then remain at that version until the policy is edited or removed. Devices that run a later version of Windows remain at their current version. Devices that are held at a specific version of Windows can still install quality and security updates for that version from Windows 10 update rings.
+
+This new type of policy begins rolling out to tenants this week. If this policy isn't available for your tenant yet, it will be soon.
+
 ### Monitor and troubleshoot
 
 #### Updated support experience<!-- 5012398 -->
 
-The in-console experience for [getting help and support for Intune](get-support.md) is updated and streamlined. We've improved  the in-console search and feedback for common issues, and the workflow you use to contact support. When opening a support issue, you'll see real-time estimates for when you can expect a callback or email reply, and Premier and Unified support customers can easily specify a severity for their issue, to help get support faster.
+Starting today, an updated and streamlined in-console experience for [getting help and support for Intune](get-support.md) is rolling out to tenants. If this new experience isn't available for you yet, it will be soon.
+
+We've improved the in-console search and feedback for common issues, and the workflow you use to contact support. When opening a support issue, you'll see real-time estimates for when you can expect a callback or email reply, and Premier and Unified support customers can easily specify a severity for their issue, to help get support faster.
 
 ## Week of November 11, 2019  
 

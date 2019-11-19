@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,6 +37,8 @@ ms.collection: M365-identity-device-management
 During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your MTD partner console and you've created the device compliance policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
 
 When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Defender ATP](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but should not be edited, deleted, or disabled.
+
+If the classic policy is deleted, you will need to delete the connection to Intune that was responsible for its creation, and then set it up again. This process recreates the classic policy. Its not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
 
 Classic conditional access policies for MTD apps: 
 

@@ -112,7 +112,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 1. Go to the [Office 365 Admin Center](https://portal.office.com/adminportal/home#/homepage), and then choose **Users > Active Users**.
 2. Select the user account that you want to assign an Intune user license to, and then choose **Product licenses > Edit**.
 3. Switch the toggle to the **On** position for the license that you want to assign to this user, and then choose **Save**.
-4. e-enroll the device.
+4. Re-enroll the device.
 
 ### This Service is not supported. No Enrollment Policy.
 
