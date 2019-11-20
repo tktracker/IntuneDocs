@@ -34,9 +34,7 @@ ms.collection: M365-identity-device-management
 
 You can set up Intune to enroll iOS devices purchased through Apple's [Device Enrollment Program (DEP)](https://deploy.apple.com). DEP lets you enroll large numbers of devices without ever touching them. Devices like iPhones and iPads can be shipped directly to users. When the user turns on the device, Setup Assistant runs with preconfigured settings and the device enrolls into management.
 
-To enable DEP enrollment, you use both the Intune and Apple DEP portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management. You create DEP enrollment profiles containing settings that applied to devices during enrollment.
-
-By the way, DEP enrollment doesn't work with the [device enrollment manager](device-enrollment-manager-enroll.md).
+To enable DEP enrollment, you use both the Intune and Apple DEP portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management. You create DEP enrollment profiles containing settings that applied to devices during enrollment. Note that DEP enrollment cannot be used with a [device enrollment manager](device-enrollment-manager-enroll.md) account.
 
 > [!NOTE]
 > DEP sets device configurations that can't be removed by the end user. Therefore, before [migrating to DEP](../fundamentals/migration-guide-considerations.md), the device must be wiped to return it to an out-of-box (new) state.
