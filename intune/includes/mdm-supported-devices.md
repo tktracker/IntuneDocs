@@ -33,4 +33,5 @@
 
 Customers with Enterprise Management + Security  (EMS) can also use [Azure Active Directory (Azure AD) to register Windows 10 devices](/intune/windows-enroll).
 
+For guidelines on using Windows 10 virtual machines with Intune, see [Using Windows 10 virtual machines](../fundamentals/windows-10-virtual-machines.md).
 

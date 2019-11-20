@@ -146,6 +146,8 @@
       items:
       - name: Network configuration
         href: network-bandwidth-use.md
+      - name: Using Windows 10 VMs with Intune
+        href: windows-10-virtual-machines.md
       - name: Intune endpoints
         href: intune-endpoints.md
       - name: Intune US government endpoints
