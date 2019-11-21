@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: aiwang
+ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -213,13 +213,18 @@ When a device receives a Windows 10 feature updates policy:
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won’t install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
-> [!IMPORTANT]
-> When you deploy both a *Windows 10 feature update* and a *Windows 10 update ring* policy to the same device, review the update ring for the following configurations:
->
-> - The **Feature update deferral period (days)** must be set to **0**
-> - Feature updates for the update ring must be *running*. They must not be paused.
+### Limitations for Windows 10 feature updates
 
-Windows 10 Feature updates aren't supported with Windows Autopilot.
+- When you deploy a *Windows 10 feature update* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
+  - The **Feature update deferral period (days)** must be set to **0**.
+  - Feature updates for the update ring must be *running*. They must not be paused.
+
+- *Windows 10 feature updates* policy isn’t supported with Autopilot. Intune won't deploy the policy to:
+  - Devices that are being provisioned by Autopilot.
+  - Devices that were previously provisioned with Autopilot.
+
+  This limitation is being examined to see if it can be supported in the future.
+
 
 ### Create and assign Windows 10 feature updates
 
