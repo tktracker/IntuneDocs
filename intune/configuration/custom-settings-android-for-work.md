@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/01/2019
+ms.date: 11/21/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,11 +34,11 @@ Using Microsoft Intune, you can add or create custom settings for your Android E
 
 Android Enterprise custom profiles use Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings to control features on Android Enterprise devices. These settings are typically used by mobile device manufacturers to control these features.
 
-Intune supports a limited number of Android Enterprise custom profiles, including:
+Intune supports the following limited number of Android Enterprise custom profiles:
 
 - ./Vendor/MSFT/WiFi/Profile/SSID/Settings: [Create a Wi-Fi profile with a pre-shared key](wi-fi-profile-shared-key.md) has some examples.
 - ./Vendor/MSFT/VPN/Profile/Name/PackageList: [Create a per-app VPN profile](android-pulse-secure-per-app-vpn.md) has some examples.
-- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: See the [example](#example) (in this article).
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: See the [example](#example) in this article. This setting is also available in the user interface. For more information, see [Android Enterprise device settings to allow or restrict features](device-restrictions-android-for-work.md).
 
 If you need additional settings, see [OEMConfig for Android Enterprise](android-oem-configuration-overview.md).
 
