@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2019
+ms.date: 1/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -59,7 +60,7 @@ When the dashboard opens, you get an overview with all the compliance reports. I
 
 As you dig in to this reporting, you can also see any specific compliance policies and settings that apply to a specific device, including the compliance state for each setting.
 
-### Device compliance status report
+### Device compliance status
 
 The **Device compliance status** chart shows the compliance states for all Intune enrolled devices. The device compliance states are kept in two different databases: Intune and Azure Active Directory.
 
@@ -122,7 +123,8 @@ In the **Device details** chart, select a specific device, and then select **Dev
 
 Intune displays more details on the device compliance policy settings applied on that device. When you select the specific policy, it shows all the settings in the policy.
 
-### Devices without compliance policy
+### Devices without compliance
+
 On the *Compliance status* page, next to the *Policy compliance* chart, you can select the **Devices without compliance policy** tile to view information about devices that don't have any compliance policies assigned:
 
 ![See devices without any compliance policies](./media/compliance-policy-monitor/devices-without-policies.png)
@@ -139,13 +141,13 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
 - Users who are assigned a compliance policy of any type aren't shown in the report, regardless of device platform. For example, if you've assigned a Windows compliance policy to a user with an Android device, the device doesn't show up in the report. However, Intune considers that Android device not compliant. To avoid issues, we recommend that you create policies for each device platform and deploy them to all users.
 
-### Per-policy device compliance report
+### Per-policy device compliance
 
 The **Policy compliance** chart shows you the policies, and how many devices are compliant and noncompliant. 
 
 ![See a list of the policy, and how many compliant vs noncompliant devices for that policy](./media/compliance-policy-monitor/idc-8.png)
 
-## Setting compliance report
+### Setting compliance
 
 The **Setting compliance** chart shows you all device compliance policy settings from all compliance policies, the platforms the policy settings are applied, and the number of noncompliant devices.
 
@@ -155,6 +157,24 @@ The **Setting compliance** chart shows you all device compliance policy settings
 > A policy can be assigned to a device, and a user on that same device. In some scenarios, a device may sync before the user signs in, such as when the device reboots. Compliance may evaluate this user, and show the device as non compliant. This behavior may also show the System Account as a non-compliant user.
 >
 > This is a known issue with multi-user Windows 10 devices. Any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).
+
+## View compliance reports
+
+In addition to using the charts on *Compliance status*, you can view compliance reports from the *Monitor* page of the Admin Center.
+
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Devices** > **Monitor**, and then from below **Compliance** select the report you want to view. Some of the available compliance reports include:
+
+   - Device compliance
+   - Noncompliant devices
+   - Devices without compliance policy
+   - Setting compliance
+   - Policy compliance
+   - Windows health attestation report
+   - Threat agent status
+
+For more information about reports, see [Intune reports](../fundamentals/reports.md)
 
 ## View status of device policies
 
