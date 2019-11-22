@@ -149,6 +149,18 @@ After you've created an Autopilot deployment profile, you can edit certain parts
 > [!NOTE]
 > Changes to the profile are applied to devices assigned to that profile. However, the updated profile won't be applied to a device that has already enrolled in Intune until after the device is reset and reenrolled.
 
+## Edit Autopilot device attributes
+After you've uploaded an Autopilot device, you can edit certain attributes of the device.
+
+1. In Intune in the Azure portal, choose **Device enrollment**.
+2. Under **Windows enrollment**, in the **Windows Autopilot** section, choose **Devices**.
+3. Select the device you want to edit.
+4. In the pane on the right of the screen, you can edit the device name, group tag, or User Friendly Name (if you've assigned a user).
+5. Select **Save**.
+
+> [!NOTE]
+> Device names can be configured for all devices, but are ignored in Hybrid Azure AD joined deployments. Device name still comes from the domain join profile for Hybrid Azure AD devices.
+
 ## Alerts for Windows Autopilot unassigned devices  <!-- 163236 -->  
 
 Alerts will show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them.

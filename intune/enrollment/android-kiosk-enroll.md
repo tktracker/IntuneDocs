@@ -107,6 +107,9 @@ Replacing or revoking a token/QR code won't have any effect on devices that are 
 
 You can now [enroll your dedicated devices](android-dedicated-devices-fully-managed-enroll.md).
 
+> [!NOTE]
+> The **Microsoft Intune** app will be automatically installed during enrollment of a dedicated device.  This app is required for enrollment and cannot be uninstalled. 
+
 ## Managing apps on Android Enterprise dedicated devices
 
 Only apps that have Assignment type [set to Required](../apps/apps-deploy.md#assign-an-app) can be installed on Android Enterprise dedicated devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise work profile devices.

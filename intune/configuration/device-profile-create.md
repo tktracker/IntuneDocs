@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,6 +80,7 @@ This article:
        - [Kiosk](kiosk-settings.md)
        - [PKCS certificate](../protect/certficates-pfx-configure.md)
        - [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
+       - [Preference file](preference-file-settings-macos.md)
        - [SCEP certificate](../protect/certificates-scep-configure.md)
        - [Trusted certificate](../protect/certificates-configure.md)
        - [Update policies](../software-updates-ios.md)

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,7 +27,7 @@ ms.custom: intune-azure
 
 ---
 
-# Use device Encryption with Intune  
+# Use device Encryption with Intune
 
 Use Intune to manage a devices built-in disk or drive encryption to protect data on your devices.
 
@@ -71,7 +71,7 @@ For details about the FileVault setting you can manage with Intune, see [FileVau
 
    Consider adding a message to help guide end-users on how to retrieve the recovery key for their device. This information can be useful for your end-users when you use the setting for Personal recovery key rotation, which can automatically generate a new recovery key for a device periodically.
 
-   For example: To retrieve a lost or recently rotated recovery key, sign in to the Intune Company Portal website from any device. In the portal, go to *Devices* and select the device that has FileVault enabled, and then select *Get recovery key*. The current recovery key is displayed.  
+   For example: To retrieve a lost or recently rotated recovery key, sign in to the Intune Company Portal website from any device. In the portal, go to *Devices* and select the device that has FileVault enabled, and then select *Get recovery key*. The current recovery key is displayed.
 
 7. Configure the remaining [FileVault settings](endpoint-protection-macos.md#filevault) to meet your business needs, and then select **OK**.
 
@@ -117,13 +117,37 @@ Configure BitLocker when you create a [device configuration profile](../configur
 
 6. Complete configuration of additional settings, and then save the profile.
 
-### Manage BitLocker  
+### Manage BitLocker
 
 After Intune encrypts a Windows 10 device with BitLocker, you can view and retrieve BitLocker recovery keys when you view the Intune [encryption report](encryption-monitor.md).
 
+### Rotate BitLocker recovery keys
+
+You can use an Intune device action to remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later.
+
+#### Prerequisites
+
+Devices must meet the following prerequisites to support rotation of the BitLocker recovery key:
+
+- Devices must run Windows 10 version 1909 or later
+
+- Azure AD-joined and Hybrid-joined devices must have support for key rotation enabled:
+
+  - **Client-driven recovery password rotation**
+
+  This setting is found under *Windows Encryption* as part of a device configuration policy for Windows 10 Endpoint Protection.
+  
+#### To rotate the BitLocker recovery key
+
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Devices** > **All devices**.
+
+3. In the list of devices that you manage, select a device, select **More**, and then select the **BitLocker key rotation** device remote action.
+
 ## Next steps
 
-Create [a device compliance](compliance-policy-create-windows.md) policy
+Create [a device compliance](compliance-policy-create-windows.md) policy.
 
 Use the encryption report, to manage:
 

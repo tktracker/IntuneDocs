@@ -150,6 +150,11 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Datalogic | com.datalogic.oemconfig | [User Documentation for Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com.honeywell.oemconfig |  |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Spectralink - Barcodes | com.spectralink.barcode.service |  |
+| Spectralink - Buttons | com.spectralink.buttons |  |
+| Spectralink - Device | com.spectralink.slnkdevicesettings  |  |
+| Spectralink - Logging | com.spectralink.slnklogger |  |
+| Spectralink - VQO | com.spectralink.slnkvqo |  |
 
 -----------------
 

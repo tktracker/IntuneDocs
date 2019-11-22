@@ -134,9 +134,6 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Password
 
-> [!NOTE]
-> In a future release, these password settings in the Intune UI are being updated to match the enrollment type.
-
 ### Settings apply to: All enrollment types
 
 - **Password**: **Require** the end user to enter a password to access the device. **Not configured** (default) allows users to access the device without entering a password.
@@ -324,16 +321,6 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Safari JavaScript**: **Block** prevents Java scripts in the browser from running on the device. **Not configured** (default) allows Java scripts.
 
 - **Safari Pop-ups**: **Block** to disable the pop-up blocker in the web browser. **Not configured** (default) allows the pop-up blocker.
-
-- **Server-side logging for Siri commands**: When set to **Disable**, server-side Siri logging is turned off. It can also prevent logging user requests on Siri servers. **Not configured** (default) logs Siri commands on the server-side. This setting is not dependent on the Siri setting being blocked or not configured.
-
-  This feature applies to:  
-  - iOS 12.2 and newer
-
-  > [!NOTE]
-  > The **Server-side logging for Siri commands** setting is deprecated by Apple. In an upcoming release, this setting is removed from the Intune console.
-  >
-  > Currently, this setting has no effect on devices, even though the setting is shown in managemenet profiles. To delete this setting from any policy, open the policy, make a minor change, and then save the policy. The policy is updated, and the setting is deleted from devices.
 
 ### Settings apply to: Automated device enrollment (supervised)
 

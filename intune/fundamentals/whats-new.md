@@ -76,8 +76,10 @@ Starting today, an updated and streamlined in-console experience for [getting he
 
 We've improved the in-console search and feedback for common issues, and the workflow you use to contact support. When opening a support issue, you'll see real-time estimates for when you can expect a callback or email reply, and Premier and Unified support customers can easily specify a severity for their issue, to help get support faster.
 
+<!-- ########################## -->
 ## Week of November 11, 2019  
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management  
 
 #### Improved macOS enrollment experience in Company Portal <!-- 5074349 WNready -->  
@@ -95,17 +97,20 @@ End-users can now launch web apps directly from the Windows Company Portal app. 
 #### New assignment type column in Company Portal for Windows 10 <!-- 5459950 WNready -->
 The Company Portal > **Installed Apps** > **Assignment type** column has been renamed to **Required by your organization**.  Under that column, users will see a **Yes** or **No** value to indicate that an app is either required or made optional by their organization. These changes were made because device users were confused about the concept of available apps. Your users can find more information about installing apps from Company Portal in [Install and share apps on your device](/intune-user-help/install-apps-cpapp-windows). For more  information about configuring the Company Portal app for your users, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).  
 
-
+<!-- ########################## -->
 ## Week of November 4, 2019
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
 #### Security baselines are supported on Microsoft Azure Government<!-- 4062552 -->
 
 Instances of  Intune that are hosted on *Microsoft Azure Government* can now use [security baselines](../protect/security-baselines.md) to help you secure and protect your users and devices.
 
+<!-- ########################## -->
 ## Week of October 28, 2019
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
 #### Improved checklist design in Company Portal app for Android<!-- 5550857 -->  
@@ -146,12 +151,14 @@ These settings will continue to be accessible from other applicable nodes such a
 
 For more information about these improvements, see the [Intune Customer Success blog post](https://aka.ms/Endpoint_security_node) on the Microsoft Tech Community web site.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Intune supports iOS 11 and later<!-- 4665324  -->
 
 Intune enrollment and Company Portal now support iOS versions 11 and later. Older versions aren't supported.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
 #### Microsoft Edge baseline (Preview)<!--  3787164  -->

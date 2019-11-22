@@ -55,6 +55,21 @@ To create, edit, or assign roles, your account must have one of the following pe
 
 8. On the **Add Custom Role** blade, click **Create**. The new role is displayed in the list on the **Intune roles - All roles** blade.
 
+
+## Copy a role
+
+You can also copy an existing role.
+
+1. Sign into the [Azure portal](https://portal.azure.com) with your Intune credentials and select **Intune**.
+
+2. Select **Roles** > **All roles** > select a role in the list > **Duplicate**.
+
+3. Under **Duplicate role**, enter a name. Make sure to use a unique name.
+
+4. All the permissions and scope tags from the original role will already be selected. You can subsequently change the duplicate role's **Name**, **Description**, **Permissions**, and **Scope (Tags)**.
+
+5. Select **Create**. 
+
 ## Next steps
 - [Assign a role to a user](assign-role.md)
 - [Learn more about role-based access control in Intune](role-based-access-control.md)
