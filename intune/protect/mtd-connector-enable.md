@@ -31,10 +31,10 @@ ms.collection: M365-identity-device-management
 
 # Enable the Mobile Threat Defense connector in Intune
 
+During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your Mobile Threat Defense partner console and you've created the device compliance policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
+
 > [!NOTE]
 > This topic applies to all Mobile Threat Defense partners.
-
-During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your MTD partner console and you've created the device compliance policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
 
 ## Classic conditional access policies for MTD apps
 
@@ -70,7 +70,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## Mobile Threat Defense toggle options
 
-You can decide which Mobile Threat Defense toggle options you need to enable according to your organization's requirements. Not all of the following options are supported by all Mobile Thread Defense partners:
+You can decide which MTD toggle options you need to enable according to your organization's requirements. Not all of the following options are supported by all Mobile Thread Defense partners:
 
 **MDM Compliance Policy Settings**
 
@@ -99,3 +99,7 @@ To learn more about using Mobile Threat Defense connectors for Intune App Protec
 
 > [!TIP]
 > You can see the **Connection status** and the **Last synchronized** time between Intune and the MTD partner from the Mobile Threat Defense pane.
+
+## Next steps
+
+- [Create Mobile Threat Defense (MTD) app protection policy with Intune](~/protect/mtd-app-protection-policy.md).

@@ -57,7 +57,7 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 -->  
 
 <!-- ########################## -->
-## Week of November 18, 2019  
+## Week of November 18, 2019 (1911 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
@@ -132,12 +132,6 @@ For more information on this feature, see [Add a property list file to macOS dev
 
 Applies to:
 - macOS devices running 10.7 and newer
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device enrollment
-
-#### Windows Autopilot deployment reports<!-- 3856172 -->
-A new report details each device deployed through Windows Autopilot. For more information, see [Autopilot deployment report](../enrollment/enrollment-autopilot.md#autopilot-deployments-report). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -277,7 +271,7 @@ Intune enrollment and Company Portal now support iOS versions 11 and later. Olde
 We've added a security baseline Preview for [Microsoft Edge settings](../protect/security-baseline-settings-edge.md). 
 
 <!-- ########################## -->
-## Week of October 21, 2019
+## Week of October 21, 2019 (1910 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Microsoft 365 Device Management
@@ -485,7 +479,7 @@ Intune now supports managing both iPadOS and iOS 13.1 devices. For more informat
 
 <!-- ########################## -->
 
-## Week of September 16, 2019
+## Week of September 16, 2019 (1909 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management 
@@ -721,7 +715,7 @@ Applies to:
 
 - Windows 10 and newer (Windows RS4+)
 
-## Week of August 12, 2019
+## Week of August 12, 2019 (1908 Service release)
 
 ### App management
 
@@ -893,7 +887,7 @@ Applies to:
 
 <!-- ########################## -->
 
-## Week of July 22, 2019 
+## Week of July 22, 2019 (1907 Service release)
 
 ### App management
 
@@ -1035,7 +1029,7 @@ When onboarding fully managed Android Enterprise devices, users will now registe
 
 In addition to the AAD updates, Intune app protection policies (APP) are now supported on fully managed Android Enterprise devices. This functionality will become available as we roll it out. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
-## Week of June 24, 2019
+## Week of June 24, 2019 (1906 Service release)
 
 ### App management
 
@@ -1196,7 +1190,7 @@ The Windows Company Portal app will now have a new page labeled **Devices**. The
 
 To make it more intuitive, the **OrderID** attribute name on Autopilot devices has been changed to **Group Tag**. When using CSVs to upload Autopilot device information, you must use Group Tag as the column header, not OrderID.  
 
-## Week of May 13, 2019
+## Week of May 13, 2019 (1905 Service release)
 
 ### App management
 
