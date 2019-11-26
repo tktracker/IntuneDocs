@@ -49,6 +49,8 @@
     items:
     - name: Wi-Fi with a pre-shared key
       href: wi-fi-profile-shared-key.md
+    - name: Troubleshoot Wi-Fi
+      href: troubleshoot-wi-fi-profiles.md
   - name: Extensions on macOS
     href: kernel-extensions-overview-macos.md
   - name: Education Take a Test app

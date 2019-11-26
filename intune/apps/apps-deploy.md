@@ -98,35 +98,23 @@ The information in the following table can help you understand the resulting int
 | Group 1 intent | Group 2 intent | Resulting intent |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |User Required|User Available|Required and Available|
-|User Required|User Not Available|Required|
 |User Required|User Uninstall|Required|
-|User Available|User Not Available|Not Available|
 |User Available|User Uninstall|Uninstall|
-|User Not Available|User Uninstall|Uninstall
 |User Required|Device Required|Both exist, Intune treats Required
 |User Required|Device Uninstall|Both exist, Intune resolves Required
 |User Available|Device Required|Both exist, Intune resolves Required (Required and Available)
 |User Available|Device Uninstall|Both exist, Intune resolves Available.<br><br>App shows up in the Company Portal.<br><br>If the app is already installed (as a required app with previous intent), the app is uninstalled.<br><br>If the user selects **Install from the Company Portal**, the app is installed, and the uninstall intent is not honored.|
-|User Not Available|Device Required|Required|
-|User Not Available|Device Uninstall|Uninstall|
 |User Uninstall|Device Required|Both exist, Intune resolves Required|
 |User Uninstall|Device Uninstall|Both exist, Intune resolves Uninstall|
 |Device Required|Device Uninstall|Required|
 |User Required and Available|User Available|Required and Available|
 |User Required and Available|User Uninstall|Required and Available|
-|User Required and Available|User Not Available|Required and Available|
 |User Required and Available|Device Required|Both exist, Required and Available
-|User Required and Available|Device Not Available|Required and Available|
 |User Required and Available|Device Uninstall|Both exist, Intune resolves Required (Required and Available)
-|User Not Available|Device Not Available|Not Available|
-|User Available|Device Not Available|Available|
-|User Required|Device Not Available|Required|
 |User Available without enrollment|User Required and Available|Required and Available
 |User Available without enrollment|User Required|Required
-|User Available without enrollment|User Not Available|Not Available
 |User Available without enrollment|User Available|Available|
 |User Available without enrollment|Device Required|Required and Available without enrollment|
-|User Available without enrollment|Device Not Available|Available without enrollment|
 |User Available without enrollment|Device Uninstall|Uninstall and Available without enrollment.<br><br>If the user didn’t install the app from the Company Portal, the uninstall is honored.<br><br>If the user installs the app from the Company Portal, the install is prioritized over the uninstall.|
 
 > [!NOTE]

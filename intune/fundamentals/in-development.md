@@ -184,34 +184,12 @@ Applies to:
 <!--## Device enrollment-->
 
 <!-- ***********************************************-->
-## Device management
+<!--## Device management-->
 
-
-
-### Edit device name value for Autopilot devices<!-- 2640074  -->
-You'll be able to edit the Device Name value for Azure AD Joined Autopilot devices. To do so, go to **Intune** > **Device enrollment** > **Windows enrollment** > **Windows Autopilot** > **Devices** > choose the device > change the **Device Name** value in the right pane > **Save**.
-
-### Edit the Group Tag value for Autopilot devices<!-- 4816775 -->
-You'll be able to edit the **Group Tag** value for Autopilot devices:
-
-1. Select **Intune** > **Device enrollment** > **Windows enrollment** > **Windows Autopilot** > **Devices**.
-1. Choose the device.
-1. In the pane on the right, change the **Group Tag** value.
-1. Select **Save**.
-
-### Target macOS user groups to require Jamf management<!-- 4061739 -->
-You'll be able to target specific groups of users to require their macOS devices to be managed by Jamf. This targeting will enable you to apply the Jamf compliance integration to a subset of macOS devices while other devices continue to be managed by Intune. Targeting will also let you gradually migrate users' devices from one mobile device management (MDM) system to the other.
 
 <!-- ***********************************************-->
-## Intune apps
-
-### Improved macOS enrollment experience in Company Portal<!-- 5074349  -->
-The Company Portal for macOS enrollment experience will have a simpler enrollment process that will align more closely with the Company Portal for iOS enrollment experience. Device users will see:  
-
-* A sleeker user interface.  
-* An improved enrollment checklist.  
-* Clearer instructions about how to enroll their devices.  
-* Improved troubleshooting options.  
+<!--## Intune apps-->
+ 
 
 <!-- ***********************************************-->
 ## Monitoring and troubleshooting
@@ -220,10 +198,8 @@ The Company Portal for macOS enrollment experience will have a simpler enrollmen
 A new centralized audit log experience will collect audit logs for all categories into one page. You'l be able to filter the logs to get the data you're looking for. To see the audit logs, go to **Tenant administration** > **Audit logs**. For more information, see [Upcoming change to Audit logs in Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Upcoming-change-to-Audit-logs-in-Intune/ba-p/1015858).
 
 <!-- ***********************************************-->
-## Role-based access control
+<!--## Role-based access control-->
 
-### Duplicate custom or built-in roles<!-- 1081938 -->
-You'll be able to copy built-in and custom roles. To do so, go to **Intune** > **Roles** > **All roles** > choose a role in the list > **Duplicate**. Make sure to enter a new Name that is unique.
 
 <!-- ***********************************************-->
 

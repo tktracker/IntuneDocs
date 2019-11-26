@@ -69,7 +69,7 @@ There are three categories of policy settings: data protection settings, access 
 
 ## Data transfer exemptions
 
-  There are some exempt apps and platform services that Intune app protection policy may allow data transfer to and from. For example, all Intune-managed apps on Android must be able to transfer data to and from the Google Text-to-speech, so that text from your mobile device screen can be read aloud. This list is subject to change and reflects the services and apps considered useful for secure productivity.
+  There are some exempt apps and platform services that Intune app protection policies allow data transfer to and from. For example, all Intune-managed apps on Android must be able to transfer data to and from the Google Text-to-speech, so that text from your mobile device screen can be read aloud. This list is subject to change and reflects the services and apps considered useful for secure productivity.
 
 ### Full exemptions
 

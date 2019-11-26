@@ -178,8 +178,9 @@ You can use an Intune device action to remotely [rotate BitLocker recovery keys]
 #### Updates to dedicated device enrollment to support SCEP device certificate deployment <!-- 5198878  -->
 Intune now supports SCEP device certificate deployment to Android Enterprise dedicated devices for certificate-based access to Wi-Fi profiles. The Microsoft Intune app must be present on the device for deployment to work. As a result, we've updated the enrollment experience for Android Enterprise dedicated devices. New enrollments still start the same (with QR, NFC, Zero-touch, or device identifier) but now have a step that requires users to install the Intune app. Existing devices will start getting the app automatically installed on a rolling basis.
 
-#### Intune support for Azure AD business-to-business collaboration<!--5670211  -->
-Intune supports Azure Active Directory (Azure AD) business-to-business (B2B) collaboration. Azure AD B2B collaboration lets you securely share your company's applications and services with guest users from any other organization, while maintaining control over your own corporate data. This functionality also provides auditing capabilities of B2B guest users. For more information, see [What is guest user access in Azure Active Directory B2B?](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
+#### Intune audit logs for business-to-business collaboration<!--5670211 -->
+Business-to-business (B2B) collaboration allows you to securely share you company's applications and services with guest users from any other organization, while maintaining control over your own corporate data. Intune now supports audit logs for B2B guest users. For example, when guest users make changes, Intune will be able to capture this data through audit logs. For more information, see [What is guest user access in Azure Active Directory B2B?](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
+
 
 <!-- ########################## -->
 ## Week of November 11, 2019  
