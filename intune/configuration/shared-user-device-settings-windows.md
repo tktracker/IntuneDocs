@@ -5,7 +5,6 @@ title: Windows 10 shared device settings - Microsoft Intune - Azure | Microsoft 
 description: Add and use Windows 10 to configure devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft Surface. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
 keywords:
 author: MandiOhlinger
-
 ms.author: mandia
 manager: dougeby
 ms.date: 04/01/2019

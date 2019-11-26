@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,9 +35,20 @@ In Intune, you can determine who has access to an app by assigning groups of use
 
 To set the availability of an app, you include and exclude app assignments to a group of users or devices by using a combination of include and exclude group assignments. This capability can be useful when you make the app available by including a large group, and then narrow the selected users by also excluding a smaller group. The smaller group might be a test group or an executive group. 
 
-When you exclude groups from an app assignment, you must exclude only user groups or only device groups. You can't exclude a mixture of user groups and device groups. 
+As a best practice, create and assign apps specifically for your user groups, and separately for your device groups. For more information on groups, see [Add groups to organize users and devices](~/fundamentals/groups-add.md).  
 
-Intune doesn't consider user-to-device association when it excludes groups. Including user groups while excluding device groups is unlikely to produce the results you need. Inclusion takes precedence over exclusion. For example, if you target an iOS app to **All Users** and exclude **All iPads**, the net result is that any user who is using an iPad still gets the app. However, if you target the iOS app to **All Devices** and exclude **All iPads**, the deployment will be successful.  
+Important scenarios exist when including or excluding app assignments:
+
+- Exclusion takes precedence over inclusion in the following same group type scenarios:
+	- Including user groups and excluding user groups when assigning apps
+	- Including device groups and excluding device group when assigning apps
+
+    For example, if you assign a device group to the **All corporate users user** group, but exclude members in the **Senior Management Staff** user group, **All corporate users** except the **Senior Management staff** get the assignment, because both groups are user groups.
+- Intune doesn't evaluate user-to-device group relationships. If you assign apps to mixed groups, the results may not be what you want or expect.
+
+    For example, if you assign a device group to the **All Users** user group, but exclude an **All personal devices** device group. In this mixed group app assignment, **All users** get the app. The exclusion does not apply.
+
+As a result, it's not recommended to assign apps to mixed groups.
 
 > [!NOTE]
 > When you set a group assignment for an app, the **Not Applicable** type is deprecated and replaced with exclude group functionality. 
@@ -45,7 +56,6 @@ Intune doesn't consider user-to-device association when it excludes groups. Incl
 > Intune provides pre-created **All Users** and **All Devices** groups in the console. The groups have built-in optimizations for your convenience. It's highly recommended that you use these groups to target all users and all devices instead of any "all users" or "all devices" groups that you might create yourself.  
 >
 > Android enterprise supports including and excluding groups. You can leverage the built-in **All Users** and **All Devices** groups for Android enterprise app assignment. 
-
 
 ## Include and exclude groups when assigning apps 
 To assign an app to groups by using the include and exclude assignment:

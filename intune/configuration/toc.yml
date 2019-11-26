@@ -16,7 +16,11 @@
   - name: Create a profile
     href: device-profile-create.md
   - name: Administrative templates on Windows
-    href: administrative-templates-windows.md
+    items:
+    - name: Administrative templates on Windows
+      href: administrative-templates-windows.md
+    - name: Update Office using administrative templates
+      href: administrative-templates-update-office.md      
   - name: Device features on iOS and macOS
     href: device-features-configure.md
   - name: Restrict device settings and features

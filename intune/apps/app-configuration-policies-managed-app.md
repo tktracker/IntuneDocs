@@ -35,9 +35,6 @@ ms.collection: M365-identity-device-management
 
 You can use app configuration policies with managed apps that support the Intune App SDK, even on devices that are not enrolled. 
 
-> [!NOTE]
-> Apps must be targeted with Intune App Protection policy in order to receive App Configuration policies. For more information about creating Intune App Protection policies, see [What are app protection policies?](app-protection-policy.md)
-
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Choose the **Client apps** workload.
 4. Choose **App configuration policies** in the **Manage** group, and then choose **Add**.

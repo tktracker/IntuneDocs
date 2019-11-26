@@ -88,9 +88,6 @@ The Intune SDK development team actively tests and maintains support for apps bu
 
 This table lists the settings that you can use for the App SDK and App Wrapping Tool.
 
-> [!NOTE]
-> The App Wrapping Tool can be used with Intune standalone or Intune with Configuration Manager.
-
 |Feature|App SDK|App Wrapping Tool|
 |-----------|---------------------|-----------|
 |Restrict web content to display in a corporate managed browser|X|X|
