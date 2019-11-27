@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -48,7 +48,7 @@ Sign in to [Intune](https://aka.ms/intuneportal) as a [Global administrator or a
 An app can be included so that Intune can manage aspects of the app. 
 
 Use the following steps to add an app to Intune:
-1. In [Intune](https://aka.ms/intuneportal), select **Client apps** > **Apps** > **Add**. 
+1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps** > **Add**. 
 2. Select **Windows 10** in the **Office 365 Suite** section of the **App type** dropdown box.
 3. Select **Configure App Suite** to select the Office apps to be assigned to the Intune user.
 4. Click **OK** to accept the default selected apps.
@@ -72,9 +72,9 @@ After you've added an app to Microsoft Intune, you can assign the app to groups 
 > This quickstart builds on previous quickstarts in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
 
 Use the following steps to assign an app to a group:
-1. In [Intune](https://aka.ms/intuneportal), select **Client apps** > **Apps**. 
+1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps**. 
 2. Select the app that you want to assign to a group.
-3. Click **Assignments** > **Add group** to display the **Add group** blade.
+3. Click **Assignments** > **Add group** to display the **Add group** pane.
 4. Select **Available for enrolled devices** in the **Assignment type** dropdown box. 
 5. Click **Included Groups** > **Select groups to include** > **Contoso Testers**.
 6. Click **Select** > **OK** > **OK** > **Save** to assign the group.

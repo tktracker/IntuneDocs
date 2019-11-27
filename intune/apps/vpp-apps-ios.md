@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -86,8 +86,8 @@ Before you start, you need to get a VPP token from Apple and upload it to your I
 
 ## To get and upload an Apple VPP token
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. On the **Intune** pane, choose **Client apps** > **Apple VPP tokens** under **Setup**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 4. On the list of VPP tokens pane, select **Create**.
 5. On the **Create VPP token** pane, specify the following information:
     - **VPP token file** - If you haven't already, sign up for the Volume Purchase Program for Business or the program for Education. After you sign up, download the Apple VPP token for your account and select it here.
@@ -114,7 +114,7 @@ You can synchronize the data held by Apple with Intune at any time by choosing *
 
 ## To assign a volume-purchased app
 
-1. On the **Intune** pane, choose **Client apps** > **Apps** under **Manage**.
+1. Select **Apps** > **All apps**.
 2. On the list of apps pane, choose the app you want to assign, and then choose **Assignments**.
 3. On the ***App name*** - **Assignments** pane, choose **Add group** then, on the **Add group** pane, choose an **Assignment type** and choose the Azure AD user or device groups to which you want to assign the app.
 5. For each group you selected, choose the following settings:
@@ -180,8 +180,8 @@ Currently, you cannot delete an iOS VPP app from Microsoft Intune.
 
 Access to Apple VPP tokens and VPP apps can be controlled independently using permissions assigned to custom administrator roles in Intune.
 
-* To allow an Intune custom role to manage Apple VPP tokens under **Client apps** > **Apple VPP tokens**, assign permissions for **Managed apps**.
-* To allow an Intune custom role to manage apps purchased using iOS VPP tokens under **Client apps** > **Apps**, assign permissions for **Mobile apps**. 
+* To allow an Intune custom role to manage Apple VPP tokens under **Apps** > **Apple VPP tokens**, assign permissions for **Managed apps**.
+* To allow an Intune custom role to manage apps purchased using iOS VPP tokens under **Apps** > **All apps**, assign permissions for **Mobile apps**. 
 
 ## Additional information
 
@@ -200,7 +200,7 @@ The license should be updated within a few hours after installing or uninstallin
 Yes. The Intune admin can oversubscribe an app. For example, if the admin purchases 100 licenses for app XYZ, and then targets the app to a group with 500 members in it. The first 100 members (users or devices) will get the license assigned to them, the rest of the members will fail on license assignment.
 
 ### How frequently does Intune sync VPP tokens with Apple?
-Intune syncs VPP tokens and licenses twice a day with Apple. The Intune admin can initiate a manual sync under **Client apps** > **Apple VPP tokens**.
+Intune syncs VPP tokens and licenses twice a day with Apple. The Intune admin can initiate a manual sync under **Apps** > **Apple VPP tokens**.
 
 ## Next steps
 

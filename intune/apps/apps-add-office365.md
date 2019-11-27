@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -53,11 +53,9 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 
 ## Get started
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. In the **Intune** pane, select **Client apps**.
-4. In the **Client apps** workload pane, under **Manage**, select **Apps**.
-5. Select **Add**.
-6. In the **Add apps** pane, in the **App type** list, under **Office 365 Suite**, select **Windows 10**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** > **Add**.
+3. In the **Add apps** pane, in the **App type** list, under **Office 365 Suite**, select **Windows 10**.
 
 ## Select settings format
 
@@ -65,13 +63,13 @@ You can choose a method for configuring app setting by selecting a **Settings fo
 - Configuration designer
 - Enter XML data
 
-When you choose **Configuration designer** the **Add app** blade will change to offer two additional settings options:
+When you choose **Configuration designer** the **Add app** pane will change to offer two additional settings options:
 - Configure App Suite
 - App Suite Settings
 
 <img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
 
-When you choose **Enter XML data** the **Add app** blade with display the **Enter XML data** option. Select this to display the **Configuration File** blade. 
+When you choose **Enter XML data** the **Add app** pane with display the **Enter XML data** option. Select this to display the **Configuration File** pane. 
 
 ![Add Office 365 configuration designer](./media/apps-add-office365/apps-add-office365-01.png)
     
@@ -98,7 +96,7 @@ In this step, you provide information about the app suite. This information help
 
 ## Configure app suite
 
-If you selected the **Configuration designer** option under the **Setting format** dropdown box, you'll see the **Configure App Suite** option in the **Add app** blade. Select the Office apps that you want to assign to devices.
+If you selected the **Configuration designer** option under the **Setting format** dropdown box, you'll see the **Configure App Suite** option in the **Add app** pane. Select the Office apps that you want to assign to devices.
 
 1. In the **Add App** pane, select **Configure App Suite**.
 2. In the **Configure App Suite** pane, select the standard Office apps that you want to assign to devices.  
@@ -107,7 +105,7 @@ If you selected the **Configuration designer** option under the **Setting format
 
 ## Configure app suite settings
 
-If you selected the **Configuration designer** option under the **Setting format** dropdown box, you'll see the **App Suite Settings** option in the **Add app** blade. In this step, configure installation options for the app suite. The settings apply to all apps that you added to the suite.
+If you selected the **Configuration designer** option under the **Setting format** dropdown box, you'll see the **App Suite Settings** option in the **Add app** pane. In this step, configure installation options for the app suite. The settings apply to all apps that you added to the suite.
 
 1. In the **Add App** pane, select **App Suite Settings**.
 2. In the **App Suite Settings** pane, do the following:
@@ -130,7 +128,7 @@ If you selected the **Configuration designer** option under the **Setting format
     - **Automatically accept the app end user license agreement**: Select this option if you don't require end users to accept the license agreement. Intune then automatically accepts the agreement.
     - **Use shared computer activation**: Select this option when multiple users share a computer. For more information, see [Overview of shared computer activation for Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Languages**: Office is automatically installed in any of the supported languages that are installed with Windows on the end-user's device. Select this option if you want to install additional languages with the app suite. <p></p>
-    You can deploy additional languages for Office 365 Pro Plus apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the Azure portal, select **Microsoft Intune** > **Client apps** > **Apps** > **Add**. In the **App type** list of the **Add app** blade, select **Windows 10** under **Office 365 Suite**. Select **Languages** in the **App Suite Settings** blade. For additional information, see [Overview of deploying languages in Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+    You can deploy additional languages for Office 365 Pro Plus apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the Azure portal, select **Microsoft Intune** > **Apps** > **All apps** > **Add**. In the **App type** list of the **Add app** pane, select **Windows 10** under **Office 365 Suite**. Select **Languages** in the **App Suite Settings** pane. For additional information, see [Overview of deploying languages in Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 
 ## Select scope tags (optional)
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -142,7 +140,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Enter XML format
 
-If you selected the **Enter XML data** option under the **Setting format** dropdown box, you'll see the **Enter XML format** option in the **Add app** blade. For more information, see [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+If you selected the **Enter XML data** option under the **Setting format** dropdown box, you'll see the **Enter XML format** option in the **Add app** pane. For more information, see [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## Finish up
 

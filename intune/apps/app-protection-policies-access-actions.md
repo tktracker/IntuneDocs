@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,16 +37,16 @@ You can explicitly choose to wipe your company’s corporate data from the end u
 
 ## Create an app protection policy using conditional launch actions
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. In the **Intune** pane, select **Client apps** > **App protection Policies**.
-4. Click **Add a policy** (You can also edit an existing policy). 
-5. Click **Configure required settings** to see the list of settings available to be configured for the policy. 
-6. By scrolling down in the Settings pane, you will see a section titled **Conditional launch** with an editable table.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **App protection Policies**.
+3. Click **Create policy** and select the platform of the device for your policy. 
+4. Click **Configure required settings** to see the list of settings available to be configured for the policy. 
+5. By scrolling down in the Settings pane, you will see a section titled **Conditional launch** with an editable table.
 
     ![Screenshot of the Intune app protection access actions](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions01.png)
 
-7. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. 
-8. Select the **Action** you want to take if users do not meet your requirements. In some cases, multiple actions can be configured for a single setting. For more information, see [How to create and assign app protection policies](app-protection-policies.md).
+6. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. 
+7. Select the **Action** you want to take if users do not meet your requirements. In some cases, multiple actions can be configured for a single setting. For more information, see [How to create and assign app protection policies](app-protection-policies.md).
 
 ## Policy settings 
 

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/26/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,8 +35,8 @@ On Microsoft Intune MDM-managed devices, sometimes app installations can fail. W
 
 Intune provides app troubleshooting details based on the apps installed on a specific user's device.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. On the **Intune** pane, choose **Troubleshoot**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Select **Troubleshoot + support**.
 4. Click **Select user** to select a user to troubleshoot. The **Select users** pane will be displayed.
 5. Select a user by typing the name or email address. Click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane. 
 6. Select the device that you want to troubleshoot from the **Devices** list.
@@ -60,12 +60,12 @@ The following actions should be considered when you have problems installing app
 - If the app does not display in the Company Portal, ensure the app is deployed with **Available** intent and that the user is accessing the Company Portal with the device type supported by the app.
 - For Windows BYOD devices, the user needs to add a Work account to the device.
 - Check if the user is over the AAD device limit:
-  1. Navigate to [Azure Active Directory Device Settings](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
+  1. Navigate to [Azure Active Directory Device Settings](https://portal.azure.com/#pane/Microsoft_AAD_IAM/DevicesMenupane/DeviceSettings/menuId).
   2. Make note of the value set for **Maximum devices per user**.
-  3. Navigate to [Azure Active Directory Users](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  3. Navigate to [Azure Active Directory Users](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Select the affected user and click **Devices**.
   5. If user is over the set limit then delete any stale records that are no longer needed.
-- For iOS DEP devices, ensure that the user is listed as **Enrolled by User** in Intune Device Overview blade. If it shows NA, then deploy a config policy for the Intune Company Portal. For more information, see [Configure the Company Portal app](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
+- For iOS DEP devices, ensure that the user is listed as **Enrolled by User** in Intune Device Overview pane. If it shows NA, then deploy a config policy for the Intune Company Portal. For more information, see [Configure the Company Portal app](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## Win32 app installation troubleshooting
 
@@ -78,7 +78,7 @@ Select the Win32 app that was deployed using the Intune management extension. Yo
 
 To collect your Win32 app installation logs, first follow the steps provided in the section [App troubleshooting details](troubleshoot-app-install.md#app-troubleshooting-details). Then, continue with the following steps:
 
-1. Click the **Collect logs** option on the **Installation details** blade.
+1. Click the **Collect logs** option on the **Installation details** pane.
 
     <image alt="Win32 app installation details - Collect log option" src="./media/troubleshoot-app-install/troubleshoot-app-install-04.png" width="500" />
 

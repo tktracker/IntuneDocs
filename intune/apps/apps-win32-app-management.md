@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -97,17 +97,17 @@ The following steps provide guidance to help you add a Windows app to Intune.
 
 ### Step 1: Specify the software setup file
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. In the **Intune** pane, select **Client apps** > **Apps** > **Add**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Select **Apps** > **All apps** > **Add**.
 4. In the **Add** app pane, select **Windows app (Win32)** from the provided drop-down list.
 
-    ![Screenshot of the Add app blade - Add type dropdown box](./media/apps-win32-app-management/apps-win32-app-01.png)
+    ![Screenshot of the Add app pane - Add type dropdown box](./media/apps-win32-app-management/apps-win32-app-01.png)
 
 ### Step 2: Upload the app package file
 
 1. In the **Add app** pane, select **App package file** to select a file. The App package file pane will be displayed.
 
-    ![Screenshot of the App package file blade](./media/apps-win32-app-management/apps-win32-app-02.png)
+    ![Screenshot of the App package file pane](./media/apps-win32-app-management/apps-win32-app-02.png)
 
 2. In the **App package file** pane, select the browse button. Then, select a Windows installation file with the extension *.intunewin*.
 
@@ -162,7 +162,7 @@ The following steps provide guidance to help you add a Windows app to Intune.
     - **Determine behavior based on return codes**: Choose this option to restart the device based on the [return codes](~/apps/apps-win32-app-management.md#step-7-configure-app-return-codes) configuration settings.
     - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
     - **App install may force a device restart**: Choose this option to allow the app installation to complete without suppressing restarts.
-    - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successfull app installation.
+    - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.
 
 6. When you're finished, select **OK**.
 
@@ -177,7 +177,7 @@ The following steps provide guidance to help you add a Windows app to Intune.
     - **Minimum number of logical processors required**: Optionally, add the minimum number of logical processors required to install the app.
     - **Minimum CPU speed required (MHz)**: Optionally, add the minimum CPU speed required to install the app.
 
-3. Click **Add** to display the **Add a Requirement rule** blade and configure additional requirement rules. Select the **Requirement type** to choose the type of rule that you will use to determine how a requirement is validated. Requirement rules can be based on file system information, registry values, or PowerShell scripts. 
+3. Click **Add** to display the **Add a Requirement rule** pane and configure additional requirement rules. Select the **Requirement type** to choose the type of rule that you will use to determine how a requirement is validated. Requirement rules can be based on file system information, registry values, or PowerShell scripts. 
     - **File**: When you choose **File** as the **Requirement type**, the requirement rule must detect a file or folder, date, version, or size. 
         - **Path** – The full path of the folder containing the file or folder to detect.
         - **File or folder** - The file or folder to detect.
@@ -294,7 +294,7 @@ At this point, you have completed steps to add a Win32 app to Intune. For inform
 
 ## App dependencies
 
-App dependencies are applications that must be installed before your Win32 app can be installed. You can require that other apps are installed as dependencies. Specifically, the device must install the dependent app(s) before it installs the Win32 app. ​There is a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. Once your Win32 app has been added, you'll see the **Dependencies** option on the blade for your Win32 app. 
+App dependencies are applications that must be installed before your Win32 app can be installed. You can require that other apps are installed as dependencies. Specifically, the device must install the dependent app(s) before it installs the Win32 app. ​There is a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. Once your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. 
 
 Any Win32 app dependency needs to be also be a Win32 app. It does not support depending on other app types, such as single MSI LOB apps or Store apps.
 
@@ -304,7 +304,7 @@ You can choose whether or not to install each dependent app automatically. By de
 
 To add an app dependency to your Win32 app, use the following steps:
 
-1. In Intune, select **Client apps** > **Apps** to view your list of added client apps. 
+1. In Intune, select **Apps** > **All apps** to view your list of added client apps. 
 2. Select an added **Windows app (Win32)** app. 
 3. Select **Dependencies** to add the dependent app(s) that must be installed before the Win32 app can be installed. 
 4. Click **Add** to add an app dependency.
@@ -340,12 +340,12 @@ You can configure the start time and deadline time for a Win32 app. At the start
 
 Set the app availability based on a date and time for a required app using the following steps:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. In the **Intune** blade, select **Client apps** > **Apps**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps**.
 3. Select an existing **Windows app (Win32)** from the list. 
-4. From the app blade, select **Assignments** > **Add group**. 
+4. From the app pane, select **Assignments** > **Add group**. 
 5. Set the **Assignment type** to **Required**. Note that app availability can be set based on the assignment type. The **Assignment type** can be **Required**, **Available for enrolled devices**, or **Uninstall**.
-6. Select **Included Groups** to determine which group of users will be assigned the app. The **Assign** blade will be displayed.
+6. Select **Included Groups** to determine which group of users will be assigned the app. The **Assign** pane will be displayed.
 7. Set **Make this app required for all users** to **Yes**.
 
     > [!NOTE]
@@ -355,18 +355,18 @@ Set the app availability based on a date and time for a required app using the f
     > - **Uninstall**: You can choose to ***uninstall this app for all users** and/or **uninstall this app for all devices**.
 
 8. To modify the **End user experience** options select **Edit**.
-9. In the **Edit assignment** blade, set the **Ender user notifications** to **Show all toast notifications**. Note that you can set **End user notifications** to **Show all toast notifications**, **Show toast notifications for computer restarts**, or **Hide all toast notifications**.
+9. In the **Edit assignment** pane, set the **Ender user notifications** to **Show all toast notifications**. Note that you can set **End user notifications** to **Show all toast notifications**, **Show toast notifications for computer restarts**, or **Hide all toast notifications**.
 10. set the **App availability** to **A specific date and time** and select your date and time. This date and time specifies when the app is downloaded to the end users device. 
 11. Set the **App installation deadline** to **A specific date and time** and select your date and time. This date and time specifies when the app is installed on the end users device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the earliest time possible.
 12. Click **Enabled** next to the **Restart grace period**. The restart grace period starts as soon as the app install has been completed on the device.​ When disabled, the device can restart without warning. <br>You can customize the following options:
-    - **Device restart grace period (minutes)**: The deault value is 1440 minutes (24 hours). This value can be a maximum of 2 weeks.
+    - **Device restart grace period (minutes)**: The default value is 1440 minutes (24 hours). This value can be a maximum of 2 weeks.
     - **Select when to display the restart countdown dialog box before the restart occurs (minutes)**: The default value is 15 minutes.
     - **Allow user to snooze the restart notification**: You can choose **Yes** or **No**.
         - **Select the snooze duration (minutes)**: The default value is 240 minutes (4 hours). The snooze value cannot be more than reboot grace period.
 13. Click **OK** > **OK** > **OK** > **Save** to add the assignment.
 
 ## Toast notifications for Win32 apps 
-If needed, you can suppress showing end user toast notifications per app assignment. From Intune, select **Client apps** > **Apps** > select the app > **Assignments** > **Include Groups**. 
+If needed, you can suppress showing end user toast notifications per app assignment. From Intune, select **Apps** > **All apps** > select the app > **Assignments** > **Include Groups**. 
 
 > [!NOTE]
 > Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.

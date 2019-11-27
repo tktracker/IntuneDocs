@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 # iOS app protection policy settings
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-This article describes the app protection policy settings for iOS devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** blade in the Azure portal when you make a new policy.
+This article describes the app protection policy settings for iOS devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the Azure portal when you make a new policy.
 
 There are three categories of policy settings: *Data relocation*, *Access requirements*, and *Conditional launch*. In this article, the term ***policy-managed apps*** refers to apps that are configured with app protection policies.
 

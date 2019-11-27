@@ -7,7 +7,7 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -43,18 +43,16 @@ You can assign apps by using this method only if they are free of charge in the 
 >[!NOTE]
 >When you work with Microsoft Intune, we recommend that you use either the Microsoft Edge or Google Chrome browser.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. In the **Intune** pane, select **Client apps**.
-4. In the **Client apps** workload pane, under **Manage**, select **Apps**.
-5. In the **Apps** pane, select **Add**.
-6. In the **App type** list, under the **Store app** types, select **iOS**.
-7. Select **Search the App Store**.
-8. In the **Search the App Store** pane, select the App Store country/region locale.
-9. In the **Search** box, type the name (or part of the name) of the app.  
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** > **Add**.
+3. In the **App type** list, under the **Store app** types, select **iOS**.
+4. Select **Search the App Store**.
+5. In the **Search the App Store** pane, select the App Store country/region locale.
+6. In the **Search** box, type the name (or part of the name) of the app.  
     Intune searches the store and returns a list of relevant results.
-10. In the results list, select the app you want, and then select **Select**.
-11. In the **Add app** pane, select **App information** to configure the app.
-12. In the **App information** pane, add the app information. Depending on the app you have chosen, some of the values in this pane might have been automatically filled in:
+7. In the results list, select the app you want, and then select **Select**.
+8. In the **Add app** pane, select **App information** to configure the app.
+9. In the **App information** pane, add the app information. Depending on the app you have chosen, some of the values in this pane might have been automatically filled in:
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
@@ -69,8 +67,8 @@ You can assign apps by using this method only if they are free of charge in the 
     - **Owner**: Optionally, enter a name for the owner of this app, for example, *HR department*. This field is visible only to administrators and is not visible to your users.
     - **Notes**: Optionally, enter any notes that you want to associate with this app. This field is only visible an administrator and will not be visible to end users.
     - **Logo**: Optionally, upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
-13. Select **OK**.
-14. Select **Add**.
+10. Select **OK**.
+11. Select **Add**.
 
 The app you have created is displayed in the apps list, where you can assign it to the groups that you select.
 

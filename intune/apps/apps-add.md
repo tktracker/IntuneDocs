@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -68,7 +68,7 @@ The following table lists the specific app types and how you can add them in the
 
 <sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps) below.
 
-You can add an app in Microsoft Intune by selecting **Client apps** > **Apps** > **Add**. The **Add app** pane is displayed and allows you to select the **App type**. 
+You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **Add**. The **Add app** pane is displayed and allows you to select the **App type**. 
 
 >[!TIP]
 > An LOB app is one that you add from an app installation file. For example, to install an iOS LOB app, you add the application by selecting **Line-of-business app** as the **App type** in the **Add app** pane. You then select the app package file (extension .ipa). These types of apps are typically written in-house.
@@ -155,9 +155,8 @@ App categories can be used to help you sort apps to make them easier for users t
 
 When you add an app to Intune, you are given the option to select the category you want. Use the platform-specific topics to add an app and assign categories. To create and edit your own categories, use the following procedure:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. In the **Intune** pane, select **Client apps**.
-4. In the **Client apps** workload pane, under **Setup**, select **App categories**.  
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Select **Apps** > **App categories**.  
     The **App categories** pane displays a list of current categories. 
 5. Do either of the following:
     - To add a category, in the **Create category** pane, select **Add**, and then enter a name for the category.  

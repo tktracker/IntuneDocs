@@ -65,14 +65,14 @@ Outlook for iOS supports two ways to deliver certificates to devices so that the
 To configure Outlook for iOS S/MIME in Endpoint Manager, including automatically delivering S/MIME certificates that Outlook for iOS can use, use the following steps:
 
 ### Add the Microsoft Outlook app
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Add the Microsoft Outlook for iOS app from the app store to Endpoint Manager or sync Outlook for iOS from the Apple Volume Purchase Program. For more information, see [Add iOS store apps to Microsoft Intune](~/apps/store-apps-ios.md) or [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune](~/apps/vpp-apps-ios.md).
 
 ### Create the Outlook for iOS S/MIME configuration policy
 
 The following steps allow you to create and configure the Outlook for iOS S/MIME policy in Endpoint Manager. These settings provide automated delivery of the signing and encryption certificates.
 
-1. In [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Apps configuration policies** > **Add**.<br>
+1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and select **Apps** > **Apps configuration policies** > **Add**.<br>
 The **Add configuration policy** pane will be displayed.
 2. Enter the **Name** and **Description** of the configuration policy.
 3. Select **Managed devices** as the **Device enrollment type**.

@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,7 +66,7 @@ The Intune management extension has the following prerequisites. Once the prereq
     
     - User signs in to the device using their Azure AD account, and then enrolls in Intune.
 
-  - Co-managed devices that use Configuration Manager and Intune. Be sure the **Client Apps** workload is set to **Pilot Intune** or **Intune**. See the following articles for guidance: 
+  - Co-managed devices that use Configuration Manager and Intune. Be sure the **Apps** workload is set to **Pilot Intune** or **Intune**. See the following articles for guidance: 
   
     - [What is co-management](https://docs.microsoft.com/sccm/comanage/overview) 
     - [Client apps workload](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
@@ -77,8 +77,8 @@ The Intune management extension has the following prerequisites. Once the prereq
 
 ## Create a script policy and assign it
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device configuration** > **PowerShell scripts** > **Add**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **PowerShell scripts** > **Add**.
 
     ![Add and use PowerShell scripts in Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
 

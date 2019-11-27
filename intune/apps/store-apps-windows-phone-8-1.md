@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,12 +38,10 @@ Before you assign an app to a device or a group of users, you must first add the
 ## Add an app to Intune
 You can add a Windows Phone 8.1 store app to Intune from the Azure portal by doing the following:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. In the **Intune** pane, select **Client apps**.
-4. In the **Client apps** workload pane, under **Manage**, select **Apps**.
-5. In the **Apps** pane, select **Add**.
-6. In the **Add app** pane, select an **App type** of **Windows Phone 8.1**, and then select **App information**.
-7. In the **App information** pane, add the app information. Depending on the app you have chosen, some of the values in this pane might have been automatically filled in:
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** > **Add**.
+3. In the **Add app** pane, select an **App type** of **Windows Phone 8.1**, and then select **App information**.
+4. In the **App information** pane, add the app information. Depending on the app you have chosen, some of the values in this pane might have been automatically filled in:
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
@@ -56,8 +54,8 @@ You can add a Windows Phone 8.1 store app to Intune from the Azure portal by doi
     - **Owner**: Optionally, enter a name for the owner of this app, for example, *HR department*.
     - **Notes**: Optionally, enter any notes that you want to associate with this app.
     - **Logo**: Optionally, upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
-8. Select **OK**.
-9. Select **Add**.
+5. Select **OK**.
+6. Select **Add**.
 
 The app that you've created is displayed in the apps list, where you can assign it to the groups that you select.
 

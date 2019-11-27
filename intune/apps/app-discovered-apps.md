@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,18 +37,18 @@ Intune **discovered apps** is a list of detected apps on the Intune enrolled dev
 
 Intune provides an aggregated list of detected apps on the Intune enrolled devices in your tenant.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. In the **Intune** pane, select **Client apps** > **Discovered apps**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **Monitor** > **Discovered apps**.
 
 >[!NOTE]
->You can export the list of discovered apps to a .csv file by selecting **Export** from the **Discovered apps** blade.
+>You can export the list of discovered apps to a .csv file by selecting **Export** from the **Discovered apps** pane.
 >
 >For discovered Win32 apps, there currently is no aggregate count. This type of data can only be viewed on a per-device basis.
 
 Intune also provides the list of discovered apps for the individual device in your tenant.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. In the Intune pane, select **Devices** > **All Devices**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **All Devices**.
 3. Select a device.
 4. To view detected apps for this device, select **Discovered Apps** in the **Monitor** section.
 
@@ -73,7 +73,7 @@ The following list provides the app platform type, the apps that are monitored f
 
 The number of discovered apps may not match the app install status count. Possibilities for inconsistencies include:
 
-- A targeting change of an installed managed app can cause the install count in the status blade to decrement, but remain reported in the detected apps.
+- A targeting change of an installed managed app can cause the install count in the status pane to decrement, but remain reported in the detected apps.
 - Targeting multiple instances of the same app in a tenant will result in different counts due to potential overlap of users or devices. Each instance of the app will count overlapping users, but discovered apps will have duplicated counts.
 - Discovered apps and app status are collected at different time intervals, which could cause a discrepancy in the app counts.
 

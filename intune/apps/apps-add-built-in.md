@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,24 +41,20 @@ In earlier versions of the Intune console, Intune provided several default manag
 ## Add a built-in app
 
 To add a built-in app to your available apps in Microsoft Intune, do the following:
-1. Sign in to the Azure portal.
-2. To display the Microsoft Intune pane, select **More Services** > **Monitoring + Management** > **Intune**.
-3. In the **Intune** pane, select **Client apps**.
-4. In the **Client apps** pane, under **Manage**, select **Apps**.
-5. Select **Add**.
-6. In the **Add** app pane, in the **App type** list, select **Built-In app**.
-7. Select **Select app**.
-8. In the **Built-In app** pane, select the apps that you want to include.
-9. In the **Add app** pane, select **Add**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** > **Add**.
+3. In the **Add** app pane, in the **App type** list, select **Built-In app**.
+4. Select **Select app**.
+5. In the **Built-In app** pane, select the apps that you want to include.
+6. In the **Add app** pane, select **Add**.
 
 
 ## Configure app information
 
 You can modify information about the built-in app. This information helps you to identify the app in Intune and helps users find the app in the company portal.
-1. In the **Client apps - Apps** pane, select the built-in app that you want to modify.  
-    A pane for the built-in app is displayed.
-2. Under **Manage**, select the **Properties** option.
-3. To modify the built-in app information, select the **Configure** option.
+1. Select **Apps** > **All apps** and select the built-in app that you want to modify.  
+   A pane for the built-in app is displayed.
+2. Select the **Properties** > **Configure**.
 4. In the **App information** pane, you can modify the following information:
     - **Name**: Enter the name of the built-in app as it is displayed in the company portal. Make sure all names that you use are unique. If the same app name exists twice, only one of the apps is displayed to users in the company portal.
     - **Description**: Enter a description for the app. 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -46,9 +46,8 @@ The retention period for app protection data is 90 days. Any app instances that 
 
 ## Summary view
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. On the **Intune** pane, choose **Client apps**.
-4. To see the summary view, in the **Client apps** workload, under **Monitor**, choose **App protection status**.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Select **Apps** > **Monitor** > **App protection status**.
 
    ![Screenshot of the summary tile on the Intune mobile application management pane](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
@@ -82,7 +81,7 @@ You can search for a single user and check the compliance status for that user. 
 >[!NOTE]
 > The **Last Sync** column represents the same value in both the in-console User status report and the App Protection Policy [exportable .csv report](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities). The difference is a small delay in synchronization between the value in the two reports. 
 >
-> The time referenced in Last Sync is when Intune last saw the app instance. When a user launches an app, it might notify the Intune App Protection service at that launch time, depending on when it last checked in. See [the retry interval times for App Protection Policy check-in](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). If a user hasn't used that particular app in the last check-in interval (which is usually 30 minutes for active usage), and they launch the app, then:
+> The time referenced in Last Sync is when Intune last saw the app instance. When a user launches an app, it might notify the Intune App Protection service at that launch time, depending on when it last checked in. See [the retry interval times for App Protection Policy check-in](~/apps/app-protection-policy-delivery.md). If a user hasn't used that particular app in the last check-in interval (which is usually 30 minutes for active usage), and they launch the app, then:
 >
 > - The App Protection Policy exportable .csv report has the newest time, within 1 minute (minimum) to 30 minutes (maximum).
 > - The User status report has the newest time instantly.
@@ -108,7 +107,7 @@ To see the reporting for a user, follow these steps:
 > If the users you searched for do not have the MAM policy deployed to them, you see a message informing you that the user is not targeted by any MAM policies.
 
 ### Flagged users
-The detailed view shows the error message, the app that was accessed when the error happened, the device OS platform affected, and a time stamp. The error is typically for jailbroken (iOS) or rooted (Android) devices. Also, users with devices that are flagged by the 'SafetyNet device attestation' conditional launch check are reported here with the reason as reported by Google. For a user to be removed from the report, the status of the device itself needs to have changed, which happens after the next root detection check (or jailbreak check/SafetyNet check happens) that needs to report a positive result. If the device is truly remediated, the refresh on the Flagged Users report will happen when the blade reloads.
+The detailed view shows the error message, the app that was accessed when the error happened, the device OS platform affected, and a time stamp. The error is typically for jailbroken (iOS) or rooted (Android) devices. Also, users with devices that are flagged by the 'SafetyNet device attestation' conditional launch check are reported here with the reason as reported by Google. For a user to be removed from the report, the status of the device itself needs to have changed, which happens after the next root detection check (or jailbreak check/SafetyNet check happens) that needs to report a positive result. If the device is truly remediated, the refresh on the Flagged Users report will happen when the pane reloads.
 
 ### Users with potentially harmful apps
 The detailed view shows:
@@ -125,14 +124,14 @@ Users with devices that are flagged by the **Require threat scan on apps** condi
 
 ## Reporting view
 
-You can find the same reports at the top of the **App protection status** blade.
+You can find the same reports at the top of the **App protection status** pane.
 
 > [!NOTE]
-> Intune provides additional device reporting fields, including App Registration ID, Android manufacturer, model, and security patch version, as well as iOS model. In Intune, you access these fields by selecting **Client apps** > **App protection status** > **App Protection Report: iOS, Android**. In addition, these parameters help you configure the **Allow** list for the device manufacturer (Android), the **Allow** list for the device model (Android and iOS), and the minimum Android security patch version setting. 
+> Intune provides additional device reporting fields, including App Registration ID, Android manufacturer, model, and security patch version, as well as iOS model. In Intune, you access these fields by selecting **Apps** > **App protection status** > **App Protection Report: iOS, Android**. In addition, these parameters help you configure the **Allow** list for the device manufacturer (Android), the **Allow** list for the device model (Android and iOS), and the minimum Android security patch version setting. 
 
-Additional reports are available to help you with the MAM policy compliance status. To view these reports, select **Client apps** > **App protection status** > **Reports**. 
+Additional reports are available to help you with the MAM policy compliance status. To view these reports, select **Apps** > **App protection status** > **Reports**. 
 
-The **Reports** blade provides several reports based on user and app, including the following:
+The **Reports** pane provides several reports based on user and app, including the following:
 
 - **User report**: This report outlines the same information you can find at the **User status** report under the [Detailed view](app-protection-policies-monitor.md#detailed-view) section above.
 
@@ -143,7 +142,7 @@ The **Reports** blade provides several reports based on user and app, including 
     - These apps are either being used by a user or an app that isn't currently targeted by a MAM policy.
     - All apps are checked in, but aren't getting any MAM policies.
 
-    ![Screenshot of a user's App reporting blade, with details for three apps](./media/app-protection-policies-monitor/MAM-reporting-4.png)
+    ![Screenshot of a user's App reporting pane, with details for three apps](./media/app-protection-policies-monitor/MAM-reporting-4.png)
 
 - **User configuration report**: Based on a selected user, this report provides details about any app configurations the user has received.
 - **App configuration report**: Base on the selected platform and app, this report provides details about which users have received configurations for the selected app.

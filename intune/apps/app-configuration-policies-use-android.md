@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -39,7 +39,7 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 > [!NOTE]  
 > Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
 
-1. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Client apps** > **App configuration policies** >  **Add**.
+1. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Apps** > **App configuration policies** >  **Add**.
 2. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Android Enterprise Nine Work app policy for entire company**.
@@ -115,7 +115,7 @@ You can also preconfigure app permissions to access Android device features. By 
 
 For example, an app uses the device's microphone. The user is prompted to grant the app permission to use the microphone.
 
-1. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Client apps** > **App configuration policies** >  **Add**.
+1. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Apps** > **App configuration policies** >  **Add**.
 2. Enter the following properties:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Android Enterprise prompt permissions app policy for entire company**.

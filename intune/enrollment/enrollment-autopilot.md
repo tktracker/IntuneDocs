@@ -163,7 +163,7 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 
 Alerts will show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them.
 
-To see alerts for unassigned devices, in [Intune in the Azure portal](https://aka.ms/intuneportal), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.  
+To see alerts for unassigned devices, in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.  
 
 ## Assign a user to a specific Autopilot device
 

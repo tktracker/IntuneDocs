@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -54,7 +54,7 @@ The steps to allow Win32 apps to run on a Windows 10 device in S mode are the fo
 To create a Windows 10 S mode supplemental policy, use the following steps:
 
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. In the **Intune** pane, select **Client apps** > **S mode supplemental policies** > **Create policy**.
+2. Select **Apps** > **S mode supplemental policies** > **Create policy**.
 3. Before adding the **Policy file**, you must create and sign it. For more information, see:
     - [Create a WDAC policy using PowerShell tools and convert it to a binary format](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Sign using Device Guard Signing Service](https://go.microsoft.com/fwlink/?linkid=2095629) **(recommended)**

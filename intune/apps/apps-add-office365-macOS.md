@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -45,14 +45,12 @@ Before you begin adding Office 365 to macOS devices, understand the following de
 ## Create and configure the app suite
 
 Add Office 365 from the **Apps** pane.
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. In the **Intune** pane, select **Client apps**.
-4. In the **Client apps** workload pane, under **Manage**, select **Apps**. 
-5. Select **Add**.
-6. In the **App type** list, in the **Office 365 Suite** group, select **macOS**.
-7. To get information about the app suite, select **App Suite Information**.  
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** > **Add**.
+3. In the **App type** list, in the **Office 365 Suite** group, select **macOS**.
+4. To get information about the app suite, select **App Suite Information**.  
     This information helps you to identify the app suite in Intune, and it helps users to find the app suite in the company portal.
-8. Enter the following information:
+5. Enter the following information:
     - **Suite Name**: Enter the name of the app suite as it is displayed in the company portal. Make sure that all suite names that you use are unique. If the same app suite name exists twice, only one of the apps is displayed to users in the company portal.
     - **Suite Description**: Enter a description for the app suite.
     - **Publisher**: Microsoft appears as the publisher.
@@ -64,8 +62,8 @@ Add Office 365 from the **Apps** pane.
     - **Owner**: Microsoft appears as the owner.
     - **Notes**: Optionally, enter any notes that you want to associate with this app.
     - **Logo**: The Office 365 logo is displayed with the app when users browse the company portal.
-9. Select **OK**.
-10. On the **Add app** pane, select **Add**.  
+6. Select **OK**.
+7. On the **Add app** pane, select **Add**.  
     The suite appears in the list of apps as a single entry.
 
 ## Configure app assignments

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -48,8 +48,8 @@ Windows Information Protection (WIP) policies can be deployed without requiring 
 
 ## Create a wipe request
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. In the Intune pane, select **Client apps** > **App selective wipe** > **Create wipe request**.<br>
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **App selective wipe** > **Create wipe request**.<br>
    The **Create wipe request** pane is displayed.
 3. Click **Select user**, choose the user whose app data you want to wipe, and click **Select** at the bottom of the **Select user** pane.
 
@@ -69,7 +69,7 @@ The service creates and tracks a separate wipe request for each protected app on
 
 You can have a summarized report that shows the overall status of the wipe request, and includes the number of pending requests and failures. To get more details, follow these steps:
 
-1. On the **Client Apps** > **App selective wipe** pane, you can see the list of your requests grouped by users. Because the system creates a wipe request for each protected app running on the device, you might see multiple requests for a user. The status indicates whether a wipe request is **pending**, **failed**, or **successful**.
+1. On the **Apps** > **App selective wipe** pane, you can see the list of your requests grouped by users. Because the system creates a wipe request for each protected app running on the device, you might see multiple requests for a user. The status indicates whether a wipe request is **pending**, **failed**, or **successful**.
 
     ![Screenshot of the wipe request status in the App selective wipe pane](./media/apps-selective-wipe/wipe-request-status-1.png)
 
