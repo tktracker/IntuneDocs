@@ -47,7 +47,7 @@ The devices to be enrolled must also:
 
 ## Set up Windows 10 automatic enrollment
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and, in the left pane, select **Azure Active Directory**.
+1. Sign in to Azure, in the left pane, select **Azure Active Directory**.
 
    ![The Azure portal](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
 
@@ -112,14 +112,14 @@ The organizational unit that's granted the rights to create computers must match
 
 The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. The computer must also have access to the internet and your Active Directory. To increase scale and availability or to support multiple Active Directory domains, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Device enrollment** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
 2. Follow the instructions to download the Connector.
 3. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 4. At the end of the setup, select **Configure**.
 5. Select **Sign In**.
 6. Enter the user Global Administrator or Intune Administrator role credentials.  
    The user account must have an assigned Intune license.
-7. Go to **Device enrollment** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
+7. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
 
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
@@ -188,7 +188,7 @@ After your Autopilot devices are enrolled, their names become the hostname of th
 ## Create and assign an Autopilot deployment profile
 Autopilot deployment profiles are used to configure the Autopilot devices.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Device enrollment** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 2. On the **Basics** page, type a **Name** and optional **Description**.
 3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices will not be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](enrollment-autopilot.md#delete-autopilot-devices).
 4. Select **Next**.
@@ -205,7 +205,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 ## (Optional) Turn on the enrollment status page
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Device enrollment** > **Windows enrollment** > **Enrollment Status Page**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 1. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
 1. In the **Show app and profile installation progress** box, select **Yes**.
 1. Configure the other options as needed.
@@ -213,7 +213,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 ## Create and assign a Domain Join profile
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Device configuration** > **Profiles** > **Create Profile**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create Profile**.
 1. Enter the following properties:
    - **Name**: Enter a descriptive name for the new profile.
    - **Description**: Enter a description for the profile.
