@@ -54,7 +54,7 @@ These templates give administrators a simplified view of settings similar to gro
 
 This feature supports:
 
-- Windows 10 1809 and later on supported firmware.
+- Windows 10 and later
 
 ## Certificates
 
@@ -107,7 +107,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and later
+- Windows 10 1809 and later on supported firmware
 
 ## Device restrictions
 
