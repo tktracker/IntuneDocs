@@ -219,9 +219,7 @@ When a device receives a Windows 10 feature updates policy:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
-- *Windows 10 feature updates* policy isn’t supported with Autopilot. Intune won't deploy the policy to:
-  - Devices that are being provisioned by Autopilot.
-  - Devices that were previously provisioned with Autopilot.
+- Windows 10 feature update policies cannot be applied during the out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day). In addition, devices that were provisioned with AutoPilot will not receive the policy.
 
   This limitation is being examined to see if it can be supported in the future.
 

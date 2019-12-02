@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 12/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -165,6 +165,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
 ### Encryption
 
 - **Encryption of data storage on a device**:  
+  This setting applies to all drives on a device.
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
 
