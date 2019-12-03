@@ -37,10 +37,13 @@ Intune supports a variety of app types, including web apps. A web app is a clien
 
 Before you can manage and assign an app for your users, add the app to Intune. 
 
-Intune creates a shortcut to the web app on the user's device. For iOS devices, a shortcut to the web app is added to the home screen. For Android devices, a shortcut to the web app is added to the Intune company portal widget and the widget needs to be pinned manually by the user. For Windows devices, a shortcut to the web app is placed on the Start Menu.
+Intune creates a shortcut to the web app on the user's device. For iOS devices, a shortcut to the web app is added to the home screen. For Android Device Admin devices, a shortcut to the web app is added to the Intune company portal widget and the widget needs to be pinned manually by the user. For Windows devices, a shortcut to the web app is placed on the Start Menu.
 
 > [!Note]
 > A browser must be installed on the user’s device to launch web apps. 
+
+> [!Note]
+> For Android Enterprise devices, see [Managed Google Play web links](apps-add-android-for-work.md#managed-google-play-web-links)
 
 ## Add a web app to Intune
 To add an app to Intune as a shortcut to an app on the web, do the following:
@@ -66,8 +69,6 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 7. In the **Add app** pane, select **Add**.
 
 > [!Note]
-> Users must add the Intune widget to their home screen to display web apps that have been assigned to Android devices.
->
 > Currently, deployment of Intune web apps to iOS devices is associated with the management profile and cannot be removed manually. You can change the deployment type to **Uninstall** in the Intune portal, at which point the web app can be removed automatically. However, if you remove the deployment before changing the app assignment intent to **Uninstall**, the web app will be permanently in place on the device until the device is un-enrolled from Intune.
 
 End-users can launch web apps directly from the Windows Company Portal app by selecting the web app and then choosing the option **Open in browser**. The published web URL is opened directly in the web browser. 

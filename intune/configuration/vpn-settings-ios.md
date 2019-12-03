@@ -183,7 +183,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Automatic VPN settings
 
-- **Per-app VPN**: Enables per-app VPN. Allows the VPN connection to trigger automatically when certain apps are opened. Also associate the apps with this VPN profile. For more information, see [instructions for setting up per-app VPN for iOS](vpn-setting-configure-per-app.md).
+- **Per-app VPN**: Enables per-app VPN. Allows the VPN connection to trigger automatically when certain apps are opened. Also associate the apps with this VPN profile. Per-app VPN is not supported on IKEv2. For more information, see [instructions for setting up per-app VPN for iOS](vpn-setting-configure-per-app.md). 
   - **Provider Type**: Only available for Pulse Secure and Custom VPN.
   - When using iOS **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel). Set the **ProviderType** value to **app-proxy** for app-layer tunneling, or **packet-tunnel** for packet-layer tunneling. If you're not sure which value to use, check your VPN provider's documentation.
   - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established.

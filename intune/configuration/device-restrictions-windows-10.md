@@ -190,6 +190,9 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
 
 - **Manual root certificate installation** (mobile only): **Block** prevents end users from manually installing root certificates, and intermediate CAP certificates. **Not configured** (default) allows this feature.
 - **Camera**: **Block** prevents end users from using the camera on the device. **Not configured** (default) allows this feature.
+
+  [Camera CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
+
 - **OneDrive file sync**: **Block** prevents end users from synchronizing files to OneDrive from the device. **Not configured** (default) allows this feature.
 - **Removable storage**: **Block** prevents end users from using external storage devices, like SD cards with the device. **Not configured** (default) allows this feature.
 - **Geolocation**: **Block** prevents end users from turning on location services on the device. **Not configured** (default) allows this feature.
