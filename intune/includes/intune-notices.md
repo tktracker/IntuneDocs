@@ -114,8 +114,8 @@ Android device administrator (sometimes referred to "legacy" Android management 
 
 #### How does this affect me?
 Because of these changes by Google, Intune users will be impacted in the following ways:  
-- Intune will only be able to provide support for device administrator-managed Android devices running Android 10 and later (also known as Android Q) through the summer of 2020. This date is when the next major version of Android is expected to be released.   
-- Device administrator-managed devices that are running Android 10 or later after the summer of 2020 will no longer be able to be entirely managed.       
+- Intune will only be able to provide full support for device administrator-managed Android devices running Android 10 and later through Q2 CY2020. Device administrator-managed devices that are running Android 10 or later after this time won't be able to be entirely managed. In particular, impacted devices won’t receive new password requirements.
+    - Samsung Knox devices won't be impacted in this timeframe because extended support is provided through Intune’s integration with the Knox platform. This gives you more time to plan the transition off device admin management.    
 - Device administrator-managed Android devices that remain on Android versions below Android 10 won't be impacted and can continue to be entirely managed with device administrator.    
 - For all devices running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device updates to Android 10 or later:  
     - Network access control for VPN will no longer work.   
@@ -125,7 +125,7 @@ Because of these changes by Google, Intune users will be impacted in the followi
         > This only impacts device administrator-managed devices on Android 10 and later and does not affect devices being managed as Android Enterprise. 
 
 #### What do I need to do to prepare for this change?
-To avoid the reduction in functionality coming in the summer of 2020, we recommend the following:
+To avoid the reduction in functionality coming in Q3 CY2020, we recommend the following:
 - Don't onboard new devices into device administrator management.
 - If a device is expected to receive an update to Android 10, migrate it off of device administrator management to Android Enterprise management and/or app protection policies.
 

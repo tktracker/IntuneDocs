@@ -82,7 +82,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |MEID|The device's mobile equipment identifier.|Windows, iOS, Android|
 |Manufacturer|The manufacturer of the device.|Windows, iOS, Android|
 |Model|The model of the device.|Windows, iOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS, Android|
+|Phone number|The phone number assigned to the device.|Windows, iOS, Android*|
 |Subscribe carrier|The device's wireless carrier.|Windows, iOS, Android|
 |Cellular technology|The radio system used by the device.|Windows, iOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS, Android|
@@ -98,7 +98,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Supervised|If **Yes**, administrators have enhanced control over the device.|Windows, iOS, Android|
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS, Android|
 
-
+\* Not available in Android with Google policy manager,such as Fully-managed and Dedicated devices
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.

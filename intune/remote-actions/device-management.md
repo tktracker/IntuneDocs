@@ -74,6 +74,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Windows 10 PIN reset](device-windows-pin-reset.md)
   - [Remote control for Android](teamviewer-support.md)
   - [Synchronize device](device-sync.md)
+  - [Rename device](device-rename.md)
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
   - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
 
