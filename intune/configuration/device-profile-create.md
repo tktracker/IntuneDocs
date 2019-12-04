@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -184,11 +184,13 @@ When creating profiles, consider the following recommendations:
 
 - Separate user policies from device policies.
 
-  For example, [Administrative Templates in Intune](administrative-templates-windows.md) have hundreds of ADMX settings. These template shows if a settings applies to users or devices. When creating admin templates, assign your users settings to a users group, and assign your device settings to a devices group.
+  For example, [Administrative Templates in Intune](administrative-templates-windows.md) have hundreds of ADMX settings. These templates show if a settings applies to users or devices. When creating admin templates, assign your users settings to a users group, and assign your device settings to a devices group.
 
   The following image shows an example of a setting that can apply to users and/or apply to devices:
 
   ![Intune admin template that applies to user and devices](./media/device-profile-create/setting-applies-to-user-and-device.png)
+
+- Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from 4 characters to 6 characters, let your users know before your assign the policy.
 
 ## Next steps
 

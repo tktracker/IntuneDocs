@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/15/2019
+ms.date: 12/04/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -54,7 +54,9 @@ Some additional recommendations:
 
 Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms.
 
-If a device doesn't check in to get the policy or profile after the first notification, Intune makes three more attempts. An offline device, such as turned off, or not connected to a network, may not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with the Intune service, which is **estimated** at:
+If a device doesn't check in to get the policy or profile after the first notification, Intune makes three more attempts. An offline device, such as turned off, or not connected to a network, may not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with the Intune service. The same applies to checks for non-compliance, including devices that move from a compliant to a non-compliant state.
+
+**Estimated** frequencies:
 
 | Platform | Refresh cycle|
 | --- | --- |
@@ -65,7 +67,7 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | Windows Phone | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
-If the device recently enrolled, the compliance and configuration check-in runs more frequently, which is **estimated** at:
+If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently, which is **estimated** at:
 
 | Platform | Frequency |
 | --- | --- |

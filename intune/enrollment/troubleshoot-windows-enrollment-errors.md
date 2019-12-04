@@ -74,12 +74,12 @@ There are several possible solutions to this issue:
 > This method increases the device enrollment limit for all users, not just the affected user.
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Device Enrollment** > **Enrollment Restrictions**, and then select **Device Limit Restrictions**.    
-3. Increase the value of **Device Limit**. 
+2. Go to **Devices** > **Enrollment restrictions** > **Default** (under **Device limit restrictions**) > **Properties** > **Edit** (next to **Device limit**) > increase the **Device limit** (maximum 15)> **Review + Save**.    
+ 
 
 ##### Check device type restrictions
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
-2. Go to **Device Enrollment** > **Enrollment Restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.    
+2. Go to **Devices** > **Enrollment restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.    
 3. Select **Platforms**, and then select **Allow** for **Windows (MDM)**.
 
     > [!IMPORTANT]
@@ -208,10 +208,9 @@ Error: "There was a problem. Your organization does not support this version of 
 #### Resolution
 To fix this issue in a stand-alone Intune environment, follow these steps: 
  
-1. Sign in to the [Azure portal](https://portal.azure.com/) as administrator.    
-2. Select **Intune** on the left, and then go to **Device enrollment** > **Enrollment restrictions**.    
-3. In **Device Type Restrictions**, click **Platforms**, and then select **Allow** for **Windows (MDM)**.    
-4. Click **Save**.    
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriciton.    
+2. Choose **Properties** > **Edit** (next to **Platform settings**) > **Allow** for **Windows (MDM)**.    
+3. Click **Review + Save**.    
  
 To fix this issue in hybrid MDM with Intune and Configuration Manager, follow these steps: 
 1. Open the Configuration Manager console.    
@@ -339,7 +338,7 @@ This issue typically occurs before the device is restarted in a Hybrid Azure AD 
 
 #### Resolution
 
-1. Go to **Intune** >  **Device Enrollment** > **Windows Enrollment** > **Devices**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
 2. Select the device which is experiencing the issue > click the ellipsis (…) on the rightmost side.
 3. Select **Unassign user** and wait for the process to finish.
 4. Verify that the Hybrid Azure AD Autopilot profile is assigned before re-attempting OOBE.

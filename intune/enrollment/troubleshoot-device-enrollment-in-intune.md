@@ -67,7 +67,7 @@ These issues may occur on all device platforms.
 
 Check to see that the user isn't assigned more than the maximum number of devices by following these steps:
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
 
 2. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices.
 
@@ -380,7 +380,7 @@ This issue can happen if:
 4. Tell the user to restart the enrollment process.
 
 #### Determine if there's something wrong with the VPP token
-1. Go to **Intune** > **Device enrollment** > **Apple enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
 2. Review the properties to see if any errors similar to the following appear:
     - This token has expired.
     - This token is out of Company Portal licenses.
@@ -390,13 +390,13 @@ This issue can happen if:
 3. Fix the issues for the token.
 
 #### Identify which devices are blocked by the VPP token
-1. Go to **Intune** > **Device enrollment** > **Apple enrollment** > **Enrollment program tokens** > token name > **Devices**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
 2. Filter the **Profile status** column by **Blocked**.
 3. Make a note of the serial numbers for all the devices that are **Blocked**.
 
 #### Remotely wipe the blocked devices
 After you’ve fixed the issues with the VPP token, you must wipe the devices that are blocked.
-1. Go to **Intune** > **Devices** > **All devices** > **Columns** > **Serial number** > **Apply**. 
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > **Columns** > **Serial number** > **Apply**. 
 2. For each blocked device, choose it in the **All devices** list and then choose **Wipe** > **Yes**.
 
 #### Tell the users to restart the enrollment process
@@ -420,8 +420,8 @@ After you've wiped the blocked devices, you can tell the users to restart the en
 - If your organization turned on enrollment restrictions that block personal macOS devices, you must manually [add the personal device's serial number](corporate-identifiers-add.md#manually-enter-corporate-identifiers) to Intune.  
 - If the device is still assigned to another user in Intune, its former owner did not use the Company Portal app to remove or reset it. To clean up the stale device record from Intune:  
 
-    1. Go to [Intune in the Azure portal](https://portal.manage.microsoft.com) and sign in with your administrative credentials.
-    2. Go to Intune > **Devices** > **All devices**.  
+    1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in with your administrative credentials.
+    2. Choose **Devices** > **All devices**.  
     3. Find the device with the enrollment problem. Search by device name or MAC/HW Address to narrow your results.
     4. Select the device > **Delete**. Delete all other entries associated with the device.  
 
