@@ -184,6 +184,11 @@ This feature applies to:
 - **Password expiration notification** (Kerberos only): Enter the number of days before a password expires that users get notified that their password will expire. **Not configured** (default) uses `15` days.
 - **Password expiration** (Kerberos only): Enter the number of days before the device password must be changed. **Not configured** (default) means user passwords never expire.
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
+
+  > [!TIP]
+  > - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter       `Username: {{username}}`. 
+  > - However, be careful with variable substitution because variables aren't validated in the UI and they are case sensitive. Be sure to enter the correct information.
+  
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.  
 - **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message is shown if you don’t require Active Directory’s password complexity requirements, or don’t enter a minimum password length.  

@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 12/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -599,8 +599,18 @@ For more information, see [PassportForWork CSP](https://docs.microsoft.com/windo
 - **Configure Windows Hello for Business** - *TenantId/Policies/UsePassportForWork*    
   Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.  
 
+
+  > [!IMPORTANT]
+  > The options for this setting are reversed from their implied meaning. While reversed, a value of *Yes* does not enable Windows Hello and instead is treated as *Not configured*. When this setting is set to *Not configured*, Windows Hello is enabled on devices that receive this baseline.
+  >
+  > The following descriptions have been revised to reflect this behavior. The reversal of settings will be fixed in a future update to this security baseline.
+
+  - When set to *Not configured*, Windows Hello is enabled, and the device provisions Windows Hello for Business.
+  - When set to *Yes*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If it's enabled, it remains enabled.
+  <!-- expected behavior 
   - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
   - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
+  -->
 
   You cannot disable Windows Hello for Business through this baseline. You can disable Windows Hello for Business when you configure [Windows enrollment](windows-hello.md), or as part of a device configuration profile for [identity protection](identity-protection-configure.md).  
 
