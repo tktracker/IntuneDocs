@@ -64,12 +64,13 @@ The following list provides the app platform type, the apps that are monitored f
 | Windows Phone 8 | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | Windows RT | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | iOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| macOS | All apps installed on the device | All apps installed on the device | Every 7 days from device enrollment |
+| macOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
 | Android | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
 | Android Enterprise | Only managed apps | Only apps installed in the Work Profile | Every 7 days from device enrollment |
 
 > [!NOTE]
-> Windows 10 Hybrid Azure AD joined devices, as shown in the app management workload in Configuration Manager, do not currently collect app inventory through the Intune Management Extension (IME) as per the above schedule. To mitigate this issue, the app management workload in Configuration Manager should be switched to Intune for the IME to be installed on the device (IME is required for Win32 inventory and PowerShell deployment). Note that any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).
+> - Windows 10 Hybrid Azure AD joined devices, as shown in the app management workload in Configuration Manager, do not currently collect app inventory through the Intune Management Extension (IME) as per the above schedule. To mitigate this issue, the app management workload in Configuration Manager should be switched to Intune for the IME to be installed on the device (IME is required for Win32 inventory and PowerShell deployment). Note that any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).
+> - Personally-owned macOS devices enrolled before November 2019 may continue to show all apps installed on the device until the devices are enrolled again.
 
 The number of discovered apps may not match the app install status count. Possibilities for inconsistencies include:
 

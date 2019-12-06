@@ -181,7 +181,7 @@ The additional requirements to use the [Word, Excel, and PowerPoint](https://pro
   > The Office mobile apps currently only support SharePoint Online and not SharePoint on-premises.
 
 ### Managed location needed for Office
-A managed location (i.e. OneDrive) needed for Office. Intune marks all data in the app as either "corporate" or "personal". Data is considered "corporate" when it originates from a business location. For the Office apps, Intune considers the following as business locations: email (Exchange) or cloud storage (OneDrive app with a OneDrive for Business account).
+A managed location (i.e. OneDrive) is needed for Office. Intune marks all data in the app as either "corporate" or "personal". Data is considered "corporate" when it originates from a business location. For the Office apps, Intune considers the following as business locations: email (Exchange) or cloud storage (OneDrive app with a OneDrive for Business account).
 
 ### Skype for Business
 There are additional requirements to use Skype for Business. See [Skype for Business](https://products.office.com/skype-for-business/it-pros) license requirements. For Skype for Business (SfB) hybrid and on-prem configurations, see [Hybrid Modern Auth for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) and [Modern Auth for SfB OnPrem with AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910), respectively.
@@ -219,12 +219,12 @@ The Personal Identification Number (PIN) is a passcode used to verify that the c
 **PIN prompt**<br>
 Intune prompts for the user's app PIN when the user is about to access "corporate" data. In multi-identity apps such as Word, Excel, or PowerPoint, the user is prompted for their PIN when they try to open a "corporate" document or file. In single-identity apps, such as line-of-business apps managed using the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md), the PIN is prompted at launch, because the [Intune App SDK](../developer/app-sdk.md) knows the user's experience in the app is always "corporate".
 
-**PIN prompt frequency**<br>
-The IT admin can define the Intune app protection policy setting **Recheck the access requirements after (minutes)** in the Intune admin console. This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen is shown again. However, important details about PIN that affect how often the user will be prompted are:
+**PIN prompt, or corporate credential prompt, frequency**<br>
+The IT admin can define the Intune app protection policy setting **Recheck the access requirements after (minutes)** in the Intune admin console. This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen, or corporate credential prompt, is shown again. However, important details about PIN that affect how often the user will be prompted are:
 
-- **The PIN is shared among apps of the same publisher to improve usability:**<br> On iOS, one app PIN is shared amongst all apps **of the same app publisher**. On Android, one app PIN is shared amongst all apps.
-  - **The *Recheck the access requirements after (minutes)* behavior after a device reboot:**<br> A "PIN timer" tracks the number of minutes of inactivity that determine when to show the Intune app PIN next. On iOS, the PIN timer is unaffected by device reboot. Thus, device restart has no effect on the number of minutes the user has been inactive from an iOS app with Intune PIN policy. On Android, the PIN timer is reset on device reboot. As such, Android apps with Intune PIN policy will likely prompt for an app PIN regardless of the 'Recheck the access requirements after (minutes)' setting value **after a device reboot**.  
-  - **The rolling nature of the timer associated with the PIN:**<br> Once a PIN is entered to access an app (app A), and the app leaves the foreground (main input focus) on the device, the PIN timer gets reset for that PIN. Any app (app B) that shares this PIN will not prompt the user for PIN entry because the timer has reset. The prompt will show up again once the 'Recheck the access requirements after (minutes)' value is met again.
+- **The PIN is shared among apps of the same publisher to improve usability:**<br> On iOS, one app PIN is shared amongst all apps **of the same app publisher**. For example, all Microsoft apps share the same PIN. On Android, one app PIN is shared amongst all apps.
+- **The *Recheck the access requirements after (minutes)* behavior after a device reboot:**<br> A timer tracks the number of minutes of inactivity that determine when to show the Intune app PIN, or corporate credential prompt next. On iOS, the timer is unaffected by device reboot. Thus, device reboot has no effect on the number of minutes the user has been inactive from an iOS app with Intune PIN (or corporate credential) policy targeted. On Android, the timer is reset on device reboot. As such, Android apps with Intune PIN (or corporate credential) policy will likely prompt for an app PIN, or corporate credential prompt, regardless of the 'Recheck the access requirements after (minutes)' setting value **after a device reboot**.  
+- **The rolling nature of the timer associated with the PIN:**<br> Once a PIN is entered to access an app (app A), and the app leaves the foreground (main input focus) on the device, the timer gets reset for that PIN. Any app (app B) that shares this PIN will not prompt the user for PIN entry because the timer has reset. The prompt will show up again once the 'Recheck the access requirements after (minutes)' value is met again.
 
 For iOS devices, even if the PIN is shared between apps from different publishers, the prompt will show up again when the **Recheck the access requirements after (minutes)** value is met again for the app that is not the main input focus. So, for example, a user has app _A_ from publisher _X_ and app _B_ from publisher _Y_, and those two apps share the same PIN. The user is focused on app _A_ (foreground), and app _B_ is minimized. After the **Recheck the access requirements after (minutes)** value is met and the user switches to app _B_, the PIN would be required.
 
@@ -268,7 +268,6 @@ Only data marked as "corporate" is encrypted according to the IT administrator's
 For line-of-business apps managed by the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md), all app data is considered "corporate".
 
 **Remotely wipe data**<br>
-
 Intune can wipe app data in three different ways: 
 - Full device wipe
 - Selective wipe for MDM 
