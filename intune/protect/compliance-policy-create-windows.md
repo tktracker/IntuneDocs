@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/02/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -203,7 +203,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
 
 - **Microsoft Defender Antimalware**:  
   - **Not configured** (*default*) - Intune doesn't control the service, nor change existing settings.
-  - **Require** - Turn on the Microsoft Defender anti-malware service, and prevent users from turning it off. 
+  - **Require** - Turn on the Microsoft Defender anti-malware service, and prevent users from turning it off.
 
 - **Microsoft Defender Antimalware minimum version**:  
   Enter the minimum allowed version of Microsoft Defender anti-malware service. For example, enter `4.11.0.0`. When left blank, any version of the Microsoft Defender anti-malware service can be used.  
@@ -211,10 +211,12 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   *By default, no version is configured*.
 
 - **Microsoft Defender Antimalware security intelligence up-to-date**:  
-  Controls the Windows Security virus and threat protection updates on the devices.  
+  Controls the Windows Security virus and threat protection updates on the devices.
   - **Not configured** (*default*) - Intune doesn't enforce any requirements.
-  - **Require** - Force the Microsoft Defender security intelligence be up-to-date. 
+  - **Require** - Force the Microsoft Defender security intelligence be up-to-date.
 
+  [Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  
   For more information, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 - **Real-time protection**:  

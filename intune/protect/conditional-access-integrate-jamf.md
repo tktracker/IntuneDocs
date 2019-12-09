@@ -94,13 +94,21 @@ To connect Intune with Jamf Pro:
    > [!IMPORTANT]
    > Before you leave this page, copy the value for the client secret and record it for later use. You will need this value in later procedures. This value isn’t available again, without recreating the app registration.
 
-6. Select **API permissions** under **Manage**. Select the existing permissions and then select **Remove permission** to delete those permissions. Removal of all existing permissions is necessary as you’ll add a new permission, and the application only works if it has the single required permission.
+6. Select **API permissions** under **Manage**. 
 
-7. To assign a new permission, select **Add a permission**. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select only the check box for **update_device_attributes**.
+7. On the API permissions page, select **Add a permission** to add a new permission. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select only the check box for **update_device_attributes**.
 
-   Select **Add permission** to save this configuration.
+8. Wait a few minutes so that the new permission can take effect. Then, select **Grant admin consent for _\<your tenant>_**. Authenticate your account in the new window and grant the application access by following the prompts.  
 
-8. On the **API permissions** page, select **Grant admin consent for _\<your tenant>_**, and then select **Yes**.  After the app is registered successfully, the API permissions should appear as follows:
+9. You may need to wait another few minutes so that the admin consent can take effect.
+
+10. Refresh the page by click on the **Refresh** button at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission. 
+
+11. Remove admin consent from the **User.Read** permission by selecting the **...** menu and selecting **Revoke admin consent**.
+
+12. You will also need to remove the **User.Read** permission. Select the **...** menu by **User.Read** and select **Remove permission**. 
+
+8. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes** and should appear as follows:
 
    ![Successful permissions](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
