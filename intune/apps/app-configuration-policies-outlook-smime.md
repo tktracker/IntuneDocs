@@ -81,9 +81,6 @@ The **Add configuration policy** pane will be displayed.
 6. Click **Configuration settings** to add configuration settings. 
     - Select **Use configuration designer** next to **Configuration settings format** and accept the default settings. For more information, see [Microsoft Outlook configuration settings](~/apps/app-configuration-policies-outlook.md).
 7. Click **S/MIME** to display the **Outlook S/MIME settings**.
-
-    ![Screenshot of Outlook for iOS S/MIME settings](./media/app-configuration-policies-outlook-smime/app-configuration-policies-outlook-smime-01.png)
-
 8. Set **Enable S/MIME** to **Yes**.
 9. Set **Deploy S/MIME certificates from Intune** to **Yes**.
 10. Under **Signing certificates** next to **Certificate profile type**, choose one of the following options:

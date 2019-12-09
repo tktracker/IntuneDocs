@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,20 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 -->  
 
 <!-- ########################## -->
+## Week of December 9, 2019
+
+#### Migrating to Microsoft Edge for managed browsing scenarios<!-- 5173762 -->
+
+As we move closer to the retirement of the Intune Managed Browser, we made changes to app protection policies to simplify the steps needed to move your users over to Edge. We have updated the options for the app protection policy setting **Restrict web content transfer with other apps** to be one of the following:
+
+- Any app
+- Intune Managed Browser
+- Microsoft Edge
+- Unmanaged browser 
+
+When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign-in to Microsoft Edge with their AAD accounts, if they have not already done so.  This will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. This means your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers leveraging managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
+
+<!-- ########################## -->
 ## Week of December 2, 2019
 
 #### New Microsoft Endpoint Configuration Manager co-management licensing<!--5027281-->
@@ -65,6 +79,7 @@ A new license is now available that lets Configuration Manager customers with So
 - Windows 10 devices enrolled into Intune by using other means require full Intune licenses.
 - Devices on other platforms still require full Intune licenses.
 
+For more information, see [Licensing terms](https://www.microsoft.com/en-us/Licensing/product-licensing/products).
 
 
 <!-- ########################## -->
