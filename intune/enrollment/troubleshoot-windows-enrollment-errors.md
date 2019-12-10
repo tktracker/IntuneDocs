@@ -208,7 +208,7 @@ Error: "There was a problem. Your organization does not support this version of 
 #### Resolution
 To fix this issue in a stand-alone Intune environment, follow these steps: 
  
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriciton.    
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriction.    
 2. Choose **Properties** > **Edit** (next to **Platform settings**) > **Allow** for **Windows (MDM)**.    
 3. Click **Review + Save**.    
  

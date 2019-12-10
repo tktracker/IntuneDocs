@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,8 +27,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # iOS and iPadOS device settings to allow or restrict features using Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 This article lists and describes the different settings you can control on iOS and iPadOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
@@ -55,7 +53,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Untrusted TLS certificates**: Choose **Block** to prevent untrusted Transport Layer Security (TLS) certificates on the device. **Not configured** (default) allows TLS certificates.
-- **Allow over-the-air PKI updates**: **Allow** lets your users  receive software updates without connecting their devices to a computer.
+- **Block over-the-air PKI updates**: **Block** prevents your users from receiving software updates without connecting their devices to a computer. **Not configured** (default) doesn't update this setting on the device.
 - **Limit ad tracking**: Choose **Limit** to disable the device advertising identifier. **Not configured** (default) keeps it enabled.
 
 ### Settings apply to: Automated device enrollment (supervised)
@@ -98,7 +96,7 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Configuration profile changes**: **Block** prevents configuration profile changes on the device. **Not configured** (default) allows the user to install configuration profiles.
 - **Activation Lock**: Choose **Allow** to enable Activation Lock on supervised iOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated.
 - **Block app removal**: Choose **Block** to prevent users from removing apps. **Not configured** (default) allows users to remove apps from the device.
-- **Blocks USB Restricted mode**: Choose **Block** to disable USB Restricted mode on supervised devices. USB Restricted mode prevents USB accessories from exchanging data with a device that's locked for over an hour. **Not configured** (default) allows USB Restricted mode.
+- **Allow USB accessories while device is locked**: **Allow** lets USB accessories exchange data with a device that's been locked for over an hour. **Not configured** (default) doesn't update USB Restricted mode on the device.
 - **Force automatic date and time**: **Require** forces supervised devices to set the Date & Time automatically. The device's time zone is updated when the device has cellular connections or has Wi-Fi with location services enabled.
 - **Require students to request permission to leave Classroom course**: **Require** forces students enrolled in an unmanaged course using the Classroom app to request permission from the teacher to leave the course. **Not configured** (default) doesn't force the student to ask for permission.
 
