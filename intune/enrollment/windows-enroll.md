@@ -132,6 +132,15 @@ Azure Active Directory has a different CNAME that it uses for device registratio
 For more information about device registration, see
 [Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 
+## Windows 10 auto enrollment and device registration
+Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.us.
+
+| Type | Host name | Points to | TTL |
+| --- | --- | --- | --- |
+| CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour|
+|CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
+
+
 ## Next steps
 
 - [Considerations when managing Windows devices using Intune on Azure](../fundamentals/intune-legacy-pc-client.md).
