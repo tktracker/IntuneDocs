@@ -140,13 +140,6 @@ Applies to:
 ### Require use of approved keyboards on Android<!--4761794 IDready -->
 You'll be able to specify a list of approved keyboards for use in managed Android apps. From the managed app, the user will be prompted to switch to one of the approved keyboards already installed on their device or, if needed, they will be directed to the Google Play Store to download and set-up one of the approved keyboards. The user will only be able to edit text fields in a managed app if their active keyboard is one of the approved keyboards.
 
-### Use PKCS certificates with Wi-Fi profiles on Windows 10 and later devices<!-- 3246388  -->
-Currently, you can authenticate Windows Wi-Fi profiles with SCEP certificates (**Device configuration** > **Profiles** > **Create profile** > **Windows 10 and later** for platform > **Wi-Fi** for profile type > **Enterprise** > **EAP type**). You'll be able use PKCS certificates with your Windows Wi-Fi profiles. This feature allows users to authenticate Wi-Fi profiles using new or existing PKCS certificate profiles in your tenant. 
-
-For more information on Wi-Fi profiles, see [Add Wi-Fi settings for Windows 10 and later devices in Intune](../configuration/wi-fi-settings-windows.md).
-
-Applies to:
-- Windows 10 and later
 
 ### New ExchangeActiveSync settings when creating an Email device configuration profile on iOS devices<!-- 4892824  --> 
 On iOS/iPadOS devices, you can configure email connectivity in a device configuration profile (**Device configuration** > **Profiles** > **Create profile** > **iOS/iPadOS** for platform > **Email** for profile type). 
