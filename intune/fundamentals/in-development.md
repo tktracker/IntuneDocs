@@ -61,10 +61,10 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 <!-- ***********************************************-->
 ## App management
 
-### iOS user-licensed VPP apps<!-- 5619268 idready -->
+### User-licensed VPP apps for User Enrollment iOS devices<!-- 5619268 -->
 For User Enrollment iOS devices, end-users will no longer be presented with device-licensed VPP applications deployed as available. However, end-users will continue to see all user-licensed VPP apps within the Company Portal. For more information about VPP apps, see [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune](~/apps/vpp-apps-ios.md).
 
-### Retrieve personal recovery key from MEM encrypted macOS devices<!-- 4851745 idready -->
+### Retrieve personal recovery key from MEM encrypted macOS devices<!-- 4851745 -->
 End-users will be able to retrieve their personal recovery key (FileVault key) using the iOS Company Portal app. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, an end-user can open the Safari web view and retrieve their personal recovery key. In Intune, select **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. For more information about FileVault, see [FileVault encryption for macOS](~/protect/encrypt-devices.md#filevault-encryption-for-macos).
 
 ### Microsoft app icons update<!--4677605-->
