@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -215,6 +215,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   > [!NOTE]
   > This setting isn't honored on device owner (fully managed) devices. If you configure this setting, then the setting is ignored, and has no impact.
 
+- **User can configure credentials**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. **Not configured** might make it possible for users to configure or change their credentials when they access them in the keystore. 
 - **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. **Not configured** (default) allows users to add their personal Google account.
 
 ### Applications

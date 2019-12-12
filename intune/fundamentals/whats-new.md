@@ -467,7 +467,7 @@ A new report to the Devices overview page displays how many Android devices have
 ### Device security
 
 #### PKCS certificates for macOS<!-- 1333650       -->
-You can now [use PKCS certificates with macOS](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile). You can select the PKCS certificate as a profile type for macOS, and deploy user and device certificates that have [customized subject and subject alternative name fields](../protect/certficates-pfx-configure.md#subject-name-format-for-macos).  
+You can now [use PKCS certificates with macOS](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile). You can select the PKCS certificate as a profile type for macOS, and deploy user and device certificates that have [customized subject and subject alternative name fields](../protect/certficates-pfx-configure.md#subject-name-format).  
 
 PKCS certificate for macOS also support a new setting, _Allow All Apps Access_. With this setting you can enable all associated apps access to the private key of the certificate.  For more information about this setting, see the Apple documentation at https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf.
 
