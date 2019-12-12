@@ -133,6 +133,9 @@ For more information about device registration, see
 [Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 
 ## Windows 10 auto enrollment and device registration
+
+This section applies to US government cloud customers.
+
 Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.us.
 
 | Type | Host name | Points to | TTL |

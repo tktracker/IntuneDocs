@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,9 +73,6 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
   You can configure the *Diagnostic and usage data* setting for Windows 10 devices manually or use an Intune device restriction profile for Windows 10 and later. If you use a device restriction profile, set the [device restriction setting](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) of **Share usage data** to at least **Basic**. This setting is found under the  **Reporting and Telemetry** category when you configure a device restriction policy for Windows 10 or later.
 
   For more information about device profiles, see [configure device restriction settings](../configuration/device-restrictions-configure.md).
-
-- If you use the Azure classic portal, [migrate your settings to the Azure portal](#migrate-update-settings-to-the-azure-portal).
-
 
 ## Windows 10 update rings
 
@@ -232,7 +229,7 @@ When a device receives a Windows 10 feature updates policy:
 
 3. Under **Basics**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**.
 
-4. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Select **Next** to continue.
+4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature update deployment to one or more groups. Select **Next** to continue.
 
 5. Under **Review + create**, review the settings and select **Create** when ready to save the Windows 10 feature updates policy.  
 
@@ -245,17 +242,6 @@ From this pane, you can:
 - Select **Delete** to delete the policy from Intune and remove it from devices.
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
 - Select **End user update status** to view information about the policy.
-
-## Migrate update settings to the Azure portal
-
-The Azure classic portal also has a limited number of other Windows 10 updates settings in the device configuration profile. If any of these settings are configured when you migrate to the Azure portal, we strongly recommend that you do the following actions:
-
-1. Create Windows 10 update rings in the Azure portal with the settings that you need. The **Allow pre-release features** setting isn't supported in the Azure portal because it's no longer applicable to the latest Windows 10 builds. You can configure the other three settings and the other Windows 10 updates settings when you create update rings.
-
-   > [!NOTE]
-   > Windows 10 updates settings created in the classic portal are not displayed in the Azure portal after migration. However, these settings are applied. If you migrate any of these settings, and edit the migrated policy from the Azure portal, these settings are removed from the policy.
-
-2. Delete the update settings in the classic portal. After you migrate to the Azure portal, and add the same settings to an update ring, you must delete the settings in the classic portal to avoid any potential policy conflicts. For example, when the same setting is configured with different values, there's a conflict. There isn't an easy way to know because the setting configured in the classic portal doesn't display in the Azure portal.
 
 ## Next steps
 

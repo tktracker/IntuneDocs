@@ -79,7 +79,7 @@ After you assign the policy and the device syncs, you can confirm the policy is 
     ![Administrative template L_Updatebranch registry key example](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > [Manage Office 365 ProPlus with Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) lists the values, and what they mean. The registry values are based on the distribution channel selected:
+    > [Manage Office 365 ProPlus with Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
     >
     >- Monthly Channel                - value="Current"
     >- Monthly Channel (Targeted)     - value="Current"
@@ -99,7 +99,7 @@ At this point, the Intune policy is successfully applied to the device.
     - `UpdateChannel`: A dynamic key that changes, depending on the configured settings.
     - `CDNBaseUrl`: Set when Office 365 installs on the device.
 
-3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Office 365 ProPlus with Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) lists the values, and what they're set to.
+3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Office 365 ProPlus with Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they're set to.
 
     Looking at the following example, you see `UpdateChannel` is set to `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, which is **monthly**:
 
@@ -177,7 +177,7 @@ Consider using these steps to test your policy before deploying the policy to al
 
 ## Next steps
 
-[Update channel values for Office 365 clients](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)
+[Update channel values for Office 365 clients](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Overview of the Office cloud policy service for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
 
