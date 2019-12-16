@@ -7,7 +7,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2019
+ms.date: 12/16/2019
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -70,21 +70,20 @@ Use the following steps to enroll your macOS device with your organization. Your
 
 1. Sign in to Company Portal with your work or school account.  
 2. When the app opens, select **Begin**.  
-3. Review [what your organization can and can't see](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) on your enrolled device. Then select **Continue**.  
-4. On the **Install management profile** screen, select **Download profile**.   
+3. Review what your organization can and can't see on your enrolled device. Then select **Continue**.
+4.  If prompted to, enter your device password on the **Install management profile** screen.
 
-    ![Example screenshot of Company Portal, Install management profile screen, highlighting "Download profile" button.](./media/install-mgmt-profile-mac-1911.PNG)   
-5. Your device's system preferences will open. Select **Install** and then select **Install** again. If you're prompted to, enter your device password.  
+    ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/install-management-profile-macos-1912.PNG)   
+5. On the **Confirm device management** screen, select **Open System Preferences**.  
 
-    ![Example screenshot of macOS system preferences, installation prompt, highlighting "Install" button.](./media/system-preference-install-1911.PNG)  
-6. Once the profile is installed, it will appear in the profiles list under **Management Profile.**  
-
-   ![Example screenshot of macOS system preferences, Profiles screen, highlighting the installed management profile.](./media/system-preference-verify-1911.PNG)   
-7. Return to Company Portal.   
-8. Your organization might require you to update your device settings. When you're done updating settings, select **Check settings**.  
+    ![Example screenshot of Confirm device management screen, highlighting "Open System Preferences" button.](./media/confirm-device-management-macos-1912.PNG)  
+6. Your device's system preferences will open. Select **Management Profile** from the device profiles list and then select **Approve** > **Approve**.  
+    ![Example screenshot of System Preferences, Management Profile screen, highlighting "Approve" button.](./media/management-profile-approve-macos-1912.PNG)   
+1. Return to Company Portal and select **Continue**.    
+2. Your organization might require you to update your device settings. When you're done updating settings, select **Check settings**.  
 
     ![Example screenshot of Company Portal, Update device settings screen, highlighting "Check settings" button.](./media/update-settings-mac-1911.PNG)  
-9. When setup is complete, select **DONE**.  
+9. When setup is complete, select **Done**.  
 
 
  ## Troubleshooting and feedback   

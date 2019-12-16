@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 12/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -82,11 +82,9 @@ For Parallels Desktop, you need to set the hardware type and the serial number f
 For VMware Fusion, you need to [edit the .vmx file](https://kb.vmware.com/s/article/1014782) to set the virtual machine's hardware model and serial number. We recommend that you match the hardware type of the device running the virtual machines to the hardware type of the virtual machines that you're creating. You can find this hardware type in **Apple menu** > **About this Mac** > **System Report** > **Model Identifier**. 
 
 ## User Approved enrollment
-User Approved MDM enrollment is a type of macOS enrollment that you can use to manage certain security-sensitive settings. For more information, see [Apple's support documentation](https://support.apple.com/HT208019).
-
-Starting in November 2019, all new user-owned macOS enrollments will be User Approved because the user must manually install the management profile in order to successfully enroll. During [the enrollment process](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp), the user will install the Apple management profile in **System Preferences** > **Profiles**.  Instructions to install the management profile are available in the macOS Company Portal app.
-
-Devices enrolled prior to November 2019 might not be User Approved if the user didn't manually approve the management profile. However, users can go back and approve the management profile by going to **System Preferences** > **Profiles** > choose the **Management Profile** > **Approve**.
+User Approved MDM enrollment is a type of macOS enrollment that you can use to manage certain security-sensitive settings. For more information, see [Apple's support documentation](https://support.apple.com/HT208019).  
+ 
+During the BYOD enrollment process, the user will be asked to manually approve the Apple management profile. Instructions are provided in the Company Portal app for macOS. Although approval of the management profile is not required to complete enrollment, Intune recommends user approved enrollments. If the user does not approve the profile during enrollment, the user can go to **System Preferences** > **Profiles**, choose the management profile, and select **Approve**.    
 
 ### Find out if a device is User Approved
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
