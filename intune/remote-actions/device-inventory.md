@@ -100,5 +100,8 @@ Depending on the carrier used by the devices, not all details might be collected
 
 \* Not available in Android with Google policy manager,such as Fully-managed and Dedicated devices
 
+> [!Note]  
+> Phone number is not inventoried on Android Enterprise Dedicated or Fully Managed devices.
+
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.
