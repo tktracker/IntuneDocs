@@ -100,6 +100,13 @@ To see all the available VPN settings, go to [Configure VPN settings on iOS devi
 Applies to:
 - iOS
 
+#### Wired network device configuration profiles for macOS devices<!-- 3508686  -->
+A new macOS device configuration profile will be available that configures wired networks (**Device configuration** > **Profiles** > **Create profile** > **macOS** for platform > **Wired Network** for profile type). Use this feature to create 802.1x profiles to manage wired networks, and deploy these wired networks to your macOS devices.
+
+Applies to:
+- macOS
+
+
 <!-- ***********************************************-->
 <!--## Device enrollment-->
 

@@ -110,10 +110,8 @@ This feature applies to:
 - OS/iPadOS
 
 #### Wired network device configuration profiles for macOS devices<!-- 3508686  -->
-A new macOS device configuration profile is available that configures wired networks (**Device configuration** > **Profiles** > **Create profile** > **macOS** for platform > **Wired Network** for profile type). Use this feature to create 802.1x profiles to manage wired networks, and deploy these wired networks to your macOS devices.
-
-Applies to:
-- macOS
+   > [!NOTE]
+   > This feature has been delayed, but will be released soon.
 
 #### Block users from configuring certificate credentials in the managed keystore on Android Enterprise device owner devices<!-- 3311998 -->
 On Android Enterprise device owner devices, you can configure a new setting that blocks users from configuring their certificate credentials in the managed keystore (**Device configuration** > **Profiles** > **Create profile** > **Android Enterprise** for platform > **Device Owner Only > Device Restrictions** for profile type > **Users + Accounts**).

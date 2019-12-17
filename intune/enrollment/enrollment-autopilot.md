@@ -55,7 +55,7 @@ For more information, see the understanding powershell cmdlet.
 
 You can add Windows Autopilot devices by importing a CSV file with their information.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
 
     ![Screenshot of Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device.png)
 

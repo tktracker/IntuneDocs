@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 12/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -811,6 +811,13 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
   - **Send all data without prompting**: Data is sent automatically.
 
   [Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
+  
+  > [!NOTE]
+  > The **Prompt users before sample submission** setting is a duplicate of the **Submit samples consent** setting. If you currently use the **Prompt users before sample submission** setting on your devices, we suggest:
+  >
+  > 1. Update your policy to set **Prompt users before sample submission** to **Not configured**.
+  > 2. In your policy, configure the **Submit samples consent** setting.
+  > 3. Assign your policy.
 
 - **Time to perform a daily quick scan**: Choose the hour to run a daily quick scan. **Not configured** doesn't run a daily scan. If you want more customization, configure the **Type of system scan to perform** setting.
 
@@ -849,6 +856,24 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
   For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+- **Submit samples consent**: Potentially malicious files might require further analysis. This setting checks the user consent level in Microsoft Defender to send data to Microsoft. If consent is already granted, Microsoft Defender submits the files. Otherwise, the user is prompted for consent.
+
+  Your options:
+
+  - Send safe samples automatically (default)
+  - Always prompt
+  - Never send
+  - Send all samples automatically
+
+  [Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
+  
+  > [!NOTE]
+  > The **Prompt users before sample submission** setting is a duplicate of the **Submit samples consent** setting. If you currently use the **Prompt users before sample submission** setting on your devices, we suggest:
+  >
+  > 1. Update your policy to set **Prompt users before sample submission** to **Not configured**.
+  > 2. In your policy, configure the **Submit samples consent** setting.
+  > 3. Assign your policy.
 
 - **Actions on detected malware threats**: Choose how you want to handle malware threads. **Not configured** (default) lets Microsoft Defender choose the best option. When set to **Enable**, choose the actions you want Defender to take for each threat level it detects: low, moderate, high, and severe. Your options:
   
