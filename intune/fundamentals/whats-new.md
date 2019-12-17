@@ -80,7 +80,7 @@ Intune app protection policies (APP) on Android and iOS devices allow you to con
 The icons used for Microsoft apps in the app targeting pane for App protection policies and App configuration policies have been updated.
 
 #### Require use of approved keyboards on Android<!--4761794  -->
-As part of an app protection policy, you can specify the setting [**Approved keyboards**](../apps/app-protection-policy-settings-android.md#data-protection) to mange which Android keyboards can be used with managed Android apps. When a user opens the managed app and doesn't already use an approved keyboard for that app, they are prompted to switch to one of the approved keyboards already installed on their device. If needed, they're presented with a link to download an approved keyboard from the Google Play Store, which they can install and set up. The user can only edit text fields in a managed app when their active keyboard isn't one of the approved keyboards.
+As part of an app protection policy, you can specify the setting [**Approved keyboards**](../apps/app-protection-policy-settings-android.md#data-protection) to manage which Android keyboards can be used with managed Android apps. When a user opens the managed app and doesn't already use an approved keyboard for that app, they are prompted to switch to one of the approved keyboards already installed on their device. If needed, they're presented with a link to download an approved keyboard from the Google Play Store, which they can install and set up. The user can only edit text fields in a managed app when their active keyboard isn't one of the approved keyboards.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -176,7 +176,7 @@ For more information, see [Licensing terms](https://www.microsoft.com/en-us/Lice
    > [!NOTE]
    > This feature has been delayed, but will be released soon.
 
-Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Configure S/MIME for Outlook for iOS](~/apps/app-configuration-policies-outlook-smime.md).
+
 
 #### UI update when selectively wiping app data<!-- 4102028 -->
 The UI to selectively wipe app data in Intune has been updated. UI changes include:
