@@ -39,15 +39,15 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 > [!NOTE]  
 > Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
 
-1. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Apps** > **App configuration policies** >  **Add**.
-2. Enter the following properties:
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** >  **Add** > **Managed devices**.
+2. Add the following properties:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Android Enterprise Nine Work app policy for entire company**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Device enrollment type**: Select **Managed devices**.
+    - **Device enrollment type**: This setting is set to **Managed devices**.
     - **Platform**: Select **Android**.
 
-3. Select **Associated App**. Choose the app you want to define an app configuration policy. Select from the list of Managed Google Play apps that you've approved and synchronized with Intune.
+3. Select **Associated App**. Choose the Android app that this app configuration policy will be associated with. Select from the list of [Managed Google Play apps that you've approved and synchronized with Intune](~/apps/apps-add-android-for-work.md).
 4. Select **Permissions**. You can set configurations by using:
 
     - [Configuration designer](#use-the-configuration-designer)
@@ -115,12 +115,12 @@ You can also preconfigure app permissions to access Android device features. By 
 
 For example, an app uses the device's microphone. The user is prompted to grant the app permission to use the microphone.
 
-1. In [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Apps** > **App configuration policies** >  **Add**.
-2. Enter the following properties:
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** >  **Add** > **Managed devices**.
+2. Add the following properties:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Android Enterprise prompt permissions app policy for entire company**.
     - **Description**. Enter a description for the profile. This setting is optional, but recommended.
-    - **Device enrollment type**: Select **Managed devices**.
+    - **Device enrollment type**: This setting is set to **Managed devices**.
     - **Platform**: Select **Android**.
 
 3. Select **Associated App**. Choose the app you want to define a configuration policy. Select from the list of Android work profile apps that you've approved and synchronized with Intune.
