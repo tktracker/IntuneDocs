@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -107,3 +107,5 @@ There are hundreds of settings available in these templates. To make it easier t
 The template is created, but it's not doing anything yet. Next, [assign the template, also called a profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 [Update Office 365 using administrative templates](administrative-templates-update-office.md).
+
+[Tutorial: Use the cloud to configure group policy on Windows 10 devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)
