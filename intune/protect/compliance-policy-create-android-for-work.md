@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -60,6 +60,8 @@ As an Intune administrator, use these compliance settings to help protect your o
 > [!NOTE] 
 > The following Mobile Threat Defence (MTD) providers support Android Enterprise device owner deployments using app configuration:
 > - Better Mobile 
+> - Check Point SandBlast Mobile
+> - Lookout for Work
 > - Pradeo
 > - Sophos Mobile
 > - Zimperium 

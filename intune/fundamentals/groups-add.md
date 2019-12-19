@@ -51,7 +51,7 @@ Use the following steps to create a new group.
 
 3. In **Group type**, choose one of the following options:
 
-    - **Security**: Security groups define who can access resources, and are recommended for your groups in Intune. For example, you can create groups for users, such as **All Charlotte employees** or **All women at Contoso**. Or, create groups for devices, such as **All iOS devices** or **All Windows 10 student devices**.
+    - **Security**: Security groups define who can access resources, and are recommended for your groups in Intune. For example, you can create groups for users, such as **All Charlotte employees** or **Remote workers**. Or, create groups for devices, such as **All iOS devices** or **All Windows 10 student devices**.
 
         > [!TIP]
         > The users and groups created can also be seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Azure Active Directory admin center, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). In your organization tenant, you can create and manage groups in all these areas.
