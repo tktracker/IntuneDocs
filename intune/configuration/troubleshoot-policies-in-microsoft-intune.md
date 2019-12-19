@@ -40,7 +40,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
 ## Use built-in troubleshooting
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support**:
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support**:
 
     ![In Intune, go to Help and Support, and select Troubleshoot](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
@@ -106,7 +106,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
 ## You're unsure if a profile is correctly applied
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select the device > **Device configuration**. 
 
     Every device lists its profiles. Each profile has a **Status**. The status applies when all of the assigned profiles, including hardware and OS restrictions and requirements, are considered together. Possible statuses include:

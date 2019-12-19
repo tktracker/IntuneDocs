@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Upgrade Windows 10 editions or switch out of S mode on devices using Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 As part of your mobile device management (MDM) solution, you may want to upgrade your Windows 10 devices. For example, you want to upgrade your Windows 10 Professional devices to Windows 10 Enterprise. Or, you want the device to switch out of S mode.
 
@@ -100,7 +100,7 @@ The following table lists the supported upgrade paths for the Windows 10 edition
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 

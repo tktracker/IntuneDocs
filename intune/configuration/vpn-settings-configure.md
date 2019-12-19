@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Create VPN profiles to connect to VPN servers in Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Virtual private networks (VPNs) give your users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization, so they can easily and securely connect to your organizational network.
 
@@ -72,7 +72,7 @@ Learn how to  create custom VPN profiles by using URI settings in [Create a prof
 
 ## Create a device profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 

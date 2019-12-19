@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -74,7 +74,7 @@ The following devices have been announced as eSIM-capable, or are in-market toda
 
 Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **eSIM cellular profiles** > **Add**.
 3. Select the CSV file that has your activation codes.
 4. Select **OK** to save your changes.
@@ -99,7 +99,7 @@ When working with the csv file with the activation codes, be sure you or your mo
 
         ![Mobile operator activation code sample csv file](./media/esim-device-configuration/url-activation-code-examples.png)
 
-3. The csv file name becomes the cellular subscription pool name in the Azure portal. In the previous image, the file name is `UnlimitedDataSkynet.csv`. So, Intune names the subscription pool `UnlimitedDataSkynet.csv`:
+3. The csv file name becomes the cellular subscription pool name in the Endpoint Manager admin center. In the previous image, the file name is `UnlimitedDataSkynet.csv`. So, Intune names the subscription pool `UnlimitedDataSkynet.csv`:
 
     ![Cellular subscription pool is named the activation code sample csv file name](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
 
@@ -115,7 +115,7 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 
 Assign the profile to the Azure AD group that includes your eSIM devices.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **eSIM cellular profiles**.
 3. In the list of profiles, select the eSIM cellular subscription pool you want to assign, and then select **Assignments**.
 4. Choose to **Include** groups or **Exclude**  groups, and then select the groups.
@@ -133,7 +133,7 @@ eSIM activation codes are used once. After Intune installs an activation code on
 
 After you assign the profile, you can monitor the deployment status of a subscription pool.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **eSIM cellular profiles**. All of your existing eSIM cellular subscription pools are listed.
 3. Select a subscription, and review the **Deployment Status**.
 

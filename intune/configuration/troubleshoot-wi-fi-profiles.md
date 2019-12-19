@@ -185,7 +185,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Confirm the Wi-Fi profile is assigned to the correct group:
 
-    1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles**.
+    1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles**.
     2. Select your profile > **Assignments**. Confirm the selected groups are correct.
     3. In the Endpoint Manager, select **Troubleshooting + Support**. Review the **Assignments** information.
 

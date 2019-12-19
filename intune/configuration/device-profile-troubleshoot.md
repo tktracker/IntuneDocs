@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Get answers to common questions when working with device profiles and policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
 

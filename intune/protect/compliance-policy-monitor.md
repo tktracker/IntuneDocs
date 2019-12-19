@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,9 +39,9 @@ Compliance reports help you review device compliance, and troubleshoot complianc
 
 Open the **Intune Device compliance dashboard**:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Device compliance** > **Overview**. The **Device compliance dashboard** opens.
+2. Select **Devices** > **Overview** > **Compliance status** tab.
 
 > [!IMPORTANT]
 > Devices must be enrolled into Intune to receive device compliance policies.
@@ -154,9 +154,9 @@ The **Setting compliance** chart shows you all device compliance policy settings
 
 ## View compliance reports
 
-In addition to using the charts on *Compliance status*, you can view compliance reports from the *Monitor* page of the Admin Center.
+In addition to using the charts on *Compliance status*, you can go to **Reports** > **Device compliance**.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Monitor**, and then from below **Compliance** select the report you want to view. Some of the available compliance reports include:
 
@@ -194,3 +194,7 @@ Policy conflicts can occur when multiple Intune policies are applied to a device
 - If the conflicting settings are from an Intune configuration policy and a compliance policy, the settings in the compliance policy take precedence over the settings in the configuration policy. This happens even if the settings in the configuration policy are more secure.
 
 - If you have deployed multiple compliance policies, Intune uses the most secure of these policies.
+
+## Next steps
+
+[Compliance policies overview](device-compliance-get-started.md)
