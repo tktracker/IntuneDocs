@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Walkthrough: Create administrative template in Microsoft Intune - Azure | Microsoft Docs
+title: Walkthrough - Create administrative template in Microsoft Intune - Azure | Microsoft Docs
 description: This tutorial or walkthrough uses Microsoft Intune to configure Office, Windows, and Microsoft Edge ADMX templates on Windows 10 and newer devices.
 keywords:
 author: MandiOhlinger
@@ -86,7 +86,7 @@ This feature applies to:
   2. Create a group policy to push these templates to a Windows 10 Enterprise administrator computer in the same domain as the DC. In this tutorial:
 
       - The policy is called **OfficeandEdge**.
-      - The device is called the **Admin computer**.
+      - The Windows 10 Enterprise administrator computer is called the **Admin computer**.
 
 - On this **Admin computer**:
 
@@ -149,7 +149,7 @@ In these next steps, you’ll create security groups, and add users to the group
         - **Operator**: Choose **Equals**.
         - **Value**: Enter **Windows**.
 
-        1. Select **Add expression**.
+        1. Select **Add expression**:
 
             > [!div class="mx-imgBorder"]
             > ![Create a dynamic query, and Add expression in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/dynamic-group-query.png)
@@ -160,14 +160,14 @@ In these next steps, you’ll create security groups, and add users to the group
 
 6. Create the **All Teachers** group with the following settings:
 
-    - **Group type**: Choose **Security**
-    - **Group name**: Enter **All Teachers**
-    - **Membership type**: Choose **Dynamic User**
+    - **Group type**: Choose **Security**.
+    - **Group name**: Enter **All Teachers**.
+    - **Membership type**: Choose **Dynamic User**.
     - **Dynamic user members**: Configure your query:
 
-      - **Property**: Choose **department**
-      - **Operator**: Choose **Equals**
-      - **Value**: Enter **Teachers**
+      - **Property**: Choose **department**.
+      - **Operator**: Choose **Equals**.
+      - **Value**: Enter **Teachers**.
 
         1. Select **Add expression**.
 
@@ -181,6 +181,8 @@ In these next steps, you’ll create security groups, and add users to the group
 
   - [Dynamic Group Membership in Azure Active Directory (Part 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
   - [Dynamic Group Membership in Azure Active Directory (Part 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+
+- Azure AD Premium includes other services that are commonly used when managing apps and devices, including [multi-factor authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview).
 
 - Many admins ask when to use user groups and when to use device groups. For some guidance, see [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 
@@ -205,7 +207,7 @@ The users and groups created are also seen in the [Microsoft 365 admin center](h
     > [!div class="mx-imgBorder"]
     > ![In Endpoint Manager admin center, select Users](./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png)
 
-2. Review some of the information you add or change. For example, look at the properties you can configure, such as Job Title, Department, City, Office, and more. You can use these properties in your dynamic queries when creating dynamic user groups.
+2. Review some of the information you add or change. For example, look at the properties you can configure, such as Job Title, Department, City, Office, and more. You can use these properties in your dynamic queries when creating dynamic groups.
 3. Select **Groups** to see the membership of this user. You can also remove the user from a group.
 4. Select some of the other options to see more information, and what you can do. For example, look at the assigned license, the user's devices, and more.
 
@@ -249,15 +251,15 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
     Double-click **Prevent enabling lock screen camera**, and see the available settings.
 
-5. In the Endpoint Manager admin center, go to your **Admin template - Windows 10 student devices** admin template > **Settings**. Select **All products**.
-6. Search for **personalization**:
+5. In your **Admin template - Windows 10 student devices** admin template, select **Settings**.
+6. Select **All products**, and search for **personalization**:
 
     > [!div class="mx-imgBorder"]
     > ![Search for personalization in administrative template in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
 
     Notice the available settings.
 
-    The setting type is **Device**, and the path is **\Control Panel\Personalization**. This path matches local group policy.
+    The setting type is **Device**, and the path is **\Control Panel\Personalization**. This path is similar to what you see in local group policy.
 
 #### Compare a user policy
 
@@ -280,8 +282,9 @@ In this template, we configure some Internet Explorer settings to lock down devi
     > [!div class="mx-imgBorder"]
     > ![Turn off InPrivate Browsing device policy in administrative template in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
-2. Select **Enabled** > **OK** to save your changes.
-3. Also configure the following Internet Explorer settings. Be sure to select **OK** to save your changes.
+2. In this window, notice the description and values you can set. These options are similar to what you see in local group policy.
+3. Select **Enabled** > **OK** to save your changes.
+4. Also configure the following Internet Explorer settings. Be sure to select **OK** to save your changes.
 
     - **Allow drag and drop or copy and paste files**
       - **Type**: Device
@@ -299,7 +302,7 @@ In this template, we configure some Internet Explorer settings to lock down devi
       - **Value**: Enabled
       - **Home page**: Enter a URL, such as `contoso.com`.
 
-4. Clear your search filter. Notice the settings you configured are listed at the top. If you configured many settings, you can also search for **enabled** or **disabled**:
+5. Clear your search filter. Notice the settings you configured are listed at the top. If you configured many settings, you can also search for **enabled** or **disabled**:
 
     > [!div class="mx-imgBorder"]
     > ![Configured settings are listed at the top in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/configured-settings-administrative-template.png)
@@ -435,7 +438,7 @@ This section uses the following resources:
 
     4. Select **Accept**.
 
-9. Create the configuration profile:
+9. Create the **Test Configuration** configuration profile:
 
     ```powershell
     $configuration = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations -Content '{"displayName":"Test Configuration","description":"A test configuration created through PS"}' -HttpMethod POST
@@ -478,7 +481,7 @@ You'll see the **Silently sign in users to the OneDrive sync client with their W
 
 ## Policy best practices
 
-When creating policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, see [policy and profile best practices](device-profile-create#recommendations.md).
+When creating policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, see [policy and profile best practices](device-profile-create.md#recommendations).
 
 ## Clean up resources
 
@@ -504,7 +507,7 @@ When no longer needed, you can:
 
 ## Next steps
 
-In this tutorial, you got more familiar with the Endpoint Manager admin center, used the query builder to create dynamic groups, and created administrative templates in Intune to configure ADMX settings. You also compared using ADMX templates on-premises and in the cloud with Intune. As a bonus, you used PowerShell cmdlets to create an administrative template.
+In this tutorial, you got more familiar with the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), used the query builder to create dynamic groups, and created administrative templates in Intune to configure ADMX settings. You also compared using ADMX templates on-premises and in the cloud with Intune. As a bonus, you used PowerShell cmdlets to create an administrative template.
 
 For more information on administrative templates in Intune, see:
 
