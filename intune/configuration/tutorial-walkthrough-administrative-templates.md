@@ -100,11 +100,11 @@ This feature applies to:
         Wait while Windows installs the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
 
         > [!div class="mx-imgBorder"]
-        > ![Windows Administrative Tools apps, including Group Policy Management app](./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png
+        > ![Windows Administrative Tools apps, including Group Policy Management app](./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png)
 
   - Be sure you have internet access and administrator rights to the Microsoft 365 subscription, which includes the Endpoint Manager admin center.
 
-## Step 1: Open the Endpoint Manager admin center
+## Open the Endpoint Manager admin center
 
 1. Open a chromium web browser, such as Microsoft Edge version 77 and later.
 2. Go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com). Sign in with the following credentials:
@@ -114,7 +114,7 @@ This feature applies to:
 
 This admin center is focused on device management, and includes Azure services, such as Azure AD and Intune. You might not see the **Azure Active Directory** and **Intune** branding, but you're using them.
 
-## Step 2: Create groups, and add users
+## Create groups, and add users
 
 On-premises policies are applied in the LSDOU order - local, site, domain, and organizational unit (OU). In this hierarchy, OU policies overwrite local policies, domain policies overwrite site policies, and so on.
 
@@ -215,7 +215,7 @@ The users and groups created are also seen in the [Microsoft 365 admin center](h
 
 In the Endpoint Manager admin center, you created new security groups, and added existing users and devices to these groups. We’ll use these groups in later steps in this tutorial.
 
-## Step 3: Create a template in Intune
+## Create a template in Intune
 
 In this section, we create an admin template in Intune, look at some settings in **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
 
@@ -273,7 +273,11 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 > [!TIP]
 > To see the built-in Windows policies, you can also use GPEdit (**Edit group policy** app).
 
-## Step 4: Add settings to the Students admin template
+### What did I just do?
+
+You created an administrative template in Intune. In this template, we looked at some settings, and looked at the same settings in Group Policy Management.
+
+## Add settings to the Students admin template
 
 In this template, we configure some Internet Explorer settings to lock down devices shared by multiple students.
 
@@ -315,7 +319,10 @@ In this template, we configure some Internet Explorer settings to lock down devi
     > ![Select your administrative template profile from the Device Configuration profiles list in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
 2. Choose **Select groups to include**. A list of existing users and groups is shown.
-3. Select the **All Windows 10 student devices** group you created earlier > **Select**. If you're using this tutorial in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
+3. Select the **All Windows 10 student devices** group you created earlier > **Select**.
+
+    If you're using this tutorial in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
+
 4. **Save** your changes.
 
 As soon as the profile is saved, it applies to the devices when they check in with Intune. If the devices are connected to the internet, it can happen immediately. For more information on policy refresh times, see [How long does it take for devices to get a policy, profile, or app after they're assigned](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
@@ -326,7 +333,7 @@ When assigning strict or restrictive policies and profiles, don't lock yourself 
 
 In the Endpoint Manager admin center, you created an administrative template device configuration profile, and assigned this profile to a group you created. We also compared the administrative templates in Intune with the same templates in Group Policy Management Editor.
 
-## Step 5: Create a OneDrive template
+## Create a OneDrive template
 
 In this section, you create a OneDrive admin template to control some settings. These specific settings are chosen because they're commonly used by organizations.
 
@@ -358,12 +365,15 @@ For more information on OneDrive client settings, see [Use Group Policy to contr
 
 1. In your template, select **Assignments**
 2. Choose **Select groups to include**. A list of existing users and groups is shown.
-3. Select the **All Windows devices** group you created earlier > **Select**. If you're using this tutorial in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
+3. Select the **All Windows devices** group you created earlier > **Select**.
+
+    If you're using this tutorial in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
+
 4. **Save** your changes.
 
 At this point, you created two administrative templates, and assigned them to groups you created. The next step is to create an administrative template using Windows PowerShell and the Microsoft Graph API for Intune.
 
-## Optional: Step 6: Create a policy using script PowerShell and Graph API
+## Optional: Create a policy using script PowerShell and Graph API
 
 This section uses the following resources:
 
