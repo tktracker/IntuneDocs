@@ -675,6 +675,14 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
 
 These settings use the [defender policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), which also lists the supported Windows editions.
 
+- **On Access Protection**: **Block** prevents scanning of files accessed or downloaded. Users can't turn it on.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. If you block the setting, and then change it back to **Not configured**, then Intune leaves the setting in it's previously configured state. By default, the OS allows this feature, and allows users to change it.
+
+  Intune doesn't turn off this feature. To disable it, use a custom URI.
+
+  [Defender/AllowOnAccessProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
+
 - **Real-time monitoring**: **Enable** turns on real-time scanning for malware, spyware, and other unwanted software. Users can't turn it off. 
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. If you enable the setting, and then change it back to **Not configured**, then Intune leaves the setting in it's previously configured state. By default, the OS turns on this feature, and allows users to change it.
