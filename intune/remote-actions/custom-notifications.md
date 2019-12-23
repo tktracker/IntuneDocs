@@ -32,7 +32,23 @@ ms.collection: M365-identity-device-management
 
 Use Microsoft Intune to send custom notifications to the users of managed iOS and Android devices. These messages appear as standard push notifications from the Company Portal app and from the Microsoft Intune app on a user’s device, just as notifications from other applications on the device appear. Intune custom notifications aren’t supported by macOS and Windows devices.   
 
-Custom notification messages include a short title and a message body of 500 characters or less. These messages can be customized for any general communication purpose.
+Custom notification messages include a short title and a message body of 500 characters or fewer. These messages can be customized for any general communication purpose.
+
+### What the notification looks like on an iOS device
+
+If you have the Company Portal app open on an iOS device, the notification resembles the following screenshot:
+
+![DESCRIPTION](./media/custom-notifications/105046_I.png)
+
+If the device is locked, the notification resembles the following screenshot:
+
+![DESCRIPTION](./media/custom-notifications/105046_II.png)
+
+### What the notification looks like on an Android device
+
+If you have the Company Portal app open on an Android device, the notification resembles the following screenshot:
+
+![DESCRIPTION](./media/custom-notifications/105046_III.png)
 
 ## Common scenarios for sending custom notifications  
 
