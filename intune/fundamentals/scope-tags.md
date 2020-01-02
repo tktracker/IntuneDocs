@@ -44,7 +44,7 @@ For example, let’s say a Seattle regional office admin has the Policy and Prof
 ## Default scope tag
 The default scope tag is automatically added to all untagged objects that support scope tags.
 
-The default scope tag feature is similar to the security scopes feature in System Center Configuration Manager. 
+The default scope tag feature is similar to the security scopes feature in Microsoft Endpoint Configuration Manager. 
 
 ## To create a scope tag
 

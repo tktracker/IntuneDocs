@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -93,7 +93,7 @@ You can add up to **six** items (apps and folders combined) for the device dock.
 
   - **App**: Choose this option to add apps to the dock on the screen. Enter:
 
-    - **App Name**: Enter a name for the app. This name is used for your reference in the Azure portal. It *isn't* shown on the iOS device.
+    - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
     - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
   - **Folder**: Choose this option to add a folder to the dock on the screen.
@@ -103,8 +103,8 @@ You can add up to **six** items (apps and folders combined) for the device dock.
     - **Folder name**: Enter the name of the folder. This name is shown to users on their device.
     - **List of pages**: **Add** a page, and enter the following properties:
 
-      - **Page name**: Enter a name for the page. This name is used for your reference in the Azure portal. It *isn't* shown on the iOS device.
-      - **App Name**: Enter a name for the app. This name is used for your reference in the Azure portal. It *isn't* shown on the iOS device.
+      - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
+      - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
       - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
       You can add up to **20** pages for the device dock.
@@ -133,7 +133,7 @@ You can add up to **40** pages on a device.
 
 - **List of pages**: **Add** a page, and enter the following properties:
 
-  - **Page name**: Enter a name for the page. This name is used for your reference in the Azure portal, and *isn't* shown on the iOS device.
+  - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center, and *isn't* shown on the iOS device.
 
   You can add up to **60** items (apps and folder combined) on a device.
 
@@ -143,7 +143,7 @@ You can add up to **40** pages on a device.
 
       - **App**: Choose this option to add apps to a page on the screen. Also enter:
 
-        - **App Name**: Enter a name for the app. This name is used for your reference in the Azure portal. It *isn't* shown on the iOS device.
+        - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
         - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
       - **Folder**: Choose this option to add a folder to the dock on the screen.
@@ -153,8 +153,8 @@ You can add up to **40** pages on a device.
         - **Folder name**: Enter a name for the folder. This name is shown to users on the device.
         - **Add**: Adds pages to the folder. Also enter the following properties:
 
-          - **Page name**: Enter a name for the page. This name is used for your reference in the Azure portal. It *isn't* shown on the iOS device.
-          - **App Name**: Enter a name for the app. This name is used for your reference in the Azure portal. It *isn't* shown on the iOS device.
+          - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
+          - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
           - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
 #### Example
@@ -176,8 +176,8 @@ When you assign the policy to an iPhone, the page looks similar to the following
     ![Add app notification in iOS profile in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
-  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Azure portal. It *isn't* shown on the device.
-  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Azure portal. It *isn't* shown on the device.
+  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the device.
+  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the device.
   - **Notifications**: **Enable** or **Disable** the app from sending notifications to the device.
     - **Show in Notification Center**: **Enable** allows the app to show notifications in the device Notification Center. **Disable** prevents the app from showing notifications in the Notification Center.
     - **Show in Lock Screen**: Select **Enable** to see notifications from the app on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen.

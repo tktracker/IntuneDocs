@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Windows Holographic for Business device settings to allow or restrict features using Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 This article lists and describes the different settings you can control on Windows Holographic for Business devices, such as Microsoft Hololens. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, control security, and more.
 

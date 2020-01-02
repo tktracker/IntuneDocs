@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
  
 # Configure device restriction settings in Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Intune includes device restriction policies that help administrators control Android, iOS, macOS, and Windows devices. These restrictions let you control a wide range of settings and features to protect your organization's resources. For example, administrators can:
 
@@ -44,7 +44,7 @@ This article shows you how to create a device restrictions profile. You can also
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 

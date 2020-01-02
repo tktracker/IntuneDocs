@@ -51,25 +51,6 @@ After February 20, 2020 these devices  won't receive any security updates, and y
 #### What do I need to do to prepare for this change?
 You can check your Intune reporting to see what devices or users may be affected. Go to Devices > All devices and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows Phone 8.1. Request that your end users upgrade their devices to a supported OS version.
 
-### Update your Intune Outlook App protection policies (APP)<!--2576686-->
-You may need to take action if you received MC195618 In your Message Center. As shared in Microsoft 365 roadmap feature IDs: 56325 and 56326, Intune and Outlook for iOS and Android are rolling out support for limiting sensitive data in mail notifications and calendar reminders. As a result of these improvements, Outlook for iOS and Android will be removing support for several data protection app configuration keys you are currently leveraging to manage notifications.
-
-#### How does this affect me?
-While the new features have not shipped, when they do, the following app configuration keys will no longer function in Outlook for iOS and Android:
-- com.microsoft.outlook.Mail.NotificationsEnabled
-- com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed
-- com.microsoft.outlook.Calendar.NotificationsEnabled
-- com.microsoft.outlook.Calendar.NotificationsEnabled.UserChangeAllowed
-
-#### What do I need to do to prepare for this change?
-We recommend you configure the Intune App Protection Policy data protection setting “Org data notifications” with a value of “Block Org Data” in preparation for this new feature. Beginning on December 16, 2019, Outlook for iOS and Android will honor the “Org data notifications” data protection setting and no longer support the aforementioned keys. Configuring this new setting will ensure sensitive data isn't leaked when the above configuration keys are no longer supported. Additionally, Outlook is providing additional granularity when the data protection setting “Org data notifications” is set to “Block Org Data” with an additional app configuration setting, “Calendar notifications”. The combination of the App Protection Policy setting and this app configuration setting limits sensitive information in mail notifications, while exposing sensitive information in calendar notifications, so that users can get to their meetings by glancing quickly at the notification or notification center.
-
-#### Additional information
-For more information on APP settings and Outlook’s settings, see:
-- [App protection policy settings, Android](../apps/app-protection-policy-settings-android.md)
-- [App protection policy settings, iOS](../apps/app-protection-policy-settings-ios.md)
-- [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
-
 
 ### Intune Plan for Change: Windows 10, version 1703 Company Portal moving out of Support<!--5026679-->
 Windows 10, version 1703 (also known as Windows 10, RS2) has moved out of service on October 8, 2019 for enterprise and EDU editions. Intune will end support for the corresponding Company Portal app for RS2/RS1 starting on December 26, 2019.

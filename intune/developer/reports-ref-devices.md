@@ -220,7 +220,7 @@ The **ManagementAgentType** entity represents the agents used to manage a device
 | 3 |EasMdm | The device is managed by both Exchange Active Sync and an MDM agent |
 | 4 |IntuneClient | The device is managed by the Intune PC agent |
 | 5 |EasIntuneClient | The device is managed by both Exchange Active Sync and the Intune PC agent |
-| 8 |ConfigManagerClient | The device is managed by the System Center Configuration Manager agent |
+| 8 |ConfigManagerClient | The device is managed by the Configuration Manager agent |
 | 16 |Unknown | Unknown management agent type |
 
 ## devices

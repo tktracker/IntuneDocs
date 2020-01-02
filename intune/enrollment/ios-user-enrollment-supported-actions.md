@@ -43,7 +43,7 @@ On User Enrollment devices, if you configure any password setting, then the **Si
 
 For example, you configure the **Password expiration** setting, and push this policy to user-enrolled devices. On the devices, the following happens:
 - The **Password expiration** setting is ignored.
-- Simple passwords, such as `1111` or `1234`, aren't allowed.
+- Simple passwords, such as `111111` or `123456`, aren't allowed.
 - A 6 digit pin is enforced.
 
 ## Administrator remote device actions and options

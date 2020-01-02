@@ -372,7 +372,7 @@ If needed, you can suppress showing end user toast notifications per app assignm
 > Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.
 
 ## Troubleshoot Win32 app issues
-Agent logs on the client machine are commonly in `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. You can leverage `CMTrace.exe` to view these log files. *CMTrace.exe* can be downloaded from [Configuration Manager Client Tools](https://docs.microsoft.com/sccm/core/support/tools). 
+Agent logs on the client machine are commonly in `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. You can leverage `CMTrace.exe` to view these log files. For more information, see [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace).
 
 ![Screenshot of the Agent logs on the client machine](./media/apps-win32-app-management/apps-win32-app-10.png)    
 

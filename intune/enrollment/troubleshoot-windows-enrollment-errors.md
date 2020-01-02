@@ -43,7 +43,7 @@ Collect the following information about the problem:
 - What platform (Android, iOS, Windows) has the problem?
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
-- What is the MDM authority? If it's System Center Configuration Manager, what version of Configuration Manager are you using?
+- What is the MDM authority? If it's Microsoft Endpoint Configuration Manager, what version of Configuration Manager are you using?
 - How is enrollment being performed? Is it “Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
 
 ## Error messages
@@ -392,4 +392,4 @@ This issue is usually caused by incorrectly delegating permissions to the organi
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Get support for Microsoft Intune](../fundamentals/get-support.md)
-- [Find co-management enrollment errors](https://docs.microsoft.com/sccm/comanage/how-to-monitor#enrollment-errors)
+- [Find co-management enrollment errors](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)

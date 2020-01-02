@@ -187,7 +187,7 @@ Once you have registered your app within an Azure tenant, and it is showing up u
 7. Click **Add permissions**.
 
 > [!NOTE]
-> If your app restricts you from signing in due to an error accessing this resource: https://intunemam.microsoftonline.com, you must send a note to msintuneappsdk@microsoft.com with your app's Client ID. This is a manual approval process today.
+> If your app restricts you from signing in due to an error accessing this resource: https\://intunemam.microsoftonline.com, you must send a note to msintuneappsdk@microsoft.com with your app's Client ID. This is a manual approval process today.
 
 ### Badge your app (optional)
 

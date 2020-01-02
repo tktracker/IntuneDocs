@@ -201,7 +201,7 @@ Once you can conclude that both Intune and the network infrastructure work as ex
 
 ## Errors during installation of the app suite
 
-See [How to enable Office 365 ProPlus ULS logging](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) for information on how to view verbose installation logs.
+See [How to enable Office 365 ProPlus ULS logging](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) for information on how to view verbose installation logs.
 
 The following tables list common error codes you might encounter and their meaning.
 

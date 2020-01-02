@@ -43,7 +43,7 @@ If you still decide to have users enroll their Android devices with device admin
 
 
 > [!Note]  
-> Android 10 and higher won't be supported in hybrid mobile device management (hybrid MDM; Intune managed with the System Center Configuration Manager console) because hybrid MDM is going out of service on September 1, 2019. If you're still using hybrid MDM, you should migrate to Intune standalone as soon as possible. Contact to support if you need help migrating. For more information, see [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
+> Android 10 and higher won't be supported in hybrid mobile device management (hybrid MDM; Intune managed with the Configuration Manager console) because hybrid MDM is going out of service on September 1, 2019. If you're still using hybrid MDM, you should migrate to Intune standalone as soon as possible. Contact to support if you need help migrating. For more information, see [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
 
 For more information about Google's Android Enterprise features, see these articles:
 - [Google’s guidance for migration from device administrator to Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)

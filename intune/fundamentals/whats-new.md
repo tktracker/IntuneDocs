@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # What's new in Microsoft Intune
 
-Learn what’s new each week in Microsoft Intune. You can also find [important notices](#notices), [past releases](whats-new-archive.md), and information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728).
+Learn what’s new each week in Microsoft Intune. You can also find [important notices](#notices), [past releases](whats-new-archive.md), and information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
 
 > [!Note]
 > Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to three days to rollout and will be in the following order:
@@ -57,10 +57,21 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 -->  
 
 <!-- ########################## -->
-## Week of December 9, 2019
+## Week of December 23, 2019
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Notice - Windows 10 1703 (RS2) will be moving out of support <!-- 5026679 -->
+Starting October 9, 2018, Windows 10 1703 (RS2) moved out of Microsoft platform support for for Home, Pro, and Pro for Workstations editions. For Windows 10 Enterprise and Education editions, Windows 10 1703 (RS2) moved out of platform support on October 8, 2019. Starting December 26, 2019, we will be updating the minimum version of the Windows Company Portal application to Windows 10 1709 (RS3). Computers running versions prior to 1709 will no longer receive updated versions for the application from the Microsoft Store. We've previously communicated this change to customers who are managing older versions of Windows 10 via the message center. For more information, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+
+<!-- ########################## -->
+## Week of December 9, 2019 (1912 Service release)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
 
 #### Migrating to Microsoft Edge for managed browsing scenarios<!-- 5173762 -->
-
 As we move closer to the retirement of the Intune Managed Browser, we made changes to app protection policies to simplify the steps needed to move your users over to Edge. We have updated the options for the app protection policy setting **Restrict web content transfer with other apps** to be one of the following:
 
 - Any app
@@ -69,6 +80,84 @@ As we move closer to the retirement of the Intune Managed Browser, we made chang
 - Unmanaged browser 
 
 When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign-in to Microsoft Edge with their AAD accounts, if they have not already done so.  This will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. This means your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers leveraging managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
+
+#### Configure app notification content for organization accounts<!-- 2576686  -->
+Intune app protection policies (APP) on Android and iOS devices allow you to control app notification content for Org accounts. You can select an option (Allow, Block org Data, or Blocked) to specify how notifications for org accounts are shown for the selected app.This feature requires support from applications and may not be available for all APP enabled applications. Outlook for iOS version 4.15.0 (or later) and Outlook for Android 4.83.0 (or later) will support this setting. The setting is available in the console, but the functionality will begin to take effect after December 16th, 2019. For more about APP, see [What are app protection policies?](../apps/app-protection-policy.md).
+
+#### Microsoft app icons update<!--4677605  -->
+The icons used for Microsoft apps in the app targeting pane for App protection policies and App configuration policies have been updated.
+
+#### Require use of approved keyboards on Android<!--4761794  -->
+As part of an app protection policy, you can specify the setting [**Approved keyboards**](../apps/app-protection-policy-settings-android.md#data-protection) to manage which Android keyboards can be used with managed Android apps. When a user opens the managed app and doesn't already use an approved keyboard for that app, they are prompted to switch to one of the approved keyboards already installed on their device. If needed, they're presented with a link to download an approved keyboard from the Google Play Store, which they can install and set up. The user can only edit text fields in a managed app when their active keyboard isn't one of the approved keyboards.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Updated single sign-on experience for apps and websites on your iOS, iPadOS, and macOS devices<!-- 4999578  -->
+Intune has added more single sign-on (SSO) settings for iOS, iPadOS, and macOS devices. You can now configure redirect SSO app extensions written by your organization or by your identity provider. Use these settings to configure a seamless single sign-on experience for apps and websites that use modern authentication methods, such as OAuth and SAML2. 
+
+These new settings expand on the previous settings for SSO app extensions and Apple's built-in Kerberos extension (**Devices** > **Device configuration** > **Profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform type > **Device features** for profile type). 
+
+To see the full range of SSO app extension settings you can configure, go to [SSO on iOS](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) and [SSO on macOS](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
+
+Applies to:
+- iOS/iPadOS
+- macOS
+
+#### We’ve updated two device restriction settings for iOS and iPadOS devices to correct their behavior<!-- 5701352 WNReady   -->
+For iOS devices, you can create device restriction profiles that **Allow over-the-air PKI updates** and **Blocks USB Restricted mode** (**Devices** > **Device configuration** > **Profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile type). Prior to this release, the UI settings and descriptions for the following settings were incorrect, and they’ve now been corrected. Beginning with this release, the settings behavior is as follows:
+
+**Block over-the-air PKI updates**: **Block** prevents your users from receiving software updates unless the device is connected to a computer. **Not configured** (default): allows a device to receive software updates without being connected to a computer.
+- Previously, this setting let you configure it as: **Allow**, which let your users receive software updates without connecting their devices to a computer.
+**Allow USB accessories while device is locked**: **Allow** lets USB accessories exchange data with a device that's been locked for over an hour. **Not configured** (default) doesn't update USB Restricted mode on the device, and USB accessories will be blocked from transferring data from the device if locked for over an hour.
+- Previously, this setting let you configure it as: **Block** to disable USB Restricted mode on supervised devices.
+
+For more information on the setting you can configure, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
+
+This feature applies to:
+- OS/iPadOS
+
+#### Wired network device configuration profiles for macOS devices<!-- 3508686  -->
+   > [!NOTE]
+   > This feature has been delayed, but will be released soon.
+
+#### Block users from configuring certificate credentials in the managed keystore on Android Enterprise device owner devices<!-- 3311998 -->
+On Android Enterprise device owner devices, you can configure a new setting that blocks users from configuring their certificate credentials in the managed keystore (**Device configuration** > **Profiles** > **Create profile** > **Android Enterprise** for platform > **Device Owner Only > Device Restrictions** for profile type > **Users + Accounts**).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Protected wipe action now available<!--51150000 -->
+You now have the option to use the Wipe device action to perform a protected wipe of a device. Protected wipes are the same as standard wipes, except that they can't be circumvented by powering off the device. A protected wipe will keep trying to reset the device until successful. In some configurations this action may leave the device unable to reboot. For more information, see [Retire or wipe devices](../remote-actions/devices-wipe.md).
+
+#### Device Ethernet MAC address added to device's Overview page<!--5562275 -->
+You can now see a device's Ethernet MAC address on the device details page (**Devices** > **All devices** > choose a device > **Overview**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Improved experience on a shared device when device based conditional access policies are enabled<!-- 1734096  -->
+We improved the experience on a shared device with multiple users who are targeted with device based conditional access policy by checking the latest compliance evaluation for the user when enforcing policy. 
+For more information, see  the following overview articles:
+- [Azure overview for Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [Intune device compliance overview](../protect/device-compliance-get-started.md)
+
+#### Use PKCS certificate profiles to provision devices with certificates<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529  -->
+You can now use PKCS certificate profiles to issue certificates to *devices* that run Android for Work, iOS, and Windows, when associated with profiles like those for Wi-Fi and VPN. Previously those three platforms supported only user-based certificates, with device-based support being limited to macOS.
+
+To use a device-based certificate, while [creating a PKCS certificate profile](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile) for the supported platforms, select **Settings**. You’ll now see the setting for **Certificate type**, which supports the options for Device, or User.
+
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Centralized audit logs<!--5603185, 5697164 -->
+A new centralized audit log experience now collects audit logs for all categories into one page. You can filter the logs to get the data you're looking for. To see the audit logs, go to **Tenant administration** > **Audit logs**. 
+
+#### Scope tag information included in audit log activity details<!--5763534 -->
+Audit log activity details now include scope tag information (for Intune objects that support scope tags). For more information about audit logs, see [Use audit logs to track and monitor events](monitor-audit-logs.md).
+
 
 <!-- ########################## -->
 ## Week of December 2, 2019
@@ -88,12 +177,12 @@ For more information, see [Licensing terms](https://www.microsoft.com/en-us/Lice
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-#### S/MIME support with Microsoft Outlook for iOS<!-- 2669398 idready -->
+#### S/MIME support with Microsoft Outlook for iOS<!-- 2669398  -->
 
    > [!NOTE]
    > This feature has been delayed, but will be released soon.
 
-Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Configure S/MIME for Outlook for iOS](~/apps/app-configuration-policies-outlook-smime.md).
+
 
 #### UI update when selectively wiping app data<!-- 4102028 -->
 The UI to selectively wipe app data in Intune has been updated. UI changes include:
@@ -218,7 +307,7 @@ Business-to-business (B2B) collaboration allows you to securely share you compan
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management  
 
-#### Improved macOS enrollment experience in Company Portal <!-- 5074349 WNready -->  
+#### Improved macOS enrollment experience in Company Portal <!-- 5074349  -->  
 The Company Portal for macOS enrollment experience has a simpler enrollment process that aligns more closely with the Company Portal for iOS enrollment experience. Device users now see:  
 
 * A sleeker user interface.  
@@ -230,7 +319,7 @@ The Company Portal for macOS enrollment experience has a simpler enrollment proc
 End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](~/apps/web-app.md).  
 
 
-#### New assignment type column in Company Portal for Windows 10 <!-- 5459950 WNready -->
+#### New assignment type column in Company Portal for Windows 10 <!-- 5459950  -->
 The Company Portal > **Installed Apps** > **Assignment type** column has been renamed to **Required by your organization**.  Under that column, users will see a **Yes** or **No** value to indicate that an app is either required or made optional by their organization. These changes were made because device users were confused about the concept of available apps. Your users can find more information about installing apps from Company Portal in [Install and share apps on your device](/intune-user-help/install-apps-cpapp-windows). For more  information about configuring the Company Portal app for your users, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).  
 
 <!-- ########################## -->
@@ -394,7 +483,7 @@ We’ve updated the UI experience for [creating](../protect/software-updates-ios
 - The revised workflow includes Assignments, before completing the initial configuration of the policy.
 - A summary page you can use to review all the configurations you made, before saving and deploying a new policy. When editing a policy, the summary shows only the list of items set within the category of properties you edited.
 
-#### Engaged restart settings are removed from Windows Update rings<!--  4464404   WNReady   -->
+#### Engaged restart settings are removed from Windows Update rings<!--  4464404      -->
 As previously announced, Intune's Windows 10 Update rings now [support settings for deadlines](../protect/windows-update-settings.md) and no longer support *Engaged restart*. Settings for *Engaged restart* are no longer available when you configure or manage Update rings in Intune.  
 
 This change aligns with recent [Windows servicing changes](https://docs.microsoft.com//windows/whats-new/whats-new-windows-10-version-1903#servicing) and on devices that run Windows 10 1903 or later, *deadlines* supersede configurations for *engaged restart*.
@@ -872,7 +961,7 @@ For more information on the Windows Defender Antivirus settings, see [Windows 10
 ### Device enrollment
 
 #### Default scope tags<!-- 3702875  -->
-A new built-in default scope tag is now available. All un-tagged Intune objects that support scope tags are automatically assigned to the default scope tag. The **Default** scope tag is added to all existing role assignments to maintain parity with the admin experience today. If you don't want an admin to see Intune objects with the default scope tag, remove the default scope tag from the role assignment. This feature is similar to the security scopes feature in System Center Configuration Manager. For more information, see [Use RBAC and scope tags to for distributed IT](scope-tags.md).
+A new built-in default scope tag is now available. All un-tagged Intune objects that support scope tags are automatically assigned to the default scope tag. The **Default** scope tag is added to all existing role assignments to maintain parity with the admin experience today. If you don't want an admin to see Intune objects with the default scope tag, remove the default scope tag from the role assignment. This feature is similar to the security scopes feature in Configuration Manager. For more information, see [Use RBAC and scope tags to for distributed IT](scope-tags.md).
 
 #### Android enrollment device administrator support<!-- 4869749   -->
 The Android device administrator enrollment option has been added to the Android enrollment page (**Intune** > **Device enrollment** > **Android enrollment**). Android device administrator will still be enabled by default for all tenants.  For more information, see [Android device administrator enrollment](../enrollment/android-enroll-device-administrator.md).
@@ -933,7 +1022,7 @@ You can now configure both general app and data protection configuration setting
 
 ### Device configuration
 
-#### Use "applicability rules" when creating Windows 10 device configuration profiles <!-- 2549910 eeready   idstaged -->
+#### Use "applicability rules" when creating Windows 10 device configuration profiles <!-- 2549910 eeready    -->
 
 You create Windows 10 device configuration profiles (**Device configuration** > **Profiles** > **Create profile** > **Windows 10** for platform > **Applicability rules**). In this update, you can create an **applicability rule** so the profile only applies to a specific edition or specific version. For example, you create a profile that enables some BitLocker settings. Once you add the profile, use an applicability rule so the profile only applies to devices running Windows 10 Enterprise.
 
@@ -1267,7 +1356,7 @@ We’ve released an update for the [PFX Certificate Connector for Microsoft Intu
 #### Intune security tasks for Defender ATP (In public preview)<!-- 3208597 -->
 In public preview, you can use Intune to manage [security tasks for Microsoft Defender Advanced Threat Protection (ATP)](../protect/atp-manage-vulnerabilities.md). This integration with ATP and adds a risk-based approach to discover, prioritize, and remediate endpoint vulnerabilities and misconfigurations, while reducing the time between discovery to mitigation.
 
-#### Check for a TPM chipset in a Windows 10 device compliance policy<!-- 3617671   idstaged-->
+#### Check for a TPM chipset in a Windows 10 device compliance policy<!-- 3617671   -->
 Many Windows 10 and later devices have Trusted Platform Module (TPM) chipsets. This update includes a new compliance setting that checks the TPM chip version on the device.
 
 [Windows 10 and later compliance policy settings](../protect/compliance-policy-create-windows.md#device-security) describes this setting.
