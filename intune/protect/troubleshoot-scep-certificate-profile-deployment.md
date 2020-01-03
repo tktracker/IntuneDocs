@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshoot deployment of a SCEP certificate profiles devices with Intune | Microsoft Docs
+title: Troubleshoot deployment of SCEP certificate profiles to devices with Intune | Microsoft Docs
 description: Troubleshoot sending a SCEP certificate profile to a device with Intune
 keywords:
 author: brenduns
@@ -29,9 +29,9 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot deployment of a SCEP certificate profile to devices in you manage with Microsoft Intune
 
-Use the following information to help you troubleshoot deployment of SCEP certificate profiles with Intune.
+Use the following information to help you troubleshoot deployment of Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Intune.
 
-This article references Step 1 of the [SCEP communication flow overview](troubleshoot-scep-certificate-profiles.md), and makes reference to the following log files that are introduced in that article.
+This article references Step 1 of the [SCEP communication flow overview](troubleshoot-scep-certificate-profiles.md).
 
 <!-- Platforms? Just WIndows currently...  
 with Android, iOS/iPad, and Windows devices.  
@@ -39,7 +39,7 @@ with Android, iOS/iPad, and Windows devices.
 
 ## Validate that the device received the policy
 
-To validate the profile has reached the device you expect, in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) go to Troubleshooting + Support > Troubleshoot.  On the Troubleshoot window, set Assignments to Configuration profiles and then validate the following:
+To validate the profile has reached the device you expect, in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
 
 1. Specify a User that should receive the SCEP certificate profile.
 

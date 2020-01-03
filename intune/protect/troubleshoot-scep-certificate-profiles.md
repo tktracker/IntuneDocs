@@ -39,6 +39,7 @@ The information in this article applies to using SCEP certificate profiles with 
 To troubleshoot Network Device Enrollment Service (NDES), see [Troubleshooting NDES configuration for use with Microsoft Intune certificate profiles]( https://support.microsoft.com/help/4459540/troubleshoot-ndes-configuration-for-use-with-intune).
 
 ## SCEP communication flow overview
+
 The following communication flow describes how Intune uses SCEP to provision devices with certificates.
 
 ![SCEP certificate profile flow](../protect/media/troubleshoot-scep-certificate-profiles/scep-certificate-profile-flow.png)
@@ -47,17 +48,17 @@ The following communication flow describes how Intune uses SCEP to provision dev
 
 2. The device uses the URI for NDES from the profile to contact the NDES server so it can present a challenge.
 
-3. NDES forwards the challenge to the NDES Connector policy module on the server, which validates the request.
+3. NDES forwards the challenge to the Intune Certificate Connector policy module on the server, which validates the request.
 
 4. If valid, NDES passes the request to issue a certificate to the Certification Authority (CA).
 
 5. The certificate is delivered to the device.
 
-6. The NDES Connector reports the certificate issuance event to Intune.
+6. The Intune Certificate Connector reports the certificate issuance event to Intune.
 
 ## Log files
 
-To gain insight to problems for the communication and certificate provisioning workflow, review log files from both the Server infrastructure, and from devices. Later sections for troubleshooting SCEP certificate profiles refer to log files referenced in this section.
+To identify problems for the communication and certificate provisioning workflow, review log files from both the Server infrastructure, and from devices. Later sections for troubleshooting SCEP certificate profiles refer to log files referenced in this section.
 
 [Infrastructure and Server logs](logs-for-on-premises-infrastructure)
 
@@ -75,15 +76,15 @@ Device logs depend on the device platform:
   
 On-premises infrastructure includes the Microsoft Intune Certificate Connector, NDES that runs on a Windows Server, and the certification authority.
 
-Log files for these roles includes Windows Event Viewer, Certificate consoles, and various log file specific to the Intune Certificate Connector, NDES, or other role and operations that are part of the on-premises infrastructure.
+Log files for these roles include Windows Event Viewer, Certificate consoles, and various log files specific to the Intune Certificate Connector, NDES, or other role and operations that are part of the on-premises infrastructure.
 
-The following includes logs or consoles that are references in the various SCEP troubleshooting articles, and default locations. 
+The following table includes logs or consoles that are references in the various SCEP troubleshooting articles, and default locations. 
 
 | Log name or console | Location | Details  |
 |---------------------|-------------|-------------------------------------|
 |NDESConnector_date_time.svclog | On the server that hosts NDES: <br><br>*%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*| This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. <br><br>  Related registry key: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus* <br><br> We recommend that you use [Service Trace Viewer Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view the log files.|
 |CertificateRegistrationPointdate_time.svclog   | On the server that hosts NDES: <br><br>*%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*  |This log shows NDES policy module receiving and verifying certificate requests.<br><br> We recommend that you use [Service Trace Viewer Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view the log files. |
-|NDESPlugin.log   | On the server that hosts NDES:  <br><br> *%program_files%\Microsoft Intune\NDESPolicyModule\logs*  |This log show the passing of certificate requests to the Certificate Registration Point, and the resulting verification of those requests. |
+|NDESPlugin.log   | On the server that hosts NDES:  <br><br> *%program_files%\Microsoft Intune\NDESPolicyModule\logs*  |This log shows the passing of certificate requests to the Certificate Registration Point, and the resulting verification of those requests. |
 |IIS logs    |  On the server that hosts NDES:  <br><br>*c:\inetpub\logs\LogFiles\W3SVC1* | IS logs show the certificate requests from mobile devices entering NDES.  |
 Windows Application log |On the server that hosts NDES: <br><br> Run **eventvwr.msc** to open Windows Event Viewer |This log is referenced when investigating IIS issues, like the SCEP application pool.    |
 
@@ -98,11 +99,11 @@ Windows Application log |On the server that hosts NDES: <br><br> Run **eventvwr.
 
 ### Logs for Windows devices
 
-For devices that run Windows, use the Windows Event logs to diagnose enrollment or device management issues for devices that are managed by a Mobile Device Management (MDM) server.
+For devices that run Windows, use the Windows Event logs to diagnose enrollment or device management issues for devices that you manage with Intune.
 
 On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
 
 ![Windows event logs](../protect/media/troubleshoot-scep-certificate-profiles/windows-event-log.png)
 
 ## Next steps
-Review [SCEP certificate profile deployment](troublehsoot-scep-certificate-profile-deployment) 
+Review [deployment of SCEP certificate profiles](troublehsoot-scep-certificate-profile-deployment) 
