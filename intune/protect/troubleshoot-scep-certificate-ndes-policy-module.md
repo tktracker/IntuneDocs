@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 The information in this article can help you validate operation of the Network Device Enrollment Service (NDES) policy module that installs with the Microsoft Intune Certificate Connector. When NDES receives a request for a certificate, it forwards the request to the policy module, which validates the request as valid for the device. After the validation, NDES contacts the certificate authority (CA) to request the certificate on behalf of the device.
 
-This article applies to both step 3 and step 4 of [SCEP communication workflow](../troubleshoot-scep-communication.md).
+This article applies to both step 3 and step 4 of [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md).
 
 ## NDES communication to the policy module
 

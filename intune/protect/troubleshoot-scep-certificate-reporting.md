@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 Use the following information to confirm that NDES and the Microsoft Intune Certificate Connector successfully report to Intune that the certificate was delivered to a device. Reporting to Intune is the last phase for using SCEP certificate profiles to provision Windows devices with a certificate.
 
-This article applies to the step 6 of the [SCEP communication workflow](../troubleshoot-scep-communication.md).
+This article applies to the step 6 of the [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md).
 
 ## Review for signs of successful reporting
 
@@ -65,11 +65,10 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 ### Troubleshoot stuck files
 
-If you don’t see any new files being created in the Succeed folder, check whether there are any files stuck in the Processing folder.
+If you don’t see any new files being created in the *Succeed* folder, check whether there are any files stuck in the *Processing* folder.
 
 Verify that the Intune Connector Service is started on the NDES server, and there are no errors in Ndesconnector.svclog.
 
 ## Next steps
 
-[How to get support for Microsoft Intune](../intune/fundamentals/get-support.md)
-
+[How to get support for Microsoft Intune](../fundamentals/get-support.md)

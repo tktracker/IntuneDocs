@@ -51,7 +51,7 @@ To validate the profile has reached the device you expect, in the [Microsoft End
 
 ## Validate the policy was processed by a Windows device
 
-The arrival of the policy for the profile is logged in a Windows device’s *DeviceManagement-Enterprise-Diagnostics-Provider* > **Admin** log, with an event ID 306. 
+The arrival of the policy for the profile is logged in a Windows device’s *DeviceManagement-Enterprise-Diagnostics-Provider* > **Admin** log, with an event ID **306**. 
 
 To open the log:
 
@@ -77,4 +77,4 @@ To open the log:
 
 ## Next steps
 
-If the profile reaches the device, the next step is to review the [device to NDES server communication](troubleshoot-scep-certificate-devices-to-ndes.md).
+If the profile reaches the device, the next step is to review the [device to NDES server communication](troubleshoot-scep-certificate-device-to-ndes.md).

@@ -33,7 +33,7 @@ Use the following information to determine if a device that received and process
 
 This article references Step 2 of the [SCEP communication flow overview](troubleshoot-scep-certificate-profiles.md).
 
-## Review IIS logs on the NDES server for a connection from the device
+## Review IIS logs for a connection from the device
 
 1. On the NDES server, open the most recent IIS log file found in the following folder:   *%SystemDrive%\inetpub\logs\logfiles\w3svc1*
 
@@ -56,11 +56,11 @@ This article references Step 2 of the [SCEP communication flow overview](trouble
 
      - See [The HTTP status code in IIS 7 and later versions](https://support.microsoft.com/help/943891) for information about less common error codes.
 
-   If the connection request isn’t logged at all, the contact from the device might be blocked by on the network between the device and the NDES server.
+   If the connection request isn’t logged at all, the contact from the device might be blocked on the network between the device and the NDES server.
 
-## Review Event Logs on the device for the connection to the NDES server
+## Review Event Logs for the connection to NDES
 
-You can view the Windows Event Viewer on the device that is making the connection to NDES, for indications of a successful connection. Connections are logged as an event ID 36 in the devices *DeviceManagement-Enterprise-Diagnostics-Provide* > **Admin** log.
+View the Windows Event Viewer on the device that is making the connection to NDES, and look for indications of a successful connection. Connections are logged as an event ID **36** in the devices *DeviceManagement-Enterprise-Diagnostics-Provide* > **Admin** log.
 
 To open the log:
 
@@ -83,7 +83,7 @@ To open the log:
 
 ## Troubleshoot common errors
 
-The following sections can help you resolve the more common connection issues between devices and NDES.
+The following sections can help with common connection issues between devices and NDES.
 
 ### Status code 500
 
@@ -111,15 +111,15 @@ Use the following steps to test the URL that is specified in the SCEP certificat
 
 1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble *https://contoso.com/certsrv/mscep/msecp.dll*.
 
-2. Open a web browser, and then brows to that SCEP server URL. The result should be: **HTTP Error 403.0 – Forbidden**. This result indicates the URL is functioning correctly.
+2. Open a web browser, and then browse to that SCEP server URL. The result should be: **HTTP Error 403.0 – Forbidden**. This result indicates the URL is functioning correctly.
 
    If you don’t receive that error, select the link that resembles the error you see to view issue-specific guidance:
    - [I receive a general Network Device Enrollment Service message](#general-ndes-message)
-   - [I receive "HTTP Error 503. The service is unavailable"](#https-error-503)
+   - [I receive "HTTP Error 503. The service is unavailable"](#http-error-503)
    - [I receive the "GatewayTimeout" error](#gatewaytimeout)
    - [I receive "HTTP 414 Request-URI Too Long"](#http-414-request-uri-too-long)
    - [I receive "This page can't be displayed"](#this-page-cant-be-displayed)
-   - [I receive "500 - Internal server error"](#intenral-server-error)
+   - [I receive "500 - Internal server error"](#internal-server-error)
 
 #### General NDES message
 
@@ -149,7 +149,7 @@ This issue is usually because the **SCEP** application pool in IIS isn’t start
 
 If the SCEP application pool isn’t started, check the application event log on the server:
 
-1. On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**.
+1. On the device, run **eventvwr.msc** to open **Event Viewer** and go to **Windows Logs** > **Application**.
 
 2. Look for an event that is similar to the following example, which means that the application pool crashes when a request is received:
 
@@ -205,12 +205,16 @@ When you browse to the SCEP server URL, you receive the following error: `HTTP 4
 
 - **Cause**: IIS request filtering isn't configured to support the long URLs (queries) that the NDES service receives. This support is configured when you [configure the NDES service](certificates-scep-configure.md#configure-the-ndes-service) for use with your infrastructure for SCEP.
 
-- **Resolution**: Configure suppo long rt forURLs. 
+- **Resolution**: Configure support for long URLs.
+
   1. On the NDES server, open IIS manager, select **Default Web Site** > **Request Filtering** > **Edit Feature Setting** to open the **Edit Request Filtering Settings** page.
+
   2. Configure the following settings:
      - **Maximum URL length (Bytes)** = 65534
      - **Maximum query string (Bytes)** = 65534
+
   3. Select **OK** to save this configuration and close IIS manager.
+
   4. Validate this configuration by locating the following registry key to confirm that it has the indicated values:
 
      HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters
@@ -218,13 +222,14 @@ When you browse to the SCEP server URL, you receive the following error: `HTTP 4
      The following values are set as DWORD entries:
      - Name: **MaxFieldLength**, with a decimal value of **65534**
      - Name: **MaxRequestBytes**, with a decimal value of **65534**
+
   5. Restart the NDES server.
 
 #### This page can't be displayed
 
 You have Azure AD Application Proxy configured. When you browse to the SCEP server URL, you receive the following error: `This page can't be displayed`
 
-- **Cause**: This issue occurs when the SCEP external URL is incorrect in the Application Proxy configuration, for example, https://contoso.com/certsrv/mscep/mscep.dll.
+- **Cause**: This issue occurs when the SCEP external URL is incorrect in the Application Proxy configuration. An example of this URL is https://contoso.com/certsrv/mscep/mscep.dll.
 
   **Resolution**: Use the default domain of *yourtenant.msappproxy.net* for the SCEP external URL in the Application Proxy configuration.
 
@@ -266,7 +271,7 @@ When you browse to the SCEP server URL, you receive the following error:
 
   9. Expand **Personal**, right-click **Certificates**, then select **All Tasks** > **Request New Certificate**.
 
-  10. On the **Request Certificate** page, select **Exchange Enrollment Agent (Offline request) **, then click **More information is required to enroll for this certificate. Click here to configure settings**.
+  10. On the **Request Certificate** page, select **Exchange Enrollment Agent (Offline request)**, then click **More information is required to enroll for this certificate. Click here to configure settings**.
 
       ![Select Exchange Enrollment Agent](../protect/media/troubleshoot-scep-certificate-device-to-ndes/select-exchange-enrollment-agent.png)
 
