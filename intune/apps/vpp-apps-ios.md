@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -99,12 +99,12 @@ Before you start, you need to get a VPP token from Apple and upload it to your I
         > Changing the country/region will update the apps metadata and store URL on next sync with the Apple service for apps created with this token. The app will not be updated if it does not exist in the new country/region store.
 
     - **Type of VPP account** - Choose from **Business** or **Education**.
-    - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in. Automatic app updates for Apple VPP apps will automatically update only apps deployed with **Required** install intent. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details. Additionally, the user will see that the app as not installed on Company Portal, even though an earlier version of the app is installed. In this case, the user can reinstall the app by clicking **Install** on the app details screen in the Company Portal app to install the newer version of the app.
+    - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in. Automatic app updates for Apple VPP apps will automatically update only apps deployed with **Required** install intent. For apps deployed with **Available** install intent, the user will see that the app as not installed on the Company Portal, even though an earlier version of the app is installed. In this case, the user can reinstall the app by clicking **Install** on the app details screen in the Company Portal app to install the newer version of the app. Note that for user enrolled iOS devices, end-users will continue to see all user-licensed VPP apps within the Company Portal. 
 
         > [!NOTE]
         > Automatic app updates work for both device and user licensed apps for iOS 11.0 and above or macOS 10.12 and above.
 
-    - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microisoft sends to Apple, see [Data Intune sends to Apple](~/protect/data-intune-sends-to-apple.md).
+    - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](~/protect/data-intune-sends-to-apple.md).
 
 6. When you are done, select **Create**.
 
