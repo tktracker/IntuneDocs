@@ -47,7 +47,7 @@ The following communication flow describes how Intune uses SCEP to provision dev
 
 2. [Device to NDES server communication](troubleshoot-scep-certificate-device-to-ndes.md). The device uses the URI for NDES from the profile to contact the NDES server so it can present a challenge.
 
-3. [NDES to policy module commuincation](troubleshoot-scep-certificate-ndes-policy-module.md). NDES forwards the challenge to the Intune Certificate Connector policy module on the server, which validates the request.
+3. [NDES to policy module communication](troubleshoot-scep-certificate-ndes-policy-module.md). NDES forwards the challenge to the Intune Certificate Connector policy module on the server, which validates the request.
 
 4. [NDES to certification authority](troubleshoot-scep-certificate-ndes-policy-module.md). NDES passes valid requests to issue a certificate to the Certification Authority (CA).
 
