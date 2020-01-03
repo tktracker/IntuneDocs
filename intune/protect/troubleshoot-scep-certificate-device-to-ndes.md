@@ -233,7 +233,7 @@ You have Azure AD Application Proxy configured. When you browse to the SCEP serv
 
   **Resolution**: Use the default domain of *yourtenant.msappproxy.net* for the SCEP external URL in the Application Proxy configuration.
 
-#### 500 - Internal server error
+#### <a name="internal-server-error"></a>500 - Internal server error
 
 When you browse to the SCEP server URL, you receive the following error:
 
