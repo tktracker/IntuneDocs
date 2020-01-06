@@ -116,7 +116,7 @@ To avoid hitting device caps, be sure to remove stale device records.
 
     4. Turn on DirSync again and check if the user is now synced properly.
 
-3. In a scenario where you're using System Center Configuration Manager with Intune, verify that the user has a valid Cloud User ID:
+3. In a scenario where you're using Configuration Manager with Intune, verify that the user has a valid Cloud User ID:
 
     1. Open SQL Management Studio.
 
@@ -338,7 +338,7 @@ For more information, see [Best practices for securing Active Directory Federati
 
 5. Confirm that Safari for iOS is the default browser and that cookies are enabled.
 
-### Enrolled iOS device doesn't appear in console when using System Center Configuration Manager with Intune
+### Enrolled iOS device doesn't appear in console when using Configuration Manager with Intune
 **Issue:** User enrolls iOS device but it doesn't appear in the Configuration Manager admin console. The device doesn't indicate that it's been enrolled. Possible causes:
 
 - The Microsoft Intune Connector in your Configuration Manager site isn't communicating with the Intune service.
@@ -425,7 +425,7 @@ After you've wiped the blocked devices, you can tell the users to restart the en
     3. Find the device with the enrollment problem. Search by device name or MAC/HW Address to narrow your results.
     4. Select the device > **Delete**. Delete all other entries associated with the device.  
 
-## Issues when using System Center Configuration Manager with Intune
+## Issues when using Configuration Manager with Intune
 
 ### Mobile devices disappear
 

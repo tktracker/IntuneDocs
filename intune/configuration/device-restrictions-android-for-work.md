@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -296,6 +296,9 @@ These settings apply to Android Enterprise enrollment types where Intune control
   You can also use an App Configuration policy to grant permissions for individual apps (**Client Apps** > **App configuration policies**).
 
 - **Add and remove accounts**: Choose **Block** to prevent end users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into an Android work profile, you can prevent end users from adding or removing accounts in this work profile. **Not configured** allows adding accounts in the work profile.  
+
+  > [!NOTE]
+  > Google accounts can't be added to a work profile.
 
 - **Contact sharing via Bluetooth**: Enables access to work contacts from another device, such as a car, that is paired using Bluetooth. By default, this setting isn't configured, and work profile contacts aren't shown. Select **Enable** to allow this sharing, and show work profile contacts. This setting applies to Android work profile devices on Android OS v6.0 and newer. Enabling this setting may allow certain Bluetooth devices to cache work contacts upon first connection. Disabling this policy after an initial pairing/sync may not remove work contacts from a Bluetooth device.
 

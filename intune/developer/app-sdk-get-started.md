@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -64,7 +64,7 @@ We will use the email addresses listed in your questionnaire response to reach o
 
 4. Finally, your app's deep link will be added to the next monthly Intune Service update. For example, if the registration information is finished in July, the deep link will be supported in mid-August.
 
-If your app's deep link changes in the future, you will need to re-register your app.
+The deep link is the link to your app's listing in the public app store. If your app's deep link changes in the future, you will need to re-register your app.
 
 > [!NOTE]
 > You must inform us if you update your app with a new version of the Intune App SDK.
@@ -187,7 +187,7 @@ Once you have registered your app within an Azure tenant, and it is showing up u
 7. Click **Add permissions**.
 
 > [!NOTE]
-> If your app restricts you from signing in due to an error accessing this resource: https://intunemam.microsoftonline.com, you must send a note to msintuneappsdk@microsoft.com with your app's Client ID. This is a manual approval process today.
+> If your app restricts you from signing in due to an error accessing this resource: https\://intunemam.microsoftonline.com, you must send a note to msintuneappsdk@microsoft.com with your app's Client ID. This is a manual approval process today.
 
 ### Badge your app (optional)
 

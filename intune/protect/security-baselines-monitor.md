@@ -46,12 +46,16 @@ The **Overview** pane provides two methods to monitor status:
 - **Device view** – A summary of how many devices are in each status category for the baseline.
 - **Per-category** - A view that displays each category in the baseline and includes the percentage of devices for each status group for each baseline category.
 
-Each device is represented by one of the following statuses, which are used in both the *device* view, and the *per-category* views:
+Each device is represented by one of the following statuses (used in the *device* view and also the *per-category* views):
 
 - **Matches baseline** - All the settings in the baseline match the recommended settings.
-- **Does not match baseline** - At least one setting in the baseline doesn't match the recommended settings.
-- **Misconfigured** - At least one setting isn't properly configured. This status means the setting is in a conflict, error, or a pending state.
-- **Not applicable** - At least one setting isn't applicable, and isn't applied.
+- **Does not match baseline** - At least one setting in the baseline doesn't match the recommended setting.
+
+  > [!NOTE]
+  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a "Does not match baseline" status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
+
+- **Misconfigured** - At least one setting isn't correctly configured. This status means that the setting is in a conflict, error, or pending state.
+- **Not applicable** - At least one setting isn't applicable and isn't applied.
 
 ### Device view
 
