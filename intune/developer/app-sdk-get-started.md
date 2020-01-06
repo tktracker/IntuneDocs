@@ -64,7 +64,7 @@ We will use the email addresses listed in your questionnaire response to reach o
 
 4. Finally, your app's deep link will be added to the next monthly Intune Service update. For example, if the registration information is finished in July, the deep link will be supported in mid-August.
 
-If your app's deep link changes in the future, you will need to re-register your app.
+The deep link is the link to your app's listing in the public app store. If your app's deep link changes in the future, you will need to re-register your app.
 
 > [!NOTE]
 > You must inform us if you update your app with a new version of the Intune App SDK.
