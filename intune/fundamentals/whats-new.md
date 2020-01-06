@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -55,6 +55,15 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Monitor and troubleshoot
 ### Role-based access control
 -->  
+
+<!-- ########################## -->
+## Week of January 6, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### S/MIME support for Microsoft Outlook for iOS<!-- 2669398 -->
+Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Sensitivity labeling and protection in Outlook for iOS and Android](http://aka.ms/omsmime).
 
 <!-- ########################## -->
 ## Week of December 30, 2019
@@ -188,13 +197,6 @@ For more information, see [Licensing terms](https://www.microsoft.com/en-us/Lice
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
-
-#### S/MIME support with Microsoft Outlook for iOS<!-- 2669398  -->
-
-   > [!NOTE]
-   > This feature has been delayed, but will be released soon.
-
-
 
 #### UI update when selectively wiping app data<!-- 4102028 -->
 The UI to selectively wipe app data in Intune has been updated. UI changes include:
