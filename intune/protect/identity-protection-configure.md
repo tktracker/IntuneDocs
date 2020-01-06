@@ -76,6 +76,9 @@ This article shows you how to create a device configuration profile. For a list 
 
 The profile is created and appears in the profiles list. Next, [assign](../configuration/device-profile-assign.md) this profile to user and device groups to meet your needs.
 
+> [!IMPORTANT]
+> To allow multiple users to be provisioned to a device, specify that the Windows Hello for Business policy be applied to the devices. If the policy is applied only to users, only one user can be provisioned to a device.
+
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 
 ## Example of device restriction settings
