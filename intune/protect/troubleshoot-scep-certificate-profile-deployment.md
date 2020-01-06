@@ -36,7 +36,7 @@ This article references Step 1 of the [SCEP communication flow overview](trouble
 
 ## Android
 
-SCEP certificate profiles for Android come down to the device as a SyncML and are logged in the [OMADM log](troubleshoot-scep-certificate-profiles.md#logs-for-Android-devices).
+SCEP certificate profiles for Android come down to the device as a SyncML and are logged in the [OMADM log](troubleshoot-scep-certificate-profiles.md#logs-for-android-devices).
 
 ### Validate that the Android device was sent the policy
 
