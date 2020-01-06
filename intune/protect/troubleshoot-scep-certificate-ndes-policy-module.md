@@ -44,7 +44,8 @@ To confirm the validation request is submitted to the module, look for an entry 
 - **IIS logs**:
 
   ```
-  fe80::f53d:89b8:c3e8:5fec%13 POST /CertificateRegistrationSvc/Certificate/VerifyRequest - 443 - fe80::f53d:89b8:c3e8:5fec%13 NDES_Plugin - 201 0 0 341 875
+  fe80::f53d:89b8:c3e8:5fec%13 POST /CertificateRegistrationSvc/Certificate/VerifyRequest - 443 - 
+  fe80::f53d:89b8:c3e8:5fec%13 NDES_Plugin - 201 0 0 341 875
   ```
 
 - **NDESPlugin log**:
@@ -61,6 +62,13 @@ To confirm the validation request is submitted to the module, look for an entry 
   Exiting VerifyRequest with 0x0
   ```
 
+- **CertificateRegistrationPoint.svclog**:
+
+  `Validation Phase 1 finished with status True.`  
+  `Validation Phase 3 finished with status True.`  
+  `VerifyRequest Finished with status True`
+
+
 **When success indicators aren't present**:
 
 If you don’t find these entries, start by reviewing the troubleshooting guidance for [device to NDES server communication](troubleshoot-scep-certificate-device-to-ndes.md#troubleshoot-common-errors).
@@ -69,7 +77,7 @@ If the information in that article doesn't help you resolve the issue, the follo
 
 ### NDESPlugin.log contains an error 12175
 
- When the log contains an error 12175 that’s similar to the following, there might be a problem with the SSL certificate:
+When the log contains an error 12175 that’s similar to the following, there might be a problem with the SSL certificate:
 
 ```
 WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
@@ -86,6 +94,31 @@ Modern browsers and browsers on mobile devices ignore the *Common Name* on an SS
      Name = external server name  
      DNS Name = internal server name
 
+### NDESPlugin.log contains an error 403 – Forbidden: Access is denied"
+
+When the following logs contain an error 403 that’s similar to the following, the client certificate might be untrusted or invalid:
+
+**NDESPlugin.log**:
+
+```
+Sending request to certificate registration point.
+Verify challenge returns <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns="http://www.w3.org/1999/xhtml"> <head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>403 - Forbidden: Access is denied.</title>
+```
+
+**IIS log**:
+
+```
+POST /CertificateRegistrationSvc/Certificate/VerifyRequest - 443 -<IP_address>
+NDES_Plugin - 403 16 2148204809 453  
+```
+
+This issue occurs if there are intermediate CA certificates in the NDES server's Trusted Root Certification Authorities certificate store.
+
+If a certificate has the same *Issued to* and *Issued by* values, it's a root certificate. Otherwise, it's an intermediate certificate.
+
+**Resolution**: To fix the issue, identify and remove the intermediate CA certificates from the Trusted Root Certification Authorities certificate store.
+
 ### NDESPlugin.log indicates the challenge returns false
 
 When the result of the challenge returns **false**, check the *CertificateRegistrationPoint.svclog* for errors. For example, you might see a "Signing certificate could not be retrieved" error that resembles the following entry:
@@ -98,7 +131,7 @@ Signing certificate could not be retrieved. System.Security.Cryptography.Cryptog
 
 If this value doesn’t exist, restart the Intune Connector Service in services.msc, and then check whether the value appears in registry. If the value is still missing, it’s often because of network connectivity issues between the server that NDES and the Intune service.
 
-## NDES communication to the certificate authority
+## NDES passes the request to issue the certificate
 
 After a successful validation by the certificate registration point (the policy module), NDES passes the certificate request to the CA on behalf of the device.
 
@@ -114,7 +147,8 @@ After a successful validation by the certificate registration point (the policy 
 - **IIS logs**:
 
   ```
-  fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe ... 80 - fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 2713 1296
+  fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe ... 80 - 
+  fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 2713 1296
   ```
 
 - **CertificateRegistrationPoint.svclog**:
