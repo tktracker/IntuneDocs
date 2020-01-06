@@ -63,7 +63,7 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### App management
 
 #### S/MIME support for Microsoft Outlook for iOS<!-- 2669398 -->
-Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Sensitivity labeling and protection in Outlook for iOS and Android](http://aka.ms/omsmime).
+Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Sensitivity labeling and protection in Outlook for iOS and Android](https://aka.ms/omsmime).
 
 <!-- ########################## -->
 ## Week of December 30, 2019
