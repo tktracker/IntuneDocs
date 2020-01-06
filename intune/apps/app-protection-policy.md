@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -99,7 +99,7 @@ When apps are used without restrictions, company and personal data can get inter
 ### Data protection with app protection policies (APP)
 
 You can use App protection policies to prevent company data from saving to the local storage of the device (see the image below). You can also restrict data movement to other apps that aren't protected by App protection policies. App protection policy settings include:
-- Data relocation policies like  **Prevent Save As**, and **Restrict cut, copy, and paste**.
+- Data relocation policies like  **Save copies of org data**, and **Restrict cut, copy, and paste**.
 - Access policy settings like **Require simple PIN for access**, and **Block managed apps from running on jailbroken or rooted devices**.
 
 ![Conceptual image that shows company data being protected by policies](./media/app-protection-policy/apps-with-protection-policies.png)
@@ -173,7 +173,7 @@ The additional requirements to use the [Word, Excel, and PowerPoint](https://pro
 
 - The end user must have a license for [Office 365 Business or Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Azure Active Directory account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Office 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-- The end user must have a managed location configured using the granular save as functionality under the "Prevent Save As" application protection policy setting. For example, if the managed location is OneDrive, the [OneDrive](https://onedrive.live.com/about/) app should be configured in the end user's Word, Excel, or PowerPoint app.
+- The end user must have a managed location configured using the granular save as functionality under the "Save copies of org data" application protection policy setting. For example, if the managed location is OneDrive, the [OneDrive](https://onedrive.live.com/about/) app should be configured in the end user's Word, Excel, or PowerPoint app.
 
 - If the managed location is OneDrive, the app must be targeted by the app protection policy deployed to the end user.
 
