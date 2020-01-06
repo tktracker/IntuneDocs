@@ -147,6 +147,12 @@ You'll be able to block devices from enrolling based on the manufacturer of the 
 ### Deploy Software Updates to macOS devices <!-- 3194876 idready -->
 You'll be able to deploy Software Updates to groups of macOS devices. This feature includes critical, firmware, configuration file, and other updates. You'll be able to send updates on the next device check-in or select a weekly schedule to deploy updates in or out of time windows that you set. This helps when you want to update devices outside standard work hours or when your help desk is fully staffed. You'll also get a detailed report of all macOS devices with updates deployed. You can drill into the report on a per-device basis to see the statuses of particular updates.
 
+### New information in device details<!-- 4471759 5604099  -->
+The following information will be added to the **Overview** page for devices:
+- Memory Capacity (amount of physical memory on the device)
+- Storage Capacity (amount of physical storage on the device) 
+- CPU Processor Type and Speed
+- RAM and processor data
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
