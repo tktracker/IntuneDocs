@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshoot deployment of a SCEP certificate profile to devices in you manage with Microsoft Intune
+# Troubleshoot deployment of a SCEP certificate profile to devices in Microsoft Intune
 
 Use the following information to help you troubleshoot deployment of Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Intune.
 
