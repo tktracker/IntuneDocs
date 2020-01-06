@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,9 +75,27 @@ For user enrolled iOS devices, end users will no longer be presented with device
 ### App management
 
 #### Notice - Windows 10 1703 (RS2) will be moving out of support <!-- 5026679 -->
-Starting October 9, 2018, Windows 10 1703 (RS2) moved out of Microsoft platform support for for Home, Pro, and Pro for Workstations editions. For Windows 10 Enterprise and Education editions, Windows 10 1703 (RS2) moved out of platform support on October 8, 2019. Starting December 26, 2019, we will be updating the minimum version of the Windows Company Portal application to Windows 10 1709 (RS3). Computers running versions prior to 1709 will no longer receive updated versions for the application from the Microsoft Store. We've previously communicated this change to customers who are managing older versions of Windows 10 via the message center. For more information, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+Starting October 9, 2018, Windows 10 1703 (RS2) moved out of Microsoft platform support for Home, Pro, and Pro for Workstations editions. For Windows 10 Enterprise and Education editions, Windows 10 1703 (RS2) moved out of platform support on October 8, 2019. Starting December 26, 2019, we will be updating the minimum version of the Windows Company Portal application to Windows 10 1709 (RS3). Computers running versions prior to 1709 will no longer receive updated versions for the application from the Microsoft Store. We have previously communicated this change to customers who are managing older versions of Windows 10 via the message center. For more information, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 <!-- ########################## -->
+
+## Week of December 16, 2019
+
+### Device configuration
+
+#### Updates to Administrative Templates for Windows 10 devices <!-- 5941568 -->
+
+You can use ADMX templates in Microsoft Intune to control and manage settings for Microsoft Edge, Office, and Windows. Administrative Templates in Intune made the following policy setting updates:
+
+- Added support for Microsoft Edge versions 78 and 79.
+- Includes the November 11, 2019 ADMX files in [Administrative Template files (ADMX/ADML) and Office Customization Tool for Office 365 ProPlus, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+
+For more information on ADMX templates in Intune, see [Use Windows 10 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md).
+
+Applies to:
+
+- Windows 10 and later
+
 ## Week of December 9, 2019 (1912 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -94,7 +112,7 @@ As we move closer to the retirement of the Intune Managed Browser, we made chang
 When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign-in to Microsoft Edge with their AAD accounts, if they have not already done so.  This will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. This means your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers leveraging managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
 
 #### Configure app notification content for organization accounts<!-- 2576686  -->
-Intune app protection policies (APP) on Android and iOS devices allow you to control app notification content for Org accounts. You can select an option (Allow, Block org Data, or Blocked) to specify how notifications for org accounts are shown for the selected app.This feature requires support from applications and may not be available for all APP enabled applications. Outlook for iOS version 4.15.0 (or later) and Outlook for Android 4.83.0 (or later) will support this setting. The setting is available in the console, but the functionality will begin to take effect after December 16th, 2019. For more about APP, see [What are app protection policies?](../apps/app-protection-policy.md).
+Intune app protection policies (APP) on Android and iOS devices allow you to control app notification content for Org accounts. You can select an option (Allow, Block org Data, or Blocked) to specify how notifications for org accounts are shown for the selected app.This feature requires support from applications and may not be available for all APP enabled applications. Outlook for iOS version 4.15.0 (or later) and Outlook for Android 4.83.0 (or later) will support this setting. The setting is available in the console, but the functionality will begin to take effect after December 16, 2019. For more about APP, see [What are app protection policies?](../apps/app-protection-policy.md).
 
 #### Microsoft app icons update<!--4677605  -->
 The icons used for Microsoft apps in the app targeting pane for App protection policies and App configuration policies have been updated.
@@ -113,11 +131,12 @@ These new settings expand on the previous settings for SSO app extensions and Ap
 To see the full range of SSO app extension settings you can configure, go to [SSO on iOS](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) and [SSO on macOS](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
 
 Applies to:
+
 - iOS/iPadOS
 - macOS
 
-#### We’ve updated two device restriction settings for iOS and iPadOS devices to correct their behavior<!-- 5701352 WNReady   -->
-For iOS devices, you can create device restriction profiles that **Allow over-the-air PKI updates** and **Blocks USB Restricted mode** (**Devices** > **Device configuration** > **Profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile type). Prior to this release, the UI settings and descriptions for the following settings were incorrect, and they’ve now been corrected. Beginning with this release, the settings behavior is as follows:
+#### We have updated two device restriction settings for iOS and iPadOS devices to correct their behavior<!-- 5701352 WNReady   -->
+For iOS devices, you can create device restriction profiles that **Allow over-the-air PKI updates** and **Blocks USB Restricted mode** (**Devices** > **Device configuration** > **Profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile type). Prior to this release, the UI settings and descriptions for the following settings were incorrect, and they have now been corrected. Beginning with this release, the settings behavior is as follows:
 
 **Block over-the-air PKI updates**: **Block** prevents your users from receiving software updates unless the device is connected to a computer. **Not configured** (default): allows a device to receive software updates without being connected to a computer.
 - Previously, this setting let you configure it as: **Allow**, which let your users receive software updates without connecting their devices to a computer.
@@ -127,6 +146,7 @@ For iOS devices, you can create device restriction profiles that **Allow over-th
 For more information on the setting you can configure, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 
 This feature applies to:
+
 - OS/iPadOS
 
 #### Wired network device configuration profiles for macOS devices<!-- 3508686  -->
@@ -205,7 +225,7 @@ The UI to selectively wipe app data in Intune has been updated. UI changes inclu
 For more information, see [How to wipe only corporate data from Intune-managed apps](~/apps/apps-selective-wipe.md).
 
 #### iOS and iPadOS third party keyboard support<!-- 4922950 -->
-In March, 2019, we announced the removal of support for the iOS App protection policy setting "Third party keyboards". The feature is returning to Intune with both iOS and iPadOS support. To enable this setting, visit the **Data protection** tab of a new or existing iOS/iPadOS app protection policy and find the **Third party keyboards** setting under **Data Transfer**.
+In March  2019, we announced the removal of support for the iOS App protection policy setting "Third party keyboards". The feature is returning to Intune with both iOS and iPadOS support. To enable this setting, visit the **Data protection** tab of a new or existing iOS/iPadOS app protection policy and find the **Third party keyboards** setting under **Data Transfer**.
 
 The behavior of this policy setting differs slightly from the previous implementation. In multi-identity apps using SDK version 12.0.16 and later, targeted by app protection policies with this setting configured to **Block**, end-users will be unable to opt for third party keyboards in both their organization and personal accounts. Apps using SDK versions 12.0.12 and earlier will continue to exhibit the behavior documented in our blog post title, [Known issue: Third party keyboards are not blocked in iOS for personal accounts](https://aka.ms/3rdparty_iOS_Intune).
 
@@ -225,6 +245,7 @@ There are new Exchange ActiveSync settings available, including:
 For more information on these setting, go to [Email profile settings for iOS devices in Intune](../configuration/email-settings-ios.md). 
 
 Applies to:
+
 - iOS 13.0 and newer
 - iPadOS 13.0 and newer
 
@@ -234,6 +255,7 @@ On Android Enterprise fully managed and dedicated devices, there's a new setting
 To see the settings you can configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 Applies to:
+
 - Android Enterprise fully managed devices
 - Android Enterprise dedicated devices
 
@@ -245,6 +267,7 @@ This setting has no effect on devices. To remove the setting from existing profi
 To see all the settings you can configure, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 
 Applies to:
+
 - iOS/iPadOS
 
 #### Windows 10 feature updates (public preview)<!-- 2384877 -->
@@ -262,6 +285,7 @@ Only some apps support managed preferences, and these apps might not allow you t
 For more information on this feature, see [Add a property list file to macOS devices using Microsoft Intune](../configuration/preference-file-settings-macos.md).
 
 Applies to:
+
 - macOS devices running 10.7 and newer
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -433,6 +457,7 @@ On Windows 10 and later, you can create a device configuration profile to contro
 For more information on this feature, see [Use DFCI profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
 
 Applies to:
+
 - Windows 10 RS5 (1809) and newer on supported firmware
 
 ### Device enrollment
@@ -506,6 +531,7 @@ On Android Enterprise work profile devices, users can't ever install apps apps f
 To see the setting you can configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 Applies to:
+
 - Android Enterprise work profile
 
 #### Create a global HTTP proxy on Android Enterprise device owner devices<!-- 4816339   -->
@@ -514,6 +540,7 @@ On Android Enterprise devices, you can configure a global HTTP Proxy to meet you
 To configure this feature, and see all the settings you configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 Applies to:
+
 - Android Enterprise device owner
 
 #### Connect automatically setting is removed in Wi-Fi profiles on Android device administrator and Android Enterprise<!-- 5021055   -->
@@ -524,6 +551,7 @@ If you use this setting in a Wi-Fi profile, you may have noticed that **Connect 
 To see the current settings, go to [Android Wi-Fi settings](../configuration/wi-fi-settings-android.md) or [Android Enterprise Wi-Fi settings](../configuration/wi-fi-settings-android-enterprise.md).
 
 Applies to:
+
 - Android device administrator 
 - Android Enterprise
 
@@ -537,6 +565,7 @@ On iOS and iPadOS devices, you can create a profile to restrict features and set
 To see these settings, go to [iOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 
 Applies to:
+
 - iOS 13.0 and newer
 - iPadOS 13.0 and newer
 
@@ -602,9 +631,10 @@ Apple's iOS 13.1 release includes User Enrollment, a new form of lightweight man
 - Give end users the ability to select between lighter User Enrollment or stronger Device Enrollment when they enroll their devices.
 
 Starting on 9/24/2019 with the release of iOS 13.1, we're in the process of rolling out these updates to all customers and expect to be completed by the end of next week.
+
 Applies to:
 
-iOS 13.1 and later
+- iOS 13.1 and later
 
 #### Intune support for iPadOS and iOS 13.1 devices<!--5439574-->
 Intune now supports managing both iPadOS and iOS 13.1 devices. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Support-for-iOS-13-1-and-iPadOS/ba-p/873094).
@@ -659,6 +689,7 @@ These VPN profiles configure the native VPN client, so no VPN client apps are in
 To see the current VPN settings you can configure, go to [Configure VPN settings on iOS devices](../configuration/vpn-settings-ios.md).
 
 Applies to:
+
 - iOS
 
 #### Device features, device restrictions, and extension profiles for iOS and macOS settings are shown by enrollment type<!-- 4886161   -->
@@ -680,6 +711,7 @@ In this update, the available settings in the Intune portal are categorized by t
   - All enrollment types
 
 Applies to:
+
 - iOS
 
 #### New voice control settings for supervised iOS devices running in kiosk mode<!-- 4892835   -->
@@ -692,6 +724,7 @@ In this update, there are new settings you can control:
 To see the current settings, go to [iOS Kiosk settings](../configuration/device-restrictions-ios.md#kiosk).
 
 Applies to:
+
 - iOS 13.0 and later
 
 #### Use single sign-on for apps and websites on your iOS and macOS devices<!-- 4893175   -->
@@ -702,6 +735,7 @@ Use these settings to configure a single sign-on experience, especially for apps
 To see the current device features you can configure, go to [iOS device features](../configuration/ios-device-features-settings.md) and [macOS device features](../configuration/macos-device-features-settings.md).
 
 Applies to:
+
 - iOS 13.0 and newer
 - macOS 10.15 and newer
 
@@ -711,6 +745,7 @@ On macOS devices, you can configure different features, and push these features 
 To see the current features you can configure, go to [macOS device feature settings in Intune](../configuration/macos-device-features-settings.md).
 
 Applies to:
+
 - macOS 10.15 and newer
 
 #### Use "iTunes" and "apps" in the iTunes App store URL when showing or hiding apps on iOS supervised devices<!-- 4928474   --> 
