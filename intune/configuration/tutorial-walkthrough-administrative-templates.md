@@ -337,7 +337,7 @@ In this template, we configure some Internet Explorer settings to lock down devi
       - **Value**: Enabled
       - **Home page**: Enter a URL, such as `contoso.com`.
 
-5. Clear your search filter. Notice the settings you configured are listed at the top. If you configured many settings, you can also search for **enabled** or **disabled**:
+5. Clear your search filter. Notice the settings you configured are listed at the top:
 
     > [!div class="mx-imgBorder"]
     > ![Configured settings are listed at the top in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/configured-settings-administrative-template.png)
