@@ -72,7 +72,10 @@ The Company Portal app will show additional app installation status messages to 
 Web clips, which act as pinned web apps on iOS devices, will need to be updated. Newly deployed web clips will open in Microsoft Edge instead of the Intune Managed Browser if required to open in a protected browser. You must retarget pre-existing web clips to ensure they open in Microsoft Edge instead of the Managed Browser. 
 
 ### User experience change when adding apps to Intune<!-- 4705829 idready -->
-You will see a new user experience when adding apps to via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md). 
+You will see a new user experience when adding apps via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md).
+
+#### Require Win32 apps to restart <!-- 3136567-->
+You can require that a Win32 app must restart after a successful install. Also, you can choose the amount of time (the grace period) before the restart must occur.
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -106,9 +109,9 @@ Applies to:
 ### Improved user interface experience when creating configuration profiles on iOS and macOS devices<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
 When you create a profile for iOS or macOS devices, the experience in the Endpoint Management Admin Center will be updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **iOS** or **macOS** for platform):
 
-- Custom: ios, macOS
-- Device features: ios, macOS
-- Device restrictions: ios, macOS
+- Custom: iOS, macOS
+- Device features: iOS, macOS
+- Device restrictions: iOS, macOS
 - Endpoint protection: macOS
 - Extensions: macOS
 - Preference file: macOS
