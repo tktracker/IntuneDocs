@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 1/6/2020
+ms.date: 1/7/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -87,25 +87,11 @@ To see the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings f
 Applies to:
 - Android Enterprise work profile
 
-### Enable network access control (NAC) with Cisco AnyConnect VPN on iOS devices<!-- 4860111 idready -->
-On iOS devices, you can create a VPN profile, and use different connection types, including Cisco AnyConnect (**Device configuration** > **Profiles** > **Create profile** > **iOS** for platform > **VPN** for profile type > **Cisco AnyConnect** for connection type). 
-
-In a future update, you'll be able to enable network access control (NAC) with Cisco AnyConnect. To use this feature:
-
-1. At [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html), use the steps in **Configuring Microsoft Intune as an MDM Server** to configure the Cisco Identity Services Engine (ISE) in Azure.
-2. In the Intune device configuration profile, select the **Enable Network Access Control (NAC)** setting.
-
-To see all the available VPN settings, go to [Configure VPN settings on iOS devices](../configuration/vpn-settings-ios.md).
-
-Applies to:
-- iOS
-
 ### Wired network device configuration profiles for macOS devices<!-- 3508686  -->
 A new macOS device configuration profile will be available that configures wired networks (**Device configuration** > **Profiles** > **Create profile** > **macOS** for platform > **Wired Network** for profile type). Use this feature to create 802.1x profiles to manage wired networks, and deploy these wired networks to your macOS devices.
 
 Applies to:
 - macOS
-
 
 ### VPN profiles with IKEv2 VPN connections can use always on with iOS devices <!-- 1947932 idready -->
 On iOS devices, you can create a VPN profile that uses an IKEv2 connection (**Device configuration** > **Profiles** > **Create profile** > **iOS/iPadOS** for platform > **VPN** for profile type). In a future update, you can configure always-on with IKEv2. When configured, IKEv2 VPN profiles connect automatically, and stay connected (or quickly reconnect) to the VPN. It stays connected even when moving between networks or restarting devices.
