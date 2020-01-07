@@ -3,46 +3,36 @@
     "content": [
       {
         "files": [
-          "**/*.md",
-          "**/*.yml"
+          "**/*.md"
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
         ]
       }
     ],
     "resource": [
       {
         "files": [
-          "**/media/**",
           "**/*.png",
-          "**/*.gif",
           "**/*.jpg"
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
           "**/includes/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {
-      "brand": "Intune",
-      "searchScope": ["Intune"]
-    },
-    "fileMetadata": {
-      "featureFlags": {
-        "*.md" : [
-          "show_binary_rating"
-        ]
-      }
-    },
+    "globalMetadata": {},
+    "fileMetadata": {},
     "template": [],
-    "dest": "intune-azure",
+    "dest": "intune-azure-redir",
     "markdownEngineName": "markdig"
   }
 }

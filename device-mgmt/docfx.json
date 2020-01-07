@@ -8,39 +8,38 @@
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
         ]
       }
     ],
     "resource": [
       {
         "files": [
-          "**/media/**",
           "**/*.png",
-          "**/*.gif",
           "**/*.jpg"
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "brand": "Intune",
-      "searchScope": ["Intune"]
+      "breadcrumb_path": "/device-mgmt/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "feedback_system": "None"
     },
-    "fileMetadata": {
-      "featureFlags": {
-        "*.md" : [
-          "show_binary_rating"
-        ]
-      }
-    },
+    "fileMetadata": {},
     "template": [],
     "dest": "device-mgmt",
     "markdownEngineName": "markdig"
