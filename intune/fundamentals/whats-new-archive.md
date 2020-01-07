@@ -3039,7 +3039,7 @@ Users of iOS devices might see our new account picker when they sign into the Co
 ## May 2017
 
 ### Change your MDM authority without unenrolling managed devices<!--1103950-->
-You can now change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. In the Configuration Manager console, you can [change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority) from Set to Configuration Manager (hybrid) to Microsoft Intune (standalone) or vice versa.
+You can now change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. In the Configuration Manager console, you can change your MDM authority from Set to Configuration Manager (hybrid) to Microsoft Intune (standalone) or vice versa.
 
 
 ### Improved notification for Samsung Knox startup PINs<!--1087143-->

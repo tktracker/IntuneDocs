@@ -203,7 +203,6 @@ Renew the APNs certificate, and then re-enroll the device.
 > Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS devices in Intune. 
 
 - To renew the APNs certificate in Intune standalone, see [Renew Apple MDM push certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- To renew the APNs certificate in Intune hybrid with Configuration Manager, see [Set up iOS hybrid device management with Configuration Manager and Microsoft Intune](https://docs.microsoft.com/configmgr/mdm/deploy-use/enroll-hybrid-ios-mac).
 - To renew the APNs certificate in Office 365, see [Create an APNs Certificate for iOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### XPC_TYPE_ERROR Connection invalid

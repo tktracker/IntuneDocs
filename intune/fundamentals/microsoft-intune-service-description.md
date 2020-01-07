@@ -49,9 +49,7 @@ You can start to use Intune with a 30-day free trial that includes 100 user lice
 
 - [Enrolled device management capabilities of Microsoft Intune](introduction-intune.md)
 
-- [Hybrid mobile device management (MDM) with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management)
-
-For more about Configuration Manager, see [Documentation for Microsoft Endpoint Configuration Manager](/sccm/index).--->
+--->
 ## Intune Onboarding benefit
 Microsoft offers the Intune Onboarding benefit for eligible services in eligible plans. The Onboarding benefit lets you work remotely with Microsoft specialists to get your Intune environment ready for use. For more about the Onboarding benefit, see [Microsoft Intune Onboarding Benefit Description](http://go.microsoft.com/fwlink/?LinkId=619281).
 
@@ -103,7 +101,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
 
-- **Intune with Microsoft Endpoint Configuration Manager.** Use the Configuration Manager management console to manage computers and mobile devices in your enterprise. This configuration can help you to manage all your organization’s devices through a single console, the Configuration Manager Admin Console. Configuration Manager supports large numbers of mobile devices, servers, and computers. For more about Configuration Manager, see [Hybrid mobile device management (MDM) with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management). For more help deciding which approach is right for you, see [Choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).--->
+--->
 
 ## Language support
 Intune runs in the Azure portal, which supports these languages: Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, German, Hungarian, Italian, Japanese, Portuguese (Brazil), Portuguese (Portugal), Russian, Spanish, English, French, Korean, Polish, Swedish, Turkish.
