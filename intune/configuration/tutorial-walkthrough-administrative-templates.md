@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/07/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,13 +39,13 @@ Group policy administrative templates, also known as ADMX templates, include set
 
 ADMX templates are available for the following services:
 
-- **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/en-us/enterprise)
-- **Office**: Download at [Office 365 ProPlus, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)
+- **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/en-us/enterprise).
+- **Office**: Download at [Office 365 ProPlus, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: Built in to the Windows 10 OS.
 
 For more information on ADMX policies, see [Understanding ADMX-backed policies](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
 
-In Microsoft Intune, these templates are built in to the Intune service, and are available as an **Administrative templates** profile. In this profile, you configure the settings you want to include, and then "assign" this profile to your devices.
+In Microsoft Intune, these templates are built in to the Intune service, and are available as **Administrative templates** profiles. In this profile, you configure the settings you want to include, and then "assign" this profile to your devices.
 
 In this tutorial, you will:
 
@@ -67,26 +67,26 @@ This feature applies to:
 
   For more information on what you get with the different Microsoft 365 licenses, see [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
-- Users have Enterprise Mobility + Security licenses turned on.
-
-- Microsoft Intune is configured as the **Intune MDM Authority**:
+- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, see [Set the mobile device management authority](../fundamentals/mdm-authority-set.md).
 
   > [!div class="mx-imgBorder"]
   > ![Set the MDM authority to Microsoft Intune in your tenant status](./media/tutorial-walkthrough-administrative-templates/tenant-status.png)
 
-  For more information on configuring the MDM authority, see [Set the mobile device management authority](../fundamentals/mdm-authority-set.md).
-
 - On an on-premises Active Directory domain controller (DC):
 
-  1. Copy the following templates to the [Central Store (SYSVOL folder)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
+  1. Copy the following Office and Microsoft Edge templates to the [Central Store (SYSVOL folder)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
 
       - [Office administrative templates](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Microsoft Edge administrative templates > Policy file](https://www.microsoftedgeinsider.com/en-us/enterprise)
 
   2. Create a group policy to push these templates to a Windows 10 Enterprise administrator computer in the same domain as the DC. In this tutorial:
 
-      - The group policy is called **OfficeandEdge**.
-      - The Windows 10 Enterprise administrator computer is called the **Admin computer**.
+      - The group policy we created with these templates is called **OfficeandEdge**. You'll see this name in the images.
+      - The Windows 10 Enterprise administrator computer we use is called the **Admin computer**.
+
+      In some organizations, a domain administrator has two accounts - a typical domain work account, and a different domain administrator account used only for domain administrator tasks, such as group policy.
+
+      The purpose of this **Admin computer** is for administrators to sign in with their domain administrator account, and access tools designed for managing group policy.
 
 - On this **Admin computer**:
 
@@ -107,7 +107,7 @@ This feature applies to:
 ## Open the Endpoint Manager admin center
 
 1. Open a chromium web browser, such as Microsoft Edge version 77 and later.
-2. Go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com). Sign in with the following credentials:
+2. Go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com). Sign in with the following account:
 
     **User**: Enter the administrator account of your Microsoft 365 tenant subscription.  
     **Password**: Enter its password.
@@ -135,9 +135,9 @@ In these next steps, you’ll create security groups, and add users to the group
 
 2. Enter the following settings:
 
-    - **Group type**: Choose **Security**.
+    - **Group type**: Select **Security**.
     - **Group name**: Enter **All Windows 10 student devices**.
-    - **Membership type**: Choose **Assigned**.
+    - **Membership type**: Select **Assigned**.
 
 3. Select **Members**, and add some devices.
 
@@ -149,13 +149,13 @@ In these next steps, you’ll create security groups, and add users to the group
 
 5. Select **New group**, and enter the following settings:
 
-    - **Group type**: Choose **Security**.
+    - **Group type**: Select **Security**.
     - **Group name**: Enter **All Windows devices**.
-    - **Membership type**: Choose **Dynamic Device**.
+    - **Membership type**: Select **Dynamic Device**.
     - **Dynamic device members**: Configure your query:
 
-        - **Property**: Choose **deviceOSType**.
-        - **Operator**: Choose **Equals**.
+        - **Property**: Select **deviceOSType**.
+        - **Operator**: Select **Equals**.
         - **Value**: Enter **Windows**.
 
         1. Select **Add expression**. Your expression is shown in the **Rule syntax**:
@@ -169,13 +169,13 @@ In these next steps, you’ll create security groups, and add users to the group
 
 6. Create the **All Teachers** group with the following settings:
 
-    - **Group type**: Choose **Security**.
+    - **Group type**: Select **Security**.
     - **Group name**: Enter **All Teachers**.
-    - **Membership type**: Choose **Dynamic User**.
+    - **Membership type**: Select **Dynamic User**.
     - **Dynamic user members**: Configure your query:
 
-      - **Property**: Choose **department**.
-      - **Operator**: Choose **Equals**.
+      - **Property**: Select **department**.
+      - **Operator**: Select **Equals**.
       - **Value**: Enter **Teachers**.
 
         1. Select **Add expression**. Your expression is shown in the **Rule syntax**.
@@ -186,14 +186,14 @@ In these next steps, you’ll create security groups, and add users to the group
 
 ### Talking points
 
-- Dynamic groups are a feature in Azure AD Premium. If you don't have Azure AD Premium, then you'll only create assigned groups. For more information on dynamic groups, see:
+- Dynamic groups are a feature in Azure AD Premium. If you don't have Azure AD Premium, then you're licensed to only create assigned groups. For more information on dynamic groups, see:
 
   - [Dynamic Group Membership in Azure Active Directory (Part 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
   - [Dynamic Group Membership in Azure Active Directory (Part 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
 
 - Azure AD Premium includes other services that are commonly used when managing apps and devices, including [multi-factor authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview).
 
-- Many admins ask when to use user groups and when to use device groups. For some guidance, see [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
+- Many administrators ask when to use user groups and when to use device groups. For some guidance, see [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 
 - Remember, a user can belong to multiple groups. Consider some of the other dynamic user and device groups you can create, such as:
 
@@ -207,7 +207,7 @@ In these next steps, you’ll create security groups, and add users to the group
   - West coast IT administrators
   - East coast IT administrators
 
-The users and groups created are also seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Azure AD in the Azure portal, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). You can create and manage groups in all these areas for your tenant subscription. If your goal is device management, we recommend using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+The users and groups created are also seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Azure AD in the Azure portal, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). You can create and manage groups in all these areas for your tenant subscription. **If your goal is device management, use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)**.
 
 ### Review group membership
 
@@ -226,7 +226,7 @@ In the Endpoint Manager admin center, you created new security groups, and added
 
 ## Create a template in Intune
 
-In this section, we create an admin template in Intune, look at some settings in **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
+In this section, we create an administrative template in Intune, look at some settings in **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
 
 1. In the Endpoint Manager admin center, select **Devices** > **Configuration profiles** > **Create profile**.
 2. Enter the following properties:
@@ -247,19 +247,17 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 #### Compare a device policy
 
-1. On the Admin computer, open the **Group Policy Management** app.
+1. On the **Admin computer**, open the **Group Policy Management** app.
 
-    This app gets installed with **RSAT: Group Policy Management Tools**, which is an optional feature you install on Windows. [Prerequisites](#prerequisites) (in this article) lists the steps.
+    This app gets installed with **RSAT: Group Policy Management Tools**, which is an optional feature you install on Windows. [Prerequisites](#prerequisites) (in this article) lists the steps to install it.
 
 2. Expand **Domains** > select your domain. For example, select **contoso.net**.
-3. Right-click the **OfficeandEdge** policy > **Edit**.
+3. Right-click the **OfficeandEdge** policy > **Edit**. This opens the Group Policy Management Editor app.
 
     > [!div class="mx-imgBorder"]
     > ![Right-click the Office and Edge ADMX group policy, and select Edit](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
-    This opens the Group Policy Management Editor app.
-
-    The **OfficeandEdge** is a group policy that includes the Office and Microsoft Edge ADMX templates. This policy is described in [prerequisites](#prerequisites) (in this article).
+    **OfficeandEdge** is a group policy that includes the Office and Microsoft Edge ADMX templates. This policy is described in [prerequisites](#prerequisites) (in this article).
 
 4. Expand **Computer configuration** > **Policies** > **Administrative Templates** > **Control Panel** > **Personalization**. Notice the available settings.
 
@@ -271,7 +269,7 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
     > [!div class="mx-imgBorder"]
     > ![See the Computer configuration setting options in group policy](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
-5. In the device management admin center, go to your **Admin template - Windows 10 student devices** admin template.
+5. In the device management admin center, go to your **Admin template - Windows 10 student devices** template.
 6. Select **All products** from the drop-down list, and search for **personalization**:
 
     > [!div class="mx-imgBorder"]
@@ -279,7 +277,7 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
     Notice the available settings.
 
-    The setting type is **Device**, and the path is **\Control Panel\Personalization**. This path is similar to what you just saw in Group Policy Management Editor.
+    The setting type is **Device**, and the path is **\Control Panel\Personalization**. This path is similar to what you just saw in Group Policy Management Editor. If you open the setting, you see the same **Not configured**, **Enabled**, and **Disabled** options you see in Group Policy Management Editor.
 
 #### Compare a user policy
 
@@ -287,8 +285,8 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 2. In **Group Policy Management Editor**, find the matching user and device settings:
 
-    - **Device**: Expand **Computer configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Internet Explorer** > **Privacy** > **Turn off InPrivate Browsing**.
-    - **User**: Expand **User configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Internet Explorer** > **Privacy** > **Turn off InPrivate Browsing**.
+    - Device: Expand **Computer configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Internet Explorer** > **Privacy** > **Turn off InPrivate Browsing**.
+    - User: Expand **User configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Internet Explorer** > **Privacy** > **Turn off InPrivate Browsing**.
 
     > [!div class="mx-imgBorder"]
     > ![Turn off InPrivate Browsing in Internet Explorer using ADMX template](./media/tutorial-walkthrough-administrative-templates/group-policy-turn-off-inprivate-browsing.png)
@@ -298,13 +296,13 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 #### Compare an Edge policy
 
-1. In the device management admin center, go to your **Admin template - Windows 10 student devices** admin template.
+1. In the device management admin center, go to your **Admin template - Windows 10 student devices** template.
 2. Select **Edge version 77 and later** from the drop-down list.
 3. Search for **startup**. Notice the available settings.
 4. In Group Policy Management Editor, find these settings:
 
-    - **Device**: Expand **Computer configuration** > **Policies** > **Administrative Templates** > **Microsoft Edge** > **Startup, homepage and new tab page**.
-    - **User**: Expand **User configuration** > **Policies** > **Administrative Templates** > **Microsoft Edge** > **Startup, homepage and new tab page**
+    - Device: Expand **Computer configuration** > **Policies** > **Administrative Templates** > **Microsoft Edge** > **Startup, homepage and new tab page**.
+    - User: Expand **User configuration** > **Policies** > **Administrative Templates** > **Microsoft Edge** > **Startup, homepage and new tab page**
 
 ### What did I just do?
 
@@ -404,16 +402,16 @@ For more information on OneDrive client settings, see [Use Group Policy to contr
 
 4. **Save** your changes.
 
-At this point, you created two administrative templates, and assigned them to groups you created. The next step is to create an administrative template using Windows PowerShell and the Microsoft Graph API for Intune.
+At this point, you created some administrative templates, and assigned them to groups you created. The next step is to create an administrative template using Windows PowerShell and the Microsoft Graph API for Intune.
 
 ## Optional: Create a policy using PowerShell and Graph API
 
-This section uses the following resources:
+This section uses the following resources. We'll install these resources in this section.
 
 - [Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
 - [Microsoft Graph API for Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
-1. On the Admin computer, open **Windows PowerShell** as administrator:
+1. On the **Admin computer**, open **Windows PowerShell** as administrator:
 
     1. In your search bar, enter **powershell**.
     2. Right-click **Windows PowerShell** > **Run as administrator**.
@@ -447,7 +445,7 @@ This section uses the following resources:
 
 4. In your web browser, go to [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases), and select the **Intune-PowerShell-SDK_v6.1907.00921.0001.zip** file.
 
-    1. Choose **Save as**, and select a folder you'll remember. `c:\psscripts` is a good choice.
+    1. Select **Save as**, and select a folder you'll remember. `c:\psscripts` is a good choice.
     2. Open your folder, right-click the .zip file > **Extract all** > **Extract**. Your folder structure looks similar to the following folder:
 
         > [!div class="mx-imgBorder"]
@@ -458,7 +456,7 @@ This section uses the following resources:
     > [!div class="mx-imgBorder"]
     > ![Select file name extensions on the view tab in explorer](./media/tutorial-walkthrough-administrative-templates/file-names-extension.png)
 
-6. Go to `c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471`. Right-click every .dll > **Properties** > **Unblock**.
+6. In your folder, and go to `c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471`. Right-click every .dll > **Properties** > **Unblock**.
 
     > [!div class="mx-imgBorder"]
     > ![Unblock the DLLs](./media/tutorial-walkthrough-administrative-templates/unblock-dll.png)
@@ -477,14 +475,14 @@ This section uses the following resources:
 
     2. Enter: `Connect-MSGraph -AdminConsent`
 
-    3. When prompted, sign in with the same Microsoft 365 admin credentials. These cmdlets create the policy in your tenant organization.
+    3. When prompted, sign in with the same Microsoft 365 administrator account. These cmdlets create the policy in your tenant organization.
 
         **User**: Enter the administrator account of your Microsoft 365 tenant subscription.  
         **Password**: Enter its password.
 
     4. Select **Accept**.
 
-9. Create the **Test Configuration** configuration profile:
+9. Create the **Test Configuration** configuration profile. Enter:
 
     ```powershell
     $configuration = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations -Content '{"displayName":"Test Configuration","description":"A test configuration created through PS"}' -HttpMethod POST
@@ -492,19 +490,19 @@ This section uses the following resources:
 
     When these cmdlets succeed, the profile is created. To confirm, go to the Endpoint Manager admin center > **Configuration Profiles**. Your **Test Configuration** profile should be listed.
 
-10. Get all the SettingDefinitions:
+10. Get all the SettingDefinitions. Enter:
 
     ```powershell
     $settingDefinitions = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyDefinitions -HttpMethod GET
     ```
 
-11. Find the definition ID using the setting display name:
+11. Find the definition ID using the setting display name. Enter:
 
     ```powershell
     $desiredSettingDefinition = $settingDefinitions.value | ? {$_.DisplayName -Match "Silently sign in users to the OneDrive sync client with their Windows credentials"}
     ```
 
-12. Configure a setting:
+12. Configure a setting. Enter:
 
     ```powershell
     $configuredSetting = Invoke-MSGraphRequest -Url "https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations('$($configuration.id)')/definitionValues" -Content ("{""enabled"":""true"",""configurationType"":""policy"",""definition@odata.bind"":""https://graph.microsoft.com/beta/deviceManagement/groupPolicyDefinitions('$($desiredSettingDefinition.id)')""}") -HttpMethod POST
