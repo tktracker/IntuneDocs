@@ -26,6 +26,8 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
+
+redirect_url: https://docs.microsoft.com/intune
 ---
 
 # What is Microsoft Intune device management?
