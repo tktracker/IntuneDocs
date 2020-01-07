@@ -394,7 +394,7 @@ For more information on OneDrive client settings, see [Use Group Policy to contr
 
 ### Assign your template
 
-1. In your template, select **Assignments**
+1. In your template, select **Assignments**.
 2. Choose **Select groups to include**. A list of existing users and groups is shown.
 3. Select the **All Windows devices** group you created earlier > **Select**.
 
@@ -417,7 +417,7 @@ This section uses the following resources. We'll install these resources in this
     2. Right-click **Windows PowerShell** > **Run as administrator**.
 
     > [!div class="mx-imgBorder"]
-    > ![Run Windows Powershell as an administrator](./media/tutorial-walkthrough-administrative-templates/run-windows-powershell-administrator.png)
+    > ![Run Windows PowerShell as an administrator](./media/tutorial-walkthrough-administrative-templates/run-windows-powershell-administrator.png)
 
 2. Get and set the execution policy.
 
