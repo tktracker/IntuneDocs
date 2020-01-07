@@ -43,7 +43,7 @@ Collect the following information about the problem:
 - What platform (Android, iOS, Windows) has the problem?
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
-- What is the MDM authority? If it's Configuration Manager, what version of Configuration Manager are you using?
+- What is the MDM authority?
 - How is enrollment being performed? Is it “Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
 
 ## Error messages

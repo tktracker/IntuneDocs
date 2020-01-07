@@ -59,7 +59,7 @@ Your managed device users can collect enrollment and diagnostic logs for you to 
 These issues may occur on all device platforms.
 
 ### Device cap reached
-**Issue:** A user receives an error during enrollment (like **Company Portal Temporarily Unavailable**) and the DMPdownloader.log on Configuration Manager contains the error **DeviceCapReached**.
+**Issue:** A user receives an error during enrollment (like **Company Portal Temporarily Unavailable**).
 
 **Resolution:**
 
@@ -115,25 +115,6 @@ To avoid hitting device caps, be sure to remove stale device records.
     3. Wait about one hour to allow the Azure service to remove the incorrect data.
 
     4. Turn on DirSync again and check if the user is now synced properly.
-
-3. In a scenario where you're using Configuration Manager with Intune, verify that the user has a valid Cloud User ID:
-
-    1. Open SQL Management Studio.
-
-    2. Connect to the appropriate DB.
-
-    3. Open the databases folder and find and open the **CM_DBName** folder, where DBName is the name of the customer database.
-
-    4. At the top, choose **New Query**  and execute the following queries:
-
-        - To see all users:
-            `select * from [CM_ DBName].[dbo].[User_DISC]`
-
-        - To see Specific Users, use the following query, where %testuser1% is a placeholder for username@domain.com for the user you want to look up:
-            `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
-
-        After writing the query, choose **!Execute**.
-        Once the results have been returned, look for the clouduser ID.  If no ID is found, the user isn't licensed to use Intune.
 
 ### Unable to create policy or enroll devices if the company name contains special characters
 **Issue:** You can't create policy or enroll devices.
@@ -338,23 +319,6 @@ For more information, see [Best practices for securing Active Directory Federati
 
 5. Confirm that Safari for iOS is the default browser and that cookies are enabled.
 
-### Enrolled iOS device doesn't appear in console when using Configuration Manager with Intune
-**Issue:** User enrolls iOS device but it doesn't appear in the Configuration Manager admin console. The device doesn't indicate that it's been enrolled. Possible causes:
-
-- The Microsoft Intune Connector in your Configuration Manager site isn't communicating with the Intune service.
-- Either the Data Discovery Manager (ddm) component or the State Manager (statmgr) component isn't processing messages from the Intune service.
-- You may have downloaded the MDM certificate from one account and used it on another account.
-
-
-**Resolution:** Review the following log files for possible errors:
-
-- dmpdownloader.log
-- ddm.log
-- statmgr.log
-
-Examples will be added soon about what to look for in these log files.
-
-
 ### User’s iOS device is stuck on an enrollment screen for more than 10 minutes
 
 **Issue**: An enrolling device may get stuck in either of two screens:
@@ -424,36 +388,6 @@ After you've wiped the blocked devices, you can tell the users to restart the en
     2. Choose **Devices** > **All devices**.  
     3. Find the device with the enrollment problem. Search by device name or MAC/HW Address to narrow your results.
     4. Select the device > **Delete**. Delete all other entries associated with the device.  
-
-## Issues when using Configuration Manager with Intune
-
-### Mobile devices disappear
-
-**Issue:** After successfully enrolling a mobile device to Configuration Manager, it disappears from the mobile device collection. However, the device still has the Management Profile and is listed in CSS Gateway.
-
-**Resolution:** This issue may occur because:
-
-- You have a custom process removing non-domain-joined devices, or
-- the user has retired the device from the subscription.
-To validate and check which process or user account removed the device from the Configuration Manager console, perform the following steps.
-
-#### Check how device was removed
-
-1. In the Configuration Manager admin console, select **Monitoring** &gt; **System Status** &gt; **Status Message Queries**.
-
-2. Right-click **Collection Member Resources Manually Deleted** and select **Show Messages**.
-
-3. Pick an appropriate time/date or the last 12 hours.
-
-4. Find the device in question and review how the device was removed. The Example below shows that the account SCCMInstall deleted the device via an Unknown Application.
-
-    ![Screenshot for device deletion diagnosis](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
-
-5. Check that Configuration Manager doesn't have a scheduled task, script, or other process, which could be automatically purging non-domain, mobile, or related devices.
-
-### Other iOS enrollment errors
-
-A list of iOS enrollment errors is provided in our documentation, in [Troubleshooting iOS device enrollment problems in Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).
 
 ## PC Issues
 
