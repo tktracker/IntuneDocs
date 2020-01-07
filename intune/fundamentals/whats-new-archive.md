@@ -2368,8 +2368,6 @@ New processes and tools are now available for moving users and their devices fro
 - Move a subset of users to Intune in the Azure portal, while keeping the rest in hybrid MDM
 - Migrate devices to Intune in the Azure portal without needing to re-enroll them
 
-For details, see [Migrate hybrid MDM users and devices to Intune standalone](https://docs.microsoft.com/configmgr/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
-
 ### On-premises Exchange connector high availability support <!-- 676614 -->
 After the Exchange connector creates a connection to Exchange using the specified Client Access Server (CAS), the connector now has the ability to discovery other CASs. If the primary CAS becomes unavailable, the connector will fail over to another CAS, if available, until the primary CAS becomes available. For details, see [On-premises Exchange connector high availability support](../protect/exchange-connector-install.md#on-premises-intune-exchange-connector-high-availability-support).
 

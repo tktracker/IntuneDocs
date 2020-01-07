@@ -211,13 +211,6 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriction.    
 2. Choose **Properties** > **Edit** (next to **Platform settings**) > **Allow** for **Windows (MDM)**.    
 3. Click **Review + Save**.    
- 
-To fix this issue in hybrid MDM with Intune and Configuration Manager, follow these steps: 
-1. Open the Configuration Manager console.    
-2. Select **Administration**, and then select **Cloud Services**.    
-3. Right-click **Microsoft Intune Subscription**, and then select **Configure Platforms > Windows**.    
-4. Check **Enable Windows Enrollment** > **Apply** > **OK**.  
-
 
 ### A setup failure has occurred during bulk enrollment.
 

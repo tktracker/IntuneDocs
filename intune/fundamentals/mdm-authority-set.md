@@ -40,16 +40,13 @@ Possible configurations are:
 
 - **Intune co-management** - integration of the Intune cloud solution with Configuration Manager for Windows 10 devices. You configure Intune by using the Configuration Manager console. [Configure auto-enrollment of devices to Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-    > [!Important]
-    >Onboarding of new hybrid MDM customers has been deprecated. For more information, see the [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blog post.
-
 - **Mobile Device Management for Office 365** - integration of Office 365 with the Intune cloud solution. You configure Intune from your Microsoft 365 admin center. Includes a subset of the capabilities that are available with Intune Standalone. Set the MDM authority in Microsoft 365 admin center.
 
 - **Office 365 MDM Coexistence** You can activate and use both MDM for Office 365 and Intune concurrently on your tenant and set the management authority to either Intune or MDM for Office 365 for each user to dictate which service will be used to manage their mobile devices. User’s management authority is defined based on the license assigned to the user. For more information, see [Microsoft Intune Co-existence with MDM for Office 365](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365)
 
 ## Set MDM authority to Intune
 
-If you haven't yet set the MDM authority, follow the steps below. To change from SCCM, see [Migrate hybrid MDM users and devices to Intune standalone](https://docs.microsoft.com/configmgr/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+If you haven't yet set the MDM authority, follow the steps below.
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
 2. Under **Mobile Device Management Authority**, choose your MDM authority from the following options:

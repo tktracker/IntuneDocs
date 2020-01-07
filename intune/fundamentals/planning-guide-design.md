@@ -115,10 +115,6 @@ You can [download a template of the above table](https://gallery.technet.microso
 
 Intune offers two deployment options: standalone and hybrid. Standalone refers to the Intune service running in the cloud, hybrid refers to the integration of Intune with Configuration Manager. This guide is intended primarily for using the standalone option. [Decide which option fits your business requirements](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
-> [!Important]
->Onboarding of new hybrid MDM customers has been deprecated. For more information, see the [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blog post.
-
-
 ## Intune tenant location
 
 If your organization has global presence, make sure to plan where your tenant resides when you subscribe to the service. The country/region is defined when you sign up for an Intune subscription for the first time, and map to countries/regions around the world, which are listed below:
