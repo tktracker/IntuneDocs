@@ -69,7 +69,7 @@ Intune supports delivering S/MIME signing and encryption certificates that can b
 ### Role-based access control
 
 #### Windows 10 administrative templates (ADMX) profiles now support scope tags <!--5137390 wnready-->
-You can now assign scope tags to administrative template profiles (ADMX). To do so, go to Intune > Devices > Configuration profiles > choose an administrative templates profile in the list > Properties > Scope tags. For more information about scope tags, see [Assign scope tags to other objects](../fundamentals/scope-tags#assign-scope-tags-to-other-objects).
+You can now assign scope tags to administrative template profiles (ADMX). To do so, go to Intune > Devices > Configuration profiles > choose an administrative templates profile in the list > Properties > Scope tags. For more information about scope tags, see [Assign scope tags to other objects](../fundamentals/scope-tags.md#assign-scope-tags-to-other-objects).
 
 <!-- ########################## -->
 ## Week of December 30, 2019
