@@ -42,6 +42,8 @@ Intune also provides a built-in [encryption report](encryption-monitor.md) that 
 
 Use Intune to configure FileVault disk encryption on devices that run macOS. Then, use the Intune encryption report to view encryption details for those devices and to manage recovery keys for FileVault encrypted devices.
 
+Please note, user-approved device enrollment is required for FileVault to work on the device. The user must manually approve of the management profile from system prefrences for enrollment to be considered user-approved. 
+
 FileVault is a whole-disk encryption program that is included with macOS. You can use Intune to configure FileVault on devices that run **macOS 10.13 or later**.
 
 To configure FileVault, create a [device configuration profile](../configuration/device-profile-create.md) for endpoint protection for the macOS platform. FileVault settings are one of the available settings categories for macOS endpoint protection.
@@ -75,14 +77,7 @@ For details about the FileVault setting you can manage with Intune, see [FileVau
 
 7. Configure the remaining [FileVault settings](endpoint-protection-macos.md#filevault) to meet your business needs, and then select **OK**.
 
-   > [!IMPORTANT]
-   > There is a known issue when the setting **Disable prompt at sign out** is set to *Enable*. When set to *Enable*, the setting for **Number of times allowed to bypass** must be set to a value and must not be set as *Not configured*. If set to *Not configured*, the profile fails on the device. In this scenario the device reports it's **Profile State Summary** as **Error** with no further details.
-   >
-   > When **Disable prompt at sign out** is set to *Not configured*, **Number of times allowed to bypass** can be *Not configured* or have a value.
-   >
-   > This issue will be resolved in a future update.
-
-8. Complete configuration of additional settings, and then save the profile.  
+  8. Complete configuration of additional settings, and then save the profile.  
 
 ### Manage FileVault
 
