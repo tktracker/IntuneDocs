@@ -216,7 +216,7 @@ When a device receives a Windows 10 feature updates policy:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
-- Windows 10 feature update policies cannot be applied during the out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
+- Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
 
 ### Create and assign Windows 10 feature updates
 
