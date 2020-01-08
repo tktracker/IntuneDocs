@@ -168,7 +168,7 @@ The user interface for [Microsoft Endpoint Manager Admin Center](https://go.micr
 ## Security
 
 ### Retire noncompliant devices<!-- 1827291 IDReady        -->
-We're going to add a new compliance action to retire a noncompliant device. Retiring a noncompliant device removes all company data from it, and also removes the device from being managed by Intune. This action runs when the configured value in days is reached. The minimum value is 30 days. 
+We're going to add a new optional compliance action to retire a noncompliant device. Retiring a noncompliant device removes all company data from it, and also removes the device from being managed by Intune. This action runs when the configured value in days is reached. The minimum value is 30 days. 
 
 ### Derived credentials support on Android COBO devices<!--4839592-->
 You'll be able to use derived credentials on Android Enterprise fully managed devices. Support will be included for retrieving a derived credential for Entrust Datacard, Intercede, and DISA Purebred. You'll be able to use a derived credential for app authentication, Wi-Fi, VPN, or S/MIME signing and/or encryption with apps that support it. 
