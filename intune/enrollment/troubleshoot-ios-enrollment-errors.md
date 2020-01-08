@@ -190,7 +190,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 **Cause:** The Apple Push Notification Service (APNs) certificate is missing, invalid, or expired.
 
 #### Resolution
-Verify that a valid APNs certificate is added to Intune. For more information, see [Set up iOS and Mac device management](https://docs.microsoft.com/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune). 
+Verify that a valid APNs certificate is added to Intune. For more information, see [Set up iOS enrollment](ios-enroll.md).
 
 ### AccountNotOnboarded
 

@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 1/6/2020
+ms.date: 1/7/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -72,7 +72,10 @@ The Company Portal app will show additional app installation status messages to 
 Web clips, which act as pinned web apps on iOS devices, will need to be updated. Newly deployed web clips will open in Microsoft Edge instead of the Intune Managed Browser if required to open in a protected browser. You must retarget pre-existing web clips to ensure they open in Microsoft Edge instead of the Managed Browser. 
 
 ### User experience change when adding apps to Intune<!-- 4705829 idready -->
-You will see a new user experience when adding apps to via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md). 
+You will see a new user experience when adding apps via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md).
+
+#### Require Win32 apps to restart <!-- 3136567-->
+You can require that a Win32 app must restart after a successful install. Also, you can choose the amount of time (the grace period) before the restart must occur.
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -87,25 +90,11 @@ To see the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings f
 Applies to:
 - Android Enterprise work profile
 
-### Enable network access control (NAC) with Cisco AnyConnect VPN on iOS devices<!-- 4860111 idready -->
-On iOS devices, you can create a VPN profile, and use different connection types, including Cisco AnyConnect (**Device configuration** > **Profiles** > **Create profile** > **iOS** for platform > **VPN** for profile type > **Cisco AnyConnect** for connection type). 
-
-In a future update, you'll be able to enable network access control (NAC) with Cisco AnyConnect. To use this feature:
-
-1. At [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html), use the steps in **Configuring Microsoft Intune as an MDM Server** to configure the Cisco Identity Services Engine (ISE) in Azure.
-2. In the Intune device configuration profile, select the **Enable Network Access Control (NAC)** setting.
-
-To see all the available VPN settings, go to [Configure VPN settings on iOS devices](../configuration/vpn-settings-ios.md).
-
-Applies to:
-- iOS
-
 ### Wired network device configuration profiles for macOS devices<!-- 3508686  -->
 A new macOS device configuration profile will be available that configures wired networks (**Device configuration** > **Profiles** > **Create profile** > **macOS** for platform > **Wired Network** for profile type). Use this feature to create 802.1x profiles to manage wired networks, and deploy these wired networks to your macOS devices.
 
 Applies to:
 - macOS
-
 
 ### VPN profiles with IKEv2 VPN connections can use always on with iOS devices <!-- 1947932 idready -->
 On iOS devices, you can create a VPN profile that uses an IKEv2 connection (**Device configuration** > **Profiles** > **Create profile** > **iOS/iPadOS** for platform > **VPN** for profile type). In a future update, you can configure always-on with IKEv2. When configured, IKEv2 VPN profiles connect automatically, and stay connected (or quickly reconnect) to the VPN. It stays connected even when moving between networks or restarting devices.
@@ -120,9 +109,9 @@ Applies to:
 ### Improved user interface experience when creating configuration profiles on iOS and macOS devices<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
 When you create a profile for iOS or macOS devices, the experience in the Endpoint Management Admin Center will be updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **iOS** or **macOS** for platform):
 
-- Custom: ios, macOS
-- Device features: ios, macOS
-- Device restrictions: ios, macOS
+- Custom: iOS, macOS
+- Device features: iOS, macOS
+- Device restrictions: iOS, macOS
 - Endpoint protection: macOS
 - Extensions: macOS
 - Preference file: macOS
@@ -179,7 +168,7 @@ The user interface for [Microsoft Endpoint Manager Admin Center](https://go.micr
 ## Security
 
 ### Retire noncompliant devices<!-- 1827291 IDReady        -->
-We're going to add a new compliance action to retire a noncompliant device. Retiring a noncompliant device removes all company data from it, and also removes the device from being managed by Intune. This action runs when the configured value in days is reached. The minimum value is 30 days. 
+We're going to add a new optional compliance action to retire a noncompliant device. Retiring a noncompliant device removes all company data from it, and also removes the device from being managed by Intune. This action runs when the configured value in days is reached. The minimum value is 30 days. 
 
 ### Derived credentials support on Android COBO devices<!--4839592-->
 You'll be able to use derived credentials on Android Enterprise fully managed devices. Support will be included for retrieving a derived credential for Entrust Datacard, Intercede, and DISA Purebred. You'll be able to use a derived credential for app authentication, Wi-Fi, VPN, or S/MIME signing and/or encryption with apps that support it. 

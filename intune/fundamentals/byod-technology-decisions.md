@@ -24,6 +24,8 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
 ms.collection: M365-identity-device-management
+
+redirect_url: https://docs.microsoft.com/intune
 ---
 
 # Technology decisions for enabling BYOD with Microsoft Enterprise Mobility + Security (EMS)
