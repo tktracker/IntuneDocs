@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,7 +41,7 @@ The steps to allow Win32 apps to run on a Windows 10 device in S mode are the fo
    - You upload the signed supplemental policy to Intune by creating a Windows 10 S mode supplemental policy (see below).
 3. You allow Win32 app catalogs through Intune:
    - You create catalog files (1 for every app) and signs them using DGSS or other certificate infrastructure.
-   - You package the signed catalog into the *.intunewin* file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). For more information, see [Win32 app management - Prepare the Win32 app content for upload](~/apps/apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
+   - You package the signed catalog into the *.intunewin* file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). There are no naming restrictions when creating a catalog file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). When generating the *.intunewin* file from the specified source folder and setup file, you can specify that all catalog files in that folder will be bundled into the *.intunewin* file by using the `-a` parameter. For more information, see [Win32 app management - Prepare the Win32 app content for upload](~/apps/apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
    - Intune applies the signed app catalog to install the Win32 app on the S mode device using the [Intune Management Extension](~/apps/intune-management-extension.md).
 
 > [!NOTE]
