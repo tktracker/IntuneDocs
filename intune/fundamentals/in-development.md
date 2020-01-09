@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 1/7/2020
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -133,8 +133,6 @@ You'll be able to block devices from enrolling based on the manufacturer of the 
 <!-- ***********************************************-->
 ## Device management
 
-### Deploy Software Updates to macOS devices <!-- 3194876 idready -->
-You'll be able to deploy Software Updates to groups of macOS devices. This feature includes critical, firmware, configuration file, and other updates. You'll be able to send updates on the next device check-in or select a weekly schedule to deploy updates in or out of time windows that you set. This helps when you want to update devices outside standard work hours or when your help desk is fully staffed. You'll also get a detailed report of all macOS devices with updates deployed. You can drill into the report on a per-device basis to see the statuses of particular updates.
 
 ### New information in device details<!-- 4471759 5604099  -->
 The following information will be added to the **Overview** page for devices:
@@ -166,9 +164,6 @@ The user interface for [Microsoft Endpoint Manager Admin Center](https://go.micr
 
 <!-- ***********************************************-->
 ## Security
-
-### Retire noncompliant devices<!-- 1827291 IDReady        -->
-We're going to add a new optional compliance action to retire a noncompliant device. Retiring a noncompliant device removes all company data from it, and also removes the device from being managed by Intune. This action runs when the configured value in days is reached. The minimum value is 30 days. 
 
 ### Derived credentials support on Android COBO devices<!--4839592-->
 You'll be able to use derived credentials on Android Enterprise fully managed devices. Support will be included for retrieving a derived credential for Entrust Datacard, Intercede, and DISA Purebred. You'll be able to use a derived credential for app authentication, Wi-Fi, VPN, or S/MIME signing and/or encryption with apps that support it. 

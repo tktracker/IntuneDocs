@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -64,6 +64,15 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 #### S/MIME support for Microsoft Outlook for iOS<!-- 2669398 -->
 Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Sensitivity labeling and protection in Outlook for iOS and Android](https://aka.ms/omsmime).
+
+#### Cache Win32 app content using Microsoft Connected Cache server<!-- 6030314 -->
+You can install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager - Support for Intune Win32 apps](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Windows 10 administrative templates (ADMX) profiles now support scope tags <!--5137390 wnready-->
+You can now assign scope tags to administrative template profiles (ADMX). To do so, go to Intune > Devices > Configuration profiles > choose an administrative templates profile in the list > Properties > Scope tags. For more information about scope tags, see [Assign scope tags to other objects](../fundamentals/scope-tags.md#assign-scope-tags-to-other-objects).
 
 <!-- ########################## -->
 ## Week of December 30, 2019
