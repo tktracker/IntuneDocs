@@ -58,6 +58,13 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Property list file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
 - **File contents**: The key information in the property list file is shown. If you need to change the key information, open the list file in another editor, and then reupload the file in Intune.
 
+Please make sure your file is formatted correctly. The file should have only key value pairs, and should not be wrapped in a <dict> or <plist> or <xml>. For example -
+<key>SomeKey</key>
+<string>someString</string>
+<key>AnotherKey</key>
+<false />
+...
+
 Select **OK** > **Create** to save your changes. The profile is created and shown in the profiles list.
 
 ## Next steps
