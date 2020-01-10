@@ -97,7 +97,7 @@ You can validate the app configuration policy using the following three methods:
 
 ### iOS configuration on unmanaged devices
 
-You can validate iOS configuration with the **Intune Diagnostic Log** on unmanaged devices for managed app configuration.
+You can validate iOS configuration with the **Intune Diagnostic Log** on unmanaged devices for managed app configuration. In addition to the below steps, you can access managed app logs using Microsoft Edge. For more information, see [Use Microsoft Edge on iOS to access managed app logs](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. If not already installed on the device, download and install the **Intune Managed Browser** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
 2. Launch the **Intune Managed Browser** and select **about** > **intunehelp** from the navigation bar.
