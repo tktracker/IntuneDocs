@@ -105,19 +105,11 @@ Make sure to note any projects or any other plans in place that could affect you
 | **SharePoint** | SharePoint on-premises | No plans to move to SharePoint online |  
 | **Current MDM** | Exchange ActiveSync |  |
 | **Certificate solution** | Microsoft Server 2012 R2, AD Certificate Services | Only use PKI for Web Site Servers |
-| **System Management** | Configuration Manager CB 1606 | Would like to investigate Intune hybrid solution |
+| **System Management** | Configuration Manager current branch | Would like to investigate co-management solution |
 | **VPN solution** | Cisco AnyConnect |  |
 
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to develop your Intune design plan.
-
-## Choose an Intune deployment option
-
-Intune offers two deployment options: standalone and hybrid. Standalone refers to the Intune service running in the cloud, hybrid refers to the integration of Intune with Configuration Manager. This guide is intended primarily for using the standalone option. [Decide which option fits your business requirements](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
-
-> [!Important]
->Onboarding of new hybrid MDM customers has been deprecated. For more information, see the [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blog post.
-
 
 ## Intune tenant location
 
