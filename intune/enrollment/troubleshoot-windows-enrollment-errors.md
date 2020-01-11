@@ -43,7 +43,7 @@ Collect the following information about the problem:
 - What platform (Android, iOS, Windows) has the problem?
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
-- What is the MDM authority? If it's Microsoft Endpoint Configuration Manager, what version of Configuration Manager are you using?
+- What is the MDM authority?
 - How is enrollment being performed? Is it “Bring your own device" (BYOD) or Apple Device Enrollment Program (DEP) with enrollment profiles?
 
 ## Error messages
@@ -110,7 +110,6 @@ Error 8018000a: "Something went wrong. The device is already enrolled.  You can 
 
 **Cause:** One of the following conditions is true:
 - A different user has already enrolled the device in Intune or joined the device to Azure AD. To determine whether this is the case, go to **Settings** > **Accounts** > **Work Access**. Look for a message that's similar to the following: "Another user on the system is already connected to a work or school. Please remove that work or school connection and try again."    
-- The Configuration Manager client agent is installed on the computer.    
 
 #### Resolution
 
@@ -121,9 +120,6 @@ Use one of the following methods to resolve this issue:
 2. Go to **Settings** > **Accounts** > **Work Access**, then remove the work or school account.
 3. Sign out of Windows, then sign in by using your account.    
 4. Enroll the device in Intune or join the device to Azure AD. 
-
-##### Remove the Configuration Manager client
-Remove the Configuration Manager client, and then enroll the device again.
 
 
 
@@ -163,7 +159,7 @@ Error 80180026: "Something went wrong. Confirm you are using the correct sign-in
 
 **Cause:** This error can occur when you try to join a Windows 10 computer to Azure AD and both of the following conditions are true: 
 - MDM automatic enrollment is enabled in Azure.    
-- Either the Intune PC client (Intune PC agent) or the Configuration Manager client agent is installed on the Windows 10 computer.
+- The Intune PC client (Intune PC agent) is installed on the Windows 10 computer.
 
 #### Resolution
 Use one of the following methods to address this issue:
@@ -174,7 +170,7 @@ Use one of the following methods to address this issue:
 3. Set **MDM User scope** to **None**, and then click **Save**.    
      
 ##### Uninstall
-Uninstall the Intune PC client or Configuration Manager client agent from the computer.    
+Uninstall the Intune PC client agent from the computer.    
 
 ### The software cannot be installed.
 
@@ -211,13 +207,6 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriction.    
 2. Choose **Properties** > **Edit** (next to **Platform settings**) > **Allow** for **Windows (MDM)**.    
 3. Click **Review + Save**.    
- 
-To fix this issue in hybrid MDM with Intune and Configuration Manager, follow these steps: 
-1. Open the Configuration Manager console.    
-2. Select **Administration**, and then select **Cloud Services**.    
-3. Right-click **Microsoft Intune Subscription**, and then select **Configure Platforms > Windows**.    
-4. Check **Enable Windows Enrollment** > **Apply** > **OK**.  
-
 
 ### A setup failure has occurred during bulk enrollment.
 

@@ -97,9 +97,6 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
 9. Click **Next** to display the **Assignments** page.<br>
    The **Assignments** page allows you to assign the app protection policy to groups of users.
-   
-    >[!IMPORTANT]
-    > If you're using Intune with Configuration Manager to manage your devices, the policy is only applied to the users directly in the group that you selected. Members of child groups nested within the group you selected aren't affected.
 
 10. Click **Next: Review + create** to review the values and settings you entered for this app protection policy.
 
