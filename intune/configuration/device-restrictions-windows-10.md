@@ -235,6 +235,9 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
   [AboveLock/AllowActionCenterNotifications CSP](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **Locked screen picture URL (desktop only)**: Enter the URL to a picture in JPG, JPEG, or PNG format that's used as the Windows lock screen wallpaper. For example, enter `https://contoso.com/image.png`. This setting locks the image, and can't be changed afterwards.
+
+  [Personalization/LockScreenImageUrl CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+
 - **User configurable screen timeout (mobile only)**: **Allow** lets users configure the screen timeout. **Not configured** (default) doesn't give users this option.
 
   [DeviceLock/AllowScreenTimeoutWhileLockedUserConfig CSP](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
