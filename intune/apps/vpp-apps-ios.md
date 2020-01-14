@@ -110,7 +110,9 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 
     - **Type of VPP account** - Choose from **Business** or **Education**.
     - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in. 
-        >[!NOTE] Automatic app updates for Apple VPP apps will automatically update only apps deployed with **Required** install intent. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
+        
+        > [!NOTE] 
+        > Automatic app updates for Apple VPP apps will automatically update only apps deployed with **Required** install intent. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microisoft sends to Apple, see [Data Intune sends to Apple](~/protect/data-intune-sends-to-apple.md).
 
