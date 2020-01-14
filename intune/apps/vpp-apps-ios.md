@@ -214,4 +214,4 @@ Yes. The Intune admin can oversubscribe an app. For example, if the admin purcha
 
 See [How to monitor apps](apps-monitor.md) for information to help you monitor app assignments.
 
-See [How to troubleshoot apps](~/apps/troubleshoot-app-install.md#ios-errors) for information on troubleshooting app-related issues.
+See [How to troubleshoot apps](~/apps/troubleshoot-app-install.md) for information on troubleshooting app-related issues.
