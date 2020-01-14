@@ -58,7 +58,7 @@ Use the following steps to create a new group.
         >
         > If your primary role is device management, we recommend you use the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Office 365**: These groups are designed to control access and share Office 365 resources. For example, you can create an Office 365 group to share an Outlook inbox or calendar. For more information, see [Learn about Office 365 Groups](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Office 365**: Provides collaboration opportunities by giving members access to a shared mailbox, calendar, files, SharePoint site, and more. This option also lets you give people outside of your organization access to the group. For more information, see [Learn about Office 365 Groups](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Enter a **Group name** and **Group description** for the new group. Be specific and include information so others know what the group is for.
 
