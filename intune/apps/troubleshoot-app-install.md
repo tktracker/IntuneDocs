@@ -110,10 +110,6 @@ There are specific requirements that must be followed to collect log files:
 
 ## Android app installation errors
 
-The following error messages and descriptions provide details about Android installation errors. 
-
-### Android errors
-
 This section mentions both Device Administrator (DA) and Samsung Knox enrollment. For more information, see [Android device administrator enrollment](../enrollment/android-enroll-device-administrator.md) and [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md). 
 
 | Error message/code | Description |
@@ -136,8 +132,6 @@ This section mentions both Device Administrator (DA) and Samsung Knox enrollment
 ## iOS app installation errors
 
 The following error messages and descriptions provide details about iOS installation errors. 
-
-### iOS errors
 
 | Error message/code | Description/Troubleshooting tips |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
