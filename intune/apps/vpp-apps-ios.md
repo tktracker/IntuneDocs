@@ -74,15 +74,15 @@ You can purchase and distribute public as well as private apps using Apple Busin
 - Downloaded location tokens. 
 
 > [!IMPORTANT]
-> * A location token can only be used with one device management solution at a time. Before you start to use purchased apps with Intune, revoke and remove any existing location tokens used with other mobile device management (MDM) vendor. 
-> * A location token is only supported for use on one Intune tenant at a time. Do not reuse the same token for multiple Intune tenants.
-> * By default, Intune synchronizes the location tokens with Apple twice a day. You can initiate a manual sync at any time from Intune.
-> * After you have imported the location token to Intune, do not import the same token to any other device management solution. Doing so might result in the loss of license assignment and user records.
+> - A location token can only be used with one device management solution at a time. Before you start to use purchased apps with Intune, revoke and remove any existing location tokens used with other mobile device management (MDM) vendor. 
+> - A location token is only supported for use on one Intune tenant at a time. Do not reuse the same token for multiple Intune tenants.
+> - By default, Intune synchronizes the location tokens with Apple twice a day. You can initiate a manual sync at any time from Intune.
+> - After you have imported the location token to Intune, do not import the same token to any other device management solution. Doing so might result in the loss of license assignment and user records.
 
 ## Migrate from Volume Purchase Program (VPP) to Apps and Books
 If your organization has not migrated to Apple Business Manager or Apple School Manager yet, review [Apple's guidance on migrating to Apps and Books](https://support.apple.com/HT208257) before proceeding to manage purchased apps in Intune.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > - For the best migration experience, migrate only one VPP purchaser per location. If each purchaser migrates to a unique location, all licenses — assigned and unassigned — will move to Apps and Books.
 > - Do not delete the existing legacy VPP token in Intune or apps and assignments associated with existing legacy VPP token in Intune. These actions will require all app assignments to be recreated in Intune.
 
