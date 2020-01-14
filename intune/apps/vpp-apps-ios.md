@@ -58,7 +58,7 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 | **User Enrollment** | Not supported. | Supported using Managed Apple IDs. |
 | **Books** | Not supported. | Supported. |
 | **Licenses used** | 1 license per device. The license is associated with the device. | 1 license for up to 5 devices using the same personal Apple ID. The license is associated with the user. <br> <br> An end user associated with a personal Apple ID and a Managed Apple ID in Intune consumes 2 app licenses.|
-| **License migration** | Apps can migrately silently from user to device licenses. | Apps cannot migrate from device to user licenses. |
+| **License migration** | Apps can migrate silently from user to device licenses. | Apps cannot migrate from device to user licenses. |
 
 > [!NOTE]  
 > Company Portal does not show device-licensed apps on User Enrollment devices because only user-licensed apps can be installed on User Enrollment devices.
@@ -114,7 +114,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
         > [!NOTE] 
         > Automatic app updates for Apple VPP apps will automatically update only apps deployed with **Required** install intent. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
 
-    - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microisoft sends to Apple, see [Data Intune sends to Apple](~/protect/data-intune-sends-to-apple.md).
+    - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](~/protect/data-intune-sends-to-apple.md).
 
 6. When you are done, select **Create**. The token is displayed in the list of tokens pane.
 
