@@ -80,7 +80,7 @@ You can purchase and distribute public as well as private apps using Apple Busin
 > * After you have imported the location token to Intune, do not import the same token to any other device management solution. Doing so might result in the loss of license assignment and user records.
 
 ## Migrate from Volume Purchase Program (VPP) to Apps and Books
-If your organization has not migrated to Apple Business Manager or Apple School Manager yet, review [Apple's guidance on migrating to Apps and Books](https://support.apple.com/en-us/HT208257) before proceeding to manage purchased apps in Intune.
+If your organization has not migrated to Apple Business Manager or Apple School Manager yet, review [Apple's guidance on migrating to Apps and Books](https://support.apple.com/HT208257) before proceeding to manage purchased apps in Intune.
 
 >[!IMPORTANT]
 > - For the best migration experience, migrate only one VPP purchaser per location. If each purchaser migrates to a unique location, all licenses — assigned and unassigned — will move to Apps and Books.
@@ -212,4 +212,4 @@ Yes. The Intune admin can oversubscribe an app. For example, if the admin purcha
 
 See [How to monitor apps](apps-monitor.md) for information to help you monitor app assignments.
 
-See [How to troubleshoot apps](https://docs.microsoft.com/en-us/intune/apps/troubleshoot-app-install#ios-errors) for information on troubleshooting app-related issues.
+See [How to troubleshoot apps](~/apps/troubleshoot-app-install#ios-errors) for information on troubleshooting app-related issues.
