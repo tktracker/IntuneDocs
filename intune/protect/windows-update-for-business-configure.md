@@ -221,7 +221,7 @@ When a device receives a Windows 10 feature updates policy:
   This limitation is being examined to see if it can be supported in the future.
 
 > [!IMPORTANT]
-> To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Telemetry and Reporting* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
+> To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
 >
 > Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it’s off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
 
