@@ -49,7 +49,7 @@ For an overview of Autopilot benefits, scenarios, and prerequisites, see [Overvi
 
 ## Prerequisites
 - [Set up Windows automatic enrollment](../quickstart-setup-auto-enrollment.md)
-- [Azure Active Directory Premium subscription](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Azure Active Directory Premium subscription](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## Add devices
