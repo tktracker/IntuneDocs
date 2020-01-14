@@ -185,11 +185,6 @@ Prerequisites: Azure Active Directory Company Portal has been configured and Win
 
 4. Choose **Ok**.
 
-## Autopilot deployments report
-You can see details on each device deployed through Windows Autopilot.
-To see the report, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
-The data is available for 30 days after deployment.
-
 
 ## Delete Autopilot devices
 
