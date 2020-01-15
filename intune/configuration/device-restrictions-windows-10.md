@@ -383,7 +383,7 @@ When "block and enable user override" is selected, user can override admin desig
 - **Allow JavaScript**: **Yes** (default) allows scripts, such as Javascript, to run in the Microsoft Edge browser. **No** prevents Java scripts in the browser from running.
 - **User can install extensions**: **Yes** (default) allows end users to install Microsoft Edge extensions on the device. **No** prevents the installation.
 - **Allow sideloading of developer extensions**: **Yes** (default) uses the OS default, which may allow sideloading. Sideloading installs and runs unverified extensions. **No** prevents Microsoft Edge from sideloading using the **Load extensions** feature. It doesn't prevent sideloading extensions using other ways, such as PowerShell.
-- **Required extensions**: Choose which extensions can't be turned off by end users in Microsoft Edge. Enter the package family names, and select **Add**. [Find a package family name (PFN)](https://docs.microsoft.com/sccm/protect/deploy-use/find-a-pfn-for-per-app-vpn) provides some guidance.
+- **Required extensions**: Choose which extensions can't be turned off by end users in Microsoft Edge. Enter the package family names, and select **Add**. [Find a package family name (PFN) for per app VPN](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) provides some guidance.
 
   You can also **Import** a CSV file that includes the package family names. Or, **Export** the package family names you enter.
 

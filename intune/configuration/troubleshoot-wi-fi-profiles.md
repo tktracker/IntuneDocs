@@ -240,7 +240,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Confirm that all required certificates in the complete certificate chain are on the Android device. Otherwise, the Wi-Fi profile can't be installed on the device. For more information, see [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa) (opens Android's web site).
   - Filter Omadmlog with keywords to look for information, such as which certificate is used in the Wi-Fi profile, and if the profile successfully applied.
 
-    For example, use [CMTrace](https://docs.microsoft.com/sccm/core/support/cmtrace) to read the logs. Use the search string to filter “wifimgr”:
+    For example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs. Use the search string to filter “wifimgr”:
 
     > [!div class="mx-imgBorder"]
     > ![Filter CMTrace to look for WiFiMgr configuration profiles on Android devices](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

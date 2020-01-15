@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,6 +42,8 @@ Intune also provides a built-in [encryption report](encryption-monitor.md) that 
 
 Use Intune to configure FileVault disk encryption on devices that run macOS. Then, use the Intune encryption report to view encryption details for those devices and to manage recovery keys for FileVault encrypted devices.
 
+Please note, user-approved device enrollment is required for FileVault to work on the device. The user must manually approve of the management profile from system prefrences for enrollment to be considered user-approved. 
+
 FileVault is a whole-disk encryption program that is included with macOS. You can use Intune to configure FileVault on devices that run **macOS 10.13 or later**.
 
 To configure FileVault, create a [device configuration profile](../configuration/device-profile-create.md) for endpoint protection for the macOS platform. FileVault settings are one of the available settings categories for macOS endpoint protection.
@@ -75,20 +77,17 @@ For details about the FileVault setting you can manage with Intune, see [FileVau
 
 7. Configure the remaining [FileVault settings](endpoint-protection-macos.md#filevault) to meet your business needs, and then select **OK**.
 
-   > [!IMPORTANT]
-   > There is a known issue when the setting **Disable prompt at sign out** is set to *Enable*. When set to *Enable*, the setting for **Number of times allowed to bypass** must be set to a value and must not be set as *Not configured*. If set to *Not configured*, the profile fails on the device. In this scenario the device reports it's **Profile State Summary** as **Error** with no further details.
-   >
-   > When **Disable prompt at sign out** is set to *Not configured*, **Number of times allowed to bypass** can be *Not configured* or have a value.
-   >
-   > This issue will be resolved in a future update.
-
-8. Complete configuration of additional settings, and then save the profile.  
+  8. Complete configuration of additional settings, and then save the profile.  
 
 ### Manage FileVault
 
 After Intune encrypts a macOS device with FileVault, you can view and manage the FileVault recovery keys when you view the Intune [encryption report](encryption-monitor.md).
 
 After Intune encrypts a macOS device with FileVault, you can view that device's personal recovery key from the web Company Portal on any device. Once in the web Company Portal, choose the encrypted macOS device, and then choose to "Get recovery key" as a remote device action.
+
+### Retrieve personal recovery key from MEM encrypted macOS devices
+
+End users will be able to retrieve their personal recovery key (FileVault key) using the iOS Company Portal app. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, the end user can open a web page that includes the FileVault personal recovery key. You can also retrieve the recovery key from Intune by selecting **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. 
 
 ## BitLocker encryption for Windows 10
 

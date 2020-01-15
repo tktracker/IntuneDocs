@@ -39,7 +39,7 @@ Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
 > - Better Mobile (Android)
-> - Zimperium (iOS)
+> - Zimperium (Android, iOS)
 > - Lookout for Work (Android, iOS).
 
 ## Before you begin
