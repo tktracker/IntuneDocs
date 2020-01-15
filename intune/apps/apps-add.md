@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2019
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -185,7 +185,7 @@ Intune will automatically reinstall, update, or remove a required app based on t
 
 ## App installation errors
 
-For details about Intune app installation errors, see [App installation errors](troubleshoot-app-install.md#app-installation-errors).
+For details about Intune app installation errors, see [App installation errors](troubleshoot-app-install.md).
 
 ## Next steps
 
@@ -207,4 +207,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)
-- [Win32 apps](app-management.md)
+- [Win32 apps](~/apps/apps-win32-app-management.md)

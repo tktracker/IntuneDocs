@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,15 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 #### S/MIME support for Microsoft Outlook for iOS<!-- 2669398 -->
 Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Sensitivity labeling and protection in Outlook for iOS and Android](https://aka.ms/omsmime).
 
+#### Cache Win32 app content using Microsoft Connected Cache server<!-- 6030314 -->
+You can install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager - Support for Intune Win32 apps](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Windows 10 administrative templates (ADMX) profiles now support scope tags <!--5137390 wnready-->
+You can now assign scope tags to administrative template profiles (ADMX). To do so, go to **Intune** > **Devices** > **Configuration profiles** > choose an administrative templates profile in the list > **Properties** > **Scope tags**. For more information about scope tags, see [Assign scope tags to other objects](../fundamentals/scope-tags.md#assign-scope-tags-to-other-objects).
+
 <!-- ########################## -->
 ## Week of December 30, 2019
 
@@ -74,8 +83,8 @@ Intune supports delivering S/MIME signing and encryption certificates that can b
 #### Retrieve personal recovery key from MEM encrypted macOS devices<!-- 4851745 -->
 End users can retrieve their personal recovery key (FileVault key) using the iOS Company Portal app. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, an end user can retrieve their personal recovery key on their encrypted macOS device by clicking **Get recovery key**. You can also retrieve the recovery key from Intune by selecting **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. For more information about FileVault, see [FileVault encryption for macOS](~/protect/encrypt-devices.md#filevault-encryption-for-macos).
 
-#### iOS user-licensed VPP apps<!-- 5619268 -->
-For user enrolled iOS devices, end users will no longer be presented with device-licensed VPP applications deployed as available. However, end users will continue to see all user-licensed VPP apps within the Company Portal. For more information about VPP apps, see [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune](~/apps/vpp-apps-ios.md).
+#### iOS and iPadOS user-licensed VPP apps<!-- 5619268 -->
+For user enrolled iOS and iPadOS devices, end users will no longer be presented with newly created device-licensed VPP applications deployed as available. However, end users will continue to see all user-licensed VPP apps within the Company Portal. For more information about VPP apps, see [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune](~/apps/vpp-apps-ios.md).
 
 <!-- ########################## -->
 ## Week of December 23, 2019
@@ -185,6 +194,9 @@ For more information, see  the following overview articles:
 
 #### Use PKCS certificate profiles to provision devices with certificates<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529  -->
 You can now use PKCS certificate profiles to issue certificates to *devices* that run Android for Work, iOS, and Windows, when associated with profiles like those for Wi-Fi and VPN. Previously those three platforms supported only user-based certificates, with device-based support being limited to macOS.
+
+> [!NOTE]
+> PKCS certificate profiles are not supported with Wi-Fi profiles. Instead, use SCEP certificate profiles when you use an [EAP type](../configuration/wi-fi-settings-windows.md#enterprise-profile).
 
 To use a device-based certificate, while [creating a PKCS certificate profile](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile) for the supported platforms, select **Settings**. You’ll now see the setting for **Certificate type**, which supports the options for Device, or User.
 

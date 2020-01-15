@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 01/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -473,6 +473,11 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
   - iOS 12.2 and newer
 
 - **Join Wi-Fi networks only using configuration profiles**: **Require** forces the device to use only Wi-Fi networks set up through Intune configuration profiles. **Not configured** (default) allows the device to use other Wi-Fi networks.
+
+  When set to **Require**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, this setting could prevent the device from connecting to the internet. In other words, if this device restrictions profile is assigned before a Wi-Fi profile, the device might be blocked from connecting to the internet.
+  
+  If it can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Require** in a device restrictions profile, and assign the profile to the device.
+
 - **Wi-Fi always turned on**: When set to **Require**, Wi-Fi stays on in the Settings app. It can't be turned off in Settings or in the Control Center, even when the device is in airplane mode. **Not configured** (default) allows the user to control turning on or turning off Wi-Fi.
 
   Configuring this setting doesn't prevent users from selecting a Wi-Fi network.

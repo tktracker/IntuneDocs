@@ -92,14 +92,6 @@ Conditional access for PCs provides capabilities similar to those available for 
 
 - **Azure AD domain joined and Intune management:** This scenario is for organizations that want to be cloud-first (that is, primarily use cloud services, with a goal to reduce use of an on-premises infrastructure) or cloud-only (no on-premises infrastructure). Azure AD Join works well in a hybrid environment, enabling access to both cloud and on-premises apps and resources. The device joins to the Azure AD and gets enrolled to Intune, which can be used as a conditional access criteria when accessing corporate resources.
 
-- **AD domain joined and Configuration Manager:** As of current branch, Configuration Manager provides conditional access capabilities that can evaluate specific compliance criteria, in addition to being a domain-joined PC:
-
-  - Is the PC encrypted?
-
-  - Is anti-malware installed? Is it up-to-date?
-
-  - Is the device jailbroken or rooted?
-
 #### Bring your own device (BYOD)
 
 - **Workplace join and Intune management:** Here the user can join their personal devices to access corporate resources and services. You can use Workplace join and enroll devices into Intune MDM to receive device-level policies, which are another option to evaluate conditional access criteria.

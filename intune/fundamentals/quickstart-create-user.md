@@ -54,11 +54,11 @@ Users must have a user account to enroll in Intune device management. To create 
 
 ## Assign a license to the user
 
-After you've created a user, you must use the [Microsoft 365 admin center](http://go.microsoft.com/fwlink/p/?LinkId=698854) to assign an Intune license to them. If you don't assign the user a license, they'll be unable to enroll their device into Intune. 
+After you've created a user, you must use the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to assign an Intune license to them. If you don't assign the user a license, they'll be unable to enroll their device into Intune. 
 
 To assign an Intune license to a user:
 
-1. Sign in to the [Microsoft 365 admin center](http://go.microsoft.com/fwlink/p/?LinkId=698854) with the same credentials you used to sign in to Intune.
+1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) with the same credentials you used to sign in to Intune.
 2. Choose **Users** > **Active Users** > and choose the user you just created.
 3. Next to **Product licenses** select **Edit**.
 4. Under **Location**, choose a location for the user.
@@ -72,7 +72,7 @@ The new active Intune user will now show that they're using an **Intune** licens
 
 ## Clean up resources
 
-If you don't need this user anymore, you can delete the user by navigating to the [Microsoft 365 admin center](http://go.microsoft.com/fwlink/p/?LinkId=698854) and choose **Users** > **Active users** > *choose the user in the list* > **Delete user** > **Delete user** > **Confirm changes** > **Close**.
+If you don't need this user anymore, you can delete the user by navigating to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) and choose **Users** > **Active users** > *choose the user in the list* > **Delete user** > **Delete user** > **Confirm changes** > **Close**.
 
 ## Next steps
 

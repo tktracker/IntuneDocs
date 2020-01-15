@@ -376,8 +376,7 @@ The Microsoft Intune Certificate Connector installs on the server that runs your
 
    2. Run the installer (**NDESConnectorSetup.exe**). The installer also installs the policy module for NDES and the IIS Certificate Registration Point (CRP) Web Service. The CRP Web Service, *CertificateRegistrationSvc*, runs as an application in IIS.
 
-      - When you install NDES for standalone Intune, the CRP service automatically installs with the Certificate Connector.
-      - When you use Intune with Configuration Manager, you install the Certificate Registration Point as a Configuration Manager site system role.
+      When you install NDES for standalone Intune, the CRP service automatically installs with the Certificate Connector.
 
 5. When prompted for the client certificate for the Certificate Connector, choose **Select**, and select the **client authentication** certificate you installed on your NDES Server during step #3 of the procedure [Install and bind certificates on the server that hosts NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) from earlier in this article.
 
