@@ -188,7 +188,7 @@ There are additional requirements to use Skype for Business. See [Skype for Busi
 
 ## App protection Global policy
 
-If a OneDrive administrator browses to **admin.office.com** and selects **Device** access, they can set **Mobile application management** controls to the OneDrive and SharePoint client apps. 
+If a OneDrive administrator browses to **admin.onedrive.com** and selects **Device access**, they can set **Mobile application management** controls to the OneDrive and SharePoint client apps. 
 
 The settings, made available to the OneDrive Admin console, configure a special Intune app protection policy called the **Global** policy. This global policy applies to all users in your tenant, and has no way to control the policy targeting. 
 

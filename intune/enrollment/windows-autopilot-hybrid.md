@@ -214,17 +214,30 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 ## Create and assign a Domain Join profile
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create Profile**.
-1. Enter the following properties:
+2. Enter the following properties:
    - **Name**: Enter a descriptive name for the new profile.
    - **Description**: Enter a description for the profile.
    - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select **Domain Join (Preview)**.
-1. Select **Settings**, and then provide a **Computer name prefix**, **Domain name**, and (optional) **Organizational unit** in [DN format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
+3. Select **Settings**, and then provide a **Computer name prefix**, **Domain name**.
+4. (Optional) Provide an **Organizational unit** (OU) in [DN format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
+   - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
+   - Provide an OU in which you've delegated control to the root computers in your on-prem Active Directory.
+   - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
+   
+   Here are some valid examples:
+   - OU=Level 1,OU=Level2,DC=contoso,DC=com
+   - OU=Mine,DC=contoso,DC=com
+   
+   Here are some examples that are not valid:
+   - CN=Computers,DC=contoso,DC=com  (you can’t specify a container, instead leave the value blank to use the default for the domain)
+   - OU=Mine  (you must specify the domain via the DC= attributes)
+     
    > [!NOTE]
    > Don't use quotation marks around the value in **Organizational unit**.
-1. Select **OK** > **Create**.  
+5. Select **OK** > **Create**.  
     The profile is created and displayed in the list.
-1. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)
+6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)
    - Deploying multiple Domain Join profiles
    
      a. Create a dynamic group that includes all your Autopilot devices with a specific Autopilot deployment profile, enter (device.enrollmentProfileName -eq "Autopilot Profile Name"). 
