@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -92,13 +92,13 @@ Intune doesn’t track the custom notifications you send, and devices don’t lo
 
 ## Send a custom notification to a single device  
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.  
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.
 
-2. Select the device to which you want to send a notification.  
+2. Double-click the name of the managed device to which you want to send a notification, to open that devices *Overview* page.
 
-3. On the devices **Overview** page, select the **...** (ellipses) option from the upper right side of the page.  
+3. On the devices **Overview** page the **Send Custom Notification** device action to open the *Send Custom Notification* pane. If this option isn't available, select the **...** (ellipses) option from the upper right side of the page and then select **Send Custom Notification**.
 
-4. Select the **Send Custom Notification** device action to open the *Send Custom Notification* pane where you specify the following message details:  
+4. On the **Send Custom Notification** pane, specify the following message details:  
 
    - **Title** – Specify a title for this notification. Titles are limited to 50 characters.  
    - **Body** – Specify the message. Messages are limited to 500 characters.  
