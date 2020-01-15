@@ -235,9 +235,9 @@ It takes about 15 minutes for the device profile status to change from *Not assi
      
    > [!NOTE]
    > Don't use quotation marks around the value in **Organizational unit**.
-4. Select **OK** > **Create**.  
+5. Select **OK** > **Create**.  
     The profile is created and displayed in the list.
-5. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)
+6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)
    - Deploying multiple Domain Join profiles
    
      a. Create a dynamic group that includes all your Autopilot devices with a specific Autopilot deployment profile, enter (device.enrollmentProfileName -eq "Autopilot Profile Name"). 
