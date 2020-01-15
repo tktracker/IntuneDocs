@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/14/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -50,7 +50,7 @@ Intune provides app troubleshooting details based on the apps installed on a spe
     > The same app could be assigned to multiple groups but with different intended actions (intents) for the app. For instance, a resolved intent for an app will show **excluded** if the app is excluded for a user during app assignment. For more information, see [How conflicts between app intents are resolved](apps-deploy.md#how-conflicts-between-app-intents-are-resolved).<br><br>
     > If an installation failure occurs for a required app, either you or your helpdesk will be able to sync the device and retry the app install.
 
-The app installation error details will indicate the problem. You can use these details to determine the best action to take to resolve the problem. For more information about troubleshooting app installation issues, see [App installation errors](troubleshoot-app-install.md#app-installation-errors).
+The app installation error details will indicate the problem. You can use these details to determine the best action to take to resolve the problem. For more information about troubleshooting app installation issues, see [Android app installation errors](troubleshoot-app-install.md#android-app-installation-errors) and [iOS app installation errors](troubleshoot-app-install.md#ios-app-installation-errors).
 
 > [!Note]  
 > You can also access the **troubleshooting** pane by pointing your browser to: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -108,11 +108,7 @@ There are specific requirements that must be followed to collect log files:
 - Stored logs are encrypted to protect any personal identifiable information contained in the logs​.
 - While opening support tickets for Win32 app failures, attach the related failure logs using the steps provided above.
 
-## App installation errors
-
-The following error messages and descriptions provide details about both Android and iOS installation errors. 
-
-### Android errors
+## Android app installation errors
 
 This section mentions both Device Administrator (DA) and Samsung Knox enrollment. For more information, see [Android device administrator enrollment](../enrollment/android-enroll-device-administrator.md) and [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md). 
 
@@ -133,7 +129,9 @@ This section mentions both Device Administrator (DA) and Samsung Knox enrollment
 | Uninstall of the app was canceled because the process was restarted during installation. (0xc7d14fbc) | The app install process was terminated by the OS or the device was restarted. Retry the install and collect Company Portal logs if this error occurs again. |
 | The app installation APK file cannot be installed because it was not signed. (0xc7d14fb6) | By default, Android OS requires apps to be signed. Ensure the app is signed before deployment. |
 
-### iOS errors
+## iOS app installation errors
+
+The following error messages and descriptions provide details about iOS installation errors. 
 
 | Error message/code | Description/Troubleshooting tips |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -167,7 +165,7 @@ This section mentions both Device Administrator (DA) and Samsung Knox enrollment
 | The latest version of the app failed to update from an earlier version. (0x87D13B9D) | This error message is displayed if the app is installed and managed but with the incorrect version on the device. This situation includes when a device has received a command to update an app but the new version has not yet been installed and reported back. This error will be reported for the first check-in of a device after the upgrade has been deployed, and will occur until the device reports that the new version is installed, or fails due to a different error.  |
 
 
-### Other installation errors
+## Other installation errors
 
 |  Error message/code  |  Description  |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
