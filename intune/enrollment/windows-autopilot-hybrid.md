@@ -221,15 +221,15 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    - **Profile type**: Select **Domain Join (Preview)**.
 3. Select **Settings**, and then provide a **Computer name prefix**, **Domain name**.
 4. (Optional) Provide an **Organizational unit** (OU) in [DN format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
-   - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
    - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
-   - Provide an OU in which you've delegated control to the root computers in yoru on-prem Active Directory.
-
+   - Provide an OU in which you've delegated control to the root computers in your on-prem Active Directory.
+   - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
+   
    Here are some valid examples:
    - OU=Level 1,OU=Level2,DC=contoso,DC=com
    - OU=Mine,DC=contoso,DC=com
    
-   Here aer some examples that are not valid:
+   Here are some examples that are not valid:
    - CN=Computers,DC=contoso,DC=com  (you can’t specify a container, instead leave the value blank to use the default for the domain)
    - OU=Mine  (you must specify the domain via the DC= attributes)
      
