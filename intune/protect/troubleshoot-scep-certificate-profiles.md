@@ -79,7 +79,7 @@ The following list includes logs or consoles that are referenced in the subseque
 
 - **NDESConnector_date_time.svclog**:
 
-  This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. ou can use the [Service Trace Viewer Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
+  This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. You can use the [Service Trace Viewer Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
 
   Related registry key: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
