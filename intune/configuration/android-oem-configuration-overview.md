@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 01/16/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,8 +29,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune
-
-
 
 In Microsoft Intune, you can use OEMConfig to add, create, and customize OEM-specific settings for Android Enterprise devices. OEMConfig is typically used to configure settings that aren't built in to Intune. Different original equipment manufacturers (OEM) include different settings. The available settings depend on what the OEM includes in their OEMConfig app.
 
@@ -88,19 +86,25 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Name**: Enter a descriptive name for the new profile.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **Platform**: Select **Android enterprise**.
     - **Profile type**: Select **OEMConfig**.
 
-4. Select **Associated app**, select an existing OEMConfig app you previously added > **OK**. Be sure to choose the correct OEMConfig app for the devices you're assigning the policy to.
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
 
-    If you don't see any apps listed, then set up Managed Google Play, and get apps from the Managed Google Play store. [Add Managed Google Play apps to Android enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
+    - **Name**: Enter a descriptive name for the new profile.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    - **OEMConfig app**: Choose **Select an OEMConfig app**.
+
+6. In **Associated app**, select an existing OEMConfig app you previously added > **Select**. Be sure to choose the correct OEMConfig app for the devices you're assigning the policy to.
+
+    If you don't see any apps listed, then set up Managed Google Play, and get apps from the Managed Google Play store. [Add Managed Google Play apps to Android Enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
 
     > [!IMPORTANT]
     > If you added an OEMConfig app and synced it to Google Play, but it's not listed as an **Associated app**, you may have to contact Intune to onboard the app. See [adding a new app](#supported-oemconfig-apps) (in this article).
 
-5. In **Configure settings with**, choose to use the **Configuration designer** or **JSON editor**:
+7. Select **Next**.
+8. In **Configure settings**, select the **Configuration designer** or **JSON editor**:
 
     > [!TIP]
     > Read the OEM documentation to make sure you're configuring the properties correctly. These app properties are included by the OEM, not Intune. Intune does minimal validation of the properties, or what you enter. For example, if you enter `abcd` for a port number, the profile saves as-is, and is deployed to your devices with the values you configure. Be sure you enter the correct information.
@@ -125,12 +129,22 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
     Any changes made in the configuration designer are also made automatically in the JSON editor. Likewise, any changes made in the JSON editor are automatically made in the configuration designer. If your input contains invalid values, you can't switch between the configuration designer and JSON editor until you fix the issues.
 
-6. Select **OK** > **Add** to save your changes. The policy is created and shown in the list.
+9. Select **Next**.
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`.
 
-Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+    For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
- > [!NOTE]
- > Assign one profile to each device. The OEMConfig model only supports one policy per device.
+    Select **Next**.
+
+11. In **Assignments**, select the users or groups that'll receive your profile.
+
+    Assign one profile to each device. The OEMConfig model only supports one policy per device.
+
+    For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time the device checks for configuration updates, the OEM-specific settings you configured are applied to the OEMConfig app.
 
@@ -165,4 +179,4 @@ If an OEMConfig application exists for your device, but it isn’t in the table 
 
 ## Next steps
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Monitor the profile status](device-profile-monitor.md).
