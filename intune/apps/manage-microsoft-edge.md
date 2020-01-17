@@ -211,7 +211,7 @@ You can configure the New Tab Page experience within Microsoft Edge mobile to di
 
 |    Key    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    'com.microsoft.intune.SohwIndustryNews'    |    **True** will show INdustry News on the Microsoft Edge mobile New Tab Page.<p>**False** (default) will hide Industry News from the New Tab Page.    |
+|    com.microsoft.intune.ShowIndustryNews    |    **True** will show Industry News on the Microsoft Edge mobile New Tab Page.<p>**False** (default) will hide Industry News from the New Tab Page.    |
 
 ## Configure managed bookmarks for Microsoft Edge
 
