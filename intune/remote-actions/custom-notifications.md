@@ -39,19 +39,19 @@ Custom notification messages include a short title and a message body of 500 cha
 If you have the Company Portal app open on an iOS device, the notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
-> ![Company Portal iOS Test notification](./media/custom-notifications/105046_1.png)
+> ![Company Portal iOS Test notification](./media/custom-notifications/105046-1.png)
 
 If the device is locked, the notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
-> ![Locked Device iOS Test notification](./media/custom-notifications/105046_2.png)
+> ![Locked Device iOS Test notification](./media/custom-notifications/105046-2.png)
 
 ### What the notification looks like on an Android device
 
 If you have the Company Portal app open on an Android device, the notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
-> ![Android Test notification](./media/custom-notifications/105046_3.png)
+> ![Android Test notification](./media/custom-notifications/105046-3.png)
 
 ## Common scenarios for sending custom notifications  
 
