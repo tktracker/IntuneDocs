@@ -639,7 +639,7 @@ iOS supervised mode can only be enabled during initial device setup through Appl
 
 - App Lock (Single App Mode) 
 - Global HTTP Proxy 
-- Activation Lock Bypass 
+- Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
 - Set background and lock screen 
