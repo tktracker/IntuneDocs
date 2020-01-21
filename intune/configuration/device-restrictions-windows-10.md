@@ -675,14 +675,6 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
 
 These settings use the [defender policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), which also lists the supported Windows editions.
 
-- **On Access Protection**: **Block** prevents scanning of files accessed or downloaded. Users can't turn it on.
-
-  When set to **Not configured** (default), Intune doesn't change or update this setting. If you block the setting, and then change it back to **Not configured**, then Intune leaves the setting in it's previously OS configured state. By default, the OS enables this feature, and allows users to change it.
-
-  Intune doesn't turn on this feature. To enable it, use a custom URI.
-
-  [Defender/AllowOnAccessProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
-
 - **Real-time monitoring**: **Enable** turns on real-time scanning for malware, spyware, and other unwanted software. Users can't turn it off. 
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. If you enable the setting, and then change it back to **Not configured**, then Intune leaves the setting in it's previously configured state. By default, the OS turns on this feature, and allows users to change it.
@@ -859,6 +851,14 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
 - **Submit samples consent**: Currently, this setting has no impact. Don't use this setting. It may be removed in a future release.
+
+- **On Access Protection**: **Block** prevents scanning files that have been accessed or downloaded. Users can't turn it on.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. If you block the setting and then change it back to **Not configured**, Intune leaves the setting in its previously OS-configured state. By default, the OS enables this feature and allows users to change it.
+
+  Intune doesn't turn on this feature. To enable it, use a custom URI.
+
+  [Defender/AllowOnAccessProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
 
 - **Actions on detected malware threats**: Choose how you want to handle malware threads. **Not configured** (default) lets Microsoft Defender choose the best option. When set to **Enable**, choose the actions you want Defender to take for each threat level it detects: low, moderate, high, and severe. Your options:
   
