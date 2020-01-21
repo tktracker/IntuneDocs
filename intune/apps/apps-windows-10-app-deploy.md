@@ -48,13 +48,11 @@ Line-of-business (LOB) apps and Microsoft Store for Business apps are the app ty
 
 Specific app types are supported based on the version of Windows 10 that your users are running. The following table provides the app type and Windows 10 supportability.
 
-| App type | Windows 10 Home | Windows 10 Pro | Windows 10 Business | Windows 10 Enterprise | Windows 10 Education | Windows 10 S-Mode | Windows 10 Hololense | Windows 10 SurfaceHub | Windows 10 WCOS | Windows 10 Mobile |
+| App type | Home | Pro | Business | Enterprise | Education | S-Mode | Hololense | SurfaceHub | WCOS | Mobile |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  .MSI | No | Yes | Yes | Yes | Yes | No | No | No | No | No |
 | .IntuneWin | No | Yes | Yes | Yes | Yes | 19H2+ | No | No | No | No |
-|  |  |  |  |  |  |  |  |  |  |  |
 | Office C2R | No | Yes | Yes | Yes | Yes | No | No | No | No | No |
-|  |  |  |  |  |  |  |  |  |  |  |
 | LOB: APPX/MSIX | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB Offline | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB Online | Yes | Yes | Yes | Yes | Yes | Yes | RS4+ | Yes | Yes | Yes |
