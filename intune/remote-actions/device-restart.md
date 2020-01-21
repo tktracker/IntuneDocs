@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-The **Restart** device action causes the device you choose to be restarted. The device owner isn't automatically notified of the restart, and they might lose work.
+The **Restart** device action causes the device you choose to be restarted (within 5 minutes). The device owner isn't automatically notified of the restart, and they might lose work.
 
 ## Supported platforms
 
