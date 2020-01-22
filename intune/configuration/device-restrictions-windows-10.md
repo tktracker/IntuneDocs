@@ -235,6 +235,9 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
   [AboveLock/AllowActionCenterNotifications CSP](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **Locked screen picture URL (desktop only)**: Enter the URL to a picture in JPG, JPEG, or PNG format that's used as the Windows lock screen wallpaper. For example, enter `https://contoso.com/image.png`. This setting locks the image, and can't be changed afterwards.
+
+  [Personalization/LockScreenImageUrl CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+
 - **User configurable screen timeout (mobile only)**: **Allow** lets users configure the screen timeout. **Not configured** (default) doesn't give users this option.
 
   [DeviceLock/AllowScreenTimeoutWhileLockedUserConfig CSP](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
@@ -851,6 +854,14 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
 - **Submit samples consent**: Currently, this setting has no impact. Don't use this setting. It may be removed in a future release.
+
+- **On Access Protection**: **Block** prevents scanning files that have been accessed or downloaded. Users can't turn it on.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. If you block the setting and then change it back to **Not configured**, Intune leaves the setting in its previously OS-configured state. By default, the OS enables this feature and allows users to change it.
+
+  Intune doesn't turn on this feature. To enable it, use a custom URI.
+
+  [Defender/AllowOnAccessProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
 
 - **Actions on detected malware threats**: Choose how you want to handle malware threads. **Not configured** (default) lets Microsoft Defender choose the best option. When set to **Enable**, choose the actions you want Defender to take for each threat level it detects: low, moderate, high, and severe. Your options:
   
