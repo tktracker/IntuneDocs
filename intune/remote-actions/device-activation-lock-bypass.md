@@ -48,7 +48,7 @@ While Activation Lock helps secure iOS devices and improves the chances of recov
 - You need a report of all devices that have Activation Lock enabled.
 - You want to reassign some devices to a different department during a device refresh in your organization. You can only reassign devices that do not have Activation Lock enabled.
 
-To help solve these problems, Apple introduced Activation Lock disable in iOS 7.1. Disable Activation Lock lets you remove the Activation Lock from supervised devices without the user's Apple ID and password. Supervised devices can generate a device-specific Activation Lock disable code, which is stored on Apple's activation server.
+To help solve these problems, Apple introduced Activation Lock disable in iOS 7.1. Disable Activation Lock lets you remove the Activation Lock from supervised devices without the user's Apple ID and password. Supervised devices can generate a device-specific Activation Lock bypass code, which is stored on Apple's activation server.
 
 >[!TIP]
 >Supervised mode for iOS devices lets you use Apple Configurator to lock down a device and limit functionality to specific business purposes. Supervised mode is used only for corporate-owned devices.
@@ -82,7 +82,7 @@ The Intune **Disable Activation Lock** remote device action removes the Activati
 3. On the **Intune** blade, select **Devices**.
 4. On the **Devices** blade, select **All devices**.
 5. On the list of devices that you manage, select the **Disable Activation Lock** device remote action.
-6. Go to the device's “Hardware” section, and then copy the **Activation Lock disable code** value under **Conditional Access**.
+6. Go to the device's “Hardware” section, and then copy the **Activation Lock bypass code** value under **Conditional Access**.
 
     >[!NOTE]
     >Copy the bypass code before you wipe the device. If you reset the device settings before you copy the code, the code is removed from Azure.
