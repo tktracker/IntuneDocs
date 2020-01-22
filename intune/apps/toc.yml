@@ -190,10 +190,10 @@
       - name: Help users troubleshoot problems
         href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
       - name: Troubleshoot app installation problems
-        href: troubleshoot-app-install.md         
-      - name: Troubleshoot mobile application management
+        href: troubleshoot-app-install.md
+      - name: App installation error reference                  
         href: app-install-error-codes.md         
-      - name: App installation error reference     
+      - name: Troubleshoot mobile application management
         href: troubleshoot-mam.md            
       - name: Review app protection logs
         href: app-protection-policy-settings-log.md
