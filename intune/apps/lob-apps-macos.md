@@ -63,7 +63,9 @@ You must download an external tool, mark the downloaded tool as an executable, a
 3. Use the `IntuneAppUtil` command within the **Intune App Wrapping Tool for Mac** to wrap *.pkg* LOB app file from a *.intunemac* file.<br>
 
     Sample commands to use for the Microsoft Intune App Wrapping Tool for macOS:
-    
+    > [!IMPORTANT]
+    > Ensure that the argument `<source_file>` does not contain spaces before running the `IntuneAppUtil` commands.
+
     - `IntuneAppUtil -h`<br>
     This command will show usage information for the tool.
     
