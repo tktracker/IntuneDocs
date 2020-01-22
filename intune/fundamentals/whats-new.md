@@ -57,6 +57,15 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 -->  
 
 <!-- ########################## -->
+## Week of January 20, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Intune support for additional Microsoft Edge deployment channel<!-- 5861774 -->
+Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge app. The **Stable** channel is the recommended channel for deploying Microsoft Edge broadly in Enterprise environments. It updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. For more information, see [Microsoft Edge for Windows 10 - Configure app settings](~/apps/apps-windows-edge#configure-app-settings).
+
+<!-- ########################## -->
 ## Week of January 6, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
