@@ -59,17 +59,13 @@ An enrollment profile defines the settings applied to a group of devices during 
 
 3. Select **Next**.
 
-4. On the **Settings** page, you can choose to give users the choice on which enrollment type they'll use. Alternately, you can set a default.
+4. On the **Settings** page, select one of the following options for **Enrollment type**:
 
     ![Settings page](./media/ios-user-enrollment/settings-page.png)
 
-    - If you want all the users in this profile to use User Enrollment, follow these steps:
-        1. For **Require user to select device type**, select **Not configured**.
-        2. For **Default enrollment type**, select **User Enrollment**.
-    - If you want all the users in this profile to use Device Enrollment, follow these steps:
-        1. For **Require user to select device type**, select **Not configured**.
-        2. For **Default enrollment type**, select **Device Enrollment**.
-    - If you want to give all users in this group the choice of which enrollment type to use, select **Required** for **Require user to select device type**. When users enroll their devices, they'll be given the option to choose between **I own this device** and **(Company) owns this device**. If they choose the former, the device will be enrolled by using User Enrollment. If they choose the latter, the device will be enrolled by using Device Enrollment. If the user chooses **I own this device**, they'll get another option to secure the entire device or only secure work-related apps and data. The end user's selection of whether they own the device only determines which enrollment type is implemented on their device. This user choice isn't reflected in the Device Ownership attribute in Intune. To learn more about the user experience, see [Set up IOS device access to your company resources](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
+    - **Device enrollment**: All the users in this profile will use Device Enrollment.
+    - **User enrollment**: All the users in this profile will use User Enrollment.
+    - **Determine based on user choice**: All users in this group will be given the choice of which enrollment type to use. When users enroll their devices, they'll see an option to choose between **I own this device** and **(Company) owns this device**. If they choose the former, the device will be enrolled by using User Enrollment. If they choose the latter, the device will be enrolled by using Device Enrollment. If the user chooses **I own this device**, they'll get another option to secure the entire device or only secure work-related apps and data. The end user's selection of whether they own the device only determines which enrollment type is implemented on their device. This user choice isn't reflected in the Device Ownership attribute in Intune. To learn more about the user experience, see [Set up IOS device access to your company resources](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
     
     > [!NOTE]
     > The following notice is inaccurate and will be removed from the UI.
