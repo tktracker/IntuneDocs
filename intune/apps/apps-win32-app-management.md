@@ -53,7 +53,7 @@ You can download the [Microsoft Win32 Content Prep Tool](https://go.microsoft.co
 
 ### Process flow to create .intunewin file
 
-   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.svg" width="500">
+   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.svg" width="700">
 
 ### Run the Microsoft Win32 Content Prep Tool
 
@@ -156,7 +156,7 @@ The following steps provide guidance to help you add a Windows app to Intune.
         > The Win32 app install and uninstall will be executed under admin privilege (by default) when the app is set to install in user context and the end user on the device has admin privileges.
     
     - **Device restart behavior**: Select one of the following options:
-        - **Determine behavior based on return codes**: Choose this option to restart the device based on the [return codes](~/apps/apps-win32-app-management.md#step-7-configure-app-return-codes) configuration settings.
+        - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes.
         - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
         - **App install may force a device restart**: Choose this option to allow the app installation to complete without suppressing restarts.
         - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.
