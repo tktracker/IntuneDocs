@@ -45,7 +45,6 @@ For more information about the App Wrapping Tool for app protection policies on 
 ### Reasons to use the App Wrapping Tool
 
 * Your app does not have built-in data protection features
-* Your app is simple
 * Your app is deployed internally
 * You don't have access to the app's source code
 * You didn't develop the app
@@ -111,7 +110,7 @@ This table lists the settings that you can use for the App SDK and App Wrapping 
 |Full Wipe of app data|X|X|
 |Selective Wipe of work and school data in multi-identity scenarios <br><br>**Note:** For iOS, when the management profile is removed, the app is also removed.|X||
 |Prevent “Save as”|X||
-|Targeted Application Configuration (or app config through the "MAM channel")|X||
+|Targeted Application Configuration (or app config through the "MAM channel")|X|X|
 |Support for Multi-Identity|X||
 |Customizable Style |X|||
 |On-demand application VPN connections with Citrix mVPN|X|X| 
@@ -123,6 +122,9 @@ This table lists the settings that you can use for the App SDK and App Wrapping 
 |Require minimum Intune SDK for iOS (iOS only)|X|X|
 |SafetyNet device attestation (Android only)|X|X|
 |Threat scan on apps (Android only)|X|X|
+|Require maxmimum Mobile Threat Defense vendor device risk level|X||
+|Configure app notification content for organization accounts|X|X|
+|Require use of approved keyboards on Android|X|X|
 
 ## Next steps
 
