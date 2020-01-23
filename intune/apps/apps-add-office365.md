@@ -121,7 +121,10 @@ When you choose **Configuration designer** the **Add app** pane will change to o
 If you selected the **Enter XML data** option under the **Setting format** dropdown box on the **Configure app suite** page, you can configure the Office app suite using a custom configuration file.
 
 ![Add Office 365 configuration designer](./media/apps-add-office365/apps-add-office365-01.png)
-    
+
+1. Added your configuration XML.
+2. Click **Next** to display the **Scope tags** page.
+
 For more information about entering XML data, see [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## Step 3 - Select scope tags (optional)
