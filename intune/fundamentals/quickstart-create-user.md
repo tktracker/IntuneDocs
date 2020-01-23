@@ -37,7 +37,7 @@ If you don’t have an Intune subscription, [sign up for a free trial account](f
 
 - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
-## Sign in to Intune in the Microsoft Endpoint Manager
+## Sign in to Intune in Microsoft Endpoint Manager
 
 Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
@@ -66,7 +66,7 @@ To assign an Intune license to a user:
 1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) with the same credentials you used to sign in to Intune.
 2. Select **Users** > **Active Users**, and then select the user you just created.
 3. Select the **Licenses and Apps** tab.
-4. Under **Select location**, select a location for the user if it's not already set.
+4. Under **Select location**, select a location for the user, if it's not already set.
 2. Select the **Intune** check box in the **Licenses** section. If another license includes Intune, you can select that license. The displayed [product name](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference) is used as the service plan in Azure management.
 
     ![Select the location and Intune license](./media/quickstart-create-user/create-user-03.png)
@@ -88,7 +88,7 @@ If you don't need this user anymore, you can delete the user by going to the [Mi
 
 In this quickstart, you created a user and assigned an Intune license to that user. For more information about adding users to Intune, see [Add users and grant administrative permission to Intune](users-add.md).
 
-To continue this series of Intune quickstarts, continue to the next quickstart:
+To continue this series of Intune quickstarts, go to the next quickstart:
 
 > [!div class="nextstepaction"]
 > [Quickstart: Create a group to manage users](../quickstart-create-group.md)
