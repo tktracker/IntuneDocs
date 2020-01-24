@@ -34,7 +34,7 @@
     - name: Erase macOS device
       href: device-erase.md
     - name: Disable Activation Lock
-      href: device-activation-lock-bypass.md
+      href: device-activation-lock-disable.md
   - name: User actions
     items:
     - name: Sign out current user

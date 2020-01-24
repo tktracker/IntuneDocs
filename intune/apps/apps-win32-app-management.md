@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 01/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -362,14 +362,14 @@ Set the app availability based on a date and time for a required app using the f
 7. In the **Edit assignment** pane, set the **Ender user notifications** to **Show all toast notifications**. Note that you can set **End user notifications** to **Show all toast notifications**, **Show toast notifications for computer restarts**, or **Hide all toast notifications**.
 8. Set the **App availability** to **A specific date and time** and select your date and time. This date and time specifies when the app is downloaded to the end users device. 
 9. Set the **App installation deadline** to **A specific date and time** and select your date and time. This date and time specifies when the app is installed on the end users device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the earliest time possible.
-<!-->
+
 10. Click **Enabled** next to the **Restart grace period**. The restart grace period starts as soon as the app install has been completed on the device.​ When disabled, the device can restart without warning. <br>You can customize the following options:
     - **Device restart grace period (minutes)**: The default value is 1440 minutes (24 hours). This value can be a maximum of 2 weeks.
     - **Select when to display the restart countdown dialog box before the restart occurs (minutes)**: The default value is 15 minutes.
     - **Allow user to snooze the restart notification**: You can choose **Yes** or **No**.
         - **Select the snooze duration (minutes)**: The default value is 240 minutes (4 hours). The snooze value cannot be more than reboot grace period.
-</!-->
-10. Click **Review + save**.
+
+11. Click **Review + save**.
 
 ## Toast notifications for Win32 apps 
 If needed, you can suppress showing end user toast notifications per app assignment. From Intune, select **Apps** > **All apps** > select the app > **Assignments** > **Include Groups**. 

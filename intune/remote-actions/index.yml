@@ -88,4 +88,4 @@ landingContent:
           - text: Erase data from macOS device
             url: device-erase.md
           - text: Disable Activation Lock
-            url: device-activation-lock-bypass.md
+            url: device-activation-lock-disable.md
