@@ -84,7 +84,7 @@ An enrollment profile defines the settings applied to a group of devices during 
 
 After you've created more than one enrollment type profile, you can change the priority order in which they're applied.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **ioS enrollment** > **Enrollment types (preview)**.
+1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment types (preview)**.
 2. Drag and drop the profiles in the list in the order you want them applied.
 
 In case of conflicts between profiles for any user, the higher priority profile is applied for the user.
