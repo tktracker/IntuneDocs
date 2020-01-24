@@ -135,6 +135,11 @@ You can synchronize the app names, metadata and license information for your pur
 >[!NOTE]
 >The Available deployment intent is not supported for device groups, only user groups are supported. The list of apps displayed is associated with a token. If you have an app that is associated with multiple VPP tokens, you see the same app being displayed multiple times; once for each token.
 
+> [!NOTE]  
+> Intune (or any other MDM for that matter) does not actually install VPP apps. Instead, Intune connects to your VPP account and tells Apple which app licenses to assign to which devices. From there, all the actual installation is handled between Apple and the device.
+> 
+> [Apple MDM Protocol Reference, page 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
+
 ## End-User Prompts for VPP
 
 The end-user will receive prompts for VPP app installation in a number of scenarios. The following table explains each condition:
