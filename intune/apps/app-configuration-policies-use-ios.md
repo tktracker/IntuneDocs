@@ -73,7 +73,7 @@ Once you have selected the included groups for your application configuration po
 
     ![Screenshot of Policy assignments Include tab](./media/app-configuration-policies-use-ios/app-config-policy01.png)
 
-11. Select **All Users** in the dropdown box.
+11. Select **All users** in the dropdown box.
 
     ![Screenshot of Policy assignments - All Users dropdown option](./media/app-configuration-policies-use-ios/app-config-policy02.png)
 

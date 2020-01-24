@@ -50,18 +50,9 @@ You can use app configuration policies with managed apps that support the Intune
     To delete a configuration, choose the ellipsis (**…**) and select **Delete**.  
 
 7. Click **Next** to display the **Assignments** page.
-8. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.
-
-    ![Screenshot of Policy assignments Include tab](./media/app-configuration-policies-use-ios/app-config-policy01.png)
-
-9. Select **All Users** in the dropdown box.
-
-    ![Screenshot of Policy assignments - All Users dropdown option](./media/app-configuration-policies-use-ios/app-config-policy02.png)
-
+8. Click **Select groups to include**.
+9. Select a group in the **Select groups to include** pane and click **Select**.
 10. Click **Select groups to exclude** to display the related pane.
-
-    ![Screenshot of Policy assignments - Select groups to exclude pane](./media/app-configuration-policies-use-ios/app-config-policy03.png)
-
 11. Choose the groups you want to exclude and then click **Select**.
 
     >[!NOTE]
