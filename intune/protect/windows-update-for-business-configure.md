@@ -202,6 +202,9 @@ For more information about Windows Update policies, see [Update CSP](https://doc
 
 With *Windows 10 feature updates*, you select the Windows feature version that you want devices to remain at, like Windows 10 version 1803 or version 1809. You can set a feature level of 1803 or later.
 
+> [!IMPORTANT]
+> This feature requires devices to be enrolled in Intune MDM and Azure AD joined or Azure AD registered.
+
 When a device receives a Windows 10 feature updates policy:
 
 - The device will update to the version of Windows specified in the policy. A device that already runs a later version of Windows remains at its current version. By freezing the version, the devices feature set remains stable for the duration of the policy.
