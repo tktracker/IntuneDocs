@@ -226,7 +226,7 @@ These settings are added to a device configuration profile in Intune, and then a
   This feature applies to:  
   - iOS 11.0 and newer
   
-<sup>1</sup>When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, the screen turns off automatically after five minutes, and the device is locked after an additional five minutes. However, if the user turns off the screen manually, the second setting is immediately applied. In the same example, after the user turns off the screen, the device locks five minutes later.
+<sup>1</sup> When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, the screen turns off automatically after five minutes, and the device is locked after an additional five minutes. However, if the user turns off the screen manually, the second setting is immediately applied. In the same example, after the user turns off the screen, the device locks five minutes later.
 
 ## Locked Screen Experience
 
@@ -639,7 +639,7 @@ iOS supervised mode can only be enabled during initial device setup through Appl
 
 - App Lock (Single App Mode) 
 - Global HTTP Proxy 
-- Activation Lock Bypass 
+- Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
 - Set background and lock screen 
