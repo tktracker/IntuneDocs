@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 01/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -366,6 +366,7 @@ Set the app availability based on a date and time for a required app using the f
     - **Select when to display the restart countdown dialog box before the restart occurs (minutes)**: The default value is 15 minutes.
     - **Allow user to snooze the restart notification**: You can choose **Yes** or **No**.
         - **Select the snooze duration (minutes)**: The default value is 240 minutes (4 hours). The snooze value cannot be more than reboot grace period.
+    - End user reboot notification dialogs align to Company Portal branding configured by admin in Intune console.
 13. Click **OK** > **OK** > **OK** > **Save** to add the assignment.
 
 ## Toast notifications for Win32 apps 
