@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/14/2020
+ms.date: 01/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -76,7 +76,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 ## Windows 10 update rings
 
-Create update rings that specify how and when Windows as a Service updates your Windows 10 devices with Feature and Quality updates. With Windows 10, new Feature Updates and Quality Updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows 10 devices are up-to-date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
+Create update rings that specify how and when Windows as a Service updates your Windows 10 devices with Feature and Quality updates. With Windows 10, new Feature Updates and Quality Updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows 10 devices are up to date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
 
 Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
 
@@ -97,7 +97,7 @@ Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You
 
 6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
 
-7. Under**Review + create**, review the settings and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
+7. Under**Review + create**, review the settings, and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
 
 ### Manage your Windows 10 Update rings
 
@@ -216,9 +216,7 @@ When a device receives a Windows 10 feature updates policy:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
-- Windows 10 feature update policies cannot be applied during the out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day). In addition, devices that were provisioned with AutoPilot will not receive the policy.
-
-  This limitation is being examined to see if it can be supported in the future.
+- Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
 
 > [!IMPORTANT]
 > To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
