@@ -68,27 +68,12 @@ We'll update the Company Portal app on Windows devices to display toast notifica
 The Company Portal app will show additional app installation status messages to end users. The following conditions will apply to new Win32 dependency features:
 - App failed to install. Dependencies defined by the admin were not met.
 
-### Retarget web clips to Microsoft Edge on iOS devices<!-- 5455276 idready -->
+### Retarget web clips to Microsoft Edge on iOS devices<!-- 5455276 -->
 Web clips, which act as pinned web apps on iOS devices, will need to be updated. Newly deployed web clips will open in Microsoft Edge instead of the Intune Managed Browser if required to open in a protected browser. You must retarget pre-existing web clips to ensure they open in Microsoft Edge instead of the Managed Browser. 
 
-### User experience change when adding apps to Intune<!-- 4705829 idready -->
-You will see a new user experience when adding apps via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md).
-
-#### Require Win32 apps to restart <!-- 3136567-->
-You can require that a Win32 app must restart after a successful install. Also, you can choose the amount of time (the grace period) before the restart must occur.
 
 <!-- ***********************************************-->
 ## Device configuration
-
-### Add automatic proxy settings to Wi-Fi profiles for Android Enterprise work profiles<!-- 4490822 idready -->
-On Android Enterprise Work Profile devices, you can create Wi-Fi profiles. When you choose the Wi-Fi Enterprise type, you can also enter the Extensible Authentication Protocol (EAP) type used on your Wi-Fi network.
-
-In a future update, when you choose the Enterprise type, you'll be able to enter automatic proxy settings, including a proxy server URL, such as `proxy.contoso.com`.
-
-To see the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings for devices running Android Enterprise and Android kiosk in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
-
-Applies to:
-- Android Enterprise work profile
 
 ### Wired network device configuration profiles for macOS devices<!-- 3508686  -->
 A new macOS device configuration profile will be available that configures wired networks (**Device configuration** > **Profiles** > **Create profile** > **macOS** for platform > **Wired Network** for profile type). Use this feature to create 802.1x profiles to manage wired networks, and deploy these wired networks to your macOS devices.
@@ -123,10 +108,7 @@ This feature applies to:
 - Android Enterprise 
 
 <!-- ***********************************************-->
-## Device enrollment
-
-### Block Android enrollments by device manufacturer<!--5197392 idready-->
-You'll be able to block devices from enrolling based on the manufacturer of the device. This applies to Android device administrator and Android Enterprise work profile devices. To see enrollment restrictions, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431)> **Devices** > **Enrollment restrictions**.
+<!--## Device enrollment-->
 
 
 
@@ -154,9 +136,6 @@ The following information will be added to the **Overview** page for devices:
 
 <!-- ***********************************************-->
 ## Role-based access control
-
-### New Intune built-in role Endpoint security manager<!--4253397 idready-->
-A new Intune built-in role will be available: the Endpoint security manager. This new role gives admins full access to the Endpoint Manager node in Intune and ready-only access to other areas. The role is an expansion of the “Security Administrator” role from Azure AD. If you currently just have Global Admins as roles, then there’s no changes needed. If you use roles, and you’d like the granularity that the Endpoint Security Manager provides, then assign that role when it is available. For more information about built-in roles, see [Role-based access control](role-based-access-control.md).
 
 ### Intune Roles user interface changes coming<!--5801612 idready-->
 The user interface for [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Roles** will be changing to a more user-friendly and intuitive design. This experience provides the same settings and details that you use now, however the new experience employs a wizard-like process.
