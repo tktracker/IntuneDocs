@@ -40,6 +40,10 @@ Use the information in this article to help you add an iOS line-of-business (LOB
 >
 >iOS LOB apps have a maximum size limit of 4 GB per app.
 
+
+>[!NOTE]
+>Bundle Identifiers (eg. com.contoso.app) are meant to be unique identifiers of an app. To install, for instance, a beta version of an LOB app next to the production version for testing purposes, the beta version will need a different unique identifier (eg. com.contoso.app-beta) - otherwise, the beta version will overlap with the production and be treated as an upgrade instead. Renaming the ipa file will have no effect on this behavior.
+
 ## Step 1: Specify the software setup file
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
