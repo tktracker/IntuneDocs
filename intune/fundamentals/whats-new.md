@@ -95,7 +95,7 @@ Applies to:
 You can block devices from enrolling based on the manufacturer of the device. This applies to Android device administrator and Android Enterprise work profile devices. To see enrollment restrictions, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions**.
 
 #### Improvements to the iOS/iPadOS Create enrollment type profile UI<!-- 6055005 -->
-For iOS/iPadOS User Enrollment, the **Create enrollment type profile** **Settings** page has been streamlined to improve the **Enrollment type** choice process while keeping the same functionality. To see the new UI, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **iOS** > **iOS enrollment** > **Enrollment types** > **Create profile** > **Settings** page. For more information, see [Create a User Enrollment profile in Intune](../intune/enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune).
+For iOS/iPadOS User Enrollment, the **Create enrollment type profile** **Settings** page has been streamlined to improve the **Enrollment type** choice process while keeping the same functionality. To see the new UI, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **iOS** > **iOS enrollment** > **Enrollment types** > **Create profile** > **Settings** page. For more information, see [Create a User Enrollment profile in Intune](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -111,7 +111,7 @@ The following information is now on the **Overview** page for devices:
 The remote action **Bypass Activation Lock** has been renamed to **Disable Activation Lock**. For more information, see [Disable iOS Activation Lock with Intune](../remote-actions/device-activation-lock-bypass.md).
 
 #### Windows 10 feature update deployment support for Autopilot devices<!-- 5948137   -->
-Intune now supports using [Windows 10 feature update deployments](../intune/protect/windows-update-for-business-configure.md#windows-10-feature-updates) with devices that you provision with Autopilot.  
+Intune now supports using [Windows 10 feature update deployments](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) with devices that you provision with Autopilot.  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
