@@ -55,7 +55,7 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 11. In the dropdown box, select the **Configuration settings format**. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**<br><br>
-    For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-xml-data). 
+    For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data). 
 12. Click **Next** to display the **Assignments** page.
 13. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.
 
