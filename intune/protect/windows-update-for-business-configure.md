@@ -210,6 +210,15 @@ When a device receives a Windows 10 feature updates policy:
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won’t install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
+### Prerequisites for Windows 10 feature updates
+
+The following prerequisites must be met to use Windows 10 feature updates in Intune.
+
+- Devices must be enrolled in Intune MDM and Azure AD joined or Azure AD registered.
+- To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
+  
+  Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it’s off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
+
 ### Limitations for Windows 10 feature updates
 
 - When you deploy a *Windows 10 feature update* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
@@ -217,11 +226,6 @@ When a device receives a Windows 10 feature updates policy:
   - Feature updates for the update ring must be *running*. They must not be paused.
 
 - Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
-
-> [!IMPORTANT]
-> To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
->
-> Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it’s off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
 
 ### Create and assign Windows 10 feature updates
 

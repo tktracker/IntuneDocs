@@ -66,10 +66,10 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 #### User experience change when adding apps to Intune<!-- 4705829   -->
 You'll see a new user experience when adding apps to via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md).
 
-#### Require Win32 apps to restart <!-- 3136567   -->
+#### Require Win32 apps to restart <!-- 5622282   -->
 You can require that a Win32 app must restart after a successful install. Also, you can choose the amount of time (the grace period) before the restart must occur.
 
-#### User experience change when configuring apps in Intune<!-- 4705829   -->
+#### User experience change when configuring apps in Intune<!-- 4207990   -->
 You'll see a new user experience when creating app configuration policies in Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding a policy to Intune. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add**. For more information, see [App configuration policies for Microsoft Intune](~/apps/app-configuration-policies-overview.md). 
 
 #### Microsoft Edge version 77 and later on Windows 10 devices<!-- 5843584  -->
