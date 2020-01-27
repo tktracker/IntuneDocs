@@ -63,8 +63,8 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-#### Retirement of Intune Managed Browser<!--5728447 idmiss -->
-The Intune Managed Browser will be retired. Use Microsoft Edge for your protected Intune browser experience. For more information, see the entry '[Take Action: Use Microsoft Edge for your Protected Intune Browser Experience](~/fundamentals/whats-new.md#take-action-use-microsoft-edge-for-your-protected-intune-browser-experience)' in the [Notices](intune/fundamentals/whats-new.md#notices) section below.
+#### Retirement of Intune Managed Browser<!--5728447 -->
+The Intune Managed Browser will be retired. Use Microsoft Edge for your protected Intune browser experience. For more information, see the entry '[Take Action: Use Microsoft Edge for your Protected Intune Browser Experience](~/fundamentals/whats-new.md#take-action-use-microsoft-edge-for-your-protected-intune-browser-experience)' in the [Notices](~/fundamentals/whats-new.md#notices) section below.
 
 <!-- ########################## -->
 ## Week of January 20, 2020 (2001 Service release)
