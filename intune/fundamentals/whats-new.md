@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 01/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,9 @@ You'll see a new user experience when creating app configuration policies in Int
 #### Microsoft Edge version 77 and later on Windows 10 devices<!-- 5843584  -->
 Intune now supports uninstalling Microsoft Edge version 77 and later on Windows 10 devices. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](~/apps/apps-windows-edge.md).
 
+#### Intune support for additional Microsoft Edge for Windows 10 deployment channel<!-- 5861774 -->
+Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge (version 77 and later) for Windows 10 app. The **Stable** channel is the recommended channel for deploying Microsoft Edge for Windows 10 broadly in Enterprise environments. This channel updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. For more information, see [Microsoft Edge for Windows 10 - Configure app settings](~/apps/apps-windows-edge.md#configure-app-settings).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
@@ -127,7 +130,6 @@ A new report details each device deployed through Windows Autopilot. For more in
 
 #### New Intune built-in role Endpoint security manager<!--4253397   -->
 A new Intune built-in role is available: the Endpoint security manager. This new role gives admins full access to the Endpoint Manager node in Intune and ready-only access to other areas. The role is an expansion of the “Security Administrator” role from Azure AD. If you currently just have Global Admins as roles, then there’s no changes needed. If you use roles, and you’d like the granularity that the Endpoint Security Manager provides, then assign that role when it is available. For more information about built-in roles, see [Role-based access control](role-based-access-control.md).
-
 
 <!-- ########################## -->
 ## Week of January 6, 2020
