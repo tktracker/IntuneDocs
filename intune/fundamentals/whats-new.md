@@ -119,8 +119,8 @@ For iOS/iPadOS User Enrollment, the **Create enrollment type profile** **Setting
 The following information is now on the **Overview** page for devices:
 - Memory Capacity (amount of physical memory on the device)
 - Storage Capacity (amount of physical storage on the device) 
-- CPU Processor Type and Speed
-- RAM and processor data
+- CPU architecture
+
 
 #### iOS Bypass Activation Lock remote action renamed to Disable Activation Lock <!--5904591  -->
 The remote action **Bypass Activation Lock** has been renamed to **Disable Activation Lock**. For more information, see [Disable iOS Activation Lock with Intune](../remote-actions/device-activation-lock-bypass.md).
