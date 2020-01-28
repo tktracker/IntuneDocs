@@ -81,9 +81,6 @@ You can require that a Win32 app must restart after a successful install. Also, 
 #### User experience change when configuring apps in Intune<!-- 4207990   -->
 You'll see a new user experience when creating app configuration policies in Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding a policy to Intune. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add**. For more information, see [App configuration policies for Microsoft Intune](~/apps/app-configuration-policies-overview.md). 
 
-#### Microsoft Edge version 77 and later on Windows 10 devices<!-- 5843584  -->
-Intune now supports uninstalling Microsoft Edge version 77 and later on Windows 10 devices. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](~/apps/apps-windows-edge.md).
-
 #### Intune support for additional Microsoft Edge for Windows 10 deployment channel<!-- 5861774 -->
 Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge (version 77 and later) for Windows 10 app. The **Stable** channel is the recommended channel for deploying Microsoft Edge for Windows 10 broadly in Enterprise environments. This channel updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. For more information, see [Microsoft Edge for Windows 10 - Configure app settings](~/apps/apps-windows-edge.md#configure-app-settings).
 
