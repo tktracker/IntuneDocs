@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -40,6 +40,9 @@ Using a browser protected with Intune policy (Microsoft Edge or Intune Managed B
 - Single sign-on
 - Application configuration settings
 - Azure application proxy integration
+
+> [!IMPORTANT]
+> The Intune Managed Browser will be retired. Use Microsoft Edge for your protected Intune browser experience. 
 
 ## Microsoft Edge support
 
