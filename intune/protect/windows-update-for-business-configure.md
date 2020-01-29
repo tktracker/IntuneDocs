@@ -249,14 +249,12 @@ From this pane, you can:
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
 - Select **End user update status** to view information about the policy.
 
-### Validation and reporting for Windows 10 feature updates
+## Validation and reporting for Windows 10 updates
 
-To monitor Windows Updates on your devices, you can use [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) in your Azure subscription.
+For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](../windows-update-compliance-reports.md) to monitor update status. This solution uses [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
 
 ## Next steps
 
 [Windows update settings supported by Intune](../windows-update-settings.md)
-
-[Intune compliance reports for updates](../windows-update-compliance-reports.md)
 
 [Troubleshooting Windows 10 update rings](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)
