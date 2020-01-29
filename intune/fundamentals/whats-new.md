@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -125,6 +125,9 @@ The remote action **Bypass Activation Lock** has been renamed to **Disable Activ
 
 #### Windows 10 feature update deployment support for Autopilot devices<!-- 5948137   -->
 Intune now supports using [Windows 10 feature update deployments](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) with devices that you provision with Autopilot.  
+
+Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
