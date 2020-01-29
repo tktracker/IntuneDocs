@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -55,6 +55,15 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Monitor and troubleshoot
 ### Role-based access control
 -->  
+
+<!-- ########################## -->
+## Week of January 27, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Intune support for additional Microsoft Edge version 77 deployment channel for macOS<!-- 5983950  -->
+Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge app for macOS. The **Stable** channel is the recommended channel for deploying Microsoft Edge broadly in Enterprise environments. It updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. The public preview offers stable and dev channels for Microsoft Edge version 77 and later for macOS. Automatic updates of the browser is On by default. For more information, see [Add Microsoft Edge for macOS devices using Microsoft Intune](~/apps/apps-edge-macos.md).
 
 <!-- ########################## -->
 ## Week of January 6, 2020
