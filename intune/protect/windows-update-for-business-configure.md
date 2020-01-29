@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -239,7 +239,7 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 
 5. Under **Review + create**, review the settings and select **Create** when ready to save the Windows 10 feature updates policy.  
 
-### Manage Windows 10 Feature updates
+### Manage Windows 10 feature updates
 
 In the admin center, go to **Devices** > **Windows** > **Windows 10 Feature updates** and select the policy that you want to manage. The policy opens to its **Overview** pane.
 
@@ -248,6 +248,10 @@ From this pane, you can:
 - Select **Delete** to delete the policy from Intune and remove it from devices.
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
 - Select **End user update status** to view information about the policy.
+
+### Validation and reporting for Windows 10 feature updates
+
+To monitor Windows Updates on your devices, you can use [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) in your Azure subscription.
 
 ## Next steps
 
