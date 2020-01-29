@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -97,7 +97,7 @@ Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You
 
 6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
 
-7. Under**Review + create**, review the settings, and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
+7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
 
 ### Manage your Windows 10 Update rings
 
@@ -239,7 +239,7 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 
 5. Under **Review + create**, review the settings and select **Create** when ready to save the Windows 10 feature updates policy.  
 
-### Manage Windows 10 Feature updates
+### Manage Windows 10 feature updates
 
 In the admin center, go to **Devices** > **Windows** > **Windows 10 Feature updates** and select the policy that you want to manage. The policy opens to its **Overview** pane.
 
@@ -249,10 +249,12 @@ From this pane, you can:
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
 - Select **End user update status** to view information about the policy.
 
+## Validation and reporting for Windows 10 updates
+
+For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](../windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
+
 ## Next steps
 
 [Windows update settings supported by Intune](../windows-update-settings.md)
-
-[Intune compliance reports for updates](../windows-update-compliance-reports.md)
 
 [Troubleshooting Windows 10 update rings](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)
