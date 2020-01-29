@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/15/2020
+ms.date: 01/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,14 +43,15 @@ When the CA has issued the certificate, you'll see an entry similar to the follo
 
 ### Android
 
-On the Android device, you'll see a notification similar to the following image, which prompts you to install the certificate:
+For device administrator enrolled devices, you'll see a notification similar to the following image, which prompts you to install the certificate:
 
 ![Android notification](../protect/media/troubleshoot-scep-certificate-delivery/android-notification.png)
 
->[!NOTE]
-> You are not prompted to install certificates on a device tht runs Samsung KNOX.
+For Android Enterprise or Samsung Knox, the certificate installation is automatic, and silent.
 
-When certificates install, you'll see entries similar to the following examples in the devices OMA DM log:
+To view an installed certificate on Android, use a 3rd party certificate viewing app.
+
+You can also review the [devices OMADM log](troubleshoot-scep-certificate-profiles.md#logs-for-android-devices). Look for entries that resemble the following, which are logged when certificates install:
 
 **Root certificate**:
 
@@ -82,7 +83,7 @@ On the iOS or iPadOS device, you can view the certificate under the Device Manag
 
 ![iOS certificate](../protect/media/troubleshoot-scep-certificate-delivery/ios-certificate.png)
 
-You can also find entries that resemble the following in the iOS debug log:
+You can also find entries that resemble the following in the [iOS debug log](troubleshoot-scep-certificate-profiles.md#logs-for-ios-and-ipados-devices):
 
 ```
 Debug 18:30:53.691033 -0500 profiled Performing synchronous URL request: https://<server>-contoso.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACert&message=SCEP%20Authority\  
@@ -96,11 +97,11 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 On the Windows device, verify the certificate was delivered:
 
-1. Run **eventvwr.msc** to open Event Viewer. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin** and look for **Event 39**. This Event should have a general description of: **SCEP: Certificate installed successfully.**
+- Run **eventvwr.msc** to open Event Viewer. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin** and look for **Event 39**. This Event should have a general description of: **SCEP: Certificate installed successfully.**
 
    ![Event 39 in the Windows Application log](../protect/media/troubleshoot-scep-certificate-delivery/device-app-log.png)
 
-2. On the device, run **certmgr.msc** to open the Certificates MMC and verify that the root and SCEP certificates are installed correctly on the device:
+To view the certificate on the device, run **certmgr.msc** to open the Certificates MMC and verify that the root and SCEP certificates are installed correctly on the device in the personal store:
 
    1. Go to **Certificates (local Computer)** > **Trusted Root Certification Authorities** > **Certificates**, and verify that the root certificate from your CA is present. The values for *Issued To* and *Issued By* will be the same.
    2. In the Certificates MMC, go to **Certificates – Current User** > **Personal** > **Certificates**, and verify the requested certificate is present, with *Issued By* equal to the name of the CA.
