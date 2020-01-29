@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,8 +43,11 @@ These settings are added to a device configuration profile in Intune, and then a
 
 These settings use the [ApplicationManagement policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement), which also lists the supported Windows editions.
 
-- **App store** (mobile only): **Not configured** (default) allows end users access to the app store on mobile devices. **Block** prevents using the app store.
-- **Auto-update apps from store**: **Not configured** (default) allows apps installed from the Microsoft Store to be automatically updated. **Block** prevents updates from being automatically installed.
+- **App store** (mobile only): **Block** prevents end users from accessing the app store on mobile devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allows end users access to the app store.
+- **Auto-update apps from store**: **Block** prevents updates from being automatically installed from the Microsoft Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allows apps installed from the Microsoft Store to be automatically updated.
+
+  [ApplicationManagement/AllowAppStoreAutoUpdate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
+
 - **Trusted app installation**: Choose if non-Microsoft Store apps can be installed, also known as sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. For example, an app that is internal to your company only. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **Block**: Prevents sideloading. Non-Microsoft Store apps can't be installed.
@@ -55,16 +58,36 @@ These settings use the [ApplicationManagement policy CSP](https://docs.microsoft
   - **Allow**: Allows developer mode and sideloading apps.
 
   [Enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) has more information on this feature.
+  
+  [ApplicationManagement/AllowAllTrustedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **Shared user app data**: Choose **Allow** to share application data between different users on the same device and with other instances of that app. **Not configured** (default) prevents sharing data with other users and other instances of the same app.
-- **Use private store only**: **Allow** only allows apps to be downloaded from a private store, and not downloaded from the public store, including a retail catalog. **Not configured** (default) allows apps to be downloaded from a private store and a public store.
-- **Store originated app launch**: **Block** disables all apps that were pre-installed on the device, or downloaded from the Microsoft Store. **Not configured** (default) allows these apps to open.
-- **Install app data on system volume**: **Block** stops apps from storing data on the system volume of the device. **Not configured** (default) allows apps to store data on the system disk volume.
-- **Install apps on system drive**: **Block** prevents apps from installing on the system drive on the device. **Not configured** (default) allows apps to install on the system drive.
-- **Game DVR** (desktop only): **Block** disables Windows Game recording and broadcasting. **Not configured** (default) allows recording and broadcasting of games.
+- **Shared user app data**: Choose **Allow** to share application data between different users on the same device and with other instances of that app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent sharing data with other users and other instances of the same app.
+
+  [ApplicationManagement/AllowSharedUserAppData CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
+
+- **Use private store only**: **Allow** only allows apps to be downloaded from a private store, and not downloaded from the public store, including a retail catalog. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allows apps to be downloaded from a private store and a public store.
+
+  [ApplicationManagement/RequirePrivateStoreOnly CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+
+- **Store originated app launch**: **Block** disables all apps that were pre-installed on the device, or downloaded from the Microsoft Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allows these apps to open.
+
+  [ApplicationManagement/DisableStoreOriginatedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
+
+- **Install app data on system volume**: **Block** stops apps from storing data on the system volume of the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow apps to store data on the system disk volume.
+
+  [ApplicationManagement/RestrictAppDataToSystemVolume CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
+
+- **Install apps on system drive**: **Block** prevents apps from installing on the system drive on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow apps to install on the system drive.
+
+  [ApplicationManagement/RestrictAppToSystemVolume CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
+
+- **Game DVR** (desktop only): **Block** disables Windows Game recording and broadcasting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow recording and broadcasting of games.
+
+  [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
+
 - **Apps from store only**: This setting determines the user experience when users install apps from places other than the Microsoft Store. Your options:
 
-  - **Not configured** (default): Allows end users to install apps from places other than the Microsoft Store, including apps defined in other policy settings.  
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow end users to install apps from places other than the Microsoft Store, including apps defined in other policy settings.  
   - **Anywhere**: Turns off app recommendations, and allows users to install apps from any location.  
   - **Store Only**: Forces end users to only install apps from the Microsoft Store.
   - **Recommendations**: When installing an app from the web that’s available in the Microsoft Store, users see a message recommending they download it from the store.  
@@ -72,11 +95,11 @@ These settings use the [ApplicationManagement policy CSP](https://docs.microsoft
 
   [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
-- **User control over installations**: When set to **Not configured** (default), Windows Installer prevent users from changing the installation options typically reserved for system administrators, such as entering the directory to install the files. **Block** allows users to change these installation options, and some of the Windows Installer security features are bypassed.
+- **User control over installations**: **Block** prevents users from changing the installation options typically reserved for system administrators, such as entering the directory to install the files. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, Windows Installer might prevent users from changing these installation options, and some of the Windows Installer security features are bypassed.
 
   [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
-- **Install apps with elevated privileges**: When set to **Not configured** (default), the system applies the current user's permissions when it installs programs that a system administrator doesn't deploy or offer. **Block** directs Windows Installer to use elevated permissions when it installs any program on the system. These privileges are extended to all programs.
+- **Install apps with elevated privileges**: **Block** directs Windows Installer to use elevated permissions when it installs any program on the system. These privileges are extended to all programs. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the system might apply the current user's permissions when it installs programs that a system administrator doesn't deploy or offer. 
 
   [ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
 
@@ -236,7 +259,7 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
 
 - **Locked screen picture URL (desktop only)**: Enter the URL to a picture in JPG, JPEG, or PNG format that's used as the Windows lock screen wallpaper. For example, enter `https://contoso.com/image.png`. This setting locks the image, and can't be changed afterwards.
 
-  [Personalization/LockScreenImageUrl CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+  [Personalization/LockScreenImageUrl CSP](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp)
 
 - **User configurable screen timeout (mobile only)**: **Allow** lets users configure the screen timeout. **Not configured** (default) doesn't give users this option.
 

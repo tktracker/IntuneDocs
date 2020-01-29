@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -55,34 +55,39 @@ Once you have selected the included groups for your application configuration po
 ## Create an app configuration policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**.
-3. Set the following details:
+2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+3. On the **Basics** page, set the following details:
     - **Name** - The name of the profile that appears in the Azure portal.
     - **Description** - The description of the profile that appears in the Azure portal.
     - **Device enrollment type** - This setting is set to **Managed devices**.
-4. Select **iOS** for **Platform**.
-5. Choose **Associated app**. Then, on the **Associated app** pane, choose the managed app to which you want to apply the configuration and select **OK**.
-6. Choose **Configuration settings** to display the **Configuration settings** pane.
-7. Select **Configuration settings format**. Select one of the following methods to add configuration information:
+4. Select **iOS/iPadOS** as the **Platform**.
+5. Click **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
+6. On the **Targeted app** pane, choose the managed app to associate with the configuration policy and click **OK**.
+7. Click **Next** to display the **Settings** page.
+8. In the dropdown box, select the **Configuration settings format**. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter XML data**<br><br>
     For details about using the configuration designer, see [Use configuration designer](#use-configuration-designer). For details about entering XML data, see [Enter XML data](#enter-xml-data). 
-8. Once you have added your configuration information, choose **OK**, and then choose **Add** to add the configuration policy. The overview pane for the configuration policy is displayed.
-9. Select **Assignments** to display the include and exclude options. 
+9. Click **Next** to display the **Assignments** page.
+10. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.
 
     ![Screenshot of Policy assignments Include tab](./media/app-configuration-policies-use-ios/app-config-policy01.png)
-10. Select **All Users** on the **Include** tab.
+
+11. Select **All users** in the dropdown box.
 
     ![Screenshot of Policy assignments - All Users dropdown option](./media/app-configuration-policies-use-ios/app-config-policy02.png)
-11. Select the **Exclude** tab. 
+
 12. Click **Select groups to exclude** to display the related pane.
 
     ![Screenshot of Policy assignments - Select groups to exclude pane](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+
 13. Choose the groups you want to exclude and then click **Select**.
 
     >[!NOTE]
     >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
-14. Click **Save**.
+
+14. Click **Next** to display the **Review + create** page.
+15. Click **Create** to add the app configuration policy to Intune.
 
 ## Use configuration designer
 
