@@ -35,7 +35,7 @@ Use of Simple Certificate Enrollment Protocol (SCEP) certificate profiles can be
 - Helping you to narrow down where a problem exists in that communication flow
 - Identifying the key log files that are referenced in subsequent articles for troubleshooting certificate profiles
 
-The information in this article applies to using SCEP certificate profiles with Android, iOS/iPad, and Windows devices. Similar information for macOS is not available at this time.
+The information in this and the related SCEP certificate troubleshooting articles applies to using SCEP certificate profiles with Android, iOS/iPad, and Windows devices. Similar information for macOS is not available at this time.
 
 To troubleshoot Network Device Enrollment Service (NDES), see the following articles from support.microsoft.com:
 
