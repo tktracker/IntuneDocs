@@ -43,7 +43,7 @@ There are four types of Autopilot deployment:
 ## Prerequisites
 - [Intune subscription](../fundamentals/licenses.md)
 - [Windows automatic enrollment enabled](windows-enroll.md#enable-windows-10-automatic-enrollment)
-- [Azure Active Directory Premium subscription](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Azure Active Directory Premium subscription](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## How to get the CSV for Import in Intune
 
@@ -165,6 +165,11 @@ Alerts will show how many Autopilot program devices don't have Autopilot deploym
 
 To see alerts for unassigned devices, in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.  
 
+## Autopilot deployments report
+You can see details on each device deployed through Windows Autopilot.
+To see the report, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
+The data is available for 30 days after deployment.
+
 ## Assign a user to a specific Autopilot device
 
 You can assign a user to a specific Autopilot device. This assignment pre-fills a user from Azure Active Directory in the [company-branded](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup. It also lets you set a custom greeting name. It doesn't pre-fill or modify Windows sign-in. Only licensed Intune users can be assigned in this manner.
@@ -184,11 +189,6 @@ Prerequisites: Azure Active Directory Company Portal has been configured and Win
     ![Screenshot of friendly name](./media/enrollment-autopilot/friendly-name.png)
 
 4. Choose **Ok**.
-
-## Autopilot deployments report
-You can see details on each device deployed through Windows Autopilot.
-To see the report, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
-The data is available for 30 days after deployment.
 
 
 ## Delete Autopilot devices

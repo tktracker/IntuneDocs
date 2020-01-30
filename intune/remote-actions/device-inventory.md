@@ -89,7 +89,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS, Android|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, iOS, Android|
-|Activation lock bypass code|The code that can be used to bypass the activation lock.|iOS|
+|Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
 |Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, iOS, Android|
 |Intune registered|If **Yes**, the device is registered with Intune|Windows, iOS, Android|
 |Compliance|The device's compliance state.|Windows, iOS, Android|
@@ -98,7 +98,8 @@ Depending on the carrier used by the devices, not all details might be collected
 |Supervised|If **Yes**, administrators have enhanced control over the device.|Windows, iOS, Android|
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS, Android|
 
-\* Not available in Android with Google policy manager,such as Fully-managed and Dedicated devices
+> [!Note]  
+> Phone number is not inventoried on Android Enterprise Dedicated or Fully Managed devices.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.

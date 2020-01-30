@@ -11,6 +11,11 @@
   - name: Create an email device profile
     href: quickstart-email-profile.md
 
+- name: Tutorials
+  items:
+  - name: Create an administrative template
+    href: tutorial-walkthrough-administrative-templates.md
+
 - name: How-to guides
   items:
   - name: Create a profile

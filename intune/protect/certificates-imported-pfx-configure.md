@@ -2,10 +2,10 @@
 title: Use imported PFX certificates in Microsoft Intune - Azure | Microsoft Docs
 description: Use imported Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, including the import of certificates, configuring the certificate template, install of the Intune Imported PFX Certificate Connector, and create an Imported PKCS Certificate profile.
 keywords:
-author: ralms
+author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,7 +18,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: lacranda
+ms.reviewer: lacranda; rimarram
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -49,14 +49,16 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
   For more information about all the network endpoints that the connector accesses, see [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
 
-- **Windows Server**:  
+- **Windows Server**:
+
   You use a Windows Server to host the PFX Certificate Connector for Microsoft Intune.  The connector is used to process requests for certificates imported to Intune.
 
   Intune supports install of the *Microsoft Intune Certificate Connector* on the same server as the *PFX Certificate Connector for Microsoft Intune*.
 
   To support the connector, the server must run .NET 4.6 Framework or higher. If .NET 4.6 Framework isn't installed when you start the installation of the connector, the connector installation will install it automatically.
 
-- **Visual Studio 2015 or above** (optional): 
+- **Visual Studio 2015 or above** (optional):
+
   You use Visual Studio to build the helper PowerShell module with cmdlets for importing PFX certificates to Microsoft Intune. To get the helper PowerShell cmdlets, see [PFXImport PowerShell Project in GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 ## How it works
@@ -136,7 +138,7 @@ The PowerShell module provides methods to create a key using Windows cryptograph
    > The provider you use must be selected again when you import PFX Certificates. You can use the **Microsoft Software Key Storage Provider**, although it is supported to use a different provider. The key name is also provided as an example, and you can use a different key name of your choice.
 
    If you plan to import the certificate from your workstation, you can export this key to a file with the following command:
-    `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path to write to>"`
+    `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
 
    The private key must be imported on the server that hosts the PFX Certificate Connector for Microsoft Intune so that imported PFX certificates can be processed successfully.
 
@@ -148,15 +150,14 @@ You can use a hardware security module (HSM) to generate and store the public/pr
 
 The following process uses the PowerShell cmdlets as an example of how to import the PFX certificates. You can pick different options depending on your requirements.
 
-Options include:  
-- Intended Purpose (groups certificates together based on a tag):  
+Options include:
+
+- Intended Purpose (groups certificates together based on a tag):
   - unassigned
   - smimeEncryption
   - smimeSigning
 
-- Padding Scheme:  
-  - pkcs1
-  - oaepSha1
+- Padding Scheme:
   - oaepSha256
   - oaepSha384
   - oaepSha512

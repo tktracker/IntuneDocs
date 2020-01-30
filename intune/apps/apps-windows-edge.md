@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](~/apps/apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run Windows 10.
 
 > [!IMPORTANT]
-> This app type is in **public preview** and offers developer and beta channels for Windows 10. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). Intune will detect any preexisting Microsoft Edge installations. If it is installed in user context, a system installation will overwrite it. If it is installed in system context, installion success is reported. In addition, automatic updates of Microsoft Edge are **On** by default, and Microsoft Edge cannot be uninstalled.
+> This app type is in **public preview** and offers stable, beta, and dev channels for Windows 10. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). Intune will detect any preexisting Microsoft Edge installations. If it is installed in user context, a system installation will overwrite it. If it is installed in system context, installion success is reported. In addition, automatic updates of Microsoft Edge are **On** by default, and Microsoft Edge cannot be uninstalled.
 
 > [!NOTE]
 > Microsoft Edge *version 77 and later* is available for macOS as well.
@@ -42,7 +42,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 ## Prerequisites
 - Windows 10 RS2 and above is required.
-- Any pre-installed versions of Microsoft Edge *version 77 and later* for **developer** and **beta** channels in user context will be overwritten with Edge installed in system context.
+- Any pre-installed versions of Microsoft Edge *version 77 and later* for all channels in user context will be overwritten with Edge installed in system context.
 
 ## Configure the app in Intune
 You can add a Microsoft Edge version 77 and later to Intune using the following steps:
@@ -72,9 +72,10 @@ In this step, you provide information about this app deployment. This informatio
 In this step, configure installation options for the app.
 
 1. In the **Add App** pane, select **App settings**.
-2. In the **App settings** pane, select either **Beta** or **Dev** from the **Channel** list to determine which Edge Channel you will deploy the app from.
-    - **Beta** Channel is the most stable Microsoft Edge preview experience and the best choice for a full pilot within your organization. With major updates every six weeks, each release incorporates the learnings and improvements from the Dev Channel.
-    - **Dev** Channel is ready for enterprise feedback on Windows, Windows Server and macOS. It updates every week and contains the latest improvements and fixes.
+2. In the **App settings** pane, select either **Stable**, **Beta** or **Dev** from the **Channel** list to determine which Edge Channel you will deploy the app from.
+    - **Stable** channel is the recommended channel for deploying broadly in Enterprise environments. It updates every six weeks, each release incorporating improvements from the Beta channel.
+    - **Beta** channel is the most stable Microsoft Edge preview experience and the best choice for a full pilot within your organization. With major updates every six weeks, each release incorporates the learnings and improvements from the Dev channel.
+    - **Dev** channel is ready for enterprise feedback on Windows, Windows Server and macOS. It updates every week and contains the latest improvements and fixes.
 
     > [!NOTE]
     > The Microsoft Edge browser logo is displayed with the app when users browse the company portal.
