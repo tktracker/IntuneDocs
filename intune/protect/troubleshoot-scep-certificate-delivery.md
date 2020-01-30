@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshoot the delivery of certificates provisioned by SCEP to devices in Intune
+# Troubleshoot the delivery of certificates provisioned by SCEP to devices in Microsoft Intune
 
 Use the information in this article to help you investigate delivery of certificates to devices when you use Simple Certificate Enrollment Protocol (SCEP) to provision certificates in Intune. After the Network Device Enrollment Service (NDES) server receives the requested certificate for a device from the certification authority (CA), it passes that certificate back to the device.
 
