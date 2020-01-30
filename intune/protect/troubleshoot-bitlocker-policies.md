@@ -7,7 +7,7 @@ description: Describes how to enable BitLocker encryption on a device by using I
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 01/29/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -192,7 +192,7 @@ You should now have a good idea how to confirm that the BitLocker policy success
 
 - Because BitLocker relies on TPM, you could conclude that BitLocker doesn't fail because of a problem with Intune or the policy, but rather because the device itself doesn't have a TPM chip or TPM is disabled in the BIOS.
 
-  As an additional tip, you can confirm the same in the Windows Event Viewer under **Applications and Services log** > **Windows** > **BitLocker API**. In the **BitLocker API** event log, you'll find an Event ID 853 that means TPM isn't available:
+  As an additional tip, you can confirm the same in the Windows Event Viewer under **Applications and Services log** > **Microsoft** > **Windows** > **BitLocker API**. In the **BitLocker API** event log, you'll find an Event ID 853 that means TPM isn't available:
 
   ![Event ID 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 
