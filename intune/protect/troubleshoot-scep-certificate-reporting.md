@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshoot NDES reporting of certificate deployments in Intune
+# Troubleshoot NDES reporting of certificate deployments in Microsoft Intune
 
 Use the following information to confirm that NDES and the Microsoft Intune Certificate Connector successfully report to Intune that the certificate was delivered to a device. Reporting to Intune is the last phase for using SCEP certificate profiles to provision Windows devices with a certificate.
 
