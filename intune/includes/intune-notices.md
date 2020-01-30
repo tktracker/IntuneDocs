@@ -72,20 +72,6 @@ Support for web clips on iOS and Android is coming. When this support is release
 #### Additional information
 Please visit our docs on [using Microsoft Edge with app protection policies](../apps/manage-microsoft-edge.md) for more info, or view our [support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
-### Plan for Change: Updated experience when enrolling Android Enterprise dedicated devices in Intune<!--5198878-->
-With the November or 1911 release to Intune, we’re adding support for SCEP device certificate deployment to Android Enterprise dedicated devices to enable certificate-based access to Wi-Fi profiles. This change also involves some minor changes the flow when enrolling Android Enterprise dedicated devices.
-
-#### How does this affect me?
-If you manage Android Enterprise dedicated devices in your environment, you will start to see some changes roll out in November.
-
-- For new Android Enterprise dedicated device enrollments: End users will see a different set of steps on devices during enrollment. Enrollment will still start the way it does today (with QR, NFC, Zero-touch, or device identifier) but after the November service release, there will be a mandatory app install step.
-- For existing Android devices enrolled as dedicated devices: Intune will start to automatically install the Microsoft Intune app on devices starting in early November. You don't need to take any action. The app will automatically download and install on devices. 
-
-#### What can I do to prepare for this change?
-You should plan to update your end user guidance and let your helpdesk know of this change. Click Additional Information for more details and screenshots. We’ll update our What’s New page when this change starts to roll out.
-
-#### Additional information
-[https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
 ### End of support for legacy PC management
 
