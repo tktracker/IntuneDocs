@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -93,20 +93,19 @@ Depending on the app type, you can install the app on a Windows 10 device in one
 > [!NOTE]
 > For Win32 apps built as Dual Mode apps, the admin must choose if the app will function as a User Mode or Machine Mode app for all assignments associated with that instance. The deployment context can't be changed per assignment.  
 
-Apps can only be installed in the Device Context when supported by the device and the Intune app type. The following app types support device-context installation. You can assign these apps to a device group:
+Apps can only be installed in the device context when supported by the device and the Intune app type. You can install the following app types in the device context and assign these apps to a device group:
 
 - Win32 Apps
 - Microsoft Store for Business (Offline licensed apps only)
-- LOB Apps (MSI, APPX and MSIX)
+- LOB apps (MSI, APPX and MSIX)
 - Office 365 ProPlus
 
-Windows LOB Apps (specifically APPX and MSIX) and Microsoft Store for business (Offline apps) that you’ve selected to install in device context need to be assigned to a device group. 
-If one of these apps is targeted to a user, the installation fails. The following status and error appears in the admin console:
+Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you’ve selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
   - Status: Failed.
   - Error: A user can’t be targeted with a device context install.
 
-> [!Note]The above restriction on Windows LOB apps and MSFB apps having to be device-group targeted does not exist when used in combination with an AutoPilot WhiteGlove provisioning scenario. During device white-glove technician flow, All apps that are assigned to the device group, as well as those apps targeted at the user group will be installed as per the white glove documentation. See [Windows Autopilot White Golve Deployment] (white-glove.md).
-
+> [!IMPORTANT]
+> When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > After you save an app assignment with a specific deployment, you can't change the context for that assignment, except for modern apps. For modern apps, you can change the context from user context to device context. 
