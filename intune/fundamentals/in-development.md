@@ -113,15 +113,9 @@ This feature applies to:
 
 
 <!-- ***********************************************-->
-## Device management
+<!--## Device management-->
 
 
-### New information in device details<!-- 4471759 5604099  -->
-The following information will be added to the **Overview** page for devices:
-- Memory Capacity (amount of physical memory on the device)
-- Storage Capacity (amount of physical storage on the device) 
-- CPU Processor Type and Speed
-- RAM and processor data
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
