@@ -16,9 +16,9 @@ In the January Intune service update, we plan to release a new security role in 
  
 #### How does this affect me?
 Today there are three roles available in Azure AD for your security professionals:
-- Security Reader role in Azure AD which gives read only access to Intune.
-- Security Operator role in Azure AD which gives read only access to Intune.
-- Security Administrator in Azure AD. When Intune ships the January update, along with read only permissions to Intune, the new permissions provided by the Endpoint Security Manager role are as follows:
+- Security Reader role in Azure AD, which gives read-only access to Intune.
+- Security Operator role in Azure AD, which gives read-only access to Intune.
+- Security Administrator in Azure AD. When Intune ships the January update, along with read-only permissions to Intune, the new permissions provided by the Endpoint Security Manager role are as follows:
     - Read, Create, Update, Delete, and Assign Device Compliance Policies
     - Read, Delete, and Update Managed devices
     - Read, Create, Update, Delete, and Assign Security baselines
@@ -46,7 +46,7 @@ https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
 Microsoft mainstream support for Windows Phone 8.1 ended in July 2017, and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Microsoft Intune will now end support on February 20, 2020 for Windows Phone 8.1.
 
 #### How does this affect me?
-After February 20, 2020 these devices  won't receive any security updates, and you  won't be able to enroll any new devices. Existing Windows Phone 8.1 devices will stay enrolled (policy, apps, reporting) but note any troubleshooting of an existing enrollment  won't be supported after this date, as many components, such as third party certificates, have already ended support for the platform. Intune will stop compatibility testing with Intune and Windows Phone 8.1.
+After February 20, 2020 these devices  won't receive any security updates, and you  won't be able to enroll any new devices. Existing Windows Phone 8.1 devices will stay enrolled (policy, apps, reporting) but note any troubleshooting of an existing enrollment  won't be supported after this date, as many components, such as third-party certificates, have already ended support for the platform. Intune will stop compatibility testing with Intune and Windows Phone 8.1.
 
 #### What do I need to do to prepare for this change?
 You can check your Intune reporting to see what devices or users may be affected. Go to Devices > All devices and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows Phone 8.1. Request that your end users upgrade their devices to a supported OS version.
@@ -67,25 +67,11 @@ To ensure a smooth transition from the Intune Managed Browser to Microsoft Edge,
 2. Ensure all MAM-protected apps in your environment have the app protection policy setting "Restrict web content transfer with other apps" set to "Policy managed browsers". 
 3. Target all the MAM-protected with the managed app configuration setting "com.microsoft.intune.useEdge" set to true. Starting next month with the release of 1911, you will be able to accomplish steps 2 and 3 simply by configuring the setting "Restrict web content transfer with other apps" to have "Microsoft Edge" selected in the Data Protection section of your app protection policies. 
 
-Support for web clips on iOS and Android is coming. When this support is released, you will need to retarget pre-existing web clips to ensure they open in in Microsoft Edge instead of the Managed Browser. 
+Support for web clips on iOS and Android is coming. When this support is released, you will need to retarget pre-existing web clips to ensure they open in Microsoft Edge instead of the Managed Browser. 
 
 #### Additional information
-Please visit our docs on [using Microsoft Edge with app protection policies](../apps/manage-microsoft-edge.md) for more info, or view our [support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
+Visit our docs on [using Microsoft Edge with app protection policies](../apps/manage-microsoft-edge.md) for more info, or view our [support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
-### Plan for Change: Updated experience when enrolling Android Enterprise dedicated devices in Intune<!--5198878-->
-With the November or 1911 release to Intune, we’re adding support for SCEP device certificate deployment to Android Enterprise dedicated devices to enable certificate-based access to Wi-Fi profiles. This change also involves some minor changes the flow when enrolling Android Enterprise dedicated devices.
-
-#### How does this affect me?
-If you manage Android Enterprise dedicated devices in your environment, you will start to see some changes roll out in November.
-
-- For new Android Enterprise dedicated device enrollments: End users will see a different set of steps on devices during enrollment. Enrollment will still start the way it does today (with QR, NFC, Zero-touch, or device identifier) but after the November service release, there will be a mandatory app install step.
-- For existing Android devices enrolled as dedicated devices: Intune will start to automatically install the Microsoft Intune app on devices starting in early November. You don't need to take any action. The app will automatically download and install on devices. 
-
-#### What can I do to prepare for this change?
-You should plan to update your end user guidance and let your helpdesk know of this change. Click Additional Information for more details and screenshots. We’ll update our What’s New page when this change starts to roll out.
-
-#### Additional information
-[https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
 ### End of support for legacy PC management
 
@@ -101,7 +87,7 @@ Because of these changes by Google, Intune users will be impacted in the followi
 - Intune will only be able to provide full support for device administrator-managed Android devices running Android 10 and later through Q2 CY2020. Device administrator-managed devices that are running Android 10 or later after this time won't be able to be entirely managed. In particular, impacted devices won’t receive new password requirements.
     - Samsung Knox devices won't be impacted in this timeframe because extended support is provided through Intune’s integration with the Knox platform. This gives you more time to plan the transition off device admin management.    
 - Device administrator-managed Android devices that remain on Android versions below Android 10 won't be impacted and can continue to be entirely managed with device administrator.    
-- For all devices running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device updates to Android 10 or later:  
+- For all devices running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device is updated to Android 10 or later:  
     - Network access control for VPN will no longer work.   
     - Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned.  
     - The IMEI and serial number will no longer be visible to IT admins in Intune. 
@@ -151,8 +137,8 @@ We encourage your organization to immediately consider this action plan:
 - Plan and upgrade the Windows 7 fleet to Windows 10 before January 14, 2020.
 - Explore [Windows 10 deployment support](https://docs.microsoft.com/windows/deployment/) to learn more about how to upgrade your existing fleet of Windows 7 PCs to Windows 10.
 - Review the [Desktop App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) offer through FastTrack, which will assist with the Microsoft application compatibility promise.
-- Transition existing legacy Intune software client managed devices to the Microsoft-recommended solution to manage Windows 10 using MDM management. Enroll all new Windows 10 PCs using MDM management for Intune in the Azure portal.
+- Transition existing legacy Intune software client-managed devices to the Microsoft-recommended solution to manage Windows 10 using MDM management. Enroll all new Windows 10 PCs using MDM management for Intune in the Azure portal.
 
-See the [blog post here](https://aka.ms/Windows7_Intune) for more information.
+For more information, see the [blog post here](https://aka.ms/Windows7_Intune).
 
 
