@@ -384,21 +384,25 @@ The Microsoft Intune Certificate Connector installs on the server that runs your
 
 > [!NOTE]
 > The following changes must be made for GCC High tenants prior to launching the Intune Certificate Connector.
-> Make the following edits to the two config files listed below which will update the service endpoints for the GCC High environment. Notice that the update is changing the URIs from .com to .us suffixes. There will be a total of three URI updates, two updates within the NDESConnectorUI.exe.config configuration file, and one update in the NDESConnector.exe.config file. 
-> File Name: <install_Path>\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
-> Example: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
+> 
+> Make edits to the two config files listed below which will update the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of three URI updates, two updates within the NDESConnectorUI.exe.config configuration file, and one update in the NDESConnector.exe.config file.
+> 
+> - File Name: <install_Path>\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
+> 
+>   Example: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
 >    <appSettings>
 >        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon"/>
 >        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses"/>
 >        <add key="AccountPortalURL" value="https://manage.microsoft.us"/>
 >    </appSettings>
 >
-> File Name: <install_Path>\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
-> Example: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
+> - File Name: <install_Path>\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
+>
+>   Example: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
 >    <appSettings>
 >        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
 >
-> If this step is not completed, then GCC High tenants will get the error: "Access Denied" "You are not authorized to view this page"
+> If these edits are not completed, GCC High tenants will get the error: "Access Denied" "You are not authorized to view this page"
 
 6. After the wizard completes, but before closing the wizard, **Launch the Certificate Connector UI**.
 
