@@ -11,22 +11,6 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Updated Feature: New RBAC role coming to Intune<!--4253397-->
-In the January Intune service update, we plan to release a new security role in Intune. You will see this role listed as “Endpoint Security Manager” in Intune and the role is an expansion of the “Security Administrator” role from Azure AD.
- 
-#### How does this affect me?
-Today there are three roles available in Azure AD for your security professionals:
-- Security Reader role in Azure AD, which gives read-only access to Intune.
-- Security Operator role in Azure AD, which gives read-only access to Intune.
-- Security Administrator in Azure AD. When Intune ships the January update, along with read-only permissions to Intune, the new permissions provided by the Endpoint Security Manager role are as follows:
-    - Read, Create, Update, Delete, and Assign Device Compliance Policies
-    - Read, Delete, and Update Managed devices
-    - Read, Create, Update, Delete, and Assign Security baselines
-    - Read and Update Security tasks
- 
-### What do I need to do to prepare for this change?
-Review your Intune RBAC roles today. If you currently just have Global Admins as roles, then there’s no changes needed. If you use roles, and you’d like the granularity that the Endpoint Security Manager provides, then assign that role when it is available. Check the Intune [What’s New](../fundamentals/whats-new.md) page for up-to-date Intune release information. 
-
 ### Updated support statement for 'Adobe Acrobat Reader for Intune' mobile app<!--5746776-->
 We shared in MC188653 at the end of August, that the Adobe Acrobat Reader for Intune mobile app was reaching end-of-life on December 1, 2019 and that Adobe was planning on supporting Intune’s app protection policies within their main Acrobat Reader app. Since then, we received customer feedback that we needed to provide more time to continue allowing IT admins to target, and end users to begin using Adobe Acrobat Reader for Intune. Given the high usage of Adobe Acrobat Reader for Intune on end user devices and its importance in enterprise scenarios, we want to make sure any experience meets your organization's app protection needs. 
 
