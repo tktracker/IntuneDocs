@@ -289,3 +289,5 @@ Assign SCEP certificate profiles the same way you [deploy device profiles](../co
 ## Next steps
 
 [Assign profiles](../configuration/device-profile-assign.md)
+
+[Troubleshoot deployment of SCEP certificate profiles](../protect/troubleshoot-scep-certificate-profiles.md)
