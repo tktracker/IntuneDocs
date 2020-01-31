@@ -390,17 +390,21 @@ The Microsoft Intune Certificate Connector installs on the server that runs your
 > - File Name: <install_Path>\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
 > 
 >   Example: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
+>   ```
 >    <appSettings>
 >        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon"/>
 >        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses"/>
 >        <add key="AccountPortalURL" value="https://manage.microsoft.us"/>
 >    </appSettings>
->
+>   ```
+> 
 > - File Name: <install_Path>\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
 >
 >   Example: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
+>    ```
 >    <appSettings>
 >        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
+>    ```
 >
 > If these edits are not completed, GCC High tenants will get the error: "Access Denied" "You are not authorized to view this page"
 
