@@ -77,7 +77,7 @@ Default restrictions are automatically provided for both device type and device 
     > [!IMPORTANT]
     > Android Enterprise (work profile) and Android device administrator platforms have the following behavior:
     > - If both platforms are allowed for the same group, then users will be enrolled with a work profile if their device supports it, otherwise they will enroll as DA. 
-    > - If both platforms are allowed for the group and refined for specific and non-overlapping versions, then users will recieve the enrollment flow defined for their OS version. 
+    > - If both platforms are allowed for the group and refined for specific and non-overlapping versions, then users will receive the enrollment flow defined for their OS version. 
     > - If both platforms are allowed, but blocked for the same versions, then users on devices with the blocked versions will be taken down the Android device administrator enrollment flow and then get blocked from enrollment and prompted to sign out. 
     >
     > Worth noting that neither work profile or device administrator enrollment will work unless the appropriate prequisites have been completed in Android Enrollment. 
