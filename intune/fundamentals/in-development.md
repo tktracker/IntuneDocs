@@ -83,7 +83,7 @@ For more information about enrollment and the Company Portal app for Mac, see En
 ### Screen removed from Company Portal, Android work profile enrollment<!--6103987 -->
 The **What's next?** screen will be removed from the Android work profile enrollment flow in Company Portal, to streamline the user experience. Go to [Enroll with Android work profile]( https://docs.microsoft.com/intune-user-help/enroll-device-android-work-profile) to see the current Android work profile enrollment flow.
 
-#### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424518 idready -->
+### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424518 idready -->
 Intune will provide an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac). 
 
 <!-- ***********************************************-->
