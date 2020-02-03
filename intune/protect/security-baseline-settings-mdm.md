@@ -112,7 +112,7 @@ For more information, see [Policy CSP - Autoplay](https://docs.microsoft.com/win
   **Default**: Enabled  
 
 ## BitLocker    
-For more information, see [Policy CSP - Bitlocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
+For more information, see [Policy CSP - BitLocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
 ) in the Windows documentation.  
 
 - **BitLocker removable drive policy**  
