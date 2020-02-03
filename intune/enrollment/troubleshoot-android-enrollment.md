@@ -66,11 +66,11 @@ For work profile enrolled devices, you can only reset the work profile passcode 
 
 ## Device management
 
-### Why can't I find file path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files on my work profile enrolled device to manually collect Company Portal Logs?
+### File path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files missing on work profile enrolled devices
 
   **Answer**: This is expected behavior. This path is only created for the Device Admin (Legacy Android Enrollment) scenario.
 
-  To collect logs, follow these steps:
+  To collect Company Portal logs, follow these steps:
 
   1. In the Company Portal app with the badge, tap **Menu** > **Help** > **Email Support**, and then tap **Send Email & Upload logs**. 
   2. When you are prompted **Send help request with**, select one of the Email apps.
