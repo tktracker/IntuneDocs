@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 01/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,6 +63,24 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
+
+#### New setting to remove specific Windows built-in apps<!-- 6184390 -->
+Using a new Windows 10 device configuration policy setting, you can remove the following Windows built-in apps:
+
+- Mixed Reality Viewer
+- MSN Weather
+- App Installer
+- Microsoft Tips
+- My Office
+- Microsoft Solitaire Collection 
+- Mobile Plans
+- Feedback Hub 
+- Xbox 
+- Groove Music
+- Mail
+- Calendar
+
+In the Microsoft Endpoint Manager admin center, select **Devices** > **Configuration profiles** > **Create profile**. Then, select **Windows 10 and later** as the **Platform**. Select **Device restrictions** as the **Profile type**. Select **App Store** in the **Device restrictions** pane. At the bottom of the pane next to **Remove built-in apps**, select **Remove**. For more information about built-in apps, see [Add built-in apps to Microsoft Intune](~/apps/apps-add-built-in.md).
 
 #### Intune support for additional Microsoft Edge version 77 deployment channel for macOS<!-- 5983950  -->
 Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge app for macOS. The **Stable** channel is the recommended channel for deploying Microsoft Edge broadly in Enterprise environments. It updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. The public preview offers stable and dev channels for Microsoft Edge version 77 and later for macOS. Automatic updates of the browser is On by default. For more information, see [Add Microsoft Edge for macOS devices using Microsoft Intune](~/apps/apps-edge-macos.md).
@@ -127,7 +145,10 @@ The following information is now on the **Overview** page for devices:
 The remote action **Bypass Activation Lock** has been renamed to **Disable Activation Lock**. For more information, see [Disable iOS Activation Lock with Intune](../remote-actions/device-activation-lock-bypass.md).
 
 #### Windows 10 feature update deployment support for Autopilot devices<!-- 5948137   -->
-Intune now supports using [Windows 10 feature update deployments](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) with devices that you provision with Autopilot.  
+Intune now supports targeting Autopilot registered devices using [Windows 10 feature update deployments](../protect/windows-update-for-business-configure.md#windows-10-feature-updates).
+
+Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot

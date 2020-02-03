@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -84,22 +84,28 @@ To categorize Microsoft Store for Business apps:
 Depending on the app type, you can install the app on a Windows 10 device in one of two ways:
 
 - **User Context**: When an app is deployed in user context, the managed app is installed for that user on the device when the user signs in to the device. Note that the app installation doesn't succeed until the user signs in to the device. 
-  - Modern line-of-business apps and Microsoft Store for Business apps (both online and offline) can be deployed in user context. The apps support both the Required and Available intents.
+  - Modern LOB apps and Microsoft Store for Business apps (both online and offline) can be deployed in user context. The apps support both the Required and Available intents.
   - Win32 apps built as User Mode or Dual Mode can be deployed in user context, and support both the Required and Available intents. 
 - **Device Context**: When an app is deployed in device context, the managed app is installed directly to the device by Intune.
-  - Only modern line-of-business apps and offline licensed Microsoft Store for Business apps can be deployed in device context. These apps only support the Required intent.
+  - Only modern LOB apps and offline licensed Microsoft Store for Business apps can be deployed in device context. These apps only support the Required intent.
   - Win32 apps built as Machine Mode or Dual Mode can be deployed in device context, and support only the Required intent.
 
 > [!NOTE]
 > For Win32 apps built as Dual Mode apps, the admin must choose if the app will function as a User Mode or Machine Mode app for all assignments associated with that instance. The deployment context can't be changed per assignment.  
 
-When an app is deployed in device context, the installation only succeeds when targeted to a device that supports device context. In addition, deploying in device context supports the following conditions:
-- If an app is deployed in device context and targeted to a user, the installation fails. The following status and error appears in the admin console:
+Apps can only be installed in the device context when supported by the device and the Intune app type. You can install the following app types in the device context and assign these apps to a device group:
+
+- Win32 apps
+- Offline licensed Microsoft Store for Business apps
+- LOB apps (MSI, APPX and MSIX)
+- Office 365 ProPlus
+
+Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you’ve selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
   - Status: Failed.
   - Error: A user can’t be targeted with a device context install.
-- If an app is deployed in device context, but is targeted to a device that doesn't support device context, the installation fails. The following status and error appears in the admin console:
-  - Status: Failed.
-  - Error: This platform does not support device context installs. 
+
+> [!IMPORTANT]
+> When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > After you save an app assignment with a specific deployment, you can't change the context for that assignment, except for modern apps. For modern apps, you can change the context from user context to device context. 
