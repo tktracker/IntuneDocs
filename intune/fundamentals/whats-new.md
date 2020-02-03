@@ -57,6 +57,14 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Role-based access control
 -->  
 
+<!-- ########################## -->
+## Week of February 03, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Microsoft Edge version 77 and later on Windows 10 devices<!-- 5843584 -->
+Intune now supports uninstalling Microsoft Edge version 77 and later on Windows 10 devices. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](~/apps/apps-windows-edge.md).
 
 <!-- ########################## -->
 ## Week of January 27, 2020
