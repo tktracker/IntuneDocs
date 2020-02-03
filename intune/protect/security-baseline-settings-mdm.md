@@ -7,7 +7,7 @@ description: Review defaults and availalbe settings that are found in the Window
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -1785,41 +1785,44 @@ For more information, see [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/o
     **Default**: Allowed
 
 ## Windows Hello for Business  
-- **Require enhanced anti-spoofing, when available**  
-  If Yes, devices will use enhanced anti-spoofing, when available. If No, anti-spoofing will be blocked. Not configured will honor configurations done on the client.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  **Default**: Yes
-
-- **Configure Windows Hello for Business**   
+- **Block Windows Hello for Business**  
     Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.  
+  - When set to *Disable*, devices provision Windows Hello for Business.
+  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that the current status of Windows Hello for Business on a device remains in place.
 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
+  You can disable Windows Hello for Business when you configure [Windows enrollment](windows-hello.md), or as part of a device configuration profile for [identity protection](identity-protection-configure.md).  
 
-  You cannot disable Windows Hello for Business through this baseline. You can disable Windows Hello for Business when you configure [Windows enrollment](windows-hello.md), or as part of a device configuration profile for [identity protection](identity-protection-configure.md).  
+  - **Default**: Enabled
 
-  **Default**: Yes
+  The following settings are available when this setting is set to *Disabled*.
 
-- **Require lowercase letters in PIN**  
-  If required, user PIN must include at least one lowercase letter.
+  - **Enable to use enhanced anti-spoofing, when available**  
+    If Yes, devices will use enhanced anti-spoofing, when available. If No, anti-spoofing will be blocked. Not configured will honor configurations done on the client.  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  **Default**: Allowed
+    **Default**: Yes
 
-- **Require special characters in PIN**  
-  If required, user PIN must include at least one special character.
+  - **Lowercase letters in PIN**  
+    If *Required*, user PIN must include at least one lowercase letter.
 
-  **Default**: Allowed
+    **Default**: Allowed
 
-- **Minimum PIN length**  
-  Minimum PIN length must be between 4 and 127.
+  - **Special characters in PIN**  
+    If *Required*, user PIN must include at least one special character.
 
-  **Default**: 6
+    **Default**: Allowed
 
-- **Require uppercase letters in PIN**  
-  If required, user PIN must include at least one uppercase letter.
+  - **Minimum PIN length**  
+    Minimum PIN length must be between 4 and 127.
 
-  **Default**: Allowed
+    **Default**: 6
+
+  - **Uppercase letters in PIN**  
+    If *Required*, user PIN must include at least one uppercase letter.
+
+    **Default**: Allowed
+
 
 ## Windows Ink Workspace  
 For more information, see [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) in the Windows documentation.  
@@ -1916,12 +1919,12 @@ The following settings are either:
   - **Firewall enabled**  
 
 *[New]* [**Windows Hello for Business**](#windows-hello-for-business):  
-- **Require enhanced anti-spoofing, when available**  
-- **Configure Windows Hello for Business**  
-- **Require lowercase letters in PIN** 
-- **Require special characters in PIN** 
-- **Minimum PIN length**  
-- **Require uppercase letters in PIN** 
+- **Block Windows Hello for Business**
+  - **Enable to use enhanced anti-spoofing, when available**  
+  - **Lowercase letters in PIN** 
+  - **Special characters in PIN** 
+  - **Minimum PIN length**  
+  - **Uppercase letters in PIN** 
 
 
 
