@@ -291,7 +291,7 @@ Use the following key/value pair to configure whether these soft transitions are
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock'    |    **True** will cause restricted links to open directly in InPrivate browsing.<p>**False** (default) will present users with a choice to open a restricted link with either InPrivate browsing or with their personal (MSA) account.    |
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **True** will cause restricted links to open directly in InPrivate browsing.<p>**False** (default) will present users with a choice to open a restricted link with either InPrivate browsing or with their personal (MSA) account.    |
 
 ## Open restricted links directly in InPrivate tab pages
 
@@ -299,7 +299,7 @@ You can configure if restricted links should open directly in InPrivate browsing
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** allows Microsoft Edge to transition users to their   personal context to open blocked sites.<p>**Block** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to   access is blocked.    |
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (default) allows Microsoft Edge to transition users to their   personal context to open blocked sites.<p>**False** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to   access is blocked.    |
 
 
 ## Use Microsoft Edge on iOS to access managed app logs 
