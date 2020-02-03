@@ -136,7 +136,7 @@ You'll be able to change the Primary User for Windows hybrid and Azure AD Joined
 The Apple MDM Push certificate page will show the serial number. The serial number is needed to regain access to the Apple MDM Push certificate if access to the Apple ID that created the certificate is lost. To see the serial number, go to **Devices** > **iOS** > **iOS enrollment** > **Apple MDM Push certificate**.
 
 ### Choose which iOS/iPadOS updates to push to enrolled devices<!--5879689 -->
-You'll be able to choose a specific iOS/iPadOS update (except for the most recent update) to push to devices that have enrolled by using either Apple Business Manager or Apple School Manager. Such devices must have a device configuration policy set to delay software update visibility for some number of days. To see this feature, go to MEM > **Devices** > **iOS** > **Update policies for iOS/iPadOS** > **Create profile**.
+You'll be able to choose a specific iOS/iPadOS update to push to devices that have enrolled by using either Apple Business Manager or Apple School Manager. Such devices must have a device configuration policy set to delay software update visibility for some number of days. To see this feature, go to MEM > **Devices** > **iOS** > **Update policies for iOS/iPadOS** > **Create profile**.
 
 ### New update schedule options for pushing OS updates to enrolled iOS/iPadOS devices<!--5879689-->
 You'll be able to from the following options when scheduling operating system updates for iOS/iPadOS devices. This applies to devices that that used the Apple Business Manager or Apple School Manager enrollment types.
