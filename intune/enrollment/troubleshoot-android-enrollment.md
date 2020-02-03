@@ -32,19 +32,17 @@ This article helps Intune administrators understand and troubleshoot problems wh
 
 ## Apps on Android devices
 
-### Why are apps that I unapproved from the Google Play for Work store not being removed from the Mobile Apps page in the Intune Admin Portal?
 
-  **Answer**: This is expected behavior.
+### Unapproved Google Play for Work store apps aren't being removed from the Mobile Apps page in Intune
+This is expected behavior.
 
-### Why are managed Google Play apps not reporting under the Discovered Apps blade in the Intune portal?
+### Managed Google Play apps aren't being reported under the Discovered Apps blade in the Intune portal
+This is expected behavior.
 
-  **Answer**: This is expected behavior.
+### Managed Google Play apps that aren't deployed through Intune are displayed in the work profile
+System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. This isn't controlled by the MDM provider.
 
-###  Why are managed Google Play apps that aren't deployed through Intune displayed in the work profile?
-
-  **Answer**: System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. This isn't controlled by the MDM provider.
-
-  To troubleshoot, follow these steps:
+To troubleshoot, follow these steps:
 
   1. Collect Company Portal logs.
   2. Note apps that appear in the work profile unexpectedly.
@@ -55,18 +53,15 @@ This article helps Intune administrators understand and troubleshoot problems wh
   7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
 
 ### Are Web Applications supported for work profile enrolled devices?
-
-  **Answer**: Not currently.
+Not currently.
 
 ## Remote actions
 
-### Why is the Wipe (Factory Reset) option not available for my work profile enrolled device?
-
-  **Answer**: This is expected behavior. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
+### Wipe (Factory Reset) option isn't available for work profile enrolled device
+This is expected behavior. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
 
 ### Is device passcode reset supported?
-
-  **Answer**: For work profile enrolled devices, you can only reset the work profile passcode on devices running Android 8.0+ when the work profile passcode is managed and the end-user has allowed you to reset it. For Dedicated devices (COSU), device passcode reset is supported.
+For work profile enrolled devices, you can only reset the work profile passcode on devices running Android 8.0+ when the work profile passcode is managed and the end-user has allowed you to reset it. For Dedicated devices (COSU), device passcode reset is supported.
 
 
 ## Device management
@@ -81,22 +76,17 @@ This article helps Intune administrators understand and troubleshoot problems wh
   2. When you are prompted **Send help request with**, select one of the Email apps.
   3. An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
 
-### I checked the Managed Google Play Last Sync time and it hasn't been updated in days. Why?
-
-  **Answer**: This is expected behavior. The sync is only triggered when you manually do so.
-
+### Managed Google Play Last Sync time  hasn't been updated in days
+This is expected behavior. The sync is only triggered when you manually do so.
 
 ### Is System Center Configuration Manager hybrid supported?
+It's supported with Configuration Manager 1702 and later versions for work profile management. Dedicated devices (COSU) aren't supported in a hybrid scenario.
 
-  **Answer**: It's supported with Configuration Manager 1702 and later versions for work profile management. Dedicated devices (COSU) aren't supported in a hybrid scenario.
+### Encryption is required when a device is enrolled. Can it be turned off?
+No, encryption is required from Google for the work profile. 
 
-### My device is required to be encrypted upon enrollment, is there an option to turn it off?
-
-  **Answer**: No, encryption is required from Google for the work profile. 
-
-### Why are Samsung devices blocking the use of third-party keyboards like SwiftKey?
-
-  **Answer**: Samsung began enforcing this on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
+### Samsung devices are blocking the use of third-party keyboards like SwiftKey
+Samsung began enforcing this on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
 
 </details>
 
