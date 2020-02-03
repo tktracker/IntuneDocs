@@ -32,13 +32,6 @@ This article helps Intune administrators understand and troubleshoot problems wh
 
 ## Apps on Android devices
 
-
-### Unapproved Google Play for Work store apps aren't being removed from the Mobile Apps page in Intune
-This is expected behavior.
-
-### Managed Google Play apps aren't being reported under the Discovered Apps blade in the Intune portal
-This is expected behavior.
-
 ### Managed Google Play apps that aren't deployed through Intune are displayed in the work profile
 System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. This isn't controlled by the MDM provider.
 
@@ -52,17 +45,14 @@ To troubleshoot, follow these steps:
   6. Review apps that appear in the work profile. 
   7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
 
+### Unapproved Google Play for Work store apps aren't being removed from the Mobile Apps page in Intune
+This is expected behavior.
+
+### Managed Google Play apps aren't being reported under the Discovered Apps blade in the Intune portal
+This is expected behavior.
+
 ### Are Web Applications supported for work profile enrolled devices?
 Not currently.
-
-## Remote actions
-
-### Wipe (Factory Reset) option isn't available for work profile enrolled device
-This is expected behavior. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
-
-### Is device passcode reset supported?
-For work profile enrolled devices, you can only reset the work profile passcode on devices running Android 8.0+ when the work profile passcode is managed and the end-user has allowed you to reset it. For Dedicated devices (COSU), device passcode reset is supported.
-
 
 ## Device management
 
@@ -88,7 +78,14 @@ No, encryption is required from Google for the work profile.
 ### Samsung devices are blocking the use of third-party keyboards like SwiftKey
 Samsung began enforcing this on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
 
-</details>
+## Remote actions
+
+### Wipe (Factory Reset) option isn't available for work profile enrolled device
+This is expected behavior. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
+
+### Is device passcode reset supported?
+For work profile enrolled devices, you can only reset the work profile passcode on devices running Android 8.0+ when the work profile passcode is managed and the end-user has allowed you to reset it. For Dedicated devices (COSU), device passcode reset is supported.
+
 
 ## Next steps
 
