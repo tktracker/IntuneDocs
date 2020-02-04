@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/07/2019
+ms.date: 02/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -32,22 +32,24 @@ ms.collection: M365-identity-device-management
 
 # Automatically enroll iOS devices with Apple's Device Enrollment Program
 
-You can set up Intune to enroll iOS devices purchased through Apple's [Device Enrollment Program (DEP)](https://deploy.apple.com). DEP lets you enroll large numbers of devices without ever touching them. Devices like iPhones and iPads can be shipped directly to users. When the user turns on the device, Setup Assistant runs with preconfigured settings and the device enrolls into management.
+You can set up Intune to enroll iOS devices purchased through Apple's [Device Enrollment Program (DEP)](https://deploy.apple.com). DEP lets you enroll large numbers of devices without ever touching them. Devices like iPhones, iPads, and MacBooks can be shipped directly to users. When the user turns on the device, Setup Assistant, which includes the typical out-of-box-experience for Apple products, runs with preconfigured settings and the device enrolls into management.
 
-To enable DEP enrollment, you use both the Intune and Apple DEP portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management. You create DEP enrollment profiles containing settings that applied to devices during enrollment. Note that DEP enrollment cannot be used with a [device enrollment manager](device-enrollment-manager-enroll.md) account.
+To enable DEP enrollment, you use both the Intune and Apple Business Manager (ABM) or Apple School Manager (ASM) portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management in ABM/ASM. You create DEP enrollment profiles in Intune containing settings that are applied to devices during enrollment. Note that DEP enrollment cannot be used with a [device enrollment manager](device-enrollment-manager-enroll.md) account.
 
 > [!NOTE]
-> DEP sets device configurations that can't be removed by the end user. Therefore, before [migrating to DEP](../fundamentals/migration-guide-considerations.md), the device must be wiped to return it to an out-of-box (new) state.
+> DEP sets device configurations that can't necessarily be removed by the end user. Therefore, before [migrating to DEP](../fundamentals/migration-guide-considerations.md), the device must be wiped to return it to an out-of-box (new) state.
 
 ## DEP and the Company Portal
 
-DEP enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on a DEP device. To give them access, push the app to the device using **Install Company Portal with VPP** (Volume Purchase Program) in the DEP profile. For more information, see [Automatically enroll iOS devices with Apple's Device Enrollment Program](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+DEP enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on a DEP device. You may want to provide this access to let users choose which corporate apps they wish to use on their device or to use modern authentication to complete the enrollment process. 
 
- You can install the Company Portal app on devices already enrolled with DEP. To do so,  deploy the Company Portal app through Intune with an [Application Configuration policy](../apps/app-configuration-policies-use-ios.md) applied.
+To enable modern authentication during enrollment, push the app to the device using **Install Company Portal with VPP** (Volume Purchase Program) in the DEP profile. For more information, see [Automatically enroll iOS devices with Apple's Device Enrollment Program](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+
+To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with DEP, deploy the Company Portal app through Intune as a required Volume Purchase Program (VPP) app with an [Application Configuration policy](../apps/app-configuration-policies-use-ios.md) applied.
 
 ## What is supervised mode?
 
-Apple introduced supervised mode in iOS 5. An iOS device in supervised mode can be managed with more controls. As such, it's especially useful for corporate-owned devices. Intune supports configuring devices for supervised mode as part the Apple Device Enrollment Program (DEP).
+Apple introduced supervised mode in iOS 5. An iOS device in supervised mode can be managed with more controls, such as block screen capture and block installing apps from App Store. As such, it's especially useful for corporate-owned devices. Intune supports configuring devices for supervised mode as part the Apple Device Enrollment Program (DEP).
 
 Support for unsupervised DEP devices was deprecated in iOS 11. In iOS 11 and later, DEP configured devices should always be supervised. The DEP is_supervised flag will be ignored in a future iOS release.
 
@@ -68,7 +70,7 @@ Support for unsupervised DEP devices was deprecated in iOS 11. In iOS 11 and lat
 
 Before you can enroll iOS devices with DEP, you need a DEP token (.p7m) file from Apple. This token lets Intune sync information about DEP devices that your corporation owns. It also permits Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
 
-You use the Apple DEP portal to create a DEP token. You also use the DEP portal to assign devices to Intune for management.
+You use the Apple Business Manager or Apple School Manager portal to create a token. You also use the ABM/ASM portal to assign devices to Intune for management.
 
 > [!NOTE]
 > If you delete the token from the Intune classic portal before migrating to Azure, Intune might restore a deleted Apple DEP token. You can delete the DEP token again from the Azure portal.
