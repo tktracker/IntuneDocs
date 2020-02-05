@@ -201,7 +201,7 @@ The following steps provide guidance to help you add a Windows app to Intune.
         2. When you're finished setting the requirement rules, select **OK**.
 2. Click **Next** to display the **Detection rules** page.   
 
-### Step 4: Detection rules
+## Step 4: Detection rules
 
 1. In the **Detection rules** page, configure the rules to detect the presence of the app:
     
@@ -265,7 +265,7 @@ The following steps provide guidance to help you add a Windows app to Intune.
 
 2. Once you have added your rule(s), select **Next** to display the **Dependencies** page.
 
-### Step 5: Dependencies
+## Step 5: Dependencies
 
 App dependencies are applications that must be installed before your Win32 app can be installed. You can require that other apps are installed as dependencies. Specifically, the device must install the dependent app(s) before it installs the Win32 app. ​There is a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. Once your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. 
 
