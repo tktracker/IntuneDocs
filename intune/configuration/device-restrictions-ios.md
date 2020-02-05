@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2020
+ms.date: 02/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -562,7 +562,9 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 
 ## Autonomous single app mode
 
-Use these settings to configure iOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the app is run, the device is locked. It can only run that app. For example, add an app that lets users take a test on the device. When the apps actions are complete, or you remove this policy, the device returns to its normal state.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the user starts one of the configured apps, the device is locked to that app. App/task switching is disabled until the user exits the allowed app.
+
+For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the end user authenticates. When the apps actions are completed by the user, or you remove this policy, the device returns to its normal state.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
