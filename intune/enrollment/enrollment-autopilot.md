@@ -107,6 +107,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
     ![Screenshot of OOBE page](./media/enrollment-autopilot/create-profile-outofbox.png)
 
+> [!NOTE]
+> Self-deploying profiles currently don't support setting "Join to AzureAD as", "Microsoft Software License Terms", "Privacy Settings", "Hide Change Account Options", or "User Account Type"
+
 6. In the **Join to Azure AD as** box, choose **Azure AD joined**.
 7. Configure the following options:
     - **End-user license agreement (EULA)**: (Windows 10, version 1709 or later) Choose if you want to show the EULA to users.
