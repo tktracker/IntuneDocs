@@ -77,7 +77,7 @@ Default restrictions are automatically provided for both device type and device 
     > [!IMPORTANT]
     > Android Enterprise (work profile) and Android device administrator platforms have the following behavior:
     > - If both platforms are allowed for the same group, then users will be enrolled with a work profile if their device supports it, otherwise they will enroll as DA. 
-    > - If both platforms are allowed for the group and refined for specific and non-overlapping versions, then users will recieve the enrollment flow defined for their OS version. 
+    > - If both platforms are allowed for the group and refined for specific and non-overlapping versions, then users will receive the enrollment flow defined for their OS version. 
     > - If both platforms are allowed, but blocked for the same versions, then users on devices with the blocked versions will be taken down the Android device administrator enrollment flow and then get blocked from enrollment and prompted to sign out. 
     >
     > Worth noting that neither work profile or device administrator enrollment will work unless the appropriate prequisites have been completed in Android Enrollment. 
@@ -86,12 +86,13 @@ Default restrictions are automatically provided for both device type and device 
    > Windows 10 does not provide the rev number during enrollment so for instance if you enter in 10.0.17134.100 and the device is 10.0.17134.174 it will be blocked during enrollment.
 
 6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
-7. Choose **Next** to go to the **Assignments** page.
-8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
+7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
+8. Choose **Next** to go to the **Assignments** page.
+9. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for choosing platform settings](./media/enrollment-restrictions-set/select-groups.png)
-9. Select **Next** to go to the **Review + create** page.
-10. Select **Create** to create the restriction.
-11. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
+10. Select **Next** to go to the **Review + create** page.
+11. Select **Create** to create the restriction.
+12. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
 
 
 ## Create a device limit restriction

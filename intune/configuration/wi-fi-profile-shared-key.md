@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 01/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -36,7 +36,7 @@ Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks,
 
 This feature supports:
 
-- Android
+- Android device administrator
 - Windows
 - EAP-based Wi-Fi
 

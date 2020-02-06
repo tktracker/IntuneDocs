@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -63,19 +63,41 @@ There are two ways to browse and approve Managed Google Play store apps with Int
 1. Directly in the Intune console - browse and approve store apps in a view hosted within Intune. This opens directly in the Intune console and does not require you to reauthenticate with a different account.
 1. In Managed Google Play console - you can optionally open the Managed Google Play console directly and approve apps there. See [Sync a Managed Google Play app with Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune) for more information.  This requires a separate login using the account you used to connect your Intune tenant to Managed Google Play.
 
-
 ### Add a Managed Google Play store app directly in the Intune console
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **App type** dropdown box, select **Managed Google Play**.
-4. Select **Managed Google Play - Open** to open the managed Google Play catalog.
-5. Select **Search Play Store** in the Google Play catalog.
-6. Use the search box to search for apps that you want to manage.
-7. Click **Approve** to approve the app in managed Google Play and click **Approve** to accept the app permissions.
-8. Select **Keep approved when app requests new permissions** in the Approval Settings window and then click **Save**. If you do not choose this option, you will need to manually approve any new permissions if the app developer publishes an update. This will cause installations and updates of the app to stop until permissions are approved. For this reason, it is recommended to select the option to automatically approve new permissions. 
-9. Click **OK** to include the app(s) you have approved.
-10. Click **Sync** on the **App app** pane to sync with the Managed Google Play service.
+3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
+4. Click **Select**. The **Managed Google Play** app store is displayed.
+
+    > [!NOTE]
+    > Your Intune tenant account must be connected to your Android Enterprise account to browse managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+
+5. Select an app to view the app details.
+6. On the page that displays the app, click **Approve**. A window for the app opens asking you to give permissions for the app to perform various operations.
+7. Select **Approve** to accept the app permissions and continue.
+8. Select **Keep approved when app requests new permissions** in the **Approval Settings** tab and then click **Done**. 
+
+    > [!IMPORTANT]
+    > If you do not choose this option, you will need to manually approve any new permissions if the app developer publishes an update. This will cause installations and updates of the app to stop until permissions are approved. For this reason, it is recommended to select the option to automatically approve new permissions. 
+
+9. Click **Select** to select the app.
+10. Click **Sync** at the top of the blade to sync the app with the Managed Google Play service.
+11. Click **Refresh** to update the app list and display the newly added app.
+
+### Add additional app settings to a Managed Google Play store app
+1. If you need to add additional app details, select the app from the app list.
+2. Click **Properties** > **Edit** next to **App information**. The **App information** page is displayed.
+3. In the **App information** page, add the app details:
+    - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
+    - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
+    - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL is displayed to users in the company portal.
+    - **Privacy URL**: Optionally, enter the URL of a website that contains privacy information for this app. The URL is displayed to users in the company portal.
+    - **Developer**: Optionally, enter the name of the app developer.
+    - **Owner**: Optionally, enter a name for the owner of this app, for example, *HR department*.
+    - **Notes**: Optionally, enter any notes that you want to associate with this app.
+4. Click **Review + save** to view the **Review + save** page. 
+5. When you are done, click **Save** to update the app in Intune.
 
 ### Add a Managed Google Play store app in the Managed Google Play console (Alternative)
 If you prefer to synchronize a Managed Google Play app with Intune rather than adding it directly using Intune, use the following steps.
@@ -85,7 +107,7 @@ If you prefer to synchronize a Managed Google Play app with Intune rather than a
 
 1. Go to the [Managed Google Play store](https://play.google.com/work). Sign in with the same account you used to configure the connection between Intune and Android Enterprise.
 2. Search the store and select the app you want to assign by using Intune.
-3. On the page that displays the app, select **Approve**.  
+3. On the page that displays the app, click **Approve**.  
     In the following example, the Microsoft Excel app has been chosen.
 
     ![The Approve button in the Managed Google Play store](./media/apps-add-android-for-work/approve.png)
@@ -113,20 +135,22 @@ There are two ways to add LOB apps to Managed Google Play:
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **App type** dropdown box, select **Managed Google Play**.
-4. Select **Managed Google Play - Open** to open the managed Google Play catalog.
-5. Select **Private Apps** in the Google Play catalog.
-6. Click the **"+"** button to add a new app
-7. Submit an app title and APK package for the app
-8. Click **Create**
-9. Close the Managed Google Play pane if you are done adding apps
-10. Click **Sync** on the **App app** pane to sync with the Managed Google Play service. Note that private apps may take several minutes to become available to sync. If it does not appear the first time you perform a sync, wait a couple minutes and initiate a new sync.
+3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
+4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
+5. Select **Private apps** (next to the *lock* icon) in the Google Play window. 
+6. Click the **"+"** button at the lower right to add a new app.
+7. Add an app **Title** and click **Upload APK** add the APK app package.
+8. Click **Create**.
+9. Close the Managed Google Play pane if you are done adding apps.
+10. Click **Sync** on the **App app** pane to sync with the Managed Google Play service. 
+
+    > [!NOTE]
+    > Private apps may take several minutes to become available to sync. If the app does not appear the first time you perform a sync, wait a couple minutes and initiate a new sync.
 
 For more information about Managed Google Play private apps including a FAQ, see Google's support article: https://support.google.com/googleplay/work/answer/9146439
 
->[!NOTE]
+>[!IMPORTANT]
 >Private apps added using this method can never be made public. Only use this publishing option if you are sure that this app will always be private to your organization.
-  
 
 ### Managed Google Play private (LOB) app publishing using the Google Developer Console
 
@@ -155,13 +179,17 @@ Web links will open with Microsoft Edge or any other browser app you choose to d
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **App type** dropdown box, select **Managed Google Play**.
-4. Select **Managed Google Play - Open** to open the managed Google Play catalog.
-5. Select **Web apps** in the Google Play catalog.
-6. Click the **"+"** button to add a new app
-7. Enter the required information, then click **Create**
-8. Close the Managed Google Play pane if you are done adding apps
-9. Click **Sync** on the **App app** pane to sync with the Managed Google Play service. Note that private apps may take several minutes to become available to sync. If it does not appear the first time you perform a sync, wait a couple minutes and initiate a new sync.
+3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
+4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
+5. Select **Web apps** (next to the *Globe* icon) in the Google Play window.
+6. Click the **"+"** button at the lower right to add a new app.
+7. Add an app **Title**, the web app **URL**, select how the app should be displayed, and select an app icon.
+8. Click **Create**.
+9. Close the Managed Google Play pane if you are done adding apps.
+10. Click **Sync** on the **App app** pane to sync with the Managed Google Play service. 
+
+    > [!NOTE]
+    > Web apps may take several minutes to become available to sync. If the app does not appear the first time you perform a sync, wait a couple minutes and initiate a new sync.
 
 ## Sync a Managed Google Play app with Intune
 

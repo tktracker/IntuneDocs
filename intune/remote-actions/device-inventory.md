@@ -89,7 +89,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS, Android|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, iOS, Android|
-|Activation lock bypass code|The code that can be used to bypass the activation lock.|iOS|
+|Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
 |Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, iOS, Android|
 |Intune registered|If **Yes**, the device is registered with Intune|Windows, iOS, Android|
 |Compliance|The device's compliance state.|Windows, iOS, Android|

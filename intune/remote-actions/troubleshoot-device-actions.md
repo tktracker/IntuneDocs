@@ -32,12 +32,12 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune has many actions that help you managed devices. This article provides answers for some common questions that can help you troubleshoot device actions.
 
-## Bypass Activation Lock action
+## Disable Activation Lock action
 
-### I clicked the "Bypass Activation Lock" action in the portal but nothing happened on the device.
-This is expected. After starting the Bypass Activation Lock action, Intune is requested an updated code from Apple. You'll manually enter the code in the passcode field after your device is on the Activation Lock screen. This code is only valid for 15 days, so be sure to click the action and copy the code before you issue the Wipe.
+### I clicked the "Disable Activation Lock" action in the portal but nothing happened on the device.
+This is expected. After starting the Disable Activation Lock action, Intune is requested an updated code from Apple. You'll manually enter the code in the passcode field after your device is on the Activation Lock screen. This code is only valid for 15 days, so be sure to click the action and copy the code before you issue the Wipe.
 
-### Why don't I see the Bypass Activation Lock code in the Hardware overview blade of my iOS device?
+### Why don't I see the Disable Activation Lock code in the Hardware overview blade of my iOS device?
 The most likely reasons include:
 - The code has expired and been cleared from the service.
 - The device isn't Supervised with the Device Restriction Policy to allow Activation Lock.
@@ -46,12 +46,12 @@ You can check on the code in Graph Explorer with the following query:
 
 ```GET - https://graph.microsoft.com/beta/deviceManagement/manageddevices('deviceId')?$select=activationLockBypassCode.```
 
-### Why is the Bypass Activation Lock action greyed out for my iOS device?
+### Why is the Disable Activation Lock action greyed out for my iOS device?
 The most likely reasons include: 
 - The code has expired and been cleared from the service.
 - The device isn't Supervised with the Device Restriction Policy to allow Activation Lock.
 
-### Is the Bypass Activation Lock code case sensitive?
+### Is the Disable Activation Lock code case sensitive?
 No. And you don't need to enter the dashes.
 
 ## Remove devices action

@@ -66,7 +66,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Wipe](devices-wipe.md#wipe)
   - [Remote lock](device-remote-lock.md)
   - [Reset passcode](device-passcode-reset.md)
-  - [Bypass Activation Lock](device-activation-lock-bypass.md) (iOS only)
+  - [Disable Activation Lock](device-activation-lock-bypass.md) (iOS only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
   - [Lost mode](device-lost-mode.md) (iOS only)
   - [Locate device](device-locate.md) (iOS only)

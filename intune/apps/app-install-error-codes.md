@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/27/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -93,9 +93,7 @@ The following error messages and descriptions provide details about iOS installa
 | 0x87D13B72 | -2016330894 | You   lost connection to the Internet.  | App   Manifest validation failure due to network connectivity(Connection Lost) |
 | 0x87D13B73 | -2016330893 | You   lost connection to the Internet.  | App   Manifest validation failure due to network connectivity(Not Connected to   internet) |
 | 0x87D13B77 | -2016330889 | The   secure connection failed.  | App   Manifest validation failure due to network connectivity(Secure Connection   Failed) |
-| 0x87D13B6F | -2016330897 |  |   |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | App install   failed due to failure to Connect To ITunes Store |
-| 0x87D13B6E | -2016330898 |   | App   Manifest validation failure due to network connectivity(unknown) |
 | 0x87D13B9F  | -2016330849 | The VPP App has an update   available | This code is returned when a   VPP app is installed but there is a newer version available. |
 
 ## Other installation errors

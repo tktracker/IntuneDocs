@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2020
+ms.date: 02/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -226,7 +226,7 @@ These settings are added to a device configuration profile in Intune, and then a
   This feature applies to:  
   - iOS 11.0 and newer
   
-<sup>1</sup>When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, the screen turns off automatically after five minutes, and the device is locked after an additional five minutes. However, if the user turns off the screen manually, the second setting is immediately applied. In the same example, after the user turns off the screen, the device locks five minutes later.
+<sup>1</sup> When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, the screen turns off automatically after five minutes, and the device is locked after an additional five minutes. However, if the user turns off the screen manually, the second setting is immediately applied. In the same example, after the user turns off the screen, the device locks five minutes later.
 
 ## Locked Screen Experience
 
@@ -562,7 +562,9 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 
 ## Autonomous single app mode
 
-Use these settings to configure iOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the app is run, the device is locked. It can only run that app. For example, add an app that lets users take a test on the device. When the apps actions are complete, or you remove this policy, the device returns to its normal state.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the user starts one of the configured apps, the device is locked to that app. App/task switching is disabled until the user exits the allowed app.
+
+For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the end user authenticates. When the apps actions are completed by the user, or you remove this policy, the device returns to its normal state.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -639,7 +641,7 @@ iOS supervised mode can only be enabled during initial device setup through Appl
 
 - App Lock (Single App Mode) 
 - Global HTTP Proxy 
-- Activation Lock Bypass 
+- Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
 - Set background and lock screen 

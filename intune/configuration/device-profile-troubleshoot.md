@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 01/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,8 +29,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune
-
-
 
 Get answers to common questions when working with device profiles and policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
 
@@ -87,6 +85,8 @@ There are different actions that trigger a notification, such as when a policy, 
 Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, such as lock, passcode reset, app, profile or policy assignment, then Intune immediately notifies the device to check in to receive these updates.
 
 Other changes, such as revising the contact information in the Company Portal app, don't cause an immediate notification to devices.
+
+The settings in the policy or profile are applied at every check-in. The [Windows 10 MDM policy refresh blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) may be a good resource.
 
 ## If multiple policies are assigned to the same user or device, how do I know which settings gets applied?
 

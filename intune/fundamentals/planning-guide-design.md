@@ -313,6 +313,7 @@ Wi-Fi profiles are used to automatically connect a mobile device to a wireless n
 Below is an example of a design for a Wi-Fi profile:
 
 | **Type** | **Profile name** | **Device platform** | **Use cases** |
+|:---:|:---:|:---:|:---:|
 | Wi-Fi | Asia Wi-Fi profile | Android | Corporate, BYOD Asia region|
 | Wi-Fi | North America Wi-Fi profile | Android, iOS, Windows 10 Mobile | Corporate, BYOD North America region |
 

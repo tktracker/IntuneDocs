@@ -27,68 +27,66 @@ ms.custom: intune
 ms.collection: M365-identity-device-management
 ---
 
-# Quickstart: Create a user in Intune and assign them a license
+# Quickstart: Create a user in Intune and assign the user a license
 
-In this quickstart, you'll create a user and then assign them an Intune license. When using Intune, each person you want to have access to company data must have their own user account. Intune admins can configure users later to manage access control.
-
-If you don’t have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
+In this quickstart, you'll create a user and then assign the user an Intune license. When you use Intune, each person you want to have access to company data must have their own user account. Intune admins can configure users later to manage access control.
 
 ## Prerequisites
 
-- Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+- A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
-## Sign in to Intune in the Microsoft Endpoint Manager
+## Sign in to Intune in Microsoft Endpoint Manager
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you've created an Intune trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a user
 
-Users must have a user account to enroll in Intune device management. To create a new user:
+A user must have a user account to enroll in Intune device management. To create a new user:
 
-1. In the Microsoft Endpoint Manager, choose **Users** > **All users** > **New user**.
-    ![In the Microsoft Endpoint Manager select add a new user](./media/quickstart-create-user/create-user.png)
-2. In the **Name** box enter a name, such as *Dewey Kellum*.
+1. In Microsoft Endpoint Manager, select **Users** > **All users** > **New user**:
+    ![In Microsoft Endpoint Manager, select New user](./media/quickstart-create-user/create-user.png)
+2. In the **Name** box, enter a name, such as *Dewey Kellum*:
     ![Add user details](./media/quickstart-create-user/create-user-02.png)
-3. In the **User name** box enter a user identifier, such as Dewey@contoso.onmicrosoft.com.
+3. In the **User name** box, enter a user identifier, such as Dewey@contoso.onmicrosoft.com.
 
     > [!NOTE]
     > If you haven't configured your customer domain name, use the verified domain name you used to create the Intune subscription (or [free trial](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)). 
 
-4. Click **Show password** and make a note of the automatically generated password so that you can sign in to a test device.
-5. Click **Create**.
+4. Select **Show password** and be sure to remember the automatically generated password so that you can sign in to a test device.
+5. Select **Create**.
 
 ## Assign a license to the user
 
-After you've created a user, you must use the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to assign an Intune license to them. If you don't assign the user a license, they'll be unable to enroll their device into Intune. 
+After you've created a user, you must use the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to assign an Intune license to the user. If you don't assign the user a license, they'll be unable to enroll their device into Intune.
 
 To assign an Intune license to a user:
 
 1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) with the same credentials you used to sign in to Intune.
-2. Choose **Users** > **Active Users** > and choose the user you just created.
-3. Click the **Licenses and Apps** tab.
-4. Under **Select location**, choose a location for the user if it is not already set.
-2. Select the **Intune** checkbox in the Licenses section. If another license includes Intune, you can select that license. The displayed [product name](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)** is used as the service plan in the Azure management.
+2. Select **Users** > **Active Users**, and then select the user you just created.
+3. Select the **Licenses and Apps** tab.
+4. Under **Select location**, select a location for the user, if it's not already set.
+2. Select the **Intune** check box in the **Licenses** section. If another license includes Intune, you can select that license. The displayed [product name](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference) is used as the service plan in Azure management.
 
     ![Select the location and Intune license](./media/quickstart-create-user/create-user-03.png)
 
    > [!NOTE]
-   > This setting uses one of your licenses for this user. If you are using a trial environment, you would later reassign this license to a real user in a live environment.
+   > This setting uses one of your licenses for the user. If you're using a trial environment, you'll later reassign this license to a real user in a live environment.
 
-6. Choose **Save changes**.
+6. Select **Save changes**.
 
 The new active Intune user will now show that they're using an **Intune** license.
 
 ## Clean up resources
 
-If you don't need this user anymore, you can delete the user by navigating to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) and choosing **Users** > *choose the user in the list* > *select the delete user icon* > **Delete user** > **Close**.
+If you don't need this user anymore, you can delete the user by going to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) and selecting **Users** > *the user* > *the delete user icon* > **Delete user** > **Close**.
 
    ![Select the delete icon](./media/quickstart-create-user/create-user-04.png)
 
 ## Next steps
 
-In this quickstart, you created a user and assigned an Intune license to them. For more information about adding users to Intune, see [Add users and grant administrative permission to Intune](users-add.md).
+In this quickstart, you created a user and assigned an Intune license to that user. For more information about adding users to Intune, see [Add users and grant administrative permission to Intune](users-add.md).
 
-To follow this series of Intune quickstarts, continue to the next quickstart.
+To continue this series of Intune quickstarts, go to the next quickstart:
 
 > [!div class="nextstepaction"]
 > [Quickstart: Create a group to manage users](../quickstart-create-group.md)

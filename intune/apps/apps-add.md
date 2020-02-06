@@ -70,10 +70,10 @@ The following table lists the specific app types and how you can add them in the
 
 <sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps) below.
 
-You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **Add**. The **Add app** pane is displayed and allows you to select the **App type**. 
+You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **Add**. The **Select app type** pane is displayed and allows you to select the **App type**. 
 
 >[!TIP]
-> An LOB app is one that you add from an app installation file. For example, to install an iOS LOB app, you add the application by selecting **Line-of-business app** as the **App type** in the **Add app** pane. You then select the app package file (extension .ipa). These types of apps are typically written in-house.
+> An LOB app is one that you add from an app installation file. For example, to install an iOS LOB app, you add the application by selecting **Line-of-business app** as the **App type** in the **Select app type** pane. You then select the app package file (extension .ipa). These types of apps are typically written in-house.
 
 ## Assess app requirements
 As an IT Admin, you determine not only which apps your group must use, but you also determine the capabilities needed for each group and subgroup. For each app, you determine the platforms needed, the groups of users that need the app, the configuration policies to apply for those groups, and the protection policies to apply.  

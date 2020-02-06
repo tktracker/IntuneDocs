@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 01/07/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -26,7 +26,7 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# In development for Microsoft Intune - January 2020
+# In development for Microsoft Intune - February 2020
 
 To help in your readiness and planning, this page lists Intune UI updates and features that are in development but not yet released. In addition to the information on this page: 
 
@@ -68,27 +68,26 @@ We'll update the Company Portal app on Windows devices to display toast notifica
 The Company Portal app will show additional app installation status messages to end users. The following conditions will apply to new Win32 dependency features:
 - App failed to install. Dependencies defined by the admin were not met.
 
-### Retarget web clips to Microsoft Edge on iOS devices<!-- 5455276 idready -->
-Web clips, which act as pinned web apps on iOS devices, will need to be updated. Newly deployed web clips will open in Microsoft Edge instead of the Intune Managed Browser if required to open in a protected browser. You must retarget pre-existing web clips to ensure they open in Microsoft Edge instead of the Managed Browser. 
+### Retarget web clips to Microsoft Edge on iOS devices<!-- 5455276 -->
+Web clips, which act as pinned web apps on iOS devices, will need to be updated. Newly deployed web clips will open in Microsoft Edge instead of the Intune Managed Browser if required to open in a protected browser. You must retarget pre-existing web clips to ensure they open in Microsoft Edge instead of the Managed Browser.
 
-### User experience change when adding apps to Intune<!-- 4705829 idready -->
-You will see a new user experience when adding apps via Intune. This experience provides the same settings and details that you have used previously, however the new experience follows a wizard-like process before adding an app to Intune. This new experience also provides a review page before adding the app. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For more information, see [Add apps to Microsoft Intune](~/apps/apps-add.md).
+### macOS Company Portal user experience improvements<!-- 5568987 -->
+We are making improvements to the macOS device enrollment experience and the Company Portal app for Mac. You can expect the following:
+- A better Microsoft **AutoUpdate** experience during enrollment that will ensure your users have the latest version of the Company Portal.
+- An enhanced compliance check step during enrollment.
+- Support for copied Incident IDs, so your users can send errors from their devices to your company support team faster.
 
-#### Require Win32 apps to restart <!-- 3136567-->
-You can require that a Win32 app must restart after a successful install. Also, you can choose the amount of time (the grace period) before the restart must occur.
+For more information about enrollment and the Company Portal app for Mac, see Enroll your macOS device using the Company Portal app (https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp). 
+
+
+### Screen removed from Company Portal, Android work profile enrollment<!--6103987 -->
+The **What's next?** screen will be removed from the Android work profile enrollment flow in Company Portal, to streamline the user experience. Go to [Enroll with Android work profile]( https://docs.microsoft.com/intune-user-help/enroll-device-android-work-profile) to see the current Android work profile enrollment flow.
+
+### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424518 idready -->
+Intune will provide an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac). 
 
 <!-- ***********************************************-->
 ## Device configuration
-
-### Add automatic proxy settings to Wi-Fi profiles for Android Enterprise work profiles<!-- 4490822 idready -->
-On Android Enterprise Work Profile devices, you can create Wi-Fi profiles. When you choose the Wi-Fi Enterprise type, you can also enter the Extensible Authentication Protocol (EAP) type used on your Wi-Fi network.
-
-In a future update, when you choose the Enterprise type, you'll be able to enter automatic proxy settings, including a proxy server URL, such as `proxy.contoso.com`.
-
-To see the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings for devices running Android Enterprise and Android kiosk in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
-
-Applies to:
-- Android Enterprise work profile
 
 ### Wired network device configuration profiles for macOS devices<!-- 3508686  -->
 A new macOS device configuration profile will be available that configures wired networks (**Device configuration** > **Profiles** > **Create profile** > **macOS** for platform > **Wired Network** for profile type). Use this feature to create 802.1x profiles to manage wired networks, and deploy these wired networks to your macOS devices.
@@ -122,41 +121,56 @@ When you create or edit an OEMConfig profile for Android Enterprise devices, the
 This feature applies to:
 - Android Enterprise 
 
+
 <!-- ***********************************************-->
-## Device enrollment
-
-### Block Android enrollments by device manufacturer<!--5197392 idready-->
-You'll be able to block devices from enrolling based on the manufacturer of the device. This applies to Android device administrator and Android Enterprise work profile devices. To see enrollment restrictions, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431)> **Devices** > **Enrollment restrictions**.
-
+<!--## Device enrollment-->
 
 
 <!-- ***********************************************-->
 ## Device management
 
+### Change Primary User for Windows devices <!-- 3794742 -->
+You'll be able to change the Primary User for Windows hybrid and Azure AD Joined devices. To do so, go to **Intune** > **Devices** > **All devices** > choose a device > **Properties** > **Primary User**. 
 
-### New information in device details<!-- 4471759 5604099  -->
-The following information will be added to the **Overview** page for devices:
-- Memory Capacity (amount of physical memory on the device)
-- Storage Capacity (amount of physical storage on the device) 
-- CPU Processor Type and Speed
-- RAM and processor data
+### Serial number on the Apple MDM Push certificate page<!--5947765 -->
+The Apple MDM Push certificate page will show the serial number. The serial number is needed to regain access to the Apple MDM Push certificate if access to the Apple ID that created the certificate is lost. To see the serial number, go to **Devices** > **iOS** > **iOS enrollment** > **Apple MDM Push certificate**.
+
+### Choose which iOS/iPadOS updates to push to enrolled devices<!--5879689 -->
+You'll be able to choose a specific iOS/iPadOS update to push to devices that have enrolled by using either Apple Business Manager or Apple School Manager. Such devices must have a device configuration policy set to delay software update visibility for some number of days. To see this feature, go to MEM > **Devices** > **iOS** > **Update policies for iOS/iPadOS** > **Create profile**.
+
+### New update schedule options for pushing OS updates to enrolled iOS/iPadOS devices<!--5879689-->
+You'll be able to from the following options when scheduling operating system updates for iOS/iPadOS devices. This applies to devices that that used the Apple Business Manager or Apple School Manager enrollment types.
+- Update at next check-in
+- Update during scheduled time
+- Update outside of scheduled time
+
+For the latter two options, you can create multiple time windows.
+
+To see the new options, go to MEM > **Devices** > **iOS** > **Update policies for iOS/iPadOS** > **Create profile**.
+
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
 
 <!-- ***********************************************-->
-
-<!--
 ## Monitoring and troubleshooting
--->
+
+### Improved Intune reporting experience<!-- 3791418 idready -->
+Intune now provides an improved reporting experience, including new report types, better report organization, more focused views, improved report functionality, as well as more consistent and timely data. The reporting experience will move from public preview to GA (general availability). Additionally, the GA release will provide localization support, bug fixes, design improvements, and aggregate device compliance data on tiles in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+New report types focus on the following:
+- **Operational** - Provides fresh records with a negative health focus. 
+- **Organizational** - Provides an broader summary of the overall state.
+- **Historical** - Provides patterns and trends over a period of time.
+- **Specialist** - Allows you to use raw data to create your own custom reports.
+
+The first set of new reports focuses on device compliance. For more information, see [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) and [Intune reports](~/fundamentals/reports.md).
+
 
 
 <!-- ***********************************************-->
 ## Role-based access control
-
-### New Intune built-in role Endpoint security manager<!--4253397 idready-->
-A new Intune built-in role will be available: the Endpoint security manager. This new role gives admins full access to the Endpoint Manager node in Intune and ready-only access to other areas. The role is an expansion of the “Security Administrator” role from Azure AD. If you currently just have Global Admins as roles, then there’s no changes needed. If you use roles, and you’d like the granularity that the Endpoint Security Manager provides, then assign that role when it is available. For more information about built-in roles, see [Role-based access control](role-based-access-control.md).
 
 ### Intune Roles user interface changes coming<!--5801612 idready-->
 The user interface for [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Roles** will be changing to a more user-friendly and intuitive design. This experience provides the same settings and details that you use now, however the new experience employs a wizard-like process.
@@ -166,7 +180,13 @@ The user interface for [Microsoft Endpoint Manager Admin Center](https://go.micr
 ## Security
 
 ### Derived credentials support on Android COBO devices<!--4839592-->
-You'll be able to use derived credentials on Android Enterprise fully managed devices. Support will be included for retrieving a derived credential for Entrust Datacard, Intercede, and DISA Purebred. You'll be able to use a derived credential for app authentication, Wi-Fi, VPN, or S/MIME signing and/or encryption with apps that support it. 
+You'll be able to use derived credentials on Android Enterprise fully managed devices. Support will be included for retrieving a derived credential for Entrust Datacard, Intercede, and DISA Purebred. You'll be able to use a derived credential for app authentication, Wi-Fi, VPN, or S/MIME signing and/or encryption with apps that support it.
+
+### Use Antivirus policy to manage settings for Microsoft Defender Antivirus and the Windows Security experience<!--6131401 -->
+From the *Endpoint security* node, you’ll be able to configure settings for **Antivirus**. When you configure policy for Antivirus, you’ll define settings for your Windows 10 devices through two profile types:
+
+- Microsoft Defender Antivirus: Manage settings for cloud protection, Antivirus exclusions, remediation, scan options, and more.
+- Windows Security experience: Manage how users experience Windows Security settings on their devices. You’ll be able configure what end users can view in the Microsoft Defender Security center and the notifications they receive. 
 
 <!-- ***********************************************-->
 ## Notices

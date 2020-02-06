@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -50,9 +50,9 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **Add app** pane, in the **App type** drop-down list, select the **Web link** type.
-4. Select **Configure**.
-5. In the **App information** pane, add the following information:
+3. In the **Select app type** pane, under the available **Other** types, select **Web link**.
+4. Click **Select**. The **Add app** steps are displayed.
+5. On the **App information** page, add the following information:
     - **Name**:  Enter the name of the app as it is to be displayed in the company portal. 
 
         > [!NOTE]
@@ -62,11 +62,17 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Publisher**: Enter the name of the publisher of this app.
     - **App URL**: Enter the URL of the website that hosts the app that you want to assign.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
-    - **Display this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
+    - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
     - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device.
     - **Logo**: Upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
-6. Select **OK**.
-7. In the **Add app** pane, select **Add**.
+6. Click **Next** to display the **Scope tags** page.
+7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](~/fundamentals/scope-tags.md).
+8. Click **Next** to display the **Assignments** page.
+9. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](~/fundamentals/groups-add.md). 
+10. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
+11. When you are done, click **Create** to add the app to Intune.
+
+    The **Overview** blade of the app you've created is displayed.
 
 > [!Note]
 > Currently, deployment of Intune web apps to iOS devices is associated with the management profile and cannot be removed manually. You can change the deployment type to **Uninstall** in the Intune portal, at which point the web app can be removed automatically. However, if you remove the deployment before changing the app assignment intent to **Uninstall**, the web app will be permanently in place on the device until the device is un-enrolled from Intune.

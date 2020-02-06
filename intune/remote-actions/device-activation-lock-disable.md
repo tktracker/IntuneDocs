@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Bypass Activation Lock on Supervised iOS devices with Intune
+# Disable Activation Lock on Supervised iOS devices with Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -48,7 +48,7 @@ While Activation Lock helps secure iOS devices and improves the chances of recov
 - You need a report of all devices that have Activation Lock enabled.
 - You want to reassign some devices to a different department during a device refresh in your organization. You can only reassign devices that do not have Activation Lock enabled.
 
-To help solve these problems, Apple introduced Activation Lock bypass in iOS 7.1. Activation Lock bypass lets you remove the Activation Lock from supervised devices without the user's Apple ID and password. Supervised devices can generate a device-specific Activation Lock bypass code, which is stored on Apple's activation server.
+To help solve these problems, Apple introduced Activation Lock disable in iOS 7.1. Disable Activation Lock lets you remove the Activation Lock from supervised devices without the user's Apple ID and password. Supervised devices can generate a device-specific Activation Lock bypass code, which is stored on Apple's activation server.
 
 >[!TIP]
 >Supervised mode for iOS devices lets you use Apple Configurator to lock down a device and limit functionality to specific business purposes. Supervised mode is used only for corporate-owned devices.
@@ -56,7 +56,7 @@ To help solve these problems, Apple introduced Activation Lock bypass in iOS 7.1
 You can read more about Activation Lock on [Apple's web site](https://support.apple.com/HT201365).
 
 ## How Intune helps you manage Activation Lock
-Intune can request the Activation Lock status of supervised devices that run iOS 8.0 and later. For supervised devices only, Intune can retrieve the Activation Lock bypass code and directly issue it to the device. If the device has been wiped, you can directly access the device by using a blank user name and the code as the password.
+Intune can request the Activation Lock status of supervised devices that run iOS 8.0 and later. For supervised devices only, Intune can retrieve the Disable Activation Lock code and directly issue it to the device. If the device has been wiped, you can directly access the device by using a blank user name and the code as the password.
 
 **The business benefits of using Intune to manage Activation Lock are:**
 
@@ -64,24 +64,24 @@ Intune can request the Activation Lock status of supervised devices that run iOS
 - You can enable users to do their work and know that when a device needs to be repurposed, you can retire or unlock it.
 
 ## Before you start
-Before you can bypass Activation Lock on devices, you must enable it by following these instructions:
+Before you can disable Activation Lock on devices, you must enable it by following these instructions:
 
 1. Configure an Intune device restriction profile for iOS using the information in [How to configure device restriction settings](/intune-azure/configure-devices/how-to-configure-device-restrictions).
 2. In the [device restriction settings for iOS](../configuration/device-restrictions-ios.md), under the **General** settings, enable the option **Activation Lock**.
-3. Save the profile, and then [assign it](../configuration/device-profile-assign.md) to the devices on which you want to manage Activation Lock bypass.
+3. Save the profile, and then [assign it](../configuration/device-profile-assign.md) to the devices on which you want to manage Disable Activation Lock.
 
 
-## How to use Activation Lock bypass
+## How to use Disable Activation Lock
 
 >[!IMPORTANT]
->After you bypass the Activation Lock on a device, if the Find My iPhone app is started, a new Activation Lock is automatically applied. Because of this, **you should be in physical possession of the device before you follow this procedure**.
+>After you disable the Activation Lock on a device, if the Find My iPhone app is started, a new Activation Lock is automatically applied. Because of this, **you should be in physical possession of the device before you follow this procedure**.
 
-The Intune **Bypass Activation Lock** remote device action removes the Activation Lock from an iOS device without requiring the user’s Apple ID and password. After you bypass the Activation Lock, the device turns on Activation Lock again when the Find My iPhone app starts. Bypass the Activation Lock only if you have physical access to the device.
+The Intune **Disable Activation Lock** remote device action removes the Activation Lock from an iOS device without requiring the user’s Apple ID and password. After you disable the Activation Lock, the device turns on Activation Lock again when the Find My iPhone app starts. Disable the Activation Lock only if you have physical access to the device.
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. On the **Intune** blade, select **Devices**.
 4. On the **Devices** blade, select **All devices**.
-5. On the list of devices that you manage, select the **Bypass Activation Lock** device remote action.
+5. On the list of devices that you manage, select the **Disable Activation Lock** device remote action.
 6. Go to the device's “Hardware” section, and then copy the **Activation Lock bypass code** value under **Conditional Access**.
 
     >[!NOTE]
