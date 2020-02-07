@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,10 +73,10 @@ For details about email profiles, see [configure access to organization email us
 
 ### Operating System Version  
 
-- **Minimum OS required** *(iOS 8.0 and newer)*:  
+- **Minimum OS version** *(iOS 8.0 and newer)*:  
   When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can choose to upgrade their device. After that, they can access organization resources.
 
-- **Maximum OS version allowed** *(iOS 8.0 and newer)*:  
+- **Maximum OS version** *(iOS 8.0 and newer)*:  
   When a device uses an OS version later than the version in the rule, access to organization resources is blocked. The end user is asked to contact their IT administrator. The device can't access organization resources until a rule changes to allow the OS version.
 
 - **Minimum OS build version** *(iOS 8.0 and newer)*:  
