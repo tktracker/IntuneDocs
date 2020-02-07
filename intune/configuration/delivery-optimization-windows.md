@@ -36,9 +36,6 @@ To view a list of the delivery optimization settings that Intune supports, see [
 
 To learn about Delivery Optimization on Windows 10, see [Delivery Optimization updates](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
 
-> [!NOTE]
-> If you previously set Delivery Optimization in your **Software updates – Windows 10 Update Rings**, plan to edit your update rings to remove the current setting. You now define Delivery Optimization device configuration profiles. See *Remove Delivery Optimization from Windows 10 Update Rings* later in this article. 
-
 ## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
