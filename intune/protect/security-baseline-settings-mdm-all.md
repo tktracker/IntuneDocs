@@ -2139,7 +2139,7 @@ The following settings are either:
 - **Adobe Reader Launch in a child process**
 - **Office communication apps launch in a child process**
 
-*[New]* [**Microsoft Defender Firewall**](#microsoft-defender-firewall)
+*[New]* [**Firewall**](#firewall)
 
 - **Firewall profile domain**
   - **Inbound connections blocked**
