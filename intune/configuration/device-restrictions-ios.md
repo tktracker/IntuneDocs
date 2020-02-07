@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2020
+ms.date: 02/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -423,8 +423,6 @@ Applies to devices running iOS 9.3 or newer.
   To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL.
 
   You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
-  
-  For more information about locating a Bundle ID, see [How to find the bundle ID for an iOS app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).
 
 - **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
 - **App name**: Enter the app name of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
@@ -562,7 +560,9 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 
 ## Autonomous single app mode
 
-Use these settings to configure iOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the app is run, the device is locked. It can only run that app. For example, add an app that lets users take a test on the device. When the apps actions are complete, or you remove this policy, the device returns to its normal state.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the user starts one of the configured apps, the device is locked to that app. App/task switching is disabled until the user exits the allowed app.
+
+For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the end user authenticates. When the apps actions are completed by the user, or you remove this policy, the device returns to its normal state.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
