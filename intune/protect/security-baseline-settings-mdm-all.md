@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -215,7 +215,7 @@ For more information, see [Policy CSP - Browser](https://docs.microsoft.com/wind
   
   **Default**: Yes
   
-- **Prevent certificate error overrides**:  
+- **Prevent user from overriding certificate errors**:  
   This policy setting prevents the user from ignoring Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate errors that interrupt browsing (such as "expired", "revoked", or "name mismatch" errors) in Internet Explorer. If you enable this policy setting, the user can't continue browsing. If you disable or don't configure this policy setting, the user can choose to ignore certificate errors and continue browsing.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067126)
   
@@ -493,7 +493,7 @@ For more information, see [Policy CSP - Experience](https://docs.microsoft.com/w
 
 For more information, see [Policy CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) in the Windows documentation.
 
-- **Exploit protection XML**:  
+- **Upload XML**:  
   Enables the IT admin to push out a configuration that represents the desired system and application mitigation options to all the devices in the organization. The configuration is represented by an XML. Exploit protection helps protect devices from malware that use exploits to spread and infect. You use the Windows Security app or PowerShell to create a set of mitigations (known as a configuration). You can then export this configuration as an XML file and share it with multiple machines on your network so they all have the same set of mitigation settings. You can also convert and import an existing EMET configuration XML file into an exploit protection configuration XML.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067035)
 
@@ -514,6 +514,64 @@ For more information, see [Policy CSP - FileExplorer](https://docs.microsoft.com
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067107)
 
   **Default**: Disabled
+
+## Firewall
+
+For more information, see [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) in the Windows Protocols documentation.
+
+- **Firewall profile domain**:  
+  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for networks that are connected to domains.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **Inbound connections blocked**:  
+    **Default**: Yes
+
+  - **Outbound connections required**:  
+    **Default**: Yes
+
+  - **Inbound notifications blocked**:  
+    **Default**: Yes
+
+  - **Firewall enabled**:  
+    **Default**: Allowed
+
+- **Firewall profile public**:  
+  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for public networks. These networks are classified as public by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are those at airports, coffee shops, and other public places where the peers in the network or the network administrator aren't trusted.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067143)
+
+  - **Inbound connections blocked**:  
+    **Default**: Yes
+
+  - **Outbound connections required**:  
+    **Default**: Yes
+
+  - **Inbound notifications blocked**:  
+    **Default**: Yes
+
+  - **Firewall enabled**:  
+    **Default**: Allowed
+
+  - **Connection security rules from group policy not merged**:  
+    **Default**: Yes
+
+  - **Policy rules from group policy not merged**:  
+    **Default**: Yes
+
+- **Firewall profile private**:  
+  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for private networks.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067041)
+
+  - **Inbound connections blocked**:  
+    **Default**: Yes
+
+  - **Outbound connections required**:  
+    **Default**: Yes
+
+  - **Inbound notifications blocked**:  
+    **Default**: Yes
+
+  - **Firewall enabled**:  
+    **Default**: Allowed
 
 ## Internet Explorer
 
@@ -1934,64 +1992,6 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
-
-## Microsoft Defender Firewall
-
-For more information, see [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) in the Windows Protocols documentation.
-
-- **Firewall profile domain**:  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for networks that are connected to domains.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2066796)
-
-  - **Inbound connections blocked**:  
-    **Default**: Yes
-
-  - **Outbound connections required**:  
-    **Default**: Yes
-
-  - **Inbound notifications blocked**:  
-    **Default**: Yes
-
-  - **Firewall enabled**:  
-    **Default**: Allowed
-
-- **Firewall profile public**:  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for public networks. These networks are classified as public by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are those at airports, coffee shops, and other public places where the peers in the network or the network administrator aren't trusted.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067143)
-
-  - **Inbound connections blocked**:  
-    **Default**: Yes
-
-  - **Outbound connections required**:  
-    **Default**: Yes
-
-  - **Inbound notifications blocked**:  
-    **Default**: Yes
-
-  - **Firewall enabled**:  
-    **Default**: Allowed
-
-  - **Connection security rules from group policy not merged**:  
-    **Default**: Yes
-
-  - **Policy rules from group policy not merged**:  
-    **Default**: Yes
-
-- **Firewall profile private**:  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for private networks.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067041)
-
-  - **Inbound connections blocked**:  
-    **Default**: Yes
-
-  - **Outbound connections required**:  
-    **Default**: Yes
-
-  - **Inbound notifications blocked**:  
-    **Default**: Yes
-
-  - **Firewall enabled**:  
-    **Default**: Allowed
 
 ## Windows Hello for Business
 
