@@ -54,7 +54,7 @@ Prerequisites for app protection policy with MTD:
 
 Use the procedure to [create an Application protection policy for either iOS/iPadOS or Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), and use the following information on the *Apps*, *Conditional launch*, and *Assignments* pages:
 
-- **Apps**: Select the app for the Mobile Threat Defense partner you use.
+- **Apps**: Select the apps you wish to be targeted by app protection policies. For this feature set, these apps will be blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor. 
 - **Conditional launch**:  Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.
 
   Options for the threat level **Value**:
