@@ -63,11 +63,14 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
+#### Microsoft Edge version 77 and later on Windows 10 devices<!-- 5843584 -->
+Intune now supports uninstalling Microsoft Edge version 77 and later on Windows 10 devices. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](~/apps/apps-windows-edge.md).
+
 #### Company Portal app improved performance<!-- 6178652 -->
 The Company Portal app has been updated to support improved performance for devices that use ARM64 processors, such as the Surface Pro X. Previously, the Company Portal operated in an emulated ARM32 mode. Now, the Company Portal app is natively compiled for ARM64. For more information about the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
 
 #### Screen removed from Company Portal, Android work profile enrollment<!--6103987 -->
-The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile]( https://docs.microsoft.com/en-us/intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
+The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
 
 <!-- ########################## -->
 ## Week of January 27, 2020
