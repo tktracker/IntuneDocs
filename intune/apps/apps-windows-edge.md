@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](~/apps/apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run Windows 10.
 
 > [!IMPORTANT]
-> This app type is in **public preview** and offers stable, beta, and dev channels for Windows 10. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). Intune will detect any preexisting Microsoft Edge installations. If it is installed in user context, a system installation will overwrite it. If it is installed in system context, installion success is reported. In addition, automatic updates of Microsoft Edge are **On** by default, and Microsoft Edge cannot be uninstalled.
+> This app type is in **public preview** and offers stable, beta, and dev channels for Windows 10. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). Intune will detect any preexisting Microsoft Edge installations. If it is installed in user context, a system installation will overwrite it. If it is installed in system context, installion success is reported. In addition, automatic updates of Microsoft Edge are **On** by default.
 
 > [!NOTE]
 > Microsoft Edge *version 77 and later* is available for macOS as well.
@@ -96,6 +96,28 @@ The app you've created is displayed in the apps list, where you can assign it to
 
 > [!NOTE]
 > Currently, if you unassign the deployment of Microsoft Edge, it will remain on the device.
+
+## Uninstall the app
+
+When you need to uninstall Microsoft Edge from user's devices, use the following steps.
+
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** > *Microsoft Edge* app > **Assignments** > **Add group**.
+3. In the **Add group** pane, select **Uninstall**.
+
+    > [!NOTE]
+    > The app is uninstalled from devices in the selected groups if Intune has previously installed the application onto the device via an **Available for enrolled devices** or **Required** assignment using the same deployment.
+4. Select **Included Groups** to select the groups of users that are affected by this app assignment.
+5. Select the groups that you want to apply the uninstall assignment.
+6. Click **Select** on the **Select groups** pane.
+7. Click **OK** on the **Assign** pane to set the assignment.
+8. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
+9. If you have chosen to exclude any groups, in **Select groups**, select **Select**.
+10. Select **OK** in the **Add group** pane.
+11. Select **Save** in the app **Assignments** pane.
+
+> [!IMPORTANT]
+> To uninstall the app successfully, make sure to remove the members or group assignment for install before assigning them to be uninstalled. If a group is assigned to both install an app and uninstall an app, the app will remain and not be removed.
 
 ## Troubleshooting
 **Microsoft Edge version 77 and later for Windows 10:**<br>
