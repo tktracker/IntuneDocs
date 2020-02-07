@@ -49,36 +49,27 @@ The default scope tag feature is similar to the security scopes feature in Micro
 ## To create a scope tag
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
-
-    ![Screenshot of create a scope tag.](./media/scope-tags/create-scope-tag.png)
-
-2. Provide a **Name** and optional **Description**.
-3. If you want all devices in specific groups, choose **Assign scope tag to all devices in selected groups**.
-    1. In the **Select groups to include** page, choose the groups containing the devices that you want to assign this scope tag to.
-    2. Choose **Select**.
-4. Choose **Create**.
+2. On the **Basics** page, provide a **Name** and optional **Description**. Choose **Next**.
+3. On the **Assignments** page, choose the groups containing the devices that you want to assign this scope tag. Choose **Next**.
+4. On the **Review + create** page, choose **Create**.
 
 ## To assign a scope tag to a role
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
-2. Provide an **Assignment name** and **Description**.
-3. Choose **Members (Groups)** > **Add** > choose the groups that you want as part of this assignment > **Select** > **OK**. Users in this group will have permissions to manage users/devices in the Scope (Groups).
+2. On the **Basics** page, provide an **Assignment name** and **Description**. Choose **Next**.
+3. On the **Admin Groups** page, select the groups that you want as part of this assignment. Users in these group will have permissions to manage users/devices in the Scope (Groups). Choose **Next**.
 
     ![Screenshot of select member groups.](./media/scope-tags/select-member-groups.png)
 
-4. If you want to manage users/devices in a specific set of groups, choose **Scope (Groups)** > **Selected Groups** > **Select groups to include** > choose the groups > **Select** > **OK**. All users/devices in this group will be managed by the admins in the Members (Group).
+4. On the **Scope Groups** page, select on eo fthe following options for **Assign to**
+    - **Selected groups**: select the groups containing the users/deivces that you want to manage. All users/devices in the selected groups will be managed by the users in the Admin Groups.
+    - **All users**: All users can be managed by the users in the Admin Groups.
+    - **All devices**: All devices can be managed by the users in the Admin Groups.
+    - **All users and all devices**: All users and devices can be managed by the users in the Admin Groups.
 
-    ![Screenshot of select scope groups.](./media/scope-tags/select-scope-groups.png)
-
-    Alternately, you can choose **All Devices**, **All Users**, or **All Users & All Devices**.
-
-    ![Screenshot of other options for select scope groups.](./media/scope-tags/scope-group-other-options.png)
-    
-5. Choose **Scope (Tags)** > **Add** > choose the tags that you want to add to this role > **Select** > **OK**. Users in Members (Groups) will have access to Intune objects that also have the same scope tag.
-
-    ![Screenshot of select scope tags.](./media/scope-tags/select-scope-tags.png)
-
-6. Choose **OK**. 
+5. Choose **Next**
+6. On the **Scope tags** page, select the tags that you want to add to this role. Users in the Admin Groups will have access to Intune objects that also have the same scope tag.
+7. Choose **Next** to go to the **Review + create** page and then choose **Create**.
 
 ## Assign scope tags to other objects
 
@@ -86,13 +77,8 @@ For objects that support scope tags, scope tags usually appear under **Propertie
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration profiles** > choose a profile.
 
-2. Choose **Properties** > **Scope (Tags)** > **Add**.
-
-    ![Screenshot of add scope tags.](./media/scope-tags/add-scope-tags.png)
-
-3. Under **Select Tags**, choose the tags that you want to add to the profile.
-4. Choose **Select** > **OK** > **Save**.
-
+2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile.
+4. Choose **Select** > **Review + save**.
 
 ## Scope tag details
 When working with scope tags, remember these details: 
@@ -119,3 +105,5 @@ When working with scope tags, remember these details:
 
 Learn how scope tags behave when there are [multiple role assignments](role-based-access-control.md#multiple-role-assignments).
 Manage your [roles](role-based-access-control.md) and [profiles](../configuration/device-profile-assign.md).
+
+
