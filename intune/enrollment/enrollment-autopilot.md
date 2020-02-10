@@ -107,7 +107,8 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
     ![Screenshot of OOBE page](./media/enrollment-autopilot/create-profile-outofbox.png)
 
-Greyed-out items are not currently supported by the chosen Deployment mode.
+   > [!NOTE]
+   > Options that appear dimmed or shaded are currently not supported by the selected deployment mode.
 
 6. In the **Join to Azure AD as** box, choose **Azure AD joined**.
 7. Configure the following options:
