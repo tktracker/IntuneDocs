@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,16 +28,13 @@ ms.reviewer: kerimh
 
 # Delivery optimization settings in Microsoft Intune
 
-With Intune, you can use Delivery optimization settings for your Windows 10 devices to reduce bandwidth consumption when those devices download applications and updates. Delivery optimization is configured as part of your device configuration profiles.  
+With Intune, use Delivery Optimization settings for your Windows 10 devices to reduce bandwidth consumption when those devices download applications and updates. Configure delivery optimization as part of your device configuration profiles.  
 
 This article describes how to configure delivery optimization settings as part of a device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows 10 devices. 
 
-For a list of the delivery optimization settings that Intune supports, see [Delivery optimization settings for Intune](../delivery-optimization-settings.md).  
+To view a list of the delivery optimization settings that Intune supports, see [Delivery Optimization settings for Intune](../delivery-optimization-settings.md).  
 
 To learn about Delivery Optimization on Windows 10, see [Delivery Optimization updates](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
-
-> [!NOTE]
-> **Software updates – Windows 10 Update Rings** are replaced by the **Delivery optimization** settings. Your existing update rings can be changed to use the **Delivery optimization** settings. [Move existing update rings to delivery optimization](#move-existing-update-rings-to-delivery-optimization) (in this article)
 
 ## Create the profile
 
@@ -58,11 +55,16 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 
 The profile is created and is shown in the list. Next, [assign the profile](device-profile-assign.md) and then [monitor its status](device-profile-monitor.md).
 
-## Move existing update rings to delivery optimization
+<!-- ## Move existing update rings to delivery optimization
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage.
+**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
+-->
 
-1. Create a delivery optimization configuration profile:
+## Remove Delivery Optimization from Windows 10 Update Rings
+
+Delivery Optimization was previously configured as part of Software Update Rings. Beginning in February of 2019, Delivery Optimization settings are configured as part of a Deliver Optimization device configuration profile, which includes additional settings that affect more than Software Update delivery to devices. If you haven’t already, remove the delivery optimization setting from your Update Rings by setting it to *Not configured*, and then use a Delivery Optimization profile to manage the larger range of available options.
+
+1. Create a Delivery Optimization device configuration profile:
 
     1. In the Microsoft Endpoint Manager admin center, select **Devices** > **Configuration profiles** > **Create profile**.
     2. Enter the following properties:
