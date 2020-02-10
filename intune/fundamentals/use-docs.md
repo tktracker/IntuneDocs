@@ -77,7 +77,7 @@ The Intune docs, like most content on docs.microsoft.com, is open-sourced on Git
 
 2. To edit the source file, click the pencil icon.  
 
-3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown).  
+3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown).  
 
 4. In the Propose file change section, enter the public commit comment describing *what* you changed. Then click **Propose file change**.  
 
