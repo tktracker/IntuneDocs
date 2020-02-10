@@ -299,7 +299,19 @@ You can configure if restricted links should open directly in InPrivate browsing
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** allows Microsoft Edge to transition users to their   personal context to open blocked sites.<p>**Block** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to   access is blocked.    |
+
+## Disable Microsoft Edge prompt to save passwords
+
+|    Key    |    Value    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **True** will cause restricted links to open directly in InPrivate browsing.<p>**False** (default) will present users with a choice to open a restricted link with either InPrivate browsing or with their personal (MSA) account.    |
+
+By default, Microsoft Edge on iOS offers to save your users passwords to the keychain. If you would like to disable this prompt for your organization, configure the following setting:
+
+|    Key    |    Value    |
+|-----------|-------------|
+|     'com.microsoft.intune.mam.managedbrowser.disableFeatures'    |    **password** will disable save passwords prompt.    |
 
 ## Use Microsoft Edge on iOS to access managed app logs 
 
