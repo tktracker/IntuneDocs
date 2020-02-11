@@ -12,7 +12,7 @@ ms.custom: include file
 These notices provide important information that can help you prepare for future Intune changes and features.
 
 ### Plan for Change: Change in experience when enrolling Android Enterprise dedicated devices in Intune<!--6114580-->
-We shared in MC193745 that with the November release we were adding support for SCEP certificate deployment to Android Enterprise dedicated devices, to enable certificate-based access to Wi-Fi profiles. This change involved some minor enrollment flow changes for Android Enterprise dedicated devices. With the upcoming March service update or 2003, there are some further changes that we’d like you to be aware of.
+We shared in the November release we were adding support for SCEP certificate deployment to Android Enterprise dedicated devices, to enable certificate-based access to Wi-Fi profiles. This change involved some minor enrollment flow changes for Android Enterprise dedicated devices. With the upcoming March service update or 2003, there are some further changes that we’d like you to be aware of.
 
 #### How does this affect me?
 If you manage Android Enterprise dedicated devices in your environment, you will start to see some changes roll out in March.
