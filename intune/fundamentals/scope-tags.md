@@ -57,11 +57,11 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
 2. On the **Basics** page, provide an **Assignment name** and **Description**. Choose **Next**.
-3. On the **Admin Groups** page, select the groups that you want as part of this assignment. Users in these group will have permissions to manage users/devices in the Scope (Groups). Choose **Next**.
+3. On the **Admin Groups** page, choose **Select groups to include**, and select the groups that you want as part of this assignment. Users in these group will have permissions to manage users/devices in the Scope (Groups). Choose **Next**.
 
     ![Screenshot of select member groups.](./media/scope-tags/select-member-groups.png)
 
-4. On the **Scope Groups** page, select on eo fthe following options for **Assign to**
+4. On the **Scope Groups** page, select one ofthe following options for **Assign to**
     - **Selected groups**: select the groups containing the users/deivces that you want to manage. All users/devices in the selected groups will be managed by the users in the Admin Groups.
     - **All users**: All users can be managed by the users in the Admin Groups.
     - **All devices**: All devices can be managed by the users in the Admin Groups.
