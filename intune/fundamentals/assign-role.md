@@ -42,7 +42,7 @@ To create, edit, or assign roles, your account must have one of the following pe
 
 5. On the **Basics** page, enter an **Assignment name** and optional **Assignment description**, and then choose **Next**.
 
-6. On the **Admin Groups** page, selet the group that contains the user you want to give the permissions to. Choose **Next**
+6. On the **Admin Groups** page, select the group that contains the user you want to give the permissions to. Choose **Next**
 
 7. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. Choose **Next**.
 
