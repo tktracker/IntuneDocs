@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2019 
+ms.date: 02/07/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,9 +39,14 @@ If you're an employee or student, be sure to check out the screenshots and links
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+## Week of February 3, 2020
+
+### Screen removed from Company Portal, Android work profile enrollment <!--6103987 -->
+The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
+
 ## Week of November 11, 2019  
 
-#### Web apps launched from the Windows Company Portal app<!-- 5030972 -->
+### Web apps launched from the Windows Company Portal app <!-- 5030972 -->
 End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](~/apps/web-app.md).
 
 ![Example image of a web app launched from the Windows Company Portal app](./media/whats-new-app-ui/webapp-open-in-browser.png)  
