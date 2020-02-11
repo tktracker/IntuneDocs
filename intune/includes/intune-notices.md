@@ -11,6 +11,21 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Change in experience when enrolling Android Enterprise dedicated devices in Intune<!--6114580-->
+We shared in the November release we were adding support for SCEP certificate deployment to Android Enterprise dedicated devices, to enable certificate-based access to Wi-Fi profiles. This change involved some minor enrollment flow changes for Android Enterprise dedicated devices. With the upcoming March service update or 2003, there are some further changes that we’d like you to be aware of.
+
+#### How does this affect me?
+If you manage Android Enterprise dedicated devices in your environment, you will start to see some changes roll out in March.
+- For existing Android dedicated devices enrolled prior to the November 22, 2019 or the 1911 service update: These devices have the Microsoft Intune app installed on them. After backend changes roll out in the Intune service in March, SCEP certificates deployed to devices and associated with Wi-Fi profiles will start to apply.
+- For devices that were enrolled after November 22, 2019 and before this change rolls out in March: These devices have the Microsoft Intune app installed on them. SCEP certificates deployed to devices and associated with Wi-Fi profiles will continue to apply.
+- For new Android Enterprise dedicated device enrollments after the change rolls out in March: End users will see a different set of steps on devices during enrollment. Enrollment will still start the way it does today (with QR, NFC, Zero-touch, or device identifier) but there will be no mandatory app install step. Instead, the Microsoft Intune app will automatically install on devices. Additionally, end users will not need to tap “Enable Intune Agent” during the flow. SCEP Certificates associated with WiFi profiles can be deployed to these devices.
+
+#### What can I do to prepare for this change?
+You can update your end user guidance and let your helpdesk know of this change. We’ll update our What’s New page and notify you through the Message center when this change starts to roll out.
+
+#### Additional information
+[Support for SCEP certificates in Android Enterprise dedicated devices](https://aka.ms/Dedicated_devices_enrollment)
+
 ### Updated support statement for 'Adobe Acrobat Reader for Intune' mobile app<!--5746776-->
 We shared in MC188653 at the end of August, that the Adobe Acrobat Reader for Intune mobile app was reaching end-of-life on December 1, 2019 and that Adobe was planning on supporting Intune’s app protection policies within their main Acrobat Reader app. Since then, we received customer feedback that we needed to provide more time to continue allowing IT admins to target, and end users to begin using Adobe Acrobat Reader for Intune. Given the high usage of Adobe Acrobat Reader for Intune on end user devices and its importance in enterprise scenarios, we want to make sure any experience meets your organization's app protection needs. 
 
