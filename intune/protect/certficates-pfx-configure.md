@@ -78,7 +78,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   - Install the PFX Certificate Connector for Microsoft Intune on your server.  
   - To automatically receive important updates, ensure firewalls are open that allow the connector to contact **autoupdate.msappproxy.net** on port **443**.   
 
-  For more information about network endpoints that Intune and the connector access, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
+  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:  
   You use a Windows Server to host:
@@ -293,17 +293,17 @@ Platforms:
 
 Updates for the two certificate connectors are released periodically. When we update a connector, you can read about the changes here.
 
-The *PFX Certificates Connector for Microsoft Intune* [supports automatic updates](#requirements), while the *Intune Certificate Connector* is updated manually.
+The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#requirements), while the *Intune Certificate Connector* is updated manually.
 
 ### May 17, 2019
 
-- **PFX Certificates Connector for Microsoft Intune - version 6.1905.0.404**  
+- **PFX Certificate Connector for Microsoft Intune - version 6.1905.0.404**  
   Changes in this release:  
   - Fixed an issue where existing PFX certificates continue to be reprocessed which causes the connector to stop processing new requests. 
 
 ### May 6, 2019
 
-- **PFX Certificates Connector for Microsoft Intune - version 6.1905.0.402**  
+- **PFX Certificate Connector for Microsoft Intune - version 6.1905.0.402**  
   Changes in this release:  
   - The polling interval for the connector is reduced from 5 minutes to 30 seconds.
  
@@ -315,7 +315,7 @@ The *PFX Certificates Connector for Microsoft Intune* [supports automatic update
   - Includes reliability fixes to certificate revocation.  
   - Includes performance fixes to increase how quickly PKCS certificate requests are processed.  
 
-- **PFX Certificates Connector for Microsoft Intune - version 6.1904.0.401**
+- **PFX Certificate Connector for Microsoft Intune - version 6.1904.0.401**
   > [!NOTE]  
   > Automatic update for this version of the PFX connector is not available until April 11th, 2019.  
 
