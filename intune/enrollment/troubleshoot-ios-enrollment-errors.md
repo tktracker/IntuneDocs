@@ -243,6 +243,19 @@ When you turn on a DEP-managed device that is assigned an enrollment profile, th
 #### Resolution
 Disable MFA, and then re-enroll the device.
 
+### The Enrollment Status Page times out before the sign-in screen.
+
+**Cause:** This issue can arise if all the following conditions are true:
+- You’re using the Enrollment Status Page to track Microsoft Store for Business apps.
+- You have an Azure AD Conditional Access policy that uses the require a device to marked as compliant control.
+- The policy applies to All Cloud apps and Windows.
+
+#### Resolution:
+Try either of the following:
+- Target your Intune compliance policies to devices. Make sure that compliance can be determined before the user logs on.
+- Use offline licensing for store apps. This way, the Windows client doesn’t have to check with the Microsoft Store before determining device compliance.
+
+
 ## Next steps
 
 - [Troubleshoot device enrollment in Intune](../troubleshoot-device-enrollment-in-intune.md)
