@@ -243,7 +243,7 @@ When you turn on a DEP-managed device that is assigned an enrollment profile, th
 #### Resolution
 Disable MFA, and then re-enroll the device.
 
-### The Enrollment Status Page times out before the sign-in screen.
+### The Enrollment Status Page times out before the sign-in screen
 
 **Cause:** This issue can arise if all the following conditions are true:
 - You’re using the Enrollment Status Page to track Microsoft Store for Business apps.
