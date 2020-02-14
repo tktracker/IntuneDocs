@@ -41,8 +41,8 @@ This document discusses both device level passcode reset and work profile passco
 | ---- | ---- |
 | Android devices on version 6.x or earlier | Yes |
 | Android enterprise devices enrolled as Device Owner | Yes |
-| iOS devices | Yes |
-| iOS devices enrolled with User Enrollment | No |
+| iOS/iPadOS devices | Yes |
+| iOS/iPadOS devices enrolled with User Enrollment | No |
 | Android devices enrolled with a work profile | No |
 | Android devices on version 7.0 or later | No |
 | macOS | No |
@@ -74,9 +74,9 @@ Supported Android Enterprise devices enrolled with a work profile receive a new 
 For Android Enterprise devices running version 8.x or later and enrolled with a work profile, end users get notified to activate their reset passcode right after enrollment is completed. The notification is displayed if a work profile password is required and set. Once their passcode is entered, the notification is dismissed.
 
 
-## Remove iOS passcodes
+## Remove iOS/iPadOS passcodes
 
-Instead of being reset, passcodes are removed from iOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
+Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
 
 ## Next steps
 

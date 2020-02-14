@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Outlook settings for iOS and Android devices in Microsoft Intune
-description: Create a configuration policy to set Microsoft Outlook settings running on iOS and Android devices.
+title: Outlook settings for iOS/iPadOS and Android devices in Microsoft Intune
+description: Create a configuration policy to set Microsoft Outlook settings running on iOS/iPadOS and Android devices.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -28,10 +28,10 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Outlook configuration settings 
 
-Use a configuration policy to set Microsoft Outlook settings running on iOS and Android devices. 
+Use a configuration policy to set Microsoft Outlook settings running on iOS/iPadOS and Android devices. 
 
 For enrolled devices:
-- To create an app configuration policy for managed iOS devices, see [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md). 
+- To create an app configuration policy for managed iOS/iPadOS devices, see [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md). 
 - To create an app configuration policy for managed Android devices, see [Add app configuration policies for managed Android devices](app-configuration-policies-use-android.md). 
 
 For unenrolled devices, see [Add app configuration policies for managed apps without device enrollment](app-configuration-policies-managed-app.md) to create an app configuration policy for Outlook for iOS and Android.

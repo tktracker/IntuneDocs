@@ -40,7 +40,7 @@ Collect the following information about the problem:
 - What is the exact error message?
 - Where do you see the error message?
 - When did the problem start? Has enrollment ever worked? 
-- What platform (Android, iOS, Windows) has the problem?
+- What platform (Android, iOS/iPadOS, Windows) has the problem?
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
 - What is the MDM authority?

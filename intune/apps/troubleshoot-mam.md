@@ -47,7 +47,7 @@ These are common issues an IT administrator may experience when using Intune app
 |User accounts missing from app protection policy reports | Admin console reports do not show user accounts to which app protection policy was recently deployed. | If a user is newly targeted by an app protection policy, it can take up to 24 hours for that user to show up in reports as a targeted user. |
 | Policy changes not working | Changes and updates to app protection policy can take up to 8 hours to apply. | If applicable, the end-user can log out of the app and log back in to force sync with service. |
 | App protection policy not working with DEP | App protection policy is not applying to Apple DEP devices. | Please ensure you are using User Affinity with Apple Device Enrollment Program (DEP). User Affinity is required for any app that requires user authentication under DEP. <br><br>Refer to [Automatically enroll iOS devices with Apple's Device Enrollment Program](../enrollment/device-enrollment-program-enroll-ios.md) for more information on iOS DEP enrollment.|
-| Data transfer policy not working with iOS | The **Allow app to transfer data to other apps** and **Allow app to receive data from other apps** policies do not successfully manage data transfer in iOS. | See [How to manage data transfer between iOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md). |
+| Data transfer policy not working with iOS | The **Allow app to transfer data to other apps** and **Allow app to receive data from other apps** policies do not successfully manage data transfer in iOS/iPadOS. | See [How to manage data transfer between iOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md). |
 
 ## Common end-user issues
 

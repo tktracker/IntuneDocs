@@ -41,7 +41,7 @@ The **Devices** workload gives you insights into the devices you manage, and let
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
-   - **Overview** shows a visual snapshot of the enrolled devices, and also shows how many devices are using the different platforms, including Android, iOS, and more.
+   - **Overview** shows a visual snapshot of the enrolled devices, and also shows how many devices are using the different platforms, including Android, iOS/iPadOS, and more.
    - **All devices** shows a list of the enrolled devices you manage.
 
      Use the **Export** feature to create a .csv list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
@@ -75,7 +75,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Remote control for Android](teamviewer-support.md)
   - [Synchronize device](device-sync.md)
   - [Rename device](device-rename.md)
-  - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
+  - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
 
 ## Next steps
