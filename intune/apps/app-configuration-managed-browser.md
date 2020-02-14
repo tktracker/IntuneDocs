@@ -142,7 +142,7 @@ SSO requires your device to be registered by the Microsoft Authenticator app on 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 3. On the **Basics** page of the **Create app configuration policy** pane, enter a **Name** and optional **Description** for the app configuration settings.
-4. Choose **Select the public app** and choose the **Managed Browser** and/or **Edge** for iOS, for Android, or for both.
+4. Choose **Select the public app** and choose the **Managed Browser** and/or **Edge** for iOS/iPadOS, for Android, or for both.
 5. Click **Select** to return to the **Create app configuration policy** pane.
 6. Click **Next** to display the **Settings** page.
 7. On the **Settings** page you define key and value pairs to supply configurations for the app. Use the sections later in this article to learn about the different key and value pairs you can define.

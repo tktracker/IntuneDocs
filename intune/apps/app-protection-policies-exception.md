@@ -43,7 +43,7 @@ Within an Intune Application Protection Policy, setting **Allow app to transfer 
 > Modifying or adding to the data transfer policy exceptions doesn't impact other App Protection Policies, such as cut, copy, and paste restrictions. 
 
 ## iOS data transfer exceptions
-For a policy targeting iOS, you can configure data transfer exceptions by URL protocol. To add an exception, check the documentation provided by the developer of the app to find information about supported URL protocols. For more information about iOS data transfer exceptions, see [iOS app protection policy settings - Data transfer exemptions](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+For a policy targeting iOS/iPadOS, you can configure data transfer exceptions by URL protocol. To add an exception, check the documentation provided by the developer of the app to find information about supported URL protocols. For more information about iOS/iPadOS data transfer exceptions, see [iOS app protection policy settings - Data transfer exemptions](app-protection-policy-settings-ios.md#data-transfer-exemptions).
 
 > [!NOTE]
 > Microsoft does not have a method to manually find the URL protocol for creating app exceptions for third-party applications. 

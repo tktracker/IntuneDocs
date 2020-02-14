@@ -53,7 +53,7 @@ You can explicitly choose to wipe your company’s corporate data from the end u
 The app protection policy settings table has columns for **Setting**, **Value**, and **Action**.
 
 ### iOS policy settings
-For iOS, you will be able to configure actions for the following settings using the **Setting** dropdown:
+For iOS/iPadOS, you will be able to configure actions for the following settings using the **Setting** dropdown:
 - Max PIN attempts
 - Offline grace period
 - Jailbroken/rooted devices
