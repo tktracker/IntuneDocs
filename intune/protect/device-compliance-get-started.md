@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -108,7 +108,9 @@ Intune also includes a set of built-in compliance policy settings. The following
   - Allow the company portal to use location services.
   - Evaluate and report its jailbreak status to Intune at least once every 72 hours. Otherwise, the device is marked not compliant. Evaluation is triggered by opening the Company Portal app or physically moving the device 500 meters or more. If the device doesn't move 500 meters in 72 hours, the user needs to open the Company Portal app for enhanced jail break evaluation.
 
-- **Compliance status validity period (days)**: Enter the time period that devices report the status for all received compliance policies. Devices that don't return the status within this time period are treated as noncompliant. The default value is 30 days.
+- **Compliance status validity period (days)**: Enter the time period that devices report the status for all received compliance policies. Devices that don't return the status within this time period are treated as noncompliant. The default value is 30 days. The minimum value is 1 day.
+
+  This setting shows as the **Is active** default compliance policy (**Devices** > **Monitor** > **Setting compliance**). The background task for this policy runs once a day.
 
 You can use these built-in policies to monitor these settings. Intune also [refreshes or checks for updates](create-compliance-policy.md#refresh-cycle-times) at different intervals, depending on the device platform. [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md) is a good resource.
 
