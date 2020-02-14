@@ -53,7 +53,7 @@ This feature is not supported for the following systems:
     ![Screenshot of Locate device using Intune in Azure](./media/device-locate/locate-device.png)
 
 
-## Activate lost mode sound alert on an iOS/iPadOS device
+## Activate lost mode sound alert on an iOS device
 
 If someone has lost their iOS/iPadOS 9.3 or later device, you can remotely trigger the device to play an alert sound so the user can find it. The device must be in [lost mode](device-lost-mode.md).
 
