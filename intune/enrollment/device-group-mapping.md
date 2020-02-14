@@ -38,7 +38,7 @@ To make managing devices easier, you can use Microsoft Intune device categories 
 
 Device categories use the following workflow:
 1. Create categories that users can choose from when they enroll their device.
-2. When users of iOS and Android devices enroll a device, they must choose a category from the list of categories you configured. To assign a category to a Windows device, users must use the Company Portal website.
+2. When users of iOS/iPadOS and Android devices enroll a device, they must choose a category from the list of categories you configured. To assign a category to a Windows device, users must use the Company Portal website.
 3. You can then deploy policies and apps to these groups.
 
 You can create any device categories you want. For example:
@@ -82,13 +82,13 @@ If the **Device category** column isn’t shown, select **Columns** > **Category
 
 ## After you configure device groups
 
-When users of iOS and Android devices enroll their device, they must choose a category from the list of categories you configured. After they choose a category and finish enrollment, their device is added to the Intune device group, or the Active Directory security group that corresponds with the category they chose.
+When users of iOS/iPadOS and Android devices enroll their device, they must choose a category from the list of categories you configured. After they choose a category and finish enrollment, their device is added to the Intune device group, or the Active Directory security group that corresponds with the category they chose.
 
 Windows users should use the Company Portal website to select a category.
 
 Regardless of platform, your users can always go to portal.manage.microsoft.com after enrolling the device. Have the user access the Company Portal website, and go to **My Devices**. The user can choose an enrolled device listed on the page, and then select a category.
 
-After choosing a category, the device is automatically added to the corresponding group you created. If a device is already enrolled before you configure categories, the user sees a notification about the device on the Company Portal website. This lets the user know to select a category the next time they access the Company Portal app on iOS or Android.
+After choosing a category, the device is automatically added to the corresponding group you created. If a device is already enrolled before you configure categories, the user sees a notification about the device on the Company Portal website. This lets the user know to select a category the next time they access the Company Portal app on iOS/iPadOS or Android.
 
 ## Further information
 - You can edit a device category in the Azure portal, but you must manually update any Azure AD security groups that reference this category.

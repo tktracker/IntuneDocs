@@ -127,4 +127,4 @@ The following options aren't supported on devices enrolled with User Enrollment.
 
 ## Next steps
 
-[Set up iOS and iPadOS User Enrollment](ios-user-enrollment.md)
+[Set up iOS/iPadOS and iPadOS User Enrollment](ios-user-enrollment.md)
