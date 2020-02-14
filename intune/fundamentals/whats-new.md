@@ -74,7 +74,7 @@ Intune now supports uninstalling Microsoft Edge version 77 and later on Windows 
 The **What's next?** screen has been removed from the Android work profile enrollment flow in Company Portal to streamline the user experience. Go to [Enroll with Android work profile](/intune-user-help/enroll-device-android-work-profile) to see the updated Android work profile enrollment flow.  
 
 #### Company Portal app improved performance<!-- 6178652 -->
-This feature will be rolled out at a later date.
+The Company Portal app has been updated to support improved performance for devices that use ARM64 processors, such as the Surface Pro X. Previously, the Company Portal operated in an emulated ARM32 mode. Now, in version 10.4.7080.0 and above, the Company Portal app is natively compiled for ARM64. For more information about the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](~/apps/company-portal-app.md).
 
 <!-- ########################## -->
 ## Week of January 27, 2020
