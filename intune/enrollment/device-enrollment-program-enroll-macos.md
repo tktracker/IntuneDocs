@@ -187,7 +187,7 @@ You must assign an enrollment program profile to devices before they can enroll.
 
 ### Assign a default profile
 
-You can pick a default macOS and iOS profile to be applied to all devices enrolling with a specific token. 
+You can pick a default macOS and iOS/iPadOS profile to be applied to all devices enrolling with a specific token. 
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS Enrollment** > **Enrollment program tokens** > choose a token in the list.
 2. Choose **Set Default Profile**, choose a profile in the drop-down list, and then choose **Save**. This profile will be applied to all devices that enroll with the token.

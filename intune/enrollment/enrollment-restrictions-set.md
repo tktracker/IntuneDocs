@@ -71,7 +71,7 @@ Default restrictions are automatically provided for both device type and device 
 5. Under **Versions**, choose the minimum and maximum versions that you want the allowable platforms to support. Version restrictions only apply to devices enrolled with the Company Portal.
      Supported version formats include:
     - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
-    - iOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
+    - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
     - Windows supports major.minor.build.rev for Windows 10 only.
     
     > [!IMPORTANT]
@@ -162,8 +162,8 @@ The following personal enrollment methods will also be blocked:
 \* These won't be blocked if registered with Autopilot.
 
 
-## Blocking personal iOS devices
-By default, Intune classifies iOS devices as personally-owned. To be classified as corporate-owned, an iOS device must fulfill one of the following conditions:
+## Blocking personal iOS/iPadOS devices
+By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
 - Registered with a serial number or IMEI.
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
 
