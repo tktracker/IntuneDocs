@@ -73,7 +73,7 @@ Add Slack for EMM as a managed iOS app in Intune and assign your Slack users. Ap
 10. Click **Save**.
 
 ### Add an app configuration policy for Slack for EMM
-Add an app configuration policy for the Slack for EMM iOS. App configuration policies for managed devices are platform-specific, so you need to add a separate policy for your Slack users on Android devices.
+Add an app configuration policy for the Slack for EMM iOS/iPadOS. App configuration policies for managed devices are platform-specific, so you need to add a separate policy for your Slack users on Android devices.
 1. In the admin center, select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. In Name, enter 'Slack app configuration policy test'.
 3. Under Device enrollment type, confirm **Managed devices** is set.

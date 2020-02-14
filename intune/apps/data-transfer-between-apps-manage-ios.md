@@ -50,7 +50,7 @@ Use App protection policies with the iOS **Open-in management** feature to prote
 ## Configure user UPN setting for Microsoft Intune or third-party EMM
 Configuring the user UPN setting is **required** for devices that are managed by Intune or a third-party EMM solution to identify the enrolled user account. The UPN configuration works with the app-protection policies you deploy from Intune. The following procedure is a general flow on how to configure the UPN setting and the resulting user experience:
 
-1. In the [Azure portal](https://portal.azure.com), [create and assign an app protection policy](app-protection-policies.md) for iOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
+1. In the [Azure portal](https://portal.azure.com), [create and assign an app protection policy](app-protection-policies.md) for iOS/iPadOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
 
 2. Deploy the apps and the email profile that you want managed through Intune or your third-party MDM solution using the following generalized steps. This experience is also covered by *Example 1*.
 
@@ -95,7 +95,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
 
 1. A user opens the Microsoft OneDrive app on an enrolled iOS device and signs-in to their work account.  The account the user enters must match the account UPN you specified in the app configuration settings for the Microsoft OneDrive app.
 
-2. After sign-in, your Adminstrator configured APP settings apply to the user account in Microsoft OneDrive.  This includes configuring the **Send Org data to other apps** setting to the **Policy managed apps with OS sharing** value.
+2. After sign-in, your Administrator configured APP settings apply to the user account in Microsoft OneDrive.  This includes configuring the **Send Org data to other apps** setting to the **Policy managed apps with OS sharing** value.
 
 3. The user previews a work file and attempts to share via Open-in to iOS managed app.  
 
@@ -110,7 +110,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
 1. When the Word app launches, one of two experiences occur:
    1. The data is protected by Intune APP when:
       - The user is signed-in to their work account that matches the account UPN you specified in the app configuration settings for the Microsoft Word app. 
-      - Your Adminstrator configured APP settings apply to the user account in Microsoft Word.  This includes configuring the **Receive data from other apps** setting to the **All apps with incoming Org data** value.
+      - Your Administrator configured APP settings apply to the user account in Microsoft Word.  This includes configuring the **Receive data from other apps** setting to the **All apps with incoming Org data** value.
       - The data transfer succeeds and the document is tagged with the work identity in the app.  Intune APP protects the user actions for the document.
    1. The data is **not** protected by Intune APP when:
       - The user is **not** signed-in to their work account.
