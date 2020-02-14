@@ -78,7 +78,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, iOS|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
-|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS, Android|
+|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android|
 |MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
 |Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, iOS/iPadOS, Android|
@@ -87,16 +87,16 @@ Depending on the carrier used by the devices, not all details might be collected
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS/iPadOS, Android|
 |ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android|
-|Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS, Android|
-|Last contact|The date and time that the device last connected to Intune.|Windows, iOS, Android|
+|Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS/iPadOS, Android|
+|Last contact|The date and time that the device last connected to Intune.|Windows, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
-|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, iOS, Android|
-|Intune registered|If **Yes**, the device is registered with Intune|Windows, iOS, Android|
-|Compliance|The device's compliance state.|Windows, iOS, Android|
-|EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, iOS, Android|
-|EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, iOS, Android|
-|Supervised|If **Yes**, administrators have enhanced control over the device.|Windows, iOS, Android|
-|Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS, Android|
+|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, iOS/iPadOS, Android|
+|Intune registered|If **Yes**, the device is registered with Intune|Windows, iOS/iPadOS, Android|
+|Compliance|The device's compliance state.|Windows, iOS/iPadOS, Android|
+|EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, iOS/iPadOS, Android|
+|EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, iOS/iPadOS, Android|
+|Supervised|If **Yes**, administrators have enhanced control over the device.|Windows, iOS/iPadOS, Android|
+|Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
 > Phone number is not inventoried on Android Enterprise Dedicated or Fully Managed devices.
