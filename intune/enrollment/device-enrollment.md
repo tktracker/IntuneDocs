@@ -3,7 +3,7 @@
 
 title: What is Microsoft Intune device enrollment
 titleSuffix: Microsoft Intune
-description: Learn about enrollment for iOS, Android, and Windows devices.
+description: Learn about enrollment for iOS/iPadOS, Android, and Windows devices.
 keywords:
 author: ErikjeMS
 ms.author: erikje
