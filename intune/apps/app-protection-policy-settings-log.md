@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 Learn about the settings you can review in the app protection logs. Access logs by enabling Intune Diagnostics on a mobile client. 
 
 The process to enable and collect logs varies by platform:
-- **iOS devices** - Use Microsoft Edge for iOS to collect logs. For details, see [Manage web access by using Microsoft Edge with Microsoft Intune](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs). 
+- **iOS/iPadOS devices** - Use Microsoft Edge for iOS/iPadOS to collect logs. For details, see [Manage web access by using Microsoft Edge with Microsoft Intune](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs). 
 - **Windows 10 devices** - Use *MDMDiag* and event logs. See, [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) in the Windows client management content, and the blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
 - **Android devices** - No diagnostic data for App Protection Policy (APP) on Android devices.
 

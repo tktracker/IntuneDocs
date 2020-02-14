@@ -55,7 +55,7 @@ Intune MAM supports two configurations:
 
 Intune offers a range of capabilities to help you get the apps you need on the devices you want to run them on. The following table provides a summary of app management capabilities.
 
-|  | Android/Android Enterprise | iOS | macOS | Windows 10 | Windows Phone 8.1 |
+|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Add and assign   apps to devices and users | Yes | Yes | Yes | Yes | Yes |
 | Assign apps to   devices not enrolled with Intune | Yes | Yes | No | No | No |
@@ -102,7 +102,7 @@ The next four sections describe the options available in the **Apps** pane.
   - [App protection policies](app-protection-policies.md).
 - **App selective wipe**: Select this option to remove only corporate data from a selected user's device. For more information, see:
   - [App selective wipe](apps-selective-wipe.md).
-- **iOS app provisioning profiles**: iOS apps include a provisioning profile and code that is signed by a certificate. When the certificate expires, the app can no longer be run. Intune gives you the tools to proactively assign a new provisioning profile policy to devices that have apps that are nearing expiration. For more information, see:
+- **iOS app provisioning profiles**: iOS/iPadOS apps include a provisioning profile and code that is signed by a certificate. When the certificate expires, the app can no longer be run. Intune gives you the tools to proactively assign a new provisioning profile policy to devices that have apps that are nearing expiration. For more information, see:
   - [iOS app provisioning profiles](app-provisioning-profile-ios.md).
 
 For more information about this section, see [Manage apps](app-management.md).
@@ -119,7 +119,7 @@ For more information about this section, see [Manage apps](app-management.md).
 For more information about this section, see [Monitor apps](apps-monitor.md).
 
 ### Set up
-- **iOS VPP tokens**: Apply and view your iOS Volume Purchase Program (VPP) licenses. For more information, see:
+- **iOS VPP tokens**: Apply and view your iOS/iPadOS Volume Purchase Program (VPP) licenses. For more information, see:
   - [iOS volume-purchased apps](vpp-apps-ios.md)
 - **Windows enterprise certificate**: Apply or view the status of a code-signing certificate that's used to distribute line-of-business apps to your managed Windows devices.
 - **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate, which is needed to distribute XAP and WP8.x appx files to Windows 10 Mobile devices.
