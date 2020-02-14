@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Tutorial - Use Apple Business Manager or the Device Enrollment Program to enroll iOS devices in Intune
+title: Tutorial - Use Apple Business Manager or the Device Enrollment Program to enroll iOS/iPadOS devices in Intune
 titleSuffix: Microsoft Intune
-description: In this tutorial, you'll set up Apple's corporate device enrollment features from ABM to enroll iOS devices in Intune.
+description: In this tutorial, you'll set up Apple's corporate device enrollment features from ABM to enroll iOS/iPadOS devices in Intune.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -19,7 +19,7 @@ Customer intent: As an Intune admin, I want to set up the Apple's corporate devi
 ms.collection: M365-identity-device-management
 ---
 
-# Tutorial: Use Apple's Corporate Device Enrollment features in Apple Business Manager (ABM) to enroll iOS devices in Intune
+# Tutorial: Use Apple's Corporate Device Enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune
 The Device Enrollment features in Apple Business Manager simplifies enrolling devices. Intune also supports Apple's older Device Enrollment Program (DEP) portal, but we encourage you to start fresh with Apple Business Manager. With Microsoft Intune and Apple Corporate Device Enrollment, devices are automatically securely enrolled the first time the user turns on the device. You can therefore ship devices to many users without having to set up each device individually. 
 
 In this tutorial, you'll learn how to:
@@ -37,7 +37,7 @@ If you don’t have an Intune subscription, [sign up for a free trial account](.
 - Get an [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 
 ## Get an Apple Device Enrollment token
-Before enrolling iOS devices with Apple's corporate enrollment features, you need an Apple Device Enrollment token (.pem) file. This token lets Intune sync information about Apple devices that your corporation owns. It also permits Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
+Before enrolling iOS/iPadOS devices with Apple's corporate enrollment features, you need an Apple Device Enrollment token (.pem) file. This token lets Intune sync information about Apple devices that your corporation owns. It also permits Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
 
 You use the ABM or DEP portal to create a Device Enrollment token. You also use the portals to assign devices to Intune for management.
 
@@ -75,13 +75,13 @@ You use the ABM or DEP portal to create a Device Enrollment token. You also use 
 11. If you would like to apply Scope Tags to limit which admins have access to this token, select scopes.
 
 ## Create an Apple enrollment profile
-Now that you've installed your token, you can create an enrollment profile for corporate-owned iOS devices. A device enrollment profile defines the settings applied to a group of devices during enrollment.
+Now that you've installed your token, you can create an enrollment profile for corporate-owned iOS/iPadOS devices. A device enrollment profile defines the settings applied to a group of devices during enrollment.
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens**.
 
 2. Select the token you just installed, choose **Profiles** > **Create profile**.
 
-3. Under **Create Profile**, enter *TestDEPProfile* for **Name** and *Testing DEP for iOS devices* for **Description**. Users do not see these details.
+3. Under **Create Profile**, enter *TestDEPProfile* for **Name** and *Testing DEP for iOS/iPadOS devices* for **Description**. Users do not see these details.
 
 4. Choose **iOS** under **Platform**.
 

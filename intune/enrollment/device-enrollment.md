@@ -38,7 +38,7 @@ As you can see in the following tables, there are several methods to enroll your
 
 By default, devices for all platforms are allowed to enroll in Intune. However, you can [restrict devices by platform](enrollment-restrictions-set.md#create-a-device-type-restriction).
 
-## iOS enrollment methods
+## iOS/iPadOS enrollment methods
 
 | **Method** | **Reset Required** | [**User Affinity**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Locked** | **Details** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -89,36 +89,36 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 Bring your own devices (BYOD) include personally-owned phones, tablets, and PCs. Users install and run the Company Portal app to enroll BYODs. This program lets users access company resources like email.
 
 ## Corporate-owned device
-[Corporate-owned devices (COD)](corporate-identifiers-add.md) include phones, tablets, and PCs owned by the organization and distributed to the workforce. COD enrollment supports scenarios like automatic enrollment, shared devices, or pre-authorized enrollment requirements. A common way to enroll CODs is for an administrator or manager to use the device enrollment manager (DEM). iOS devices can be enrolled directly through the Device Enrollment Program (DEP) tools that are provided by Apple. Devices with an IMEI number can also be identified and tagged as corporate-owned.
+[Corporate-owned devices (COD)](corporate-identifiers-add.md) include phones, tablets, and PCs owned by the organization and distributed to the workforce. COD enrollment supports scenarios like automatic enrollment, shared devices, or pre-authorized enrollment requirements. A common way to enroll CODs is for an administrator or manager to use the device enrollment manager (DEM). iOS/iPadOS devices can be enrolled directly through the Device Enrollment Program (DEP) tools that are provided by Apple. Devices with an IMEI number can also be identified and tagged as corporate-owned.
 
 ### Device enrollment manager
 Device enrollment manager (DEM) is a special user account that's used to enroll and manage multiple corporate-owned devices. Managers can install the Company Portal and enroll many user-less devices. These types of devices are good for point-of-sale or utility apps, for example, but not for users who need to access email or company resources. Learn more about [DEM](device-enrollment-manager-enroll.md).
 
 ### Apple Device Enrollment Program
-Apple Device Enrollment Program (DEP) management lets you create and deploy policy “over the air” to iOS and macOS devices that are purchased and managed with DEP. The device is enrolled when users turn on the device for the first time and run Setup Assistant. This method supports iOS supervised mode, which enables a device to be configured with specific functionality.
+Apple Device Enrollment Program (DEP) management lets you create and deploy policy “over the air” to iOS/iPadOS and macOS devices that are purchased and managed with DEP. The device is enrolled when users turn on the device for the first time and run Setup Assistant. This method supports iOS/iPadOS supervised mode, which enables a device to be configured with specific functionality.
 
-Learn more about iOS DEP enrollment:
+Learn more about iOS/iPadOS DEP enrollment:
 
-- [Choose how to enroll iOS devices](ios-enroll.md)
-- [Enroll iOS devices using Device Enrollment Program](device-enrollment-program-enroll-ios.md)
+- [Choose how to enroll iOS/iPadOS devices](ios-enroll.md)
+- [Enroll iOS/iPadOS devices using Device Enrollment Program](device-enrollment-program-enroll-ios.md)
 
 ### USB-SA
 IT admins use Apple Configurator, through USB, to prepare each corporate-owned device manually for enrollment using Setup Assistant. The IT admin creates an enrollment profile and exports it to Apple Configurator. When users receive their devices, they're then prompted to run Setup Assistant to enroll their device. This method supports **iOS supervised** mode, which in turn enables the following features:
 - Locked enrollment
 - Kiosk mode and other advanced configurations and restrictions
 
-Learn more about iOS Apple Configurator enrollment with Setup Assistant:
+Learn more about iOS/iPadOS Apple Configurator enrollment with Setup Assistant:
 
-- [Decide how to enroll iOS devices](ios-enroll.md)
-- [Enroll iOS devices with Configurator and Setup Assistant](apple-configurator-enroll-ios.md)
+- [Decide how to enroll iOS/iPadOS devices](ios-enroll.md)
+- [Enroll iOS/iPadOS devices with Configurator and Setup Assistant](apple-configurator-enroll-ios.md)
 
 ### USB-Direct
 For direct enrollment, the admin must enroll each device manually by creating an enrollment policy and exporting it to Apple Configurator. USB-connected, corporate-owned devices are enrolled directly and don't require a wipe. Devices are managed as user-less devices. They're not locked or supervised and can't support Conditional Access, jailbreak detection, or mobile application management.
 
-To learn more about iOS enrollment, see:
+To learn more about iOS/iPadOS enrollment, see:
 
-- [Decide how to enroll iOS devices](ios-enroll.md)
-- [Enroll iOS devices with Configurator and direct enrollment](apple-configurator-enroll-ios.md)
+- [Decide how to enroll iOS/iPadOS devices](ios-enroll.md)
+- [Enroll iOS/iPadOS devices with Configurator and direct enrollment](apple-configurator-enroll-ios.md)
 
 ## Mobile device cleanup after MDM certificate expiration
 
