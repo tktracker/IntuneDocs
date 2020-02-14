@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Find lost iOS devices with Microsoft Intune - Azure | Microsoft Docs
-description: Locate lost or stolen iOS devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
+title: Find lost iOS/iPadOS devices with Microsoft Intune - Azure | Microsoft Docs
+description: Locate lost or stolen iOS/iPadOS devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -28,15 +28,15 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Locate lost or stolen iOS devices with Intune
+# Locate lost or stolen iOS/iPadOS devices with Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-To get the location of a lost or stolen iOS device on a map, use the **Locate device** action. The device must be in supervised mode. Before you use this action, be sure the device is in [lost mode](device-lost-mode.md).
+To get the location of a lost or stolen iOS/iPadOS device on a map, use the **Locate device** action. The device must be in supervised mode. Before you use this action, be sure the device is in [lost mode](device-lost-mode.md).
 
 ## Supported platforms
 
-- iOS 9.3 and later
+- iOS/iPadOS 9.3 and later
 
 This feature is not supported for the following systems: 
 - Windows
@@ -48,7 +48,7 @@ This feature is not supported for the following systems:
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**, and then select **All devices**.
-4. From the list of devices you manage, choose an iOS device, and choose **...More**. Then choose the **Locate device** remote action.
+4. From the list of devices you manage, choose an iOS/iPadOS device, and choose **...More**. Then choose the **Locate device** remote action.
 5. After the device is located, its location is shown in **Locate device**.
     ![Screenshot of Locate device using Intune in Azure](./media/device-locate/locate-device.png)
 
