@@ -79,14 +79,14 @@ Depending on the carrier used by the devices, not all details might be collected
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, iOS|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
 |IMEI|The device's International Mobile Equipment Identity.|Windows, iOS, Android|
-|MEID|The device's mobile equipment identifier.|Windows, iOS, Android|
-|Manufacturer|The manufacturer of the device.|Windows, iOS, Android|
-|Model|The model of the device.|Windows, iOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS, Android*|
-|Subscribe carrier|The device's wireless carrier.|Windows, iOS, Android|
-|Cellular technology|The radio system used by the device.|Windows, iOS, Android|
-|Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS, Android|
-|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS, Android|
+|MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
+|Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
+|Model|The model of the device.|Windows, iOS/iPadOS, Android|
+|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android*|
+|Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
+|Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
+|Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS/iPadOS, Android|
+|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, iOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
