@@ -63,7 +63,7 @@ For iOS/iPadOS, you will be able to configure actions for the following settings
 - Device model(s)
 - Max allowed device threat level
 
-To use the **Device model(s)** setting, input a semi-colon separated list of iOS model identifiers. These values are not case-sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS model identifier under the Device Type column in [HockeyApp's support documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) or this [3rd party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
+To use the **Device model(s)** setting, input a semi-colon separated list of iOS/iPadOS model identifiers. These values are not case-sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS/iPadOS model identifier under the Device Type column in [HockeyApp's support documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) or this [3rd party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
 Example input: *iPhone5,2;iPhone5,3*
 
 On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on a variety of device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
@@ -71,8 +71,8 @@ Set one of the following actions:
 - Allow specified (Block non-specified)
 - Allow specified (Wipe non-specified)
 
-**What happens if the IT admin inputs a different list of iOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed iOS model identifier(s) in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* will be "iPhone5,3". 
+**What happens if the IT admin inputs a different list of iOS/iPadOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifier(s) in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* will be "iPhone5,3". 
 
 ### Android policy settings
 
