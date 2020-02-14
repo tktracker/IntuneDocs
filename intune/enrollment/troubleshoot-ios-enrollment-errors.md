@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting iOS device enrollment problems in Microsoft Intune
+title: Troubleshooting iOS/iPadOS device enrollment problems in Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Suggestions for troubleshooting some of the most common problems when you enroll iOS devices in Intune.
+description: Suggestions for troubleshooting some of the most common problems when you enroll iOS/iPadOS devices in Intune.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -27,9 +27,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshoot iOS device enrollment problems in Microsoft Intune
+# Troubleshoot iOS/iPadOS device enrollment problems in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when enrolling iOS devices in Intune.
+This article helps Intune administrators understand and troubleshoot problems when enrolling iOS/iPadOS devices in Intune.
 
 ## Prerequisites
 
@@ -50,12 +50,12 @@ Collect the following information about the problem:
 
 ### Profile Installation Failed. A Network Error Has Occurred.
 
-**Cause:** There's an unspecified problem with iOS on the device.
+**Cause:** There's an unspecified problem with iOS/iPadOS on the device.
 
 #### Resolution
 
-1. To prevent data loss in the following steps (restoring iOS deletes all data on the device), make sure to back up your data.
-2. Put the device in recovery mode and then restore it. Make sure that you set it up as a new device. For more information about how to restore iOS devices, see [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
+1. To prevent data loss in the following steps (restoring iOS/iPadOS deletes all data on the device), make sure to back up your data.
+2. Put the device in recovery mode and then restore it. Make sure that you set it up as a new device. For more information about how to restore iOS/iPadOS devices, see [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
 3. Re-enroll the device.
 
 ### Profile Installation Failed. Connection to the server could not be established.

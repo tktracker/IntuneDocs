@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Enroll iOS devices in Intune
+title: Enroll iOS/iPadOS devices in Intune
 titleSuffix: Microsoft Intune
-description: Set up enrollment of iOS devices in Microsoft Intune.
+description: Set up enrollment of iOS/iPadOS devices in Microsoft Intune.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -30,21 +30,21 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Enroll iOS devices in Intune
+# Enroll iOS/iPadOS devices in Intune
 
 Intune enables mobile device management (MDM) of iPads and iPhones to give users secure access to company email, data, and apps.
 
-As an Intune admin, you can set up enrollment for iOS and iPadOS devices to access company resources. You can let users enroll personally-owned devices, known as "bring your own device" (BYOD) enrollment. You can also set up enrollment of company-owned devices.
+As an Intune admin, you can set up enrollment for iOS/iPadOS and iPadOS devices to access company resources. You can let users enroll personally-owned devices, known as "bring your own device" (BYOD) enrollment. You can also set up enrollment of company-owned devices.
 
-## Prerequisites for iOS enrollment
+## Prerequisites for iOS/iPadOS enrollment
 
-Before you can enable iOS devices, complete the following steps:
+Before you can enable iOS/iPadOS devices, complete the following steps:
 
 - [Make sure your device is eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility).
 - [Set up Intune](../fundamentals/setup-steps.md) - These steps set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](../fundamentals/mdm-authority-set.md).
-- [Get an Apple MDM Push certificate](apple-mdm-push-certificate-get.md) - Apple requires a certificate to enable management of iOS and macOS devices.
+- [Get an Apple MDM Push certificate](apple-mdm-push-certificate-get.md) - Apple requires a certificate to enable management of iOiOS/iPadOS and macOS devices.
 
-## User-owned iOS and iPadOS devices (BYOD)
+## User-owned iOS/iPadOS and iPadOS devices (BYOD)
 
 You can let users enroll their personal devices for Intune management, know as "bring your own device" or BYOD. There are three options for enrolling users:
 - App Protection Policies give you the lightest BYOD experience, providing management at an app level only. However, if you want to also secure the device with a 6-digit complex PIN, you can use these policies along with User Enrollment.
