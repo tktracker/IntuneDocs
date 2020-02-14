@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Add app configuration policies for managed iOS devices
+title: Add app configuration policies for managed iOS/iPadOS devices
 titleSuffix: Microsoft Intune
-description: Learn how to use app configuration policies to provide configuration data to an iOS app when it is run.
+description: Learn how to use app configuration policies to provide configuration data to an iOS/iPadOS app when it is run.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -29,11 +29,11 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add app configuration policies for managed iOS devices
+# Add app configuration policies for managed iOS/iPadOS devices
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Use app configuration policies in Microsoft Intune to provide custom configuration settings for an iOS app. These configuration settings allow an app to be customized based on the app suppliers direction. You must get these configuration settings (keys and values) from the supplier of the app. To configure the app, you specify the settings as keys and values, or as XML containing the keys and values.
+Use app configuration policies in Microsoft Intune to provide custom configuration settings for an iOS/iPadOS app. These configuration settings allow an app to be customized based on the app suppliers direction. You must get these configuration settings (keys and values) from the supplier of the app. To configure the app, you specify the settings as keys and values, or as XML containing the keys and values.
 
 As the Microsoft Intune admin, you can control which user accounts are added to Microsoft Office applications on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. The supporting applications process the app configuration and remove and block unapproved accounts. The configuration policy settings are used when the app checks for them, typically the first time it is run.
 
@@ -45,7 +45,7 @@ Once you add an app configuration policy, you can set the assignments for the ap
 Once you have selected the included groups for your application configuration policy, you can also choose the specific groups to exclude. For more information, see [Include and exclude app assignments in Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
-> This policy type is currently available only for devices running iOS 8.0 and later. It supports the following app installation types:
+> This policy type is currently available only for devices running iOS/iPadOS 8.0 and later. It supports the following app installation types:
 >
 > - **Managed iOS app from the app store**
 > - **App package for iOS**
@@ -110,7 +110,7 @@ The \{\{ and \}\} characters are used by token types only and must not be used f
 
 ### Allow only configured organization accounts in multi-identity apps 
 
-For iOS devices, use the following key/value pairs:
+For iOS/iPadOS devices, use the following key/value pairs:
 
 | **Key** | IntuneMAMAllowedAccountsOnly |
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -181,17 +181,17 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{deviceid\}\}—for example, **b9841cd9-9843-405f-be28-b2265c59ef97**
 - \{\{userid\}\}—for example, **3ec2c00f-b125-4519-acf0-302ac3761822**
 - \{\{username\}\}—for example, **John Doe**
-- \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS devices)
-- \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS devices)
+- \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS/iPadOS devices)
+- \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## Configure the Company Portal app to support iOS DEP devices
 
-DEP (Apple's Device Enrollment Program) enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS DEP devices using the following steps.
+DEP (Apple's Device Enrollment Program) enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices using the following steps.
 
 1. In Intune, add the Intune Company Portal app if necessary, by going to **Intune** > **Apps** > **All apps** > **Add**.
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
-3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md).
+3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 
     ``` xml
     <dict>
@@ -209,11 +209,11 @@ DEP (Apple's Device Enrollment Program) enrollments are not compatible with the 
 4. Tell end users to sign into the Company Portal app when it is automatically installed.
 
 ## Monitor iOS  app configuration status per device 
-Once a configuration policy has been assigned, you can monitor iOS app configuration status for each managed device. From **Microsoft Intune** in the Azure portal, select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
+Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the Azure portal, select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
 
 ## Additional information
 
-- [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## Next steps
 
