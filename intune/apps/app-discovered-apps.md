@@ -63,7 +63,7 @@ The following list provides the app platform type, the apps that are monitored f
 | Windows 8.1 | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | Windows Phone 8 | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | Windows RT | Only managed apps | Only managed apps | Every 7 days from device enrollment |
-| iOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
+| iOS/iPadOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
 | macOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
 | Android | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
 | Android Enterprise | Only managed apps | Only apps installed in the Work Profile | Every 7 days from device enrollment |

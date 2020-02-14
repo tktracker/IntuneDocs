@@ -46,7 +46,7 @@ Using a browser protected with Intune policy (Microsoft Edge or Intune Managed B
 
 ## Microsoft Edge support
 
-You can use Microsoft Edge for enterprise scenarios on iOS and Android devices. Microsoft Edge supports all of the same management scenarios as the Intune Managed Browser with the addition of improvements to end-user experience. The following Microsoft Edge enterprise features that are enabled by Intune policies include:
+You can use Microsoft Edge for enterprise scenarios on iOS/iPadOS and Android devices. Microsoft Edge supports all of the same management scenarios as the Intune Managed Browser with the addition of improvements to end-user experience. The following Microsoft Edge enterprise features that are enabled by Intune policies include:
 
 - **Dual-Identity** - Users can add both a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is similar to the architecture and experience in Office 365 and Outlook. Intune admins will be able to set the desired policies for a protected browsing experience within the work account. 
 - **Intune app protection policy integration** - Admins can now target app protection policies to Microsoft Edge, including the control of cut, copy, and paste, preventing screen captures, and ensuring that user-selected links open only in other managed apps.
@@ -61,9 +61,9 @@ Microsoft Edge and the Intune Managed Browser are web browser apps that you and 
 
 Operating system requirements for browser policies:
 - Android 4 and later, or
-- iOS 8.0 and later.
+- iOS/iPadOS 8.0 and later.
 
-Earlier versions of Android and iOS will be able to continue using the Managed Browser, but will be unable to install new versions of the app and might not be able to access all of the app capabilities. We encourage you to update these devices to a supported operating system version.
+Earlier versions of Android and iOS/iPadOS will be able to continue using the Managed Browser, but will be unable to install new versions of the app and might not be able to access all of the app capabilities. We encourage you to update these devices to a supported operating system version.
 
 >[!NOTE]
 >The Managed Browser does not support the Secure Sockets Layer version 3 (SSLv3) cryptographic protocol.
@@ -127,9 +127,9 @@ The Managed Browser does not support classic Conditional Access policies. For mo
 
 ## Single Sign-on to Azure AD-connected web apps in policy-protected browsers
 
-Microsoft Edge and Intune Managed Browser on iOS and Android can take advantage of SSO to all web apps (SaaS and on-prem) that are Azure AD-connected. When the Microsoft Authenticator app is present on iOS or the Intune Company Portal app on Android, users of a policy-protected browser will be able to access Azure AD-connected web apps without having to re-enter their credentials.
+Microsoft Edge and Intune Managed Browser on iOS/iPadOS and Android can take advantage of SSO to all web apps (SaaS and on-prem) that are Azure AD-connected. When the Microsoft Authenticator app is present on iOS/iPadOS or the Intune Company Portal app on Android, users of a policy-protected browser will be able to access Azure AD-connected web apps without having to re-enter their credentials.
 
-SSO requires your device to be registered by the Microsoft Authenticator app on iOS or the Intune Company Portal on Android. Users with the Authenticator app or Intune Company Portal will be prompted to register their device when they navigate to an Azure AD-connected web app in a policy-protected browser, if their device has not already been registered by another application. Once the device is registered with the account managed by Intune, that account will have SSO enabled for Azure AD-connected web apps. 
+SSO requires your device to be registered by the Microsoft Authenticator app on iOS/iPadOS or the Intune Company Portal on Android. Users with the Authenticator app or Intune Company Portal will be prompted to register their device when they navigate to an Azure AD-connected web app in a policy-protected browser, if their device has not already been registered by another application. Once the device is registered with the account managed by Intune, that account will have SSO enabled for Azure AD-connected web apps. 
 
 > [!NOTE]
 > Device registration is a simple check-in with the Azure AD service. It does not require full device enrollment and does not give IT any additional privileges on the device.
@@ -190,7 +190,7 @@ Using the above procedure to create a Microsoft Edge app configuration. Supply t
 
 ## How to configure Application Proxy settings for protected browsers
 
-Microsoft Edge and the Intune Managed Browser and [Azure AD Application Proxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) can be used together to support the following scenarios for users of iOS and Android devices:
+Microsoft Edge and the Intune Managed Browser and [Azure AD Application Proxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) can be used together to support the following scenarios for users of iOS/iPadOS and Android devices:
 
 - A user downloads and signs in to the Microsoft Outlook app. Intune app protection policies are automatically applied. They encrypt saved data and block the user from transferring corporate files to unmanaged apps or locations on the device. When the user then clicks a link to an intranet site in Outlook, you can specify that the link opens in a protected browser application, rather than another browser. The protected browser recognizes that this intranet site has been exposed to the user through the Application Proxy. The user is automatically routed through the Application Proxy, to authenticate with any applicable multi-factor authentication, and Conditional Access before reaching the intranet site. This site, which could previously not be found while the user was remote, is now accessible and the link in Outlook works as expected.
 - A remote user opens the protected browser application and navigates to an intranet site using the internal URL. The protected browser recognizes that this intranet site has been exposed to the user via the Application Proxy. The user is automatically routed through the Application Proxy, to authenticate with any applicable multi-factor authentication, and Conditional Access before reaching the intranet site. This site, which could previously not be found while the user was remote, is now accessible.
@@ -320,9 +320,9 @@ Using the procedure to create a Microsoft Edge or Managed Browser app configurat
 
 ## How to access to managed app logs using the Managed Browser on iOS
 
-End users with the managed Browser installed on their iOS device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS apps.
+End users with the managed Browser installed on their iOS/iPadOS device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS/iPadOS apps.
 
-1. Open iOS **Settings**.
+1. Open iOS/iPadOS **Settings**.
 2. Select the managed **Browser** application settings.
 3. Toggle **Enable Intune Diagnostics** to set the browser in troubleshooting mode.
 4. Open the managed **Browser**. Click **View Intune App Status** to review individual application policy settings.
@@ -349,7 +349,7 @@ For a list of the settings stored in the app logs, see [Review app protection lo
 ### Turn off usage data
 Microsoft automatically collects anonymous data about the performance and use of the Managed Browser to improve Microsoft products and services. Users can turn off data collection by using the **Usage Data** setting on their devices. You have no control over the collection of this data.
 
-- On iOS devices, websites that users visit that have an expired or untrusted certificate cannot be opened.
+- On iOS/iPadOS devices, websites that users visit that have an expired or untrusted certificate cannot be opened.
 
 ## Next steps
 
