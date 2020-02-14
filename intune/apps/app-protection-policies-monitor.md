@@ -55,8 +55,8 @@ The retention period for app protection data is 90 days. Any app instances that 
 - **Flagged users**: The number of users who are experiencing issues with their devices. Jailbroken (iOS) and rooted (Android) devices are reported under **Flagged users**. Also, users with devices that are flagged by the Google SafetyNet device attestation check (if turned on by the IT admin) are reported here. 
 - **Users with potentially harmful apps**: The number of users who may have a harmful app on their Android device detected by Google Play Protect. 
 - **User status for iOS** and **User status for Android**: The number of users who have used an app who have a policy assigned to them in a work context for the related platform. This information shows the number of users managed by the policy, as well as the number of users who are using an app that is not targeted by any policy in a work context. You might consider adding these users to the policy.
-- **Top Protected iOS Apps** and **Top Protected Android Apps**: Based on the most used iOS and Android apps, this information shows the number of protected and unprotected apps by platform.
-- **Top Configured iOS Apps Without Enrollment** and **Top Configured Android Apps Without Enrollment**: Based on the most used iOS and Android apps for unenrolled devices, this information shows the number of configured apps by platform  (as in, using an app configuration policy).
+- **Top Protected iOS/iPadOS Apps** and **Top Protected Android Apps**: Based on the most used iOS/iPadOS and Android apps, this information shows the number of protected and unprotected apps by platform.
+- **Top Configured iOS/iPadOS Apps Without Enrollment** and **Top Configured Android Apps Without Enrollment**: Based on the most used iOS/iPadOS and Android apps for unenrolled devices, this information shows the number of configured apps by platform  (as in, using an app configuration policy).
 
     > [!NOTE]
     > If you have multiple policies per platform, a user is considered managed by policy when they have at least one policy assigned to them.
@@ -177,6 +177,6 @@ Follow these steps to generate App Protection .csv file or App Configuration .cs
 > Intune provides additional device reporting fields, including App Registration ID, Android manufacturer, model, and security patch version, as well as iOS model. In Intune, you access these fields by selecting **Apps** > **App protection status** > **App Protection Report: iOS/iPadOS, Android**. In addition, these parameters help you configure the **Allow** list for the device manufacturer (Android), the **Allow** list for the device model (Android and iOS), and the **minimum Android security patch version** setting.   
  
 ## See also
-- [Manage data transfer between iOS apps](data-transfer-between-apps-manage-ios.md)
+- [Manage data transfer between iOS/iPadOS apps](data-transfer-between-apps-manage-ios.md)
 - [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
-- [What to expect when your iOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+- [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
