@@ -54,7 +54,7 @@ You can find standard Intune policy check-in frequencies in the [Refresh cycle t
 
 ## Retryable error codes
 
-When an administrator runs the **Sync** device action, iOS and Android apps that failed and raised a retryable error code are still available to the device. However, apps that raised a nonretryable error code must wait seven days before they're available to the device.
+When an administrator runs the **Sync** device action, iOS/iPadOS and Android apps that failed and raised a retryable error code are still available to the device. However, apps that raised a nonretryable error code must wait seven days before they're available to the device.
 
 
 | Error code  | Suggested description | Retryable |
