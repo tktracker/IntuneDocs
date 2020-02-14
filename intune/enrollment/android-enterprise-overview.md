@@ -59,7 +59,7 @@ Android Enterprise provides infrastructure for deploying app configuration value
 
 ## Email configuration
 
-Android Enterprise doesn’t provide a default email app or native email profile object like those provided by iOS. Instead, email configurations can be set by applying app configuration settings to email apps that support them. Gmail and Nine Work are two Exchange ActiveSync (EAS) client apps in the Play Store that support configuration with Android Enterprise app configuration.
+Android Enterprise doesn’t provide a default email app or native email profile object like those provided by iOS/iPadOS. Instead, email configurations can be set by applying app configuration settings to email apps that support them. Gmail and Nine Work are two Exchange ActiveSync (EAS) client apps in the Play Store that support configuration with Android Enterprise app configuration.
 
 Intune provides configuration templates for Gmail and Nine Work apps when managed as work apps. Other email apps that support app configuration profiles can be configured with mobile app configuration policies.
 

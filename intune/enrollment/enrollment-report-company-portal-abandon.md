@@ -49,7 +49,7 @@ If a user chooses to stop enrollment and restart multiple times, it shows up as 
 
 ## What does the report show?
 
-The reports include data for iOS and Android devices.
+The reports include data for iOS/iPadOS and Android devices.
 
 The reports show data for the past two weeks, but you can filter the report to show any period up to 30 days in the past.
 
@@ -91,10 +91,10 @@ The following tables show the list of user actions that qualify as prompting an 
 
 | Action name | Screen or flow | Platform | Action |
 | ---- |---- |---- |---- |
-| iOSProfileLaunch | Prompt to show a configuration profile | iOS | **Ignore** |
-| iOSProfileLaunch | Installing profile screen | iOS | **Cancel** |
-| iOSProfileLaunch | Prompt to trust the profile’s source to enroll the device | iOS | **Cancel** |
-| iOSProfileLaunch | Install profile screen until profile is installed | iOS | Took > 30 minutes |
+| iOSProfileLaunch | Prompt to show a configuration profile | iOS/iPadOS | **Ignore** |
+| iOSProfileLaunch | Installing profile screen | iOS/iPadOS | **Cancel** |
+| iOSProfileLaunch | Prompt to trust the profile’s source to enroll the device | iOS/iPadOS | **Cancel** |
+| iOSProfileLaunch | Install profile screen until profile is installed | iOS/iPadOS | Took > 30 minutes |
 | AndroidPermissions | Device administrator activation screen | Android | **Cancel** |
 | AndroidPermissions | From prompt for approval to make and manage phone calls until device administrator **Activate** | Android | Took > 30 minutes |
 | KnoxActivation | KLMS agent activation (Samsung only) | Android| **Cancel** |

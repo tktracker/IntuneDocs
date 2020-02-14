@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting iOS device enrollment problems in Microsoft Intune
+title: Troubleshooting iOS/iPadOS device enrollment problems in Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Suggestions for troubleshooting some of the most common problems when you enroll iOS devices in Intune.
+description: Suggestions for troubleshooting some of the most common problems when you enroll iOS/iPadOS devices in Intune.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -27,9 +27,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshoot iOS device enrollment problems in Microsoft Intune
+# Troubleshoot iOS/iPadOS device enrollment problems in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when enrolling iOS devices in Intune.
+This article helps Intune administrators understand and troubleshoot problems when enrolling iOS/iPadOS devices in Intune.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Collect the following information about the problem:
 - What is the exact error message?
 - Where do you see the error message?
 - When did the problem start? Has enrollment ever worked?
-- What platform (Android, iOS, Windows) has the problem?
+- What platform (Android, iOS/iPadOS, Windows) has the problem?
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
 - What is the MDM authority?
@@ -50,12 +50,12 @@ Collect the following information about the problem:
 
 ### Profile Installation Failed. A Network Error Has Occurred.
 
-**Cause:** There's an unspecified problem with iOS on the device.
+**Cause:** There's an unspecified problem with iOS/iPadOS on the device.
 
 #### Resolution
 
-1. To prevent data loss in the following steps (restoring iOS deletes all data on the device), make sure to back up your data.
-2. Put the device in recovery mode and then restore it. Make sure that you set it up as a new device. For more information about how to restore iOS devices, see [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
+1. To prevent data loss in the following steps (restoring iOS/iPadOS deletes all data on the device), make sure to back up your data.
+2. Put the device in recovery mode and then restore it. Make sure that you set it up as a new device. For more information about how to restore iOS/iPadOS devices, see [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
 3. Re-enroll the device.
 
 ### Profile Installation Failed. Connection to the server could not be established.
@@ -67,7 +67,7 @@ Collect the following information about the problem:
 2. Select **More Services**, search for Intune, and then select **Intune**.
 3. Select **Device enrollment** > **Enrollment restrictions**.
 4. Under **Device Type Restrictions**, select the restriction that you want to set > **Properties** > **Select platforms** > select **Allow** for **iOS**, and then click **OK**.
-5. Select **Configure platforms**, select **Allow** for personally owned iOS devices, and then click **OK**.
+5. Select **Configure platforms**, select **Allow** for personally owned iOS/iPadOS devices, and then click **OK**.
 6. Re-enroll the device.
 
 **Cause:** The necessary CNAME records in DNS don't exist.
@@ -102,7 +102,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 **Cause:** The device is already enrolled with another MDM provider.
 
 #### Resolution
-1. Open **Settings** on the iOS device, go to **General > Device Management**.
+1. Open **Settings** on the iOS/iPadOS device, go to **General > Device Management**.
 2. Remove any existing management profile.
 3. Re-enroll the device.
 
@@ -181,7 +181,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 
 #### Resolution
 
-1. Open **Settings** on the iOS device > **General** > **Device Management**.
+1. Open **Settings** on the iOS/iPadOS device > **General** > **Device Management**.
 2. Tap the existing management profile, and tap **Remove Management**.
 3. Re-enroll the device.
 
@@ -190,7 +190,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 **Cause:** The Apple Push Notification Service (APNs) certificate is missing, invalid, or expired.
 
 #### Resolution
-Verify that a valid APNs certificate is added to Intune. For more information, see [Set up iOS enrollment](ios-enroll.md).
+Verify that a valid APNs certificate is added to Intune. For more information, see [Set up iOS/iPadOS enrollment](ios-enroll.md).
 
 ### AccountNotOnboarded
 
@@ -200,10 +200,10 @@ Verify that a valid APNs certificate is added to Intune. For more information, s
 Renew the APNs certificate, and then re-enroll the device.
 
 > [!IMPORTANT]
-> Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS devices in Intune. 
+> Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS/iPadOS devices in Intune. 
 
 - To renew the APNs certificate in Intune standalone, see [Renew Apple MDM push certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- To renew the APNs certificate in Office 365, see [Create an APNs Certificate for iOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
+- To renew the APNs certificate in Office 365, see [Create an APNs Certificate for iOS/iPadOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### XPC_TYPE_ERROR Connection invalid
 
