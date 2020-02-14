@@ -48,7 +48,7 @@ The **Wipe** action restores a device to its factory default settings. The user 
 
 
 > [!NOTE]
-> The Wipe action is not available for iOS devices enrolled with User Enrollment.
+> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment.
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 

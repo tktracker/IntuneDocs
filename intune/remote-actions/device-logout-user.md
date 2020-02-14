@@ -40,7 +40,7 @@ The **Logout current user** action logs out the current user on a shared iPad de
 
 - Windows - Not supported
 - Windows Phone - Not supported
-- iOS/iPadOS - Supported on iOS 9.3 and later (shared iPad devices only)
+- iOS/iPadOS - Supported on iOS/iPadOS 9.3 and later (shared iPad devices only)
 - macOS - Not supported
 - Android - Not supported
 
