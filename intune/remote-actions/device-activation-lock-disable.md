@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Disable Activation Lock on Supervised iOS devices with Intune
+# Disable Activation Lock on Supervised iOS/iPadOS devices with Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
