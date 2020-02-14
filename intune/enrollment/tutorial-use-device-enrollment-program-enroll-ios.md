@@ -93,11 +93,11 @@ Now that you've installed your token, you can create an enrollment profile for c
 
 8. If you chose to enroll with User Affinity, Authenticate with Company Portal, and Install Company Portal with VPP, decide if you would like to run the Company Portal in Single App Mode until Authentication. This setting allows you to ensure the user will not have access to other apps until they have finished the corporate enrollment. If you would like to restrict the user to this flow until enrollment is completed, choose **Yes** under **Run Company Portal in Single App Mode until authentication**. 
 
-9. Choose **Device Management Settings** and choose **Yes** under **Supervised**. Supervised devices give you the most management options for your corporate iOS devices.
+9. Choose **Device Management Settings** and choose **Yes** under **Supervised**. Supervised devices give you the most management options for your corporate iOS/iPadOS devices.
 
 10. Choose **Yes** under **Locked enrollment** to ensure your users cannot remove management of the corporate device. 
 
-11. Choose an option under **Sync with Computers** to determine if the iOS devices will be able to sync with computers.
+11. Choose an option under **Sync with Computers** to determine if the iOS/iPadOS devices will be able to sync with computers.
 
 12. By default, Apple names the device with the device type (i.e. iPad). If you would like to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you would like to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.
 
@@ -117,7 +117,7 @@ After you set up an enrollment program token with the ABM, ASM, or DEP portal an
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose a token in the list > **Devices** > **Sync**.
 
-## Assign an enrollment profile to iOS devices
+## Assign an enrollment profile to iOS/iPadOS devices
 
 You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in the ABM, ASM, or DEP portal.
 
@@ -131,12 +131,12 @@ You've set up management and syncing between Apple and Intune, and assigned a pr
 
 ## Next steps
 
-You can find more information about other options available for enrolling iOS devices.
+You can find more information about other options available for enrolling iOS/iPadOS devices.
 
 > [!div class="nextstepaction"]
-> [In-depth iOS DEP enrollment article](device-enrollment-program-enroll-ios.md)
+> [In-depth iOS/iPadOS DEP enrollment article](device-enrollment-program-enroll-ios.md)
 
 <!--commenting out because inaccurate>
 ## Clean up resources
-<!--If you don't want to use iOS corporate enrolled devices anymore, you can delete them.>
+<!--If you don't want to use iOS/iPadOS corporate enrolled devices anymore, you can delete them.>
 <!--- If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).>
