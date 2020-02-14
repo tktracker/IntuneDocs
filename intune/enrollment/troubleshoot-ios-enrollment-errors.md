@@ -67,7 +67,7 @@ Collect the following information about the problem:
 2. Select **More Services**, search for Intune, and then select **Intune**.
 3. Select **Device enrollment** > **Enrollment restrictions**.
 4. Under **Device Type Restrictions**, select the restriction that you want to set > **Properties** > **Select platforms** > select **Allow** for **iOS**, and then click **OK**.
-5. Select **Configure platforms**, select **Allow** for personally owned iOS devices, and then click **OK**.
+5. Select **Configure platforms**, select **Allow** for personally owned iOS/iPadOS devices, and then click **OK**.
 6. Re-enroll the device.
 
 **Cause:** The necessary CNAME records in DNS don't exist.
@@ -102,7 +102,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 **Cause:** The device is already enrolled with another MDM provider.
 
 #### Resolution
-1. Open **Settings** on the iOS device, go to **General > Device Management**.
+1. Open **Settings** on the iOS/iPadOS device, go to **General > Device Management**.
 2. Remove any existing management profile.
 3. Re-enroll the device.
 
@@ -181,7 +181,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 
 #### Resolution
 
-1. Open **Settings** on the iOS device > **General** > **Device Management**.
+1. Open **Settings** on the iOS/iPadOS device > **General** > **Device Management**.
 2. Tap the existing management profile, and tap **Remove Management**.
 3. Re-enroll the device.
 
@@ -190,7 +190,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 **Cause:** The Apple Push Notification Service (APNs) certificate is missing, invalid, or expired.
 
 #### Resolution
-Verify that a valid APNs certificate is added to Intune. For more information, see [Set up iOS enrollment](ios-enroll.md).
+Verify that a valid APNs certificate is added to Intune. For more information, see [Set up iOS/iPadOS enrollment](ios-enroll.md).
 
 ### AccountNotOnboarded
 
@@ -200,10 +200,10 @@ Verify that a valid APNs certificate is added to Intune. For more information, s
 Renew the APNs certificate, and then re-enroll the device.
 
 > [!IMPORTANT]
-> Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS devices in Intune. 
+> Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS/iPadOS devices in Intune. 
 
 - To renew the APNs certificate in Intune standalone, see [Renew Apple MDM push certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- To renew the APNs certificate in Office 365, see [Create an APNs Certificate for iOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
+- To renew the APNs certificate in Office 365, see [Create an APNs Certificate for iOS/iPadOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### XPC_TYPE_ERROR Connection invalid
 
