@@ -3,7 +3,7 @@
 
 title: App configuration policies for Microsoft Intune
 titleSuffix: 
-description: Learn how to use app configuration policies on an iOS or Android device in Microsoft Intune.
+description: Learn how to use app configuration policies on an iOS/iPadOS or Android device in Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 App configuration policies can help you eliminate app setup up problems by letting you assign configuration settings to a policy that is assigned to end-users before they run the app. The settings are then supplied automatically when the app is configured on the end-users device, and end-users don't need to take action. The configuration settings are unique for each app. 
 
-You can create and use app configuration policies to provide configuration settings for both iOS or Android apps. These configuration settings allow an app to be customized by using app configuration and management. The configuration policy settings are used when the app checks for these settings, typically the first time the app is run. 
+You can create and use app configuration policies to provide configuration settings for both iOS/iPadOS or Android apps. These configuration settings allow an app to be customized by using app configuration and management. The configuration policy settings are used when the app checks for these settings, typically the first time the app is run. 
 
 An app configuration setting, for example, might require you to specify any of the following details:
 
@@ -75,7 +75,7 @@ Selecting **Managed apps** as the **Device Enrollment Type** specifically refers
 ![Device enrollment type](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> For multi-identity apps, such as Microsoft Outlook, user preferences may be considered. Focused Inbox, for example, will respect the user setting and not change the configuration. Other parameters do let you control whether a user can or cannot change the setting. For more information, see [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> For multi-identity apps, such as Microsoft Outlook, user preferences may be considered. Focused Inbox, for example, will respect the user setting and not change the configuration. Other parameters do let you control whether a user can or cannot change the setting. For more information, see [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## Validate the applied app configuration policy
 
@@ -97,7 +97,7 @@ You can validate the app configuration policy using the following three methods:
 
 ### iOS configuration on unmanaged devices
 
-You can validate iOS configuration with the **Intune Diagnostic Log** on unmanaged devices for managed app configuration. In addition to the below steps, you can access managed app logs using Microsoft Edge. For more information, see [Use Microsoft Edge on iOS to access managed app logs](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on unmanaged devices for managed app configuration. In addition to the below steps, you can access managed app logs using Microsoft Edge. For more information, see [Use Microsoft Edge on iOS/iPadOS to access managed app logs](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. If not already installed on the device, download and install the **Microsoft Edge** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
 2. Launch the **Microsoft Edge** and select **about** > **intunehelp** from the navigation bar.
@@ -141,7 +141,7 @@ Your application configuration details should match the application configuratio
 
 ### iOS configuration on managed devices
 
-You can validate iOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
+You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
 
 1. If not already installed on the device, download and install the **Microsoft Edge** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
 2. Launch **Microsoft Edge** and select **about** > **intunehelp** from the navigation bar.
@@ -153,7 +153,7 @@ You can validate iOS configuration with the **Intune Diagnostic Log** on managed
 
 ### Android configuration on managed devices
 
-You can validate iOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
+You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
 
 To collect logs from an Android device, you or the end user must download the logs from the device via a USB connection (or the **File Explorer** equivalent on the device). Here are the steps:
 
@@ -177,7 +177,7 @@ When the logs show a configuration parameter that is confirmed to be applying bu
 
 ### Managed devices
 
-- Learn how to use app configuration with your iOS devices.  See [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md).
+- Learn how to use app configuration with your iOS/iPadOS devices.  See [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 - Learn how to use app configuration with your Android devices.  See [Add app configuration policies for managed Android devices](app-configuration-policies-use-android.md).
 
 ### Managed apps

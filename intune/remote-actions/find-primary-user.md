@@ -73,8 +73,8 @@ Intune automatically adds primary user to devices during or soon after enrollmen
 | Windows | Azure AD join (Autopilot self-deploying mode) | None | Not applicable | 
 | Cross-platform | User driven enrollment with Company Portal App | Enrolling user | During enrollment |
 | Cross-platform | Device Enrollment Manager (DEM) | Enrolling DEM user | During enrollment |
-| iOS, macOS | Apple Automated Device Enrollment (DEP with User Affinity | Enrolling user | During enrollment |
-| iOS, macOS | Apple Automated Device Enrollment (DEP without User Affinity) | None | Not applicable |
+| iOS/iPadOS, macOS | Apple Automated Device Enrollment (DEP with User Affinity | Enrolling user | During enrollment |
+| iOS/iPadOS, macOS | Apple Automated Device Enrollment (DEP without User Affinity) | None | Not applicable |
 | Android | Android Corporate-Owned, Dedicated devices | None | Not applicable |
 
 ## Primary user and Azure AD device owner

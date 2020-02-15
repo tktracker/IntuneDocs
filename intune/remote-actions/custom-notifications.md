@@ -1,7 +1,7 @@
 ---
 title: Send custom notifications to users with Microsoft Intune 
 titleSuffix: Microsoft Intune
-description: Use Intune to create and send custom push notifications to users of iOS and Android devices
+description: Use Intune to create and send custom push notifications to users of iOS/iPadOS and Android devices
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -30,21 +30,21 @@ ms.collection: M365-identity-device-management
 
 # Send custom notifications in Intune  
 
-Use Microsoft Intune to send custom notifications to the users of managed iOS and Android devices. These messages appear as standard push notifications from the Company Portal app and from the Microsoft Intune app on a user’s device, just as notifications from other applications on the device appear. Intune custom notifications aren’t supported by macOS and Windows devices.   
+Use Microsoft Intune to send custom notifications to the users of managed iOS/iPadOS and Android devices. These messages appear as standard push notifications from the Company Portal app and from the Microsoft Intune app on a user’s device, just as notifications from other applications on the device appear. Intune custom notifications aren’t supported by macOS and Windows devices.   
 
 Custom notification messages include a short title and a message body of 500 characters or fewer. These messages can be customized for any general communication purpose.
 
-### What the notification looks like on an iOS device
+### What the notification looks like on an iOS/iPadOS device
 
-If you have the Company Portal app open on an iOS device, the notification resembles the following screenshot:
+If you have the Company Portal app open on an iOS/iPadOS device, the notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
-> ![Company Portal iOS Test notification](./media/custom-notifications/105046-1.png)
+> ![Company Portal iOS/iPadOS Test notification](./media/custom-notifications/105046-1.png)
 
 If the device is locked, the notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
-> ![Locked Device iOS Test notification](./media/custom-notifications/105046-2.png)
+> ![Locked Device iOS/iPadOS Test notification](./media/custom-notifications/105046-2.png)
 
 ### What the notification looks like on an Android device
 
@@ -78,14 +78,14 @@ If you have the Company Portal app open on an Android device, the notification r
 - When sending messages to individual devices, you can only send up to 10 messages per hour to the same device. 
 - You can send notifications to multiple users or devices by assigning the notification to groups. When using groups, each notification can directly target up to 25 groups. Nested groups don't count against this total.  
 
-  Groups can include users or devices, but messages are sent only to users, and to each iOS or Android device that the user has registered.  
+  Groups can include users or devices, but messages are sent only to users, and to each iOS/iPadOS or Android device that the user has registered.  
 - You can send notifications to a single device. Instead of using groups, you select a device and then use a remote [device action](device-management.md#available-device-actions) to send the custom notification.  
 
 **Delivery**:  
 - Intune sends messages to the users' Company Portal app or the Microsoft Intune app, which then creates the push notification. Users don't need to be signed into the app for the notification to be pushed on the device.  
 - Intune, as well as the Company Portal app and the Microsoft Intune app, can’t guarantee delivery of a custom notification. Custom notifications might show up after several hours of delay, if at all, so they shouldn't be used for urgent messages.  
-- Custom notification messages from Intune appear on devices as standard push notifications. If the Company Portal app is open on an iOS device when it receives the notification, the notification displays in the app instead of being a push notification.  
-- Custom notifications can be visible on lock screens on both iOS and Android devices depending on device settings.  
+- Custom notification messages from Intune appear on devices as standard push notifications. If the Company Portal app is open on an iOS/iPadOS device when it receives the notification, the notification displays in the app instead of being a push notification.  
+- Custom notifications can be visible on lock screens on both iOS/iPadOS and Android devices depending on device settings.  
 - On Android devices, other apps might have access to the data in your custom notifications. Don't use them for sensitive communications.  
 - Users of a device that was recently unenrolled, or users that were removed from a group, might still receive a custom notification that is later sent to that group.  Likewise, if you add a user to a group after a custom notification was sent to the group, it's possible for the newly added use to receive that previously sent notification message.  
 
@@ -130,7 +130,7 @@ Intune processes the message immediately. The only confirmation that the message
 
 On a device, users see custom notification messages that are sent by Intune as a standard push notification from the Company Portal app or the Microsoft Intune app. These notifications are similar to the push notifications users receive from other apps on the device.  
 
-On iOS devices, if the Company Portal app is open when the notification is received, the notification displays in the app instead of being a push notification.  
+On iOS/iPadOS devices, if the Company Portal app is open when the notification is received, the notification displays in the app instead of being a push notification.  
 
 The notification remains until the user dismisses it.  
 

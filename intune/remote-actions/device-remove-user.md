@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Remove a user from an iOS device with Microsoft Intune 
+title: Remove a user from an iOS/iPadOS device with Microsoft Intune 
 titleSuffix:
-description: Learn how to remove a user from a shared iOS device with Intune.
+description: Learn how to remove a user from a shared iOS/iPadOS device with Intune.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -29,18 +29,18 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Remove a user from a shared iOS device
+# Remove a user from a shared iOS/iPadOS device
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-The **Remove user** action deletes a user that you select from the local cache on a shared iPad device. The iPad device must be set up to manage the iOS Classroom app by using an [iOS education profile](../fundamentals/education-settings-configure-ios.md). 
+The **Remove user** action deletes a user that you select from the local cache on a shared iPad device. The iPad device must be set up to manage the iOS/iPadOS Classroom app by using an [iOS/iPadOS education profile](../fundamentals/education-settings-configure-ios.md). 
 
 ## Supported platforms
 
 - Windows - Not supported
 - Windows Phone - Not supported
-- iOS - Supported on iOS 9.3 and later (shared iPad devices only)
+- iOS/iPadOS - Supported on iOS/iPadOS 9.3 and later (shared iPad devices only)
 - macOS - Not supported
 - Android - Not supported
 
@@ -48,7 +48,7 @@ The **Remove user** action deletes a user that you select from the local cache o
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
-3. In the list of devices that you manage, select an iOS device.
+3. In the list of devices that you manage, select an iOS/iPadOS device.
 4. In the pane for the device, select **Users**.
 5. In the list, right-click the user that you want to remove, and then select **Remove user**.
 

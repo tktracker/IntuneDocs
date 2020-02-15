@@ -53,7 +53,7 @@ You can explicitly choose to wipe your company’s corporate data from the end u
 The app protection policy settings table has columns for **Setting**, **Value**, and **Action**.
 
 ### iOS policy settings
-For iOS, you will be able to configure actions for the following settings using the **Setting** dropdown:
+For iOS/iPadOS, you will be able to configure actions for the following settings using the **Setting** dropdown:
 - Max PIN attempts
 - Offline grace period
 - Jailbroken/rooted devices
@@ -63,7 +63,7 @@ For iOS, you will be able to configure actions for the following settings using 
 - Device model(s)
 - Max allowed device threat level
 
-To use the **Device model(s)** setting, input a semi-colon separated list of iOS model identifiers. These values are not case sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS model identifier under the Device Type column in [HockeyApp's support documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) or this [3rd party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
+To use the **Device model(s)** setting, input a semi-colon separated list of iOS/iPadOS model identifiers. These values are not case-sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS/iPadOS model identifier under the Device Type column in [HockeyApp's support documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) or this [3rd party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
 Example input: *iPhone5,2;iPhone5,3*
 
 On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on a variety of device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
@@ -71,8 +71,8 @@ Set one of the following actions:
 - Allow specified (Block non-specified)
 - Allow specified (Wipe non-specified)
 
-**What happens if the IT admin inputs a different list of iOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed iOS model identifier(s) in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* will be "iPhone5,3". 
+**What happens if the IT admin inputs a different list of iOS/iPadOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifier(s) in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* will be "iPhone5,3". 
 
 ### Android policy settings
 
@@ -89,15 +89,15 @@ For Android, you will be able to configure actions for the following settings us
 - Min Company Portal version
 - Max allowed device threat level
 
-By using the **Min Company Portal version**, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to set values to **Block access**, **Wipe data**, and **Warn** as possible actions when each value is not met. The possible formats for this value follows the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*. Given that some end users may not prefer a forced update of apps on the spot, the 'warn' option may be ideal when configuring this setting. The Google Play Store does a good job of only sending the delta bytes for app updates, but this can still be a large amount of data that the user may not want to utilize if they are on data at the time of the update. Forcing an update and thereby downloading an updated app could result in unexpected data charges at the time of the update. The **Min Company Portal version** setting, if configured, will affect any end user who gets gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting will have no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app auto-updates on their device will likely not see any dialogs from this feature, given that they will likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices.
+By using the **Min Company Portal version**, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to set values to **Block access**, **Wipe data**, and **Warn** as possible actions when each value is not met. The possible formats for this value follow the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*. Given that some end users may not prefer a forced update of apps on the spot, the 'warn' option may be ideal when configuring this setting. The Google Play Store does a good job of only sending the delta bytes for app updates, but this can still be a large amount of data that the user may not want to utilize if they are on data at the time of the update. Forcing an update and thereby downloading an updated app could result in unexpected data charges at the time of the update. The **Min Company Portal version** setting, if configured, will affect any end user who gets gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting will have no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app auto-updates on their device will likely not see any dialogs from this feature, given that they will likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices.
 
-To use the **Device manufacturer(s)** setting, input a semi-colon separated list of Android manufacturers. These values are not case sensitive. Besides Intune Reporting, you can find the Android manufacturer of a device under the device settings. <br>
+To use the **Device manufacturer(s)** setting, input a semi-colon separated list of Android manufacturers. These values are not case-sensitive. Besides Intune Reporting, you can find the Android manufacturer of a device under the device settings. <br>
 Example input: *Manufacturer A;Manufacturer B* 
 
 >[!NOTE]
 > These are some common manufacturers reported from devices using Intune, and can be used as input: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
-On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged ensure that the intended behavior occurs by testing this setting based on a variety of device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
+On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on a variety of device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
 Set one of the following actions: 
 - Allow specified (Block on non-specified)
 - Allow specified (Wipe on non-specified)
