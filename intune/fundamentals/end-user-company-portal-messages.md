@@ -141,7 +141,7 @@ iOS apps developed by your organization that are not available in the App Store 
 
 ### What it means
 
-This message means you need to modify your iOS device settings to approve and install an app developed by your company on your iOS device.
+This message means you need to modify your iOS/iPadOS device settings to approve and install an app developed by your company on your iOS/iPadOS device.
 
 When you install such apps using the Company Portal and launch the app, follow these steps to approve the app after you download it:
 
