@@ -225,7 +225,7 @@ When dealing with different types of settings, an Intune App SDK version require
 - [Implement your Intune plan](../fundamentals/planning-guide-onboarding.md)
 - [Intune testing and validation](../fundamentals/planning-guide-test-validation.md)
 - [Android mobile app management policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md)
-- [iOS mobile app management policy settings](../apps/app-protection-policy-settings-ios.md)
+- [iOS/iPadOS mobile app management policy settings](../apps/app-protection-policy-settings-ios.md)
 - [App protection policies policy refresh](../apps/app-protection-policy-delivery.md)
 - [Validate your app protection policies](../apps/app-protection-policy-delivery.md)
 - [Add app configuration policies for managed apps without device enrollment](../apps/app-configuration-policies-managed-app.md)
