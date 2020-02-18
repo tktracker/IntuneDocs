@@ -207,7 +207,7 @@ Next, use the following key/value pairs to pull your organizations branding into
 
 ## Display relevant industry news on New Tab Pages
 
-You can configure the New Tab Page experience within Microsoft Edge mobile to display industry news that is relevant to your organization. When you enable this feature, Microosft Edge mobile uses your organization's domain name to aggregate news from the web about your organization, organization's industry, and comeptitors, so your users can find relevant external news all from the centeralized new tab pages within Microsoft Edge. Industry News is switched off by default, and you can use to opt-into it for your organization. 
+You can configure the New Tab Page experience within Microsoft Edge mobile to display industry news that is relevant to your organization. When you enable this feature, Microsoft Edge mobile uses your organization's domain name to aggregate news from the web about your organization, organization's industry, and competitors, so your users can find relevant external news all from the centralized new tab pages within Microsoft Edge. Industry News is switched off by default, and you can use to opt-into it for your organization. 
 
 |    Key    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
