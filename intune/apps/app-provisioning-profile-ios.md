@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: iOS app provisioning profiles in Microsoft Intune
+title: iOS/iPadOS app provisioning profiles in Microsoft Intune
 titleSuffix:
 description: Intune gives you the tools to proactively assign a new provisioning profile to devices that have apps that are nearing expiry.
 keywords:
@@ -35,10 +35,10 @@ ms.collection: M365-identity-device-management
 
 ## Introduction
 
-Apple iOS line-of-business apps that are assigned to iPhones and iPads are built with an included provisioning profile and code that is signed with a certificate. When the app is run, iOS confirms the integrity of the iOS app and enforces policies that are defined by the provisioning profile. The following validations happen:
+Apple iOS/iPadOS line-of-business apps that are assigned to iPhones and iPads are built with an included provisioning profile and code that is signed with a certificate. When the app is run, iOS/iPadOS confirms the integrity of the iOS/iPadOS app and enforces policies that are defined by the provisioning profile. The following validations happen:
 
-- **Installation file integrity** - iOS compares the app's details with the enterprise signing certificate's public key. If they differ, the app's content might have changed, and the app is not allowed to run.
-- **Capabilities enforcement** - iOS attempts to enforce the app's capabilities from the enterprise provisioning profile (not individual developer provisioning profiles) that are in the app installation (.ipa) file.
+- **Installation file integrity** - iOS/iPadOS compares the app's details with the enterprise signing certificate's public key. If they differ, the app's content might have changed, and the app is not allowed to run.
+- **Capabilities enforcement** - iOS/iPadOS attempts to enforce the app's capabilities from the enterprise provisioning profile (not individual developer provisioning profiles) that are in the app installation (.ipa) file.
 
 
 The enterprise signing certificate that you use to sign apps typically lasts for three years. However, the provisioning profile expires after a year. While the certificate is still valid, Intune gives you the tools to proactively assign a new provisioning profile to devices that have apps that are nearing expiry.
@@ -64,8 +64,8 @@ As the admin, you can include and exclude security groups to assign iOS app prov
 5. Click **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the profile to users and devices. It is important to note that you can assign a profile to a device whether or not the device is managed by Intune.
 6. Click **Next: Review + create** to review the values you entered for the profile.
-7. When you are done, click **Create** to create the iOS app provisioning profile in Intune. 
+7. When you are done, click **Create** to create the iOS/iPadOS app provisioning profile in Intune. 
 
 ## Next steps
 
-Assign the profile to the required iOS devices. For more information, use the steps in [How to assign device profiles](../device-profile-assign.md).
+Assign the profile to the required iOS/iPadOS devices. For more information, use the steps in [How to assign device profiles](../device-profile-assign.md).
