@@ -43,7 +43,7 @@ The main Intune standalone requirements are:
 
 - Office 365 subscription (for Office apps and app-protection-policy managed apps)
 
-- Apple APNs Certificate (to enable iOS device platform management)
+- Apple APNs Certificate (to enable iOS/iPadOS device platform management)
 
 - Azure AD Connect (for directory synchronization)
 
@@ -92,7 +92,7 @@ Before you can begin to set up, configure, manage and enroll devices using Intun
 
 ### Task 6: Enable device platforms
 
-By default, most device platforms are enabled except for Apple devices (iOS and Mac). Before iOS devices can be enrolled and managed in Intune, the device platform must be enabled. To do so, you need to create an MDM Push certificate, and add it to Intune.
+By default, most device platforms are enabled except for Apple devices (iOS and Mac). Before iOS/iPadOS devices can be enrolled and managed in Intune, the device platform must be enabled. To do so, you need to create an MDM Push certificate, and add it to Intune.
 
 - Learn more about [how to enable Apple devices for enrollment](../enrollment/apple-mdm-push-certificate-get.md).
 
