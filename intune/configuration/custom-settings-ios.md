@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add custom settings to iOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add custom settings to iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Export iOS settings from Apple Configurator or Apple Profile Manager tools, and then import these settings into Microsoft Intune. These settings can create, use, and control custom settings and features on iOS devices. This custom profile can then be assigned or distributed to iOS devices in your organization to create a baseline or standard.
+description: Export iOS and iPadOS settings from Apple Configurator or Apple Profile Manager tools, and then import these settings into Microsoft Intune. These settings can create, use, and control custom settings and features on iOS/iPadOS devices. This custom profile can then be assigned or distributed to iOS/iPadOS devices in your organization to create a baseline or standard.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/02/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,16 +27,16 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use custom settings for iOS devices in Microsoft Intune
+# Use custom settings for iOS and iPadOS devices in Microsoft Intune
 
-Using Microsoft Intune, you can add or create custom settings for your iOS devices using "custom profiles". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
+Using Microsoft Intune, you can add or create custom settings for your iOS/iPadOS devices using "custom profiles". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
-When using iOS devices, there are two ways to get custom settings into Intune:
+When using iOS/iPadOS devices, there are two ways to get custom settings into Intune:
 
 - [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
 - [Apple Profile Manager](https://support.apple.com/profile-manager)
 
-You can use these tools to export settings to a configuration profile. In Intune, you import this file, and then assign the profile to your iOS users and devices. Once assigned, the settings are distributed. They also create a baseline or standard for iOS in your organization.
+You can use these tools to export settings to a configuration profile. In Intune, you import this file, and then assign the profile to your iOS/iPadOS users and devices. Once assigned, the settings are distributed. They also create a baseline or standard for iOS/iPadOS in your organization.
 
 This article provides some guidance on using Apple Configurator and Apple Profile Manager, and describes the properties you can configure.
 
@@ -46,17 +46,17 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 
 ## What you need to know
 
-- When using **Apple Configurator** to create the configuration profile, be sure the settings you export are compatible with the iOS version on the devices. For information on resolving incompatible settings, search for **Configuration Profile Reference** and **Mobile Device Management Protocol Reference** on the [Apple Developer](https://developer.apple.com/) website.
+- When using **Apple Configurator** to create the configuration profile, be sure the settings you export are compatible with the iOS/iPadOS version on the devices. For information on resolving incompatible settings, search for **Configuration Profile Reference** and **Mobile Device Management Protocol Reference** on the [Apple Developer](https://developer.apple.com/) website.
 
 - When using **Apple Profile Manager**, be sure to:
 
   - Enable [mobile device management](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C) in Profile Manager.
-  - Add [iOS devices](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) in Profile Manager.
+  - Add [iOS/iPadOS devices](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) in Profile Manager.
   - After you add a device in Profile Manager, go to **Under the Library** > **Devices** > select your device > **Settings**. Enter the general settings for the device.
 
     Download and save this file. You'll enter this file in the Intune profile.
 
-  - Be sure the settings you export from the Apple Profile Manager are compatible with the iOS version on the devices. For information on resolving incompatible settings, search for **Configuration Profile Reference** and **Mobile Device Management Protocol Reference** on the [Apple Developer](https://developer.apple.com/) website.
+  - Be sure the settings you export from the Apple Profile Manager are compatible with the iOS/iPadOS version on the devices. For information on resolving incompatible settings, search for **Configuration Profile Reference** and **Mobile Device Management Protocol Reference** on the [Apple Developer](https://developer.apple.com/) website.
 
 ## Custom configuration profile settings
 

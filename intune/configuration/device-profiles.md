@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,12 +33,12 @@ ms.collection: M365-identity-device-management
 
 
 
-Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS, Android, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
+Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
 
 - On Windows 10 devices, use a profile template that blocks ActiveX controls in Internet Explorer.
-- On iOS and macOS devices, allow users to use AirPrint printers in your organization.
+- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 - Allow or prevent access to bluetooth on the device.
 - Create a WiFi or VPN profile that gives different devices access to your corporate network.
 - Manage software updates, including when they're installed.
@@ -72,7 +72,7 @@ This feature supports:
 
 ## Custom profile
 
-[Custom settings](custom-settings-configure.md) let administrators assign device settings that aren't built in to Intune. On Android devices, you can enter OMA-URI values. For iOS devices, you can import a configuration file you created in the Apple Configurator.
+[Custom settings](custom-settings-configure.md) let administrators assign device settings that aren't built in to Intune. On Android devices, you can enter OMA-URI values. For iOS/iPadOS devices, you can import a configuration file you created in the Apple Configurator.
 
 This feature supports:
 
@@ -94,7 +94,7 @@ This feature supports:
 
 ## Device features
 
-[Device features](device-features-configure.md) controls features on iOS and macOS devices, such as AirPrint, notifications, and lock screen messages.
+[Device features](device-features-configure.md) controls features on iOS/iPadOS and macOS devices, such as AirPrint, notifications, and lock screen messages.
 
 This feature supports:
 
@@ -111,7 +111,7 @@ This feature supports:
 
 ## Device restrictions
 
-[Device restrictions](device-restrictions-configure.md) controls security, hardware, data sharing, and more settings on the devices. For example, create a device restriction profile that prevents iOS device users from using the device camera. 
+[Device restrictions](device-restrictions-configure.md) controls security, hardware, data sharing, and more settings on the devices. For example, create a device restriction profile that prevents iOS/iPadOS device users from using the device camera. 
 
 This feature supports:
 
@@ -134,7 +134,7 @@ This feature supports:
 
 [Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://education.microsoft.com/gettrained/win10takeatest). When you configure these options, no other apps can run on the device until the test is complete.
 
-[Education settings - iOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
+[Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
 ## Email
 
@@ -191,7 +191,7 @@ This feature supports:
 
 - Windows 10 and later
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings), and [ios](device-restrictions-ios.md#kiosk).
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings), and [ios/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## OEMConfig
 
@@ -224,7 +224,7 @@ This feature supports:
 
 ## Update policies
 
-[iOS update policies](../protect/software-updates-ios.md) shows you how to create and assign iOS policies to install software updates on your iOS devices. You can also review the installation status.
+[iOS/iPadOS update policies](../protect/software-updates-ios.md) shows you how to create and assign iOS/iPadOS policies to install software updates on your iOS/iPadOS devices. You can also review the installation status.
 
 For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md). 
 

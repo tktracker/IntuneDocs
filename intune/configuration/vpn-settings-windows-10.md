@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2018
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -189,4 +189,4 @@ For example, if the user is already connected to a trusted DNS suffix, then the 
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-Configure VPN settings on [Android](vpn-settings-android.md), [iOS](vpn-settings-ios.md), and [macOS](vpn-settings-macos.md) devices.
+Configure VPN settings on [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), and [macOS](vpn-settings-macos.md) devices.
