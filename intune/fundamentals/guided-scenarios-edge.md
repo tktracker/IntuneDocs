@@ -45,9 +45,9 @@ The following Microsoft Edge enterprise features that are enabled by Intune poli
 
 ## Step 1 - Introduction
 
-By following the **Deploy Microsoft Edge for Mobile** guided scenario, you will set up a basic deployment of Microsoft Edge for a selected group of iOS and Android users. This deployment will implement **Dual-Identity** and **Managed Favorites and Home Page shortcuts**. In addition, devices enrolled by the selected users will automatically have the Microsoft Edge app installed by Intune. This automatic installation will occur on all user-driven enrollment types, which include: 
-- iOS enrollment through the Company Portal app 
-- iOS user-affinity enrollment through Apple Business Manager 
+By following the **Deploy Microsoft Edge for Mobile** guided scenario, you will set up a basic deployment of Microsoft Edge for a selected group of iOS/iPadOS and Android users. This deployment will implement **Dual-Identity** and **Managed Favorites and Home Page shortcuts**. In addition, devices enrolled by the selected users will automatically have the Microsoft Edge app installed by Intune. This automatic installation will occur on all user-driven enrollment types, which include: 
+- iOS/iPadOS enrollment through the Company Portal app 
+- iOS/iPadOS user-affinity enrollment through Apple Business Manager 
 - Legacy Android enrollment through the Company Portal App 
 
 This guided scenario will automatically enable **MyApps** to appear in the Microsoft Edge favorites and configure the browser with the same branding you have set for the Intune Company Portal app. 
@@ -56,13 +56,13 @@ This guided scenario will automatically enable **MyApps** to appear in the Micro
 We'll ask you about the workplace favorites your users need, and the filters you require for web browsing. Make sure you complete the following tasks before you continue:
 
 - Add users to Azure AD groups. For more information, see [Create a basic group and add members using Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2102458).
-- Enroll iOS or Android devices in Intune. For more information, see [Device enrollment](https://go.microsoft.com/fwlink/?linkid=2102547).
+- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](https://go.microsoft.com/fwlink/?linkid=2102547).
 - Gather a list of workplace favorites to add in Microsoft Edge.
 - Gather a list of website filters to enforce in Microsoft Edge.
 
 ## Step 2 - Basics
 
-In this step, you must enter a name and description for your new Microsoft Edge policies. These policies can be referenced later if you need to change the assignments and configurations. The guided scenario will add and assign both an Microsoft Edge iOS app for your iOS devices and an Microsoft Edge Android app for your Android devices. Also, this step will create configuration policies for these apps.
+In this step, you must enter a name and description for your new Microsoft Edge policies. These policies can be referenced later if you need to change the assignments and configurations. The guided scenario will add and assign both an Microsoft Edge iOS/iPadOS app for your iOS/iPadOS devices and an Microsoft Edge Android app for your Android devices. Also, this step will create configuration policies for these apps.
 
 ## Step 3 - Configuration
 
@@ -70,7 +70,7 @@ In this step, the guided scenario will configure Microsoft Edge to show all the 
 
 ## Step 4 - Assignments
 
-In this step, you can choose the user groups that you want to include to have Microsoft Edge mobile configured for work. Microsoft Edge will also be installed on all iOS and Android devices enrolled by these users.
+In this step, you can choose the user groups that you want to include to have Microsoft Edge mobile configured for work. Microsoft Edge will also be installed on all iOS/iPadOS and Android devices enrolled by these users.
 
 ## Step 5 - Review + create
 
