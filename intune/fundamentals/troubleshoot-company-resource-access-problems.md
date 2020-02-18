@@ -371,7 +371,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |-2016345812|0x87D1012C|Syncml(300): The requested target is one of a number of multiple alternatives requested target.|
 |-2016345896|0x87D100D8|Syncml(216): A command was inside Atomic element and Atomic failed. This command was rolled back successfully.|
 |-2016345897|0x87D100D7|Syncml(215): A command was not executed, as a result of user interaction and user chose not to accept the choice.|
-|-2016345898|0x87D100D6|Syncml(214): Operation cancelled. The SyncML command completed successfully, but no more commands will be processed within the session.|
+|-2016345898|0x87D100D6|Syncml(214): Operation canceled. The SyncML command completed successfully, but no more commands will be processed within the session.|
 |-2016345899|0x87D100D5|Syncml(213): Chunked item accepted and buffered|
 |-2016345900|0x87D100D4|Syncml(212): Authentication accepted. No further authentication is needed for the remainder of the synchronization session. This response code can only be used in response to a request in which the credentials were provided.|
 |-2016345901|0x87D100D3|Syncml(211): Item not deleted. The requested item was not found. It could have been previously deleted.|
