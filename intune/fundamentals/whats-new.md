@@ -73,6 +73,9 @@ Intune will be moving to support Android 5.x (Lollipop) and higher in October 20
 **How does this affect me?**
 Provided that the Office mobile apps for Android ended support for Android 4.x (KitKat) on June 30th 2019 (MC181101), this may not affect you. You likely already upgraded your OS or devices. However, if you have any device that is still running Android version 4.x, or decide to enroll any device that is running Android version 4.x, please note that these devices will either need to be upgraded to Android version 5.x (Lollipop) or greater, or they will need to be upgraded to a device that supports Android version 5.0 or greater.
 
+   > [!NOTE]
+   > This deprecation does not apply to Polycom Android-based Teams devices running Android version 4.4. These devices will continue to be supported.  
+
 Below, you will find a list of common devices enrolled in Intune that run Android version 4.x. If you have one of these devices, please take the appropriate steps to make sure the device will support Android version 5.0 or higher or that it will be replaced with a device that supports Android version 5.0 or higher. Note that this list is not exhaustive of all devices that may need to be evaluated:
 
 - Samsung SM-T561 
