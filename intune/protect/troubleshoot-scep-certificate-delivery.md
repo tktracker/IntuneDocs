@@ -77,7 +77,7 @@ You can also review the [devices OMADM log](troubleshoot-scep-certificate-profil
 2018-02-27T05:20:15.3520000    INFO    Event     com.microsoft.omadm.platforms.android.certmgr.state.NativeScepCertInstallStateMachine    18327       21    SCEP cert 'ModelName=AC_51…%2FLogicalName_39907…;Hash=1677525787' state changed from CERT_ACCESS_REQUESTED to CERT_ACCESS_GRANTED
 ```
 
-### iOS and iPadOS
+### iOS/iPadOS
 
 On the iOS/iPadOS or iPadOS device, you can view the certificate under the Device Management Profile. Drill-in to see details for installed certificates.
 
@@ -112,7 +112,7 @@ To view the certificate on the device, run **certmgr.msc** to open the Certifica
 
 To troubleshoot this step, review errors that are logged in the OMA DM log.
 
-### iOS and iPadOS
+### iOS/iPadOS
 
 To troubleshoot this step, review errors that are logged in the devices debug log.
 

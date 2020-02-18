@@ -41,7 +41,7 @@ Derived credentials are an implementation of the National Institute of Standards
 
 - The Intune administrator specifies **Derived credential** as the *authentication method* for the following objects:
 
-  - Common profile types like Wi-Fi, VPN, and Email, which includes the iOS native mail app
+  - Common profile types like Wi-Fi, VPN, and Email, which includes the iOS/iPadOS native mail app
 
   - App authentication
 
@@ -80,7 +80,7 @@ For important details about using the different issuers, review guidance for tha
 
 Plan to deploy the Intune Company Portal app to devices that will enroll for a derived credential. Device users use the Company Portal app to start the credential enrollment process.
 
-For iOS devices, see [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+For iOS/iPadOS devices, see [Add iOS/iPadOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
 
 ## Plan for derived credentials
 
@@ -202,7 +202,7 @@ In addition to the deploying the app with Intune, configure an Intune per-app VP
 **Complete the following tasks**:
   
 1. Download the [DISA Purebred application](https://cyber.mil/pki-pke/purebred/).
-2. Deploy the DISA Purebred application in Intune.  See [Add an iOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
+2. Deploy the DISA Purebred application in Intune.  See [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
 3. [Create a per-app VPN](../configuration/vpn-settings-configure.md) for the DISA Purebred application.
 
 ## Use derived credentials for authentication and S/MIME signing and encryption
@@ -228,7 +228,7 @@ Use derived credentials for certificate-based authentication to web sites and ap
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following settings:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Derived credential for iOS devices profile**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Derived credential for iOS/iPadOS devices profile**.
     - **Description**: Enter a description that gives an overview of the setting, and any other important details.
     - **Platform**: Select **iOS/iPadOS**.
     - **Profile type**: Select **Derived credential**.
