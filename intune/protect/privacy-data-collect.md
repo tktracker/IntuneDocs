@@ -140,7 +140,7 @@ Aggregated data collected by Intune may include, but is not limited to:
   - installedDeviceCount: The number of devices on which the application is installed.
   - notApplicableDeviceCount: The number of devices for which the application is not applicable.
   - notInstalledDeviceCount: The number of devices for which the application is applicable but not installed.
-  - pendingInstallDeviceCount: The numberr of devices for which the application is applicable and installation is pending.
+  - pendingInstallDeviceCount: The number of devices for which the application is applicable and installation is pending.
 
 ## Next steps
 
