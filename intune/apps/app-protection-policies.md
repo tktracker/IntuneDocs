@@ -78,21 +78,21 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     This page provides settings for data loss prevention (DLP) controls, including cut, copy, paste, and save-as restrictions. These settings determine how users interact with data in the apps that this app protection policy applies.​
 
     **Data protection settings**:<br>
-    - **iOS/iPadOS data protection** - For information, see [iOS app protection policy settings - Data protection](~/apps/app-protection-policy-settings-ios.md#data-protection).
+    - **iOS/iPadOS data protection** - For information, see [iOS/iPadOS app protection policy settings - Data protection](~/apps/app-protection-policy-settings-ios.md#data-protection).
     - **Android data protection** - For information, see [Android app protection policy settings - Data protection](~/apps/app-protection-policy-settings-android.md#data-protection).
 
 7. Click **Next** to display the **Access requirements** page.<br>
     This page provides settings to allow you to configure the PIN and credential requirements that users must meet to access apps in a work context. 
  
     **Access requirements settings**:<br>
-    - **iOS/iPadOS access requirements** - For information, see [iOS app protection policy settings - Access requirements](~/apps/app-protection-policy-settings-ios.md#access-requirements).
+    - **iOS/iPadOS access requirements** - For information, see [iOS/iPadOS app protection policy settings - Access requirements](~/apps/app-protection-policy-settings-ios.md#access-requirements).
     - **Android access requirements** - For information, see [Android app protection policy settings - Access requirements](~/apps/app-protection-policy-settings-android.md#access-requirements).
 
 8. Click **Next** to display the **Conditional launch** page.<br>
     This page provides settings to set the sign-in security requirements for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. Then select the **Action** you want to take if users do not meet your requirements. In some cases, multiple actions can be configured for a single setting.
 
     **Conditional launch settings**:<br>
-    - **iOS/iPadOS conditional launch** - For information, see [iOS app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
+    - **iOS/iPadOS conditional launch** - For information, see [iOS/iPadOS app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
     - **Android conditional launch** - For information, see [Android app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 9. Click **Next** to display the **Assignments** page.<br>
@@ -196,7 +196,7 @@ For iOS/iPadOS, additional app configuration settings are required to target app
 ## Policy settings
 To see a full list of the policy settings for iOS/iPadOS and Android, select one of the following links:
 
-- [iOS policies](app-protection-policy-settings-ios.md)
+- [iOS/iPadOS policies](app-protection-policy-settings-ios.md)
 - [Android policies](app-protection-policy-settings-android.md)
 
 ## Next steps
