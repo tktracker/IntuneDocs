@@ -21,12 +21,12 @@ ms.collection: M365-identity-device-management
 
 # Guided scenario - Deploy Microsoft Edge for Mobile 
 
-By following this [guided scenario](~/fundamentals/guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS or Android devices at your organization. Assigning this app will allow your users to seamlessly browse content using their corporate devices. 
+By following this [guided scenario](~/fundamentals/guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app will allow your users to seamlessly browse content using their corporate devices. 
 
-Microsoft Edge lets users cut through the clutter of the web with built-in features that help them consolidate, arrange and manage work content. Users of iOS and Android devices who sign in with their corporate Azure AD accounts in the Microsoft Edge application will find their browser pre-loaded with workplace **Favorites** and website filters you define.
+Microsoft Edge lets users cut through the clutter of the web with built-in features that help them consolidate, arrange and manage work content. Users of iOS/iPadOS and Android devices who sign in with their corporate Azure AD accounts in the Microsoft Edge application will find their browser pre-loaded with workplace **Favorites** and website filters you define.
 
 > [!NOTE]
-> If you have blocked users from enrolling either iOS or Android devices, this scenario will not enable enrollment, and the users will need to install Edge for themselves.
+> If you have blocked users from enrolling either iOS/iPadOS or Android devices, this scenario will not enable enrollment, and the users will need to install Edge for themselves.
 The following Microsoft Edge enterprise features that are enabled by Intune policies include: 
 
 - **Dual-Identity** - Users can add both a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is similar to the architecture and experience in Office 365 and Outlook. Intune admins will be able to set the desired policies for a protected browsing experience within the work account. 

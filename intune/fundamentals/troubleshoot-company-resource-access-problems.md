@@ -2,7 +2,7 @@
 # required metadata
 
 title: Error and status codes in Microsoft Intune - Azure | Microsoft Docs
-description: See a list of the errors, status code, descriptions, and resolutions when using MDM managed devices, getting access to company resources, errors on iOS devices, and OMA response errors in Microsoft Intune.
+description: See a list of the errors, status code, descriptions, and resolutions when using MDM managed devices, getting access to company resources, errors on iOS/iPadOS devices, and OMA response errors in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -81,7 +81,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |-2016341111|0x87D11389|iOS device has returned an unexpected Idle status|
 |-2016341112|0x87D11388|iOS device is currently busy|
 
-## Errors returned by iOS devices
+## Errors returned by iOS/iPadOS devices
 
 ### Company Portal errors
 
