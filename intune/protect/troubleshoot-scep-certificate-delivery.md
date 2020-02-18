@@ -79,7 +79,7 @@ You can also review the [devices OMADM log](troubleshoot-scep-certificate-profil
 
 ### iOS and iPadOS
 
-On the iOS or iPadOS device, you can view the certificate under the Device Management Profile. Drill-in to see details for installed certificates.
+On the iOS/iPadOS or iPadOS device, you can view the certificate under the Device Management Profile. Drill-in to see details for installed certificates.
 
 ![iOS certificate](../protect/media/troubleshoot-scep-certificate-delivery/ios-certificate.png)
 
