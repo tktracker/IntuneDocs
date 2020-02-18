@@ -266,7 +266,7 @@ This behavior is specific to the PIN on iOS/iPadOS applications that are enabled
 IT administrators can deploy an app protection policy that requires app data to be encrypted. As part of the policy, the IT administrator can also specify when the content is encrypted.
 
 **How does Intune data encryption process**<br> 
-See the [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md) for detailed information on the encryption app protection policy setting.
+See the [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md) for detailed information on the encryption app protection policy setting.
 
 **Data that is encrypted**<br>
 Only data marked as "corporate" is encrypted according to the IT administrator's app protection policy. Data is considered "corporate" when it originates from a business location. For the Office apps, Intune considers the following as business locations:

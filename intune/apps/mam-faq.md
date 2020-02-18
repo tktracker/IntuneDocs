@@ -52,7 +52,7 @@ Intune MAM supports two configurations:
 App protection policies are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app.
 
 **What are examples of app protection policies?**<br></br>
-See the [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md) for detailed information on each app protection policy setting.
+See the [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md) for detailed information on each app protection policy setting.
 
 **Is it possible to have both MDM and MAM policies applied to the same user at the same time, for different devices? For example, if a user could be able to access their work resources from their own MAM-enabled machine, but also come to work and use an Intune MDM-managed device. Are there any caveats to this idea?**<br></br>
 If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the managed state. So when you create an app protection policy, next to Target to all app types, you'd select No. Then do any of the following:
