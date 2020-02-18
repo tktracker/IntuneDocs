@@ -116,7 +116,7 @@ Pseudonymized data collected by Intune may include, but is not limited to:
   - Account ID
   - EAS device ID
   - Platform-specific IDs
-  - AppleID for iOS devices
+  - AppleID for iOS/iPadOS devices
   - Mac Address for Mac devices
   - Windows ID for Windows devices
 - Managed application information
