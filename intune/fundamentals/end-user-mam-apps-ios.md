@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: iOS apps with app protection policies
-description: This topic describes what to expect when your iOS app is managed by app protection policies.
+title: iOS/iPadOS apps with app protection policies
+description: This topic describes what to expect when your iOS/iPadOS app is managed by app protection policies.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -28,7 +28,7 @@ ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ---
 
-# What to expect when your iOS app is managed by app protection policies
+# What to expect when your iOS/iPadOS app is managed by app protection policies
 
 Intune app protection policies apply to apps that used for work or school. This means that when your employees and students use their apps in a personal context, they may notice no difference in their experience. In the work or school context, however, they might receive prompts to make account decisions, update their settings, or contact you for help. Use this article to learn what your users experience when they try to access and use Intune-protected apps.  
 
@@ -38,7 +38,7 @@ If the device is **not enrolled in Intune**, the user is asked to restart the ap
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
 
-<!---  ![Screenshot of the iOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
+<!---  ![Screenshot of the iOS/iPadOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
 
 For devices that are **enrolled for management in Intune**, the user sees a message that their app is now managed.
 
