@@ -44,7 +44,7 @@ Apple iOS/iPadOS line-of-business apps that are assigned to iPhones and iPads ar
 The enterprise signing certificate that you use to sign apps typically lasts for three years. However, the provisioning profile expires after a year. While the certificate is still valid, Intune gives you the tools to proactively assign a new provisioning profile to devices that have apps that are nearing expiry.
 After the certificate expires, you must sign the app again with a new certificate and embed a new provisioning profile with the key of the new certificate.
 
-As the admin, you can include and exclude security groups to assign iOS app provisioning configuration. For example, you can assign an iOS app provisioning configuration to All Users, but exclude an executive group.
+As the admin, you can include and exclude security groups to assign iOS/iPadOS app provisioning configuration. For example, you can assign an iOS/iPadOS app provisioning configuration to All Users, but exclude an executive group.
 
 ## How to create an iOS mobile app provisioning profile
 
@@ -60,7 +60,7 @@ As the admin, you can include and exclude security groups to assign iOS app prov
    <img alt="Create profile - Basics" src="~/apps/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. Click **Next: Scope tags**.<br>
-   On the **Scope tags** page you can optionally configure scope tags to determine who can see iOS app provisioning profile in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+   On the **Scope tags** page you can optionally configure scope tags to determine who can see iOS/iPadOS app provisioning profile in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 5. Click **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the profile to users and devices. It is important to note that you can assign a profile to a device whether or not the device is managed by Intune.
 6. Click **Next: Review + create** to review the values you entered for the profile.
