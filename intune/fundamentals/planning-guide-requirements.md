@@ -41,11 +41,11 @@ Here are a few examples of an organization’s use-case requirements showing dif
 
 | **Use cases** | **Sub-use cases** | **Groups** | **Device platforms** | **Requirements** |
 |:---:|:---:|:---:|:---:|:---:|
-| Corporate | Information worker | HR, Finance | iOS | Secure e-mail, device settings, profiles, apps |                                                          
-| Corporate | Executives | HR, Finance | iOS | Secure e-mail, device settings, profiles, apps |                                                         
+| Corporate | Information worker | HR, Finance | iOS/iPadOS | Secure e-mail, device settings, profiles, apps |                                                          
+| Corporate | Executives | HR, Finance | iOS/iPadOS | Secure e-mail, device settings, profiles, apps |                                                         
 | Corporate | Kiosk | Retail | Android | Device settings, profiles, apps |
-| BYOD | Information worker | Marketing, Sales | iOS | Secure e-mail, device settings, profiles, apps |                                                         
-| BYOD | Executives | Marketing, Sales | iOS | Secure e-mail, device settings, profiles, apps |
+| BYOD | Information worker | Marketing, Sales | iOS/iPadOS | Secure e-mail, device settings, profiles, apps |                                                         
+| BYOD | Executives | Marketing, Sales | iOS/iPadOS | Secure e-mail, device settings, profiles, apps |
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to enter your organization’s use-case and sub-use-case requirements.
 

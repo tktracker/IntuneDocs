@@ -69,7 +69,7 @@ A key task of any device management solution is to provide security and protecti
 
 - **Microsoft 365** is a key component to simplifying common IT tasks. In the Microsoft 365 admin center, you create users, and manage groups. You also get access to other services, such as Intune, Azure AD, and more.
 
-  For example, create an iOS devices group in Microsoft 365. Then, use Intune to push policies to the iOS devices group that focus on iOS features, such as access to the app store, using AirDrop, backing up to iCloud, using Apple’s web filter, and more.
+  For example, create an iOS/iPadOS devices group in Microsoft 365. Then, use Intune to push policies to the iOS/iPadOS devices group that focus on iOS/iPadOS features, such as access to the app store, using AirDrop, backing up to iCloud, using Apple’s web filter, and more.
 
 - **Windows Defender** includes many security features to help protect Windows 10 devices. For example, using Intune and Windows Defender together, you can:
 
@@ -103,7 +103,7 @@ On the Device Management admin center, you can:
 - [Manage roles](role-based-access-control.md)  
 - Manage software updates
   - [Manage Windows 10 updates](../protect/windows-update-for-business-configure.md)  
-  - [Manage iOS updates](../protect/software-updates-ios.md)  
+  - [Manage iOS/iPadOS updates](../protect/software-updates-ios.md)  
 - [Azure active directory](https://docs.microsoft.com/azure/active-directory)  
 - [Manage users](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Manage groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
