@@ -78,8 +78,8 @@ On Intune-managed devices managed by using Mobile Device Management (MDM), Windo
 For more information, see:
 
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
-- [About macOS, iOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
-- [If your macOS and iOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609)
+- [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
+- [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609)
 
 ## Next steps
 [Network endpoints for Microsoft Intune](intune-endpoints.md)
