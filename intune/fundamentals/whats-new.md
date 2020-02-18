@@ -67,7 +67,8 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 Intune managed Android apps (including the Company Portal app for Android), the Intune App SDK for Android, and Intune app protection policies for Android, will require Android version 5.x (Lollipop) and higher to access company resources. Devices that aren't updated before the beginning of October 2020 will no longer be able to access the Company Portal or those apps. By December 2020, all enrolled devices will be force retired, resulting in loss of access to company resources. If you are using app protection policies without MDM, apps will not receive updates, and the quality of their experience will diminish over time. Be sure you update your SDK as well.
 
-**Plan for change: Intune managed apps, Intune App SDK, and Intune app protection policies for Android moving to support Android 5.0 and higher in October 2020**<br>
+**Plan for change:**<br>
+Intune managed apps, Intune App SDK, and Intune app protection policies for Android are moving to support Android 5.0 and higher in October 2020.<br>
 Intune will be moving to support Android 5.x (Lollipop) and higher in October 2020.
 
 **How does this affect me?**<br>
