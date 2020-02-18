@@ -63,7 +63,7 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-#### End of app support for Android 4.4 and lower <!-- 4911071 -->
+#### End of app support for Android 4.4 and lower<!-- 4911071 4911065 -->
 
 Managed apps and the Company Portal app for Android will require Android version 5.x (Lollipop) and higher to access company resources. Devices that aren't updated before the beginning of October 2020 will no longer be able to access the Company Portal or those apps. By December 2020, all enrolled devices will be force retired, resulting in loss of access to company resources. If you are using app protection policies without MDM, apps will not receive updates, and the quality of their experience will diminish over time. Be sure you update your SDK as well.
 
@@ -90,7 +90,7 @@ To prepare for this change, notify your helpdesk if applicable. Starting in July
 <!-- ########################## -->
 ## Week of February 10, 2020
 
-### Windows 7 ends extended support <!--3042987 4911065 -->
+### Windows 7 ends extended support<!--3042987 -->
 Windows 7 reached end of extended support on January 14, 2020. Intune deprecated support for devices running Windows 7 at the same time. Technical assistance and automatic updates that help protect your PC are no longer available. You should upgrade to Windows 10. For more information, see the [Plan for Change blog post](https://aka.ms/Windows7_Intune).
 
 
