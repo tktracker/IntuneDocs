@@ -131,7 +131,7 @@ If you haven't added the Company Portal app to the **Allowed apps** or **Exempt 
 
 Add the Company Portal to the **Allowed apps** or **Exempt apps** list in the Windows Information Protection (WIP) app protection policy. For more information, see [Create and deploy Windows Information Protection (WIP) app protection policy with Intune](../apps/windows-information-protection-policy-create.md).
 
-## Approve a iOS company app (line-of-business app) on your iOS device 
+## Approve a iOS/iPadOS company app (line-of-business app) on your iOS/iPadOS device 
 
 ### Where it appears
 
