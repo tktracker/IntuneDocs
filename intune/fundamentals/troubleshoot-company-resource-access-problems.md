@@ -279,7 +279,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |-2016332105|0x87D136B7|4007:Unrecognized file format|
 |-2016332106|0x87D136B6|4006:Profile removal date is in the past|
 |-2016332107|0x87D136B5|4005:Passcode does not comply|
-|-2016332108|0x87D136B4|4004:User cancelled installation|
+|-2016332108|0x87D136B4|4004:User canceled installation|
 |-2016332109|0x87D136B3|4003:Profile not queued for installation|
 |-2016332110|0x87D136B2|4002:Duplicate UUID|
 |-2016332111|0x87D136B1|4001:Installation failure|
@@ -319,7 +319,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |-2016344112|0x87D107D0|DCMO(1200): Operation is performed successfully|
 |-2016345595|0x87D10205|Syncml(517): The response to an atomic command was too large to fit in a single message.|
 |-2016345596|0x87D10204|Syncml(516): Command was inside Atomic element and Atomic failed. This command was not rolled back successfully.|
-|-2016345598|0x87D10202|Syncml(514): The SyncML command was not completed successfully, since the operation was already cancelled before processing the command.|
+|-2016345598|0x87D10202|Syncml(514): The SyncML command was not completed successfully, since the operation was already canceled before processing the command.|
 |-2016345599|0x87D10201|Syncml(513): The recipient does not support or refuses to support the specified version of the SyncML Synchronization Protocol used in the request SyncML Message.|
 |-2016345600|0x87D10200|Syncml(512): An application error occurred during the synchronization session.|
 |-2016345601|0x87D101FF|Syncml(511): A severe error occurred in the server while processing the request.|
