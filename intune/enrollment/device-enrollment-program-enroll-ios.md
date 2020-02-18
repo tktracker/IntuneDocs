@@ -83,6 +83,9 @@ You use the Apple Business Manager or Apple School Manager portal to create a to
 
 2. Grant permission to Microsoft to send user and device information to Apple by selecting **I agree**.
 
+> [!NOTE]
+> Once you progress beyond step 2 to download the Intune public key certificate, do not close the wizard or navigate away from this page. Doing so will invalidate the certificate you have downloaded, and you will need to repeat this process again. If you encounter this situation, you will typically note that the Create button on the Review + create tab is greyed out, and you cannot complete the process.
+
    ![Screenshot of Enrollment Program Token pane in Apple Certificates workspace to download public key.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
 3. Choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple Device Enrollment Program portal.

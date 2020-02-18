@@ -100,7 +100,7 @@
   - name: Set up macOS enrollment
     href: macos-enroll.md
     items:
-    - name: Device Enrollment Program or Apple School Manager
+    - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-macos.md
   - name: Incomplete enrollment report
     href: enrollment-report-company-portal-abandon.md

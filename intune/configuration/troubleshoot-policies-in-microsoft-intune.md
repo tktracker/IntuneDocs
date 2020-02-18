@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,7 +80,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
         - To force check-in:
             - On the Android device, open the Company Portal app > **Devices** > Choose the device from list > **Check Device Settings**.
-            - On the iOS device, open the Company portal app > **Devices** > Choose the device from list > **Check Settings**.
+            - On the iOS/iPadOS device, open the Company portal app > **Devices** > Choose the device from list > **Check Settings**.
 
         - On a Windows device, open **Settings** > **Accounts** > **Access Work or School** > Select the account or MDM enrollment > **Info** > **Sync**.
 
@@ -94,7 +94,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
         **Policy states**:
 
-        - **Not Applicable**: This policy isn't supported on this platform. For example, iOS policies don't work on Android. Samsung KNOX policies don't work on Windows devices.
+        - **Not Applicable**: This policy isn't supported on this platform. For example, iOS/iPadOS policies don't work on Android. Samsung KNOX policies don't work on Windows devices.
         - **Conflict**: There's an existing setting on the device that Intune can't override. Or, you deployed two policies with the same setting using different values.
         - **Pending**: The device hasn't checked into Intune to get the policy. Or, the device received the policy but hasn't reported the status to Intune.
         - **Errors**: Look up errors and possible resolutions at [Troubleshoot company resource access problems](../fundamentals/troubleshoot-company-resource-access-problems.md).
@@ -113,7 +113,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
     - **Conforms**: The device received the profile and reports to Intune that it conforms to the setting.
 
-    - **Not applicable**: The profile setting isn't applicable. For example, email settings for iOS devices don't apply to an Android device.
+    - **Not applicable**: The profile setting isn't applicable. For example, email settings for iOS/iPadOS devices don't apply to an Android device.
 
     - **Pending**: The profile is sent to the device, but hasn't reported the status to Intune. For example, encryption on Android requires the user to enable encryption, and might show as pending.
 
@@ -124,7 +124,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
 ## Policy troubleshooting resources
 
-- [Troubleshooting iOS or Android policies not applying to devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (opens another Microsoft site)
+- [Troubleshooting iOS/iPadOS or Android policies not applying to devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (opens another Microsoft site)
 - [Troubleshooting Windows 10 Intune policy failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (opens a blog)
 - [Troubleshoot CSP custom settings for Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (opens another Microsoft site)
 - [Windows 10 Group Policy vs Intune MDM policy](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (opens another Microsoft site)
@@ -147,7 +147,7 @@ Depending on the device platform, if you want to change the policy to a less sec
 
 For example, in Windows 8.1, on the desktop, swipe in from right to open the **Charms** bar. Choose **Settings** > **Control Panel** > **User Accounts**. On the left, select **Reset Security Policies** link, and choose **Reset Policies**.
 
-Other platforms, such as Android, iOS, and Windows Phone 8.1, may need to be retired and re-enrolled to apply a less restrictive policy.
+Other platforms, such as Android, iOS/iPadOS, and Windows Phone 8.1, may need to be retired and re-enrolled to apply a less restrictive policy.
 
 [Troubleshoot device enrollment](../enrollment/troubleshoot-device-enrollment-in-intune.md) may be a good resource.
 

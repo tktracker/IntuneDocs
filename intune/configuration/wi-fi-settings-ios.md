@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Configure Wi-Fi settings for iOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure Wi-Fi settings for iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Create or add a WiFi device configuration profile for iOS devices. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune. 
+description: Create or add a WiFi device configuration profile for iOS/iPadOS devices. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,9 +28,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for iOS devices in Microsoft Intune
+# Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune
 
-You can create a profile with specific WiFi settings, and then deploy this profile to your iOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
+You can create a profile with specific WiFi settings, and then deploy this profile to your iOS/iPadOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
 
 These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings.
 
@@ -41,7 +41,7 @@ This article describes these settings.
 [Create a device profile](../device-profile-create.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS enrollment](../enrollment/ios-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 
 ## Basic profiles
 
