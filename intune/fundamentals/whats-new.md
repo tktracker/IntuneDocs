@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,9 +58,39 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 -->  
 
 <!-- ########################## -->
+## Week of February 17, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### End of app support for Android 4.4 and lower <!-- 4911071 -->
+
+Managed apps and the Company Portal app for Android will require Android version 5.x (Lollipop) and higher to access company resources. Devices that aren't updated before the beginning of October 2020 will no longer be able to access the Company Portal or those apps. By December 2020, all enrolled devices will be force retired, resulting in loss of access to company resources. If you are using app protection policies without MDM, apps will not receive updates, and the quality of their experience will diminish over time. Be sure you update your SDK as well.
+
+**Plan for change: Intune apps, Intune App SDK, and Intune app protection policies for Android moving to support Android 5.0 and higher in October 2020**
+Intune will be moving to support Android 5.x (Lollipop) and higher in October 2020.
+
+**How does this affect me?**
+Provided that the Office mobile apps for Android ended support for Android 4.x (KitKat) on June 30th 2019 (MC181101), this may not affect you. You likely already upgraded your OS or devices. However, if you have any device that is still running Android version 4.x, or decide to enroll any device that is running Android version 4.x, please note that these devices will either need to be upgraded to Android version 5.x (Lollipop) or greater, or they will need to be upgraded to a device that supports Android version 5.0 or greater.
+
+Below, you will find a list of common devices enrolled in Intune that run Android version 4.x. If you have one of these devices, please take the appropriate steps to make sure the device will support Android version 5.0 or higher or that it will be replaced with a device that supports Android version 5.0 or higher. Note that this list is not exhaustive of all devices that may need to be evaluated:
+
+- Samsung SM-T561 
+- Samsung SM-T365 
+- Samsung GT-I9195
+- Samsung SM-G800F
+- Samsung SM-G357FZ
+- Motorola XT1080
+- Samsung GT-I9305
+- Samsung SM-T231
+
+**What do I need to do to prepare for this change? **
+To prepare for this change, notify your helpdesk if applicable. Starting in July 2020, MDM enrolled devices with Android KitKat and the Company Portal will receive a prompt to upgrade their OS or device. If you use Intune app protection policies you can also set the “Require minimum OS version (Warning only)” conditional launch setting to help raise awareness with your end users of the upcoming change.
+
+<!-- ########################## -->
 ## Week of February 10, 2020
 
-### Windows 7 ends extended support <!--3042987-->
+### Windows 7 ends extended support <!--3042987 4911065 -->
 Windows 7 reached end of extended support on January 14, 2020. Intune deprecated support for devices running Windows 7 at the same time. Technical assistance and automatic updates that help protect your PC are no longer available. You should upgrade to Windows 10. For more information, see the [Plan for Change blog post](https://aka.ms/Windows7_Intune).
 
 
