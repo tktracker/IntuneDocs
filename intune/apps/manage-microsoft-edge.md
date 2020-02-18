@@ -106,7 +106,7 @@ To create app configuration for Microsoft Edge:
 2. Select **Apps** > **App configuration policies** > **Add**.
 3. On the **Add configuration policy** pane, enter a **Name** and optional **Description** for the app configuration settings.
 4. For **Device enrollment** type, choose **Managed apps**.
-5. Choose **Select the required app**. Then, on the **Targeted apps** pane, choose the **Managed Browser** or **Edge** for iOS, for Android, or for both.
+5. Choose **Select the required app**. Then, on the **Targeted apps** pane, choose the **Managed Browser** or **Edge** for iOS/iPadOS, for Android, or for both.
 6. Select **OK** to return to the **Add configuration policy** pane.
 7. Select **Configuration settings**. On the **Configuration** pane, you define key and value pairs to supply configurations for Microsoft Edge. Use the sections later in this article to learn about the different key and value pairs you can define.
 
@@ -142,7 +142,7 @@ On Android:
 - Microsoft Edge launches if only Microsoft Edge is downloaded on the device, and is targeted with Intune policy.
 - Managed Browser launches if only Managed Browser is on the device, and is targeted with Intune policy.
 
-On iOS, for apps that have integrated the Intune SDK for iOS v. 9.0.9+:
+On iOS/iPadOS, for apps that have integrated the Intune SDK for iOS v. 9.0.9+:
 - The Intune Managed Browser launches if both the Managed Browser and Microsoft Edge are on the device.  
 - Microsoft Edge launches if only Microsoft Edge is on the device, and is targeted with Intune policy.
 - Managed Browser launches if only Managed Browser is on the device, and is targeted with Intune policy.
