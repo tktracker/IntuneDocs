@@ -38,7 +38,7 @@ You can add the following types of groups:
 - **Assigned groups** - Manually add users or devices into a static group. 
 - **Dynamic groups** (Requires Azure AD Premium) - Automatically add users or devices to user groups or device groups based on an expression you create.
 
-  For example, when a user is added with the manager title, the user is automatically added to an **All managers** users group. Or, when a device has the iOS device OS type, the device is automatically added to an **All iOS devices** devices group.
+  For example, when a user is added with the manager title, the user is automatically added to an **All managers** users group. Or, when a device has the iOS/iPadOS device OS type, the device is automatically added to an **All iOS devices** devices group.
 
 ## Add a new group
 
