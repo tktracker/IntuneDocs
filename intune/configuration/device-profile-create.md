@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -91,7 +91,7 @@ This article:
 
      For example, if you select **iOS/iPadOS** for the platform, your profile type options look similar to the following profile:
 
-     ![Create iOS profile in Intune](./media/device-profile-create/create-device-profile.png)
+     ![Create iOS/iPadOS profile in Intune](./media/device-profile-create/create-device-profile.png)
 
 4. When finished, select **OK** > **Create** to save your changes. The profile is created, and shown in the list.
 
@@ -175,10 +175,10 @@ When creating profiles, consider the following recommendations:
   **Profile name**: Admin template - OneDrive configuration profile for all Windows 10 users  
   **Profile description**: OneDrive admin template profile that includes the minimum and base settings for all Windows 10 users. Created by user@contoso.com to prevent users from sharing organizational data to personal OneDrive accounts.
 
-  **Profile name**: VPN profile for all iOS users  
-  **Profile description**: VPN profile that includes the minimum and base settings for all iOS users to connect to Contoso VPN. Created by user@contoso.com so users automatically authenticate to VPN, instead of prompting users for their username and password.
+  **Profile name**: VPN profile for all iOS/iPadOS users  
+  **Profile description**: VPN profile that includes the minimum and base settings for all iOS/iPadOS users to connect to Contoso VPN. Created by user@contoso.com so users automatically authenticate to VPN, instead of prompting users for their username and password.
 
-- Create your profile by its task, such as configure Microsoft Edge settings, enable Microsoft Defender anti-virus settings, block iOS jailbroken devices, and so on.
+- Create your profile by its task, such as configure Microsoft Edge settings, enable Microsoft Defender anti-virus settings, block iOS/iPadOS jailbroken devices, and so on.
 
 - Create profiles that apply to specific groups, such as Marketing, Sales, IT Administrators, or by location or school system.
 

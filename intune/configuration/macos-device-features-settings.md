@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ Intune includes some built-in settings to customize features on your macOS devic
 
 Use these features to control macOS devices as part of your mobile device management (MDM) solution.
 
-This article lists these settings, and describes what each setting does. It also lists the steps to get the IP address, path, and port of AirPrint printers using the Terminal app (emulator). For more information on device features, go to [Add iOS or macOS device feature settings](device-features-configure.md).
+This article lists these settings, and describes what each setting does. It also lists the steps to get the IP address, path, and port of AirPrint printers using the Terminal app (emulator). For more information on device features, go to [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
 
 ## Before you begin
 
@@ -48,8 +48,8 @@ This article lists these settings, and describes what each setting does. It also
 
 - **IP address**: Enter the IPv4 or IPv6 address of the printer. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) provides more details.
 - **Path**: Enter the path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) provides more details.
-- **Port** (iOS 11.0 and later): Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port.
-- **TLS** (iOS 11.0 and later): Select **Enable** to secure AirPrint connections with Transport Layer Security (TLS).
+- **Port** (iOS 11.0+, iPadOS 13.0+): Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port.
+- **TLS** (iOS 11.0+, iPadOS 13.0+): Select **Enable** to secure AirPrint connections with Transport Layer Security (TLS).
 
 - **Add** The AirPrint server. You can add many AirPrint servers.
 
@@ -242,4 +242,4 @@ This feature applies to:
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also configure device features on [iOS](ios-device-features-settings.md).
+You can also configure device features on [iOS/iPadOS](ios-device-features-settings.md).

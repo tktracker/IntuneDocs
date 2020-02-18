@@ -37,13 +37,13 @@ As an administrator, you can create exceptions to the Intune App Protection Poli
 >[!WARNING] 
 > You are responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add data transfer exceptions for apps that your organization must use, but that do not support Intune APP (Application Protection Policies). Additionally, only add exceptions for apps that you do not consider to be data leak risks.
 
-Within an Intune Application Protection Policy, setting **Allow app to transfer data to other apps** to **Policy managed apps** means that the app can transfer data only to apps managed by Intune. If you need to allow data to be transferred to specific apps that don't support Intune APP, you can create exceptions to this policy by using **Select apps to exempt**. Exemptions allow applications managed by Intune to invoke unmanaged applications based on URL protocol (iOS) or package name (Android). By default, Intune adds vital native applications to this list of exceptions. 
+Within an Intune Application Protection Policy, setting **Allow app to transfer data to other apps** to **Policy managed apps** means that the app can transfer data only to apps managed by Intune. If you need to allow data to be transferred to specific apps that don't support Intune APP, you can create exceptions to this policy by using **Select apps to exempt**. Exemptions allow applications managed by Intune to invoke unmanaged applications based on URL protocol (iOS/iPadOS) or package name (Android). By default, Intune adds vital native applications to this list of exceptions. 
 
 > [!NOTE]
 > Modifying or adding to the data transfer policy exceptions doesn't impact other App Protection Policies, such as cut, copy, and paste restrictions. 
 
 ## iOS data transfer exceptions
-For a policy targeting iOS/iPadOS, you can configure data transfer exceptions by URL protocol. To add an exception, check the documentation provided by the developer of the app to find information about supported URL protocols. For more information about iOS/iPadOS data transfer exceptions, see [iOS app protection policy settings - Data transfer exemptions](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+For a policy targeting iOS/iPadOS, you can configure data transfer exceptions by URL protocol. To add an exception, check the documentation provided by the developer of the app to find information about supported URL protocols. For more information about iOS/iPadOS data transfer exceptions, see [iOS/iPadOS app protection policy settings - Data transfer exemptions](app-protection-policy-settings-ios.md#data-transfer-exemptions).
 
 > [!NOTE]
 > Microsoft does not have a method to manually find the URL protocol for creating app exceptions for third-party applications. 
@@ -81,5 +81,5 @@ By adding the **Webex** package as an exception to the MAM data transfer policy,
 ## Next steps
 
 - [Create and deploy app protection policies](app-protection-policies.md)
-- [iOS app protection policy settings - Data transfer exemptions](app-protection-policy-settings-ios.md#data-transfer-exemptions)
+- [iOS/iPadOS app protection policy settings - Data transfer exemptions](app-protection-policy-settings-ios.md#data-transfer-exemptions)
 - [Android app protection policy settings - Data transfer exemptions](app-protection-policy-settings-android.md#data-transfer-exemptions)

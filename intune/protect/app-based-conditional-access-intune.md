@@ -38,7 +38,7 @@ App-based Conditional Access and client app management add a security layer by m
 > [!NOTE]
 > A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
 
-You can block the built-in mail apps on iOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don’t have Intune app protection policies applied from accessing SharePoint Online.
+You can block the built-in mail apps on iOS/iPadOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don’t have Intune app protection policies applied from accessing SharePoint Online.
 
 ## Prerequisites
 

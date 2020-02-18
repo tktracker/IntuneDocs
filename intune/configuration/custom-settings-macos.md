@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -74,4 +74,4 @@ Select **OK** > **Create** to save your changes. The profile is created and show
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md).
 
-See how to [create the profile on iOS devices](../custom-settings-ios.md).
+See how to [create the profile on iOS/iPadOS devices](../custom-settings-ios.md).
