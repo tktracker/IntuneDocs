@@ -3,7 +3,7 @@
 
 title: Manage Apple volume-purchased apps
 titleSuffix: Microsoft Intune
-description: Learn about how you can sync apps you purchased in volume from iOS and macOS App Store into Microsoft Intune and then manage and track their usage.
+description: Learn about how you can sync apps you purchased in volume from iOS/iPadOS and macOS App Store into Microsoft Intune and then manage and track their usage.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Apple lets you purchase multiple licenses for an app that you want to use in your organization on iOS and macOS devices using [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). You can then synchronize your volume purchase information with Intune and track your volume-purchased app use. Purchasing app licenses helps you efficiently manage apps within your company and retain ownership and control of purchased apps. 
+Apple lets you purchase multiple licenses for an app that you want to use in your organization on iOS/iPadOS and macOS devices using [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). You can then synchronize your volume purchase information with Intune and track your volume-purchased app use. Purchasing app licenses helps you efficiently manage apps within your company and retain ownership and control of purchased apps. 
 
 Microsoft Intune helps you manage apps purchased through this program by:
 
@@ -42,13 +42,13 @@ Microsoft Intune helps you manage apps purchased through this program by:
 - Tracking how many licenses are available and have been used for purchased apps.
 - Helping you install apps up to the number of licenses you own.
 
-Additionally, you can synchronize, manage, and assign books you purchased from Apple Business Manager with Intune to iOS devices. For more information, see [How to manage iOS eBooks you purchased through a volume-purchase program](vpp-ebooks-ios.md).
+Additionally, you can synchronize, manage, and assign books you purchased from Apple Business Manager with Intune to iOS/iPadOS devices. For more information, see [How to manage iOS/iPadOS eBooks you purchased through a volume-purchase program](vpp-ebooks-ios.md).
 
 ## What are location tokens?
 Location tokens are also known as Volume Purchase Program (VPP) tokens. These tokens are used to assign and manage licenses purchased using Apple Business Manager. Content Managers can purchase and associate licenses with location tokens they have permissions to in Apple Business Manager. These location tokens are then downloaded from Apple Business Manager and uploaded in Microsoft Intune. Microsoft Intune supports uploading multiple location tokens per tenant. Each token is valid for one year.
 
 ## How are purchased apps licensed?
-Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS and macOS devices.
+Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS/iPadOS and macOS devices.
 
 |   | Device Licensing | User Licensing |
 |-----|------------------|----------------|
@@ -160,9 +160,9 @@ The end-user will receive prompts for VPP app installation in a number of scenar
 
 ## Revoking app licenses
 
-You can revoke all associated iOS or macOS volume-purchase program (VPP) app licenses based on a given device, user, or app.  But there are some differences between iOS and macOS platforms. 
+You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) app licenses based on a given device, user, or app.  But there are some differences between iOS/iPadOS and macOS platforms. 
 
-|   | iOS | macOS |
+|   | iOS/iPadOS | macOS |
 |-----|------------------|----------------|
 | **Remove app assignment** | When you remove an app that was assigned to a user, Intune reclaims the user or device license and uninstalls the app from the device. | When you remove an app that was assigned to a user, Intune reclaims the user or device license. The app is not uninstalled from the device. |
 | **Revoke app license** | Revoking an app license reclaims the app license from the user or device. You must change the assignment to **Uninstall** to remove the app from the device. | Revoking an app license reclaims the app license from the user or device. The macOS app with revoked license remains usable on the device, but cannot be updated until a license is reassigned to the user or device. According to Apple, such apps are removed after a 30-day grace period. However, Apple does not provide a means for Intune to remove the app using Uninstall assignment action.
@@ -188,14 +188,14 @@ You can renew an Apple VPP token by downloading a new token from Apple Business 
 
 ## Deleting a VPP app
 
-Currently, you cannot delete an iOS VPP app from Microsoft Intune.
+Currently, you cannot delete an iOS/iPadOS VPP app from Microsoft Intune.
 
 ## Assigning custom role permissions for VPP
 
 Access to Apple VPP tokens and VPP apps can be controlled independently using permissions assigned to custom administrator roles in Intune.
 
 * To allow an Intune custom role to manage Apple VPP tokens under **Apps** > **Apple VPP tokens**, assign permissions for **Managed apps**.
-* To allow an Intune custom role to manage apps purchased using iOS VPP tokens under **Apps** > **All apps**, assign permissions for **Mobile apps**. 
+* To allow an Intune custom role to manage apps purchased using iOS/iPadOS VPP tokens under **Apps** > **All apps**, assign permissions for **Mobile apps**. 
 
 ## Additional information
 
