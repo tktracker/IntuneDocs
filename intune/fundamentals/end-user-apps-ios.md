@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: How your iOS users get their apps 
-description: Methods for making iOS apps available to end users
+title: How your iOS/iPadOS users get their apps 
+description: Methods for making iOS/iPadOS apps available to end users
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 ---
 
 
-# How your iOS users get their apps
+# How your iOS/iPadOS users get their apps
 
 Use this information to understand how and where your end users get the apps that you distribute through Microsoft Intune.
 
@@ -41,7 +41,7 @@ Use this information to understand how and where your end users get the apps tha
 
 **Unmanaged apps**--Apps that users can download from the iOS App Store that aren't integrated with the Intune app SDK. Intune doesn’t have any control over the distribution, management, or selective wipe of these apps.  
 
-Apple restrictions prohibit line-of-business and managed App Store apps from being listed in the Company Portal app. To get around this issue, the tiles in the Company Portal app for iOS point users to different views in a single location (the Company Portal website) for all of their apps.
+Apple restrictions prohibit line-of-business and managed App Store apps from being listed in the Company Portal app. To get around this issue, the tiles in the Company Portal app for iOS/iPadOS point users to different views in a single location (the Company Portal website) for all of their apps.
 
 Enrolled users get their apps by tapping on the following tiles on the Apps screen of the Company Portal app:
 
