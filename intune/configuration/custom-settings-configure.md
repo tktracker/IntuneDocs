@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use custom device settings in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create a profile to use custom settings for Windows Phone, Windows 8.1, Windows 10 and later, Android, Android Enterprise, macOS, and iOS devices using Microsoft Intune
+description: Add or create a profile to use custom settings for Windows Phone, Windows 8.1, Windows 10 and later, Android, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,11 +30,11 @@ ms.collection: M365-identity-device-management
 
 ## What are custom profiles
 
-Microsoft Intune includes many built-in settings to control different features on a device. You can also create custom profiles. Custom profiles are great when you want to use device settings and features that aren't built in to Intune. These profiles include features and settings for you to control on devices in your organization. For example, you can create a custom profile that sets the same feature for every iOS device.
+Microsoft Intune includes many built-in settings to control different features on a device. You can also create custom profiles. Custom profiles are great when you want to use device settings and features that aren't built in to Intune. These profiles include features and settings for you to control on devices in your organization. For example, you can create a custom profile that sets the same feature for every iOS/iPadOS device.
 
 For more information on configuration profiles, see [What are Microsoft Intune device profiles?](device-profiles.md). 
 
-This article includes links to create custom profiles for Android, Android Enterprise, iOS, macOS, and Windows.
+This article includes links to create custom profiles for Android, Android Enterprise, iOS/iPadOS, macOS, and Windows.
 
 ## Available platforms
 

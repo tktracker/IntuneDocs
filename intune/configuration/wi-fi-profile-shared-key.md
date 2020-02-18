@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -48,7 +48,7 @@ This feature supports:
 
 - It may be easier to copy the code from a computer that connects to that network, as described later in this article.
 - You can add multiple networks and keys by adding more OMA-URI settings.
-- For iOS, use Apple Configurator on a Mac station to set up the profile.
+- For iOS/iPadOS, use Apple Configurator on a Mac station to set up the profile.
 - PSK requires a string of 64 hexadecimal digits, or a passphrase of 8 to 63 printable ASCII characters. Some characters, such as asterisk ( * ), aren't supported.
 
 ## Create a custom profile

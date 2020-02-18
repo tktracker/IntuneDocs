@@ -1,12 +1,12 @@
 ---
 title: Set up a telecom expense management service in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: 
-description: Integrate Microsoft Intune with the Saaswedo telecom expense management service to monitor data usage and set thresholds or limits on Android and iOS devices.
+description: Integrate Microsoft Intune with the Saaswedo telecom expense management service to monitor data usage and set thresholds or limits on Android, iOS, and iPadOS devices.
 keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,8 +30,6 @@ ms.collection: M365-identity-device-management
 
 # Set up a telecom expense management service in Intune
 
-
-
 Using Intune, you can manage telecom expenses from data usage on organization-owned mobile devices. Intune integrates with Saaswedo’s [Datalert telecom expense management](http://datalert.biz/get-started). Datalert is a real-time telecom expense management solution that manages telecom data usage. It can help avoid costly and unexpected data and roaming charges for your Intune-managed devices.
 
 The integration with Datalert can set, monitor, and enforce roaming and domestic data usage limits. When the limits exceed your defined thresholds, alerts are automatically triggered. You can also configure the service to apply different actions, such as disabling roaming or exceeding the threshold, to individuals or groups. The Datalert management console includes reports that show data usage and monitoring information.
@@ -53,7 +51,8 @@ To use the Datalert service with Intune, there are some configuration settings i
 
   [Android versions that support Knox](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (opens Samsung's web site) lists the Knox supported versions.
 
-- iOS 8.0 and later
+- iOS 8.0 and newer
+- iPadOS 13.0 and newer
 
 ## Prerequisites
 
@@ -139,11 +138,11 @@ These categories are shown to users during enrollment ([enroll Android devices](
 
 #### Add the Datalert app to Intune
 
-The following steps add the Datalert app. As an example, iOS is used. [Add apps](../apps/apps-add.md) and [use scope tags](../fundamentals/scope-tags.md) have more specific information on these steps.
+The following steps add the Datalert app. As an example, iOS/iPadOS is used. [Add apps](../apps/apps-add.md) and [use scope tags](../fundamentals/scope-tags.md) have more specific information on these steps.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
 
-2. Select your **App type**. For example, for iOS, select **Store App - iOS**.
+2. Select your **App type**. For example, for iOS/iPadOS, select **Store App - iOS/iPadOS**.
 
 3. In **Search the App Store**, type **Datalert** to find the Datalert app.
 
@@ -181,7 +180,7 @@ The Datalert service is now active. It starts monitoring data usage, and disabli
 
 For the end-user experience, the following articles may help:
 
-- [Enroll your iOS device in telecom expense management](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
+- [Enroll your iOS/iPadOS device in telecom expense management](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
 - [Enroll your Android device in telecom expense management](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## Turn off the Datalert service
