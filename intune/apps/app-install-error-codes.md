@@ -54,7 +54,7 @@ This section mentions both Device Administrator (DA) and Samsung Knox enrollment
 | 0xC7D14FB1  | -942583887 | The   end user canceled the app installation. | The   user explicitly uninstalled the app. This error is returned when the Android   OS install activity was canceled by the user. The user pressed the cancel   button when the OS install prompt was presented or clicked away from the   prompt. This error is returned for only DA scenarios. For KNOX scenarios, the   user is not prompted to install, this can be done silently. Intune presents a   notification that users can click to retry. If the app is an available app,   the notification can be dismissed. However, if the app is required, it cannot   be dismissed. Ask the user not to cancel the install. |
 | 0xC7D14FB9 | -942583879 | The   end user canceled the app installation. (At the accept prompt) | Educate the user to accept the Intune deployed app and install   the app when prompted. |
 
-## iOS app installation errors
+## iOS/iPadOS app installation errors
 
 The following error messages and descriptions provide details about iOS/iPadOS installation errors. 
 
