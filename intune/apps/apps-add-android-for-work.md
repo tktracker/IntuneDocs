@@ -85,20 +85,6 @@ There are two ways to browse and approve Managed Google Play store apps with Int
 10. Click **Sync** at the top of the blade to sync the app with the Managed Google Play service.
 11. Click **Refresh** to update the app list and display the newly added app.
 
-### Add additional app settings to a Managed Google Play store app
-1. If you need to add additional app details, select the app from the app list.
-2. Click **Properties** > **Edit** next to **App information**. The **App information** page is displayed.
-3. In the **App information** page, add the app details:
-    - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
-    - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
-    - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL is displayed to users in the company portal.
-    - **Privacy URL**: Optionally, enter the URL of a website that contains privacy information for this app. The URL is displayed to users in the company portal.
-    - **Developer**: Optionally, enter the name of the app developer.
-    - **Owner**: Optionally, enter a name for the owner of this app, for example, *HR department*.
-    - **Notes**: Optionally, enter any notes that you want to associate with this app.
-4. Click **Review + save** to view the **Review + save** page. 
-5. When you are done, click **Save** to update the app in Intune.
-
 ### Add a Managed Google Play store app in the Managed Google Play console (Alternative)
 If you prefer to synchronize a Managed Google Play app with Intune rather than adding it directly using Intune, use the following steps.
 

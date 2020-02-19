@@ -27,7 +27,7 @@
     items:
     - name: Locate lost iOS/iPadOS device
       href: device-locate.md
-    - name: Enable iiOS/iPadOSOS lost mode
+    - name: Enable iOS/iPadOS lost mode
       href: device-lost-mode.md
     - name: Turn on iOS/iPadOS supervised mode
       href: device-supervised-mode.md

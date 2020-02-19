@@ -34,11 +34,11 @@ ms.collection: M365-identity-device-management
 Use the information in this article to help you add iOS store apps to Microsoft Intune. iOS store apps are apps that Intune installs on your users' devices. A user is part of your company's workforce. iOS store apps are automatically updated.
 
 >[!NOTE]
->Although users of iOS devices can remove some built-in iOS apps, such as Stocks and Maps, you cannot use Intune to redeploy those apps. If your users delete these apps, they must go to the App Store and manually reinstall them.
+>Although users of iOS/iPadOS devices can remove some built-in iOS/iPadOS apps, such as Stocks and Maps, you cannot use Intune to redeploy those apps. If your users delete these apps, they must go to the App Store and manually reinstall them.
 
 ## Before you start
 
-You can assign apps by using this method only if they are free of charge in the App Store. If you want to assign paid apps by using Intune, consider using the [iOS volume-purchase program](vpp-apps-ios.md).
+You can assign apps by using this method only if they are free of charge in the App Store. If you want to assign paid apps by using Intune, consider using the [iOS/iPadOS volume-purchase program](vpp-apps-ios.md).
 
 >[!NOTE]
 >When you work with Microsoft Intune, we recommend that you use either the Microsoft Edge or Google Chrome browser.

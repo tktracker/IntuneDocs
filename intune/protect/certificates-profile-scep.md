@@ -284,7 +284,7 @@ Assign SCEP certificate profiles the same way you [deploy device profiles](../co
 - Although you create and assign the trusted certificate profile and the SCEP certificate profile separately, both must be assigned. Without both installed on a device, the SCEP certificate policy fails. Ensure that any trusted root certificate profiles are also deployed to the same groups as the SCEP profile.
 
 > [!NOTE]
-> On iOS devices, when a SCEP certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS device having multiple certificates delivered by the SCEP certificate request.  If a single certificate is desired, you must use PKCS certificates instead of SCEP certificates.  This is due to differences in how SCEP and PKCS certificates are delivered to devices.
+> On iOS/iPadOS devices, when a SCEP certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP certificate request.  If a single certificate is desired, you must use PKCS certificates instead of SCEP certificates.  This is due to differences in how SCEP and PKCS certificates are delivered to devices.
 
 ## Next steps
 
