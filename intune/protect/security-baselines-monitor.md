@@ -152,7 +152,7 @@ On Windows 10 devices, there's a built-in MDM diagnostic information report. Thi
 [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) provides more information on this built-in report.
 
 > [!TIP]
-> - Some settings also list the GUID. You can search for this GUID in the local registry (regedit) for any set values.
+> - Some settings also list the GUID. You can search for this GUID in the local registry (regedit) for any set values. 
 > - The Event Viewer logs may also include some error information on the problematic setting (**Event viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
 
 ## Next steps
