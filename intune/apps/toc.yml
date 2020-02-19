@@ -90,7 +90,9 @@
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
-          href: apps-edge-macos.md          
+          href: apps-edge-macos.md   
+        - name: Microsoft Defender ATP for macOS
+          href: apps-mdatp-macos.md                   
       - name: PowerShell scripts
         href: intune-management-extension.md  
     - name: Assign apps
