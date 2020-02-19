@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -109,6 +109,19 @@ Monitoring the profile gives you insight into the deployment state of your devic
 4. In **Monitor**, you can see the deployment status of the profile on individual devices, the status for each user, and the status for each setting in the baseline:
 
    ![See the different monitor options for a security baselines profile](./media/security-baselines-monitor/monitor-status-options.png)
+
+## View Endpoint security configurations per device
+
+View details about the security configurations that apply to an individual device, which can help you isolate settings that  are misconfigured.
+
+1. Sign in to the  sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Go to  **Devices** > **All devices** and select the device you want to view.
+
+3. In the *Monitor* category, select **Endpoint security configuration** to view the list of security configurations that apply to that device.
+
+4. You can select an Endpoint security configuration to drill in and view additional details about the evaluation of that security configuration on the device.
+
 
 ## Troubleshoot using per-setting status
 
