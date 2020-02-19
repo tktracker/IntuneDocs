@@ -92,7 +92,7 @@ Before you can begin to set up, configure, manage and enroll devices using Intun
 
 ### Task 6: Enable device platforms
 
-By default, most device platforms are enabled except for Apple devices (iOS and Mac). Before iOS/iPadOS devices can be enrolled and managed in Intune, the device platform must be enabled. To do so, you need to create an MDM Push certificate, and add it to Intune.
+By default, most device platforms are enabled except for Apple devices (iOS/iPadOS and Mac). Before iOS/iPadOS devices can be enrolled and managed in Intune, the device platform must be enabled. To do so, you need to create an MDM Push certificate, and add it to Intune.
 
 - Learn more about [how to enable Apple devices for enrollment](../enrollment/apple-mdm-push-certificate-get.md).
 
@@ -134,7 +134,7 @@ Intune supports Conditional Access for Exchange Online, Exchange on-premises, Sh
 
 ### Task 13: Enroll devices
 
-Intune supports iOS, Mac OS, Android, Windows desktop, and Windows mobile device platforms. Enroll mobile device platforms as appropriate based on your Intune deployment use cases and requirements.
+Intune supports iOS/iPadOS, Mac OS, Android, Windows desktop, and Windows mobile device platforms. Enroll mobile device platforms as appropriate based on your Intune deployment use cases and requirements.
 
 - Learn more about [how to enroll devices](../enrollment/device-enrollment.md).
 

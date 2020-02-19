@@ -98,7 +98,7 @@ Applies to:
 ### VPN profiles with IKEv2 VPN connections can use always on with iOS/iPadOS devices <!-- 1947932 idready -->
 On iOS/iPadOS devices, you can create a VPN profile that uses an IKEv2 connection (**Device configuration** > **Profiles** > **Create profile** > **iOS/iPadOS** for platform > **VPN** for profile type). In a future update, you can configure always-on with IKEv2. When configured, IKEv2 VPN profiles connect automatically, and stay connected (or quickly reconnect) to the VPN. It stays connected even when moving between networks or restarting devices.
 
-On iOS, always-on VPN is limited to IKEv2 profiles.
+On iOS/iPadOS, always-on VPN is limited to IKEv2 profiles.
 
 To see the current IKEv2 settings you can configure, go to [Add VPN settings on iOS/iPadOS devices in Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
 
@@ -108,9 +108,9 @@ Applies to:
 ### Improved user interface experience when creating configuration profiles on iOS/iPadOS and macOS devices<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
 When you create a profile for iOS/iPadOS or macOS devices, the experience in the Endpoint Management Admin Center will be updated. This change impacts the following device configuration profiles (**Devices** > **Configuration Profiles** > **Create profile** > **iOS** or **macOS** for platform):
 
-- Custom: iOS, macOS
-- Device features: iOS, macOS
-- Device restrictions: iOS, macOS
+- Custom: iOS/iPadOS, macOS
+- Device features: iOS/iPadOS, macOS
+- Device restrictions: iOS/iPadOS, macOS
 - Endpoint protection: macOS
 - Extensions: macOS
 - Preference file: macOS
