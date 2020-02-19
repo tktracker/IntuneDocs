@@ -126,7 +126,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
 
     > [!IMPORTANT]
-    > For iOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
+    > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
 
 10. In **Security**, add the Computer Account for the server where you install the Microsoft Intune Certificate Connector. Allow this account **Read** and **Enroll** permissions.
 11. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.

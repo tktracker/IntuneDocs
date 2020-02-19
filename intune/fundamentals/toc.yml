@@ -203,10 +203,6 @@
       href: tenant-status.md
     - name: Help users troubleshoot problems
       href: help-desk-operators.md
-    - name: Audit logs for Intune activities
-      href: monitor-audit-logs.md
-    - name: Review logs with Azure Monitor
-      href: review-logs-using-azure-monitor.md
     - name: Using the Intune docs
       href: use-docs.md 
     - name: Get support
@@ -214,7 +210,11 @@
   - name: Reports
     items:
     - name: Intune reports
-      href: reports.md      
+      href: reports.md
+    - name: Audit logs for Intune activities
+      href: monitor-audit-logs.md
+    - name: Review logs with Azure Monitor
+      href: review-logs-using-azure-monitor.md
 - name: Reference
   items: 
   - name: Error codes and descriptions

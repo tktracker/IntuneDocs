@@ -99,9 +99,9 @@ Intune also includes a set of built-in compliance policy settings. The following
 
 
 > [!NOTE]
-> Enhanced jailbreak detection for iOS devices has been temporarily disabled in Intune.
+> Enhanced jailbreak detection for iOS/iPadOS devices has been temporarily disabled in Intune.
 
-- **Enhanced jailbreak detection**: When enabled, this setting causes iOS devices to check in with Intune more frequently. Enabling this property uses the device’s location services, and impacts battery usage. The user location data isn't stored by Intune.
+- **Enhanced jailbreak detection**: When enabled, this setting causes iOS/iPadOS devices to check in with Intune more frequently. Enabling this property uses the device’s location services, and impacts battery usage. The user location data isn't stored by Intune.
 
   Enabling this setting requires devices to:
   - Enable location services at the OS level.

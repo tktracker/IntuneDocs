@@ -106,7 +106,7 @@ To create app configuration for Microsoft Edge:
 2. Select **Apps** > **App configuration policies** > **Add**.
 3. On the **Add configuration policy** pane, enter a **Name** and optional **Description** for the app configuration settings.
 4. For **Device enrollment** type, choose **Managed apps**.
-5. Choose **Select the required app**. Then, on the **Targeted apps** pane, choose the **Managed Browser** or **Edge** for iOS, for Android, or for both.
+5. Choose **Select the required app**. Then, on the **Targeted apps** pane, choose the **Managed Browser** or **Edge** for iOS/iPadOS, for Android, or for both.
 6. Select **OK** to return to the **Add configuration policy** pane.
 7. Select **Configuration settings**. On the **Configuration** pane, you define key and value pairs to supply configurations for Microsoft Edge. Use the sections later in this article to learn about the different key and value pairs you can define.
 
@@ -142,7 +142,7 @@ On Android:
 - Microsoft Edge launches if only Microsoft Edge is downloaded on the device, and is targeted with Intune policy.
 - Managed Browser launches if only Managed Browser is on the device, and is targeted with Intune policy.
 
-On iOS, for apps that have integrated the Intune SDK for iOS v. 9.0.9+:
+On iOS/iPadOS, for apps that have integrated the Intune SDK for iOS v. 9.0.9+:
 - The Intune Managed Browser launches if both the Managed Browser and Microsoft Edge are on the device.  
 - Microsoft Edge launches if only Microsoft Edge is on the device, and is targeted with Intune policy.
 - Managed Browser launches if only Managed Browser is on the device, and is targeted with Intune policy.
@@ -207,7 +207,7 @@ Next, use the following key/value pairs to pull your organizations branding into
 
 ## Display relevant industry news on New Tab Pages
 
-You can configure the New Tab Page experience within Microsoft Edge mobile to display industry news that is relevant to your organization. When you enable this feature, Microosft Edge mobile uses your organization's domain name to aggregate news from the web about your organization, organization's industry, and comeptitors, so your users can find relevant external news all from the centeralized new tab pages within Microsoft Edge. Industry News is switched off by default, and you can use to opt-into it for your organization. 
+You can configure the New Tab Page experience within Microsoft Edge mobile to display industry news that is relevant to your organization. When you enable this feature, Microsoft Edge mobile uses your organization's domain name to aggregate news from the web about your organization, organization's industry, and competitors, so your users can find relevant external news all from the centralized new tab pages within Microsoft Edge. Industry News is switched off by default, and you can use to opt-into it for your organization. 
 
 |    Key    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -291,7 +291,7 @@ Use the following key/value pair to configure whether these soft transitions are
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (default) allows Microsoft Edge to transition users to their   personal context to open blocked sites.<p>**False** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to   access is blocked.    |
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (default) allows Microsoft Edge to transition users to their  personal context to open blocked sites.<p>**False** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked.    |
 
 ## Open restricted links directly in InPrivate tab pages
 
@@ -299,7 +299,7 @@ You can configure if restricted links should open directly in InPrivate browsing
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** allows Microsoft Edge to transition users to their   personal context to open blocked sites.<p>**Block** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to   access is blocked.    |
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **True** will automatically open sites directly in an InPrivate tab, without prompting the user to make the switch to their personal account. <p> **False** (default) will block the site within Microsoft Edge and the user will be asked to switch to their personal account to view.    |
 
 ## Disable Microsoft Edge prompt to save passwords
 
