@@ -192,7 +192,7 @@ Let’s review these areas in more detail.
 
 ### Determine supported device platforms
 
-You need to know what devices will be in the environment and verify whether they are supported or not by Intune when creating your design. Intune supports iOS, Android, and Windows platforms.
+You need to know what devices will be in the environment and verify whether they are supported or not by Intune when creating your design. Intune supports iOS/iPadOS, Android, and Windows platforms.
 
 [Complete list of Intune supported devices](supported-devices-browsers.md).
 
@@ -300,8 +300,8 @@ Here’s an example how you can document the certificates during the design:
 
 | **Type** | **Profile name** | **Device platform** | **Use cases** |   
 |:---:|:---:|:---:|:---:|
-| Root CA | Corporate Root CA | Android, iOS, Windows mobile | Corporate, BYOD  |                                                           
-| SCEP | User Certificate | Android, iOS, Windows mobile | Corporate, BYOD |                                                           
+| Root CA | Corporate Root CA | Android, iOS/iPadOS, Windows mobile | Corporate, BYOD  |                                                           
+| SCEP | User Certificate | Android, iOS/iPadOS, Windows mobile | Corporate, BYOD |                                                           
 
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your certificate profile needs.
@@ -315,7 +315,7 @@ Below is an example of a design for a Wi-Fi profile:
 | **Type** | **Profile name** | **Device platform** | **Use cases** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Asia Wi-Fi profile | Android | Corporate, BYOD Asia region|
-| Wi-Fi | North America Wi-Fi profile | Android, iOS, Windows 10 Mobile | Corporate, BYOD North America region |
+| Wi-Fi | North America Wi-Fi profile | Android, iOS/iPadOS, Windows 10 Mobile | Corporate, BYOD North America region |
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your Wi-Fi profile needs.
 
@@ -327,7 +327,7 @@ Below is an example of documenting the design of a VPN profile.
 
 | **Type** | **Profile name** | **Device platform** | **Use cases** |
 |:---:|:---:|:---:|:---:|
-| VPN | VPN Cisco any connect Profile | Android, iOS, Windows 10 Mobile | Corporate, BYOD North America and Germany|
+| VPN | VPN Cisco any connect Profile | Android, iOS/iPadOS, Windows 10 Mobile | Corporate, BYOD North America and Germany|
 | VPN | Pulse Secure | Android | Corporate, BYOD Asia region |
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your VPN profile needs.
@@ -378,7 +378,7 @@ App protection policies minimize data loss by defining how the application manag
 | **Application** | **Purpose** | **Platforms** | **Use case** | **App protection policy** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook mobile  | Available | iOS | Corporate - Executives | Cannot be jail broken, encrypt files |                                                         
-| Word | Available | iOS, Android - Samsung Knox, non-Knox, Windows 10 mobile | Corporate, BYOD | Cannot be jail broken, encrypt files |                                                         
+| Word | Available | iOS/iPadOS, Android - Samsung Knox, non-Knox, Windows 10 mobile | Corporate, BYOD | Cannot be jail broken, encrypt files |                                                         
 
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your app protection policy needs.
@@ -392,7 +392,7 @@ Below is an example of how to design a compliance policy:
 
 | **Policy name** | **Device platform** | **Settings** | **Target group** |
 |:---:|:---:|:---:|:---:|
-| Compliance policy | iOS, Android - Samsung Knox, non-Knox, Windows 10 mobile | PIN - required, cannot be jail broken | Corporate, BYOD |
+| Compliance policy | iOS/iPadOS, Android - Samsung Knox, non-Knox, Windows 10 mobile | PIN - required, cannot be jail broken | Corporate, BYOD |
 
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your compliance policy needs.
@@ -408,8 +408,8 @@ Here’s an example of how to document Conditional Access policies:
 
 | **Service** | **Platforms for Modern Authentication** | **Basic Authentication** | **Use cases** |
 |:---:|:---:|:---:|:---:|
-| Exchange online | iOS, Android | Block noncompliant devices on platforms supported by Intune | Corporate, BYOD |
-| SharePoint online | iOS, Android |  | Corporate, BYOD |
+| Exchange online | iOS/iPadOS, Android | Block noncompliant devices on platforms supported by Intune | Corporate, BYOD |
+| SharePoint online | iOS/iPadOS, Android |  | Corporate, BYOD |
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your Conditional Access policy needs.
 
