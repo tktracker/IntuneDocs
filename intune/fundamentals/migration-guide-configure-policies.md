@@ -64,11 +64,11 @@ Resource access profiles supply certificates and access configurations to enroll
 
 You need to create a device configuration profile to enforce device-level settings, for example: disable camera, app-store, configure single-app mode, home screen, and so on. Learn about [device profiles](../configuration/device-profiles.md).
 
-#### Directly import iOS configuration profiles (optional)
+#### Directly import iOS/iPadOS configuration profiles (optional)
 
 - **Apple Configurator iOS profiles (iOS 7.1 and later):** If your existing MDM solution uses Apple Configurator profiles (.mobileconfig files), Intune can directly import them as custom configuration policies.
 
-- **iOS Mobile Application Configuration policies:** If your existing MDM solution uses iOS Mobile Application Configuration policies, Intune can directly import them as long as they meet the XML format specified by Apple for property lists.
+- **iOS Mobile Application Configuration policies:** If your existing MDM solution uses iOS/iPadOS Mobile Application Configuration policies, Intune can directly import them as long as they meet the XML format specified by Apple for property lists.
 
 - Learn how to add a custom policy for [iOS](../configuration/custom-settings-ios.md).
 

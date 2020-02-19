@@ -126,5 +126,5 @@ Once a setting is fully configured, the row will appear in a read-only view and 
 
 Learn more information on Intune app protection policies, see:
 - [How to create and assign app protection policies](app-protection-policies.md)
-- [iOS app protection policy settings](app-protection-policy-settings-ios.md)
+- [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md)
 - [Android app protection policy settings in Microsoft Intune](app-protection-policy-settings-android.md) 

@@ -96,20 +96,20 @@ The next four sections describe the options available in the **Apps** pane.
   - [Monitor apps](apps-monitor.md).
 - **App configuration policies**: Select this option to supply settings that might be required when a user runs an app. For more information, see:
   - [App configuration policies for Intune](app-configuration-policies-overview.md).
-    - [iOS app configuration policies](app-configuration-policies-use-ios.md).
+    - [iOS/iPadOS app configuration policies](app-configuration-policies-use-ios.md).
     - [Android app configuration policies](app-configuration-policies-use-android.md).
 - **App protection policies**: Select this option to associate settings with an app and help protect the company data it uses. For example, you might restrict the capabilities of an app to communicate with other apps, or you might require the user to enter a PIN to access a company app. For more information, see:
   - [App protection policies](app-protection-policies.md).
 - **App selective wipe**: Select this option to remove only corporate data from a selected user's device. For more information, see:
   - [App selective wipe](apps-selective-wipe.md).
 - **iOS app provisioning profiles**: iOS/iPadOS apps include a provisioning profile and code that is signed by a certificate. When the certificate expires, the app can no longer be run. Intune gives you the tools to proactively assign a new provisioning profile policy to devices that have apps that are nearing expiration. For more information, see:
-  - [iOS app provisioning profiles](app-provisioning-profile-ios.md).
+  - [iOS/iPadOS app provisioning profiles](app-provisioning-profile-ios.md).
 
 For more information about this section, see [Manage apps](app-management.md).
 
 ### Monitor
 - **App licenses**: View, assign, and monitor volume-purchased apps from the app stores. For more information, see:
-  - [iOS volume-purchased program (VPP) apps](vpp-apps-ios.md).
+  - [iOS/iPadOS volume-purchased program (VPP) apps](vpp-apps-ios.md).
   - [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
 - **Discovered Apps**: View apps that were assigned by Intune or installed on a device. For more information, see [Intune discovered apps](app-discovered-apps.md).
 - **App Install Status**: View the status of an app assignment that you created. For more information, see [Monitor app information and assignments with Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
@@ -120,7 +120,7 @@ For more information about this section, see [Monitor apps](apps-monitor.md).
 
 ### Set up
 - **iOS VPP tokens**: Apply and view your iOS/iPadOS Volume Purchase Program (VPP) licenses. For more information, see:
-  - [iOS volume-purchased apps](vpp-apps-ios.md)
+  - [iOS/iPadOS volume-purchased apps](vpp-apps-ios.md)
 - **Windows enterprise certificate**: Apply or view the status of a code-signing certificate that's used to distribute line-of-business apps to your managed Windows devices.
 - **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate, which is needed to distribute XAP and WP8.x appx files to Windows 10 Mobile devices.
 - **Microsoft Store for Business**: Set up integration to the Microsoft Store for Business. Afterward, you can synchronize purchased applications to Intune, assign them, and track your license usage. For more information, see:

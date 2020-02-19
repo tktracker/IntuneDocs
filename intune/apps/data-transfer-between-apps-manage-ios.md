@@ -86,7 +86,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | String | %upn% |
 
 > [!NOTE]  
-> For Outlook for iOS, if you deploy a managed devices App Configuration Policy with the option "Using configuration designer" and enable **Allow only work or school accounts**, the configuration key IntuneMAMUPN is configured automatically behind the scenes for the policy. More details can be found in the FAQ section in [New Outlook for iOS and Android App Configuration Policy Experience – General App Configuration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
+> For Outlook for iOS/iPadOS, if you deploy a managed devices App Configuration Policy with the option "Using configuration designer" and enable **Allow only work or school accounts**, the configuration key IntuneMAMUPN is configured automatically behind the scenes for the policy. More details can be found in the FAQ section in [New Outlook for iOS and Android App Configuration Policy Experience – General App Configuration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### Example 2: End-user experience

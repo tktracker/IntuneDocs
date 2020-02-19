@@ -50,7 +50,7 @@ The following action plan can be used when you meet the following requirements:
 
 ## Action plan
 
-For iOS and Android devices:
+For iOS/iPadOS and Android devices:
 
 1. Learn how [app protection policies](../apps/app-protection-policy.md) work.
 2. Learn how to [create and deploy app protection policies](../apps/app-protection-policies.md) for Office mobile apps.
@@ -66,7 +66,7 @@ For Windows 10 devices:
 
 As appropriate, share the following links to provide additional information:
 
-* [What to expect when your iOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
 * [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
 
 ## Next steps

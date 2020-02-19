@@ -21,7 +21,7 @@ ms.collection: M365-identity-device-management
 
 # Guided scenario - Secure Microsoft Office mobile apps 
 
-By following this guided scenario in the Device Management portal, you can enable basic Intune app protection on iOS and Android devices.
+By following this guided scenario in the Device Management portal, you can enable basic Intune app protection on iOS/iPadOS and Android devices.
 
 The app protection that you enable will enforce the following actions: 
 - Encrypt work files.
@@ -47,7 +47,7 @@ You can use App protection policies to prevent users from saving work files in u
 
 App-based conditional access and client app management add a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Office 365 services.
 
-You can block the built-in mail apps on iOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don’t have Intune app protection policies applied from accessing SharePoint Online.
+You can block the built-in mail apps on iOS/iPadOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don’t have Intune app protection policies applied from accessing SharePoint Online.
 
 In this example, the admin has applied app protection policies to the Outlook app followed by a conditional access rule that adds the Outlook app to an approved list of apps that can be used when accessing corporate e-mail.
 
@@ -65,7 +65,7 @@ You’ll need the follow Intune admin permissions:
 
 By following the **Intune App Protection** guided scenario, you will prevent data from being shared or leaked outside of your organization. 
 
-Assigned iOS and Android users must enter a PIN each time they open an Office app. After 5 failed PIN attempts, users must reset their PIN. If you already require a device PIN, users won't be impacted.​
+Assigned iOS/iPadOS and Android users must enter a PIN each time they open an Office app. After 5 failed PIN attempts, users must reset their PIN. If you already require a device PIN, users won't be impacted.​
 
 ### What you will need to continue
 
@@ -82,7 +82,7 @@ In this step, you must enter a **Prefix** and **Description** for your new App p
 
 ## Step 3 - Apps
 
-To help you get started, this guided scenario pre-selects the following mobile apps to protect on iOS and Android devices:
+To help you get started, this guided scenario pre-selects the following mobile apps to protect on iOS/iPadOS and Android devices:
 - Microsoft Excel 
 - Microsoft Word 
 - Microsoft Teams 

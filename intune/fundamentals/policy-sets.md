@@ -56,7 +56,7 @@ You can include the following management objects in a policy set:
 When you create a policy set, you create a single unit of assignment, and manage associations between different objects. A policy set will be a reference to objects external to it. Any changes in the included objects will affect the policy set as well. After you create a policy set, you can repeatedly view and edit its objects and assignments. 
 
 > [!NOTE]
-> Policy sets support Windows, Android, macOS, and iOS settings, and can be assigned cross-platform.
+> Policy sets support Windows, Android, macOS, and iOS/iPadOS settings, and can be assigned cross-platform.
 
 ## How to create a policy set
 
@@ -86,15 +86,15 @@ Policy sets, new to 1910, have the following known issues.
 - When creating a policy set, if an scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.  
  
 - The following app types are currently supported by policy sets:
-    - iOS store app
-    - iOS line-of-business app
-    - Managed iOS line-of-business app
+    - iOS/iPadOS store app
+    - iOS/iPadOS line-of-business app
+    - Managed iOS/iPadOS line-of-business app
     - Android store app
     - Android line-of-business app
     - Managed Android line-of-business app
     - Office 365 ProPlus Suite (Windows 10)
     - Web link
-    - Built-in iOS app
+    - Built-in iOS/iPadOS app
     - Built-in Android app
 
 - Setting a policy set assignment of **All Users** to **Autopilot Profile** is unsupported.
@@ -107,18 +107,18 @@ Policy sets, new to 1910, have the following known issues.
 
 - MAM policy types that support policy sets include the following: 
     - MAM WIP( Windows) MDM targeted managed app protection 
-    - MAM iOS targeted managed app protection
+    - MAM iiOS/iPadOSOS targeted managed app protection
     - MAM Android targeted managed app protection
-    - MAM iOS targeted managed app configuration
+    - MAM iOS/iPadOS targeted managed app configuration
     - MAM Android targeted managed app configuration
 
 - MAM policy types that do not support policy sets include the following: 
     - MAM WIP (Windows) targeted managed app protection
 
 - MAM processes policy set assignments as direct assignments for the following policy types:
-    - MAM iOS targeted managed app protection
+    - MAM iOS/iPadOS targeted managed app protection
     - MAM Android targeted managed app protection
-    - MAM iOS targeted managed app configuration
+    - MAM iOS/iPadOS targeted managed app configuration
     - MAM Android targeted managed app configuration
 
     If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in in the workload, not "assigned via the policy set". As a result of this, MAM does not process group assignment deletions coming from policy sets.
