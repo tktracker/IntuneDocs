@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2019
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune includes built-in logs that provide information about your environment:
 
-- **Audit Logs** show details on different events or tasks that happen in Intune.
+- **Audit Logs** shows a record of activities that generate a change in Intune, including create, update (edit), delete, assign, and remote actions.
 - **Operational Logs (preview)** show details on users and devices that successfully (or failed) to enroll, and details on non-compliant devices.
 - **Device Compliance Organizational Logs (preview)** show an organizational report for device compliance in Intune, and details on non-compliant devices.
 
@@ -63,10 +63,11 @@ Depending on where you want to route the audit log data, you need one of the fol
 
 ## Send logs to Azure monitor
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Under **Monitoring**, select **Diagnostics settings**. The first time you open it, turn it on. Otherwise, add a setting.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Diagnostics settings**. The first time you open it, turn it on. Otherwise, add a setting.
 
-    ![Turn on Diagnostics settings in Intune to send logs to Azure Monitor](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
+    > [!div class="mx-imgBorder"]
+    > ![Turn on Diagnostics settings in Intune to send logs to Azure Monitor](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
 
 3. Enter the following properties:
 
@@ -108,7 +109,8 @@ Depending on where you want to route the audit log data, you need one of the fol
 
     When finished, your settings look similar to the following settings: 
 
-    ![Sample image that sends Intune audit logs to an Azure storage account](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
+    > [!div class="mx-imgBorder"]
+    > ![Sample image that sends Intune audit logs to an Azure storage account](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
 
 4. **Save** your changes. Your setting is shown in the list. Once it's created, you can change the settings by selecting **Edit setting** > **Save**.
 
@@ -116,14 +118,7 @@ Depending on where you want to route the audit log data, you need one of the fol
 
 You can also export the audit logs in other parts of Intune, including enrollment, compliance, configuration, devices, client apps, and more.
 
-For example, to export the audit logs when using device compliance:
-
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device compliance** > **Monitor** > **Audit logs**:
-
-    ![Choose audit logs to route Intune data to Azure Monitor storage, events hubs, or analytics](./media/review-logs-using-azure-monitor/audit-logs-under-monitor-in-compliance.png)
-
-3. Select **Export Data Settings**. If it isn't enabled, you can turn on **Diagnostics settings**. You can also choose where to send the logs, as described in [send logs to Azure monitor](#send-logs-to-azure-monitor) (in this article).
+For more information, see [Use audit logs to track and monitor events](monitor-audit-logs.md). You can choose where to send the audit logs, as described in [send logs to Azure monitor](#send-logs-to-azure-monitor) (in this article).
 
 ## Cost considerations
 
