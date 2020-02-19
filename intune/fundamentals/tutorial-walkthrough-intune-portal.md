@@ -89,7 +89,7 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
 
     ![Screenshot of the device configuration pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-04.png)
     
-    Intune includes settings and features that you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS, Android, and Windows. Then, you can use Intune to apply the profile to devices in your organization.   
+    Intune includes settings and features that you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, and Windows. Then, you can use Intune to apply the profile to devices in your organization.   
 
     For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
 
