@@ -54,7 +54,7 @@ If enabled, Intune collects app inventory information from both personal and cor
 This service is opt-in; no app inventory information is shared by default. An Intune administrator must enable **App Sync for iOS devices** in the Mobile Threat Defense connector settings before any app inventory information is shared.
 
 **App inventory**  
-If you enable App Sync for iOS devices, inventories from both corporate and personally owned iOS devices are sent to your MTD service provider. Data in the app inventory includes:
+If you enable App Sync for iOS/iPadOS devices, inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider. Data in the app inventory includes:
 
 - App ID
 - App Version

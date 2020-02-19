@@ -39,7 +39,7 @@ Using a device management provider, organization can make sure that only authori
 
 The answer is [Microsoft Intune](what-is-intune.md). Intune offers mobile device management (MDM) and mobile application management (MAM). Some key tasks of any MDM or MAM solution are to:
 
-- Support a diverse mobile environment and manage iOS, Android, Windows, and macOS devices securely.
+- Support a diverse mobile environment and manage iOS/iPadOS, Android, Windows, and macOS devices securely.
 - Make sure devices and apps are compliant with your organization's security requirements.
 - Create policies that help keep your organization data safe on organization-owned and personal devices.
 - Use a single, unified mobile solution to enforce these policies, and help manage devices, apps, users, and groups.
@@ -53,7 +53,7 @@ Many organizations, such as Microsoft, use Intune to secure proprietary data tha
 
 It's common for people to have multiple devices that use different platforms. For example, an employee might use Surface Pro for work, and an Android mobile device in their personal life. And, it's common for a person to access organizational resources, such as Microsoft Outlook and SharePoint, from these multiple devices.
 
-With Intune, you can manage multiple devices per person, and the different platforms that run on each device, including iOS, macOS, Android, and Windows. Intune separates policies and settings by device platform. So it's easy to manage and view devices of a specific platform.
+With Intune, you can manage multiple devices per person, and the different platforms that run on each device, including iOS/iPadOS, macOS, Android, and Windows. Intune separates policies and settings by device platform. So it's easy to manage and view devices of a specific platform.
 
 **[Common scenarios](common-scenarios.md)** is a great resource to see how Intune answers common questions when working with mobile devices. You'll find scenarios about:  
 

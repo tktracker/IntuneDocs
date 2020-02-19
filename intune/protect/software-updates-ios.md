@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure iOS software update policies in Microsoft Intune - Azure | Microsoft Docs
-description: In Microsoft Intune, create or add a configuration policy to restrict when software updates automatically install on iOS devices. You can choose the date and time when updates aren't installed. You can also assign this policy to groups, users, or devices, and check for any installation failures. 
+title: Configure iOS/iPadOS software update policies in Microsoft Intune - Azure | Microsoft Docs
+description: In Microsoft Intune, create or add a configuration policy to restrict when software updates automatically install on iOS/iPadOS devices. You can choose the date and time when updates aren't installed. You can also assign this policy to groups, users, or devices, and check for any installation failures. 
 keywords:
 author: brenduns 
 ms.author: brenduns
@@ -27,9 +27,9 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Add iOS software update policies in Intune
+# Add iOS/iPadOS software update policies in Intune
 
-Software update policies let you force supervised iOS devices to automatically install the latest available OS update. When configuring a policy, you can add the days and times when you don't want devices to install an update.
+Software update policies let you force supervised iOS/iPadOS devices to automatically install the latest available OS update. When configuring a policy, you can add the days and times when you don't want devices to install an update.
 
 This feature applies to:
 
@@ -60,7 +60,7 @@ The policy doesn't prevent a user from updating the OS manually.
    > [!IMPORTANT]  
    > A policy that has a *Start time* and *End time* set to 12 AM is evaluated as 0 hours, and not 24 hours. This results in no restriction.  
     
-   To delay the visibility of software updates for a specific amount of time on your supervised iOS devices, configure those settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general). Software update policies override any device restrictions. When you set both a software update policy and restriction to delay visibility of software updates, the device forces a software update per the policy. The restriction applies so that users don't see the option to update the device themselves, and the update is pushed at the first time window as defined by your iOS update policy.
+   To delay the visibility of software updates for a specific amount of time on your supervised iOS/iPadOS devices, configure those settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general). Software update policies override any device restrictions. When you set both a software update policy and restriction to delay visibility of software updates, the device forces a software update per the policy. The restriction applies so that users don't see the option to update the device themselves, and the update is pushed at the first time window as defined by your iOS update policy.
 
    After configuring *Update policy settings*, select **Next**. 
 
@@ -74,7 +74,7 @@ The policy doesn't prevent a user from updating the OS manually.
 
    The devices used by the users targeted by the policy are evaluated for update compliance. This policy also supports userless devices.
 
-7. On the **Review + create** tab, review the settings, and then select **Create** when ready to save your iOS update policy. Your new policy is displayed in the list of update policies for iOS.
+7. On the **Review + create** tab, review the settings, and then select **Create** when ready to save your iOS/iPadOS update policy. Your new policy is displayed in the list of update policies for iOS.
 
 
 For guidance from the Intune support team, see [Delay visibility of software updates in Intune for supervised devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
@@ -98,7 +98,7 @@ You can edit an existing policy, including changing the restricted times:
 
 ## Monitor device installation failures
 <!-- 1352223 -->
-**Software updates** > **Installation failures for iOS devices** shows a list of supervised iOS devices targeted by an update policy, attempted an update, and couldn't be updated. For each device, you can view the status on why the device hasn't been automatically updated. Healthy, up-to-date devices aren't shown in the list. "Up-to-date" devices include the latest update that the device itself supports.
+**Software updates** > **Installation failures for iOS devices** shows a list of supervised iOS/iPadOS devices targeted by an update policy, attempted an update, and couldn't be updated. For each device, you can view the status on why the device hasn't been automatically updated. Healthy, up-to-date devices aren't shown in the list. "Up-to-date" devices include the latest update that the device itself supports.
 
 ## Next steps
 

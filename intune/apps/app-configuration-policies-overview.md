@@ -95,7 +95,7 @@ You can validate the app configuration policy using the following three methods:
 
 ## Diagnostic Logs
 
-### iOS configuration on unmanaged devices
+### iOS/iPadOS configuration on unmanaged devices
 
 You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on unmanaged devices for managed app configuration. In addition to the below steps, you can access managed app logs using Microsoft Edge. For more information, see [Use Microsoft Edge on iOS/iPadOS to access managed app logs](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
@@ -139,7 +139,7 @@ Your application configuration details should match the application configuratio
 
 ![Targeted app config](./media/app-configuration-policies-overview/targeted-app-configuration-3.png)
 
-### iOS configuration on managed devices
+### iOS/iPadOS configuration on managed devices
 
 You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
 
