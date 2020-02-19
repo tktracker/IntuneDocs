@@ -107,7 +107,7 @@ Common tasks when you work with security baselines include:
 
 ### Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Security baselines** to view the list of available baselines.
 
@@ -166,7 +166,7 @@ Upon saving, after the conversion is complete, the baseline is immediately redep
 
 #### To change the baseline version for a profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
 2. Select **Endpoint security** > **Security baselines**, and then select the tile for the baseline type that has the profile you want to change.
 
