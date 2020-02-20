@@ -82,7 +82,7 @@ The settings shown in the following list are determined by the VPN connection ty
 - **Split tunneling**: **Enable** or **Disable** to let devices decide which connection to use, depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but uses the hotel's standard network for regular web browsing.
 
 - **VPN identifier** (Custom VPN, Zscaler, and Citrix): An identifier for the VPN app you're using, and is supplied by your VPN provider.
-  - **Enter key/value pairs for your organization's custom VPN attributes**: Add or import **Keys** and **Values** that customize your VPN connection. Remember, these values are typically supplied by your VPN provider.
+- **Enter key/value pairs for your organization's custom VPN attributes** (Custom VPN, Zscaler, and Citrix): Add or import **Keys** and **Values** that customize your VPN connection. Remember, these values are typically supplied by your VPN provider.
 
 - **Enable network access control (NAC)** (Cisco AnyConnect, Citrix SSO, F5 Access): When you choose **I agree**, the device ID is included in the VPN profile. This ID can be used for authentication to the VPN to allow or prevent network access.
 
@@ -100,14 +100,9 @@ The settings shown in the following list are determined by the VPN connection ty
 
   **When using F5 Access**, be sure to:
 
-  - Confirm you're using F5 BIG-IP 13.1.1.5. BIG-IP 14 isn't supported.
+  - Confirm you're using F5 BIG-IP 13.1.1.5 or later. BIG-IP 14 and 15 are supported.
   - Integrate BIG-IP with Intune for NAC. See the [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide.
   - Enable NAC in the VPN profile.
-
-  **Important details**:  
-
-  - When NAC is enabled, the VPN is disconnected every 24 hours. The VPN can immediately be reconnected.
-  - The device ID is part of the profile, but it isn't shown in Intune. This ID isn't stored by Microsoft anywhere, and isn't shared by Microsoft.
 
   For the VPN partners that support device ID, the VPN client, such as Citrix SSO, can get the ID. Then, it can query Intune to confirm the device is enrolled, and if the VPN profile is compliant or not compliant.
 
