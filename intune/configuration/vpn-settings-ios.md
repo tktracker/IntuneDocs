@@ -100,7 +100,7 @@ The settings shown in the following list are determined by the VPN connection ty
 
   **When using F5 Access**, be sure to:
 
-  - Confirm you're using F5 BIG-IP 13.1.1.5 or later. BIG-IP 14 and 15 are supported.
+  - Confirm you're using F5 BIG-IP 13.1.1.5 or later. 
   - Integrate BIG-IP with Intune for NAC. See the [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide.
   - Enable NAC in the VPN profile.
 
