@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,7 +77,7 @@ NAC is available on the following VPNs without enabling NAC in the VPN profile:
   - F5 Access Legacy
   - Citrix VPN
 
-NAC is also supported for Cisco ISE, Citrix SSO, and F5 Access. 
+NAC is also supported for Cisco AnyConnect, Citrix SSO, and F5 Access. 
 
 ### To enable NAC for Cisco AnyConnect for iOS:
 
@@ -91,7 +91,6 @@ NAC is also supported for Cisco ISE, Citrix SSO, and F5 Access.
   - [Integrate NetScaler with Intune for NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) as described in the Citrix product documentation.
   - In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
 
-  The VPN connection is disconnected every 24 hours for security reasons. The VPN can immediately be reconnected.
 
 ### To enable NAC for F5 Access:
 
