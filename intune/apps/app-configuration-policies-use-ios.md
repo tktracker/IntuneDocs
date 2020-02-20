@@ -47,7 +47,7 @@ Once you have selected the included groups for your application configuration po
 > [!TIP]
 > This policy type is currently available only for devices running iOS/iPadOS 8.0 and later. It supports the following app installation types:
 >
-> - **Managed iOS app from the app store**
+> - **Managed iOS/iPadOS app from the app store**
 > - **App package for iOS**
 >
 > For more information about app installation types, see [How to add an app to Microsoft Intune](apps-add.md). For more information about incorporating app config into your .ipa app package for managed devices, see Managed App Configuration in the [iOS developer documentation](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html).
@@ -186,7 +186,7 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
-## Configure the Company Portal app to support iOS DEP devices
+## Configure the Company Portal app to support iOS and iPadOS DEP devices
 
 DEP (Apple's Device Enrollment Program) enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices using the following steps.
 
@@ -209,7 +209,7 @@ DEP (Apple's Device Enrollment Program) enrollments are not compatible with the 
 3. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already DEP enrolled.
 4. Tell end users to sign into the Company Portal app when it is automatically installed.
 
-## Monitor iOS  app configuration status per device 
+## Monitor iOS/iPadOS  app configuration status per device 
 Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the Azure portal, select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
 
 ## Additional information
