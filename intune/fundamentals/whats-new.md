@@ -63,7 +63,7 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 
 ### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
 
-In October of 2019, Intune app protection policy add the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy).
+In October of 2019, Intune app protection policy add the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
 
 ## Week of February 10, 2020
 
