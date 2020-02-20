@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,13 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 -->  
 
 <!-- ########################## -->
+
+## Week of February 17, 2020
+
+### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
+
+In October of 2019, Intune app protection policy add the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy).
+
 ## Week of February 10, 2020
 
 ### Windows 7 ends extended support <!--3042987-->
