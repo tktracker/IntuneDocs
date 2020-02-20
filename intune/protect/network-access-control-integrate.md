@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/25/2019
+ms.date: 02/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -71,13 +71,20 @@ The following list is an overview on how NAC integration works when integrated w
 
 ## Use NAC for VPN on your iOS devices  
 
-- NAC is available on the following VPNs without enabling NAC in the VPN profile:
+NAC is available on the following VPNs without enabling NAC in the VPN profile:
 
   - NAC for Cisco Legacy AnyConnect
   - F5 Access Legacy
   - Citrix VPN
 
-- NAC is also available for Citrix SSO and F5 Access. To enable NAC for Citrix SSO:
+NAC is also supported for Cisco ISE, Citrix SSO, and F5 Access. 
+
+### To enable NAC for Cisco AnyConnect for iOS:
+
+  - Integrate ISE with Intune for NAC as described in the link below.
+  - Set the **Enable Network Access Control (NAC)** setting in the VPN profile to **Yes**.
+
+### To enable NAC for Citrix SSO:
 
   - Use Citrix Gateway 12.0.59 or higher.  
   - Users must have Citrix SSO 1.1.6 or later installed.
@@ -86,16 +93,13 @@ The following list is an overview on how NAC integration works when integrated w
 
   The VPN connection is disconnected every 24 hours for security reasons. The VPN can immediately be reconnected.
 
-- To enable NAC for F5 Access:
+### To enable NAC for F5 Access:
 
   - Use F5 BIG-IP 13.1.1.5. BIG-IP 14 isn't supported.
   - Integrate BIG-IP with Intune for NAC. The [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide lists the steps.
   - In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
 
   The VPN connection is disconnected every 24 hours for security reasons. The VPN can immediately be reconnected.
-
-- Network access control isn't supported for the following VPN client on iOS:
-  - Cisco AnyConnect
 
 We're working with our partners to release a NAC solution for these newer clients. When solutions are ready, this article will be updated with additional information.
 
