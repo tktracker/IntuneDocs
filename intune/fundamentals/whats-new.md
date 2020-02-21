@@ -57,19 +57,26 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Role-based access control
 -->  
 
-<!-- ########################## -->
-
 ## Week of February 17, 2020
 
-### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Microsoft's new Office app<!-- 5859926 -->
+Microsoft's new Office app is now generally available for download and use. The Office app is a consolidated experience where your users can work across Word, Excel, and PowerPoint within a single app. You can target the app with an app protection policy to ensure the data being accessed is protected.
+
+For more information, see [How to enable Intune app protection policies with the Office mobile preview app](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
+
+#### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
 
 In October of 2019, Intune app protection policy add the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
+
+<!-- ########################## -->
 
 ## Week of February 10, 2020
 
 ### Windows 7 ends extended support <!--3042987-->
 Windows 7 reached end of extended support on January 14, 2020. Intune deprecated support for devices running Windows 7 at the same time. Technical assistance and automatic updates that help protect your PC are no longer available. You should upgrade to Windows 10. For more information, see the [Plan for Change blog post](https://aka.ms/Windows7_Intune).
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
