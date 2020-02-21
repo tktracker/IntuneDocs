@@ -58,18 +58,11 @@ If you're planning to use certificate-based authentication for VPN, Wi-Fi, or e-
 
 - [How to configure the certificate infrastructure for PFX](/intune/certficates-pfx-configure).
 
-
 ## Task list for an Intune setup
 
 ### Task 1: Intune subscription
 
-Before you can migrate to Intune, you first need an Intune subscription.
-
-- You can visit [this page](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0), which gives you instructions on how to:
-
-  - Create a new Intune subscription linked to a new AAD tenant.
-
-  - Link the Intune subscription by signing into an existing AAD tenant.
+Before you can migrate to Intune, you first need an [Intune subscription](account-sign-up.md).
 
 ### Task 2: Assign Intune user licenses
 
