@@ -38,23 +38,20 @@ To create, edit, or assign roles, your account must have one of the following pe
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles**.
 
-2. On the **Intune roles - All roles** blade, choose the built-in role you want to assign.
+2. On the **Intune roles - All roles** blade, choose the built-in role you want to assign > **Assignments** > **Assign**.
 
-3. On the <*role name*> - **Overview** blade, choose **Manage** > **Assignments**.
+5. On the **Basics** page, enter an **Assignment name** and optional **Assignment description**, and then choose **Next**.
 
-4. On the custom role blade, choose **Assign**.
+6. On the **Admin Groups** page, select the group that contains the user you want to give the permissions to. Choose **Next**
 
-5. On the **Role Assignments** blade, enter an **Assignment name** and optional **Assignment description** for the assignment.
+7. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. Choose **Next**.
 
-6. For **Members (Groups)**, choose a group that contains the user you want to give the permissions to.
+8. On the **Scope (Tags)** page, choose tags where this role assignment will be applied. Choose **Next**.
 
-7. For **Scope (Groups)**, choose a group containing the users/devices that the member above will be allowed to manage.
-
-8. For **Scope (Tags)**, choose tags where this role assignment will be applied.
-
-9. When you're done, choose **OK**. The new assignment is displayed in the list of assignments.
-
+9. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
 
 ## Next steps
 - [Learn more about role-based access control in Intune](role-based-access-control.md)
 - [Create a custom role](create-custom-role.md)
+
+

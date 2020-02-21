@@ -31,10 +31,10 @@ ms.collection: M365-identity-device-management
 
 # Find the primary user of an Intune device
 
-Primary User, also known as User Device Affinity, is a property of each Intune device. 
-An Intune device can have zero or one primary user assigned to it. When there's no Primary User assigned, the device is referred to as a "Shared Device".
+Primary user, also known as User Device Affinity, is a property of each Intune device. 
+An Intune device can have zero or one primary user assigned to it. When there's no primary user assigned, the device is referred to as a "Shared Device".
 
-## How to find a device's primary user
+## Find a device's primary user
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > choose a device.
@@ -44,7 +44,7 @@ An Intune device can have zero or one primary user assigned to it. When there's 
 The primary user property is used to map a licensed Intune user to their devices in:
 - The Company Portal app
 - End-user website
-- IT pro experiences, like troubleshooting pages in the Azure portal. These pages map user accounts to devices by using the primary user.    
+- IT pro experiences, like troubleshooting pages in the Azure portal. These pages map user accounts to devices by using the primary user. 
 
 ### Company Portal app
 The Company Portal app expects that the user account that signed in to the Company Portal is the primary user of that device. If another user has been assigned as the primary user, the Company Portal shows a warning:
