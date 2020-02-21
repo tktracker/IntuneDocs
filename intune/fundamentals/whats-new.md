@@ -64,8 +64,8 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-#### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424518 -->
-Intune provides an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Add Microsoft Defender ATP to macOS devices using Microsoft Intune](~/apps/apps-mdatp-macos.md) and [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac). 
+#### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424618 -->
+Intune provides an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Add Microsoft Defender ATP to macOS devices using Microsoft Intune](~/apps/apps-advanced-threat-protection-macos.md) and [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac). 
 
 
 #### Microsoft's new Office app<!-- 5859926 -->
@@ -141,7 +141,7 @@ The following platforms support import of PFX certificates:
 - Windows 10
 
 #### View the endpoint security configuration for devices<!-- 6206460  -->
-We've updated the name of the option in the Microsoft Endpoint Manager admin center, for viewing [endpoint security configurations that apply to a specific device](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-evice). This option is renamed to **Endpoint security configuration** because it shows applicable security baselines and additional policies created outside of security baselines. Previously, this option was named *Security baselines*. 
+We've updated the name of the option in the Microsoft Endpoint Manager admin center, for viewing [endpoint security configurations that apply to a specific device](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). This option is renamed to **Endpoint security configuration** because it shows applicable security baselines and additional policies created outside of security baselines. Previously, this option was named *Security baselines*. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
