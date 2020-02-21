@@ -303,27 +303,27 @@ You can configure if restricted links should open directly in InPrivate browsing
 
 ## Disable Microsoft Edge features to customize the end user experience for your organization's needs
 
-# Disable prompts that offer to save passwords
+### Disable prompts that offer to save passwords
 By default, Microsoft Edge on iOS offers to save your users passwords to the keychain. If you would like to disable this prompt for your organization, configure the following setting:
 
 |    Key    |    Value    |
 |-----------------------|-----------------------|
-|    'com.microsoft.intune.mam.managedbrowser.disableFeatures'    |    **password** will disable prompts that offer to save passwords for the end user.    |
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **password** will disable prompts that offer to save passwords for the end user.    |
 
-# Disable InPrivate browsing and Microsoft Accounts to restrict browsing to work-only contexts
+### Disable InPrivate browsing and Microsoft Accounts to restrict browsing to work-only contexts
 
 If your organization operates in a highly-regulated industry or uses a per-app VPN to allow users to access work resources with Microsoft Edge, you may choose to scope use of Microsoft Edge to a MAM-protected context only. This functionality is provided for MDM-enrolled devices only.
 
 |    Key    |    Value    |
 |-----------|-------------|
-|    'com.microsoft.intune.mam.managedbrowser.disableFeatures'    |    **inprivate** disables InPrivate browsing, <br> **msa** blocks users from adding their personal Microsoft accounts (MSA) to the Microsoft Edge apps. <br> To disable multiple features, separate values with '|'. For example, 'inprivate|msa' will block both InPrivate and personal accounts.   |
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** disables InPrivate browsing, <br> **msa** blocks users from adding their personal Microsoft accounts (MSA) to the Microsoft Edge apps. <br> To disable multiple features, separate values with `|`. For example, `inprivate|msa` will block both InPrivate and personal accounts.   |
 
-# Restrict Microsoft Edge use to allowed-accounts only
+### Restrict Microsoft Edge use to allowed-accounts only
 
 In addition to blocking InPrivate and MSA browsing, you can only allow use of Microsoft Edge when the user is logged in with their AAD account. This feature is only available for MDM-enrolled users. You can learn more about configuring this setting here:
 
-- (Android setting) [https://docs.microsoft.com/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps ]
-- (iOS setting) [https://docs.microsoft.com/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps]
+- (Android setting)[~/apps/app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps]
+- (iOS setting)[~/apps/app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps]
 
 ## Use Microsoft Edge on iOS to access managed app logs 
 
