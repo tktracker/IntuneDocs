@@ -67,12 +67,6 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 #### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424618 -->
 Intune provides an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Add Microsoft Defender ATP to macOS devices using Microsoft Intune](~/apps/apps-advanced-threat-protection-macos.md) and [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
 
-
-#### Microsoft's new Office app<!-- 5859926 -->
-Microsoft's new Office app is now generally available for download and use. The Office app is a consolidated experience where your users can work across Word, Excel, and PowerPoint within a single app. You can target the app with an app protection policy to ensure the data being accessed is protected.
-
-For more information, see [How to enable Intune app protection policies with the Office mobile preview app](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
