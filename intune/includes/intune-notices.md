@@ -52,16 +52,6 @@ Let your end users and helpdesk know of this change. You can use the [Company Po
 https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
 
 
-### End Support for Windows Phone 8.1<!--3544909-->
-Microsoft mainstream support for Windows Phone 8.1 ended in July 2017, and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Microsoft Intune will now end support on February 20, 2020 for Windows Phone 8.1.
-
-#### How does this affect me?
-After February 20, 2020 these devices  won't receive any security updates, and you  won't be able to enroll any new devices. Existing Windows Phone 8.1 devices will stay enrolled (policy, apps, reporting) but note any troubleshooting of an existing enrollment  won't be supported after this date, as many components, such as third-party certificates, have already ended support for the platform. Intune will stop compatibility testing with Intune and Windows Phone 8.1.
-
-#### What do I need to do to prepare for this change?
-You can check your Intune reporting to see what devices or users may be affected. Go to Devices > All devices and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows Phone 8.1. Request that your end users upgrade their devices to a supported OS version.
-
-
 ### Take Action: Use Microsoft Edge for your Protected Intune Browser Experience<!--5728447-->
 As we have been sharing over the past year, Microsoft Edge mobile supports the same set of management features as the Managed Browser, while providing a much-improved end user experience. To make way for the robust experiences provided in Microsoft Edge, we will be retiring the Intune Managed Browser. Starting on January, 27, 2020, Intune will no longer support the Intune Managed Browser.  
 
