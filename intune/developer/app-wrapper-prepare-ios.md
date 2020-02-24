@@ -230,7 +230,7 @@ In the IntuneMAMPackager/Contents/MacOS folder, open `Parameters.plist` (a blank
 | ADAL Reply URI |String|empty| Same as -ar|
 | Verbose Enabled |Boolean|false| Same as -v|
 | Remove Missing Entitlements |Boolean|false| Same as -c|
-| Prevent Default Build Update |Boolen|false| Equivalent to using -b without arguments|
+| Prevent Default Build Update |Boolean|false| Equivalent to using -b without arguments|
 | Build String Override |String|empty| The custom CFBundleVersion of the wrapped output app|
 | Include Citrix XenMobile App SDK (network-only variant)|Boolean|false| Same as -citrix|
 | Extension Provisioning Profile Paths |Array of Strings|empty| An array of extension provisioning profiles for the app.

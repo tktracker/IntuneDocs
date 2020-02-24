@@ -156,7 +156,7 @@ Now we’ll create a Conditional Access policy that requires all device platform
 
    5. Choose **Select**.
 
-   ![Select conrols](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
+   ![Select controls](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
 8. Under **Enable policy**, select **On**.
 
