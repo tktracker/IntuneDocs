@@ -107,7 +107,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Block screen capture (Android only)|X|X|
 |Support for MAM without device enrollment|X|X|
 |Full Wipe of app data|X|X|
-|Selective Wipe of work and school data in Multi-Identity scenarios <br><br>**Note:** For iOS, when the management profile is removed, the app is also removed.|X||
+|Selective Wipe of work and school data in Multi-Identity scenarios <br><br>**Note:** For iOS/iPadOS, when the management profile is removed, the app is also removed.|X||
 |Prevent “Save as”|X||
 |Targeted Application Configuration (or app config through the "MAM channel")|X|X|
 |Support for Multi-Identity|X||
