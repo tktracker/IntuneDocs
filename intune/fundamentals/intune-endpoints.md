@@ -99,9 +99,10 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also n
 
 |ASU | Storage name | CDN |
 | --- | --- |--- |
-|A0601<br>A0602<br>A0101<br>A0102<br>A0201<br>A0202<br>A0401<br>A0402<br>A0501<br>A0502<br>A0701<br>A0702 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix |https://naprodimedatapri.azureedge.net<br>https://naprodimedatasec.azureedge.net<br>https://naprodimedatahotfix.azureedge.net |
-| B0101<br>B0102<br>B0201<br>B0202<br>B0301<br>B0302<br>B0501<br>B0502 | euprodimedatapri<br>
-euprodimedatasec<br>euprodimedatahotfix | https://euprodimedatapri.azureedge.net<br>https://euprodimedatasec.azureedge.net<br>https://euprodimedatahotfix.azureedge.net |
+|A0601<br>A0602<br>A0101<br>A0102<br>A0201<br>A0202<br>A0401<br>A0402<br>A0501<br>A0502<br>A0701<br>A0702 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | https://naprodimedatapri.azureedge.net<br>https://naprodimedatasec.azureedge.net<br>https://naprodimedatahotfix.azureedge.net |
+
+| B0101<br>B0102<br>B0201<br>B0202<br>B0301<br>B0302<br>B0501<br>B0502 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | https://euprodimedatapri.azureedge.net<br>https://euprodimedatasec.azureedge.net<br>https://euprodimedatahotfix.azureedge.net |
+
 | C0101<br>C0201<br>C0301<br>C0501<br>D0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | https://approdimedatapri.azureedge.net<br>
 https://approdimedatasec.azureedge.net<br>https://approdimedatahotfix.azureedge.net |
 
