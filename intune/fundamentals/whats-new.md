@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,19 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Role-based access control
 -->  
 
+<!-- ########################## -->
+## Week of February 24, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### macOS Company Portal user experience improvements<!-- 5568987 -->
+We have made improvements to the macOS device enrollment experience and the Company Portal app for Mac. You will see the following:
+- A better Microsoft **AutoUpdate** experience during enrollment that will ensure your users have the latest version of the Company Portal.
+- An enhanced compliance check step during enrollment.
+- Support for copied Incident IDs, so your users can send errors from their devices to your company support team faster.
+
+For more information about enrollment and the Company Portal app for Mac, see [Enroll your macOS device using the Company Portal app](/intune-user-help/enroll-your-device-in-intune-macos-cp). 
 
 <!-- ########################## -->
 ## Week of February 17, 2020 (2002 Service release)
