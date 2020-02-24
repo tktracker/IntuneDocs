@@ -423,7 +423,7 @@ Use the following security and privacy best practices when you use the App Wrapp
 
 ## Intune App Wrapping Tool for iOS with Citrix MDX mVPN
 
-This feature is an integration with the Citrix MDX app wrapper for iOS. The integration is simply an additional, optional command-line flag, `-citrix` to the general Intune App Wrapping Tools.
+This feature is an integration with the Citrix MDX app wrapper for iOS/iPadOS. The integration is simply an additional, optional command-line flag, `-citrix` to the general Intune App Wrapping Tools.
 
 ### Requirements
 

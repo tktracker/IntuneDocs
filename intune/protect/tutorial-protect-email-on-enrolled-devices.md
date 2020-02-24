@@ -166,7 +166,7 @@ Now we’ll create a Conditional Access policy that requires all device platform
 
 ## Try it out
 
-With the policies you’ve created, any iOS device that attempts to sign in to Office 365 email will need to enroll in Intune and use the Outlook mobile app for iOS. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant. You’ll be prompted to enroll the device and install the Outlook mobile app.
+With the policies you’ve created, any iOS device that attempts to sign in to Office 365 email will need to enroll in Intune and use the Outlook mobile app for iOS/iPadOS. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant. You’ll be prompted to enroll the device and install the Outlook mobile app.
 
 1. To test on an iPhone, go to **Settings** > **Passwords & Accounts** > **Add Account** > **Exchange**.
 
