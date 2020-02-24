@@ -48,7 +48,7 @@ Line-of-business (LOB) apps and Microsoft Store for Business apps are the app ty
 
 Specific app types are supported based on the version of Windows 10 that your users are running. The following table provides the app type and Windows 10 supportability.
 
-| App type | Home | Pro | Business | Enterprise | Education | S-Mode | Hololense | SurfaceHub | WCOS | Mobile |
+| App type | Home | Pro | Business | Enterprise | Education | S-Mode | HoloLens<sup>1 | Surface Hub | WCOS | Mobile |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  .MSI | No | Yes | Yes | Yes | Yes | No | No | No | No | No |
 | .IntuneWin | No | Yes | Yes | Yes | Yes | 19H2+ | No | No | No | No |
@@ -56,10 +56,12 @@ Specific app types are supported based on the version of Windows 10 that your us
 | LOB: APPX/MSIX | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB Offline | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB Online | Yes | Yes | Yes | Yes | Yes | Yes | RS4+ | Yes | Yes | Yes |
-| Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Yes<sup>1 | Yes<sup>1 | Yes | Yes |
+| Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Yes<sup>2 | Yes<sup>2 | Yes | Yes<sup>2 |
 | Store Link | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> Launch from company portal only.
+<sup>1</sup> To unlock app management, upgrade your HoloLens device to [Holographic for Business](https://docs.microsoft.com/en-us/intune/fundamentals/windows-holographic-for-business).
+
+<sup>2</sup> Launch from Company Portal only.
 
 > [!NOTE]
 > All Windows app types require enrollment.
