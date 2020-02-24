@@ -49,7 +49,7 @@ You'll need a test tenant with the following subscriptions for this tutorial:
 
 - Office 365 Business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
-Before you begin, create a test device profile for iOS devices by following the steps in [Quickstart: Create an email device profile for iOS](../configuration/quickstart-email-profile.md).
+Before you begin, create a test device profile for iOS devices by following the steps in [Quickstart: Create an email device profile for iOS/iPadOS](../configuration/quickstart-email-profile.md).
 
 ## Sign in to Intune
 

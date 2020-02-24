@@ -63,7 +63,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    - **Certificate type**:
 
-     *(Applies to:  Android, Android Enterprise, iOS, macOS, Windows 8.1 and later, and Windows 10 and later.)*
+     *(Applies to:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1 and later, and Windows 10 and later.)*
 
      Select a type depending on how you'll use the certificate profile:
 
