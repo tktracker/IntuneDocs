@@ -99,27 +99,9 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also n
 
 |ASU | Storage name | CDN |
 | --- | --- |--- |
-| AMSUA0601 | prodmsua06data | https:\//prodmsua06data.azureedge.net |
-| AMSUA0602 | prodamsua0602data | https:\//prodamsua0602data.azureedge.net |
-| AMSUA0101 | prodmsua01data | https:\//prodmsua01data.azureedge.net |
-| AMSUA0201 | prodmsua02data | https:\//prodmsua02data.azureedge.net |
-| AMSUA0202 | Prodmsua0202rcdata | https:\//prodamsua0202data.azureedge.net/ |
-| AMSUA0401 | prodmsua04data | https:\//prodmsua04data.azureedge.net |
-| AMSUA0402 | Prodmsua0402rcdata | https:\//prodamsua0402data.azureedge.net/ |
-| AMSUA0501 | prodmsua05data | https:\//prodmsua05data.azureedge.net |
-| AMSUA0502 | prodmsua0502data | https:\//prodmsua0502data.azureedge.net |
-| AMSUB0101 | prodmsub01data | https:\//prodmsub01data.azureedge.net |
-| AMSUB0102 | prodamsub0102data | https:\//prodamsub0102data.azureedge.net |
-| AMSUB0201 | prodmsub02data | https:\//prodmsub02data.azureedge.net |
-| AMSUB0202 | Prodmsub0202rcdata | https:\//prodamsub0202data.azureedge.net |
-| AMSUB0301 | Prodmsub03data2 | https:\//prodmsub03data2.azureedge.net |
-| AMSUB0302 | Prodmsub0302rcdata | https:\//prodamsub0302data.azureedge.net |
-| AMSUB0501 | prodmsub05data | https:\//prodmsub05data.azureedge.net |
-| AMSUC0101 | prodmsuc01data | https:\//prodmsuc01data.azureedge.net |
-| AMSUC0201 | prodmsuc02data | https:\//prodmsuc02data.azureedge.net |
-| AMSUC0301 | prodmsuc03data | https:\//prodmsuc03data.azureedge.net |
-| AMSUC0501 | prodmsuc05data | https:\//prodmsuc05data.azureedge.net |
-| AMSUA0701 | pemsua07rcdata | https:\//pemsua07data.azureedge.net |
+|A0601<br>A0602<br>A0101<br>A0102<br>A0201<br>A0202<br>A0401<br>A0402<br>A0501<br>A0502<br>A0701<br>A0702 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | https://naprodimedatapri.azureedge.net<br>https://naprodimedatasec.azureedge.net<br>https://naprodimedatahotfix.azureedge.net |
+| B0101<br>B0102<br>B0201<br>B0202<br>B0301<br>B0302<br>B0501<br>B0502 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | https://euprodimedatapri.azureedge.net<br>https://euprodimedatasec.azureedge.net<br>https://euprodimedatahotfix.azureedge.net |
+| C0101<br>C0201<br>C0301<br>C0501<br>D0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | https://approdimedatapri.azureedge.net<br>https://approdimedatasec.azureedge.net<br>https://approdimedatahotfix.azureedge.net |
 
 ## Windows Push Notification Services (WNS)  
 
