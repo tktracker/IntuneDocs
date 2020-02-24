@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -110,6 +110,18 @@ Monitoring the profile gives you insight into the deployment state of your devic
 
    ![See the different monitor options for a security baselines profile](./media/security-baselines-monitor/monitor-status-options.png)
 
+## View Endpoint security configurations per device
+
+View details about the security configurations that apply to an individual device, which can help you isolate settings that  are misconfigured.
+
+1. Sign in to the  sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Go to  **Devices** > **All devices** and select the device you want to view.
+
+3. In the *Monitor* category, select **Endpoint security configuration** to view the list of security configurations that apply to that device.
+
+4. You can select an Endpoint security configuration to drill in and view additional details about the evaluation of that security configuration on the device.
+
 ## Troubleshoot using per-setting status
 
 You deployed a security baseline, but the deployment status shows an error. The following steps give you some guidance on troubleshooting the error.
@@ -139,6 +151,7 @@ On Windows 10 devices, there's a built-in MDM diagnostic information report. Thi
 [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) provides more information on this built-in report.
 
 > [!TIP]
+>
 > - Some settings also list the GUID. You can search for this GUID in the local registry (regedit) for any set values.
 > - The Event Viewer logs may also include some error information on the problematic setting (**Event viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
 

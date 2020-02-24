@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -14,7 +14,6 @@ ms.technology:
 ms.assetid:
 
 # optional metadata
-
 #ROBOTS:
 #audience:
 #ms.devlang:
@@ -34,6 +33,17 @@ Microsoft Intune supports the use of imported public key pair (PKCS) certificate
 S/MIME encryption is challenging because email is encrypted with a specific certificate. You must have the private key of the certificate that encrypted the email on the device where you're reading the email so it can be decrypted. Encryption certificates are renewed regularly, which means that you might need your encryption history on all of your devices to ensure you can read older email.  Since the same certificate needs to be used across devices, it's not possible to use [SCEP](certificates-scep-configure.md) or [PKCS](certficates-pfx-configure.md) certificate profiles for this purpose as those certificate delivery mechanisms deliver unique certificates per device.
 
 For more information about using S/MIME with Intune, [Use S/MIME to encrypt email](certificates-s-mime-encryption-sign.md).
+
+## Supported platforms
+
+Intune supports import of PFX certificates for the following platforms:
+
+- Android - Device Administrator
+- Android Enterprise - Fully Managed
+- Android Enterprise - Work profile
+- iOS
+- Mac
+- Windows 10
 
 ## Requirements
 

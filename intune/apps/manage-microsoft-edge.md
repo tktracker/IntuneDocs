@@ -301,17 +301,29 @@ You can configure if restricted links should open directly in InPrivate browsing
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **True** will automatically open sites directly in an InPrivate tab, without prompting the user to make the switch to their personal account. <p> **False** (default) will block the site within Microsoft Edge and the user will be asked to switch to their personal account to view.    |
 
-## Disable Microsoft Edge prompt to save passwords
+## Disable Microsoft Edge features to customize the end user experience for your organization's needs
 
-|    Key    |    Value    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **True** will cause restricted links to open directly in InPrivate browsing.<p>**False** (default) will present users with a choice to open a restricted link with either InPrivate browsing or with their personal (MSA) account.    |
-
+### Disable prompts that offer to save passwords
 By default, Microsoft Edge on iOS offers to save your users passwords to the keychain. If you would like to disable this prompt for your organization, configure the following setting:
 
 |    Key    |    Value    |
+|-----------------------|-----------------------|
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **password** will disable prompts that offer to save passwords for the end user.    |
+
+### Disable InPrivate browsing and Microsoft Accounts to restrict browsing to work-only contexts
+
+If your organization operates in a highly-regulated industry or uses a per-app VPN to allow users to access work resources with Microsoft Edge, you may choose to scope use of Microsoft Edge to a MAM-protected context only. This functionality is provided for MDM-enrolled devices only.
+
+|    Key    |    Value    |
 |-----------|-------------|
-|     'com.microsoft.intune.mam.managedbrowser.disableFeatures'    |    **password** will disable save passwords prompt.    |
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** disables InPrivate browsing, <br> **msa** blocks users from adding their personal Microsoft accounts (MSA) to the Microsoft Edge apps. <br> To disable multiple features, separate values with `|`. For example, `inprivate|msa` will block both InPrivate and personal accounts.   |
+
+### Restrict Microsoft Edge use to allowed-accounts only
+
+In addition to blocking InPrivate and MSA browsing, you can only allow use of Microsoft Edge when the user is logged in with their AAD account. This feature is only available for MDM-enrolled users. You can learn more about configuring this setting here:
+
+- [Android setting](~/apps/app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [iOS setting](~/apps/app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## Use Microsoft Edge on iOS to access managed app logs 
 
@@ -328,7 +340,7 @@ To see how to view logs on Android devices, see [Send logs to your IT admin by e
 
 The following are additional security and privacy considerations for Microsoft Edge:
 
-- Microsoft Edge doesn't consume settings that users set for the native browser on their devices, because Microsoft Edge can't access these settings.
+- Microsoft Edge doesn't consume settings that users set for the native browserhttps://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps on their devices, because Microsoft Edge can't access these settings.
 - You can configure the option **Require simple PIN for access** or **Require corporate credentials for access** in an app protection policy associated with Microsoft Edge. If a user selects the help link on the authentication page, they can browse any internet sites, regardless of whether they were added to a blocked list in the policy.
 - Microsoft Edge can block access to sites only when they are accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site.
 - To allow authentication, and access to Intune documentation, ***.microsoft.com** is exempt from the allow or block list settings. It's always allowed.
