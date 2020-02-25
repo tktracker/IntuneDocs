@@ -39,6 +39,8 @@
   items:
   - name: What is Intune for Education?
     href: introduction-intune-education.md      
+  - name: What is Intune for US Government?
+    href: introduction-intune-government.md
   - name: High-level architecture
     href: high-level-architecture.md
   - name: Device lifecycle
@@ -128,7 +130,7 @@
         href: end-user-mam-apps-ios.md
       - name: How to get Android apps
         href: end-user-apps-android.md
-      - name: How to get iOS apps
+      - name: How to get iOS/iPadOS apps
         href: end-user-apps-ios.md
       - name: How to get Windows apps
         href: end-user-apps-windows.md
@@ -203,10 +205,6 @@
       href: tenant-status.md
     - name: Help users troubleshoot problems
       href: help-desk-operators.md
-    - name: Audit logs for Intune activities
-      href: monitor-audit-logs.md
-    - name: Review logs with Azure Monitor
-      href: review-logs-using-azure-monitor.md
     - name: Using the Intune docs
       href: use-docs.md 
     - name: Get support
@@ -214,7 +212,11 @@
   - name: Reports
     items:
     - name: Intune reports
-      href: reports.md      
+      href: reports.md
+    - name: Audit logs for Intune activities
+      href: monitor-audit-logs.md
+    - name: Review logs with Azure Monitor
+      href: review-logs-using-azure-monitor.md
 - name: Reference
   items: 
   - name: Error codes and descriptions
@@ -235,7 +237,7 @@
       href: ui-changes.md
     - name: Intune classic groups
       href: groups-get-started.md
-    - name: iOS education settings
+    - name: iOS/iPadOS education settings
       items:
       - name: iPad
         href: education-settings-configure-ios.md

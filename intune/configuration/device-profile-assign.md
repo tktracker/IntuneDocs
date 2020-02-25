@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -93,7 +93,7 @@ To summarize, use device groups when you don't care who's signed in on the devic
 
 ### User groups
 
-Profile settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It’s normal for users to have many devices, such as a Surface Pro for work, and a personal iOS device. And, it's normal for a person to access email and other organization resources from these devices.
+Profile settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It’s normal for users to have many devices, such as a Surface Pro for work, and a personal iOS/iPadOS device. And, it's normal for a person to access email and other organization resources from these devices.
 
 For example:
 

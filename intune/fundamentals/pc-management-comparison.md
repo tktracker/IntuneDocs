@@ -3,7 +3,7 @@
 
 title: Compare Windows PC management options
 titleSuffix: Microsoft Intune
-description: Enrollment of corporate-owned iOS devices by using the Apple Device Enrollment Program (DEP) or Apple Configurator.
+description: Enrollment of corporate-owned iOS/iPadOS devices by using the Apple Device Enrollment Program (DEP) or Apple Configurator.
 keywords:
 author: dougeby
 ms.author: dougeby

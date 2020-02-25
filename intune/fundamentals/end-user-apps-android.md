@@ -70,6 +70,6 @@ LOB apps deployed to Zebra devices must be installed from a public location on t
 
 [Add apps with Microsoft Intune](../apps/apps-add.md)
 
-[How your iOS users get their apps](end-user-apps-ios.md)
+[How your iOS/iPadOS users get their apps](end-user-apps-ios.md)
 
 [How your Windows users get their apps](end-user-apps-windows.md)

@@ -271,7 +271,7 @@ When you choose a failure row, more details are provided.
 
 | Error | Details |
 |-------------|----------|
-| iOS Timeout or Failure | A timeout between the device and Intune due to the user taking too long to complete enrollment. |
+| iOS/iPadOS Timeout or Failure | A timeout between the device and Intune due to the user taking too long to complete enrollment. |
 | User not found or licensed | The user is missing a license or has been removed from the service. |
 | Device already enrolled | Someone attempted to enroll a device by using the Company Portal on a device that is still enrolled by another user. |
 | Not onboarded into Intune | An enrollment was attempted when the Intune mobile device management (MDM) authority wasn't configured. |
@@ -288,14 +288,14 @@ When you choose a failure row, more details are provided.
 | Autopilot enrollment method unexpected | The device attempted to enroll by using a non-allowed method. |
 | Autopilot device removed | The device attempting to enroll has been removed from Autopilot for this account. |
 | Device cap reached | This enrollment was blocked due to an admin configured device limit restriction. |
-| Apple onboarding | All iOS devices were blocked from enrolling at this time due to a missing or expired Apple MDM push certificate within Intune. |
+| Apple onboarding | All iOS/iPadOS devices were blocked from enrolling at this time due to a missing or expired Apple MDM push certificate within Intune. |
 | Device not preregistered | The device wasn't pre-registered as corporate and all personal enrollments were blocked by an admin. |
 | Feature not supported | The user was likely attempting to enroll via a method not compatible with your Intune configuration. |
 
 ## Collect available data from mobile device
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
-- [Send iOS enrollment errors to your IT administrator](/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Send iOS/iPadOS enrollment errors to your IT administrator](/intune-user-help/send-errors-to-your-it-admin-ios)
 - [Help your company support fix device issues with verbose logging](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
 - [Send Android logs to your company support using a USB cable](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 - [Send Android diagnostic data logs to your IT administrator using email](/intune-user-help/send-logs-to-your-it-admin-by-email-android)

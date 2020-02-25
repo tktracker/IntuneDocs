@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure VPN settings to iOS devices in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create a VPN configuration profile using virtual private network (VPN) configuration settings, including the connection details, authentication methods, and split tunneling in the base settings; the custom VPN settings with the identifier, and the key and value pairs; the per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains; and the proxy settings to include a configuration script, IP or FQDN address, and TCP port in Microsoft Intune on devices running iOS.
+title: Configure VPN settings to iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
+description: Add or create a VPN configuration profile using virtual private network (VPN) configuration settings, including the connection details, authentication methods, and split tunneling in the base settings; the custom VPN settings with the identifier, and the key and value pairs; the per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains; and the proxy settings to include a configuration script, IP or FQDN address, and TCP port in Microsoft Intune on devices running iOS/iPadOS.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,16 +26,16 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add VPN settings on iOS devices in Microsoft Intune
+# Add VPN settings on iOS and iPadOS devices in Microsoft Intune
 
-Microsoft Intune includes many VPN settings that can be deployed to your iOS devices. These settings are used to create and configure VPN connections to your organization's network. This article describes these settings. Some settings are only available for some VPN clients, such as Citrix, Zscaler, and more.
+Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPadOS devices. These settings are used to create and configure VPN connections to your organization's network. This article describes these settings. Some settings are only available for some VPN clients, such as Citrix, Zscaler, and more.
 
 ## Before you begin
 
 [Create a device configuration profile](vpn-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS enrollment](../enrollment/ios-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 
 ## Connection type
 
@@ -82,15 +82,14 @@ The settings shown in the following list are determined by the VPN connection ty
 - **Split tunneling**: **Enable** or **Disable** to let devices decide which connection to use, depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but uses the hotel's standard network for regular web browsing.
 
 - **VPN identifier** (Custom VPN, Zscaler, and Citrix): An identifier for the VPN app you're using, and is supplied by your VPN provider.
-  - **Enter key/value pairs for your organization's custom VPN attributes**: Add or import **Keys** and **Values** that customize your VPN connection. Remember, these values are typically supplied by your VPN provider.
+- **Enter key/value pairs for your organization's custom VPN attributes** (Custom VPN, Zscaler, and Citrix): Add or import **Keys** and **Values** that customize your VPN connection. Remember, these values are typically supplied by your VPN provider.
 
-- **Enable network access control (NAC)** (Citrix SSO, F5 Access): When you choose **I agree**, the device ID is included in the VPN profile. This ID can be used for authentication to the VPN to allow or prevent network access.
+- **Enable network access control (NAC)** (Cisco AnyConnect, Citrix SSO, F5 Access): When you choose **I agree**, the device ID is included in the VPN profile. This ID can be used for authentication to the VPN to allow or prevent network access.
 
-  **When using F5 Access**, be sure to:
+    **When using Cisco AnyConnect with ISE**, be sure to:
 
-  - Confirm you're using F5 BIG-IP 13.1.1.5. BIG-IP 14 isn't supported.
-  - Integrate BIG-IP with Intune for NAC. See the [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide.
-  - Enable NAC in the VPN profile.
+    - If you have not already done so, integrate ISE with Intune for NAC as described under **Configure Microsoft Intune as an MDM Server** in the [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
+    - Enable NAC in the VPN profile.
 
   **When using Citrix SSO with Gateway**, be sure to:
 
@@ -99,10 +98,11 @@ The settings shown in the following list are determined by the VPN connection ty
   - Integrate Citrix Gateway with Intune for NAC. See the [Integrating Microsoft Intune/Enterprise Mobility Suite with NetScaler (LDAP+OTP Scenario)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf) Citrix deployment guide.
   - Enable NAC in the VPN profile.
 
-  **Important details**:  
+  **When using F5 Access**, be sure to:
 
-  - When NAC is enabled, the VPN is disconnected every 24 hours. The VPN can immediately be reconnected.
-  - The device ID is part of the profile, but it isn't shown in Intune. This ID isn't stored by Microsoft anywhere, and isn't shared by Microsoft.
+  - Confirm you're using F5 BIG-IP 13.1.1.5 or later. 
+  - Integrate BIG-IP with Intune for NAC. See the [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide.
+  - Enable NAC in the VPN profile.
 
   For the VPN partners that support device ID, the VPN client, such as Citrix SSO, can get the ID. Then, it can query Intune to confirm the device is enrolled, and if the VPN profile is compliant or not compliant.
 
@@ -134,7 +134,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 - **Server certificate common name**: Enter the CN for the certificate itself. If left blank, the remote identifier value is used.
 
 - **Dead peer detection rate**: Choose how often the VPN client checks if the VPN tunnel is active. Your options:
-  - **Not configured**: Uses the iOS system default, which may be the same as choosing **Medium**.
+  - **Not configured**: Uses the iOS/iPadOS system default, which may be the same as choosing **Medium**.
   - **None**: Disables dead peer detection.
   - **Low**: Sends a keepalive message every 30 minutes.
   - **Medium** (default): Sends a keepalive message every 10 minutes.
@@ -149,7 +149,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 - **Perfect forward secrecy**: Select **Enable** to turn on perfect forward secrecy (PFS). PFS is an IP security feature that reduces the impact if a session key is compromised. **Disable** (default) doesn't use PFS.
 - **Certificate revocation check**: Select **Enable** to make sure the certificates aren't revoked before allowing the VPN connection to succeed. This check is best-effort. If the VPN server times out before determining if the certificate is revoked, access is granted. **Disable** (default) doesn't check for revoked certificates.
 
-- **Configure security association parameters**: **Not configured** (default) uses the iOS system default. Select **Enable** to enter the parameters used when creating security associations with the VPN server:
+- **Configure security association parameters**: **Not configured** (default) uses the iOS/iPadOS system default. Select **Enable** to enter the parameters used when creating security associations with the VPN server:
   - **Encryption algorithm**: Select the algorithm you want:
     - DES
     - 3DES
@@ -166,7 +166,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
   - **Diffie-Hellman group**: Select the group you want. Default is group `2`.
   - **Lifetime** (minutes): Choose how long the security association stays active until the keys are rotated. Enter a whole value between `10` and `1440` (1440 minutes is 24 hours). Default is `1440`.
 
-- **Configure a separate set of parameters for child security associations**: iOS allows you to configure separate parameters for the IKE connection, and any child connections. 
+- **Configure a separate set of parameters for child security associations**: iOS/iPadOS allows you to configure separate parameters for the IKE connection, and any child connections. 
 
   **Not configured** (default) uses the values you enter in the previous **Configure security association parameters** setting. Select **Enable** to enter the parameters used when creating *child* security associations with the VPN server:
   - **Encryption algorithm**: Select the algorithm you want:
@@ -187,9 +187,9 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Automatic VPN settings
 
-- **Per-app VPN**: Enables per-app VPN. Allows the VPN connection to trigger automatically when certain apps are opened. Also associate the apps with this VPN profile. Per-app VPN is not supported on IKEv2. For more information, see [instructions for setting up per-app VPN for iOS](vpn-setting-configure-per-app.md). 
+- **Per-app VPN**: Enables per-app VPN. Allows the VPN connection to trigger automatically when certain apps are opened. Also associate the apps with this VPN profile. Per-app VPN is not supported on IKEv2. For more information, see [instructions for setting up per-app VPN for iOS/iPadOS](vpn-setting-configure-per-app.md). 
   - **Provider Type**: Only available for Pulse Secure and Custom VPN.
-  - When using iOS **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel). Set the **ProviderType** value to **app-proxy** for app-layer tunneling, or **packet-tunnel** for packet-layer tunneling. If you're not sure which value to use, check your VPN provider's documentation.
+  - When using iOS/iPadOS **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel). Set the **ProviderType** value to **app-proxy** for app-layer tunneling, or **packet-tunnel** for packet-layer tunneling. If you're not sure which value to use, check your VPN provider's documentation.
   - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established.
 
 - **On-demand VPN**: Configure conditional rules that control when the VPN connection is started. For example, create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, create a condition. For example, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.

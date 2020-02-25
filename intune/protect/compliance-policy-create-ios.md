@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: iOS device compliance settings in Microsoft Intune - Azure | Microsoft Docs
-description: See a list of all the settings you can use when setting compliance for your iOS devices in Microsoft Intune. Require an email, check jailbroken or rooted devices, set the allowed minimum and maximum operating system, set any password restrictions, including password length and device inactivity, restrict apps, and more.
+title: iOS/iPadOS device compliance settings in Microsoft Intune - Azure | Microsoft Docs
+description: See a list of all the settings you can use when setting compliance for your iOS/iPadOS devices in Microsoft Intune. Require an email, check jailbroken or rooted devices, set the allowed minimum and maximum operating system, set any password restrictions, including password length and device inactivity, restrict apps, and more.
 keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,9 +28,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# iOS settings to mark devices as compliant or not compliant using Intune
+# iOS/iPadOS settings to mark devices as compliant or not compliant using Intune
 
-This article lists and describes the different compliance settings you can configure on iOS devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require an email, mark rooted (jailbroken) devices as not compliant, set an allowed threat level, set passwords to expire, and more.
+This article lists and describes the different compliance settings you can configure on iOS/iPadOS devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require an email, mark rooted (jailbroken) devices as not compliant, set an allowed threat level, set passwords to expire, and more.
 
 This feature applies to:
 
@@ -73,10 +73,10 @@ For details about email profiles, see [configure access to organization email us
 
 ### Operating System Version  
 
-- **Minimum OS required** *(iOS 8.0 and newer)*:  
+- **Minimum OS version** *(iOS 8.0 and newer)*:  
   When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can choose to upgrade their device. After that, they can access organization resources.
 
-- **Maximum OS version allowed** *(iOS 8.0 and newer)*:  
+- **Maximum OS version** *(iOS 8.0 and newer)*:  
   When a device uses an OS version later than the version in the rule, access to organization resources is blocked. The end user is asked to contact their IT administrator. The device can't access organization resources until a rule changes to allow the OS version.
 
 - **Minimum OS build version** *(iOS 8.0 and newer)*:  
@@ -90,11 +90,11 @@ For details about email profiles, see [configure access to organization email us
 ### Password
 
 > [!NOTE]
-> After a compliance or configuration policy is applied to an iOS device, users are prompted to set a passcode every 15 minutes. Users are continually prompted until a passcode is set. When a passcode is set for the iOS device, the encryption process automatically starts. The device remains encrypted until the passcode is disabled.
+> After a compliance or configuration policy is applied to an iOS/iPadOS device, users are prompted to set a passcode every 15 minutes. Users are continually prompted until a passcode is set. When a passcode is set for the iOS/iPadOS device, the encryption process automatically starts. The device remains encrypted until the passcode is disabled.
 
 - **Require a password to unlock mobile devices**:  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.  
-  - **Require** - Users must enter a password before they can access their device. iOS devices that use a password are encrypted.
+  - **Require** - Users must enter a password before they can access their device. iOS/iPadOS devices that use a password are encrypted.
 
 - **Simple passwords**:  
   - **Not configured** (*default*) - Users can create simple passwords like **1234** or **1111**.
@@ -129,7 +129,7 @@ For details about email profiles, see [configure access to organization email us
   You can restrict apps by adding their bundle IDs to the policy. If a device has the app installed, the device is marked as non-compliant.
 
   - **App name** - Enter a user-friendly name to help you identify the bundle ID.
-  - **App Bundle ID** - Enter the unique bundle identifier assigned by the app provider. To find the bundle ID, see [How to find the bundle ID for an iOS app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (opens another Microsoft web site).  
+  - **App Bundle ID** - Enter the unique bundle identifier assigned by the app provider. To find the bundle ID, see [How to find the bundle ID for an iOS/iPadOS app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (opens another Microsoft web site).  
 
 ## Next steps
 

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Add VPN settings to devices in Microsoft Intune - Azure | Microsoft Docs
-description: For Android, Android Enterprise, iOS, macOS, and Windows devices, use built-in settings to create virtual private network (VPN) connections in Microsoft Intune.
+description: For Android, Android Enterprise, iOS, iPadOS, macOS, and Windows devices, use built-in settings to create virtual private network (VPN) connections in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Virtual private networks (VPNs) give your users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization, so they can easily and securely connect to your organizational network.
 
-For example, you want to configure all iOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
+For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
 > [!NOTE]
 > You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
@@ -51,19 +51,19 @@ You can create VPN profiles using the following connection types:
 |Connection type|Platform|
 |-|-|
 |Automatic|Windows 10|
-|Check Point Capsule VPN|- Android<br/>- Android Enterprise work profiles<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|Cisco AnyConnect|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS<br/>- macOS|
-|Cisco (IPSec)|iOS|
-|Citrix SSO|- Android<br/>- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- Android Enterprise device owner (fully managed): Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
-|Custom VPN|- iOS<br/>- macOS|
-|F5 Access|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|IKEv2| - iOS<br/>- Windows 10|
+|Check Point Capsule VPN|- Android<br/>- Android Enterprise work profiles<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
+|Cisco AnyConnect|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS/iPadOS<br/>- macOS|
+|Cisco (IPSec)|iOS/iPadOS|
+|Citrix SSO|- Android<br/>- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- Android Enterprise device owner (fully managed): Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS<br/>- Windows 10|
+|Custom VPN|- iOS/iPadOS<br/>- macOS|
+|F5 Access|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
+|IKEv2| - iOS/iPadOS<br/>- Windows 10|
 |L2TP|Windows 10|
-|Palo Alto Networks GlobalProtect|- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
+|Palo Alto Networks GlobalProtect|- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS<br/>- Windows 10|
 |PPTP|Windows 10|
-|Pulse Secure|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|SonicWall Mobile Connect|- Android<br/>- Android Enterprise work profiles<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|Zscaler|- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS|
+|Pulse Secure|- Android<br/>- Android Enterprise work profiles<br/>- Android Enterprise device owner (fully managed)<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
+|SonicWall Mobile Connect|- Android<br/>- Android Enterprise work profiles<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
+|Zscaler|- Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS|
 
 > [!IMPORTANT]
 > Before you can use VPN profiles assigned to a device, you must install the applicable VPN app for the profile. You can use the information in the [What is app management in Microsoft Intune?](../apps/app-management.md) article to help you assign the app by using Intune.  
@@ -123,4 +123,4 @@ The user authenticates to the VPN server by providing a user name and password.
 
 Once the profile is created, it isn't doing anything yet. Next, [assign the profile](device-profile-assign.md) to some devices.
 
-You can also create and use per-app VPNs on [Android](android-pulse-secure-per-app-vpn.md) and [iOS](vpn-setting-configure-per-app.md) devices.
+You can also create and use per-app VPNs on [Android](android-pulse-secure-per-app-vpn.md) and [iOS/iPadOS](vpn-setting-configure-per-app.md) devices.

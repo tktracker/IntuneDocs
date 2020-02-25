@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 ---
 
 # Manage operating system versions with Intune
-On modern mobile and desktop platforms, major updates, patches, and new versions release at a rapid pace. You have controls to fully manage updates and patches on Windows, but other platforms like iOS and Android require your end users to participate in the process.  Microsoft Intune has the capabilities to help you structure your operating system version management across different platforms.
+On modern mobile and desktop platforms, major updates, patches, and new versions release at a rapid pace. You have controls to fully manage updates and patches on Windows, but other platforms like iOS/iPadOS and Android require your end users to participate in the process.  Microsoft Intune has the capabilities to help you structure your operating system version management across different platforms.
 
 Intune can help you address these common scenarios: 
 - Determine which operating system versions are on your end-user devices

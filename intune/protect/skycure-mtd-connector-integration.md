@@ -58,7 +58,7 @@ SEP Mobile supports two modes of integration with Intune:
 
 ### How are the SEP Mobile apps used with Azure AD and Intune?
 
-- **iOS app:** Allows end-users to sign in to Azure AD using an iOS app.
+- **iOS app:** Allows end-users to sign in to Azure AD using an iOS/iPadOS app.
 
 - **Android app:** Allows end-users to sign in to Azure AD using an Android app.
 
@@ -81,11 +81,11 @@ SEP Mobile supports two modes of integration with Intune:
 
 5. When the login page opens, enter your Intune credentials, and then choose **Accept**.
 
-    ![Image of the iOS app Intune login prompt](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
+    ![Image of the iOS/iPadOS app Intune login prompt](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
 
 6. After the app is added to Azure AD, you'll see an indication that the app was added successfully.
 
-    ![Image of the iOS app completion screen](./media/skycure-mtd-connector-integration/symantec-portal-basic-added.png)
+    ![Image of the iOS/iPadOS app completion screen](./media/skycure-mtd-connector-integration/symantec-portal-basic-added.png)
 
 7. Repeat these steps for the **SEP Mobile Android** and **Management** apps.
 
@@ -140,11 +140,11 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 6. Next to **iOS App**, choose the **Add to Active Directory** button.
 
-    ![Image showing adding the iOS app to Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
+    ![Image showing adding the iOS/iPadOS app to Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
 7. Sign in using the Azure Active Directory credentials for the Office 365 account that manages the directory.
 
-8. Choose the **Accept** button to add the SEP Mobile iOS app to Azure Active Directory.
+8. Choose the **Accept** button to add the SEP Mobile iOS/iPadOS app to Azure Active Directory.
 
     ![Image showing the accept button](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
 

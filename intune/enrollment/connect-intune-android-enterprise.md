@@ -74,4 +74,4 @@ You can turn off Android Enterprise enrollment and management. To do this, you m
 ## Next steps
 
 After connecting to the Managed Google Play account, you can [set up Android Enterprise work profile devices](android-work-profile-enroll.md), 
-[set up Android Enterprise dedicated devices](android-kiosk-enroll.md) and [set up Android Enterprise fully managed devices](android-kiosk-enroll.md)
+[set up Android Enterprise dedicated devices](android-kiosk-enroll.md) and [set up Android Enterprise fully managed devices](android-fully-managed-enroll.md)

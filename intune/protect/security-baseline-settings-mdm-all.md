@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -215,7 +215,7 @@ For more information, see [Policy CSP - Browser](https://docs.microsoft.com/wind
   
   **Default**: Yes
   
-- **Prevent certificate error overrides**:  
+- **Prevent user from overriding certificate errors**:  
   This policy setting prevents the user from ignoring Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate errors that interrupt browsing (such as "expired", "revoked", or "name mismatch" errors) in Internet Explorer. If you enable this policy setting, the user can't continue browsing. If you disable or don't configure this policy setting, the user can choose to ignore certificate errors and continue browsing.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067126)
   
@@ -493,7 +493,7 @@ For more information, see [Policy CSP - Experience](https://docs.microsoft.com/w
 
 For more information, see [Policy CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) in the Windows documentation.
 
-- **Exploit protection XML**:  
+- **Upload XML**:  
   Enables the IT admin to push out a configuration that represents the desired system and application mitigation options to all the devices in the organization. The configuration is represented by an XML. Exploit protection helps protect devices from malware that use exploits to spread and infect. You use the Windows Security app or PowerShell to create a set of mitigations (known as a configuration). You can then export this configuration as an XML file and share it with multiple machines on your network so they all have the same set of mitigation settings. You can also convert and import an existing EMET configuration XML file into an exploit protection configuration XML.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067035)
 
@@ -514,6 +514,64 @@ For more information, see [Policy CSP - FileExplorer](https://docs.microsoft.com
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067107)
 
   **Default**: Disabled
+
+## Firewall
+
+For more information, see [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) in the Windows Protocols documentation.
+
+- **Firewall profile domain**:  
+  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for networks that are connected to domains.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **Inbound connections blocked**:  
+    **Default**: Yes
+
+  - **Outbound connections required**:  
+    **Default**: Yes
+
+  - **Inbound notifications blocked**:  
+    **Default**: Yes
+
+  - **Firewall enabled**:  
+    **Default**: Allowed
+
+- **Firewall profile public**:  
+  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for public networks. These networks are classified as public by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are those at airports, coffee shops, and other public places where the peers in the network or the network administrator aren't trusted.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067143)
+
+  - **Inbound connections blocked**:  
+    **Default**: Yes
+
+  - **Outbound connections required**:  
+    **Default**: Yes
+
+  - **Inbound notifications blocked**:  
+    **Default**: Yes
+
+  - **Firewall enabled**:  
+    **Default**: Allowed
+
+  - **Connection security rules from group policy not merged**:  
+    **Default**: Yes
+
+  - **Policy rules from group policy not merged**:  
+    **Default**: Yes
+
+- **Firewall profile private**:  
+  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for private networks.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067041)
+
+  - **Inbound connections blocked**:  
+    **Default**: Yes
+
+  - **Outbound connections required**:  
+    **Default**: Yes
+
+  - **Inbound notifications blocked**:  
+    **Default**: Yes
+
+  - **Firewall enabled**:  
+    **Default**: Allowed
 
 ## Internet Explorer
 
@@ -1484,6 +1542,153 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](https://do
 
   **Default**: Yes
 
+## Microsoft Defender
+
+For more information, see [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
+
+- **Scan incoming mail messages**:  
+  Allows or disallows scanning of email.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067116)
+
+  **Default**: Yes
+
+- **Office apps launch child process type**:  
+  Office apps won't be allowed to create child processes. This includes Word, Excel, PowerPoint, OneNote, and Access. This is a typical malware behavior, especially for macro-based attacks that attempt to use Office apps to launch or download malicious executables.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067121)
+
+  **Default**: Block
+
+- **Defender sample submission consent type**:  
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  **Default**: Send safe samples automatically
+
+- **Signature update interval (in hours)**:  
+  Defender signature update interval in hours.
+
+  **Default**: 4
+
+- **Script downloaded payload execution type**:  
+  Defender script downloaded payload execution type.
+
+  **Default**: Block
+  
+- **Prevent credential stealing type**:  
+  Microsoft Defender Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Microsoft Defender Credential Guard prevents these attacks by protecting NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067065)
+  
+  **Default**: Enable
+
+- **Email content execution type**:  
+  This rule blocks the following file types from running or launching from an email seen in either Microsoft Outlook or webmail (such as Gmail.com or Outlook.com): Executable files (such as .exe, .dll, or .scr) Script files (such as a PowerShell .ps, VisualBasic .vbs, or JavaScript .js file) Script archive files.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067063)
+
+  **Default**: Block
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Adobe Reader Launch in a child process**:  
+  **Default**: Enable
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
+- **Network protection**:  
+  This policy allows you to turn on network protection (block/audit) or off in Microsoft Defender Exploit Guard. Network protection is a feature of Microsoft Defender Exploit Guard that protects employees using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. This includes preventing third-party browsers from connecting to dangerous sites. Value type is integer. If you enable this setting, network protection is turned on and employees can't turn it off. Its behavior can be controlled by the following options: Block and Audit. If you enable this policy with the "Block" option, users and apps are blocked from connecting to dangerous domains. You can see this activity in Microsoft Defender Security Center. If you enable this policy with the "Audit" option, users/apps won't be blocked from connecting to dangerous domains. However, you'll still see this activity in Microsoft Defender Security Center. If you disable this policy, users/apps won't be blocked from connecting to dangerous domains. You'll not see any network activity in Microsoft Defender Security Center. If you don't configure this policy, network blocking is disabled by default.  
+  [Learn more](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+
+  **Default**: Enable
+
+- **Defender schedule scan day**:  
+  Defender schedule scan day.
+
+  **Default**: Everyday
+
+- **Cloud-delivered protection**:  
+  To best protect your PC, Microsoft Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067039)
+
+  **Default**:  Yes  
+
+- **Defender potentially unwanted app action**:  
+  The potentially unwanted application (PUA) protection feature in Microsoft Defender Antivirus can identify and block PUAs from downloading and installing on endpoints in your network. These applications aren't considered viruses, malware, or other types of threats, but might do actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have a poor reputation. Typical PUA behavior includes: Various types of software bundling Ad injection into web browsers Driver and registry optimizers that detect issues, request payment to fix the errors, but remain on the endpoint and make no changes or optimizations (also known as "rogue antivirus" programs). These applications can increase the risk of your network being infected with malware, cause malware infections to be harder to identify, and can waste IT resources in cleaning up the applications.  
+  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  **Default**: Block  
+
+- **Script obfuscated macro code type**:  
+  Malware and other threats can attempt to obfuscate or hide their malicious code in some script files. This rule prevents scripts that appear to be obfuscated from running.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067026)
+
+  **Default**: Block
+
+- **Scan removable drives during a full scan**:  
+  Allows Microsoft Defender to scan for malicious and unwanted software in removable drives (for example, flash drives) during a full scan. Microsoft Defender Antivirus scans all files on USB devices before execution.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067036)
+
+  **Default**: Yes  
+
+- **Scan archive files**:  
+  Defender scan archive files.
+
+  **Default**: Yes
+
+- **Behavior monitoring**:  
+  Allows or disallows Microsoft Defender Behavior Monitoring functionality. Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system and send this sensor data to your private, isolated, cloud instance of Microsoft Defender ATP.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067111)
+
+  **Default**: Yes
+
+- **Scan files opened from network folders**:  
+  If files are read-only, user won't be able to remove any detected malware.
+
+  **Default**: Yes
+
+- **Untrusted USB process type**:  
+  With this rule, admins can prevent unsigned or untrusted executable files from running from USB removable drives, including SD cards.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067100)
+
+  **Default**: Block
+
+- **Office apps other process injection type**:  
+  Office apps, including Word, Excel, PowerPoint, and OneNote, can't inject code into other processes. This is typically used by malware to run malicious code in an attempt to hide the activity from antivirus scanning engines.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067019)
+
+  **Default**:  Block
+
+- **Office macro code allow Win32 imports type**:  
+  Malware can use macro code in Office files to import and load Win32 DLLs, which is used to make API calls to allow further infection throughout the system. This rule attempts to block Office files that contain macro code that can import Win32 DLLs. This includes Word, Excel, PowerPoint, and OneNote.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067130)
+
+  **Default**: Block
+
+- **Defender cloud block level**:  
+  Defender cloud block level.
+
+  **Default**: Not Configured
+
+- **Real-time monitoring**:  
+  Defender requires real-time monitoring.
+
+  **Default**: Yes
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Office communication apps launch in a child process**:  
+  **Default**:  Enable
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
+- **Office apps executable content creation or launch type**:  
+  This rule targets typical behaviors used by suspicious and malicious add-ons and scripts (extensions) that create or launch executable files. This is a typical malware technique. Extensions are blocked from being used by Office apps. Typically these extensions use the Windows Scripting Host (.WSH files) to run scripts that automate certain tasks or provide user-created add-on features.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067108)
+
+  **Default**: Block
+
 ## MS Security Guide
 
 For more information, see [Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) in the Windows documentation.
@@ -1785,217 +1990,12 @@ For more information, see [Policy CSP - WindowsConnectionManager](https://docs.m
 
   **Default**: Enabled
 
-## Microsoft Defender
-
-For more information, see [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
-
-- **Scan incoming mail messages**:  
-  Allows or disallows scanning of email.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Default**: Yes
-
-- **Office apps launch child process type**:  
-  Office apps won't be allowed to create child processes. This includes Word, Excel, PowerPoint, OneNote, and Access. This is a typical malware behavior, especially for macro-based attacks that attempt to use Office apps to launch or download malicious executables.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Default**: Block
-
-- **Defender sample submission consent type**:  
-  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Default**: Send safe samples automatically
-
-- **Signature update interval (in hours)**:  
-  Defender signature update interval in hours.
-
-  **Default**: 4
-
-- **Script downloaded payload execution type**:  
-  Defender script downloaded payload execution type.
-
-  **Default**: Block
-  
-- **Prevent credential stealing type**:  
-  Microsoft Defender Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Microsoft Defender Credential Guard prevents these attacks by protecting NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Default**: Enable
-
-- **Email content execution type**:  
-  This rule blocks the following file types from running or launching from an email seen in either Microsoft Outlook or webmail (such as Gmail.com or Outlook.com): Executable files (such as .exe, .dll, or .scr) Script files (such as a PowerShell .ps, VisualBasic .vbs, or JavaScript .js file) Script archive files.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Default**: Block
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
-
-- **Adobe Reader Launch in a child process**:  
-  **Default**: Enable
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Network protection**:  
-  This policy allows you to turn on network protection (block/audit) or off in Microsoft Defender Exploit Guard. Network protection is a feature of Microsoft Defender Exploit Guard that protects employees using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. This includes preventing third-party browsers from connecting to dangerous sites. Value type is integer. If you enable this setting, network protection is turned on and employees can't turn it off. Its behavior can be controlled by the following options: Block and Audit. If you enable this policy with the "Block" option, users and apps are blocked from connecting to dangerous domains. You can see this activity in Microsoft Defender Security Center. If you enable this policy with the "Audit" option, users/apps won't be blocked from connecting to dangerous domains. However, you'll still see this activity in Microsoft Defender Security Center. If you disable this policy, users/apps won't be blocked from connecting to dangerous domains. You'll not see any network activity in Microsoft Defender Security Center. If you don't configure this policy, network blocking is disabled by default.  
-  [Learn more](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
-
-  **Default**: Enable
-
-- **Defender schedule scan day**:  
-  Defender schedule scan day.
-
-  **Default**: Everyday
-
-- **Cloud-delivered protection**:  
-  To best protect your PC, Microsoft Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067039)
-
-  **Default**:  Yes  
-
-- **Defender potentially unwanted app action**:  
-  The potentially unwanted application (PUA) protection feature in Microsoft Defender Antivirus can identify and block PUAs from downloading and installing on endpoints in your network. These applications aren't considered viruses, malware, or other types of threats, but might do actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have a poor reputation. Typical PUA behavior includes: Various types of software bundling Ad injection into web browsers Driver and registry optimizers that detect issues, request payment to fix the errors, but remain on the endpoint and make no changes or optimizations (also known as "rogue antivirus" programs). These applications can increase the risk of your network being infected with malware, cause malware infections to be harder to identify, and can waste IT resources in cleaning up the applications.  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
-
-  **Default**: Block  
-
-- **Script obfuscated macro code type**:  
-  Malware and other threats can attempt to obfuscate or hide their malicious code in some script files. This rule prevents scripts that appear to be obfuscated from running.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Default**: Block
-
-- **Scan removable drives during a full scan**:  
-  Allows Microsoft Defender to scan for malicious and unwanted software in removable drives (for example, flash drives) during a full scan. Microsoft Defender Antivirus scans all files on USB devices before execution.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067036)
-
-  **Default**: Yes  
-
-- **Scan archive files**:  
-  Defender scan archive files.
-
-  **Default**: Yes
-
-- **Behavior monitoring**:  
-  Allows or disallows Microsoft Defender Behavior Monitoring functionality. Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system and send this sensor data to your private, isolated, cloud instance of Microsoft Defender ATP.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067111)
-
-  **Default**: Yes
-
-- **Scan files opened from network folders**:  
-  If files are read-only, user won't be able to remove any detected malware.
-
-  **Default**: Yes
-
-- **Untrusted USB process type**:  
-  With this rule, admins can prevent unsigned or untrusted executable files from running from USB removable drives, including SD cards.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067100)
-
-  **Default**: Block
-
-- **Office apps other process injection type**:  
-  Office apps, including Word, Excel, PowerPoint, and OneNote, can't inject code into other processes. This is typically used by malware to run malicious code in an attempt to hide the activity from antivirus scanning engines.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067019)
-
-  **Default**:  Block
-
-- **Office macro code allow Win32 imports type**:  
-  Malware can use macro code in Office files to import and load Win32 DLLs, which is used to make API calls to allow further infection throughout the system. This rule attempts to block Office files that contain macro code that can import Win32 DLLs. This includes Word, Excel, PowerPoint, and OneNote.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067130)
-
-  **Default**: Block
-
-- **Defender cloud block level**:  
-  Defender cloud block level.
-
-  **Default**: Not Configured
-
-- **Real-time monitoring**:  
-  Defender requires real-time monitoring.
-
-  **Default**: Yes
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-- **Office communication apps launch in a child process**:  
-  **Default**:  Enable
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Office apps executable content creation or launch type**:  
-  This rule targets typical behaviors used by suspicious and malicious add-ons and scripts (extensions) that create or launch executable files. This is a typical malware technique. Extensions are blocked from being used by Office apps. Typically these extensions use the Windows Scripting Host (.WSH files) to run scripts that automate certain tasks or provide user-created add-on features.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Default**: Block
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-## Microsoft Defender Firewall
-
-For more information, see [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) in the Windows Protocols documentation.
-
-- **Firewall profile domain**:  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for networks that are connected to domains.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2066796)
-
-  - **Inbound connections blocked**:  
-    **Default**: Yes
-
-  - **Outbound connections required**:  
-    **Default**: Yes
-
-  - **Inbound notifications blocked**:  
-    **Default**: Yes
-
-  - **Firewall enabled**:  
-    **Default**: Allowed
-
-- **Firewall profile public**:  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for public networks. These networks are classified as public by the administrators in the server host. The classification happens the first time the host connects to the network. Usually these networks are those at airports, coffee shops, and other public places where the peers in the network or the network administrator aren't trusted.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067143)
-
-  - **Inbound connections blocked**:  
-    **Default**: Yes
-
-  - **Outbound connections required**:  
-    **Default**: Yes
-
-  - **Inbound notifications blocked**:  
-    **Default**: Yes
-
-  - **Firewall enabled**:  
-    **Default**: Allowed
-
-  - **Connection security rules from group policy not merged**:  
-    **Default**: Yes
-
-  - **Policy rules from group policy not merged**:  
-    **Default**: Yes
-
-- **Firewall profile private**:  
-  Specifies the profiles to which the rule belongs: Domain, Private, Public. This value represents the profile for private networks.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067041)
-
-  - **Inbound connections blocked**:  
-    **Default**: Yes
-
-  - **Outbound connections required**:  
-    **Default**: Yes
-
-  - **Inbound notifications blocked**:  
-    **Default**: Yes
-
-  - **Firewall enabled**:  
-    **Default**: Allowed
 
 ## Windows Hello for Business
 
-- **Require enhanced anti-spoofing, when available**
+- **Enable to use enhanced anti-spoofing, when available**
 
   If Yes, devices will use enhanced anti-spoofing, when available. If No, anti-spoofing will be blocked. Not configured will honor configurations done on the client.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067192)
@@ -2139,7 +2139,7 @@ The following settings are either:
 - **Adobe Reader Launch in a child process**
 - **Office communication apps launch in a child process**
 
-*[New]* [**Microsoft Defender Firewall**](#microsoft-defender-firewall)
+*[New]* [**Firewall**](#firewall)
 
 - **Firewall profile domain**
   - **Inbound connections blocked**

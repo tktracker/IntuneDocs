@@ -47,7 +47,7 @@ The following requirements must be met for Conditional Access to work:
 
 - By default, the user must be assigned a device compliance policy. This can depend on the configuration of the setting **Mark devices with no compliance policy assigned as** which is under **Device Compliance** > **Compliance Policy Settings** in the Intune admin portal.
 
-- Exchange ActiveSync must be activated on the device if the user is using the device's native mail client rather than Outlook. This happens automatically for iOS, Windows Phone, and Android Knox devices.
+- Exchange ActiveSync must be activated on the device if the user is using the device's native mail client rather than Outlook. This happens automatically for iOS/iPadOS, Windows Phone, and Android Knox devices.
 
 - For on-premise Exchange, your Intune Exchange Connector must be properly configured. For more information, see [Troubleshooting the Exchange Connector in Microsoft Intune](troubleshoot-exchange-connector.md).
 
@@ -63,7 +63,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 - When a device is first enrolled, it might take some time for compliance information to be registered for a device. Wait a few minutes and try again.
 
-- For iOS devices, an existing email profile might block the deployment of an Intune admin-created email profile assigned to that user, making the device noncompliant. In this scenario, the Company Portal app will notify the user that they aren't compliant because of their manually configured email profile, and it prompts the user to remove that profile. Once the user removes the existing email profile, the Intune email profile can successfully deploy. To prevent this problem, instruct your users to remove any existing email profiles on their device before enrolling.
+- For iOS/iPadOS devices, an existing email profile might block the deployment of an Intune admin-created email profile assigned to that user, making the device noncompliant. In this scenario, the Company Portal app will notify the user that they aren't compliant because of their manually configured email profile, and it prompts the user to remove that profile. Once the user removes the existing email profile, the Intune email profile can successfully deploy. To prevent this problem, instruct your users to remove any existing email profiles on their device before enrolling.
 
 - A device might get stuck in a checking-compliance state, preventing the user from starting another check-in. If you have a device in this state:
   - Make sure the device is using the latest version of the Company Portal app.

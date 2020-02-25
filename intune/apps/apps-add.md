@@ -48,7 +48,7 @@ The following table lists the specific app types and how you can add them in the
 | --- | --- | --- |
 | Android store apps  | Store app  | Select **Android** as the **app type**, and enter the Google Play store URL for the app. |
 | Android Enterprise apps  | Store app  | Select **Android** as the **app type**, and enter the Managed Google Play store URL for the app. <sup>1</sup> |
-| iOS store apps  | Store app  | Select **iOS** as the **app type**, search for the app, and select the app in Intune. |
+| iOS/iPadOS store apps  | Store app  | Select **iOS** as the **app type**, search for the app, and select the app in Intune. |
 | Windows Phone 8.1 store apps  | Store app  | Select **Windows Phone 8.1** as the **app type**, and enter the Microsoft store URL for the app. |
 | Microsoft store apps  | Store app  | Select **Windows** as the **app type**, and enter the Microsoft store URL for the app. |
 | Managed Google Play apps | Store app  | Select **Managed Google Play** as the **app type**, search for the app, and select the app in Intune. |
@@ -57,10 +57,10 @@ The following table lists the specific app types and how you can add them in the
 | Microsoft Edge, version 77 and later for Windows 10 | Store app | Select **Windows 10** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Microsoft Edge, version 77 and later for macOS | Store app | Select **macOS** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Android line-of-business (LOB) apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**.  |
-| iOS LOB apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an iOS installation file with the extension **.ipa**.  |
+| iOS/iPadOS LOB apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an iOS/iPadOS installation file with the extension **.ipa**.  |
 | Windows Phone LOB apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter a Windows Phone installation file with the extension **.xap**.  |
 | Windows LOB apps | LOB app | Select **Line-of-business** app as the app type, select the **App package file**, and then enter a Windows installation file with the extension **.msi**, **.appx**, **.appxbundle**, **.msix**, and **.msixbundle**. |
-| Built-in iOS app  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
+| Built-in iOS/iPadOS app  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
 | Built-in Android app  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
 | Web apps  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | Android Enterprise system apps  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
@@ -73,7 +73,7 @@ The following table lists the specific app types and how you can add them in the
 You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **Add**. The **Select app type** pane is displayed and allows you to select the **App type**. 
 
 >[!TIP]
-> An LOB app is one that you add from an app installation file. For example, to install an iOS LOB app, you add the application by selecting **Line-of-business app** as the **App type** in the **Select app type** pane. You then select the app package file (extension .ipa). These types of apps are typically written in-house.
+> An LOB app is one that you add from an app installation file. For example, to install an iOS/iPadOS LOB app, you add the application by selecting **Line-of-business app** as the **App type** in the **Select app type** pane. You then select the app package file (extension .ipa). These types of apps are typically written in-house.
 
 ## Assess app requirements
 As an IT Admin, you determine not only which apps your group must use, but you also determine the capabilities needed for each group and subgroup. For each app, you determine the platforms needed, the groups of users that need the app, the configuration policies to apply for those groups, and the protection policies to apply.  
@@ -105,8 +105,8 @@ Use the [Intune deployment planning, design and implementation guide](../fundame
 ### Determine the type of app for your solution
 
 You can choose from the following app types:
-- **Apps from the store**: Apps that have been uploaded to either the Microsoft store, the iOS store, or the Android store are store apps. The provider of a store app maintains and provides updates to the app. You select the app in the store list and add it by using Intune as an available app for your users.
-- **Apps written in-house (line-of-business)**: Apps that are created in-house are line-of-business (LOB) apps. The functionality of this type of app has been created for one of the Intune supported platforms, such as Windows, iOS, macOS, or Android. Your organization creates and provides you with updates as a separate file. You provide updates of the app to users by adding and deploying the updates using Intune.
+- **Apps from the store**: Apps that have been uploaded to either the Microsoft store, the iOS/iPadOS store, or the Android store are store apps. The provider of a store app maintains and provides updates to the app. You select the app in the store list and add it by using Intune as an available app for your users.
+- **Apps written in-house (line-of-business)**: Apps that are created in-house are line-of-business (LOB) apps. The functionality of this type of app has been created for one of the Intune supported platforms, such as Windows, iOS/iPadOS, macOS, or Android. Your organization creates and provides you with updates as a separate file. You provide updates of the app to users by adding and deploying the updates using Intune.
 - **Apps on the web**: Web apps are client-server applications. The server provides the web app, which includes the UI, content, and functionality. Additionally, modern web hosting platforms commonly offer security, load balancing, and other benefits. This type of app is separately maintained on the web. You use Intune to point to this app type. You also assign which groups of users can access the app. Note that Android does not support web apps.
 
 As you're determining which apps your organization needs, consider how the apps integrate with cloud services, what data the apps access, whether the apps are available to BYOD users, and whether the apps require internet access.
@@ -124,7 +124,7 @@ Intune-managed apps can also enable app protection without requiring enrollment,
 
 ### Understanding licensed apps
 In addition to understanding web apps, store apps, and LOB apps, you should also be aware of the destination of volume-purchase-program apps and licensed apps, such as: 
-- **Apple Volume Purchasing Program for Business (iOS)**: The iOS App Store lets you purchase multiple licenses for an app that you want to run in your company. Purchasing multiple copies helps you to efficiently manage apps in your company. For more information, see [Manage iOS volume-purchased apps](vpp-apps-ios.md).
+- **Apple Volume Purchasing Program for Business (iOS)**: The iOS/iPadOS App Store lets you purchase multiple licenses for an app that you want to run in your company. Purchasing multiple copies helps you to efficiently manage apps in your company. For more information, see [Manage iOiOS/iPadOSS volume-purchased apps](vpp-apps-ios.md).
 - **Android work profile**: How you assign apps to Android work profile devices differs from how you assign them to standard Android devices. All apps you install for Android work profiles come from the Managed Google Play store. You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the Azure portal, and you can manage assignment of the app as you would any other app.
 - **Microsoft Store for Business (Windows 10)**: Microsoft Store for Business gives you a place to find and purchase apps for your organization, individually or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps in the Azure portal. For more information, see [Manage apps from Microsoft Store for Business](windows-store-for-business.md).
 
@@ -135,7 +135,7 @@ In addition to understanding web apps, store apps, and LOB apps, you should also
 Before you begin to add and assign apps, consider the following points:
 
 - When you add and assign an app from a store, your users must have an account with that store to be able to install the app.
-- Some apps or items that you assign might depend on built-in iOS apps. For example, if you assign a book in the iOS store, the iBooks app must be present on the device. If you have removed the iBooks built-in app, you cannot use Intune to reinstate it.
+- Some apps or items that you assign might depend on built-in iOS/iPadOS apps. For example, if you assign a book in the iOS/iPadOS store, the iBooks app must be present on the device. If you have removed the iBooks built-in app, you cannot use Intune to reinstate it.
 
 > [!IMPORTANT]
 > If you change the name of the app through the Intune azure portal after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
@@ -149,7 +149,7 @@ Requirements for cloud storage space are as follows:
 - The maximum file size for any file that you upload is 8 GB.
 
   > [!NOTE]
-  > Windows Line-of-business (LOB) apps, including Win32, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSI X, and Windows Universal MSI X bundle, have a maximum size limit of 8 GB per app. All other LOB apps, including iOS LOB apps, have a maximum size limit of 2 GB per app.
+  > Windows Line-of-business (LOB) apps, including Win32, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSI X, and Windows Universal MSI X bundle, have a maximum size limit of 8 GB per app. All other LOB apps, including iOS/iPadOS LOB apps, have a maximum size limit of 2 GB per app.
 
 ## Create and edit categories for apps
 

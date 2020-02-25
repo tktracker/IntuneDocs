@@ -77,29 +77,29 @@ landingContent:
           - text: Set up Intune enrollment of Android Enterprise fully managed devices (preview)
             url: android-fully-managed-enroll.md
   # Card
-  - title: iOS enrollment 
+  - title: iOS/iPadOS enrollment 
     linkLists:
       - linkListType: overview
         links:
-          - text: About iOS enrollment
+          - text: About iOS/iPadOS enrollment
             url: ios-enroll.md
       - linkListType: tutorial
         links:
-          - text: Use Apple's Corporate Device Enrollment features to enroll iOS devices
+          - text: Use Apple's Corporate Device Enrollment features to enroll iOS/iPadOS devices
             url: tutorial-use-device-enrollment-program-enroll-ios.md         
       - linkListType: how-to-guide
         links:
-          - text: Set up iOS enrollment
+          - text: Set up iOS/iPadOS enrollment
             url: ios-enroll.md
-          - text: Automatically enroll iOS devices with Apple's Device Enrollment Program
+          - text: Automatically enroll iOS/iPadOS devices with Apple's Device Enrollment Program
             url: device-enrollment-program-enroll-ios.md
-          - text: Set up iOS and iPadOS User Enrollment
+          - text: Set up iOS/iPadOS and iPadOS User Enrollment
             url: ios-user-enrollment.md
           - text: User Enrollment supported actions and options
             url: ios-user-enrollment-supported-actions.md
-          - text: Set up iOS device enrollment with Apple School Manager
+          - text: Set up iOS/iPadOS device enrollment with Apple School Manager
             url: apple-school-manager-set-up-ios.md
-          - text: Set up iOS device enrollment with Apple Configurator
+          - text: Set up iOS/iPadOS device enrollment with Apple Configurator
             url: apple-configurator-enroll-ios.md
   - title: macOS enrollment 
     linkLists:
@@ -109,7 +109,7 @@ landingContent:
             url: macos-enroll.md
       - linkListType: tutorial
         links:
-          - text: Use Apple's Corporate Device Enrollment features to enroll iOS devices
+          - text: Use Apple's Corporate Device Enrollment features to enroll iOS/iPadOS devices
             url: tutorial-use-device-enrollment-program-enroll-ios.md         
       - linkListType: how-to-guide
         links:
@@ -117,6 +117,6 @@ landingContent:
             url: macos-enroll.md
           - text: Automatically enroll macOS devices with the Device Enrollment Program or Apple School Manager
             url: device-enrollment-program-enroll-macos.md
-          - text: Set up iOS device enrollment with Apple Configurator
+          - text: Set up iOS/iPadOS device enrollment with Apple Configurator
             url: apple-configurator-enroll-ios.md
   

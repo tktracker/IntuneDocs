@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/10/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -14,7 +14,6 @@ ms.technology:
 ms.assetid:
 
 # optional metadata
-
 #ROBOTS:
 #audience:
 #ms.devlang:
@@ -35,6 +34,17 @@ S/MIME encryption is challenging because email is encrypted with a specific cert
 
 For more information about using S/MIME with Intune, [Use S/MIME to encrypt email](certificates-s-mime-encryption-sign.md).
 
+## Supported platforms
+
+Intune supports import of PFX certificates for the following platforms:
+
+- Android - Device Administrator
+- Android Enterprise - Fully Managed
+- Android Enterprise - Work profile
+- iOS
+- Mac
+- Windows 10
+
 ## Requirements
 
 To use imported PKCS certificates with Intune, you'll need the following infrastructure:
@@ -47,11 +57,13 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
   This connector can automatically update itself when new versions become available. To use the update capability, you must ensure firewalls are open that allow the connector to contact **autoupdate.msappproxy.net** on port **443**.
 
-  For more information about all the network endpoints that the connector accesses, see [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
+  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:
 
   You use a Windows Server to host the PFX Certificate Connector for Microsoft Intune.  The connector is used to process requests for certificates imported to Intune.
+  
+  The connector requires access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supports install of the *Microsoft Intune Certificate Connector* on the same server as the *PFX Certificate Connector for Microsoft Intune*.
 
