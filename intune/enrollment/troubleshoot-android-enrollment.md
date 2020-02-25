@@ -5,7 +5,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/04/2020
+ms.date: 02/25/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,7 +40,7 @@ To troubleshoot, follow these steps:
   1. Collect Company Portal logs.
   2. Note apps that appear in the work profile unexpectedly.
   3. Unenroll device from Intune and uninstall Company Portal.
-  4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app which allows creation of a work profile without an EMM for testing.
+  4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app, which allows creation of a work profile without an EMM for testing.
   5. Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
   6. Review apps that appear in the work profile. 
   7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
@@ -63,7 +63,7 @@ Not currently.
   To collect Company Portal logs, follow these steps:
 
   1. In the Company Portal app with the badge, tap **Menu** > **Help** > **Email Support**, and then tap **Send Email & Upload logs**. 
-  2. When you are prompted **Send help request with**, select one of the Email apps.
+  2. When you're prompted **Send help request with**, select one of the Email apps.
   3. An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
 
 ### Managed Google Play Last Sync time  hasn't been updated in days
@@ -76,7 +76,7 @@ It's supported with Configuration Manager 1702 and later versions for work profi
 No, encryption is required from Google for the work profile. 
 
 ### Samsung devices are blocking the use of third-party keyboards like SwiftKey
-Samsung began enforcing this on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
+Samsung began enforcing this restriction on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
 
 ## Remote actions
 
@@ -84,7 +84,11 @@ Samsung began enforcing this on Android 8.0+ devices. Microsoft is currently wor
 This is expected behavior. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
 
 ### Is device passcode reset supported?
-For work profile enrolled devices, you can only reset the work profile passcode on devices running Android 8.0+ when the work profile passcode is managed and the end-user has allowed you to reset it. For Dedicated devices (COSU), device passcode reset is supported.
+For work profile enrolled devices, you can only reset the work profile passcode on Android 8.0 or later devices when:
+- the work profile passcode is managed
+- the end user has allowed you to reset it.
+
+For Dedicated devices (COSU), device passcode reset is supported.
 
 
 ## Next steps
