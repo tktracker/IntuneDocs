@@ -202,6 +202,9 @@ If you want to completely remove an Apple DEP device from management by Intune, 
 
     ![Screenshot for Apple reassign](./media/devices-wipe/apple-reassign.png)
 
+## Device states
+For a description of device states, see the [managementStates collection](https://docs.microsoft.com/intune/developer/intune-data-warehouse-collections.md#managementstates).
+
 ## Fresh Start
 
 Applicable for Windows 10 devices. Read more about [Fresh Start](device-fresh-start.md).
