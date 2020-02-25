@@ -40,7 +40,7 @@ With Intune for Government you can manage Windows 10, iOS, and Android devices u
 - Protect government data by controlling the way users access and share it.
 - Ensure devices and apps follow security requirements.
 
-## Next steps
+### Next steps
 - For more information about Intune for US Government, see [Microsoft Intune for US Government GCC High and DoD service description](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 - Dive into the [technical requirements and capabilities](/intune/supported-devices-browsers) of Intune.
 - [See feature differences between Intune and Intune for US Government](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
