@@ -39,7 +39,7 @@ Using a device management provider, organization can make sure that only authori
 
 The answer is [Microsoft Intune](what-is-intune.md). Intune offers mobile device management (MDM) and mobile application management (MAM). Some key tasks of any MDM or MAM solution are to:
 
-- Support a diverse mobile environment and manage iOS, Android, Windows, and macOS devices securely.
+- Support a diverse mobile environment and manage iOS/iPadOS, Android, Windows, and macOS devices securely.
 - Make sure devices and apps are compliant with your organization's security requirements.
 - Create policies that help keep your organization data safe on organization-owned and personal devices.
 - Use a single, unified mobile solution to enforce these policies, and help manage devices, apps, users, and groups.
@@ -53,7 +53,7 @@ Many organizations, such as Microsoft, use Intune to secure proprietary data tha
 
 It's common for people to have multiple devices that use different platforms. For example, an employee might use Surface Pro for work, and an Android mobile device in their personal life. And, it's common for a person to access organizational resources, such as Microsoft Outlook and SharePoint, from these multiple devices.
 
-With Intune, you can manage multiple devices per person, and the different platforms that run on each device, including iOS, macOS, Android, and Windows. Intune separates policies and settings by device platform. So it's easy to manage and view devices of a specific platform.
+With Intune, you can manage multiple devices per person, and the different platforms that run on each device, including iOS/iPadOS, macOS, Android, and Windows. Intune separates policies and settings by device platform. So it's easy to manage and view devices of a specific platform.
 
 **[Common scenarios](common-scenarios.md)** is a great resource to see how Intune answers common questions when working with mobile devices. You'll find scenarios about:  
 
@@ -69,7 +69,7 @@ A key task of any device management solution is to provide security and protecti
 
 - **Microsoft 365** is a key component to simplifying common IT tasks. In the Microsoft 365 admin center, you create users, and manage groups. You also get access to other services, such as Intune, Azure AD, and more.
 
-  For example, create an iOS devices group in Microsoft 365. Then, use Intune to push policies to the iOS devices group that focus on iOS features, such as access to the app store, using AirDrop, backing up to iCloud, using Apple’s web filter, and more.
+  For example, create an iOS/iPadOS devices group in Microsoft 365. Then, use Intune to push policies to the iOS/iPadOS devices group that focus on iOS/iPadOS features, such as access to the app store, using AirDrop, backing up to iCloud, using Apple’s web filter, and more.
 
 - **Windows Defender** includes many security features to help protect Windows 10 devices. For example, using Intune and Windows Defender together, you can:
 
@@ -103,7 +103,7 @@ On the Device Management admin center, you can:
 - [Manage roles](role-based-access-control.md)  
 - Manage software updates
   - [Manage Windows 10 updates](../protect/windows-update-for-business-configure.md)  
-  - [Manage iOS updates](../protect/software-updates-ios.md)  
+  - [Manage iOS/iPadOS updates](../protect/software-updates-ios.md)  
 - [Azure active directory](https://docs.microsoft.com/azure/active-directory)  
 - [Manage users](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Manage groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)

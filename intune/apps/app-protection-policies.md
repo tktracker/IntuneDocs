@@ -69,7 +69,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     | Value/Option | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. For information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state) |
-    |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
+    |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
     | Public apps | Click **Select public apps** to choose the apps to target. |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
     
@@ -78,21 +78,21 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     This page provides settings for data loss prevention (DLP) controls, including cut, copy, paste, and save-as restrictions. These settings determine how users interact with data in the apps that this app protection policy applies.​
 
     **Data protection settings**:<br>
-    - **iOS/iPadOS data protection** - For information, see [iOS app protection policy settings - Data protection](~/apps/app-protection-policy-settings-ios.md#data-protection).
+    - **iOS/iPadOS data protection** - For information, see [iOS/iPadOS app protection policy settings - Data protection](~/apps/app-protection-policy-settings-ios.md#data-protection).
     - **Android data protection** - For information, see [Android app protection policy settings - Data protection](~/apps/app-protection-policy-settings-android.md#data-protection).
 
 7. Click **Next** to display the **Access requirements** page.<br>
     This page provides settings to allow you to configure the PIN and credential requirements that users must meet to access apps in a work context. 
  
     **Access requirements settings**:<br>
-    - **iOS/iPadOS access requirements** - For information, see [iOS app protection policy settings - Access requirements](~/apps/app-protection-policy-settings-ios.md#access-requirements).
+    - **iOS/iPadOS access requirements** - For information, see [iOS/iPadOS app protection policy settings - Access requirements](~/apps/app-protection-policy-settings-ios.md#access-requirements).
     - **Android access requirements** - For information, see [Android app protection policy settings - Access requirements](~/apps/app-protection-policy-settings-android.md#access-requirements).
 
 8. Click **Next** to display the **Conditional launch** page.<br>
     This page provides settings to set the sign-in security requirements for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. Then select the **Action** you want to take if users do not meet your requirements. In some cases, multiple actions can be configured for a single setting.
 
     **Conditional launch settings**:<br>
-    - **iOS/iPadOS conditional launch** - For information, see [iOS app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
+    - **iOS/iPadOS conditional launch** - For information, see [iOS/iPadOS app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
     - **Android conditional launch** - For information, see [Android app protection policy settings - Conditional launch](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 9. Click **Next** to display the **Assignments** page.<br>
@@ -107,7 +107,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
 End users can download the apps from the App store or Google Play. For more information, see:
 * [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
-* [What to expect when your iOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
 
 ## Change existing policies
 You can edit an existing policy and apply it to the targeted users. However, when you change existing policies, users who are already signed in to the apps won’t see the changes for an eight-hour period.
@@ -127,7 +127,7 @@ To see the effect of the changes immediately, the end user must sign out of the 
     | Value/Option | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. For information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state) |
-    |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
+    |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
     | Public apps | Click **Select public apps** to choose the apps to target. |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
@@ -170,7 +170,7 @@ To see the effect of the changes immediately, the end user must sign out of the 
 ## Target app protection policies based on device management state
 In many organizations, it’s common to allow end users to use both Intune Mobile Device Management (MDM) managed devices, such as corporate owned devices, and un-managed devices protected with only Intune app protection policies. Unmanaged devices are often known as Bring Your Own Devices (BYOD).
 
-Because Intune app protection policies target a user’s identity, the protection settings for a user can apply to both enrolled (MDM managed) and non-enrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS and Android devices. You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](android-deployment-scenarios-app-protection-work-profiles.md).
+Because Intune app protection policies target a user’s identity, the protection settings for a user can apply to both enrolled (MDM managed) and non-enrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS/iPadOS and Android devices. You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](android-deployment-scenarios-app-protection-work-profiles.md).
 
 To create these policies, browse to **Apps** > **App protection policies** in the Intune console, and then select **Create policy**. You can also edit an existing app protection policy. To have the app protection policy apply to both managed and un-managed devices, navigate to the **Apps** page and confirm that **Target to apps on all device types** is set to **Yes**, the default value. If you want to granularly assign based on management state, set **Target to apps on all device types**  to **No**. 
 
@@ -184,19 +184,19 @@ To create these policies, browse to **Apps** > **App protection policies** in th
 > [!NOTE]
 > Android devices will prompt to install the Intune Company Portal app regardless of which Device type is chosen. For example, if you select 'Android Enterprise' then users with unmanaged Android devices will still be prompted.
 
-For iOS, additional app configuration settings are required to target app protection policy (APP) settings to apps on Intune enrolled devices:
+For iOS/iPadOS, additional app configuration settings are required to target app protection policy (APP) settings to apps on Intune enrolled devices:
 
-- **IntuneMAMUPN** must be configured for all MDM managed applications. For more information, see [How to manage data transfer between iOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
-- **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md).
+- **IntuneMAMUPN** must be configured for all MDM managed applications. For more information, see [How to manage data transfer between iOS/iPadOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+- **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 - If only the **IntuneMAMDeviceID** is configured, the Intune APP will consider the device as unmanaged.
 
 > [!NOTE]
-> For specific iOS support information about app protection policies based on device management state, see [MAM protection policies targeted based on management state](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state).
+> For specific iOS/iPadOS support information about app protection policies based on device management state, see [MAM protection policies targeted based on management state](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state).
 
 ## Policy settings
-To see a full list of the policy settings for iOS and Android, select one of the following links:
+To see a full list of the policy settings for iOS/iPadOS and Android, select one of the following links:
 
-- [iOS policies](app-protection-policy-settings-ios.md)
+- [iOS/iPadOS policies](app-protection-policy-settings-ios.md)
 - [Android policies](app-protection-policy-settings-android.md)
 
 ## Next steps
@@ -204,4 +204,4 @@ To see a full list of the policy settings for iOS and Android, select one of the
 
 ## See also
 * [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
-* [What to expect when your iOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)

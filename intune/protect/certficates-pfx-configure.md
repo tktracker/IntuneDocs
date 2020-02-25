@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/20/2020
 ms.topic: conceptual 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,7 +68,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   The Microsoft Intune Certificate Connector also supports Federal Information Processing Standard (FIPS) mode. FIPS isn't required, but you can issue and revoke certificates when it's enabled.
 
 - **PFX Certificate Connector for Microsoft Intune**:  
-  If you plan to use S/MIME email encryption, use the Intune portal to download the *PFX Certificate Connector* that supports import of PFX certificates.  Go to **Device configuration** > **Certificate Connectors** > **Add**, and follow the *Steps to install connector for Imported PFX certificates*. Use the download link in the portal to start download of the installer **PfxCertificateConnectorBootstrapper.exe**. 
+  If you plan to use S/MIME email encryption, use the Intune portal to download the *PFX Certificate Connector* that supports import of PFX certificates.  Go to **Device configuration** > **Certificate Connectors** > **Add**, and follow the *Steps to install connector for Imported PFX certificates*. Use the download link in the portal to start download of the installer **PfxCertificateConnectorBootstrapper.exe**.
 
   Each Intune tenant supports a single instance of this connector. You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector.
 
@@ -78,13 +78,15 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   - Install the PFX Certificate Connector for Microsoft Intune on your server.  
   - To automatically receive important updates, ensure firewalls are open that allow the connector to contact **autoupdate.msappproxy.net** on port **443**.   
 
-  For more information about network endpoints that Intune and the connector access, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
+  For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:  
-  You use a Windows Server to host:
+  Use a Windows Server to host:
 
   - Microsoft Intune Certificate Connector - for authentication and S/MIME email signing scenarios
   - PFX Certificate Connector for Microsoft Intune - for S/MIME email encryption scenarios.
+
+  The connectors require access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supports install of the *PFX Certificate Connector* on the same server as the *Microsoft Intune Certificate Connector*.
   
@@ -126,7 +128,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
 
     > [!IMPORTANT]
-    > For iOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
+    > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
 
 10. In **Security**, add the Computer Account for the server where you install the Microsoft Intune Certificate Connector. Allow this account **Read** and **Enroll** permissions.
 11. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
@@ -293,17 +295,17 @@ Platforms:
 
 Updates for the two certificate connectors are released periodically. When we update a connector, you can read about the changes here.
 
-The *PFX Certificates Connector for Microsoft Intune* [supports automatic updates](#requirements), while the *Intune Certificate Connector* is updated manually.
+The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#requirements), while the *Intune Certificate Connector* is updated manually.
 
 ### May 17, 2019
 
-- **PFX Certificates Connector for Microsoft Intune - version 6.1905.0.404**  
+- **PFX Certificate Connector for Microsoft Intune - version 6.1905.0.404**  
   Changes in this release:  
   - Fixed an issue where existing PFX certificates continue to be reprocessed which causes the connector to stop processing new requests. 
 
 ### May 6, 2019
 
-- **PFX Certificates Connector for Microsoft Intune - version 6.1905.0.402**  
+- **PFX Certificate Connector for Microsoft Intune - version 6.1905.0.402**  
   Changes in this release:  
   - The polling interval for the connector is reduced from 5 minutes to 30 seconds.
  
@@ -315,7 +317,7 @@ The *PFX Certificates Connector for Microsoft Intune* [supports automatic update
   - Includes reliability fixes to certificate revocation.  
   - Includes performance fixes to increase how quickly PKCS certificate requests are processed.  
 
-- **PFX Certificates Connector for Microsoft Intune - version 6.1904.0.401**
+- **PFX Certificate Connector for Microsoft Intune - version 6.1904.0.401**
   > [!NOTE]  
   > Automatic update for this version of the PFX connector is not available until April 11th, 2019.  
 

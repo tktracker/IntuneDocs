@@ -44,4 +44,4 @@ Use this information to understand how and where your users get the apps that yo
 ## See also
 
 [How your Android users get their apps](end-user-apps-android.md)
-[How your iOS users get their apps](end-user-apps-android.md)
+[How your iOS/iPadOS users get their apps](end-user-apps-android.md)

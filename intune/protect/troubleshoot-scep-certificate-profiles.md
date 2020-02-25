@@ -127,9 +127,9 @@ You can also [Upload and email logs](/intune-user-help/send-logs-to-your-it-admi
 
 ### Logs for iOS and iPadOS devices
 
-For devices that run iOS or iPadOS, you use debug logs and **Xcode** that runs on a Mac computer:
+For devices that run iOS/iPadOS, you use debug logs and **Xcode** that runs on a Mac computer:
 
-1. Connect the iOS device to Mac, and then go to **Applications** > **Utilities** to open the Console app. 
+1. Connect the iOS/iPadOS device to Mac, and then go to **Applications** > **Utilities** to open the Console app. 
 
 2. Under **Action**, select **Include Info Messages** and **Include Debug Messages**.
 

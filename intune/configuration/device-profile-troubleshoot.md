@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,11 +40,11 @@ To mitigate this issue, set up guest Wi-Fi. If the corporate Wi-Fi fails, users 
 
 Some additional recommendations:  
 
-- If the Wi-Fi network you're connecting to uses a password or passphrase, make sure you can connect to the Wi-Fi router directly. You can test with an iOS device.
+- If the Wi-Fi network you're connecting to uses a password or passphrase, make sure you can connect to the Wi-Fi router directly. You can test with an iOS/iPadOS device.
 - After you successfully connect to the Wi-Fi endpoint (Wi-Fi router), note the SSID and the credential used (this value is the password or passphrase).
 - Enter the SSID and credential (password or passphrase) in the Pre-Shared Key field. 
 - Deploy to a test group that has limited number of users, preferably only the IT team. 
-- Sync your iOS device to Intune. Enroll if you haven’t already enrolled. 
+- Sync your iOS/iPadOS device to Intune. Enroll if you haven’t already enrolled. 
 - Test connecting to the same Wi-Fi endpoint (as mentioned in the first step) again.
 - Roll out to larger groups and eventually to all expected users in your organization. 
 
@@ -58,7 +58,7 @@ If a device doesn't check in to get the policy or profile after the first notifi
 
 | Platform | Refresh cycle|
 | --- | --- |
-| iOS | About every 8 hours |
+| iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
 | Android | About every 8 hours |
 | Windows 10 PCs enrolled as devices | About every 8 hours |
@@ -69,7 +69,7 @@ If the device recently enrolled, the compliance, non-compliance, and configurati
 
 | Platform | Frequency |
 | --- | --- |
-| iOS | Every 15 minutes for 1 hour, and then around every 8 hours |  
+| iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |  
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours | 
 | Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows 10 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
@@ -106,7 +106,7 @@ Conflicts happen when two profile settings are the same. For example, you config
 
 A policy is deployed to the app and takes effect. A second policy is deployed. In this scenario, the first policy takes precedence, and stays applied. The second policy shows a conflict. If both are applied at the same time, meaning that there isn't preceding policy, then both are in conflict. Any conflicting settings are set to the most restrictive values.
 
-## What happens when iOS custom policies conflict?
+## What happens when iOS/iPadOS custom policies conflict?
 
 Intune doesn't evaluate the payload of Apple Configuration files or a custom Open Mobile Alliance Uniform Resource Identifier (OMA-URI) policy. It merely serves as the delivery mechanism.
 
@@ -148,7 +148,7 @@ When you delete a profile, or you remove a device from a group that has the prof
     - Allow NFC
     - Allow Wi-Fi
 
-  - **iOS**: All settings are removed, except:
+  - **iOS/iPadOS**: All settings are removed, except:
   
     - Allow voice roaming
     - Allow data roaming
@@ -160,7 +160,7 @@ Once set, Windows Phone devices don't allow security policies set using MDM or E
 
 To change the profile to a less secure value, then reset security policies. For example, in Windows 8.1, on the desktop, swipe in from right > select **Settings** > **Control Panel**. Select the **User Accounts** applet. In the left-hand navigation menu, there's a **Reset Security Policies** link (toward the bottom). Select it, and then choose **Reset Policies**.
 
-Other MDM devices, such as Android, Windows Phone 8.1 and later, iOS, and Windows 10 may need to be retired, and re-enrolled in to Intune to apply a less restrictive profile.
+Other MDM devices, such as Android, Windows Phone 8.1 and later, iOS/iPadOS, and Windows 10 may need to be retired, and re-enrolled in to Intune to apply a less restrictive profile.
 
 ## Some settings in a Windows 10 profile return "Not Applicable"
 

@@ -40,7 +40,7 @@ Collect the following information about the problem:
 - What is the exact error message?
 - Where do you see the error message?
 - When did the problem start? Has enrollment ever worked? 
-- What platform (Android, iOS, Windows) has the problem?
+- What platform (Android, iOS/iPadOS, Windows) has the problem?
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
 - What is the MDM authority?
@@ -373,6 +373,20 @@ This issue is usually caused by incorrectly delegating permissions to the organi
 9. Select **Next**.
 10. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
 11. Select **Next** > **Finish**.
+
+### The Enrollment Status Page times out before the sign-in screen
+
+**Cause:** This issue can arise if all the following conditions are true:
+- You’re using the Enrollment Status Page to track Microsoft Store for Business apps.
+- You have an Azure AD Conditional Access policy that uses the require a device to marked as compliant control.
+- The policy applies to All Cloud apps and Windows.
+
+#### Resolution:
+Try either of the following:
+- Target your Intune compliance policies to devices. Make sure that compliance can be determined before the user logs on.
+- Use offline licensing for store apps. This way, the Windows client doesn’t have to check with the Microsoft Store before determining device compliance.
+
+
 
 ## Next steps
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create iOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
-description: Add or create an iOS or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-in, and web content filter settings in Microsoft Intune.
+title: Create iOS/iPadOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
+description: Add or create an iOS, iPadOS, or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-in, and web content filter settings in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,9 +27,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add iOS or macOS device feature settings in Intune
+# Add iOS, iPadOS, or macOS device feature settings in Intune
 
-Intune includes many features and settings that help administrators control iOS and macOS devices. For example, administrators can:
+Intune includes many features and settings that help administrators control iOS, iPadOS, and macOS devices. For example, administrators can:
 
 - Allow users access to AirPrint printers in your network
 - Add apps and folders to the home screen, including adding new pages
@@ -38,15 +38,15 @@ Intune includes many features and settings that help administrators control iOS 
 - Give users a secure single sign-on experience to share credentials between apps
 - Filter web sites that use adult language and allow or block specific web sites
 
-Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you then push or deploy the profile to iOS and macOS devices in your organization.
+Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you then push or deploy the profile to iOS/iPadOS and macOS devices in your organization.
 
-This article describes the different features you can configure, and shows you how to create a device configuration profile. You can also see all the available settings for [iOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
+This article describes the different features you can configure, and shows you how to create a device configuration profile. You can also see all the available settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
 
 ## Airprint
 
 Airprint is an Apple feature that allows devices to print to files over a wireless network. In Intune, you can add AirPrint information to devices.
 
-For a list of the settings you can configure in Intune, see [AirPrint on iOS](ios-device-features-settings.md#airprint) and [AirPrint on macOS](macos-device-features-settings.md#airprint).
+For a list of the settings you can configure in Intune, see [AirPrint on iOS/iPadOS](ios-device-features-settings.md#airprint) and [AirPrint on macOS](macos-device-features-settings.md#airprint).
 
 For more information on AirPrint, see [About AirPrint](https://support.apple.com/HT201311) on Apple's web site.
 
@@ -58,9 +58,9 @@ Applies to:
 
 ## App notifications
 
-Choose how apps on your iOS and iPad devices receive notifications. For example, from Intune, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
+Choose how apps on your iOS and iPadOS devices receive notifications. For example, from Intune, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
 
-For a list of the settings you can configure in Intune, see [App notifications on iOS](ios-device-features-settings.md#app-notifications).
+For a list of the settings you can configure in Intune, see [App notifications on iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
 For more information on this feature, see [Notifications](https://developer.apple.com/notifications/) on Apple's web site.
 
@@ -93,7 +93,7 @@ These settings configure the app layout and folders on the dock and home screens
 - Use the **Dock** settings to add apps or folders to the screen. For example, show Safari and the Mail app on the device dock.
 - Add **Pages** you want shown on the home screen, and the apps you want shown on each page. For example, add a **Contoso** page, and add the Settings app on this page.
 
-For a list of the settings you can configure in Intune, see [Home screen layout on iOS](ios-device-features-settings.md#home-screen-layout).
+For a list of the settings you can configure in Intune, see [Home screen layout on iOS/iPadOS](ios-device-features-settings.md#home-screen-layout).
 
 Applies to:
 
@@ -104,7 +104,7 @@ Applies to:
 
 Use these settings to show a custom message or text on the sign in window and lock screen. For example, you can enter an "If lost, return to ..." message, and show asset tag information.
 
-For a list of the settings you can configure in Intune, see [Lock screen message settings on iOS](ios-device-features-settings.md#lock-screen-message).
+For a list of the settings you can configure in Intune, see [Lock screen message settings on iOS/iPadOS](ios-device-features-settings.md#lock-screen-message).
 
 For more information on Lock Screen Message, see [LockScreenMessage](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) on Apple's web site.
 
@@ -140,11 +140,11 @@ Most Line of Business (LOB) apps require some level of user authentication to su
 To use single sign-on, be sure you have:
 
 - An app that's coded to look for the user credential store in single sign-on on the device.
-- Intune configured for iOS device single sign-on.
+- Intune configured for iOS/iPadOS device single sign-on.
 
 ![Single Sign On pane](./media/device-features-configure/sso-blade.png)
 
-For a list of the settings you can configure in Intune, see [Single sign-on on iOS](ios-device-features-settings.md#single-sign-on).
+For a list of the settings you can configure in Intune, see [Single sign-on on iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
 Applies to:
 
@@ -160,7 +160,7 @@ In Intune, use these settings to configure an SSO ap extension created by your o
 - The redirect-type is designed for modern authentication protocols like OAuth and SAML2.
 - The credential-type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple and a generic credential extension.
 
-For a list of the settings you can configure in Intune, see [iOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
+For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
 
 For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple’s web site. To read Apple’s description of the feature, visit [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
@@ -175,7 +175,7 @@ For more information on developing an SSO app extension, watch [Extensible Enter
 >
 > - From a development perspective, with **Single sign-on app extension**, you can use any type of redirect SSO or credential SSO authentication. With **Single sign-on**, you can only use Kerberos SSO authentication.
 >
-> - The Kerberos **Single sign-on app extension** was developed by Apple and is built into the iOS 13.0+ and macOS 10.15+ platforms. The built-in Kerberos extension can be used to log users into native apps and websites that support Kerberos authentication. **Single sign-on** is not an Apple implementation of Kerberos.
+> - The Kerberos **Single sign-on app extension** was developed by Apple and is built into the iOS/iPadOS 13.0+ and macOS 10.15+ platforms. The built-in Kerberos extension can be used to log users into native apps and websites that support Kerberos authentication. **Single sign-on** is not an Apple implementation of Kerberos.
 >
 > - The built-in Kerberos **Single sign-on app extension** handles Kerberos challenges for web pages and apps just like **Single sign-on**. However, the built-in Kerberos extension supports password changes and behaves better in enterprise networks. When deciding between the Kerberos **Single sign-on app extension** and **Single sign-on**, we recommend using the extension due to improved performance and capabilities.
 
@@ -187,9 +187,9 @@ Applies to:
 
 ## Wallpaper
 
-Add a custom .png, .jpg, or .jpeg image to your supervised iOS devices. For example, use Intune to add a company logo to the lock screen on your devices.
+Add a custom .png, .jpg, or .jpeg image to your supervised iOS/iPadOS devices. For example, use Intune to add a company logo to the lock screen on your devices.
 
-For a list of the settings you can configure in Intune, see [Wallpaper on iOS](ios-device-features-settings.md#wallpaper).
+For a list of the settings you can configure in Intune, see [Wallpaper on iOS/iPadOS](ios-device-features-settings.md#wallpaper).
 
 Applies to:
 
@@ -200,7 +200,7 @@ Applies to:
 
 These settings can use Apple’s built-in AutoFilter algorithm to evaluate web pages, and block adult content and adult language. You can also create a list of allowed web links and restricted web links. For example, you can allow only `contoso` web sites to open.
 
-For a list of the settings you can configure in Intune, see [Web content filter on iOS](ios-device-features-settings.md#web-content-filter).
+For a list of the settings you can configure in Intune, see [Web content filter on iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 
 Applies to:
 
@@ -233,4 +233,4 @@ The profile is created and shown in the profiles list. Be sure to [assign the pr
 
 After the profile is created, it's ready to be assigned. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-View all the device feature settings for [iOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
+View all the device feature settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.

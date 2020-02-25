@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Intune settings for the iOS Classroom app 
+title: Intune settings for the iOS/iPadOS Classroom app 
 titleSuffix: Microsoft Intune
-description: Learn the Intune settings you can use to control settings for the Classroom app on iOS devices.
+description: Learn the Intune settings you can use to control settings for the Classroom app on iOS/iPadOS devices.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -29,10 +29,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# How to configure Intune settings for the iOS Classroom app
+# How to configure Intune settings for the iOS/iPadOS Classroom app
 
 > [!NOTE]
-> Intune doesn't currently support configuring the Classroom app. This article is only applicable for users with existing iOS education profiles in Intune.  
+> Intune doesn't currently support configuring the Classroom app. This article is only applicable for users with existing iOS/iPadOS education profiles in Intune.  
 
 ## Introduction
 [Classroom](https://itunes.apple.com/app/id1085319084) is an app that helps teachers to guide learning, and control student devices in the classroom. For example, the app enables teachers to:
@@ -43,7 +43,7 @@ ms.collection: M365-identity-device-management
 - Navigate students iPads to a bookmark, or chapter in a book
 - Display the screen from a student iPad on an Apple TV
 
-To set up Classroom on your device, you will need to create and configure an Intune iOS education device profile.
+To set up Classroom on your device, you will need to create and configure an Intune iOS/iPadOS education device profile.
 
 ## Before you start
 
@@ -51,9 +51,9 @@ Consider the following before you begin to configure these settings:
 
 - Both teachers and student iPads must be enrolled in Intune.
 - Ensure that you have installed the [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) app on the teacher’s device. You can either install the app manually, or use [Intune app management](../apps/app-management.md).
-- You must configure certificates to authenticate connections between teacher and student devices (see Step 2, Create and assign an iOS Education profile in Intune).
+- You must configure certificates to authenticate connections between teacher and student devices (see Step 2, Create and assign an iOS/iPadOS Education profile in Intune).
 - Teacher and student iPads must be on the same Wi-Fi network, and also have Bluetooth enabled.
-- The Classroom app runs on supervised iPads running iOS 9.3 or later.
+- The Classroom app runs on supervised iPads running iOS/iPadOS 9.3 or later.
 - In this release, Intune supports managing a 1:1 scenario where each student has their own dedicated iPad.
 
 
@@ -76,7 +76,7 @@ You can import information into SDS by using one of the following methods:
 - [Find out more about Microsoft School Data Sync](https://sds.microsoft.com/)
 - [Find out more about licensing in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
-## Step 2 - Create and assign an iOS Education profile in Intune
+## Step 2 - Create and assign an iOS/iPadOS Education profile in Intune
 
 ### Configure general settings
 
@@ -84,7 +84,7 @@ You can import information into SDS by using one of the following methods:
 3. On the **Intune** pane, choose **Device configuration**.
 2. On the **Device configuration** pane under the **Manage** section, choose **Profiles**.
 5. On the profiles pane, choose **Create profile**.
-6. On the **Create profile** pane, enter a **Name** and **Description** for the iOS education profile.
+6. On the **Create profile** pane, enter a **Name** and **Description** for the iOS/iPadOS education profile.
 7. From the **Platform** drop-down list, choose **iOS**.
 8. From the **Profile type** drop-down list, choose **Education**.
 9. Choose **Settings** > **Configure**.

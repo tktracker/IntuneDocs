@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,9 +41,9 @@ The Microsoft Intune company portal is where users access company data and can d
 > [!Tip]
 > When you customize the Company Portal, the configurations apply to both the Company Portal website and Company Portal apps. Note that users must have an Intune license assigned to access the Company Portal website.
 
-By customizing the Company Portal, you will help provide a familiar and helpful experience for your end users. To do this, in the Intune portal, select **Apps** > **Branding and customization**, and then configure the required settings.
+By customizing the Company Portal, you will help provide a familiar and helpful experience for your end users. To do this, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant Administration** > **Branding and customization**, and then configure the required settings.
 
-When a user is installing an iOS application from the Company Portal they will receive a prompt. This occurs when the iOS app is linked to the app store, linked to a volume-purchase program (VPP), or linked to a line-of-business (LOB) app. The prompt allows the users to accept the action or allow management of the app. The prompt will display your company name, or when your company name is unavailable, **Company Portal** will be displayed. 
+When a user is installing an iOS/iPadOS application from the Company Portal they will receive a prompt. This occurs when the iOS/iPadOS app is linked to the app store, linked to a volume-purchase program (VPP), or linked to a line-of-business (LOB) app. The prompt allows the users to accept the action or allow management of the app. The prompt will display your company name, or when your company name is unavailable, **Company Portal** will be displayed. 
 
 > [!Note]
 > If you are using Azure Government, app logs are offered to the end user to decide how they will share when they initiate the process to get help with an issue. However, if you are not using Azure Government, the Company Portal for Windows 10 will send app logs directly to Microsoft when the user initiates the process to get help with an issue. Sending the app logs to Microsoft will make it easier to troubleshoot and resolve issues. 
@@ -96,11 +96,11 @@ Choose a logo that will look best on white or light backgrounds.
 
 ### Brand image for Company Portal
 
-Display a brand image that reflects your company brand. After you save your changes, you can choose **Preview your settings** in the Intune Web Portal at the top of the pane to see how your configurations will look. Note that you will only be able to preview brand image on an iOS device and not the Intune Web Portal. 
+Display a brand image that reflects your company brand. After you save your changes, you can choose **Preview your settings** in the Intune Web Portal at the top of the pane to see how your configurations will look. Note that you will only be able to preview brand image on an iOS/iPadOS device and not the Intune Web Portal. 
 
 |Field name|More information|
 |---|---|
-|**Upload your brand image**| This option allows you to display a brand image. On the iOS Company Portal, it shows as a background image on the user's profile page.<p><ul><li>Recommended image width: Greater than 1125px (required to be at least 650 px)</li><li>Max image size: 1.3 MB</li><li>File type: PNG, JPG, or JPEG</li></ul>|
+|**Upload your brand image**| This option allows you to display a brand image. On the iOS/iPadOS Company Portal, it shows as a background image on the user's profile page.<p><ul><li>Recommended image width: Greater than 1125px (required to be at least 650 px)</li><li>Max image size: 1.3 MB</li><li>File type: PNG, JPG, or JPEG</li></ul>|
 
 The right brand image can enhance the user’s trust in Company Portal by presenting a strong sense of your company’s brand. Here are some tips you may want to consider for acquiring, choosing, and optimizing the image for Company Portal. 
 
@@ -112,7 +112,7 @@ The right brand image can enhance the user’s trust in Company Portal by presen
 
 - Remove unnecessary metadata. Image file can come with metadata such as camera profile, geo location, title, caption, and so on. Use an image optimization tool to strip out this information to maintain quality while meeting file size limit. 
 
-After a brand image is added or changed in Intune, the end user may not see the change on iOS devices until the Company Portal has recognized the change on start up, and then has been restarted to display the brand image. 
+After a brand image is added or changed in Intune, the end user may not see the change on iOS/iPadOS devices until the Company Portal has recognized the change on start up, and then has been restarted to display the brand image. 
 
 ### Brand image examples
 
@@ -126,20 +126,20 @@ The following image shows an example iPhone branding image:
 
 ## Privacy statement customization
 
-You can customize the privacy statement that appears for your organization on managed iOS devices. This message lists the items that your organization can't see or do on managed iOS devices.
+You can customize the privacy statement that appears for your organization on managed iOS/iPadOS devices. This message lists the items that your organization can't see or do on managed iOS/iPadOS devices.
 
 Under **Company Portal customization** > **Device management and privacy message**, you can:
 
 - Accept the **Default** to use the list as shown, or
-- Choose **Custom** to customize the the list of items that your organization can’t see or do on managed iOS devices. You can use [markdown](https://daringfireball.net/projects/markdown/) to add bullets, bolding, italics, and links.
+- Choose **Custom** to customize the the list of items that your organization can’t see or do on managed iOS/iPadOS devices. You can use [markdown](https://daringfireball.net/projects/markdown/) to add bullets, bolding, italics, and links.
 
 ## Company Portal derived credentials for iOS devices
-Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
+Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
 
 > [!NOTE]
 > The user will see instructions about derived credentials based on the link that you have specified via Intune.
 
-For more information about derived credentials for iOS devices, see [Use derived credentials in Microsoft Intune](~/protect/derived-credentials.md).
+For more information about derived credentials for iOS/iPadOS devices, see [Use derived credentials in Microsoft Intune](~/protect/derived-credentials.md).
 
 ## Dark Mode for iOS Company Portal
 
@@ -181,7 +181,7 @@ Users can perform actions on their local or remote devices via the Company Porta
 - **Rename** – This action changes the device name that the user can see in the Company Portal. It does not change the local device name, only the listing in the Company Portal.
 - **Sync** – This action initiates a device check-in with the Intune service. This shows as **Check Status** in the Company Portal.
 - **Remote Lock** – This locks the device, requiring a PIN to unlock it.
-- **Reset Passcode** – This action is used to reset device passcode. On iOS devices the passcode will be removed and the end user will be required to enter a new code in settings. On supported Android devices, a new passcode is generated by Intune and temporarily displayed in the Company Portal.
+- **Reset Passcode** – This action is used to reset device passcode. On iOS/iPadOS devices the passcode will be removed and the end user will be required to enter a new code in settings. On supported Android devices, a new passcode is generated by Intune and temporarily displayed in the Company Portal.
 - **Key Recovery** – This action is used to recover a personal recovery key for encrypted macOS devices from the Company Portal website. 
 
 ### Self Service Actions

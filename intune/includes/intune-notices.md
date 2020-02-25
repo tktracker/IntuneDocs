@@ -11,6 +11,32 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Microsoft Intune support for Windows 10 Mobile ending<!--3544938-->
+Microsoft mainstream support for Windows 10 Mobile ended in December, 2019. As mentioned in this support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune will now end support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on May 11, 2020.
+
+#### How does this affect me?
+If you have Windows 10 Mobile devices deployed in your organization, between now and May 11, 2020 you can enroll new devices, add or remove policies and apps, or update any management settings. After May 11, we will stop new enrollments, and eventually remove Windows 10 Mobile management from the Intune UI. Devices will no longer check into the Intune service and we will delete device and policy data.  
+
+#### What do I need to do to prepare for this change?
+You can check your Intune reporting to see what devices or users may be affected. Go to **Devices** > **All devices** and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows 10 Mobile. Request that your end users upgrade their devices or discontinue using the devices for corporate access.
+
+
+
+### Plan for Change: Change in experience when enrolling Android Enterprise dedicated devices in Intune<!--6114580-->
+We shared in the November release we were adding support for SCEP certificate deployment to Android Enterprise dedicated devices, to enable certificate-based access to Wi-Fi profiles. This change involved some minor enrollment flow changes for Android Enterprise dedicated devices. With the upcoming March service update or 2003, there are some further changes that we’d like you to be aware of.
+
+#### How does this affect me?
+If you manage Android Enterprise dedicated devices in your environment, you will start to see some changes roll out in March.
+- For existing Android dedicated devices enrolled prior to the November 22, 2019 or the 1911 service update: These devices have the Microsoft Intune app installed on them. After backend changes roll out in the Intune service in March, SCEP certificates deployed to devices and associated with Wi-Fi profiles will start to apply.
+- For devices that were enrolled after November 22, 2019 and before this change rolls out in March: These devices have the Microsoft Intune app installed on them. SCEP certificates deployed to devices and associated with Wi-Fi profiles will continue to apply.
+- For new Android Enterprise dedicated device enrollments after the change rolls out in March: End users will see a different set of steps on devices during enrollment. Enrollment will still start the way it does today (with QR, NFC, Zero-touch, or device identifier) but there will be no mandatory app install step. Instead, the Microsoft Intune app will automatically install on devices. Additionally, end users will not need to tap “Enable Intune Agent” during the flow. SCEP Certificates associated with WiFi profiles can be deployed to these devices.
+
+#### What can I do to prepare for this change?
+You can update your end user guidance and let your helpdesk know of this change. We’ll update our What’s New page and notify you through the Message center when this change starts to roll out.
+
+#### Additional information
+[Support for SCEP certificates in Android Enterprise dedicated devices](https://aka.ms/Dedicated_devices_enrollment)
+
 ### Updated support statement for 'Adobe Acrobat Reader for Intune' mobile app<!--5746776-->
 We shared in MC188653 at the end of August, that the Adobe Acrobat Reader for Intune mobile app was reaching end-of-life on December 1, 2019 and that Adobe was planning on supporting Intune’s app protection policies within their main Acrobat Reader app. Since then, we received customer feedback that we needed to provide more time to continue allowing IT admins to target, and end users to begin using Adobe Acrobat Reader for Intune. Given the high usage of Adobe Acrobat Reader for Intune on end user devices and its importance in enterprise scenarios, we want to make sure any experience meets your organization's app protection needs. 
 
@@ -24,16 +50,6 @@ Let your end users and helpdesk know of this change. You can use the [Company Po
 
 #### Additional Information
 https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
-
-
-### End Support for Windows Phone 8.1<!--3544909-->
-Microsoft mainstream support for Windows Phone 8.1 ended in July 2017, and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Microsoft Intune will now end support on February 20, 2020 for Windows Phone 8.1.
-
-#### How does this affect me?
-After February 20, 2020 these devices  won't receive any security updates, and you  won't be able to enroll any new devices. Existing Windows Phone 8.1 devices will stay enrolled (policy, apps, reporting) but note any troubleshooting of an existing enrollment  won't be supported after this date, as many components, such as third-party certificates, have already ended support for the platform. Intune will stop compatibility testing with Intune and Windows Phone 8.1.
-
-#### What do I need to do to prepare for this change?
-You can check your Intune reporting to see what devices or users may be affected. Go to Devices > All devices and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows Phone 8.1. Request that your end users upgrade their devices to a supported OS version.
 
 
 ### Take Action: Use Microsoft Edge for your Protected Intune Browser Experience<!--5728447-->
@@ -63,7 +79,7 @@ Legacy PC management is going out of support on October 15, 2020. Upgrade device
 
 [Learn more](https://go.microsoft.com/fwlink/?linkid=2107122)
 
-### Decreasing support for Android device administrator 
+### Decreasing support for Android device administrator<!--5857738-->
 Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is now available with [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (released with Android 5.0). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
 
 #### How does this affect me?
@@ -106,23 +122,5 @@ Below find a list of common devices enrolled in Intune that run Android version 
 
 #### What do I need to do to prepare for this change?
 Wrap your apps with the latest Intune App SDK. You may also set the "Require minimum OS version (Warning only)" conditional launch setting to notify end users on personal devices to upgrade.
-
-### Intune plan for change: Nearing end of support for Windows 7<!-- 3042987 -->
-As we messaged in MC148476, posted last September 2018, and again in MC176794 back in March 2019, Windows 7 reaches its end of extended support on January 14, 2020. At that time, Intune will retire support for devices running Windows 7 so we can focus our investment on supporting newer technologies and providing great new end-user experiences. After that date, technical assistance and automatic updates that help protect your Windows 7 PC will no longer be available through Intune. Microsoft strongly recommends that you move to Windows 10 before January 2020 to avoid a scenario where you need service or support that is no longer available. Read more about the Windows support lifecycle [here](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
-
-#### How does this affect me?
-You are receiving this message because you are currently managing Windows 7 PCs using the legacy Intune PC software agent. Because less than a year remains before the end of Windows 7 extended support, we strongly encourage your organization to begin upgrading to Windows 10 as soon as possible.  
-
-PC management capabilities are built directly into the Windows 10 operating system, and you no longer need to install a client agent such as the Intune software client for Windows 7. Starting with Windows 8.1, Microsoft uses the Mobile Device Management (MDM) architecture to provision, configure, update, and manage Windows PCs. When you have set up Intune, you can simplify Windows enrollment by [enrolling Windows 10 PCs into Intune](..\windows-enroll.md) through the MDM channel. We recommend that you use this "agentless" MDM management solution to manage your Windows 10 PCs.
-
-#### What do I need to do to prepare for this change?
-We encourage your organization to immediately consider this action plan:
-
-- Plan and upgrade the Windows 7 fleet to Windows 10 before January 14, 2020.
-- Explore [Windows 10 deployment support](https://docs.microsoft.com/windows/deployment/) to learn more about how to upgrade your existing fleet of Windows 7 PCs to Windows 10.
-- Review the [Desktop App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) offer through FastTrack, which will assist with the Microsoft application compatibility promise.
-- Transition existing legacy Intune software client-managed devices to the Microsoft-recommended solution to manage Windows 10 using MDM management. Enroll all new Windows 10 PCs using MDM management for Intune in the Azure portal.
-
-For more information, see the [blog post here](https://aka.ms/Windows7_Intune).
 
 

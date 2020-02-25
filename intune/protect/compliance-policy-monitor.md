@@ -80,7 +80,7 @@ Descriptions of the different device compliance policy states:
   - Devices that aren't assigned a compliance policy and don't have a trigger to check for compliance
   - Devices that haven't checked in since the compliance policy was last updated
   - Devices not associated to a specific user, such as:
-    - iOS devices purchased through Apple's Device Enrollment Program (DEP) that don't have user affinity
+    - iOS/iPadOS devices purchased through Apple's Device Enrollment Program (DEP) that don't have user affinity
     - Android kiosk or Android Enterprise dedicated devices
   - Devices enrolled with a device enrollment manager (DEM) account
 

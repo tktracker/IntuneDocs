@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -21,7 +21,7 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 #ROBOTS: 
 #audience:
 #ms.devlang:
-ms.reviewer: elocholi
+ms.reviewer: jinyoon
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -96,19 +96,17 @@ To connect Intune with Jamf Pro:
 
 6. Select **API permissions** under **Manage**. 
 
-7. On the API permissions page, select **Add a permission** to add a new permission. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select only the check box for **update_device_attributes**.
+7. On the API permissions page, remove all permissions from this app by selecting the **...** icon next to each existing permission. Note that this is required; the integration will not succeed if there are any unexpected extra permissions in this app registration.
 
-8. Wait a few minutes so that the new permission can take effect. Then, select **Grant admin consent for _\<your tenant>_**. Authenticate your account in the new window and grant the application access by following the prompts.  
+8. Next, we will add permissions to update device attributes. At the top left of the **API permissions** page, select **Add a permission** to add a new permission. 
 
-9. You may need to wait another few minutes so that the admin consent can take effect.
+9. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select only the check box for **update_device_attributes** and save the new permission.
 
-10. Refresh the page by click on the **Refresh** button at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission. 
+10. Next, grant admin consent for this app by selecting **Grant admin consent for _\<your tenant>_** in the top left of the **API permissions** page. You may need to re-authenticate your account in the new window and grant the application access by following the prompts.  
 
-11. Remove admin consent from the **User.Read** permission by selecting the **...** menu and selecting **Revoke admin consent**.
+11. Refresh the page by click on the **Refresh** button at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission. 
 
-12. You will also need to remove the **User.Read** permission. Select the **...** menu by **User.Read** and select **Remove permission**. 
-
-8. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes** and should appear as follows:
+12. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes** and should appear as follows:
 
    ![Successful permissions](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 

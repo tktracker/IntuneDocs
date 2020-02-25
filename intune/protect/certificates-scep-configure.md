@@ -151,7 +151,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
        > [!IMPORTANT]
        > Only add the application policies that you require. Confirm your choices with your security admins.
 
-     - For iOS and macOS certificate templates, also edit **Key Usage** and make sure **Signature is proof of origin** isn't selected.
+     - For iOS/iPadOS and macOS certificate templates, also edit **Key Usage** and make sure **Signature is proof of origin** isn't selected.
 
      ![Template, extensions tab](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
@@ -220,7 +220,7 @@ After you [create the SCEP certificate template](#create-the-scep-certificate-te
 By default, Intune uses the value configured in the template. However, you can configure the CA to allow the requester to enter a different value, and that value can be set from within the Intune console.
 
 > [!IMPORTANT]
-> For iOS and macOS, always use a value set in the template.
+> For iOS/iPadOS and macOS, always use a value set in the template.
 
 #### To configure a value that can be set from within the Intune console
 

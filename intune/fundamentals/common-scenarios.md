@@ -41,7 +41,7 @@ Following are short introductions to the six most common scenarios that rely on 
 
 >[!IMPORTANT]
 >We want to ensure that mobile devices are up-to-date
->In light of the recent "Trident" malware attacks on iOS devices. So we've published a blog post that's called [Ensuring mobile devices are up-to-date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). It provides information about the different ways that Intune can help keep your devices secure and up-to-date.
+>In light of the recent "Trident" malware attacks on iOS/iPadOS devices. So we've published a blog post that's called [Ensuring mobile devices are up-to-date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). It provides information about the different ways that Intune can help keep your devices secure and up-to-date.
 
 ## Protecting your on-premises email and data so it can be safely accessed by mobile devices
 

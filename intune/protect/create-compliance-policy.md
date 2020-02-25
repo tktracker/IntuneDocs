@@ -71,7 +71,7 @@ To use device compliance policies, be sure you:
 
 3. Specify the following properties:
 
-   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Mark iOS jailbroken devices as not compliant**.
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
 
    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
