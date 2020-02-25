@@ -29,6 +29,8 @@ ms.collection: M365-identity-device-management
 
 # Add macOS kernel extensions in Intune
 
+https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413 This blog post explains the deprecation of kernel extensions that will be replaced by system extensions. 
+
 On macOS devices, you can add features at the kernel-level. These features access parts of the OS that regular programs can't access. Your organization may have specific needs or requirements that aren't available in an app, a device feature, and so on. 
 
 To add kernel extensions that are always allowed to load on your devices, add "kernel extensions" (KEXT) in Microsoft Intune, and then deploy these extensions to your devices.
