@@ -290,8 +290,6 @@ Platforms:
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
   > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn’t have an IMEI number, the profile fails to install.  
  
-
-
 ## What's new for Connectors
 
 Updates for the two certificate connectors are released periodically. When we update a connector, you can read about the changes here.
@@ -309,7 +307,7 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 - **PFX Certificate Connector for Microsoft Intune - version 6.1905.0.402**  
   Changes in this release:  
   - The polling interval for the connector is reduced from 5 minutes to 30 seconds.
- 
+
 ### April 2, 2019
 
 - **Intune Certificate Connector - version 6.1904.1.0**  
