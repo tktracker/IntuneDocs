@@ -52,7 +52,7 @@ Review the following information before you start syncing and assigning apps fro
 - Both online and offline licensed apps that you have purchased from the Microsoft Store for Business are synced into the Intune portal. You can then deploy these apps to device groups or user groups. 
 - Online app installations are managed by the store.
 - Offline apps that are free of charge can also be synced to Intune. These apps are installed by Intune, not by the store.
-- To use this capability, devices must be joined to Active Directory Domain Services, or workplace-joined.
+- To use this capability, devices must be joined to Active Directory Domain Services, Azure AD joined, or workplace-joined.
 - Enrolled devices must be using the 1511 release of Windows 10 or later.
 
 Additionally, related sets and Offline Licensed apps synced from the Microsoft Store for Business will now be consolidated into a single app entry in the UI. Any deployment details from the individual packages will be migrated over to the single entry. To view related sets in the Azure portal, select **App licenses** from the **Apps** pane.
