@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/15/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -71,20 +71,19 @@ If you have the Company Portal app open on an Android device, the notification r
 - To send notifications to a device, your account must have the following RBAC permission in Intune: *Remote tasks* > **Send custom notifications**.
 
 **Creating notifications**:  
-- To create a message, use an account that is assigned an Intune role that includes the **Update** permission for **Organization**. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#role-assignments)  
+- To create a message, use an account that is assigned an Intune role that includes the correct permission as described in the Permission sections above. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#role-assignments)    
 - Custom notifications are limited to 50-character titles and 500-character messages.  
-- Intune doesn’t save sent messages. To resend a message, you must recreate that message.  
+- Intune doesn’t save text from previously sent custom notifications. To resend a message, you must recreate that message.  
+- You can only send up to 25 messages to groups per hour. This restriction is at the tenant level. This limitation doesn't apply when sending notifications to individual devices.
 - You can only send up to 25 messages to groups per hour. This restriction is at the tenant level. This limitation doesn't apply when sending notifications to individuals.
 - When sending messages to individual devices, you can only send up to 10 messages per hour to the same device. 
-- You can send notifications to multiple users or devices by assigning the notification to groups. When using groups, each notification can directly target up to 25 groups. Nested groups don't count against this total.  
-
-  Groups can include users or devices, but messages are sent only to users, and to each iOS/iPadOS or Android device that the user has registered.  
+- You can send notifications to users in groups. When sending notifications to groups, each notification can directly target up to 25 groups. Nested groups don't count against this total. When sending a notification to a group, messages are targeted to only the users in the group and to each iOS or Android device that the user has registered. Devices in the group will be ignored when targeting the notification.   
 - You can send notifications to a single device. Instead of using groups, you select a device and then use a remote [device action](device-management.md#available-device-actions) to send the custom notification.  
 
 **Delivery**:  
-- Intune sends messages to the users' Company Portal app or the Microsoft Intune app, which then creates the push notification. Users don't need to be signed into the app for the notification to be pushed on the device.  
+- Intune sends messages to the users' Company Portal app or the Microsoft Intune app, which then creates the push notification. Users don't need to be signed into the app for the notification to be pushed on the device, but the device must have been enrolled by the targeted user.  
 - Intune, as well as the Company Portal app and the Microsoft Intune app, can’t guarantee delivery of a custom notification. Custom notifications might show up after several hours of delay, if at all, so they shouldn't be used for urgent messages.  
-- Custom notification messages from Intune appear on devices as standard push notifications. If the Company Portal app is open on an iOS/iPadOS device when it receives the notification, the notification displays in the app instead of being a push notification.  
+- Custom notification messages from Intune appear on devices as standard push notifications. If the Company Portal app is open on an iOS device when it receives the notification, the notification displays in the app instead of as a system push notification.  
 - Custom notifications can be visible on lock screens on both iOS/iPadOS and Android devices depending on device settings.  
 - On Android devices, other apps might have access to the data in your custom notifications. Don't use them for sensitive communications.  
 - Users of a device that was recently unenrolled, or users that were removed from a group, might still receive a custom notification that is later sent to that group.  Likewise, if you add a user to a group after a custom notification was sent to the group, it's possible for the newly added use to receive that previously sent notification message.  
@@ -99,7 +98,7 @@ If you have the Company Portal app open on an Android device, the notification r
 
    ![Create a custom notification](./media/custom-notifications/custom-notifications.png)  
 
-3. On the **Assignments** tab, select the groups to which you’d like to send this custom notification, and then select Next to continue.  
+3. On the **Assignments** tab, select the groups to which you’d like to send this custom notification, and then select Next to continue. Note that sending a notification to a group targets only the users of that group; the notification will go to all iOS and Android devices enrolled by that user.    
 
 4. On the **Review + Create** tab, review the information and when ready to send the notification, select **Create**.  
 
@@ -107,7 +106,7 @@ Intune processes messages that you create immediately. The only confirmation tha
 
 ![Confirmation of a sent notification](./media/custom-notifications/notification-sent.png)  
 
-Intune doesn’t track the custom notifications you send, and devices don’t log the receipt outside of the device’s notification center.  
+Intune doesn’t track the custom notifications you send, and devices don’t log the receipt outside of the device’s notification center. The notification may be contained in a temporary diagnostic log if a user requests support within the Company Portal or Intune app.     
 
 ## Send a custom notification to a single device  
 

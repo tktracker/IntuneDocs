@@ -67,7 +67,7 @@ Before you can configure Conditional Access, verify the following configurations
 ### Support for mobile devices
 
 - Windows Phone 8.1 and later
-- Native email app on iOS.
+- Native email app on iOS/iPadOS.
 - EAS mail clients such as Gmail on Android 4 or later.
 - EAS mail clients **Android work profile devices:** Only **Gmail** and **Nine Work for Android Enterprise** in the **work profile** are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the Gmail or Nine Work for Android Enterprise app, and also deploy those apps as a required installation.
 
