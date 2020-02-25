@@ -79,7 +79,7 @@ Legacy PC management is going out of support on October 15, 2020. Upgrade device
 
 [Learn more](https://go.microsoft.com/fwlink/?linkid=2107122)
 
-### Decreasing support for Android device administrator 
+### Decreasing support for Android device administrator<!--5857738-->
 Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is now available with [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (released with Android 5.0). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
 
 #### How does this affect me?
