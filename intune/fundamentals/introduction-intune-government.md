@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # What is Intune for Government?
 
-Intune for Government is an application and mobile management platform designed to help ensure security, privacy and control, compliance, and transparency. It meets federal, state, and local US government needs with physical and logical network-isolated instances of Azure. These instances are dedicated to US government with all data, applications, and hardware residing in the continental United States. 
+Intune for Government is an application and mobile management platform designed to help ensure security, privacy and control, compliance, and transparency. It meets federal, state, and local US government needs with physical and logical network-isolated instances of Azure. These instances are dedicated to US government with all customer data, applications, and hardware residing in the continental United States. 
 
 Intune for Government includes a physically isolated instance of Microsoft Intune that supports security and compliance requirements critical to US government. Intune is a cloud-based enterprise mobility management (EMM) service that is the foundation for Intune for Government. Government agencies will have access to the same features available to commercial customers. These include FedRAMP and DoD compliance certifications, as well as Operated by screen US persons.
 
@@ -42,5 +42,5 @@ With Intune for Government you can manage Windows 10, iOS, and Android devices u
 
 ## Next steps
 - For more information about Intune for US Government, see [Microsoft Intune for US Government GCC High and DoD service description](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
-- Get familiar with the product [with a 90 day free trial of Intune](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1). If you already have access, head to (https://intuneeducation.portal.azure.com) to get started.
 - Dive into the [technical requirements and capabilities](/intune/supported-devices-browsers) of Intune.
+- [See feature differences between Intune and Intune for US Government](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
