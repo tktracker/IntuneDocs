@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 02/25/2020
 ms.topic: conceptual 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -213,12 +213,13 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
    |------------|------------|------------|
    |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  | 
    |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. |
-   |**Key storage provider (KSP)**   |<ul><li>Windows 10  | For Windows, select where to store the keys on the device. |
+   |**Key storage provider (KSP)**   |<ul><li>Windows 10  |For Windows, select where to store the keys on the device. |
    |**Certification authority**      |<ul><li>All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
    |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority". |
+   |**Certificate template name**    |<ul><li>All         |Lists the name of your certificate template. |
    |**Certificate type**             |<ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later|Select a type: <ul><li> **User** certificates can contain both user and device attributes in the subject and SAN of the certificate. </il><li>**Device** certificates can only contain device attributes in the subject and SAN of the certificate.​ Use Device for scenarios such as user-less devices, like kiosks or other shared devices.  <br><br> This selection affects the Subject name format. |
-   |**Subject name format**          |<ul><li>All         |For most platforms, set this option to **Common name** unless otherwise required.<br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later</li></ul>  <p> See [Subject name format](#subject-name-format) later in this article. |
-   |**Subject alternative name**     |<ul><li>All         |Set this option to **User principal name (UPN)** unless otherwise required. |
+   |**Subject name format**          |<ul><li>All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br> For most platforms, use the **Common name** option unless otherwise required. <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later</li></ul>  <p>  |
+   |**Subject alternative name**     |<ul><li>All         |For *Attribute*, select **User principal name (UPN)** unless otherwise required, configure a corresponding *Value*, and then click **Add**. <br><br>For more information see see [Subject name format](#subject-name-format) later in this article.|
    |**Extended key usage**           |<ul><li> Android device administrator </li><li>Android Enterprise (*Device Owner*, *Work Profile*) </li><li>Windows 10 |Certificates usually require *Client Authentication* so that the user or device can authenticate to a server. |
    |**Allow all apps access to private key** |<ul><li>macOS  |Set to **Enable** to give apps that are configured for the associated mac device access to the PKCS certificates private key. <br><br> For more information on this setting, see *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
    |**Root Certificate**             |<ul><li>Android device administrator </li><li>Android Enterprise (*Device Owner*, *Work Profile*) |Select a root CA certificate profile that was previously assigned. |
@@ -232,7 +233,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 ### Subject name format
 
-When you create a PKCS certificate profile for the following platforms, options for the subject name format depend on the Certificate type you select, either **User** or **Device**.  
+For the *Subject name format* and *Subject alternative name* values,When you create a PKCS certificate profile for the following platforms, options for the subject name format depend on the Certificate type you select, either **User** or **Device**.  
 
 Platforms:
 
