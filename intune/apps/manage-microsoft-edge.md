@@ -303,6 +303,20 @@ You can configure if restricted links should open directly in InPrivate browsing
 
 ## Disable Microsoft Edge features to customize the end user experience for your organization's needs
 
+### Disable prompts to share usage data for personalization 
+
+By default, Microsoft Edge prompts users for usage data collection to personalize their browsing experience. You are able to disable sharing this data by preventing this prompt from being shown to end users. 
+
+|    Key     |    Value    |
+|    `com.microsoft.intune.mam.managedbrowser.disableShareUsageData`    |     **true** will disable this prompt from displaying to end users.    |
+
+### Disable prompts to share browsing history 
+
+By default, Microsoft Edge prompts users for browsing history data collection to personalize their browsing experience. You are able to disable sharing this data by preventing this prompt from being shown to end users.
+
+|     Key    |    Value    |
+|     `com.microsoft.intune.man.managedbrowser.disableShareBrowsingHistory`    |     **true** will disable this prompt from displaying to end users.     |
+
 ### Disable prompts that offer to save passwords
 By default, Microsoft Edge on iOS offers to save your users passwords to the keychain. If you would like to disable this prompt for your organization, configure the following setting:
 
@@ -324,6 +338,7 @@ In addition to blocking InPrivate and MSA browsing, you can only allow use of Mi
 
 - [Android setting](~/apps/app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 - [iOS setting](~/apps/app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+
 
 ## Use Microsoft Edge on iOS to access managed app logs 
 
