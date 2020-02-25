@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,19 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 ### Role-based access control
 -->  
 
+<!-- ########################## -->
+## Week of February 24, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### macOS Company Portal user experience improvements<!-- 5568987 -->
+We have made improvements to the macOS device enrollment experience and the Company Portal app for Mac. You will see the following:
+- A better Microsoft **AutoUpdate** experience during enrollment that will ensure your users have the latest version of the Company Portal.
+- An enhanced compliance check step during enrollment.
+- Support for copied Incident IDs, so your users can send errors from their devices to your company support team faster.
+
+For more information about enrollment and the Company Portal app for Mac, see [Enroll your macOS device using the Company Portal app](/intune-user-help/enroll-your-device-in-intune-macos-cp). 
 
 <!-- ########################## -->
 ## Week of February 17, 2020 (2002 Service release)
@@ -393,7 +406,7 @@ For more information, see  the following overview articles:
 - [Intune device compliance overview](../protect/device-compliance-get-started.md)
 
 #### Use PKCS certificate profiles to provision devices with certificates<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529  -->
-You can now use PKCS certificate profiles to issue certificates to *devices* that run Android for Work, iOS, and Windows, when associated with profiles like those for Wi-Fi and VPN. Previously those three platforms supported only user-based certificates, with device-based support being limited to macOS.
+You can now use PKCS certificate profiles to issue certificates to *devices* that run Android for Work, iOS/iPadOS, and Windows, when associated with profiles like those for Wi-Fi and VPN. Previously those three platforms supported only user-based certificates, with device-based support being limited to macOS.
 
 > [!NOTE]
 > PKCS certificate profiles are not supported with Wi-Fi profiles. Instead, use SCEP certificate profiles when you use an [EAP type](../configuration/wi-fi-settings-windows.md#enterprise-profile).
