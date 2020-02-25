@@ -73,7 +73,7 @@ For more information about enrollment and the Company Portal app for Mac, see [E
 
 #### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
 
-In October of 2019, Intune app protection policy add the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
+In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
 
 
 <!-- ########################## -->
