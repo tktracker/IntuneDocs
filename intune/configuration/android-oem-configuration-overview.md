@@ -166,6 +166,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Spectralink - Logging | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
 | Seuic | com.seuic.seuicoemconfig | |
+| Unitech Electronics | com.unitech.oemconfig | |
 
 -----------------
 
