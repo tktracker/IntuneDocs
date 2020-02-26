@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: iOS device feature settings in Microsoft Intune - Azure | Microsoft Docs
-description: See all the settings to configure iOS devices for AirPrint, layout of the home screen, app notifications, shared device, single sign-in, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS devices to use these Apple features in your organization.
+title: iOS/iPadOS device feature settings in Microsoft Intune - Azure | Microsoft Docs
+description: See all the settings to configure iOS and iPadOS devices for AirPrint, layout of the home screen, app notifications, shared device, single sign-in, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS/iPadOS devices to use these Apple features in your organization.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,20 +27,20 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# iOS and iPadOS device settings to use common iOS features in Intune
+# iOS and iPadOS device settings to use common iOS/iPadOS features in Intune
 
-Intune includes some built-in settings to allow iOS users to use different Apple features on their devices. For example, administrators can control how iOS users use AirPrint printers, add apps and folders to the dock and pages on the home screen, show app notifications, show asset tag details on the lock screen, use single sign-on authentication, and authenticate users with certificates.
+Intune includes some built-in settings to allow iOS/iPadOS users to use different Apple features on their devices. For example, administrators can control how iOS/iPadOS users use AirPrint printers, add apps and folders to the dock and pages on the home screen, show app notifications, show asset tag details on the lock screen, use single sign-on authentication, and authenticate users with certificates.
 
-Use these features to control iOS devices as part of your mobile device management (MDM) solution.
+Use these features to control iOS/iPadOS devices as part of your mobile device management (MDM) solution.
 
-This article lists these settings, and describes what each setting does. For more information on these features, go to [Add iOS or macOS device feature settings](../device-features-configure.md).
+This article lists these settings, and describes what each setting does. For more information on these features, go to [Add iOS/iPadOS or macOS device feature settings](../device-features-configure.md).
 
 ## Before you begin
 
-[Create an iOS device configuration profile](../device-features-configure.md).
+[Create an iOS/iPadOS device configuration profile](../device-features-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS enrollment](../ios-enroll.md).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../ios-enroll.md).
 
 ## AirPrint
 
@@ -51,8 +51,8 @@ This article lists these settings, and describes what each setting does. For mor
 
 - **IP address**: Enter the IPv4 or IPv6 address of the printer. If you use hostnames to identify printers, you can get the IP address by pinging the printer in the terminal. Get the IP address and path (in this article) provides more details.
 - **Path**: The path is typically `ipp/print` for printers on your network. Get the IP address and path (in this article) provides more details.
-- **Port**: Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port. Available on iOS 11.0 and later.
-- **TLS**: Choose **Enable** to secure AirPrint connections with Transport Layer Security (TLS). Available on iOS 11.0 and later.
+- **Port**: Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port. Available on iOS 11.0+, and iPadOS 13.0+.
+- **TLS**: Choose **Enable** to secure AirPrint connections with Transport Layer Security (TLS). Available on iOS 11.0+, and iPadOS 13.0+.
 
 To add AirPrint servers, you can:
 
@@ -79,12 +79,13 @@ To add AirPrinter servers, you need the IP address of the printer, the resource 
 This feature applies to:
 
 - iOS 9.3 or newer
+- iPadOS 13.0 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
 
 ### Dock
 
-Use the **Dock** settings to add up to six items or folders to the dock of the iOS screen. Many devices support fewer items. For example, iPhone devices support up to four items. In this case, only the first four items you add are shown on the device.
+Use the **Dock** settings to add up to six items or folders to the dock of the iOS/iPadOS screen. Many devices support fewer items. For example, iPhone devices support up to four items. In this case, only the first four items you add are shown on the device.
 
 You can add up to **six** items (apps and folders combined) for the device dock.
 
@@ -93,8 +94,8 @@ You can add up to **six** items (apps and folders combined) for the device dock.
 
   - **App**: Choose this option to add apps to the dock on the screen. Enter:
 
-    - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
-    - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
+    - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+    - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
   - **Folder**: Choose this option to add a folder to the dock on the screen.
 
@@ -103,24 +104,24 @@ You can add up to **six** items (apps and folders combined) for the device dock.
     - **Folder name**: Enter the name of the folder. This name is shown to users on their device.
     - **List of pages**: **Add** a page, and enter the following properties:
 
-      - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
-      - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
-      - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
+      - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+      - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+      - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
       You can add up to **20** pages for the device dock.
 
 > [!NOTE]
-> When you add icons using the Dock settings, the icons on the Home Screen and pages are locked, and can’t be moved. This may be by design with iOS and Apple’s MDM policies.
+> When you add icons using the Dock settings, the icons on the Home Screen and pages are locked, and can’t be moved. This may be by design with iOS/iPadOS and Apple’s MDM policies.
 
 #### Example
 
 In the following example, the dock screen shows only the Safari, Mail, and Stocks apps. The Mail app is selected to show its properties:
 
-![Sample iOS dock settings](./media/ios-device-features-settings/FfFiUcP.png)
+![Sample iOS/iPadOS dock settings](./media/ios-device-features-settings/FfFiUcP.png)
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
-![Sample iOS dock layout on iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+![Sample iOS/iPadOS dock layout on iPhone](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### Pages
 
@@ -133,7 +134,7 @@ You can add up to **40** pages on a device.
 
 - **List of pages**: **Add** a page, and enter the following properties:
 
-  - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center, and *isn't* shown on the iOS device.
+  - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center, and *isn't* shown on the iOS/iPadOS device.
 
   You can add up to **60** items (apps and folder combined) on a device.
 
@@ -143,8 +144,8 @@ You can add up to **40** pages on a device.
 
       - **App**: Choose this option to add apps to a page on the screen. Also enter:
 
-        - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
-        - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
+        - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+        - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
       - **Folder**: Choose this option to add a folder to the dock on the screen.
 
@@ -153,19 +154,19 @@ You can add up to **40** pages on a device.
         - **Folder name**: Enter a name for the folder. This name is shown to users on the device.
         - **Add**: Adds pages to the folder. Also enter the following properties:
 
-          - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
-          - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS device.
-          - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
+          - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+          - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+          - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
 #### Example
 
 In the following example, a new page named **Contoso** is added. The page shows the Find Friends and Settings apps. The Settings app is selected to show its properties:
 
-![iOS Home screen settings example](./media/ios-device-features-settings/Jc2OxyX.png)
+![iOS/iPadOS Home screen settings example in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 When you assign the policy to an iPhone, the page looks similar to the following image:
 
-![iOS device with modified home screen](./media/ios-device-features-settings/Bd37PHa.png)
+![iOS/iPadOS device with modified home screen in Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## App notifications
 
@@ -173,9 +174,9 @@ When you assign the policy to an iPhone, the page looks similar to the following
 
 - **Add**: Add notifications for apps:
 
-    ![Add app notification in iOS profile in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+    ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
-  - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
+  - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
   - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the device.
   - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the device.
   - **Notifications**: **Enable** or **Disable** the app from sending notifications to the device.
@@ -193,6 +194,7 @@ When you assign the policy to an iPhone, the page looks similar to the following
 This feature applies to:
 
 - iOS 9.3 and later
+- iPadOS 13.0 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -215,7 +217,7 @@ This feature applies to:
 
   - **User principal name**: The UPN is parsed in the following way:
 
-    ![Username attribute](./media/ios-device-features-settings/User-name-attribute.png)
+    ![iOS/iPadOS Username SSO attribute in Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     You can also overwrite the realm with the text you enter in the **Realm** text box.
 
@@ -233,12 +235,12 @@ This feature applies to:
 - **Realm**: Enter the domain part of the URL. For example, enter `contoso.com`.
 - **URL prefixes that will use Single Sign On**: **Add** any URLs in your organization that require user single sign-on authentication.
 
-  For example, when a user connects to any of these sites, the iOS device uses the single sign-on credentials. The user doesn't need to enter any additional credentials. If multi-factor authentication is enabled, then users are required to enter the second authentication.
+  For example, when a user connects to any of these sites, the iOS/iPadOS device uses the single sign-on credentials. The user doesn't need to enter any additional credentials. If multi-factor authentication is enabled, then users are required to enter the second authentication.
 
   > [!NOTE]
   > These URLs must be properly formatted FQDN. Apple requires these to be in the `http://<yourURL.domain>` format.
 
-  The URL matching patterns must begin with either `http://` or `https://`. A simple string match is run, so the `http://www.contoso.com/` URL prefix doesn't match `http://www.contoso.com:80/`. With iOS 10.0 or later, a single wildcard \* may be used to enter all matching values. For example, `http://*.contoso.com/` matches both `http://store.contoso.com/` and `http://www.contoso.com`.
+  The URL matching patterns must begin with either `http://` or `https://`. A simple string match is run, so the `http://www.contoso.com/` URL prefix doesn't match `http://www.contoso.com:80/`. With iOS 10.0+ and iPadOS 13.0+, a single wildcard \* may be used to enter all matching values. For example, `http://*.contoso.com/` matches both `http://store.contoso.com/` and `http://www.contoso.com`.
 
   The `http://.com` and `https://.com` patterns match all HTTP and HTTPS URLs, respectively.
 
@@ -287,7 +289,7 @@ This feature applies to:
   - **Not configured**: App extensions aren't used. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
   - **Redirect**: Use a generic, customizable redirect app extension to perform SSO with modern authentication flows. Be sure you know the extension ID for your organization’s app extension.
   - **Credential**: Use a generic, customizable credential app extension to perform SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization’s app extension.
-  - **Kerberos**: Use Apple’s built-in Kerberos extension, which is included on iOS 13.0 (and newer) and iPadOS 13.0 (and newer). This option is a Kerberos-specific version of the **Credential** app extension.
+  - **Kerberos**: Use Apple’s built-in Kerberos extension, which is included on iOS 13.0+ and iPadOS 13.0+. This option is a Kerberos-specific version of the **Credential** app extension.
 
   > [!TIP]
   > With the **Redirect** and **Credential** types, you add your own configuration values to pass through the extension. If you're using **Credential**, consider using built-in configuration settings provided by Apple in the **Kerberos** type.
@@ -357,7 +359,7 @@ You may experience unexpected behavior when a profile with no image is assigned 
 - **Wallpaper Image**: Upload an existing .png, .jpg, or .jpeg image you want to use. Be sure the file size is less than 750 KB. You can also **remove** an image that you added.
 
 > [!TIP]
-> To display different images on the lock screen and home screen, create a profile with the lock screen image. Create another profile with the home screen image. Assign both profiles to your iOS user or device groups.
+> To display different images on the lock screen and home screen, create a profile with the lock screen image. Create another profile with the home screen image. Assign both profiles to your iOS/iPadOS user or device groups.
 
 ## Next steps
 

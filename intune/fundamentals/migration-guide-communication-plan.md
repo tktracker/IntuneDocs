@@ -57,7 +57,7 @@ We have created short, step-by-step videos to aid your users in easily enrolling
 
 - [Enroll your Android device](https://www.youtube.com/watch?v=k0Q_sGLSx6o&t=1s)
 - [Enroll your Android Work Profile device](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
-- [Enroll your iOS device](https://www.youtube.com/watch?v=mJyv6YcHi7c)
+- [Enroll your iOS/iPadOS device](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 - [Enroll your macOS device](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
 - [Enroll your Windows](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
@@ -66,5 +66,5 @@ We have created short, step-by-step videos to aid your users in easily enrolling
 Intune has additional resources you can use to promote device enrollment with your users:
 
 - [How to educate your end users about Microsoft Intune](end-user-educate.md) breaks out enrollment steps by mobile OS platform.
-- The [Intune device enrollment for IT administrators](../enrollment/device-enrollment.md) explains how to enroll Android, iOS, and Mac devices in Intune.
-- Share the Company Portal app with your Android, iOS and Windows users.
+- The [Intune device enrollment for IT administrators](../enrollment/device-enrollment.md) explains how to enroll Android, iOS/iPadOS, and Mac devices in Intune.
+- Share the Company Portal app with your Android, iOS/iPadOS, and Windows users.

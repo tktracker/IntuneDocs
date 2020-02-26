@@ -63,7 +63,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    - **Certificate type**:
 
-     *(Applies to:  Android, Android Enterprise, iOS, macOS, Windows 8.1 and later, and Windows 10 and later.)*
+     *(Applies to:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1 and later, and Windows 10 and later.)*
 
      Select a type depending on how you'll use the certificate profile:
 
@@ -285,6 +285,7 @@ Assign SCEP certificate profiles the same way you [deploy device profiles](../co
 
 > [!NOTE]
 > On iOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS device having multiple certificates delivered by the SCEP or PKCS certificate request. 
+
 
 ## Next steps
 

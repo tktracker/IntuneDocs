@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: iOS bundle IDs for built-in apps in Microsoft Intune - Azure | Microsoft Docs
+title: iOS/iPadOS bundle IDs for built-in apps in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: See a list of the bundle IDs for the built-in iOS apps. Use these bundle IDs to explicitly allow apps in device configuration profiles and policies in Microsoft Intune.
+description: See a list of the bundle IDs for the built-in iOS and iPadOS apps. Use these bundle IDs to explicitly allow apps in device configuration profiles and policies in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,9 +26,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Bundle IDs for built-in iOS apps you can use in Intune
+# Bundle IDs for built-in iOS and iPadOS apps you can use in Intune
 
-When you configure features on iOS devices, you can also add the built-in apps on iOS devices. This article lists the bundle IDs of some common built-in iOS apps. To find the bundle ID of other apps, contact your software vendor. See Apple's list of [iOS bundle IDs](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (opens Apple's web site).
+When you configure features on iOS/iPadOS devices, you can also add the built-in apps on iOS/iPadOS devices. This article lists the bundle IDs of some common built-in iOS/iPadOS apps. To find the bundle ID of other apps, contact your software vendor. See Apple's list of [iOS/iPadOS bundle IDs](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (opens Apple's web site).
 
 ## Bundle IDs
 
@@ -81,8 +81,8 @@ When you configure features on iOS devices, you can also add the built-in apps o
 | com.apple.VoiceMemos        | VoiceMemos   | Apple     |
 | com.apple.Passbook          | Wallet       | Apple     |
 | com.apple.Bridge            | Watch        | Apple     |
-| com.apple.weather           | Weather      | Apple     |      
+| com.apple.weather           | Weather      | Apple     |
 
 ## Next steps
 
-Use these bundle IDs to configure [device features](ios-device-features-settings.md) and to [allow or restrict some settings](device-restrictions-ios.md) on iOS devices.
+Use these bundle IDs to configure [device features](ios-device-features-settings.md) and to [allow or restrict some settings](device-restrictions-ios.md) on iOS/iPadOS devices.

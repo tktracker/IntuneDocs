@@ -3,12 +3,12 @@
 
 title: Configure email settings in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Create an email profile in Microsoft Intune, and deploy this profile to Android Enterprise, iOS, and Windows devices. Use an email profile to configure common email settings, including an email server and authentication method to connect to corporate email on devices you manage.
+description: Create an email profile in Microsoft Intune, and deploy this profile to Android Enterprise, iOS, iPadOS, and Windows devices. Use an email profile to configure common email settings, including an email server and authentication method to connect to corporate email on devices you manage.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,10 +33,11 @@ Microsoft Intune includes different email settings you can deploy to devices in 
 
 You can use email profiles to configure the built-in email settings for the following devices:
 
-- Android Samsung Knox Standard 4.0 and later
+- Android Samsung Knox Standard 4.0 and newer
 - Android Enterprise
-- iOS 8.0 and later
-- Windows Phone 8.1 and later
+- iOS 8.0 and newer
+- iPadOS 13.0 and newer
+- Windows Phone 8.1 and newer
 - Windows 10 (desktop) and Windows 10 Mobile
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
@@ -93,7 +94,7 @@ You can help secure email profiles using the following options:
 
 If the user already configured an email account, then the email profile is assigned differently, depending on the platform.
 
-- **iOS**: An existing, duplicate email profile is detected based on host name and email address. The duplicate email profile blocks the assignment of an Intune profile. In this case, the Company Portal app notifies the user that they aren't compliant, and prompts the end user to manually remove the configured profile. To help prevent this scenario, tell your end users to enroll *before* installing an email profile, which allows Intune to set up the profile.
+- **iOS/iPadOS**: An existing, duplicate email profile is detected based on host name and email address. The duplicate email profile blocks the assignment of an Intune profile. In this case, the Company Portal app notifies the user that they aren't compliant, and prompts the end user to manually remove the configured profile. To help prevent this scenario, tell your end users to enroll *before* installing an email profile, which allows Intune to set up the profile.
 
 - **Windows:** An existing, duplicate email profile is detected based on host name and email address. Intune overwrites the existing email profile created by the end user.
 

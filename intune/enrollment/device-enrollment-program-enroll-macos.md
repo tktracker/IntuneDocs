@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Enroll macOS devices - Device Enrollment Program or Apple School Manager
+title: Enroll macOS devices - Apple Business Manager or Apple School Manager
 titleSuffix: 
-description: Learn how to enroll corporate-owned macOS devices using the Device Enrollment Program.
+description: Learn how to enroll corporate-owned macOS devices.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -29,15 +29,15 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Automatically enroll macOS devices with the Device Enrollment Program or Apple School Manager
+# Automatically enroll macOS devices with the Apple Business Manager or Apple School Manager
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-You can set up Intune enrollment for macOS devices purchased through Apple's [Device Enrollment Program (DEP)](https://deploy.apple.com) or [Apple School Manager](https://school.apple.com/). You can use either of these enrollments for large numbers of devices without ever touching them. You can ship macOS devices directly to users. When the user turns on the device, Setup Assistant runs with preconfigured settings and the device enrolls into Intune management.
+You can set up Intune enrollment for macOS devices purchased through Apple's [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). You can use either of these enrollments for large numbers of devices without ever touching them. You can ship macOS devices directly to users. When the user turns on the device, Setup Assistant runs with preconfigured settings and the device enrolls into Intune management.
 
-To set up enrollment, you use both the Intune and Apple DEP portals. You create enrollment profiles containing settings that applied to devices during enrollment.
+To set up enrollment, you use both the Intune and Apple portals. You create enrollment profiles containing settings that applied to devices during enrollment.
 
-Neither DEP enrollment or Apple School Manager work with the [device enrollment manager](device-enrollment-manager-enroll.md).
+Neither Apple Business Manager enrollment or Apple School Manager work with the [device enrollment manager](device-enrollment-manager-enroll.md).
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -187,7 +187,7 @@ You must assign an enrollment program profile to devices before they can enroll.
 
 ### Assign a default profile
 
-You can pick a default macOS and iOS profile to be applied to all devices enrolling with a specific token. 
+You can pick a default macOS and iOS/iPadOS profile to be applied to all devices enrolling with a specific token. 
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS Enrollment** > **Enrollment program tokens** > choose a token in the list.
 2. Choose **Set Default Profile**, choose a profile in the drop-down list, and then choose **Save**. This profile will be applied to all devices that enroll with the token.

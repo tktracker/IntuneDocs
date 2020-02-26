@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/07/2020
+ms.date: 02/18/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -199,7 +199,7 @@ In these next steps, you’ll create security groups, and add users to the group
 
   - All Students
   - All Android devices
-  - All iOS devices
+  - All iOS/iPadOS devices
   - Marketing
   - Human Resources
   - All Charlotte employees
