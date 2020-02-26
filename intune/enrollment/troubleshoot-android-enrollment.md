@@ -85,7 +85,7 @@ For work profile enrolled devices, you can only reset the work profile passcode 
 - the work profile passcode is managed
 - the end user has allowed you to reset it.
 
-For Dedicated devices (COSU) adn Fully Managed, device passcode reset is supported.
+For Dedicated devices (COSU) and Fully Managed, device passcode reset is supported.
 
 
 ## Next steps
