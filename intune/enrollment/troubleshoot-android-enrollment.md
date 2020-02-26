@@ -26,11 +26,11 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshoot Android device enrollment problems in Microsoft Intune
+# Troubleshoot Android Enterprise device problems in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when enrolling Android devices in Intune.
+This article helps Intune administrators understand and troubleshoot problems when Android Enterprise devices in Intune.
 
-## Apps on Android devices
+## Apps on Android Enterprise devices
 
 ### Managed Google Play apps that aren't deployed through Intune are displayed in the work profile
 System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. This isn't controlled by the MDM provider.
@@ -45,14 +45,14 @@ To troubleshoot, follow these steps:
   6. Review apps that appear in the work profile. 
   7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
 
-### Unapproved Google Play for Work store apps aren't being removed from the Mobile Apps page in Intune
+### Unapproved Managed Google Play for Work store apps aren't being removed from the Client Apps page in Intune
 This is expected behavior.
 
 ### Managed Google Play apps aren't being reported under the Discovered Apps blade in the Intune portal
-This is expected behavior.
+This is expected behavior. Only system apps installed in the Work Profile are inventoried in the Discovered Apps blade. To see installed Managed Google Play applications, use the **Managed Apps** blade.
 
 ### Are Web Applications supported for work profile enrolled devices?
-Not currently.
+Yes. For more information, see [Managed Google Play web links](../apps/apps-add-android-for-work.md#managed-google-play-web-links)
 
 ## Device management
 
@@ -69,11 +69,8 @@ Not currently.
 ### Managed Google Play Last Sync time  hasn't been updated in days
 This is expected behavior. The sync is only triggered when you manually do so.
 
-### Is System Center Configuration Manager hybrid supported?
-It's supported with Configuration Manager 1702 and later versions for work profile management. Dedicated devices (COSU) aren't supported in a hybrid scenario.
-
 ### Encryption is required when a device is enrolled. Can it be turned off?
-No, encryption is required from Google for the work profile. 
+No, Google requires that the device be encrypted to create a work profile. 
 
 ### Samsung devices are blocking the use of third-party keyboards like SwiftKey
 Samsung began enforcing this restriction on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
@@ -88,7 +85,7 @@ For work profile enrolled devices, you can only reset the work profile passcode 
 - the work profile passcode is managed
 - the end user has allowed you to reset it.
 
-For Dedicated devices (COSU), device passcode reset is supported.
+For Dedicated devices (COSU) adn Fully Managed, device passcode reset is supported.
 
 
 ## Next steps
