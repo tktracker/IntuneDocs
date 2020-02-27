@@ -113,4 +113,4 @@ Detect threats to your network like **Man-in-the-middle** attacks, and prevent s
 
 - [Enable Better Mobile MTD connector](mtd-connector-enable.md)
 
-- [Create an MTD app protection policy](/mtd-app-protection-policy.md)
+- [Create an MTD app protection policy](mtd-app-protection-policy.md)
