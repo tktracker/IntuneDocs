@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Configure Exchange on-premises access
+# Configure Exchange on-premises access for Intune
 
 This article shows you how to configure Conditional Access for Exchange on-premises based on device compliance.
 
