@@ -71,6 +71,17 @@ We have made improvements to the macOS device enrollment experience and the Comp
 
 For more information about enrollment and the Company Portal app for Mac, see [Enroll your macOS device using the Company Portal app](/intune-user-help/enroll-your-device-in-intune-macos-cp). 
 
+#### App protection policies for Better Mobile now supports iOS and iPadOS<!-- 6224512  -->
+
+In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Exports from the All devices list  now in zipped CSV format<!--6343117-->
+Exports from the **Devices** > **All devices** page are now in zipped CSV format.
+
+
 <!-- ########################## -->
 ## Week of February 17, 2020 (2002 Service release)
 
@@ -167,7 +178,9 @@ Microsoft's new Office app is now generally available for download and use. The 
 
 For more information, see [How to enable Intune app protection policies with the Office mobile preview app](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
 
+
 <!-- ########################## -->
+
 ## Week of February 10, 2020
 
 ### Windows 7 ends extended support<!--3042987 -->

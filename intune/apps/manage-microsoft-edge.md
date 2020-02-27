@@ -177,7 +177,7 @@ Target Microsoft Edge with the following key/value pair, to enable Application P
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true    |
 
-For more information about how to use Microsoft Edge and Azure AD Application Proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access). This blog post references the Intune Managed Browser, but the content applies to Microsoft Edge as well.
+For more information about how to use Microsoft Edge and Azure AD Application Proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Azure Active Directory team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Microsoft Edge as well.
 
 ## Configure a homepage shortcut for Microsoft Edge
 
