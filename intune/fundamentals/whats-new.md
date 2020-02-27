@@ -75,6 +75,12 @@ For more information about enrollment and the Company Portal app for Mac, see [E
 
 In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners. With this update, you can now use an app protection policy to block, or selectively wipe the users corporate data based on the health of a device using Better Mobile on iOS and iPadOS.  For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Exports from the All devices list  now in zipped CSV format<!--6343117-->
+Exports from the **Devices** > **All devices** page are now in zipped CSV format.
+
 
 <!-- ########################## -->
 ## Week of February 17, 2020 (2002 Service release)
