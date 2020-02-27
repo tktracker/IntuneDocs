@@ -51,8 +51,8 @@ This article shows you how to view all your devices, and their properties in the
       - [Restart](device-restart.md) (Windows only)
       - [Fresh Start](device-fresh-start.md) (Windows only)
       - [Autopilot reset]() (Windows only)
-      - [Quick scan](..\configuration\device-restrictions-windows-10.md) (Windows 10 only)
-      - [Full scan](..\configuration\device-restrictions-windows-10.md) (Windows 10 only)
+      - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
+      - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
        - [Rename device](device-rename.md)
       - Start a remote assistance session
    - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
