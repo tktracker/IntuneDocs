@@ -66,7 +66,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 ### Support for mobile devices
 
-- **Windows Phone 8.1 and later** - To create Conditional Access policy, see [Create Conditional Access policies](./protect/create-conditional-access-intune.md)
+- **Windows Phone 8.1 and later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 - **Native email app on iOS/iPadOS** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 - **EAS mail clients such as Gmail on Android 4 or later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
