@@ -33,7 +33,7 @@ Microsoft Intune supports the use of imported public key pair (PKCS) certificate
 S/MIME encryption is challenging because email is encrypted with a specific certificate:
 
 - You must have the private key of the certificate that encrypted the email on the device where you're reading the email so it can be decrypted.
-- Before a certificate on a device expires, you should import a new certificate so devices can continue to decrypt new email.
+- Before a certificate on a device expires, you should import a new certificate so devices can continue to decrypt new email. Renewal of these certificates isn't supported.
 - Encryption certificates are renewed regularly, which means that you might want to keep past certificate on your devices, to ensure that older email can continue to be decrypted.  
 
 Because the same certificate needs to be used across devices, it's not possible to use [SCEP](certificates-scep-configure.md) or [PKCS](certficates-pfx-configure.md) certificate profiles for this purpose as those certificate delivery mechanisms deliver unique certificates per device.
