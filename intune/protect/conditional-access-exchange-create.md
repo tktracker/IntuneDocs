@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Create a Conditional Access policy for Exchange on-premises and legacy Exchange Online Dedicated
+# Configure Exchange on-premises access
 
 This article shows you how to configure Conditional Access for Exchange on-premises based on device compliance.
 
@@ -66,12 +66,13 @@ Before you can configure Conditional Access, verify the following configurations
 
 ### Support for mobile devices
 
-- Windows Phone 8.1 and later
-- Native email app on iOS/iPadOS.
-- EAS mail clients such as Gmail on Android 4 or later.
-- EAS mail clients **Android work profile devices:** Only **Gmail** and **Nine Work for Android Enterprise** in the **work profile** are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the Gmail or Nine Work for Android Enterprise app, and also deploy those apps as a required installation.
+- **Windows Phone 8.1 and later** - To create Conditional Access policy, see [Create Conditional Access policies](..protect/create-conditional-access-intune.md)
+- **Native email app on iOS/iPadOS** - To create Conditional Access policy, see [Create Conditional Access policies](..protect/create-conditional-access-intune.md)
+- **EAS mail clients such as Gmail on Android 4 or later** - To create Conditional Access policy, see [Create Conditional Access policies](..protect/create-conditional-access-intune.md)
 
-  To set up conditional access for Android work profile devices:
+- **EAS mail clients on Android work profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app you can set up device-based Conditional Access.
+
+#### To set up Conditional Access for Android work profile devices
 
   1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
