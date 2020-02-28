@@ -281,7 +281,7 @@ Assign SCEP certificate profiles the same way you [deploy device profiles](../co
 
 - If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10 clients to start the process of requesting the certificate.
 
-- Although you create and assign the trusted certificate profile and the SCEP certificate profile separately, both must be assigned. Without both installed on a device, the SCEP certificate policy fails. Ensure that any trusted root certificate profiles are also deployed to the same groups as the SCEP profile.
+- Although you create and assign the trusted certificate profile and the SCEP certificate profile separately, both must be assigned. Without both installed on a device, the SCEP certificate policy fails. Ensure that any trusted root certificate profiles are also deployed to the same groups as the SCEP profile. For example, if you are deploying a SCEP certificate profile to a user group, the trusted root (and intermediate) certificate profile must also be deployed to that same user group.
 
 > [!NOTE]
 > On iOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS device having multiple certificates delivered by the SCEP or PKCS certificate request. 
