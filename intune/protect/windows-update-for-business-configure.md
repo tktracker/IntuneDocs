@@ -88,8 +88,8 @@ Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You
 
 3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
   ![Create an update ring]( ./media/windows-update-for-business-configure/basics-tab.png)
-  
-4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see Windows update settings. After configuring *Update and User experience* settings, select **Next**.
+
+4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings]( https://docs.microsoft.com/intune/protect/windows-update-settings). After configuring *Update and User experience* settings, select **Next**.
 
 5. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 
