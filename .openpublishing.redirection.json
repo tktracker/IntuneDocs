@@ -743,7 +743,7 @@
         {
             "source_path": "intune/EULA/acceptable-use-policy-for-microsoft-intune.md",
             "redirect_url": "https://www.microsoft.com/online/legal/v2/?docid=13",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "intune/EULA/microsoft-intune-privacy-statement.md",
@@ -753,7 +753,7 @@
         {
             "source_path": "intune/EULA/privacy-statement.md",
             "redirect_url": "https://www.microsoft.com/privacystatement/OnlineServices/Default.aspx",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "intune/EULA/remote-assistance-via-microsoft-easy-assist.md",
@@ -768,12 +768,12 @@
         {
             "source_path": "intune/EULA/terms-of-use.md",
             "redirect_url": "https://www.microsoft.com/online/legal/v2/?docid=13",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "intune/get-started/administrative-accounts-websites-perms.md",
             "redirect_url": "https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3#grant-administrator-permissions",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "intune/get-started/choose-how-to-enroll-devices.md",
@@ -803,7 +803,7 @@
         {
             "source_path": "intune/get-started/network-infrastructure-requirements-for-microsoft-intune.md",
             "redirect_url": "https://docs.microsoft.com/intune-classic/get-started/network-bandwidth-use#network-communication-requirements",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "intune/get-started/supported-mobile-devices-and-computers.md",
@@ -813,7 +813,7 @@
         {
             "source_path": "intune/get-started/supported-web-browsers.md",
             "redirect_url": "https://docs.microsoft.com/intune-classic/get-started/what-to-know-before-you-start-microsoft-intune#intune-supported-web-browsers",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "intune/Troubleshoot/troubleshooting-lookout-integration.md",
@@ -938,11 +938,6 @@
         {
             "source_path": "intune-azure/configure-devices/airplay-settings-for-ios-devices.md",
             "redirect_url": "/intune/configuration/ios-device-features-settings",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "intune-azure/configure-devices/app-notification-settings-for-ios.md",
-            "redirect_url": "/intune/configure-devices/app-notification-settings-for-ios",
             "redirect_document_id": false
         },
         {
@@ -1833,11 +1828,6 @@
         {
             "source_path": "intune/configure-devices/set-up-telecom-expense-management-service-in-microsoft-intune.md",
             "redirect_url": "/intune/telecom-expenses-monitor",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "intune/configure-devices/shared-device-settings-for-ios.md",
-            "redirect_url": "/intune/ios-device-features-settings#lock-screen-message-settings",
             "redirect_document_id": true
         },
         {
