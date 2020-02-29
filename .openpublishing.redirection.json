@@ -7,7 +7,7 @@
         },
         {
             "source_path": "intune/apps/app-configuration-policies-outlook-smime.md",
-            "redirect_url": "/intune/fundamentals/whats-new#smime-support-with-microsoft-outlook-for-ios",
+            "redirect_url": "https://docs.microsoft.com/intune/fundamentals/whats-new#smime-support-with-microsoft-outlook-for-ios",
             "redirect_document_id": true
         },
         {
