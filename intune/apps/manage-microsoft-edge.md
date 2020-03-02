@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -211,7 +211,7 @@ You can configure the New Tab Page experience within Microsoft Edge mobile to di
 
 |    Key    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.ShowIndustryNews    |    **True** will show Industry News on the Microsoft Edge mobile New Tab Page.<p>**False** (default) will hide Industry News from the New Tab Page.    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **True** will show Industry News on the Microsoft Edge mobile New Tab Page.<p>**False** (default) will hide Industry News from the New Tab Page.    |
 
 ## Configure managed bookmarks for Microsoft Edge
 
@@ -299,7 +299,7 @@ You can configure if restricted links should open directly in InPrivate browsing
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **True** will automatically open sites directly in an InPrivate tab, without prompting the user to make the switch to their personal account. <p> **False** (default) will block the site within Microsoft Edge and the user will be asked to switch to their personal account to view.    |
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **True** will automatically open sites directly in an InPrivate tab, without prompting the user to make the switch to their personal account. <p> **False** (default) will block the site within Microsoft Edge and the user will be asked to switch to their personal account to view.    |
 
 ## Disable Microsoft Edge features to customize the end user experience for your organization's needs
 
