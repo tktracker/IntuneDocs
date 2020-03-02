@@ -194,7 +194,7 @@ Similarly to configuring a homepage shortcut, you can configure multiple top sit
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL wiht the '|' character. For example: <br> 'GitHub | https://github.com/||LinkedIn|https://www.linkedin.com' 
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL wiht the `|` character. For example: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`
 
 ## Configure your organization's logo and brand color for new tab pages in Microsoft Edge
 
@@ -305,7 +305,7 @@ Some customers in highly-regulated industries who are using a per-app VPN with M
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------------------------------------------------|
-|     'com.microsoft.intune.mam.managedbrowser.disabledFeatures'    |    **inprivate** will disable InPrivate browser. <br> **msa** will disable users' ability to add personal MSA accounts to Microsoft Edge.<br> To disable both InPrivate and MSA accounts, use 'inprivate| msa'    |  
+|     `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** will disable InPrivate browser. <br> **msa** will disable users' ability to add personal MSA accounts to Microsoft Edge.<br> To disable both InPrivate and MSA accounts, use `inprivate| msa`    |  
 
 
 You can also restrict users from browsing with Microsoft Edge mobile on MDM devices **only** when the user is signed in with their AAD work account. You can learn more about the keys to configure org-account-only mode for Microsoft Edge here:
