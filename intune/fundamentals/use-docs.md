@@ -112,11 +112,11 @@ Follow these general guidelines when contributing to Intune docs:
 
 ## Consolidation of documentation for Microsoft Endpoint Manager
 
-To better support combined scenarios for Intune and Configuration Manager, this documentation library will soon (date?) move to `docs.microsoft.com/memdocs/intune`. (The Configuration Manager documentation library will later move to `docs.microsoft.com/memdocs/configmgr`.) All links will automatically redirect, so you don't need to make any changes for reading this content.
+To better support combined scenarios for Intune and Configuration Manager, this documentation library will soon (date?) move to [https://docs.microsoft.com/memdocs/intune](https://docs.microsoft.com/memdocs/intune). The Configuration Manager documentation library will later move to [https://docs.microsoft.com/memdocs/configmgr](https://docs.microsoft.com/memdocs/configmgr). All links will automatically redirect, so you don't need to make any changes for reading this content.
 
 If you provide feedback or contribute to articles, some changes are necessary:
 
-- Existing GitHub issues will remain in the original repository, `github.com/Microsoft/IntuneDocs/issues`.
+- Existing GitHub issues will remain in the original repository, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
 
   - These issues won't show as open or closed issues in the Feedback section of the linked article.
 
@@ -126,8 +126,6 @@ If you provide feedback or contribute to articles, some changes are necessary:
 
   - If you have an issue in the existing repository, and are passionate about it, file feedback on the migrated article in the memdocs repository.
 
-- We will merge and close any open pull requests before the migration on _(date)_.
-
-- We won't accept any new issues or pull requests before the migration on _(date)_.
+- We will merge and close any open pull requests before the migration.
 
 - After migration, when you file feedback or edit an article, the issue or pull request will go to the memdocs repository.
