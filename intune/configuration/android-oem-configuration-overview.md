@@ -173,7 +173,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 If an OEMConfig application exists for your device, but it isn’t in the table above, or isn't showing up in the Intune console, email `IntuneOEMConfig@microsoft.com`.
 
 > [!NOTE]
-> OEMConfig apps must on-boarded by Intune before they can be configured with OEMConfig profiles. Once an app is supported, you don't need to contact Microsoft about setting it up in your tenant. Just follow the instructions on this page.
+> OEMConfig apps must on-boarded by Intune before they can be configured with OEMConfig profiles. Once an app is supported, you don't need to contact Microsoft about setting it up in your tenant. Just follow the instructions on this page. Intune is not responsible for technical issues within individual OEMCOnfig apps-- if you experience an OEMConfig app behaving incorrectly, please contactthe developers of the OEMCOnfig app in question.
 
 ## Next steps
 
