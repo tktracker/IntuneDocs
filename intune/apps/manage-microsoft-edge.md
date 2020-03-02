@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -211,7 +211,7 @@ You can configure the New Tab Page experience within Microsoft Edge mobile to di
 
 |    Key    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.ShowIndustryNews    |    **True** will show Industry News on the Microsoft Edge mobile New Tab Page.<p>**False** (default) will hide Industry News from the New Tab Page.    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **True** will show Industry News on the Microsoft Edge mobile New Tab Page.<p>**False** (default) will hide Industry News from the New Tab Page.    |
 
 ## Configure managed bookmarks for Microsoft Edge
 
