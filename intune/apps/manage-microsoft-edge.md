@@ -194,7 +194,7 @@ Similarly to configuring a homepage shortcut, you can configure multiple top sit
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL wiht the `|` character. For example: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`
 
 ## Configure your organization's logo and brand color for new tab pages in Microsoft Edge
 
@@ -301,7 +301,7 @@ Use the following key/value pair to configure whether these soft transitions are
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (default) allows Microsoft Edge to transition users to their  personal context to open blocked sites.<p>**False** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked.    |
 
 ## Disable InPrivate and Microsoft Accounts (MSA) to restrict personal browsing
-Some customers in highly-regulated industries who are using a per-app VPN with Microsoft Edge may want to scrope users to browsing within their AAD context only. You can use the following app config settings for your MDM devices to achieve this. This functionality is not available for MAM-enrolled devices. 
+Some customers in highly-regulated industries who are using a per-app VPN with Microsoft Edge may want to scope users to browsing within their AAD context only. You can use the following app config settings for your MDM devices to achieve this. This functionality is not available for MAM-enrolled devices. 
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------------------------------------------------|
