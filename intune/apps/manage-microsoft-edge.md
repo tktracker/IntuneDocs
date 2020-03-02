@@ -299,7 +299,7 @@ You can configure if restricted links should open directly in InPrivate browsing
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **True** will automatically open sites directly in an InPrivate tab, without prompting the user to make the switch to their personal account. <p> **False** (default) will block the site within Microsoft Edge and the user will be asked to switch to their personal account to view.    |
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **True** will automatically open sites directly in an InPrivate tab, without prompting the user to make the switch to their personal account. <p> **False** (default) will block the site within Microsoft Edge and the user will be asked to switch to their personal account to view.    |
 
 ## Disable Microsoft Edge features to customize the end user experience for your organization's needs
 
