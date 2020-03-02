@@ -160,9 +160,6 @@ Managed Google Play web links are installable and manageable just like other And
 
 Web links will open with Microsoft Edge or any other browser app you choose to deploy. Be sure to deploy at least one browser app to devices in order for web links to be able to open properly. However, all of the **Display** options available for web links (full screen, standalone, and minimal UI) will only work with the Chrome browser. 
 
-> [!IMPORTANT]
-> As of publication of this doc, there is a known Google bug that prevents web links from opening on devices with browsers other than Chrome. Google has committed to fixing this bug.  This notice will be removed when Microsoft has confirmation that Google has published their fix.
-
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
