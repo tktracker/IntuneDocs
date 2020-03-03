@@ -71,7 +71,7 @@ When your company is successfully registered, you can create your MDM profile fo
 |Profile Name       | Yes       |Enter a profile name of your choice. |
 |Description        | No        |Enter text describing the Profile. |
 |MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner| 
-|Custom JSON        | Yes*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn [how to create an enrollment profile](android-kiosk-enroll.md). |
+|Custom JSON        | Yes*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn how to create an enrollment token for [Dedicated devices](android-kiosk-enroll.md) and [Fully managed devices](android-fully-managed-enroll.md). |
 |Skip Setup wizard  | No        |Choose this option to skip standard device setup prompts for the end user.|
 |Allow End User to Cancel Enrollment | No | Choose this option to allow users to cancel KME.|
 | Add legal agreements | No | Leave this blank. |
