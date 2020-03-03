@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -339,6 +339,11 @@ The end user will see Windows Toast Notifications for the required and available
 The following image notifies the end user that app changes are being made to the device.
 
 ![Screenshot notifying the user that app changes are being made](./media/apps-win32-app-management/apps-win32-app-09.png)    
+
+Additionally, the Company Portal app shows additional app installation status messages to end users. The following conditions apply to Win32 dependency features:
+- App failed to install. Dependencies defined by the admin were not met.
+- App installed successfully but requires a restart.
+- App is in the process of installing, but requires a restart to continue.
 
 ## Set Win32 app availability and notifications
 You can configure the start time and deadline time for a Win32 app. At the start time, Intune management extension will start the app content download and cache it for required intent. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in the Company Portal and content will be downloaded when the end user requests the app from the Company Portal. Additionally, you can enable a restart grace period. 

@@ -60,11 +60,22 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 <!-- ########################## -->
 ## Week of March 2, 2020
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
 ### Bulk remote actions<!--4576882-->
 You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, sync, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
 
+#### Company Portal app installation status messages for Win32 apps <!-- 2514416 -->
+The Company Portal app shows additional app installation status messages to end users. The following conditions apply to new Win32 dependency features:
+- App failed to install. Dependencies defined by the admin were not met.
+- App installed successfully but requires a restart.
+- App is in the process of installing, but requires a restart to continue.
 
+For more information, see [Win32 app management](~/apps/apps-win32-app-management.md).
 
 <!-- ########################## -->
 ## Week of February 24, 2020
