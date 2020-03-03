@@ -78,7 +78,7 @@ When your company is successfully registered, you can create your MDM profile fo
 | Support contact details | Yes | Choose Edit to update your contact details |
 |Associate a Knox license with this profile | No | Leave this option unselected. Enrolling to Intune using KME doesn't require a Knox license.|
 
-/* This field is not required to complete profile creation in the Knox portal. However, Intune does require this field to be filled in so that the profile can successfully enroll the device in Intune.
+\* This field is not required to complete profile creation in the Knox portal. However, Intune does require this field to be filled in so that the profile can successfully enroll the device in Intune.
 
 ### For Android
 
