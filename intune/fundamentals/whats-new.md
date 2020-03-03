@@ -146,7 +146,7 @@ To see the new options, go to MEM > **Devices** > **iOS** > **Update policies fo
 #### Choose which iOS/iPadOS updates to push to enrolled devices<!--5879689  -->
 You can choose a specific iOS/iPadOS update (except for the most recent update) to push to devices that have enrolled by using either Apple Business Manager or Apple School Manager. Such devices must have a device configuration policy set to delay software update visibility for some number of days. To see this feature, go to MEM > **Devices** > **iOS** > **Update policies for iOS/iPadOS** > **Create profile**.
 
-### All devices list improved search, sort, and filter<!--6179023-->
+#### All devices list improved search, sort, and filter<!--6179023-->
 The All devices list has been improved for better performance, searching, sorting, and filtering.
 
 
