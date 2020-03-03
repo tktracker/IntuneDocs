@@ -181,6 +181,9 @@ You can assign a user to a specific Autopilot device. This assignment pre-fills 
 
 Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
 
+> [!NOTE]
+> Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
+
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
 
     ![Screenshot of Assign user](./media/enrollment-autopilot/assign-user.png)
