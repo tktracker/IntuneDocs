@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -477,6 +477,9 @@ Base settings are universal BitLocker settings for all types of data drives. The
   - **Block** - Disable the warning prompt if another disk encryption service is on the device.  
   - **Not configured** - Allow the warning for other disk encryption to be shown.  
 
+  > [!TIP]  
+  > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must be set to *Block*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-BitLocker-on-devices).
+
   When set to *Block*, you can then configure the following setting:  
 
   - **Allow standard users to enable encryption during Azure AD Join**  
@@ -486,6 +489,9 @@ Base settings are universal BitLocker settings for all types of data drives. The
 
      - **Allow** - Standard users (non-administrators) can enable BitLocker encryption when signed in.  
      - **Not configured** only Administrators can enable BitLocker encryption on the device.  
+
+  > [!TIP]  
+  > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must be set to *Allow*.For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-BitLocker-on-devices).
 
 - **Configure encryption methods**  
   **Default**: Not configured  
@@ -560,6 +566,9 @@ These settings apply specifically to operating system data drives.
     - **Do not allow startup PIN with TPM**  
     - **Require startup PIN with TPM**
 
+    > [!TIP]
+    > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-BitLocker-on-devices).
+
   - **Compatible TPM startup key**  
     **Default**: Allow startup key with TPM  
 
@@ -569,6 +578,9 @@ These settings apply specifically to operating system data drives.
     - **Do not allow startup key with TPM**  
     - **Require startup key with TPM**  
 
+    > [!TIP]
+    > To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-BitLocker-on-devices).
+
   - **Compatible TPM startup key and PIN**  
     **Default**: Allow startup key and PIN with TPM  
 
@@ -576,6 +588,8 @@ These settings apply specifically to operating system data drives.
     - **Allow startup key and PIN with TPM**  
     - **Do not allow startup key and PIN with TPM**  
     - **Require startup key and PIN with TPM**   
+
+    > [!TIP] To install BitLocker automatically and silently on a device that’s Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-BitLocker-on-devices).
 
 - **Minimum PIN Length**  
     **Default**: Not configured  
