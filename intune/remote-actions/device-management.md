@@ -44,7 +44,7 @@ The **Devices** workload gives you insights into the devices you manage, and let
    - **Overview** shows a visual snapshot of the enrolled devices, and also shows how many devices are using the different platforms, including Android, iOS/iPadOS, and more.
    - **All devices** shows a list of the enrolled devices you manage.
 
-     Use the **Export** feature to create a .csv list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
+     Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
      Select any device to [view additional details about that device](device-inventory.md), including hardware details, installed apps, its compliance policy status, and more.
 
@@ -66,7 +66,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Wipe](devices-wipe.md#wipe)
   - [Remote lock](device-remote-lock.md)
   - [Reset passcode](device-passcode-reset.md)
-  - [Disable Activation Lock](device-activation-lock-bypass.md) (iOS only)
+  - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
   - [Lost mode](device-lost-mode.md) (iOS only)
   - [Locate device](device-locate.md) (iOS only)

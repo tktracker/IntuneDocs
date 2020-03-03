@@ -75,10 +75,10 @@ Pausing for more than a few minutes during enrollment might cause the app to clo
     ![Example screenshot of Company Portal, "Set up access" screen.](./media/ios-enrollment-checklist-1909.PNG)  
 
 4. The **Select device and enrollment type** screen appears and prompts for your device type.  
-    * Tap **(Organization) owns this device** if you received your device from your organization. Then skip to [Secure entire device](###secure-entire-device) in this article to finish setup.  
+    * Tap **(Organization) owns this device** if you received your device from your organization. Then skip to [Secure entire device](#secure-entire-device) in this article to finish setup.  
     * Tap **I own this device** if you're using a personal device that you brought from home. Then continue to the next step.  
 
-    If you don't see this screen, skip to [Secure entire device](enroll-your-device-in-intune-ios.md#secure-entire-device) to finish setup.  
+    If you don't see this screen, skip to [Secure entire device](#secure-entire-device) to finish setup.  
     
     ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/ios-device-type-1909.PNG)  
 
