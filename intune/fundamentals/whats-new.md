@@ -58,6 +58,15 @@ Learn what’s new each week in Microsoft Intune. You can also find [important n
 -->  
 
 <!-- ########################## -->
+## Week of March 2, 2020
+
+### Bulk remote actions<!--4576882-->
+You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, sync, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
+
+
+
+
+<!-- ########################## -->
 ## Week of February 24, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
