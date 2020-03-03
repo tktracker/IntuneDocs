@@ -19,13 +19,12 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: karthib
+ms.reviewer: mattsha
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.reviewer: karthig
 ---
 
 # Windows 10 (and later) settings to protect devices using Intune
