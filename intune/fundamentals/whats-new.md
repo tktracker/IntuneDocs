@@ -61,17 +61,6 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 ## Week of March 2, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management
-
-#### Company Portal app installation status messages for Win32 apps <!-- 2514416 -->
-The Company Portal app shows additional app installation status messages to end users. The following conditions apply to new Win32 dependency features:
-- App failed to install. Dependencies defined by the admin were not met.
-- App installed successfully but requires a restart.
-- App is in the process of installing, but requires a restart to continue.
-
-For more information, see [Win32 app management](~/apps/apps-win32-app-management.md).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Microsoft Endpoint Manager tenant attach: Device sync and device actions<!-- 6317104, CM3555758-->
