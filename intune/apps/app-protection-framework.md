@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 As more organizations implement mobile device strategies for accessing work or school data, protecting against data leakage becomes paramount. Intune’s mobile application management solution for protecting against data leakage is App Protection Policies (APP). APP are rules that ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled. For more information, see [App protection policies overview](~/apps/app-protection-policy.md). 
 
-When configuring App Protection Policies, the number of various settings and options enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](http://aka.ms/secconframework), and Intune is leveraging this taxonomy for its APP data protection framework for mobile app management.  
+When configuring App Protection Policies, the number of various settings and options enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging this taxonomy for its APP data protection framework for mobile app management.  
 
 The APP data protection configuration framework is organized into three distinct configuration scenarios: 
 
@@ -59,7 +59,7 @@ As the above table indicates, all changes to the App Protection Policies should 
 
 When testing changes to an APP, be aware of the [delivery timing](~/apps/app-protection-policy-delivery.md). The status of APP delivery for a given user can monitored. For more information, see [How to monitor app protection policies](~/apps/app-protection-policies-monitor.md). 
 
-Individual APP settings for each app can be validated on devices using Edge and the URL *about:Intunehelp*. For more information, see [Review client app protection logs](~/apps/app-protection-policy-settings-log.md) and [Manage web access by using Microsoft Edge with Microsoft Intune](~/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs.md). 
+Individual APP settings for each app can be validated on devices using Edge and the URL *about:Intunehelp*. For more information, see [Review client app protection logs](~/apps/app-protection-policy-settings-log.md) and [Manage web access by using Microsoft Edge with Microsoft Intune](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs.md). 
 
 ## APP Data Protection Framework settings 
 
