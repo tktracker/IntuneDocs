@@ -53,7 +53,7 @@ Microsoft recommends the following deployment ring approach for the APP data pro
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Quality Assurance  | Pre-production tenant  | Mobile capability owners, Security, Risk Assessment, Privacy, UX  | Functional scenario validation, draft documentation  | 0-30 days  |
 | Preview  | Production tenant  | Mobile capability owners, UX  | End user scenario validation, user facing documentation  | 7-14 days, post Quality Assurance  |
-| Production  | Production tenant  | N/A  | N/A  | 7 days to several weeks, post Preview  |
+| Production  | Production tenant  | Mobile capability owners, IT help desk  | N/A  | 7 days to several weeks, post Preview  |
 
 As the above table indicates, all changes to the App Protection Policies should be first performed in a pre-production environment to understand the policy setting implications. Once testing is complete, the changes can be moved into production and applied to a subset of production users, generally, the IT department and other applicable groups. And finally, the rollout can be completed to the rest of the mobile user community. Rollout to production may take a longer amount of time depending on the scale of impact regarding the change. If there is no user impact, the change should roll out quickly, whereas, if the change results in user impact, rollout may need to go slower due to the need to communicate changes to the user population. 
 
@@ -78,15 +78,16 @@ For each App Protection Policy, the following core Microsoft apps should be incl
 - OneNote 
 - Outlook 
 - PowerPoint 
-- Teams 
+- Microsoft Teams 
+- Microsoft To-Do
 - Word 
-- SharePoint 
+- Microsoft SharePoint 
 
 The policies should include other Microsoft apps based on business need, additional third-party public apps that have integrated the Intune SDK used within the organization, as well as line-of-business apps that have integrated the [Intune SDK](~/developer/app-sdk.md) (or have been wrapped). 
 
 ### Level 1 enterprise basic data protection 
 
-Level 1 is the minimum data protection configuration for an enterprise mobile device. This configuration replaces the need for basic Exchange Online device access policies by requiring a PIN to access work or school data, encrypting the work or school account data, and providing the capability to selectively wipe the school or work data. However, unlike Exchange Online device access policies, the below App Protection Policy settings apply to all the apps selected in the policy, thereby ensuring data access is protected beyond mobile messaging scenarios. This is accomplished by deploying an App Protection Policy for apps that have integrated the Intune SDK. When the user first authenticates within these apps against the Microsoft cloud, the conditional checks are performed. Subsequent checks are performed any time the app is launched. 
+Level 1 is the minimum data protection configuration for an enterprise mobile device. This configuration replaces the need for basic Exchange Online device access policies by requiring a PIN to access work or school data, encrypting the work or school account data, and providing the capability to selectively wipe the school or work data. However, unlike Exchange Online device access policies, the below App Protection Policy settings apply to all the apps selected in the policy, thereby ensuring data access is protected beyond mobile messaging scenarios. 
 
 The policies in level 1 enforce a reasonable data access level while minimizing the impact to users and mirror the default settings when creating an App Protection Policy within Microsoft Endpoint Manager.  
 
@@ -97,14 +98,16 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Data   Transfer |             Backup org data to…  |             Allow  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Send org   data to other apps  |             All apps  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Receive   data from other apps  |             All apps  |             iOS/iPadOS, Android        |
-| Data   Transfer |       Save   copies of org data  |             Allow  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Restrict   cut, copy, and paste between apps  |             Any app  |             iOS/iPadOS, Android        |
+| Data   Transfer |       Third-party keyboards  |             Allow  |             iOS/iPadOS        |
+| Data   Transfer |       Approved keyboards  |             Not required  |             Android        |
 | Data   Transfer |       Screen   capture and Google Assistant  |             Allow  |             Android        |
 | Encryption |             Encrypt org data  |             Require  |             iOS/iPadOS, Android        |
 | Encryption |       Encrypt   org data on enrolled devices  |             Require  |             Android        |
 | Functionality  |             Sync app with native contacts app  |             Allow  |             iOS/iPadOS, Android        |
 | Functionality  |       Printing   org data  |             Allow  |             iOS/iPadOS, Android        |
 | Functionality  |       Restrict   web content transfer with other apps  |             Any app  |             iOS/iPadOS, Android        |
+| Functionality  |       Org data notifications  |             Allow  |             iOS/iPadOS, Android        |
 
 #### Access requirements 
 
@@ -119,21 +122,20 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
 | Face ID instead of PIN for access  | Allow  | iOS/iPadOS  |   |
 | PIN reset after number of days  | No  | iOS/iPadOS, Android  |   |
-| Select number of previous PIN values to maintain  | 0  | Android  |   |
 | App PIN when device PIN is set  | Require  | iOS/iPadOS, Android  | If the device is enrolled in Intune, administrators can consider setting this to “Not required” if they are enforcing a strong device PIN via a device compliance policy.  |
 | Work or school account credentials for access  | Not required  | iOS/iPadOS, Android  |   |
 | Recheck the access requirements after (minutes of inactivity)  | 30  | iOS/iPadOS, Android  |   |
 
 #### Conditional launch 
 
-| Setting | Setting description |          Value  |          Platform        | Notes |
+| Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App conditions |       Max PIN   attempts  |          5 / Reset   PIN  |          iOS/iPadOS,   Android  |                  |
 | App conditions |       Offline   grace period  |          720 /   Block access (minutes)  |          iOS/iPadOS,   Android  |                  |
 | App conditions |       Offline   grace period  |          90 / Wipe   data (days)  |          iOS/iPadOS,   Android  |                  |
-| Device conditions  |       Jailbroken/rooted   devices  |          Block   access  |          iOS/iPadOS,   Android  |                  |
+| Device conditions  |       Jailbroken/rooted   devices  |        N/A / Block   access  |          iOS/iPadOS,   Android  |                  |
 | Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          This   setting configures Google's SafetyNet Attestation on end user   devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. <p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.  |
-| Device conditions  |       Require   threat scan on apps  |          Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
+| Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
 
 #### Level 2 enterprise enhanced data protection 
 
@@ -146,23 +148,22 @@ The policy settings enforced in level 2 include all the policy settings recommen
 | Setting | Setting description |             Value  |             Platform        | Notes |
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Data Transfer |       Backup org   data to…  |          Block  |          iOS/iPadOS,   Android  |                  |
-| Data Transfer |       Send org   data to other apps  |          Policy   managed apps  |          iOS/iPadOS,   Android  |          With   iOS/iPadOS, administrators can configure this value to be “Policy managed   apps”, “Policy managed apps with OS sharing”, or “Policy managed apps   with Open-In/Share filtering”. <p>Policy managed apps with OS   sharing is available when the device is also enrolled with Intune. This   setting allows data transfer to other policy managed apps, as well as   file transfers to other apps that have are managed by   Intune. <br>Policy managed apps with Open-In/Share filtering   filters the OS Open-in/Share dialogs to only display policy managed   apps. <br> For more information, see [iOS app protection policy   settings](~/apps/app-protection-policy-settings-ios.md). |
+| Data Transfer |       Send org   data to other apps  |          Policy   managed apps  |          iOS/iPadOS,   Android  |          <p>With   iOS/iPadOS, administrators can configure this value to be “Policy managed   apps”, “Policy managed apps with OS sharing”, or “Policy managed apps   with Open-In/Share filtering”. </p><p>Policy managed apps with OS   sharing is available when the device is also enrolled with Intune. This   setting allows data transfer to other policy managed apps, as well as   file transfers to other apps that have are managed by   Intune. </p><p>Policy managed apps with Open-In/Share filtering   filters the OS Open-in/Share dialogs to only display policy managed   apps. </p><p> For more information, see [iOS app protection policy   settings](~/apps/app-protection-policy-settings-ios.md).</p> |
 | Data Transfer |       Save   copies of org data  |          Block  |          iOS/iPadOS,   Android  |                  |
-| Data Transfer |       Allow   users to save copies to selected services  |          OneDrive   for Business,  |          iOS/iPadOS,   Android  |                  |
-| Data Transfer |    SharePoint   Online  |  |  |  |
+| Data Transfer |       Allow   users to save copies to selected services  |          OneDrive   for Business, SharePoint Online |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Restrict   cut, copy, and paste between apps  |          Policy   managed apps with paste in  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Screen   capture and Google Assistant  |          Block  |          Android  |                  |
 | Functionality |       Restrict   web content transfer with other apps  |          Microsoft   Edge  |          iOS/iPadOS,   Android  |                  |
-| Functionality |       Org Data   Notifications  |          Block Org   Data  |          iOS/iPadOS,   Android  |          For a list   of apps that support this setting, see [iOS app protection policy   settings](~/apps/app-protection-policy-settings-ios.md) iOS   app protection policy settings and [Android   app protection policy   settings](~/apps/app-protection-policy-settings-android.md).       |
+| Functionality |       Org data   notifications  |          Block Org   Data  |          iOS/iPadOS,   Android  |          For a list   of apps that support this setting, see [iOS app protection policy   settings](~/apps/app-protection-policy-settings-ios.md) and [Android   app protection policy   settings](~/apps/app-protection-policy-settings-android.md).       |
 
 
 #### Conditional launch
 
-| Setting | Setting description |          Value  |          Platform        | Notes |
+| Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Device conditions  |       Min   OS version  |          Format: Major.Minor.Build <br>Example:   12.4.4  |          iOS/iPadOS        | Microsoft recommends configuring the minimum iOS   major version to match the supported iOS versions for Microsoft apps.   Microsoft apps support a N-1 approach where N is the current iOS major   release version. For minor and build version values, Microsoft recommends   ensuring devices are up to date with the respective security updates. See   Apple security updates for Apple’s latest recommendations |
-| Device conditions  |       Min   OS version  |          Format: Major.Minor<br>   Example: 8.0   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See Android Enterprise Recommended requirements for Android’s latest   recommendations |
-| Device conditions  |       Min patch   version  |          Format:   YYYY-MM-DD <br> Example: 2020-01-01   |          Android        | Android devices can receive monthly security patches, but the   release is dependent on OEMs and/or carriers. Organizations should ensure   that deployed Android devices do receive security updates before implementing   this setting. See Android Security Bulletins for the latest patch   releases.  |
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor.Build <br>Example:   12.4.4* / Block access |          iOS/iPadOS        | Microsoft recommends configuring the minimum iOS   major version to match the supported iOS versions for Microsoft apps.   Microsoft apps support a N-1 approach where N is the current iOS major   release version. For minor and build version values, Microsoft recommends   ensuring devices are up to date with the respective security updates. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple’s latest recommendations |
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 8.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android’s latest   recommendations |
+| Device conditions  |       Min patch   version  |          *Format:   YYYY-MM-DD <br> Example: 2020-01-01* / Block access  |          Android        | Android devices can receive monthly security patches, but the   release is dependent on OEMs and/or carriers. Organizations should ensure   that deployed Android devices do receive security updates before implementing   this setting. See [Android Security Bulletins](https://source.android.com/security/bulletin/) for the latest patch   releases.  |
 
 #### Level 3 enterprise high data protection 
 
@@ -186,14 +187,15 @@ The policy settings enforced in level 3 include all the policy settings recommen
 |       Simple   PIN  |          Block  |          iOS/iPadOS,   Android  |
 |       Select   Minimum PIN length  |          6  |          iOS/iPadOS,   Android  |
 |       PIN reset   after number of days  |          Yes  |          iOS/iPadOS,   Android  |
-|       Number of   days  |          1   year  |          iOS/iPadOS,   Android  |
+|       Number of   days  |          365  |          iOS/iPadOS,   Android  |
 |       Select   number of previous PIN values to maintain  |          5  |          Android  |
 
 #### Conditional launch
 
-| Setting | Setting description |          Value  |          Platform        | Notes |
+| Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|       Device   conditions  |          Max   allowed threat level  |          Secured  |          iOS/iPadOS,   Android        | Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](https://aka.ms/mtdmamdocs).      <p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](~/protect/mtd-device-compliance-policy-create.md). |
+|       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
+|       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](https://aka.ms/mtdmamdocs).      </p><p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](~/protect/mtd-device-compliance-policy-create.md).</p> |
 
 ## Next steps
 
