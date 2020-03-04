@@ -63,13 +63,14 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Bulk remote actions<!--4576882-->
-You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, sync, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
-
 #### Microsoft Endpoint Manager tenant attach: Device sync and device actions<!-- 6317104, CM3555758-->
 Microsoft Endpoint Manager is bringing together Configuration Manager and Intune into a single console. Starting in Configuration Manager technical preview version 2002.2, you can upload your Configuration Manager devices to the cloud service and take actions on them in the admin center. For more information, see [Features in Configuration Manager technical preview version 2002.2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach).
 
 Review the [Configuration Manager technical preview article](https://docs.microsoft.com/configmgr/core/get-started/technical-preview) before installing this update. This article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
+
+#### Bulk remote actions<!--4576882-->
+You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, sync, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
