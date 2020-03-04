@@ -61,6 +61,17 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 ## Week of March 2, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Company Portal app installation status messages for Win32 apps <!-- 2514416 -->
+The Company Portal app shows additional app installation status messages to end users. The following conditions apply to new Win32 dependency features:
+- App failed to install. Dependencies defined by the admin were not met.
+- App installed successfully but requires a restart.
+- App is in the process of installing, but requires a restart to continue.
+
+For more information, see [Win32 app management](~/apps/apps-win32-app-management.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Microsoft Endpoint Manager tenant attach: Device sync and device actions<!-- 6317104, CM3555758-->
@@ -71,17 +82,8 @@ Review the [Configuration Manager technical preview article](https://docs.micros
 #### Bulk remote actions<!--4576882-->
 You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, sync, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
 
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### App management
-
-#### Company Portal app installation status messages for Win32 apps <!-- 2514416 -->
-The Company Portal app shows additional app installation status messages to end users. The following conditions apply to new Win32 dependency features:
-- App failed to install. Dependencies defined by the admin were not met.
-- App installed successfully but requires a restart.
-- App is in the process of installing, but requires a restart to continue.
-
-For more information, see [Win32 app management](~/apps/apps-win32-app-management.md).
+#### All devices list improved search, sort, and filter<!--6179023-->
+The All devices list has been improved for better performance, searching, sorting, and filtering.
 
 <!-- ########################## -->
 ## Week of February 24, 2020
@@ -152,8 +154,6 @@ To see the new options, go to MEM > **Devices** > **iOS** > **Update policies fo
 #### Choose which iOS/iPadOS updates to push to enrolled devices<!--5879689  -->
 You can choose a specific iOS/iPadOS update (except for the most recent update) to push to devices that have enrolled by using either Apple Business Manager or Apple School Manager. Such devices must have a device configuration policy set to delay software update visibility for some number of days. To see this feature, go to MEM > **Devices** > **iOS** > **Update policies for iOS/iPadOS** > **Create profile**.
 
-#### All devices list improved search, sort, and filter<!--6179023-->
-The All devices list has been improved for better performance, searching, sorting, and filtering.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
