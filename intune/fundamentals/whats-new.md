@@ -75,7 +75,7 @@ For more information, see [Win32 app management](~/apps/apps-win32-app-managemen
 ### Device management
 
 #### Bulk remote actions<!--4576882-->
-You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, sync, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
+You can now issue bulk commands for the following remote actions: restart, rename, Autopilot reset, wipe, and delete. To see the new bulk actions, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk actions**.
 
 #### All devices list improved search, sort, and filter<!--6179023-->
 The All devices list has been improved for better performance, searching, sorting, and filtering.
