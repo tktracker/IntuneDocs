@@ -34,22 +34,22 @@ ms.collection: M365-identity-device-management
 
 As an IT admin, you must ensure that managed devices are providing the resources that your users need to do their work, while protecting that data from risk.
 
-The **Devices** workload gives you insights into the devices you manage, and lets you perform remote tasks on those devices.
+The **Devices** workload gives you insights into the devices you manage, and lets you activate remote tasks on those devices.
 
 ## Get to your devices
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
-   - **Overview** shows a visual snapshot of the enrolled devices, and also shows how many devices are using the different platforms, including Android, iOS/iPadOS, and more.
+   - **Overview** shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
    - **All devices** shows a list of the enrolled devices you manage.
 
      Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
-     Select any device to [view additional details about that device](device-inventory.md), including hardware details, installed apps, its compliance policy status, and more.
+     Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps,policies, and more.
 
    - **Azure AD devices** shows a list of the devices registered or joined with Azure Active Directory (Azure AD). Learn more about [Azure AD device management](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
-   - **Device actions** includes a history of the remote actions ran on different devices, including the action, its status, who initiated the action, and the time.
+   - **Device actions** includes a history of the remote actions ran on different devices, including the action, its status, who started the action, and the time.
 
      ![Screenshot of monitor device actions](./media/device-management/monitor-device-actions.png)
 
