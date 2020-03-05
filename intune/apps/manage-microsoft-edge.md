@@ -243,7 +243,7 @@ Use the following key/value pair to configure managed bookmarks:
 By default, your users are shown the MyApps sites that are configured to them within a folder inside Microsoft Edge bookmarks. The folder is labeled with the name of your organization.
 
 |    Key    |    Value    |
-|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **True** shows MyApps within the Microsoft Edge bookmarks.<p>**False** hides MyApps within Microsoft Edge.    |
     
 ## Use HTTPS protocol as default
