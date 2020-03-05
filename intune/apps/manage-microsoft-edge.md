@@ -187,14 +187,14 @@ Use the following key/value pair to configure a homepage shortcut:
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.homepage   |    Specify a valid URL. Incorrect URLs are blocked as a security measure.<br>**Example:** <`https://www.bing.com`>
+|    com.microsoft.intune.mam.managedbrowser.homepage   |    Specify a valid URL. Incorrect URLs are blocked as a security measure.<br>**Example:** <`https://www.bing.com`>     |
 
 ## Configure multiple top site shortcuts for new tab pages in Microsoft Edge 
-Similarly to configuring a homepage shortcut, you can configure multiple top site shortcuts on new tab pages in Microsoft Edge. The user can't edit or delete these shortcuts in a managed context.
+Similarly to configuring a homepage shortcut, you can configure multiple top site shortcuts on new tab pages in Microsoft Edge. The user can't edit or delete these shortcuts in a managed context. Note: you can configure a total of 8 shortcuts, including a homepage shortcut. If you have configured a homepage shortcut, that will override the first top site configured. 
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## Configure your organization's logo and brand color for new tab pages in Microsoft Edge
 
@@ -243,8 +243,17 @@ Use the following key/value pair to configure managed bookmarks:
 By default, your users are shown the MyApps sites that are configured to them within a folder inside Microsoft Edge bookmarks. The folder is labeled with the name of your organization.
 
 |    Key    |    Value    |
-|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **True** shows MyApps within the Microsoft Edge bookmarks.<p>**False** hides MyApps within Microsoft Edge.    |
+    
+## Use HTTPS protocol as default
+
+You can configure Microsoft Edge mobile to default to using the HTTPS protocol when the user doesn't specify one. Generally, this is considered a best practice. Use the following key/value pair to enable HTTPS as the default protocol:
+
+|    Key    |    Value    |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **True** sets the default protocol to use HTTPS     |
+
 
 ## Specify allowed or blocked sites list for Microsoft Edge
 You can use app configuration to define which sites your users can access when using their work profile. If you use an allow list, your users are only able to access the sites you’ve explicitly listed. If you use a blocked list, your users can access all sites except for those you’ve explicitly blocked. You should only impose either an allowed or a blocked list, not both. If you impose both, the allowed list is honored.  
@@ -297,7 +306,7 @@ With the dual-identity model built into Microsoft Edge, you can enable a more fl
 Use the following key/value pair to configure whether these soft transitions are allowed:
 
 |    Key    |    Value    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------------------------------------------------------------|-------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (default) allows Microsoft Edge to transition users to their  personal context to open blocked sites.<p>**False** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked.    |
 
 ## Disable InPrivate and Microsoft Accounts (MSA) to restrict personal browsing
@@ -314,11 +323,12 @@ If you are not deploying App Protection Policies, you can also restrict users fr
 
 ## Open restricted links directly in InPrivate tab pages
 
-You can configure if restricted links should open directly in InPrivate browsing, which provides users with a more seamless browsing experience. This would save users the step of having to transition over to their personal context to view a site. InPrivate browsing is considered unmanaged, so users will not be able to access when using InPrivate browsing mode.
+You can configure if restricted links should open directly in InPrivate browsing, which provides users with a more seamless browsing experience. This would save users the step of having to transition over to their personal context to view a site. InPrivate browsing is considered unmanaged, so users will not be able to access when using InPrivate browsing mode.  Note: For this setting to take effect, you also must have configured the above setting `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock` to **true**.
 
 |    Key    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **True** will automatically open sites directly in an InPrivate tab, without prompting the user to make the switch to their personal account. <p> **False** (default) will block the site within Microsoft Edge and the user will be asked to switch to their personal account to view.    |
+
 
 ## Disable Microsoft Edge features to customize the end user experience for your organization's needs
 
