@@ -178,7 +178,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Data transfer |       Receive   data from other apps  |          Policy   managed apps  |          iOS/iPadOS, Android         |  |
 | Data transfer |       Third-party   keyboards  |          Block  |          iOS/iPadOS        | On iOS, this blocks all third-party keyboards from   functioning within the app.  |
 | Data transfer |       Approved   keyboards  |          Require  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
-| Data transfer |       Select   keyboards to approve  |          *select   desired keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
+| Data transfer |       Select   keyboards to approve  |          *add/remove   keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
+| Functionality |       Printing org data  |          Block  |          iOS/iPadOS, Android         |  |
 
 #### Access requirements
 
