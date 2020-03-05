@@ -46,7 +46,7 @@ The **Devices** workload gives you insights into the devices you manage, and let
 
      Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
-     Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps,policies, and more.
+     Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps, policies, and more.
 
    - **Azure AD devices** shows a list of the devices registered or joined with Azure Active Directory (Azure AD). Learn more about [Azure AD device management](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
    - **Device actions** includes a history of the remote actions ran on different devices, including the action, its status, who started the action, and the time.
