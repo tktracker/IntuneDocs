@@ -306,8 +306,20 @@ With the dual-identity model built into Microsoft Edge, you can enable a more fl
 Use the following key/value pair to configure whether these soft transitions are allowed:
 
 |    Key    |    Value    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------------------------------------------------------------|-------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (default) allows Microsoft Edge to transition users to their  personal context to open blocked sites.<p>**False** prevents Microsoft Edge from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked.    |
+
+## Disable InPrivate and Microsoft Accounts (MSA) to restrict personal browsing
+Some customers in highly-regulated industries who are using Microsoft Edge may want to scope users to browsing within their AAD context only. You can use the following app config settings to disable Microsoft Accounts or InPrivate browsing.
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------------------------------------------------|
+|     `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** will disable InPrivate browser. <br> **msa** will disable users' ability to add personal MSA accounts to Microsoft Edge.<br> To disable both InPrivate and MSA accounts, use `inprivate| msa`    |  
+
+
+If you are not deploying App Protection Policies, you can also restrict users from using Microsoft Accounts and only allow browsing from a work or school account on enrolled devices. You can learn more about the keys to configure org-account-only mode for Microsoft Edge here:
+- [Android org-account-only](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [iOS org-accounts-only](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## Open restricted links directly in InPrivate tab pages
 
