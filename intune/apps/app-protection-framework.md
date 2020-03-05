@@ -188,7 +188,6 @@ The policy settings enforced in level 3 include all the policy settings recommen
 |       Select   Minimum PIN length  |          6  |          iOS/iPadOS,   Android  |
 |       PIN reset   after number of days  |          Yes  |          iOS/iPadOS,   Android  |
 |       Number of   days  |          365  |          iOS/iPadOS,   Android  |
-|       Select   number of previous PIN values to maintain  |          5  |          Android  |
 
 #### Conditional launch
 
