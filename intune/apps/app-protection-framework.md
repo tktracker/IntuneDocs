@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 As more organizations implement mobile device strategies for accessing work or school data, protecting against data leakage becomes paramount. Intune’s mobile application management solution for protecting against data leakage is App Protection Policies (APP). APP are rules that ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled. For more information, see [App protection policies overview](~/apps/app-protection-policy.md). 
 
-When configuring App Protection Policies, the number of various settings and options enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging this taxonomy for its APP data protection framework for mobile app management.  
+When configuring App Protection Policies, the number of various settings and options enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its APP data protection framework for mobile app management.  
 
 The APP data protection configuration framework is organized into three distinct configuration scenarios: 
 
@@ -178,7 +178,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Data transfer |       Receive   data from other apps  |          Policy   managed apps  |          iOS/iPadOS, Android         |  |
 | Data transfer |       Third-party   keyboards  |          Block  |          iOS/iPadOS        | On iOS, this blocks all third-party keyboards from   functioning within the app.  |
 | Data transfer |       Approved   keyboards  |          Require  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
-| Data transfer |       Select   keyboards to approve  |          *select   desired keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
+| Data transfer |       Select   keyboards to approve  |          *add/remove   keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
+| Functionality |       Printing org data  |          Block  |          iOS/iPadOS, Android         |  |
 
 #### Access requirements
 
@@ -188,7 +189,6 @@ The policy settings enforced in level 3 include all the policy settings recommen
 |       Select   Minimum PIN length  |          6  |          iOS/iPadOS,   Android  |
 |       PIN reset   after number of days  |          Yes  |          iOS/iPadOS,   Android  |
 |       Number of   days  |          365  |          iOS/iPadOS,   Android  |
-|       Select   number of previous PIN values to maintain  |          5  |          Android  |
 
 #### Conditional launch
 
