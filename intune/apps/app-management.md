@@ -94,7 +94,7 @@ The top of the App workload navigation menu provide commonly used app details:
 - **All apps**: Select this option to display a list of all available apps. You can add additional apps from this page. Additionally, you can see the status of each app, as well as whether each app is assigned. For more information, see:
     - [Add apps](apps-add.md).
     - [Assign apps](apps-deploy.md).
-- **[Monitor apps](apps-monitor.md)**
+- **Monitor apps**
     - **App licenses**: View, assign, and monitor volume-purchased apps from the app stores. For more information, see:
         - [iOS volume-purchased program (VPP) apps](vpp-apps-ios.md).
         - [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
@@ -119,7 +119,7 @@ The top of the App workload navigation menu provide commonly used app details:
 - **Help and support**: Troubleshoot, request support, or view Intune status. For more information, see [Troubleshoot problems](../fundamentals/help-desk-operators.md).
 
 ## Additional information
-
+The following items within the console provide app related functionality:
 - **Microsoft Store for Business**: Set up integration to the Microsoft Store for Business. Afterward, you can synchronize purchased applications to Intune, assign them, and track your license usage. For more information, see [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
 - **Windows enterprise certificate**: Apply or view the status of a code-signing certificate that's used to distribute line-of-business apps to your managed Windows devices.
 - **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate, which is needed to distribute XAP and WP8.x appx files to Windows 10 Mobile devices.
