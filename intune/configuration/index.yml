@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: dougeby
   ms.author: dougeby
-  ms.date: 09/16/2019  
+  ms.date: 02/18/2020
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -28,7 +28,7 @@ landingContent:
             url: device-profiles.md
       - linkListType: quickstart
         links:
-          - text: Create an email device profile for iOS
+          - text: Create an email device profile for iOS/iPadOS
             url: quickstart-email-profile.md
       - linkListType: how-to-guide
         links:
@@ -76,11 +76,11 @@ landingContent:
         url: shared-user-device-settings.md 
 
   # Card (optional)
-  - title: Settings for iOS
+  - title: Settings for iOS/iPadOS
     linkLists:
     - linkListType: how-to-guide      
       links:
-      - text: Add iOS device feature settings
+      - text: Add iOS/iPadOS device feature settings
         url: device-features-configure.md
       - text: Configure device restriction settings
         url: device-restrictions-configure.md
@@ -88,7 +88,7 @@ landingContent:
         url: email-settings-configure.md
       - text: Create VPN profiles to connect to VPN servers
         url: vpn-settings-configure.md
-      - text: Create per-app VPN profiles for iOS devices
+      - text: Create per-app VPN profiles for iOS/iPadOS devices
         url: vpn-setting-configure-per-app.md
       - text: Add and use Wi-Fi settings on your devices
         url: wi-fi-settings-configure.md          
@@ -98,7 +98,7 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide  
       links: 
-      - text: Add iOS device feature settings
+      - text: Add iOS/iPadOS device feature settings
         url: device-features-configure.md
       - text: Configure device restriction settings
         url: device-restrictions-configure.md
@@ -152,7 +152,7 @@ landingContent:
         url: device-restrictions-android.md
       - text: Android Enterprise
         url: device-restrictions-android-for-work.md
-      - text: iOS
+      - text: iOS/iPadOS
         url: ios-device-features-settings.md
       - text: macOS
         url: macos-device-features-settings.md

@@ -15,6 +15,8 @@
 
 - name: Tutorials
   items:
+  - name: Protect email on managed devices
+    href: ../protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
   - name: Protect email on unmanaged devices
     href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
   - name: Configure Slack to use Intune 
@@ -46,7 +48,7 @@
           href: store-apps-ios.md
         - name: Windows Phone 8.1 store apps
           href: store-apps-windows-phone-8-1.md
-        - name: Windows apps
+        - name: Windows store apps
           href: store-apps-windows.md
         - name: Microsoft Store for Business apps
           href: windows-store-for-business.md          
@@ -85,12 +87,16 @@
           href: apps-win32-s-mode.md          
       - name: Add specific apps
         items:
-        - name: Company Portal app
-          href: store-apps-company-portal-app.md
+        - name: Company Portal app - Autopilot
+          href: store-apps-company-portal-autopilot.md
+        - name: Company Portal app - Download
+          href: store-apps-company-portal-app.md          
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
-          href: apps-edge-macos.md          
+          href: apps-edge-macos.md   
+        - name: Microsoft Defender ATP for macOS
+          href: apps-advanced-threat-protection-macos.md                   
       - name: PowerShell scripts
         href: intune-management-extension.md  
     - name: Assign apps
@@ -158,6 +164,8 @@
         - name: App protection policies overview
           href: app-protection-policy.md
           displayName: app; protection; policy
+        - name: Data protection framework using APP
+          href: app-protection-framework.md
         - name: Create app protection policies
           items:
           - name: General settings

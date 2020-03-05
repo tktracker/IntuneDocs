@@ -95,7 +95,7 @@ Next, you'll create a device group and put the Autopilot devices you just loaded
 After creating a device group, you must create a deployment profile so that you can configure the Autopilot devices.
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
-2. On the **Basics** page, tor **Name**, enter *Autopilot Profile*. For **Description**, enter *Test profile for Autopilot devices*.
+2. On the **Basics** page, for **Name**, enter *Autopilot Profile*. For **Description**, enter *Test profile for Autopilot devices*.
 3. Set **Convert all targeted devices to Autopilot** to **Yes**. This setting makes sure that all devices in the list get registered with the Autopilot deployment service. Allow 48 hours for the registration to be processed.
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, choose **User-driven**. Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.

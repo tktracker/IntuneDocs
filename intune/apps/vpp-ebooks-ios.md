@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Manage volume-purchased iOS eBooks
+title: Manage volume-purchased iOS/iPadOS eBooks
 titleSuffix: Microsoft Intune
 description: Learn about how you can sync books you purchased in volume from the iOS store into Intune and then manage and track their usage.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# How to manage iOS eBooks you purchased through a volume-purchase program with Microsoft Intune
+# How to manage iOS/iPadOS eBooks you purchased through a volume-purchase program with Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -41,7 +41,7 @@ Microsoft Intune helps you synchronize, manage, and assign books that you purcha
 The procedures to manage books are similar to [managing VPP apps](../vpp-apps-ios.md).
 
 ## Manage volume-purchased books for iOS devices
-You buy multiple licenses for iOS books through the [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) or the [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). This process involves setting up an Apple VPP account from the Apple website and uploading the Apple VPP token to Intune.  You can then synchronize your volume purchase information with Intune and track your volume-purchased book use.
+You buy multiple licenses for iOS/iPadOS books through the [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) or the [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). This process involves setting up an Apple VPP account from the Apple website and uploading the Apple VPP token to Intune.  You can then synchronize your volume purchase information with Intune and track your volume-purchased book use.
 
 ## Before you start
 Before you start, get a VPP token from Apple and upload it to your Intune account. Additionally:
@@ -50,7 +50,7 @@ Before you start, get a VPP token from Apple and upload it to your Intune accoun
 * Each token is valid for one year.
 * By default, Intune syncs with the Apple VPP service twice a day. You can start a manual sync at any time.
 * After you have imported the VPP token to Intune, do not import the same token to any other device management solution. Doing so might result in the loss of license assignment and user records.
-* Before you start to use iOS books with Intune, remove any existing VPP user accounts created with other mobile device management (MDM) vendors. Intune does not synchronize those user accounts into Intune as a security measure. Intune synchronizes only data from the Apple VPP service that Intune created.
+* Before you start to use iOS/iPadOS books with Intune, remove any existing VPP user accounts created with other mobile device management (MDM) vendors. Intune does not synchronize those user accounts into Intune as a security measure. Intune synchronizes only data from the Apple VPP service that Intune created.
 * When you assign a book to a device, that device must have the built-in iBooks app installed. If it is not, the end user must reinstall the app before they can read the book. You cannot currently use Intune to restore removed built-in apps.
 * You can only assign books from the Apple Volume Purchase Program site. You cannot upload, then assign books you created in-house.
 * You cannot currently assign books to end-user categories in the same way as you do apps.

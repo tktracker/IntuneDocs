@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: iOS device settings in Microsoft Intune - Azure | Microsoft Docs
+title: iOS/iPadOS device settings in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Add, configure, or create settings on iOS devices to restrict features, including setting password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser in Microsoft Intune.
+description: Add, configure, or create settings on iOS/iPadOS devices to restrict features, including setting password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2020
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 This article lists and describes the different settings you can control on iOS and iPadOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
-These settings are added to a device configuration profile in Intune, and then assigned or deployed to your iOS devices.
+These settings are added to a device configuration profile in Intune, and then assigned or deployed to your iOS/iPadOS devices.
 
 > [!TIP]
 > These settings use Apple's MDM settings. For more information on these settings, see [Apple's mobile device management settings](https://support.apple.com/guide/mdm/welcome/web) (opens Apple's web site).
@@ -40,7 +40,7 @@ These settings are added to a device configuration profile in Intune, and then a
 [Create a device restrictions configuration profile](../device-restrictions-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS enrollment](../ios-enroll.md).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../ios-enroll.md).
 
 ## General
 
@@ -48,7 +48,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Share usage data**: Choose **Block** to prevent the device from sending diagnostic and usage data to Apple. **Not configured** (default) allows this data to be sent.
 
-- **Screen capture**: Choose **Block** to prevent screenshots or screen captures on the device. In iOS 9.0 and newer, it also blocks screen recordings. **Not configured** (default) lets the user capture the screen contents as an image or as a video.
+- **Screen capture**: Choose **Block** to prevent screenshots or screen captures on the device. In iOS/iPadOS 9.0 and newer, it also blocks screen recordings. **Not configured** (default) lets the user capture the screen contents as an image or as a video.
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
@@ -64,6 +64,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
   This feature applies to:  
   - iOS 9.3.2 and newer
+  - iPadOS 13.0 and newer
 
 - **Remote screen observation by Classroom app**: Choose **Block** to prevent the Classroom app from remotely viewing the screen on the device. **Not configured** (default) allows the Apple Classroom app to view the screen.
 
@@ -71,21 +72,22 @@ These settings are added to a device configuration profile in Intune, and then a
 
   This feature applies to:  
   - iOS 9.3 and newer
+  - iPadOS 13.0 and newer
 
-- **Unprompted screen observation by Classroom app**: If set to **Allow**, teachers can silently observe the screen of students iOS devices using the Classroom app without the students' knowledge. Student devices enrolled in a class using the Classroom app automatically give permission to that course’s teacher. **Not configured** (default) prevents this feature.
+- **Unprompted screen observation by Classroom app**: If set to **Allow**, teachers can silently observe the screen of students iOS/iPadOS devices using the Classroom app without the students' knowledge. Student devices enrolled in a class using the Classroom app automatically give permission to that course’s teacher. **Not configured** (default) prevents this feature.
 
   To use this setting, set the **Screen capture** setting to **Block**.
 
 - **Enterprise app trust**: Choose **Block** to remove the **Trust Enterprise Developer** button in Settings > General > Profiles & Device Management on the device. **Not configured** (default) lets the user choose to trust apps that aren't downloaded from the app store.
-- **Account modification**: When set to **Block**, the user can't update the device-specific settings from the iOS settings app. For example, the user can't create new device accounts, or change the user name or password. **Not configured** (default) allows users to change these settings.
+- **Account modification**: When set to **Block**, the user can't update the device-specific settings from the iOS/iPadOS settings app. For example, the user can't create new device accounts, or change the user name or password. **Not configured** (default) allows users to change these settings.
 
-  This feature also applies to settings accessible from the iOS settings app, such as Mail, Contacts, Calendar, Twitter, and more. This feature doesn't apply to apps with account settings that aren't configurable from the iOS settings app, such as the Microsoft Outlook app.
+  This feature also applies to settings accessible from the iOS/iPadOS settings app, such as Mail, Contacts, Calendar, Twitter, and more. This feature doesn't apply to apps with account settings that aren't configurable from the iOS/iPadOS settings app, such as the Microsoft Outlook app.
 
 - **Screen time**: Choose **Block** to prevent users from setting their own restrictions in Screen Time (device settings). **Not configured** allows the user to configure device restrictions (such as parental controls or content, and privacy restrictions) on the device.
 
   This setting was renamed from **Enabling restrictions in the device settings**. Impact of this change:  
   
-  - iOS 11.4.1 and earlier: **Block** prevents end users from setting their own restrictions in the device settings. The behavior is the same; and there are no changes for end users.
+  - iOS 11.4.1 and older: **Block** prevents end users from setting their own restrictions in the device settings. The behavior is the same; and there are no changes for end users.
   - iOS 12.0 and newer: **Block** prevents end users from setting their own **Screen Time** in the device settings (Settings > General > Screen Time), including content and privacy restrictions. Devices upgraded to iOS 12.0 won't see the restrictions tab in the device settings anymore (Settings > General > Device Management > Management Profile > Restrictions). These settings are in **Screen Time**.
   
 - **Use of the erase all content and settings option on the device**: Choose **Block** so users can't use the erase all content and settings option on the device. **Not configured** (default) gives users access to these settings.
@@ -94,7 +96,7 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Wallpaper modification**: **Block** prevents the wallpaper from being changed. **Not configured** (default) allows the user to change the wallpaper on the device.
 - **Enterprise app trust settings modification**: **Block** prevents the user from changing the enterprise app trust settings on supervised devices. **Not configured** (default) allows the user to trust apps that aren't downloaded from the app store.
 - **Configuration profile changes**: **Block** prevents configuration profile changes on the device. **Not configured** (default) allows the user to install configuration profiles.
-- **Activation Lock**: Choose **Allow** to enable Activation Lock on supervised iOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated.
+- **Activation Lock**: Choose **Allow** to enable Activation Lock on supervised iOS/iPadOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated.
 - **Block app removal**: Choose **Block** to prevent users from removing apps. **Not configured** (default) allows users to remove apps from the device.
 - **Allow USB accessories while device is locked**: **Allow** lets USB accessories exchange data with a device that's been locked for over an hour. **Not configured** (default) doesn't update USB Restricted mode on the device, and USB accessories will be blocked from transferring data from the device if locked for over an hour.
 - **Force automatic date and time**: **Require** forces supervised devices to set the Date & Time automatically. The device's time zone is updated when the device has cellular connections or has Wi-Fi with location services enabled.
@@ -102,24 +104,28 @@ These settings are added to a device configuration profile in Intune, and then a
 
   This feature applies to:  
   - iOS 11.3 and newer
+  - iPadOS 13.0 and newer
 
 - **Allow Classroom to lock to an app and lock the device without prompting**: **Enable** allows teacher to lock apps or lock the device using the Classroom app without prompting the student. Locking apps means the device can only access teacher specified apps. **Not configured** (default) prevents teachers from locking apps or devices using the Classroom app without prompting the student.
 
   This feature applies to:  
   - iOS 11.0 and newer
+  - iPadOS 13.0 and newer
 
 - **Automatically join Classroom classes without prompting**: **Enable** automatically allows students to join a class that is in the Classroom app without prompting the teacher. **Not configured** (default) prompts the teacher that students want to join a class that is in the Classroom app.
 
   This feature applies to:  
   - iOS 11.0 and newer
+  - iPadOS 13.0 and newer
 
 - **Block VPN creation**: **Block** prevents users from creating VPN configuration settings. **Not configured** (default) lets users create VPNs on the device.
 - **Modifying eSIM settings**: **Block** prevents users from removing or adding a cellular plan to the eSIM on the device. **Not configured** (default) allows users to change these settings.
 
   This feature applies to:  
   - iOS 12.1 and newer
+  - iPadOS 13.0 and newer
 
-- **Defer software updates**: When set to **Not configured** (default), software updates are shown on the device as Apple releases them. For example, if an iOS update gets released by Apple on a specific date, then that update naturally shows up on the device around the release date.
+- **Defer software updates**: When set to **Not configured** (default), software updates are shown on the device as Apple releases them. For example, if an iOS/iPadOS update gets released by Apple on a specific date, then that update naturally shows up on the device around the release date.
 
   **Enable** allows you to delay when software updates are shown on devices, from 0-90 days. This setting doesn't control when updates are or aren't installed. 
 
@@ -129,6 +135,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
     This setting applies to:  
     - iOS 11.3 and newer
+    - iPadOS 13.0 and newer
 
 ## Password
 
@@ -162,13 +169,13 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Number of sign-in failures before wiping device**: Enter the number of failed sign-ins to allow before the device is wiped (between 4-11).
   
-  iOS has built-in security that can impact this setting. For example, iOS may delay triggering the policy depending on the number of sign in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes.
+  iOS/iPadOS has built-in security that can impact this setting. For example, iOS/iPadOS may delay triggering the policy depending on the number of sign in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS/iPadOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes.
   
-- **Maximum minutes after screen lock before password is required**<sup>1</sup>: Enter how long the device stays idle before the user must reenter their password. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter. Supported on iOS 8.0 and newer devices.
+- **Maximum minutes after screen lock before password is required**<sup>1</sup>: Enter how long the device stays idle before the user must reenter their password. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter. Supported on devices running iOS 8.0+, and iPadOS 13.0+.
 
 - **Maximum minutes of inactivity until screen locks**<sup>1</sup>: Enter the maximum number of minutes of inactivity allowed on the device until the screen locks.
 
-  **iOS options**:  
+  **iOS/iPadOS options**:  
 
   - **Not configured** (Default): Intune doesn't touch this setting.
   - **Immediately**: Screen locks after 30 seconds of inactivity.
@@ -177,7 +184,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - **3**: Screen locks after 3 minutes of inactivity.
   - **4**: Screen locks after 4 minutes of inactivity.
   - **5**: Screen locks after 5 minutes of inactivity.
-    
+
   **iPadOS options**:  
 
   - **Not configured** (Default): Intune doesn't touch this setting.
@@ -187,7 +194,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - **10**: Screen locks after 10 minutes of inactivity.
   - **15**: Screen locks after 15 minutes of inactivity.
 
-  If a value doesn't apply to iOS or iPadOS, then Apple uses the closest *lowest* value. For example, if you enter `4` minutes, then iPadOS devices use `2` minutes. If you enter `10` minutes, then iOS devices use `5` minutes. This is an Apple limitation.
+  If a value doesn't apply to iOS and iPadOS, then Apple uses the closest *lowest* value. For example, if you enter `4` minutes, then iPadOS devices use `2` minutes. If you enter `10` minutes, then iOS devices use `5` minutes. This is an Apple limitation.
   
   > [!NOTE]
   > The Intune UI for this setting doesn't separate the iOS and iPadOS supported values. The UI might be updated in a future release.
@@ -200,6 +207,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
   Face ID applies to:  
   - iOS 11.0 and newer
+  - iPadOS 13.0 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -211,8 +219,9 @@ These settings are added to a device configuration profile in Intune, and then a
 
     Face ID applies to:  
     - iOS 11.0 and newer
+    - iPadOS 13.0 and newer
 
-- **Block password AutoFill**: Choose **Block** to prevent using the AutoFill Passwords feature on iOS. Choosing **Block** also has the following impact:
+- **Block password AutoFill**: Choose **Block** to prevent using the AutoFill Passwords feature on iOS/iPadOS. Choosing **Block** also has the following impact:
 
   - Users aren't prompted to use a saved password in Safari or in any apps.
   - Automatic Strong Passwords are disabled, and strong passwords aren't suggested to users.
@@ -225,8 +234,9 @@ These settings are added to a device configuration profile in Intune, and then a
 
   This feature applies to:  
   - iOS 11.0 and newer
+  - iPadOS 13.0 and newer
   
-<sup>1</sup>When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, the screen turns off automatically after five minutes, and the device is locked after an additional five minutes. However, if the user turns off the screen manually, the second setting is immediately applied. In the same example, after the user turns off the screen, the device locks five minutes later.
+<sup>1</sup> When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, the screen turns off automatically after five minutes, and the device is locked after an additional five minutes. However, if the user turns off the screen manually, the second setting is immediately applied. In the same example, after the user turns off the screen, the device locks five minutes later.
 
 ## Locked Screen Experience
 
@@ -250,25 +260,25 @@ These settings are added to a device configuration profile in Intune, and then a
   > [!NOTE]
   > When this setting is blocked, third party keyboards installed from the App Store are also blocked.
 
-  - **Allow unmanaged apps to read from managed contacts accounts**: When set to **Allow**, unmanaged apps, such as the built-in iOS Contacts app, can read and access contact information from managed apps, including the Outlook mobile app. **Not configured** (default) prevents reading, including removing duplicates, from the built-in Contacts app on the device.  
+  - **Allow unmanaged apps to read from managed contacts accounts**: When set to **Allow**, unmanaged apps, such as the built-in iOS/iPadOS Contacts app, can read and access contact information from managed apps, including the Outlook mobile app. **Not configured** (default) prevents reading, including removing duplicates, from the built-in Contacts app on the device.  
   
     This setting allows or prevents reading contact information. It doesn't control syncing contacts between the apps.
   
     To use this setting, set the **Viewing corporate documents in unmanaged apps** setting to **Block**.
 
-  For more information about these two settings, and their impact on Outlook for iOS contact export synchronization, see [Support Tip: Use Intune custom profile settings with the iOS Native Contacts App](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453).
+  For more information about these two settings, and their impact on Outlook for iOS/iPadOS contact export synchronization, see [Support Tip: Use Intune custom profile settings with the iOS/iPadOS Native Contacts App](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453).
 
 - **Treat AirDrop as an unmanaged destination**: **Require** forces AirDrop to be considered an unmanaged drop target. It stops managed apps from sending data using Airdrop. 
 - **Viewing non-corporate documents in corporate apps**: **Block** prevents viewing non-corporate documents in corporate apps. **Not configured** (default) allows any document to be viewed in corporate managed apps.
 
-  Setting to **Block** also prevents contact export synchronization in Outlook for iOS. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
+  Setting to **Block** also prevents contact export synchronization in Outlook for iOS/iPadOS. For more information, see [Support Tip: Enabling Outlook iOS/iPadOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Require iTunes Store password for all purchases**: **Require** the user to enter the Apple ID password for each in-app or ITunes purchase. **Not configured** (default) allows purchases without prompting for a password every time.
 - **In-app purchases**: Choose **Block** to prevent in-app purchases from the store. **Not configured** (default) allows store purchases within a running app.
 - **Download content from iBook store flagged as 'Erotica'**: Choose **Block** to prevent stops users from downloading media from the iBook store that's tagged as erotica. **Not configured** (default) allows the user to download books with the "Erotica" category.
-- **Allow managed apps to write contacts to unmanaged contacts accounts**: When set to **Allow**, managed apps, such as the Outlook mobile app, can save or sync contact information, including business and corporate contacts, to the built-in iOS Contacts app. When set to **Not configured** (default), managed apps can't save or sync contact information to the built-in iOS Contacts app on the device.
+- **Allow managed apps to write contacts to unmanaged contacts accounts**: When set to **Allow**, managed apps, such as the Outlook mobile app, can save or sync contact information, including business and corporate contacts, to the built-in iOS/iPadOS Contacts app. When set to **Not configured** (default), managed apps can't save or sync contact information to the built-in iOS/iPadOS Contacts app on the device.
   
   To use this setting, set the **Viewing corporate documents in unmanaged apps** setting to **Block**.
 
@@ -278,28 +288,29 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **App store**: **Block** prevents access to the app store on supervised devices. **Not configured** (default) allows access.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
   - **Installing apps from App Store**: Choose **Block** to block the app store from the device home screen. End users can continue to use iTunes or the Apple Configurator to install apps. **Not configured** (default) allows the app store on the home screen.
-  - **Automatic app downloads**: Choose **Block** to prevent automatic downloading of apps bought on other devices. It doesn't affect updates to existing apps. **Not configured** (default) allows apps bought on other iOS devices to download on the device.
+  - **Automatic app downloads**: Choose **Block** to prevent automatic downloading of apps bought on other devices. It doesn't affect updates to existing apps. **Not configured** (default) allows apps bought on other iOS/iPadOS devices to download on the device.
 
-- **Explicit iTunes music, podcast, or news content**: Choose **Block** to prevent explicit iTunes music, podcast, or news content. **Not configured** (default) allows the device to access content rated as adult from the store. iOS 13 and newer may require supervised only devices. 
+- **Explicit iTunes music, podcast, or news content**: Choose **Block** to prevent explicit iTunes music, podcast, or news content. **Not configured** (default) allows the device to access content rated as adult from the store.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Adding Game Center friends**: **Block** prevents users from adding Game Center friends. **Not configured** (default) allows the user to add friends in Game Center.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Game Center**: **Block** the use of the Game Center app. **Not configured** (default) allows using the Game Center app on the device.
 - **Multiplayer gaming**: Choose **Block** to prevent multiplayer gaming. **Not configured** (default) allows the user to play multiplayer games on the device.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Access to network drive in Files app**: Using the Server Message Block (SMB) protocol, devices can access files or other resources on a network server. **Disable** prevents accessing files on a network SMB drive. **Not configured** (default) allows access.
 
   This feature applies to:  
-  - iOS and iPadOS 13.0 and newer
+  - iOS 13.0 and newer
+  - iPadOS 13.0 and newer
 
 ## Built-in Apps
 
@@ -328,11 +339,11 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Camera**: Choose **Block** to prevent access to the camera on the device. **Not configured** (default) allows access to the device's camera.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
   - **FaceTime**: **Block** to prevent access to the FaceTime app. **Not configured** (default) allows access to the FaceTime app on the device.
 
-    Starting with iOS 13.0, this setting requires supervised devices.
+    Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Siri profanity filter**: **Require** prevents Siri from dictating, or speaking profane language.
 
@@ -352,16 +363,19 @@ These settings are added to a device configuration profile in Intune, and then a
 
   This feature applies to:  
   - iOS 4.0 and newer
+  - iPadOS 13.0 and newer
 
 - **Find my iPhone**: **Not configured** (default) allows using this Find My app feature to get the approximate location of the device. **Block** prevents this feature in the Find My app. 
 
   This feature applies to:  
-  - iOS 13.0 and iPadOS 13.0 and newer
+  - iOS 13.0 and newer
+  - iPadOS 13.0 and newer
 
 - **Find my Friends**: **Not configured** (default) allows using this Find My app feature to find family and friends from an Apple device or iCloud.com. **Block** prevents this feature in the Find My app.
 
   This feature applies to:  
-  - iOS 13.0 and iPadOS 13.0 and newer
+  - iOS 13.0 and newer
+  - iPadOS 13.0 and newer
 
 - **Changes to the Find My Friends app settings**: **Block** prevents changes to the Find My Friends app settings. **Not configured** (default) allows the user to change settings for the Find My Friends app.
 
@@ -371,11 +385,11 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Safari**: **Block** using the Safari browser on the device. **Not configured** (default) allows users to use the Safari browser.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Safari Autofill**: **Block** disables the autofill feature in Safari on the device. **Not configured** (default) allows users to change autocomplete settings in the web browser.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 ## Restricted apps
 
@@ -402,7 +416,7 @@ To add apps to these lists, you can:
 
 ## Show or hide apps
 
-Applies to devices running iOS 9.3 or newer.
+Applies to devices running iOS 9.3+, and iPadOS 13.0+.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -410,7 +424,7 @@ Applies to devices running iOS 9.3 or newer.
 
   - **Hidden apps**: Enter a list of apps that are hidden from users. Users can't view, or open these apps.
   
-    Apple prevents hiding some native apps. For example, you can't hide the **Settings** or **Wallet** apps on the device. [Delete built-in Apple apps](https://support.apple.com/HT208094) lists the apps that can be hidden.
+    Apple prevents hiding some native apps. For example, you can't hide the **Settings** app on the device. [Delete built-in Apple apps](https://support.apple.com/HT208094) lists the apps that can be hidden.
   
   - **Visible apps**: Enter a list of apps that users can view and launch. No other apps can be viewed or launched.
 
@@ -423,8 +437,6 @@ Applies to devices running iOS 9.3 or newer.
   To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL.
 
   You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
-  
-  For more information about locating a Bundle ID, see [How to find the bundle ID for an iOS app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).
 
 - **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
 - **App name**: Enter the app name of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
@@ -464,6 +476,7 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 
   This feature applies to:  
   - iOS 11.0 and newer
+  - iPadOS 13.0 and newer
 
 - **User modification of Personal Hotspot**: When set to **Block**, the user can't change the personal hotspot setting. **Not configured** (default) allows end users to enable or disable their personal hotspot.
 
@@ -471,6 +484,7 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 
   This feature applies to:  
   - iOS 12.2 and newer
+  - iPadOS 13.0 and newer
 
 - **Join Wi-Fi networks only using configuration profiles**: **Require** forces the device to use only Wi-Fi networks set up through Intune configuration profiles. **Not configured** (default) allows the device to use other Wi-Fi networks.
 
@@ -483,7 +497,8 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
   Configuring this setting doesn't prevent users from selecting a Wi-Fi network.
 
   This feature applies to:  
-  - iOS and iPadOS 13.0 and newer
+  - iOS 13.0 and newer
+  - iPadOS 13.0 and newer
 
 ## Connected Devices
 
@@ -500,7 +515,7 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 - **AirDrop**: **Block** prevents using AirDrop on the device. **Not configured** (default) allows using the AirDrop feature to exchange content with nearby devices.
 - **Apple Watch pairing**: **Block** prevents pairing with an Apple Watch. **Not configured** (default) allows the device to pair with an Apple Watch.
 - **Bluetooth modification**: **Block** stops the end user from changing Bluetooth settings on the device. **Not configured** (default) allows the user to change these settings.
-- **Host pairing to control the devices an iOS device can pair with**: **Not configured** (default) allows host pairing to let the administrator control which devices an iOS device can pair with. **Block** prevents host pairing.
+- **Host pairing to control the devices an iOS/iPadOS device can pair with**: **Not configured** (default) allows host pairing to let the administrator control which devices an iOS/iPadOS device can pair with. **Block** prevents host pairing.
 - **Block AirPrint**: Choose **Block** to prevent using the AirPrint feature on the device. **Not configured** (default) allows the user to use AirPrint.
   - **Block storage of AirPrint credentials in Keychain**: **Block** prevents using Keychain storage for username and password on the device. **Not configured** (default) allows storing the AirPrint username and password in the Keychain app.
   - **Require a trusted TLS certificate for AirPrint**: **Require** forces the device to use trusted certificates for TLS printing communication.
@@ -509,11 +524,13 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 
   This feature applies to:  
   - iOS 11.0 and newer
+  - iPadOS 13.0 and newer
 
 - **Access to files on USB drive**: Devices can connect and open files on a USB drive. **Disable** prevents device access to the USB drive in the Files app when a USB is connected to the device. Disabling this feature also blocks end users from transferring files onto a USB drive connected to an iPad. **Not configured** (default) allows access to a USB drive in the Files app.
 
   This feature applies to:  
-  - iOS and iPadOS 13.0 and newer
+  - iOS 13.0 and newer
+  - iPadOS 13.0 and newer
 
 ## Keyboard and Dictionary
 
@@ -528,7 +545,8 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 - **QuickPath**: **Not configured** (default) allows users to use QuickPath, which allows a continuous input on the device's keyboard. Users can type by swiping across the keys to create words. **Block** prevents users from using QuickPath. 
 
   This feature applies to:  
-  - iOS 13.0 and iPadOS 13.0 and newer
+  - iOS 13.0 and newer
+  - iPadOS 13.0 and newer
 
 ## Cloud and Storage
 
@@ -544,25 +562,27 @@ Note needed for Data Roaming (Tip or important note to help with customer confus
 - **Photo stream syncing to iCloud**: **Not configured** (default) lets users enable **My Photo Stream** on their device to sync to iCloud, and have photos available on all the user's devices. **Block** prevents photo stream syncing to iCloud. Blocking this feature may cause data loss. 
 - **iCloud Photo Library**: Set to **Block** to disable using iCloud photo library to store photos and videos in the cloud. Any photos not fully downloaded from iCloud Photo Library to the device are removed from the device. **Not configured** (default) allows using the iCloud photo library.
 - **Shared photo stream**: Choose **Block** to disable **iCloud Photo Sharing** on the device. **Not configured** (default) allows shared photo streaming.
-- **Handoff**: **Not configured** (default) allows users to start work on an iOS device, and then continue the work they started on another iOS or macOS device. **Block** prevents this handoff.
+- **Handoff**: **Not configured** (default) allows users to start work on an iOS/iPadOS device, and then continue the work they started on another iOS/iPadOS or macOS device. **Block** prevents this handoff.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
 - **Backup to iCloud**: **Not configured** (default) allows the user to back up the device to iCloud. **Block** stops the user from backing up the device to iCloud.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Block iCloud Document sync**: **Not configured** (default) allows document and key-value synchronization to your iCloud storage space. **Block** prevents iCloud from syncing documents and data.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 - **Block iCloud Keychain sync**: Choose **Block** to disable syncing credentials stored in the Keychain to iCloud. **Not configured** (default) allows users to sync these credentials.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
 ## Autonomous single app mode
 
-Use these settings to configure iOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the app is run, the device is locked. It can only run that app. For example, add an app that lets users take a test on the device. When the apps actions are complete, or you remove this policy, the device returns to its normal state.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the user starts one of the configured apps, the device is locked to that app. App/task switching is disabled until the user exits the allowed app.
+
+For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the end user authenticates. When the apps actions are completed by the user, or you remove this policy, the device returns to its normal state.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -615,14 +635,14 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Zoom control**: **Allow** zoom changes by the user. **Not configured** prevents zoom changes.
 
 > [!NOTE]
-> Before you can configure an iOS device for kiosk mode, you must use the Apple Configurator tool or the Apple Device Enrollment Program to put the device into supervised mode. See Apple's guide on using the Apple Configurator tool.
-> If the iOS app you enter is installed after you assign the profile, then the device doesn't enter kiosk mode until the device is restarted.
+> Before you can configure an iOS/iPadOS device for kiosk mode, you must use the Apple Configurator tool or the Apple Device Enrollment Program to put the device into supervised mode. See Apple's guide on using the Apple Configurator tool.
+> If the iOS/iPadOS app you enter is installed after you assign the profile, then the device doesn't enter kiosk mode until the device is restarted.
 
 ## Domains
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
-- **Unmarked email domains** > **Email Domain URL**: Add one or more URLs to the list. When end users receive an email from a domain other than the domains you enter, the email is marked as untrusted in the iOS Mail app.
+- **Unmarked email domains** > **Email Domain URL**: Add one or more URLs to the list. When end users receive an email from a domain other than the domains you enter, the email is marked as untrusted in the iOS/iPadOS Mail app.
 
 - **Managed web domains** > **Web Domain URL**; Add one or more URLs to the list. When documents are downloaded from the domains you enter, they're considered managed. This setting applies only to documents downloaded using the Safari browser.
 
@@ -632,14 +652,15 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
   This setting applies to:  
   - iOS 9.3 and newer
+  - iPadOS 13.0 and newer
 
 ## Settings that require supervised mode
 
-iOS supervised mode can only be enabled during initial device setup through Apple’s Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
+iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple’s Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
 - App Lock (Single App Mode) 
 - Global HTTP Proxy 
-- Activation Lock Bypass 
+- Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
 - Set background and lock screen 

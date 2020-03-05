@@ -32,12 +32,12 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune has many actions that help you managed devices. This article provides answers for some common questions that can help you troubleshoot device actions.
 
-## Bypass Activation Lock action
+## Disable Activation Lock action
 
-### I clicked the "Bypass Activation Lock" action in the portal but nothing happened on the device.
-This is expected. After starting the Bypass Activation Lock action, Intune is requested an updated code from Apple. You'll manually enter the code in the passcode field after your device is on the Activation Lock screen. This code is only valid for 15 days, so be sure to click the action and copy the code before you issue the Wipe.
+### I clicked the "Disable Activation Lock" action in the portal but nothing happened on the device.
+This is expected. After starting the Disable Activation Lock action, Intune is requested an updated code from Apple. You'll manually enter the code in the passcode field after your device is on the Activation Lock screen. This code is only valid for 15 days, so be sure to click the action and copy the code before you issue the Wipe.
 
-### Why don't I see the Bypass Activation Lock code in the Hardware overview blade of my iOS device?
+### Why don't I see the Disable Activation Lock code in the Hardware overview blade of my iOS/iPadOS device?
 The most likely reasons include:
 - The code has expired and been cleared from the service.
 - The device isn't Supervised with the Device Restriction Policy to allow Activation Lock.
@@ -46,12 +46,12 @@ You can check on the code in Graph Explorer with the following query:
 
 ```GET - https://graph.microsoft.com/beta/deviceManagement/manageddevices('deviceId')?$select=activationLockBypassCode.```
 
-### Why is the Bypass Activation Lock action greyed out for my iOS device?
+### Why is the Disable Activation Lock action greyed out for my iOS/iPadOS device?
 The most likely reasons include: 
 - The code has expired and been cleared from the service.
 - The device isn't Supervised with the Device Restriction Policy to allow Activation Lock.
 
-### Is the Bypass Activation Lock code case sensitive?
+### Is the Disable Activation Lock code case sensitive?
 No. And you don't need to enter the dashes.
 
 ## Remove devices action
@@ -93,8 +93,22 @@ Because the Reset Token hasn't been activated on the device. To activate the Res
 3. The end user must accept the secondary prompt to allow passcode reset.
 After these steps are complete, you should no longer receive this response.
 
-### Why am I prompted to set a new passcode on my iOS device when I issue the Remove Passcode action?
+### Why am I prompted to set a new passcode on my iOS/iPadOS device when I issue the Remove Passcode action?
 Because one of your compliance policies requires a passcode.
+
+
+## Wipe action
+
+### I can’t restart a Windows 10 device after using the wipe action
+This can be caused if you use the choose the **Wipe device, and continue to wipe even if devices loses power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** on a Windows 10 device.
+
+This may be caused when the installation of Windows has major corruption that is preventing the operating system from reinstalling. In such a case, the process fails and leaves the system in the [Windows Recovery Environment]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+
+### I can’t restart a BitLocker encrypted device after using the wipe action
+This can be caused if you use the choose the **Wipe device, and continue to wipe even if devices loses power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** option on a BitLocker encrypted device.
+
+To resolve this issue, use bootable media to re-install Windows 10 on the device.
+
 
 ## Next steps
 

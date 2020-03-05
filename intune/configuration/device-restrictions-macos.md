@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -167,7 +167,7 @@ To add apps to these lists, you can:
 - **Block iCloud Bookmark Backup**: **Block** prevents iCloud from syncing the devices Bookmarks. **Not configured** (default) allows Bookmark synchronization to iCloud.
 - **Block iCloud Notes Backup**: **Block** prevents iCloud from syncing the devices Notes. **Not configured** (default) allows Notes synchronization to iCloud.
 - **Block iCloud Photo Library**: **Block** disables iCloud Photo Library, and prevents iCloud from syncing the devices photos. Any photos not fully downloaded from iCloud Photo Library are removed from local storage on the device. **Not configured** (default) allows syncing photos between the device and the iCloud Photo Library.
-- **Handoff**: **Not configured** (default) allows users to start work on a macOS device, and then continue the work they started on another iOS or macOS device. **Block** prevents the Handoff feature on the device. 
+- **Handoff**: **Not configured** (default) allows users to start work on a macOS device, and then continue the work they started on another iOS/iPadOS or macOS device. **Block** prevents the Handoff feature on the device. 
 
   This feature applies to:  
   - macOS 10.15 and newer
@@ -182,4 +182,4 @@ To add apps to these lists, you can:
 
 [Assign the profile](../device-profile-assign.md) and [monitor its status](../device-profile-monitor.md).
 
-You can also restrict device features and settings on [iOS](../device-restrictions-ios.md) devices.
+You can also restrict device features and settings on [iOS/iPadOS](../device-restrictions-ios.md) devices.

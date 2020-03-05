@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,14 +29,14 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Manually add the Windows 10 Company Portal app by using Microsoft Intune
+# Add the Windows 10 Company Portal app by using Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store. If your business needs require that you assign the Company Portal app to them, however, you can manually assign the Windows 10 Company Portal app directly from Intune. You can do so even if you haven’t integrated Intune with the Microsoft Store for Business.
+To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store. If your business needs require that you assign the Company Portal app to them, however, you can assign the Windows 10 Company Portal app directly from Intune. You can do so even if you haven’t integrated Intune with the Microsoft Store for Business.
 
- > [!NOTE]
- > The option described in this article requires that you assign manual updates each time an app update is released.
+ > [!IMPORTANT]
+ > If you download the Company Portal app, the option described in this article requires that you assign manual updates each time an app update is released. To deploy the Company Portal app for Windows 10 Autopilot provisioned devices, see [Add Windows 10 Company Portal app Autopilot devices](~/apps/store-apps-company-portal-autopilot.md).
 
 ## Configure settings to show offline apps
 1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account.
@@ -60,7 +60,7 @@ To manage devices and install apps, your users can install the Company Portal ap
     This action must be completed for x86, x64, and ARM architectures:<br> 
     *There are 9 Required Framework Packages when selecting 1507 as the minimum OS Version, 12 packages when selecting 1511, and 15 packages when selecting 1607.*
 
-8. In Microsoft Intune in the Azure portal, upload the Company Portal app as a new app. You add the application by selecting Line-of-business app as the **App type** in the **Add app** pane. You then select the app package file (extension .AppxBundle).
+8. In Microsoft Intune in the Azure portal, upload the Company Portal app as a new app. You add the application by selecting Line-of-business app as the **App type** in the **Select app type** pane. You then select the app package file (extension .AppxBundle).
 
 9. Under **Select dependency app files** select all the dependencies you downloaded in step 7 by using shift-click, and verify that the **Added** column displays **Yes** for the architectures you need.
 

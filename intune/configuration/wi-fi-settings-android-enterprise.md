@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 02/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -157,8 +157,21 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
+- **Proxy settings**: Specify the proxy configuration used by your organization. Your options:
+
+  - **None** - You don't use a proxy server.
+  - **Automatic** – Select this option to  make  the *Proxy server URL* setting available, which you use to specify your proxy server or a  Proxy Auto-Configuration (PAC) file that contains a list of your proxy servers.
+
+- **Proxy server URL**: This setting is available when you set *Proxy settings* to *Automatic*. Specify one of the following options to direct devices to your proxy server:
+
+  - IP address. For example, `10.0.0.11`
+  - A URL. For example, `http://proxyserver.contoso.com`.
+  - The URL of a Proxy Auto-Configuration (PAC) file. For example: `http://proxy.contoso.com/proxy.pac`.
+
+  For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+
 ## Next steps
 
 The profile is created, but it's not doing anything. Next, [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
 
-You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md), and [Windows 8.1](wi-fi-settings-import-windows-8-1.md) devices.
+You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md), and [Windows 8.1](wi-fi-settings-import-windows-8-1.md) devices.

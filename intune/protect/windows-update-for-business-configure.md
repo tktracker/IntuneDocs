@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/14/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -76,20 +76,20 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 ## Windows 10 update rings
 
-Create update rings that specify how and when Windows as a Service updates your Windows 10 devices with Feature and Quality updates. With Windows 10, new Feature Updates and Quality Updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows 10 devices are up-to-date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
+Create update rings that specify how and when Windows as a Service updates your Windows 10 devices with Feature and Quality updates. With Windows 10, new Feature Updates and Quality Updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows 10 devices are up to date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
 
 Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
 
 ### Create and assign update rings
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center]( https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Windows 10 Update Rings** > **Create**.
 
 3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
-  ![Create an update ring]( ./media/windows-update-for-business-configure/basics-tab.png)
-  
-4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see Windows update settings. After configuring *Update and User experience* settings, select **Next**.
+  ![Create an update ring](./media/windows-update-for-business-configure/basics-tab.png)
+
+4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](../protect/windows-update-settings.md). After configuring *Update and User experience* settings, select **Next**.
 
 5. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 
@@ -97,7 +97,7 @@ Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You
 
 6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
 
-7. Under**Review + create**, review the settings and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
+7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
 
 ### Manage your Windows 10 Update rings
 
@@ -210,20 +210,22 @@ When a device receives a Windows 10 feature updates policy:
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won’t install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
+### Prerequisites for Windows 10 feature updates
+
+The following prerequisites must be met to use Windows 10 feature updates in Intune.
+
+- Devices must be enrolled in Intune MDM and Azure AD joined or Azure AD registered.
+- To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
+  
+  Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it’s off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
+
 ### Limitations for Windows 10 feature updates
 
 - When you deploy a *Windows 10 feature update* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
-- Windows 10 feature update policies cannot be applied during the out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day). In addition, devices that were provisioned with AutoPilot will not receive the policy.
-
-  This limitation is being examined to see if it can be supported in the future.
-
-> [!IMPORTANT]
-> To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
->
-> Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it’s off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
+- Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
 
 ### Create and assign Windows 10 feature updates
 
@@ -237,7 +239,7 @@ When a device receives a Windows 10 feature updates policy:
 
 5. Under **Review + create**, review the settings and select **Create** when ready to save the Windows 10 feature updates policy.  
 
-### Manage Windows 10 Feature updates
+### Manage Windows 10 feature updates
 
 In the admin center, go to **Devices** > **Windows** > **Windows 10 Feature updates** and select the policy that you want to manage. The policy opens to its **Overview** pane.
 
@@ -247,10 +249,12 @@ From this pane, you can:
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
 - Select **End user update status** to view information about the policy.
 
+## Validation and reporting for Windows 10 updates
+
+For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](../windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
+
 ## Next steps
 
 [Windows update settings supported by Intune](../windows-update-settings.md)
-
-[Intune compliance reports for updates](../windows-update-compliance-reports.md)
 
 [Troubleshooting Windows 10 update rings](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)

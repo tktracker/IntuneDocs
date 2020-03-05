@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2017
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,9 +43,12 @@ You can control mobile device access to corporate resources using Conditional Ac
 
 You can enable SEP Mobile risk assessment through Intune device compliance policies, and then use Conditional Access policies to allow or block noncompliant device access to corporate resources based on detected threats.
 
+> [!NOTE]
+> This Mobile Threat Defense vendor is not supported for unenrolled devices.
+
 ## How do Intune and SEP Mobile help protect your company resources?
 
-SEP Mobile app for Android or iOS captures file system, network stack, device and application telemetry where available, then sends it to the Symantec cloud service to assess the device's risk for mobile threats.
+SEP Mobile app for Android or iOS/iPadOS captures file system, network stack, device and application telemetry where available, then sends it to the Symantec cloud service to assess the device's risk for mobile threats.
 
 The Intune device compliance policy includes a rule for SEP Mobile, which is based on the SEP Mobile risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled.
 
@@ -125,7 +128,7 @@ Here are the steps you need to complete to integrate Intune with SEP Mobile:
 
 - [Set up SEP Mobile integration with Intune](skycure-mtd-connector-integration.md)
 
-- [Add and assign SEP Mobile apps, Microsoft Authenticator and iOS app configuration policy](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Add and assign SEP Mobile apps, Microsoft Authenticator and iOS/iPadOS app configuration policy](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
 - [Create SEP Mobile device compliance policy with Intune](mtd-device-compliance-policy-create.md)
 

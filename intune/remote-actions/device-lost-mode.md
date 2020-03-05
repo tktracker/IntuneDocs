@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Activate iOS lost mode with Microsoft Intune - Azure | Microsoft Docs
-description: Turn on or start lost mode to customize a message that appears on the lock screen of a lost or stolen iOS device by using Microsoft Intune. And, get details on security and privacy information when you are using the lost mode action.
+title: Activate iOS/iPadOS lost mode with Microsoft Intune - Azure | Microsoft Docs
+description: Turn on or start lost mode to customize a message that appears on the lock screen of a lost or stolen iOS/iPadOS device by using Microsoft Intune. And, get details on security and privacy information when you are using the lost mode action.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/25/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -28,15 +28,16 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Enable lost mode on iOS devices with Intune
+# Enable lost mode on iOS/iPadOS devices with Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-The **Lost mode** device action helps you enable lost mode on lost or stolen iOS devices. This mode lets you enter a message and a phone number that appears on the lock screen of the device. To use lost mode, the device must be a corporate-owned iOS device that is in supervised mode.
+The **Lost mode** device action helps you enable lost mode on lost or stolen iOS/iPadOS devices. This mode lets you enter a message and a phone number that appears on the lock screen of the device. To use lost mode, the device must be a corporate-owned iOS/iPadOS device that is in supervised mode.
 
 ## Supported platforms
 
 - iOS 9.3 and later
+- iPadOS 13.0 or later
 
 This feature is not supported for the following: 
 - Windows
@@ -48,7 +49,7 @@ This feature is not supported for the following:
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**, and then select **All devices**.
-4. From the list of devices you manage, choose an iOS device, and then choose the **Lost mode (supervised only)**.
+4. From the list of devices you manage, choose an iOS/iPadOS device, and then choose the **Lost mode (supervised only)**.
 5. Under **Lost mode**, select **Enable**.
 6. In the **Message to display on lock screen**, type a message to display on the device's lock screen.
 7. Optionally, enter a phone number in the **Phone number to display** box.

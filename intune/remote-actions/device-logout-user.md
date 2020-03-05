@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Log out the user of an iOS device 
+title: Log out the user of an iOS/iPadOS device 
 titleSuffix: Microsoft Intune
-description: Learn how to log out the current user of an iOS device with Intune."
+description: Learn how to log out the current user of an iOS/iPadOS device with Intune."
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Logout the current user on Intune-managed iOS devices
+# Logout the current user on Intune-managed iOS/iPadOS devices
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -40,15 +40,14 @@ The **Logout current user** action logs out the current user on a shared iPad de
 
 - Windows - Not supported
 - Windows Phone - Not supported
-- iOS - Supported on iOS 9.3 and later (shared iPad devices only)
+- iOS/iPadOS - Supported on iOS/iPadOS 9.3 and later (shared iPad devices only)
 - macOS - Not supported
 - Android - Not supported
 
 ## How to log out the current user
 
-1. Sign into the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-4. On the **Devices and groups** blade, choose **All devices**.
-5. From the list of devices you manage, choose an iOS device, and then choose the **Logout current user** device remote action.
+1. Sign into the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
+2. Choose an iOS/iPadOS device > **...** > **Logout current user**.
 
 ## Next steps
 

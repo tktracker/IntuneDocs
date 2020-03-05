@@ -31,12 +31,12 @@ ms.collection: M365-identity-device-management
 Email certificates, also known as S/MIME certificate, provide extra security to your email communications by using encryption and decryption. Microsoft Intune can use S/MIME certificates to sign and encrypt emails to mobile devices running the following platforms:
 
 - Android
-- iOS
+- iOS/iPadOS
 - macOS
 - Windows 10 and later
 - Windows Phone
 
-On iOS devices, you can create an Intune-managed email profile that uses S/MIME and certificates to sign and encrypt incoming and outgoing emails. For other platforms, S/MIME may or may not be supported. If it's supported, install certificates that use S/MIME signing and encryption. Then, an end user enables S/MIME in their email application.
+On iOS/iPadOS devices, you can create an Intune-managed email profile that uses S/MIME and certificates to sign and encrypt incoming and outgoing emails. For other platforms, S/MIME may or may not be supported. If it's supported, install certificates that use S/MIME signing and encryption. Then, an end user enables S/MIME in their email application.
 
 For more information about S/MIME email signing and encryption with Exchange, see [S/MIME for message signing and encryption](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
 
@@ -81,7 +81,7 @@ To deploy a PKCS certificate imported in Intune used for email encryption, follo
 
 ## S/MIME email profiles
 
-Once you have created S/MIME signing and encryption certificate profiles, you can [enable S/MIME for iOS native mail](../configuration/email-settings-ios.md).
+Once you have created S/MIME signing and encryption certificate profiles, you can [enable S/MIME for iOS/iPadOS native mail](../configuration/email-settings-ios.md).
 
 ## Next steps
 

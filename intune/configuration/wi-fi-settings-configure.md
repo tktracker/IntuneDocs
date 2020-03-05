@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a Wi-Fi profile for devices in Microsoft Intune - Azure | Microsoft Docs
-description: See the steps to create a Wi-Fi device configuration profile in Microsoft Intune. Create profiles for Android, Android Enterprise, Android kiosk, iOS, macOS, Windows 10 and later, and Windows Holographic for Business. Use these profiles to create a WiFi connection to use certificates, choose an EAP type, select an authentication method, enable a proxy, and more.
+description: See the steps to create a Wi-Fi device configuration profile in Microsoft Intune. Create profiles for Android, Android Enterprise, Android kiosk, iOS, iPadOS, macOS, Windows 10 and newer, and Windows Holographic for Business. Use these profiles to create a WiFi connection to use certificates, choose an EAP type, select an authentication method, enable a proxy, and more.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,10 +31,10 @@ ms.collection: M365-identity-device-management
 
 Wi-Fi is a wireless network that's used by many mobile devices to get network access. Microsoft Intune includes built-in Wi-Fi settings that can be deployed to users and devices in your organization. This group of settings is called a "profile", and can be assigned to different users and groups. Once assigned, your users get access your organization's Wi-Fi network without configuring it themselves.
 
-For example, you install a new Wi-Fi network named Contoso Wi-Fi. You then want to set up all iOS devices to connect to this network. Here's the process:
+For example, you install a new Wi-Fi network named Contoso Wi-Fi. You then want to set up all iOS/iPadOS devices to connect to this network. Here's the process:
 
 1. Create a Wi-Fi profile that includes the settings that connect to the Contoso Wi-Fi wireless network.
-2. Assign the profile to a group that includes all users of iOS devices.
+2. Assign the profile to a group that includes all users of iOS/iPadOS devices.
 3. Users find the new Contoso Wi-Fi network in the list of wireless networks on their device. They can then connect to the network, using the authentication method of your choosing.
 
 This article lists the steps to create a Wi-Fi profile. It also includes links that describe the different settings for each platform.
@@ -43,11 +43,12 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
 
 Wi-Fi profiles support the following device platforms:
 
-- Android 4 and later
+- Android 4 and newer
 - Android Enterprise and kiosk
-- iOS 8.0 and later
+- iOS 8.0 and newer
+- iPadOS 13.0 and newer
 - macOS X 10.11 and newer
-- Windows 10 and later, Windows 10 Mobile, and Windows Holographic for Business
+- Windows 10 and newer, Windows 10 Mobile, and Windows Holographic for Business
 
 > [!NOTE]
 > For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device.

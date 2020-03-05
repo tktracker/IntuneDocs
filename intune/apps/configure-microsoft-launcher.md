@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,13 +35,13 @@ Microsoft Launcher is an Android application that lets users personalize their p
 
 On Android Enterprise fully managed devices, Launcher allows enterprise IT admins to customize managed device home screens by selecting the wallpaper, apps, and icon positions. This standardizes the look and feel of all managed Android devices across different OEM devices and system versions. 
 
-## How to configure the Microsoft Managed Home Screen app 
+## How to configure the Microsoft Launcher app 
 
-Navigate to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Microsoft Launcher** as the associated app. Click on **Configuration settings** to configure the different available Managed Home Screen settings. 
+Navigate to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Microsoft Launcher** as the associated app. Click on **Configuration settings** to configure the different available Microsoft Launcher settings. 
 
 ## Choosing a Configuration Settings Format 
 
-There are two methods that you can use to define configuration settings for Managed Home Screen: 
+There are two methods that you can use to define configuration settings for Microsoft Launcher: 
 
 - **Configuration designer** allows you to configure settings with an easy-to-use UI that lets you toggle features on or off and set values. In this method, there are a few disabled configuration keys with value type BundleArray. These configuration keys can only be configured by entering JSON data. 
 

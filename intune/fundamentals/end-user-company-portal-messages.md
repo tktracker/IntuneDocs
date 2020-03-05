@@ -131,7 +131,7 @@ If you haven't added the Company Portal app to the **Allowed apps** or **Exempt 
 
 Add the Company Portal to the **Allowed apps** or **Exempt apps** list in the Windows Information Protection (WIP) app protection policy. For more information, see [Create and deploy Windows Information Protection (WIP) app protection policy with Intune](../apps/windows-information-protection-policy-create.md).
 
-## Approve a iOS company app (line-of-business app) on your iOS device 
+## Approve a iOS/iPadOS company app (line-of-business app) on your iOS/iPadOS device 
 
 ### Where it appears
 
@@ -141,7 +141,7 @@ iOS apps developed by your organization that are not available in the App Store 
 
 ### What it means
 
-This message means you need to modify your iOS device settings to approve and install an app developed by your company on your iOS device.
+This message means you need to modify your iOS/iPadOS device settings to approve and install an app developed by your company on your iOS/iPadOS device.
 
 When you install such apps using the Company Portal and launch the app, follow these steps to approve the app after you download it:
 

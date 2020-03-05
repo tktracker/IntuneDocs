@@ -83,15 +83,15 @@ Now you need to identify the organizational groups that are associated with each
 
 The next step is to identify the mobile device platforms associated with each use-case scenario. There may be more than one.
 
-For example, your corporate use-case scenario may support iOS and Android Samsung Knox device platforms. Your BYOD policy may include support for additional mobile device platforms like Android (non-Samsung Knox) and Windows 10 Mobile. Building on the preceding examples, we've associated mobile device platforms with each use-case scenario.
+For example, your corporate use-case scenario may support iOS/iPadOS and Android Samsung Knox device platforms. Your BYOD policy may include support for additional mobile device platforms like Android (non-Samsung Knox) and Windows 10 Mobile. Building on the preceding examples, we've associated mobile device platforms with each use-case scenario.
 
 | **Use cases** | **Sub-use cases** | **Groups** | **Device platforms** |   
 |:---:|:---:|:---:|:---:|
-| Corporate | Information worker | HR, Finance | iOS |                                                           
-| Corporate | Executives | HR, Finance | iOS |                                                           
+| Corporate | Information worker | HR, Finance | iOS/iPadOS |                                                           
+| Corporate | Executives | HR, Finance | iOS/iPadOS |                                                           
 | Corporate | Kiosk | Retail | Android |
-| BYOD | Information worker | Marketing, Sales | iOS |                                                           
-| BYOD | Executives | Marketing, Sales | iOS |
+| BYOD | Information worker | Marketing, Sales | iOS/iPadOS |                                                           
+| BYOD | Executives | Marketing, Sales | iOS/iPadOS |
 
 ## Next steps
 

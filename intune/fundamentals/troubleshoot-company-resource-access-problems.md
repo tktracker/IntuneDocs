@@ -2,7 +2,7 @@
 # required metadata
 
 title: Error and status codes in Microsoft Intune - Azure | Microsoft Docs
-description: See a list of the errors, status code, descriptions, and resolutions when using MDM managed devices, getting access to company resources, errors on iOS devices, and OMA response errors in Microsoft Intune.
+description: See a list of the errors, status code, descriptions, and resolutions when using MDM managed devices, getting access to company resources, errors on iOS/iPadOS devices, and OMA response errors in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -81,7 +81,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |-2016341111|0x87D11389|iOS device has returned an unexpected Idle status|
 |-2016341112|0x87D11388|iOS device is currently busy|
 
-## Errors returned by iOS devices
+## Errors returned by iOS/iPadOS devices
 
 ### Company Portal errors
 
@@ -90,7 +90,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |__Internal server issue__ <br>Looks like you couldn’t reach us due to an internal error on our server. Retry and then contact your IT admin if the issue continues.|500 error|This error is likely caused by a problem on in the Intune service. The issue should be resolved on the Intune service side and is likely not due to issues on the customer side.|
 |__Temporarily unavailable__ <br>Looks like you couldn’t reach us because our service is temporarily unavailable. Retry and then contact your IT admin if the issue continues.|503 error|This is likely due to a temporary Intune service issue, such as the service being under maintenance. The issue should be resolved on the Intune service side and is likely not due to issues on the customer side.|
 |__Can’t connect to server__ <br>Looks like you couldn’t reach us. Retry and then contact your IT admin if the issue continues.|Not associated with an HTTP status code|A secure connection to the server could not be made, likely due to an SSL issue with the certs being used. This issue may be due to customer configurations not being compliant with Apple’s requirements for App Transport Security (ATS).|
-|__Something went wrong__ <br>The Company Portal client couldn’t load. Retry and then contact your IT admin if the issue continues.|400 error|Any error with an HTTP status code in the 400s that does not have a more specific error message will see this one. This is a client side error happening in the Company Portal app for iOS.|
+|__Something went wrong__ <br>The Company Portal client couldn’t load. Retry and then contact your IT admin if the issue continues.|400 error|Any error with an HTTP status code in the 400s that does not have a more specific error message will see this one. This is a client side error happening in the Company Portal app for iOS/iPadOS.|
 |__Can't reach server__ <br>Looks like you couldn’t reach us. Retry and then contact your IT admin if the issue continues.|500 error|Any error with an HTTP status code in the 500s that does not have a more specific error message will see this one. This is a service side error happening in the Intune service.|
 
 ### Service errors
@@ -279,7 +279,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |-2016332105|0x87D136B7|4007:Unrecognized file format|
 |-2016332106|0x87D136B6|4006:Profile removal date is in the past|
 |-2016332107|0x87D136B5|4005:Passcode does not comply|
-|-2016332108|0x87D136B4|4004:User cancelled installation|
+|-2016332108|0x87D136B4|4004:User canceled installation|
 |-2016332109|0x87D136B3|4003:Profile not queued for installation|
 |-2016332110|0x87D136B2|4002:Duplicate UUID|
 |-2016332111|0x87D136B1|4001:Installation failure|
@@ -319,7 +319,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |-2016344112|0x87D107D0|DCMO(1200): Operation is performed successfully|
 |-2016345595|0x87D10205|Syncml(517): The response to an atomic command was too large to fit in a single message.|
 |-2016345596|0x87D10204|Syncml(516): Command was inside Atomic element and Atomic failed. This command was not rolled back successfully.|
-|-2016345598|0x87D10202|Syncml(514): The SyncML command was not completed successfully, since the operation was already cancelled before processing the command.|
+|-2016345598|0x87D10202|Syncml(514): The SyncML command was not completed successfully, since the operation was already canceled before processing the command.|
 |-2016345599|0x87D10201|Syncml(513): The recipient does not support or refuses to support the specified version of the SyncML Synchronization Protocol used in the request SyncML Message.|
 |-2016345600|0x87D10200|Syncml(512): An application error occurred during the synchronization session.|
 |-2016345601|0x87D101FF|Syncml(511): A severe error occurred in the server while processing the request.|
@@ -371,7 +371,7 @@ If you need support help, see [get support for Microsoft Intune](../get-support.
 |-2016345812|0x87D1012C|Syncml(300): The requested target is one of a number of multiple alternatives requested target.|
 |-2016345896|0x87D100D8|Syncml(216): A command was inside Atomic element and Atomic failed. This command was rolled back successfully.|
 |-2016345897|0x87D100D7|Syncml(215): A command was not executed, as a result of user interaction and user chose not to accept the choice.|
-|-2016345898|0x87D100D6|Syncml(214): Operation cancelled. The SyncML command completed successfully, but no more commands will be processed within the session.|
+|-2016345898|0x87D100D6|Syncml(214): Operation canceled. The SyncML command completed successfully, but no more commands will be processed within the session.|
 |-2016345899|0x87D100D5|Syncml(213): Chunked item accepted and buffered|
 |-2016345900|0x87D100D4|Syncml(212): Authentication accepted. No further authentication is needed for the remainder of the synchronization session. This response code can only be used in response to a request in which the credentials were provided.|
 |-2016345901|0x87D100D3|Syncml(211): Item not deleted. The requested item was not found. It could have been previously deleted.|

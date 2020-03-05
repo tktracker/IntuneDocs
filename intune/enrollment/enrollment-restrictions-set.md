@@ -48,11 +48,11 @@ The specific enrollment restrictions that you can create include:
 - Device platforms that can enroll:
   - Android device administrator
   - Android Enterprise work profile
-  - iOS
+  - iOS/iPadOS
   - macOS
   - Windows
   - Windows Mobile
-- Platform operating system version for iOS, Android device administrator, Android Enterprise work profile, Windows, and Windows Mobile. (Only Windows 10 versions can be used. Leave this blank if Windows 8.1 is allowed.)
+- Platform operating system version for iOS/iPadOS, Android device administrator, Android Enterprise work profile, Windows, and Windows Mobile. (Only Windows 10 versions can be used. Leave this blank if Windows 8.1 is allowed.)
   - Minimum version.
   - Maximum version.
 - Restrict [personally owned devices](device-enrollment.md#bring-your-own-device) (iOS, Android device administrator, Android Enterprise work profile, macOS, Windows, and Windows Mobile only).
@@ -71,13 +71,13 @@ Default restrictions are automatically provided for both device type and device 
 5. Under **Versions**, choose the minimum and maximum versions that you want the allowable platforms to support. Version restrictions only apply to devices enrolled with the Company Portal.
      Supported version formats include:
     - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
-    - iOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
+    - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
     - Windows supports major.minor.build.rev for Windows 10 only.
     
     > [!IMPORTANT]
     > Android Enterprise (work profile) and Android device administrator platforms have the following behavior:
     > - If both platforms are allowed for the same group, then users will be enrolled with a work profile if their device supports it, otherwise they will enroll as DA. 
-    > - If both platforms are allowed for the group and refined for specific and non-overlapping versions, then users will recieve the enrollment flow defined for their OS version. 
+    > - If both platforms are allowed for the group and refined for specific and non-overlapping versions, then users will receive the enrollment flow defined for their OS version. 
     > - If both platforms are allowed, but blocked for the same versions, then users on devices with the blocked versions will be taken down the Android device administrator enrollment flow and then get blocked from enrollment and prompted to sign out. 
     >
     > Worth noting that neither work profile or device administrator enrollment will work unless the appropriate prequisites have been completed in Android Enrollment. 
@@ -86,12 +86,13 @@ Default restrictions are automatically provided for both device type and device 
    > Windows 10 does not provide the rev number during enrollment so for instance if you enter in 10.0.17134.100 and the device is 10.0.17134.174 it will be blocked during enrollment.
 
 6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
-7. Choose **Next** to go to the **Assignments** page.
-8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
+7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
+8. Choose **Next** to go to the **Assignments** page.
+9. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for choosing platform settings](./media/enrollment-restrictions-set/select-groups.png)
-9. Select **Next** to go to the **Review + create** page.
-10. Select **Create** to create the restriction.
-11. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
+10. Select **Next** to go to the **Review + create** page.
+11. Select **Create** to create the restriction.
+12. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
 
 
 ## Create a device limit restriction
@@ -161,8 +162,8 @@ The following personal enrollment methods will also be blocked:
 \* These won't be blocked if registered with Autopilot.
 
 
-## Blocking personal iOS devices
-By default, Intune classifies iOS devices as personally-owned. To be classified as corporate-owned, an iOS device must fulfill one of the following conditions:
+## Blocking personal iOS/iPadOS devices
+By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
 - Registered with a serial number or IMEI.
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
 

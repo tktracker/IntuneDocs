@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,11 @@ You create a profile, and it includes all the settings you entered. The next ste
 This article shows you how to assign a profile, and includes some information on using scope tags on your profiles.
 
 > [!NOTE]  
-> When a profile is removed or no longer assigned to a device, the setting might keep the existing value. The setting doesn't revert to a default value. To change the setting to a different value, create a new profile and assign it.
+> When a profile is removed or no longer assigned to a device, different things can happen, depending on the settings in the profile. The settings are based on CSPs, and each CSP can handle the profile removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+>
+> To change a setting to a different value, create a new profile, configure the setting to **Not configured**, and assign the profile. Once applied to the device, users should have control to change the setting to their preferred value.
+>
+> When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/planning-guide-rollout-plan.md).
 
 ## Before you begin
 
@@ -89,7 +93,7 @@ To summarize, use device groups when you don't care who's signed in on the devic
 
 ### User groups
 
-Profile settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It’s normal for users to have many devices, such as a Surface Pro for work, and a personal iOS device. And, it's normal for a person to access email and other organization resources from these devices.
+Profile settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It’s normal for users to have many devices, such as a Surface Pro for work, and a personal iOS/iPadOS device. And, it's normal for a person to access email and other organization resources from these devices.
 
 For example:
 

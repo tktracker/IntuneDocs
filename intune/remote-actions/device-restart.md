@@ -2,12 +2,12 @@
 # required metadata
 
 title: Restart devices with Microsoft Intune - Azure | Microsoft Docs
-description: Restart Windows and iOS devices using Microsoft Intune in the Azure portal using the Restart remote action.
+description: Restart Windows and iOS/iPadOS devices using Microsoft Intune in the Azure portal using the Restart remote action.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/21/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -40,10 +40,10 @@ The **Restart** device action causes the device you choose to be restarted (with
 - Windows - Supported on Windows 8.1 and later
 - Windows Phone - Supported on Windows Phone 8.1 and later
 - Android kiosk devices - Supported on Android 7.0 and later
-- iOS - Supported
+- iOS/iPadOS - Supported
 
     > [!Note]  
-    > This command requires a supervised device and the **Device Lock** access right. The device restarts immediately. Passcode-locked iOS devices don't rejoin a Wi-Fi network after restart. After restart, the device might not be able to communicate with the server.
+    > This command requires a supervised device and the **Device Lock** access right. The device restarts immediately. Passcode-locked iOS/iPadOS devices don't rejoin a Wi-Fi network after restart. After restart, the device might not be able to communicate with the server.
 - macOS - Not supported
 - Android and Android work profile devices - Not supported
 

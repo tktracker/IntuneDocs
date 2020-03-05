@@ -36,9 +36,8 @@ The Windows Autopilot simplifies enrolling devices in Intune. Building and maint
 There are four types of Autopilot deployment:
 - [Self Deploying Mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) for kiosks, digital signage, or a shared device
 - [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) enables partners or IT staff to pre-provision a Windows 10 PC so that it's fully configured and business-ready
--[Autopilot for existing devices](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) enables you to easily deploy the latest version of Windows 10 to your existing devices
+- [Autopilot for existing devices](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) enables you to easily deploy the latest version of Windows 10 to your existing devices
 - [User Driven Mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) for traditional users. 
-
 
 ## Prerequisites
 - [Intune subscription](../fundamentals/licenses.md)
@@ -107,6 +106,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
     ![Screenshot of OOBE page](./media/enrollment-autopilot/create-profile-outofbox.png)
 
+   > [!NOTE]
+   > Options that appear dimmed or shaded are currently not supported by the selected deployment mode.
+
 6. In the **Join to Azure AD as** box, choose **Azure AD joined**.
 7. Configure the following options:
     - **End-user license agreement (EULA)**: (Windows 10, version 1709 or later) Choose if you want to show the EULA to users.
@@ -165,11 +167,21 @@ Alerts will show how many Autopilot program devices don't have Autopilot deploym
 
 To see alerts for unassigned devices, in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.  
 
+## Autopilot deployments report
+You can see details on each device deployed through Windows Autopilot.
+To see the report, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
+The data is available for 30 days after deployment.
+
+This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. This means that any deployment that doesn't trigger a new Intune enrollment will not be picked up by this report. This includes any kind of reset that maintains enrollment and the user portion of Autopilot White glove.
+
 ## Assign a user to a specific Autopilot device
 
 You can assign a user to a specific Autopilot device. This assignment pre-fills a user from Azure Active Directory in the [company-branded](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup. It also lets you set a custom greeting name. It doesn't pre-fill or modify Windows sign-in. Only licensed Intune users can be assigned in this manner.
 
 Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
+
+> [!NOTE]
+> Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
 
 1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
 

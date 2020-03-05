@@ -79,13 +79,13 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Locate iOS devices
+          - text: Locate iOS/iPadOS devices
             url: device-locate.md
-          - text: Turn on iOS supervised mode
+          - text: Turn on iOS/iPadOS supervised mode
             url: device-supervised-mode.md
-          - text: Turn on iOS lost mode
+          - text: Turn on iOS/iPadOS lost mode
             url: device-lost-mode.md
           - text: Erase data from macOS device
             url: device-erase.md
-          - text: Bypass activation lock
-            url: device-activation-lock-bypass.md
+          - text: Disable Activation Lock
+            url: device-activation-lock-disable.md

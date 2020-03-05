@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/27/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -54,17 +54,17 @@ This section mentions both Device Administrator (DA) and Samsung Knox enrollment
 | 0xC7D14FB1  | -942583887 | The   end user canceled the app installation. | The   user explicitly uninstalled the app. This error is returned when the Android   OS install activity was canceled by the user. The user pressed the cancel   button when the OS install prompt was presented or clicked away from the   prompt. This error is returned for only DA scenarios. For KNOX scenarios, the   user is not prompted to install, this can be done silently. Intune presents a   notification that users can click to retry. If the app is an available app,   the notification can be dismissed. However, if the app is required, it cannot   be dismissed. Ask the user not to cancel the install. |
 | 0xC7D14FB9 | -942583879 | The   end user canceled the app installation. (At the accept prompt) | Educate the user to accept the Intune deployed app and install   the app when prompted. |
 
-## iOS app installation errors
+## iOS and iPadOS app installation errors
 
-The following error messages and descriptions provide details about iOS installation errors. 
+The following error messages and descriptions provide details about iOS/iPadOS installation errors. 
 
 | Error   code (Hex) | Error code (Dec) | Error   message/code | Description/Troubleshooting   tips |
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Apple   MDM Agent error: App installation command failed with no error reason   specified. Retry app installation. | Apple   MDM Agent returned that the installation command failed. |
 | 0x87D1313C | -2016333508 | Network   connection on the client was lost or interrupted. Later attempts should   succeed in a better network environment. | The   network connection was lost while the updated download service URL was sent   to the device. Specifically, a server with the specified hostname could not   be found. |
-| 0x87D11388 | -2016341112 | iOS   device is currently busy.  | The   iOS device was busy, which resulted in an error. The device was locked. The   user needs to unlock the device to install the app. |
-| 0x87D13B64 | -2016330908 | The   app installation has failed.  | An   app installation failure occurred. iOS Console logs are needed to   troubleshoot this error. |
-| 0x87D13B66 | -2016330906 | The   app is managed, but has expired or been removed by the user.  | Either   the user explicitly uninstalled the app, or the app is expired but failed to   download, or the app detection does not match the response from the device.   Additionally, this error could occur based on an iOS 9.2.2 platform bug. |
+| 0x87D11388 | -2016341112 | iOS/iPadOS   device is currently busy.  | The   iOS/iPadOS device was busy, which resulted in an error. The device was locked. The   user needs to unlock the device to install the app. |
+| 0x87D13B64 | -2016330908 | The   app installation has failed.  | An   app installation failure occurred. iOS/iPadOS Console logs are needed to   troubleshoot this error. |
+| 0x87D13B66 | -2016330906 | The   app is managed, but has expired or been removed by the user.  | Either   the user explicitly uninstalled the app, or the app is expired but failed to   download, or the app detection does not match the response from the device.   Additionally, this error could occur based on an iOS/iPadOS 9.2.2 platform bug. |
 | 0x87D13B60 | -2016330912 | The   app is scheduled for installation, but needs a redemption code to complete   the transaction.  | This   error typically occurs with iOS Store apps which are paid apps. |
 | 0x87D1041C | -2016345060 | The   application was not detected after installation completed successfully.  | The   app detection process did not match with the response from the device. |
 | 0x87D13B62 | -2016330910 | The   user rejected the offer to install the app.  | During   initial app install, the user clicked cancel. Ask the user to accept the   install request the next time. |
@@ -73,7 +73,7 @@ The following error messages and descriptions provide details about iOS installa
 | 0x87D13B93 | -2016330861 | Can   only install VPP apps on Shared iPad. | The   apps must be obtained using Apple Volume Purchase Program to install on a   Shared iPad. |
 | 0x87D13B94 | -2016330860 | Can't   install apps when App Store is disabled. | The   App Store must be enabled for the user to install the app. |
 | 0x87D13B95 | -2016330859 | Can't   find VPP license for app. | Try   revoking and reassigning the app license. |
-| 0x87D13B96 | -2016330858 | Can't   install system apps with your MDM provider. | Installing   apps that are pre-installed by the iOS operating system is not a supported   scenario. |
+| 0x87D13B96 | -2016330858 | Can't   install system apps with your MDM provider. | Installing   apps that are pre-installed by the iOS/iPadOS operating system is not a supported   scenario. |
 | 0x87D13B97 | -2016330857 | Can't   install apps when device is in Lost Mode. | All   use of the device is blocked in Lost Mode. Disable Lost Mode to install apps. |
 | 0x87D13B98 | -2016330856 | Can't   install apps when device is in kiosk mode. | Try   adding this device to an exclude group for kiosk mode configuration policy to   install apps. |
 | 0x87D13B9C | -2016330852 | Can't   install 32-bit apps on this device. | The   device doesn't support installing 32-bit apps. Try deploying the 64-bit   version of the app. |
@@ -83,7 +83,7 @@ The following error messages and descriptions provide details about iOS installa
 | 0x87d13b7e | -2016330882 | License   Assignment failed with Apple error 'No VPP licenses remaining'  | This   behavior is by design. To resolve this, purchase additional VPP licenses or   reclaim licenses from users no longer targeted. |
 | 0x87d13b6e | -2016330898 | App   Install Failure 12024: Unknown cause.  | Apple   hasn't given us sufficient information to determine why the install failed.   Nothing to report. |
 | 0x87d13b7f | -2016330881 | Needed   app configuration policy not present, ensure policy is targeted to same   groups.  | App   requires app config but no app config is targeted. Admin should make sure the   groups the app is targeted to also has the required app config targeted to   the groups. |
-| 0x87d13b69 | -2016330903 | Device   VPP licensing is only applicable for iOS 9.0+ devices.  | Upgrade   affected iOS devices to iOS 9.0+. |
+| 0x87d13b69 | -2016330903 | Device   VPP licensing is only applicable for iOS/iPadOS 9.0+ devices.  | Upgrade   affected iOS/iPadOS devices to iOS/iPadOS 9.0+. |
 | 0x87d13b8f | -2016330865 | The   application is installed on the device but is unmanaged.  | This   error only happens to LOB apps. The app was installed outside of Intune. To   address this error, uninstall the app from the device. The next time the   device sync happens, the device should install the app from Intune. |
 | 0x87d13b68 | -2016330904 | User   declined app management  | Ask   the user to accept app management. |
 | 0x87d1279d | -2016335971 | Unknown   error.  | This   error happens to iOS store apps, but the error scenario is unknown. |
@@ -93,9 +93,7 @@ The following error messages and descriptions provide details about iOS installa
 | 0x87D13B72 | -2016330894 | You   lost connection to the Internet.  | App   Manifest validation failure due to network connectivity(Connection Lost) |
 | 0x87D13B73 | -2016330893 | You   lost connection to the Internet.  | App   Manifest validation failure due to network connectivity(Not Connected to   internet) |
 | 0x87D13B77 | -2016330889 | The   secure connection failed.  | App   Manifest validation failure due to network connectivity(Secure Connection   Failed) |
-| 0x87D13B6F | -2016330897 |  |   |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | App install   failed due to failure to Connect To ITunes Store |
-| 0x87D13B6E | -2016330898 |   | App   Manifest validation failure due to network connectivity(unknown) |
 | 0x87D13B9F  | -2016330849 | The VPP App has an update   available | This code is returned when a   VPP app is installed but there is a newer version available. |
 
 ## Other installation errors

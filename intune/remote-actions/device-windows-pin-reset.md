@@ -67,7 +67,7 @@ Replace *tenant ID* with your Azure AD Directory ID, which is listed in the **Pr
 Set the value for this CSP to **True**.
 
 > [!TIP]
-> After you create the policy, you assign (or deploy) it to a group. The policy can be assigned to user groups or a device groups. If you assign it to a users group, then the group may include users who have other devices, such as IOS. Technically, the policy doesn't apply, but these devices are still included in the status details.
+> After you create the policy, you assign (or deploy) it to a group. The policy can be assigned to user groups or a device groups. If you assign it to a users group, then the group may include users who have other devices, such as iOS/iPadOS. Technically, the policy doesn't apply, but these devices are still included in the status details.
 
 ## Reset the passcode
 

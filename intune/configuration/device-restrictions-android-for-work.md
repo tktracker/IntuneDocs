@@ -340,7 +340,7 @@ These password settings apply to personal profiles on devices that use a work pr
 
 - **Minimum password length**: Enter the minimum number of characters the user's password must have, from **4**-**14**.
 - **Maximum minutes of inactivity until screen locks**: Select the amount of time before an inactive device automatically locks
-- **Number of sign-in failures before wiping device**: Enter the number of times an incorrect password can be entered before all data is wiped from the device
+- **Number of sign-in failures before wiping device**: Enter the number of times an incorrect password can be entered before the work profile is wiped from the device.
 - **Password expiration (days)**: Enter the number of days until an end user's password must be changed (from **1**-**255**)
 - **Required password type**: Select the type of password that must be set on the device. Choose from:
   - **Device default**

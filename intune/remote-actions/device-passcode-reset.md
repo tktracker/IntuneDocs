@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/18/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -40,9 +40,9 @@ This document discusses both device level passcode reset and work profile passco
 | Platform | Supported? |
 | ---- | ---- |
 | Android devices on version 6.x or earlier | Yes |
-| Android enterprise devices in kiosk mode | Yes |
-| iOS devices | Yes |
-| iOS devices enrolled with User Enrollment | No |
+| Android enterprise devices enrolled as Device Owner | Yes |
+| iOS/iPadOS devices | Yes |
+| iOS/iPadOS devices enrolled with User Enrollment | No |
 | Android devices enrolled with a work profile | No |
 | Android devices on version 7.0 or later | No |
 | macOS | No |
@@ -65,7 +65,7 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin, Helpdesk Operator, or Role Administrator.
 2. Select **Devices**, and then select **All devices**.
-3. From the list of devices you manage, select a device, and choose **...More**. Then choose the **Remove passcode** device remote action.
+3. From the list of devices you manage, select a device, and choose **Remove passcode**.
 
 ## Reset Android work profile passcodes
 
@@ -74,9 +74,9 @@ Supported Android Enterprise devices enrolled with a work profile receive a new 
 For Android Enterprise devices running version 8.x or later and enrolled with a work profile, end users get notified to activate their reset passcode right after enrollment is completed. The notification is displayed if a work profile password is required and set. Once their passcode is entered, the notification is dismissed.
 
 
-## Remove iOS passcodes
+## Remove iOS/iPadOS passcodes
 
-Instead of being reset, passcodes are removed from iOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
+Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
 
 ## Next steps
 

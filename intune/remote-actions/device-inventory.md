@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -44,11 +44,16 @@ This article shows you how to view all your devices, and their properties in the
    - **Overview** shows the device name, and lists some key properties of the device, like whether it's a bring-your-own-device (BYOD) device, check in time, and more. You can do the following on the device:
       - [Retire](devices-wipe.md#retire)
       - [Wipe](devices-wipe.md#wipe)
+      - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Remote lock](device-remote-lock.md)
-      - [Synchronize device](device-sync.md)
+      - [Synch](device-sync.md)
       - [Reset passcode](device-passcode-reset.md)
       - [Restart](device-restart.md) (Windows only)
       - [Fresh Start](device-fresh-start.md) (Windows only)
+      - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows only)
+      - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
+      - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
+       - [Rename device](device-rename.md)
       - Start a remote assistance session
    - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
    - **Hardware** includes many details about the device, like the device ID, operating system and version, storage space, and more details.
@@ -78,25 +83,25 @@ Depending on the carrier used by the devices, not all details might be collected
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, iOS|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
-|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS, Android|
-|MEID|The device's mobile equipment identifier.|Windows, iOS, Android|
-|Manufacturer|The manufacturer of the device.|Windows, iOS, Android|
-|Model|The model of the device.|Windows, iOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS, Android*|
-|Subscribe carrier|The device's wireless carrier.|Windows, iOS, Android|
-|Cellular technology|The radio system used by the device.|Windows, iOS, Android|
-|Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS, Android|
-|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS, Android|
-|Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS, Android|
-|Last contact|The date and time that the device last connected to Intune.|Windows, iOS, Android|
-|Activation lock bypass code|The code that can be used to bypass the activation lock.|iOS|
-|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, iOS, Android|
-|Intune registered|If **Yes**, the device is registered with Intune|Windows, iOS, Android|
-|Compliance|The device's compliance state.|Windows, iOS, Android|
-|EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, iOS, Android|
-|EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, iOS, Android|
-|Supervised|If **Yes**, administrators have enhanced control over the device.|Windows, iOS, Android|
-|Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS, Android|
+|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android|
+|MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
+|Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
+|Model|The model of the device.|Windows, iOS/iPadOS, Android|
+|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android*|
+|Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
+|Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
+|Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS/iPadOS, Android|
+|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android|
+|Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS/iPadOS, Android|
+|Last contact|The date and time that the device last connected to Intune.|Windows, iOS/iPadOS, Android|
+|Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
+|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, iOS/iPadOS, Android|
+|Intune registered|If **Yes**, the device is registered with Intune|Windows, iOS/iPadOS, Android|
+|Compliance|The device's compliance state.|Windows, iOS/iPadOS, Android|
+|EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, iOS/iPadOS, Android|
+|EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, iOS/iPadOS, Android|
+|Supervised|If **Yes**, administrators have enhanced control over the device.|Windows, iOS/iPadOS, Android|
+|Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
 > Phone number is not inventoried on Android Enterprise Dedicated or Fully Managed devices.

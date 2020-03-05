@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Intune shared device settings for the iOS Classroom app
+title: Intune shared device settings for the iOS/iPadOS Classroom app
 titleSuffix: Microsoft Intune
-description: Learn the Intune settings you can use to control settings for the Classroom app on iOS devices.  
+description: Learn the Intune settings you can use to control settings for the Classroom app on iOS/iPadOS devices.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -35,11 +35,11 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 > [!NOTE]
-> Intune doesn't currently support configuring the Classroom app. This article is only applicable for users with existing iOS education profiles in Intune.
+> Intune doesn't currently support configuring the Classroom app. This article is only applicable for users with existing iOS/iPadOS education profiles in Intune.
 
-Intune supports the iOS Classroom app that helps teachers to guide learning, and control student devices in the classroom. In addition, to the Classroom app, Apple supports the ability for student iPad devices to be configured such that multiple students can share a single device. This document guides you to achieve this goal with Intune.
+Intune supports the iOS/iPadOS Classroom app that helps teachers to guide learning, and control student devices in the classroom. In addition, to the Classroom app, Apple supports the ability for student iPad devices to be configured such that multiple students can share a single device. This document guides you to achieve this goal with Intune.
 
-For information about configuring dedicated (1:1) iPad devices to use the Classroom app, see [How to configure Intune settings for the iOS Classroom app](education-settings-configure-ios.md).
+For information about configuring dedicated (1:1) iPad devices to use the Classroom app, see [How to configure Intune settings for the iOS/iPadOS Classroom app](education-settings-configure-ios.md).
 
 ## Before you start
 
@@ -69,7 +69,7 @@ You can import information into SDS by using one of the following methods:
 - [Find out more about licensing in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
-## Step 2 - Create and assign an iOS Education profile in Intune
+## Step 2 - Create and assign an iOS/iPadOS Education profile in Intune
 
 ### Configure general settings
 
@@ -77,7 +77,7 @@ You can import information into SDS by using one of the following methods:
 3. On the **Intune** pane, choose **Device configuration**.
 2. On the **Device configuration** pane under the **Manage** section, choose **Profiles**.
 5. On the profiles pane, choose **Create profile**.
-6. On the **Create profile** pane, enter a **Name** and **Description** for the iOS education profile.
+6. On the **Create profile** pane, enter a **Name** and **Description** for the iOS/iPadOS education profile.
 7. From the **Platform** drop-down list, choose **iOS**.
 8. From the **Profile type** drop-down list, choose **Education**.
 9. Choose **Settings** > **Configure**.

@@ -72,8 +72,8 @@ Read the following list of tips to make your organization's Intune deployment ea
   * [How your Android users get their apps](end-user-apps-android.md)
 
 * **iOS**
-  * [Using an iOS device with Intune](https://docs.microsoft.com/intune-user-help/using-your-ios-device-with-intune)
-  * [How your iOS users get their apps](end-user-apps-ios.md)
+  * [Using an iOS/iPadOS device with Intune](https://docs.microsoft.com/intune-user-help/using-your-ios-device-with-intune)
+  * [How your iOS/iPadOS users get their apps](end-user-apps-ios.md)
 
 * **Windows**
   * [Using a Windows device with Intune](https://docs.microsoft.com/intune-user-help/using-your-windows-device-with-intune)

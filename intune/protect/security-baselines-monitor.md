@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,10 +49,10 @@ The **Overview** pane provides two methods to monitor status:
 Each device is represented by one of the following statuses (used in the *device* view and also the *per-category* views):
 
 - **Matches baseline** - All the settings in the baseline match the recommended settings.
-- **Does not match baseline** - At least one setting in the baseline doesn't match the recommended setting.
+- **Does not match baseline** - One or more settings in the baseline were modified from their default values in the original baseline. The default values in each security baseline are the recommended values for that baseline.
 
   > [!NOTE]
-  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a "Does not match baseline" status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
+  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a *Does not match baseline* status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
 
 - **Misconfigured** - At least one setting isn't correctly configured. This status means that the setting is in a conflict, error, or pending state.
 - **Not applicable** - At least one setting isn't applicable and isn't applied.
@@ -110,6 +110,18 @@ Monitoring the profile gives you insight into the deployment state of your devic
 
    ![See the different monitor options for a security baselines profile](./media/security-baselines-monitor/monitor-status-options.png)
 
+## View Endpoint security configurations per device
+
+View details about the security configurations that apply to an individual device, which can help you isolate settings that  are misconfigured.
+
+1. Sign in to the  sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Go to  **Devices** > **All devices** and select the device you want to view.
+
+3. In the *Monitor* category, select **Endpoint security configuration** to view the list of security configurations that apply to that device.
+
+4. You can select an Endpoint security configuration to drill in and view additional details about the evaluation of that security configuration on the device.
+
 ## Troubleshoot using per-setting status
 
 You deployed a security baseline, but the deployment status shows an error. The following steps give you some guidance on troubleshooting the error.
@@ -139,6 +151,7 @@ On Windows 10 devices, there's a built-in MDM diagnostic information report. Thi
 [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) provides more information on this built-in report.
 
 > [!TIP]
+>
 > - Some settings also list the GUID. You can search for this GUID in the local registry (regedit) for any set values.
 > - The Event Viewer logs may also include some error information on the problematic setting (**Event viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
 
