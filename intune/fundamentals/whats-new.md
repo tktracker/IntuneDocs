@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -73,6 +73,10 @@ You can now issue bulk commands for the following remote actions: restart, renam
 
 #### All devices list improved search, sort, and filter<!--6179023-->
 The All devices list has been improved for better performance, searching, sorting, and filtering.
+
+### App management  
+####  Improved sign-in experience in Company Portal for Android  
+We've updated the layout of several sign-in screens in the Company Portal app for Android to make the experience more modern, simple, and clean for users. For a look at the improvements, see [What's New in the app UI](~/fundamentals/whats-new-app-ui.md).  
 
 <!-- ########################## -->
 ## Week of February 24, 2020
