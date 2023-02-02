@@ -56,7 +56,9 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Name**:  Enter the name of the app as it is to be displayed in the company portal. 
 
         > [!NOTE]
-        > If you change the name of the app through the Intune azure portal after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
+        > If you change the name of the app through the Intune azure portal after you have deployed and installed the app, the app will no longer be able to be targeted using commands. 
+        > [!NOTE]
+        > If you delete the app without uninstalling the app first from the devices, you will no longer be able to uninstall the app from Intune side. Instead, the app must be removed manually from the devices. Make sure you assign the app for uninstall first, once it has been uninstalled from the devices, you can then delete the app.
 
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of this app.
